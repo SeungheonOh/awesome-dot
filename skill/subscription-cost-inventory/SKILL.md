@@ -9,7 +9,7 @@ Reconcile a sanitized subscription list into monthly and annual cost views with 
 
 ## When to use
 
-A fictional studio keeps a small list of recurring tools, memberships and trials. It needs an inventory that distinguishes a monthly equivalent from the amount actually due next month.
+Use this when recurring charges, memberships and trials are scattered across records and the user needs one reviewable picture. Work from their authorized list or bounded source access, distinguishing a monthly equivalent from the amount actually due next month.
 
 ## Required inputs
 
@@ -20,7 +20,7 @@ A fictional studio keeps a small list of recurring tools, memberships and trials
 
 ## Workflow
 
-1. **Fix the inventory boundary.** Confirm the as-of timestamp, timezone, reporting currency and the exact twelve-month window, preferably with an inclusive start and exclusive end. Accept sanitized service labels and supplied records only. Give each subscription a stable identifier so similarly named products, separate seats and duplicate records can be distinguished without exposing account details.
+1. **Fix the inventory boundary.** Confirm the as-of timestamp, timezone, reporting currency and the exact twelve-month window, preferably with an inclusive start and exclusive end. Accept supplied records or the specifically authorized source. Retrieve only the relevant subscription terms and minimize account identifiers; do not require a new integration when a small export is sufficient. Give each subscription a stable identifier so similarly named products, separate seats and duplicate records can be distinguished without exposing account details.
 
 2. **Normalize the supplied terms.** Record price, price currency, interval, interval multiplier, next charge date, trial end, known post-trial price, status, tax treatment and source. Preserve the difference between unknown, explicitly free and already prepaid. Flag a renewal date before the as-of date for clarification; do not infer that payment occurred or that the subscription was canceled. Capture supplied notice periods and refund restrictions without interpreting their legal effect.
 
@@ -30,7 +30,7 @@ A fictional studio keeps a small list of recurring tools, memberships and trials
 
 5. **Review duplicates and verify totals.** Identify possible duplicates using label, plan, interval and renewal date, but retain them until the user resolves identity. Sum dated charges independently by subscription and by month; both paths must equal the same complete known period subtotal. Check an annual renewal, a twelve-month boundary event, an unknown trial conversion and a leap-day recurrence. Explain why the calendar total can differ from annualized run-rate due to partial periods or timing.
 
-6. **Return an actionable inventory.** Provide the normalized register, run-rate table, dated charge calendar, unresolved-price list and duplicate candidates with check outcomes. Identify which totals are incomplete and which supplied terms need review first. Describe hypothetical reductions as modeled differences only. Keep this read-only and educational: do not cancel, renew, contact providers, inspect payment accounts, claim achieved savings or recommend investments. Any subsequent service change needs its own instruction.
+6. **Return an actionable inventory.** Provide the normalized register, run-rate table, dated charge calendar, unresolved-price list and duplicate candidates with check outcomes. Identify which totals are incomplete and which supplied terms need review first. Describe hypothetical reductions as modeled differences only. Create the requested inventory, including a usable worksheet if appropriate, and verify any save to the already authorized destination. Keep source services unchanged: do not cancel, renew, contact providers, expand account access, claim achieved savings or recommend investments. Any subsequent service change needs its own instruction.
 
 ## Deliverables
 
@@ -57,7 +57,7 @@ A fictional studio keeps a small list of recurring tools, memberships and trials
 ## Example request
 
 ```text
-dot, build a subscription cost inventory from [SANITIZED SUBSCRIPTION LIST] as of [DATE] in [TIMEZONE]. Use [CURRENCY] and distinguish actual upcoming charges from normalized monthly and annual equivalents. This is a read-only budgeting review. Do not connect financial accounts, cancel services, contact providers or change renewal settings.
+dot, build a subscription cost inventory from [SANITIZED SUBSCRIPTION LIST] as of [DATE] in [TIMEZONE]. Use [CURRENCY] and distinguish actual upcoming charges from normalized monthly and annual equivalents. This is a read-only budgeting review. Use only supplied records or the named authorized source. Do not cancel services, contact providers or change renewal settings.
 
 For each item, record the supplied price, interval, next renewal, trial end, source and any known cancellation or refund restriction. Label missing information as unknown. Convert annual prices to monthly equivalents for comparison, but never use those equivalents as the predicted next charge. Flag probable duplicates for review without merging them automatically, and keep optional usage notes separate from judgments about value.
 

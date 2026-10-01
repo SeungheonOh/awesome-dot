@@ -1,19 +1,19 @@
 ---
 name: cash-flow-timing-calendar
-description: "Map a fictional month of income and bills to show when a positive monthly total can still hide a cash shortfall."
+description: "Map dated income and bills to show when a positive monthly total can still hide a cash shortfall."
 ---
 
 # Cash-Flow Timing Calendar
 
-Map a fictional month of income and bills to show when a positive monthly total can still hide a cash shortfall.
+Map dated income and bills to show when a positive monthly total can still hide a cash shortfall.
 
 ## When to use
 
-A fictional household receives two paychecks but most bills arrive before the second one. A monthly budget looks comfortable, yet it does not explain the lowest balance between paydays.
+Use this when income and bills arrive on different dates and a monthly total hides what happens between them. Work from authorized records with identifying details minimized. The worked assumptions are scenarios, not predictions or instructions to move money.
 
 ## Required inputs
 
-- A synthetic opening balance and dated income entries
+- An authorized opening balance with its timestamp and dated income entries
 - A sanitized bill list with due dates, amounts and any timing ranges
 - The planning month, currency, timezone and chosen warning threshold
 - A preferred readable calendar or worksheet format
@@ -30,7 +30,7 @@ A fictional household receives two paychecks but most bills arrive before the se
 
 5. **Verify balances and flags.** Recalculate the final balance directly from the opening amount and all included movements. Check a quiet day, consecutive debits, a same-day deposit/debit pair and a month-end crossing. Define whether a balance equal to the threshold triggers a warning. Confirm that changing timing inside the horizon changes intermediate balances but not the ending balance.
 
-6. **Deliver the calendar and decisions.** Return the daily table, compact date view, event register, scenario differences and reconciliation results. Identify the earliest modeled threshold breach with the assumptions responsible, without prescribing borrowing or moving funds. Ask when the opening balance timing, an uncertain large bill or same-day ordering could reverse the finding. Missing material inputs justify an incomplete scenario, never a precise prediction. No payments, account inspection or external calendar changes are part of this read-only budgeting exercise.
+6. **Deliver the calendar and decisions.** Return the daily table, compact date view, event register, scenario differences and reconciliation results. Identify the earliest modeled threshold breach with the assumptions responsible, without prescribing borrowing or moving funds. Ask when the opening balance timing, an uncertain large bill or same-day ordering could reverse the finding. Missing material inputs justify an incomplete scenario, never a precise prediction. Read only the records or account source authorized for this task. Produce the requested calendar or worksheet, save to an already authorized destination if specified, and inspect the saved output. Payments, transfers and changes to financial records are outside this budgeting workflow.
 
 ## Deliverables
 
@@ -57,7 +57,7 @@ A fictional household receives two paychecks but most bills arrive before the se
 ## Example request
 
 ```text
-dot, build a cash-flow timing calendar for [MONTH] in [TIMEZONE] using [SYNTHETIC OPENING BALANCE], [DATED INCOME] and [SANITIZED BILLS]. Use [CURRENCY] throughout. This is a read-only budgeting exercise; do not access accounts, move money, change payment dates or arrange payments.
+dot, build a cash-flow timing calendar for [MONTH] in [TIMEZONE] using [OPENING BALANCE AND TIMESTAMP], [DATED INCOME] and [SANITIZED BILLS]. Use [CURRENCY] throughout. This is a read-only budgeting exercise; use only supplied records or the explicitly authorized source; do not move money, change payment dates or arrange payments.
 
 First distinguish due dates from expected cash-movement dates. Ask about any ambiguity that could change the lowest balance. Otherwise label assumptions, including the ordering of income and bills on the same day. Show a daily opening balance, inflows, outflows and closing balance, plus a compact calendar highlighting days below [WARNING THRESHOLD]. Preserve a separate list of uncertain amounts or dates rather than making them look exact.
 
@@ -75,7 +75,7 @@ Recalculate with one paycheck arriving three days later. Show only the changed b
 ### 2. Make timing uncertainty visible
 
 ```text
-Replace uncertain bill dates with earliest and latest dates, and show a bounded range for the lowest balance without assigning probabilities.
+Replace uncertain bill dates with earliest and latest dates. Evaluate all permitted combinations if feasible; otherwise label sampled cases as illustrative rather than proven bounds. Do not assign probabilities.
 ```
 
 ### 3. Prepare a reusable month

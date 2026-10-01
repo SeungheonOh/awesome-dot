@@ -1,26 +1,26 @@
 ---
 name: budget-variance-waterfall
-description: "Explain the gap between a fictional spending plan and actual totals with a reconciled category waterfall."
+description: "Explain the gap between a spending plan and actual totals with a reconciled category waterfall."
 ---
 
 # Budget Variance Waterfall
 
-Explain the gap between a fictional spending plan and actual totals with a reconciled category waterfall.
+Explain the gap between a spending plan and actual totals with a reconciled category waterfall.
 
 ## When to use
 
-A project club planned a modest monthly budget, but its actual total is higher. Members need to see which categories explain the difference without blaming people or mistaking refunds for new income.
+Use this when household, club or project spending differs from its plan and the reader needs to understand the arithmetic drivers. Work from the user’s authorized records; the included example is fictional. Do not mistake refunds for income or assign blame from transaction labels.
 
 ## Required inputs
 
-- Synthetic budget and actual amounts by category for one period
+- Authorized budget and actual amounts by category for one period; sanitized exports are sufficient
 - A definition of spending signs, refunds, transfers and split purchases
 - The reporting currency and rounding rule
 - A small list of categories requiring separate visibility
 
 ## Workflow
 
-1. **Establish the comparison boundary.** Confirm one reporting period, one currency, the smallest currency unit and whether amounts include applicable supplied taxes. Require planned and actual totals on the same basis. Preserve the original rows with stable identifiers; do not edit the input to make totals agree. Record whether an absent category means zero, unavailable data or an intentionally excluded item.
+1. **Establish the comparison boundary.** Confirm one reporting period, the authorized source, one currency, the smallest currency unit and whether amounts include applicable supplied taxes. Use supplied records or the explicitly authorized account source, staying within the named period and fields. Require planned and actual totals on the same basis. Preserve the original rows with stable identifiers; do not edit the input to make totals agree. Record whether an absent category means zero, unavailable data or an intentionally excluded item.
 
 2. **Normalize the ledger visibly.** Build the union of planned and actual categories, including an explicit unresolved bucket. Convert the supplied signs into positive spending and negative refunds. Keep transfers outside spending unless the user supplies a different classification. Retain a mapping table with input identifier, original category, reporting category, signed amount and reason. Split purchases only from supplied allocations, and verify that each split sums to its source row. Flag duplicate identifiers without silently removing similar transactions.
 
@@ -30,7 +30,7 @@ A project club planned a modest monthly budget, but its actual total is higher. 
 
 5. **Reconcile and probe boundaries.** Compare input spending totals, category totals and chart endpoints independently. Verify a negative refund, a new category with no budget, a split purchase and equal opposing variances. Retain full calculation precision and report the displayed rounding residual, if any; never hide it in an arbitrary category.
 
-6. **Return a reviewable package.** Supply the category table, accessible waterfall or text bridge, mapping decisions and a check register with expected and observed results. List unresolved amounts and whether they prevent a complete total. Ask for classification only where it changes the interpretation; otherwise deliver the known subtotal with a clear limitation. Keep this educational and read-only: an unexplained variance does not authorize account access, record changes, blame or financial recommendations.
+6. **Return a reviewable package.** Supply the category table, accessible waterfall or text bridge, mapping decisions and a check register with expected and observed results. List unresolved amounts and whether they prevent a complete total. Ask for classification only where it changes the interpretation; otherwise deliver the known subtotal with a clear limitation. Create the requested table, document or workbook and, if a destination is already authorized, save it there and read back the result. Keep financial sources unchanged: an unexplained variance does not authorize broader account access, record changes, blame or financial recommendations.
 
 ## Deliverables
 
@@ -50,7 +50,7 @@ A project club planned a modest monthly budget, but its actual total is higher. 
 
 ## Stop and ask
 
-- Provide fictional or sanitized totals rather than identifiable statements
+- Use only the minimum authorized records; remove unnecessary account numbers and personal identifiers
 - Ask when a transfer or reimbursement cannot be classified from supplied evidence
 - Do not share the chart with club members or change connected records without separate authorization
 
@@ -61,11 +61,11 @@ A project club planned a modest monthly budget, but its actual total is higher. 
 ## Example request
 
 ```text
-dot, explain the variance between [SYNTHETIC BUDGET] and [SANITIZED ACTUAL TOTALS] for [PERIOD]. Produce a readable category table and a waterfall chart from planned spending to actual spending, using [CURRENCY] and [ROUNDING RULE]. Keep this a read-only explanation; do not inspect bank accounts, change budgets in external apps or recommend investments.
+dot, explain the variance between [AUTHORIZED BUDGET] and [SANITIZED ACTUAL TOTALS] for [PERIOD]. Produce a readable category table and a waterfall chart from planned spending to actual spending, using [CURRENCY] and [ROUNDING RULE]. Keep this a read-only explanation; use only the supplied records or named authorized source, and do not change financial records or recommend investments.
 
 Confirm the sign convention first. Define positive variance as actual spending minus planned spending, and label whether a higher number means overspending. Separate transfers, refunds and uncategorized entries before calculating. Do not guess missing categories or infer motives from a transaction label. Record any mapping decisions in a small audit table.
 
-Show each category's planned amount, actual amount, absolute variance and share of total variance when that share is meaningful. Avoid misleading percentages where the planned amount or total variance is zero. Reconcile all steps in the chart to the same totals as the table. Check a refund, an unbudgeted category and exactly offsetting over- and underspending. Return the artifacts, an explanation of the largest arithmetic drivers and any unresolved classification choices. Use fictional labels and keep the result private.
+Show each category's planned amount, actual amount, absolute variance and share of total variance when that share is meaningful. Avoid misleading percentages where the planned amount or total variance is zero. Reconcile all steps in the chart to the same totals as the table. Check a refund, an unbudgeted category and exactly offsetting over- and underspending. Return the artifacts, an explanation of the largest arithmetic drivers and any unresolved classification choices. Minimize identifying details and keep the result private unless I have authorized a specific destination and audience.
 ```
 
 ## Focused follow-ups
