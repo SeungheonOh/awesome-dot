@@ -15,14 +15,14 @@ An engineer wants to understand a technical paper before proposing its method at
 
 - An authorized paper file or an exact public paper reference
 - The learner’s background and the decision or question motivating the reading
-- A target depth and time budget
+- A target depth and the specific sections or claims that need attention
 - Optional supplied supplementary material and a description of the intended application
 
 ## Workflow
 
 1. **Verify the paper and readable coverage.** Record title, authors, version or date, page count if available, supplied supplements, and the learner's practical question. Check that the actual text is accessible and identify missing figures, tables, appendices, or damaged extraction. A title or abstract alone supports only a limited abstract review. Ask for missing pages when they contain the evidence needed for the central claim rather than reconstructing their contents.
 
-2. **Plan a question-led reading route.** Match the depth to the learner's background and time budget. Start with the research question and claimed contribution, then route to the method, decisive evidence, and limitations. Introduce only prerequisites needed for those sections. Give each reading stop a question to answer, such as what changed between comparison groups or which assumption makes the argument work. This keeps the guide from becoming a passive section-by-section summary.
+2. **Plan a question-led reading route.** Match the depth to the learner's background and named question; choose a bounded set of sections rather than claiming comprehensive coverage. Start with the research question and claimed contribution, then route to the method, decisive evidence, and limitations. Introduce only prerequisites needed for those sections. Give each reading stop a question to answer, such as what changed between comparison groups or which assumption makes the argument work. This keeps the guide from becoming a passive section-by-section summary.
 
 3. **Construct a claim-to-evidence record.** For each important claim capture a concise paraphrase, exact locator, supporting experiment or argument, baseline, population or dataset, units, and qualifiers. Separate author interpretation from measurements and your own deductions. Inspect an abstract claim against later qualifications. For reported improvements, preserve the denominator and distinguish absolute from relative changes. Missing uncertainty information remains missing; do not manufacture confidence intervals or significance claims.
 
@@ -53,6 +53,19 @@ An engineer wants to understand a technical paper before proposing its method at
 - Supply only papers and supplementary material you are authorized to provide
 - Do not upload restricted publications or internal application details to new services
 - Current literature claims require actual source retrieval during the run; supplied-paper review alone is not a literature survey
+
+## Response and evidence branches
+
+- **Abstract only:** Produce an abstract-limited question and claim list; ask for methods and results before evaluating evidence strength
+- **Inconsistent numbers:** Recalculate from the reported counts, preserve the discrepancy, and ask which source version governs; do not silently repair the paper
+- **Wrong learner answer:** Point to the relevant locator and ask for a narrower revision before revealing the full explanation, unless requested
+- **Missing learner answer:** Leave comprehension unevaluated and provide a smaller question or the separate key on request
+- **Unavailable figure or supplement:** Mark the affected claim unverified; continue with inspectable text without guessing visual details
+- **Evidence cannot support the application:** Explain the mismatch in population, task, scale, or outcome; return evidence-needed questions instead of a deployment endorsement
+
+## Worked example
+
+[Read a fictional row-preview study](EXAMPLE.md) provides complete invented source excerpts, checkable denominators, an abstract-to-limitations comparison, and branches for learner errors or missing source material. Its arithmetic checks do not establish real research findings or learner understanding.
 
 ## Example request
 
