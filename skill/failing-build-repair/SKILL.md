@@ -87,6 +87,8 @@ Write the repair and any report to the destination the user already authorized. 
 
 Read [EXAMPLE.md](EXAMPLE.md) for an original pagination-count defect, a one-line repair, six deterministic checks, and a runnable verifier. It includes observed synthetic results; those results are not evidence about any user's repository.
 
+A separate [fresh-input preference rehearsal](REHEARSAL.md) records a locally reproduced mutation defect, the resulting minimal repair, unchanged before/after tests and an independently checked input matrix. Its evidence is limited to the self-contained synthetic fixture.
+
 Example request:
 
 ```text
