@@ -1,0 +1,206 @@
+{
+  "fixture": "Community Room Use Enquiry",
+  "source_version": 1,
+  "scope": "Private editable draft only; no submission",
+  "fields": [
+    {
+      "name": "group_name",
+      "label": "Group name",
+      "type": "/Tx",
+      "required": true,
+      "status": "fill",
+      "source": "F1",
+      "value": "Lantern Board Game Circle",
+      "max_length": 60,
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "activity",
+      "label": "Activity",
+      "type": "/Tx",
+      "required": true,
+      "status": "fill",
+      "source": "F1",
+      "value": "Monthly board game evening",
+      "max_length": 80,
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "preferred_date",
+      "label": "Preferred date (YYYY-MM-DD)",
+      "type": "/Tx",
+      "required": true,
+      "status": "fill",
+      "source": "F2",
+      "value": "2026-11-14",
+      "max_length": 10,
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "start_time",
+      "label": "Start time (24-hour)",
+      "type": "/Tx",
+      "required": true,
+      "status": "fill",
+      "source": "F2",
+      "value": "18:30",
+      "max_length": 5,
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "end_time",
+      "label": "End time (24-hour)",
+      "type": "/Tx",
+      "required": true,
+      "status": "fill",
+      "source": "F2",
+      "value": "20:30",
+      "max_length": 5,
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "attendee_count",
+      "label": "Expected attendance",
+      "type": "/Tx",
+      "required": true,
+      "status": "fill",
+      "source": "F3",
+      "value": "12",
+      "max_length": 3,
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "room_preference",
+      "label": "Room preference",
+      "type": "/Ch",
+      "required": true,
+      "status": "fill",
+      "source": "F3",
+      "value": "Small room",
+      "options": [
+        "",
+        "Small room",
+        "Large room",
+        "No preference"
+      ],
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "seating",
+      "label": "Seating preference",
+      "type": "/Ch",
+      "required": true,
+      "status": "fill",
+      "source": "F3",
+      "value": "Tables and chairs",
+      "options": [
+        "",
+        "Tables and chairs",
+        "Chairs only",
+        "No preference"
+      ],
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "projector_needed",
+      "label": "Projector needed",
+      "type": "/Btn",
+      "required": true,
+      "status": "fill",
+      "source": "F4",
+      "value": "/No",
+      "display_value": "No",
+      "options": [
+        "/Yes",
+        "/No"
+      ],
+      "page": 1,
+      "original_value": "/Off"
+    },
+    {
+      "name": "projector_notes",
+      "label": "Projector setup details",
+      "type": "/Tx",
+      "required": false,
+      "status": "not_applicable",
+      "source": "F4",
+      "value": "",
+      "max_length": 100,
+      "condition": {
+        "field": "projector_needed",
+        "equals": "/Yes"
+      },
+      "page": 1,
+      "original_value": "",
+      "required_when_active": true
+    },
+    {
+      "name": "setup_access",
+      "label": "Early setup access needed",
+      "type": "/Ch",
+      "required": true,
+      "status": "unresolved_required",
+      "source": "F5",
+      "value": "",
+      "options": [
+        "",
+        "Yes",
+        "No"
+      ],
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "setup_minutes",
+      "label": "Minutes of early access",
+      "type": "/Tx",
+      "required": false,
+      "status": "unresolved_conditional",
+      "source": "F5",
+      "value": "",
+      "max_length": 3,
+      "condition": {
+        "field": "setup_access",
+        "equals": "Yes"
+      },
+      "page": 1,
+      "original_value": "",
+      "required_when_active": true
+    },
+    {
+      "name": "extra_notes",
+      "label": "Extra notes",
+      "type": "/Tx",
+      "required": false,
+      "status": "optional_blank",
+      "source": "F5",
+      "value": "",
+      "max_length": 100,
+      "page": 1,
+      "original_value": ""
+    },
+    {
+      "name": "staff_reference",
+      "label": "Staff use only",
+      "type": "/Tx",
+      "required": false,
+      "status": "preserve",
+      "source": "F5",
+      "value": "Not reviewed",
+      "max_length": 40,
+      "read_only": true,
+      "page": 1,
+      "original_value": "Not reviewed"
+    }
+  ],
+  "unresolved_question": "Do you need early setup access? If yes, how many minutes before the 18:30 session start?",
+  "ready_to_submit": false
+}
