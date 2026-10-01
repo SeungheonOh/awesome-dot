@@ -1,0 +1,440 @@
+{
+  "scope": "Synthetic in-memory unordered-record fixture only; no live repository edits, CI runs, services or production changes",
+  "command": "python3 check_example.py",
+  "script_revision_sha256": "7523b19f56b06e947466549fd4d7dd0517439c6e31e5c21163e703b3ae7678d8",
+  "product_revision_sha256": "11d311183a1d544a92852b3d2b09fdab077134c326d81382f906827a469e6f2a",
+  "fixture_revision_sha256": "c4eef9bbf0741139e7f45b38b9e5e64e99017153a0b7e9fc160d258857d8e8b6",
+  "environment": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "platform": "Linux",
+    "machine": "x86_64",
+    "dependencies": "Python standard library only",
+    "workers": 1,
+    "clock": "not used",
+    "timezone_locale": "not used by fixture or comparisons",
+    "randomness": "per-attempt random.Random(seed); no shared RNG",
+    "python_optimization": 0
+  },
+  "budget": {
+    "seed_matrix_per_revision": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "attempts_per_seed": 1,
+    "permutations": "All permutations of this three-record fixture only",
+    "stop": "Finish the fixed matrix and controls; unexpected errors terminate with nonzero exit"
+  },
+  "before": {
+    "test_revision": "e5a5cb057eccb2f7f08453910e1f8c1e20cb91a3a7a9aef5d33aefb26b57e34e",
+    "planned": 12,
+    "attempted": 12,
+    "completed_comparisons": 12,
+    "assertion_pass": 1,
+    "assertion_fail": 11,
+    "setup_or_runner_error": 0,
+    "skipped": 0,
+    "unrun": 0,
+    "hidden_retries": 0,
+    "runs": [
+      {
+        "slot": 1,
+        "attempt": 1,
+        "seed": 0,
+        "actual_order": [
+          "print-17",
+          "print-42",
+          "print-23"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 2,
+        "attempt": 1,
+        "seed": 1,
+        "actual_order": [
+          "print-23",
+          "print-42",
+          "print-17"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 3,
+        "attempt": 1,
+        "seed": 2,
+        "actual_order": [
+          "print-23",
+          "print-42",
+          "print-17"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 4,
+        "attempt": 1,
+        "seed": 3,
+        "actual_order": [
+          "print-23",
+          "print-42",
+          "print-17"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 5,
+        "attempt": 1,
+        "seed": 4,
+        "actual_order": [
+          "print-42",
+          "print-23",
+          "print-17"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 6,
+        "attempt": 1,
+        "seed": 5,
+        "actual_order": [
+          "print-17",
+          "print-23",
+          "print-42"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 7,
+        "attempt": 1,
+        "seed": 6,
+        "actual_order": [
+          "print-23",
+          "print-17",
+          "print-42"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 8,
+        "attempt": 1,
+        "seed": 7,
+        "actual_order": [
+          "print-42",
+          "print-17",
+          "print-23"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 9,
+        "attempt": 1,
+        "seed": 8,
+        "actual_order": [
+          "print-42",
+          "print-23",
+          "print-17"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 10,
+        "attempt": 1,
+        "seed": 9,
+        "actual_order": [
+          "print-17",
+          "print-42",
+          "print-23"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 11,
+        "attempt": 1,
+        "seed": 10,
+        "actual_order": [
+          "print-23",
+          "print-17",
+          "print-42"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      },
+      {
+        "slot": 12,
+        "attempt": 1,
+        "seed": 11,
+        "actual_order": [
+          "print-17",
+          "print-42",
+          "print-23"
+        ],
+        "outcome": "assertion_fail",
+        "detail": "Ordered list equality failed"
+      }
+    ]
+  },
+  "after": {
+    "test_revision": "a8e47fb943b57ee5e1e59ab4c654692a4ca5edb355ff4001a86d1238d0652e58",
+    "planned": 12,
+    "attempted": 12,
+    "completed_comparisons": 12,
+    "assertion_pass": 12,
+    "assertion_fail": 0,
+    "setup_or_runner_error": 0,
+    "skipped": 0,
+    "unrun": 0,
+    "hidden_retries": 0,
+    "runs": [
+      {
+        "slot": 1,
+        "attempt": 1,
+        "seed": 0,
+        "actual_order": [
+          "print-17",
+          "print-42",
+          "print-23"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 2,
+        "attempt": 1,
+        "seed": 1,
+        "actual_order": [
+          "print-23",
+          "print-42",
+          "print-17"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 3,
+        "attempt": 1,
+        "seed": 2,
+        "actual_order": [
+          "print-23",
+          "print-42",
+          "print-17"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 4,
+        "attempt": 1,
+        "seed": 3,
+        "actual_order": [
+          "print-23",
+          "print-42",
+          "print-17"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 5,
+        "attempt": 1,
+        "seed": 4,
+        "actual_order": [
+          "print-42",
+          "print-23",
+          "print-17"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 6,
+        "attempt": 1,
+        "seed": 5,
+        "actual_order": [
+          "print-17",
+          "print-23",
+          "print-42"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 7,
+        "attempt": 1,
+        "seed": 6,
+        "actual_order": [
+          "print-23",
+          "print-17",
+          "print-42"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 8,
+        "attempt": 1,
+        "seed": 7,
+        "actual_order": [
+          "print-42",
+          "print-17",
+          "print-23"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 9,
+        "attempt": 1,
+        "seed": 8,
+        "actual_order": [
+          "print-42",
+          "print-23",
+          "print-17"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 10,
+        "attempt": 1,
+        "seed": 9,
+        "actual_order": [
+          "print-17",
+          "print-42",
+          "print-23"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 11,
+        "attempt": 1,
+        "seed": 10,
+        "actual_order": [
+          "print-23",
+          "print-17",
+          "print-42"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      },
+      {
+        "slot": 12,
+        "attempt": 1,
+        "seed": 11,
+        "actual_order": [
+          "print-17",
+          "print-42",
+          "print-23"
+        ],
+        "outcome": "assertion_pass",
+        "detail": null
+      }
+    ]
+  },
+  "exhaustive_fixture_permutations": {
+    "planned": 6,
+    "attempted": 6,
+    "assertion_pass": 6,
+    "assertion_fail": 0,
+    "runs": [
+      {
+        "slot": 1,
+        "seed": "not randomized: exhaustive fixture permutation",
+        "actual_order": [
+          "print-17",
+          "print-23",
+          "print-42"
+        ],
+        "outcome": "assertion_pass"
+      },
+      {
+        "slot": 2,
+        "seed": "not randomized: exhaustive fixture permutation",
+        "actual_order": [
+          "print-17",
+          "print-42",
+          "print-23"
+        ],
+        "outcome": "assertion_pass"
+      },
+      {
+        "slot": 3,
+        "seed": "not randomized: exhaustive fixture permutation",
+        "actual_order": [
+          "print-23",
+          "print-17",
+          "print-42"
+        ],
+        "outcome": "assertion_pass"
+      },
+      {
+        "slot": 4,
+        "seed": "not randomized: exhaustive fixture permutation",
+        "actual_order": [
+          "print-23",
+          "print-42",
+          "print-17"
+        ],
+        "outcome": "assertion_pass"
+      },
+      {
+        "slot": 5,
+        "seed": "not randomized: exhaustive fixture permutation",
+        "actual_order": [
+          "print-42",
+          "print-17",
+          "print-23"
+        ],
+        "outcome": "assertion_pass"
+      },
+      {
+        "slot": 6,
+        "seed": "not randomized: exhaustive fixture permutation",
+        "actual_order": [
+          "print-42",
+          "print-23",
+          "print-17"
+        ],
+        "outcome": "assertion_pass"
+      }
+    ]
+  },
+  "negative_controls": {
+    "missing_record": "detected_assertion_failure",
+    "extra_record": "detected_assertion_failure",
+    "added_duplicate": "detected_assertion_failure",
+    "same_length_duplicate_substitution": "detected_assertion_failure",
+    "changed_field": "detected_assertion_failure",
+    "required_duplicate_removed": "detected_assertion_failure"
+  },
+  "checks": {
+    "same_seeded_inputs_before_after": "passed",
+    "product_function_unchanged": "passed",
+    "lossy_set_would_hide_added_duplicate": "confirmed"
+  },
+  "limits": [
+    "Selected seeds are not a statistical estimate of live failure probability",
+    "No concurrency, network, native runner or CI integration was exercised",
+    "Complete-record hashing is valid for this frozen dataclass; real schemas need their own canonicalization"
+  ]
+}
