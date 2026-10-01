@@ -1,0 +1,192 @@
+{
+  "fictional": true,
+  "packet_version": 1,
+  "slide_count": 5,
+  "audience": "Operations leaders deciding whether to extend one intake-queue pilot",
+  "purpose": "A live decision discussion supported by self-contained speaker notes",
+  "status": "Recommendation and review rules remain unapproved",
+  "design": {
+    "width_px": 1280,
+    "height_px": 720,
+    "font": "DejaVu Sans",
+    "background": "#FAFAF7",
+    "text": "#173042",
+    "accent": "#145A7A",
+    "muted": "#455968",
+    "title_px": 48,
+    "body_px": 30,
+    "source_px": 24,
+    "minimum_chart_label_px": 24,
+    "accessibility": [
+      "Native title placeholder on each slide",
+      "Native text in logical title-to-footer order",
+      "Native chart with descriptive alternative text",
+      "Data labels and category labels convey meaning without color",
+      "Speaker notes and companion transcript provide textual evidence",
+      "Target-application and screen-reader behavior untested"
+    ]
+  },
+  "sources": {
+    "S0": "source-packet.md#s0-brief",
+    "S1": "source-packet.md#s1-measurement-notes",
+    "S2": "source-packet.md#s2-interpretation-limits",
+    "S3": "source-packet.md#s3-extension-proposal",
+    "S4": "source-packet.md#s4-proposed-review-rules",
+    "S5": "source-packet.md#s5-rejected-draft-claims"
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "A four-week extension for the intake pilot",
+      "layout": "decision",
+      "lead": "Decision requested: October 5–30, 2026",
+      "body": [
+        "One queue, with the same checklist",
+        "Proposed cap: 8 staff-hours per week from existing coverage",
+        "No additional spending requested"
+      ],
+      "caveat": "Recommendation only. The extension and staffing remain unapproved.",
+      "sources": [
+        "S0",
+        "S3"
+      ],
+      "notes": "The operations lead proposes extending the same intake checklist in the same queue for four workweeks, October 5–30, 2026. Leaders are being asked to approve the extension and the reassignment of up to eight staff-hours each week. That allocation has an unquantified opportunity cost. No additional spending is requested. This presentation does not approve the extension, assign staff or authorize expansion. The review would take place November 6, after the final completion cohort has seven days of reopening follow-up. All material in this deck is fictional.\n\nSource snapshot: fictional packet version 1, dated 2026-10-01. SHA-256: 5d14e97515765e190d776989b03cc59412e6169d4ccdb714585eee78b00e799f. Public source links follow the main branch and may change."
+    },
+    {
+      "number": 2,
+      "title": "The observed median was six hours lower",
+      "layout": "chart",
+      "lead": "Median elapsed hours to first completed response",
+      "chart": {
+        "type": "column",
+        "categories": [
+          "Baseline: 40 requests",
+          "Pilot: 60 requests"
+        ],
+        "values": [
+          18,
+          12
+        ],
+        "unit": "hours",
+        "minimum": 0,
+        "maximum": 24,
+        "major_unit": 6,
+        "alt_text": "Baseline: 18 hours for 40 completed requests. Pilot: 12 hours for 60 completed requests. Consecutive, nonrandom weeks do not establish cause."
+      },
+      "body": [
+        "Baseline: September 7–11, 2026; pilot: September 14–18, 2026"
+      ],
+      "caveat": "Completed requests only. Consecutive, nonrandom weeks do not establish cause.",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "notes": "The supplied medians are 18 elapsed hours for 40 baseline completions and 12 elapsed hours for 60 pilot completions. The observed difference is 18 minus 12, or six hours. Arrival to first completed response defines the duration. Requests, rather than people, define the sample. Baseline completions fall on September 7–11 and pilot completions on September 14–18, 2026. These summary medians cannot be independently reconstructed because the source packet contains no individual durations. Both bars start at zero. The samples are consecutive, nonrandom weeks and exclude open or abandoned requests. Do not describe this as a causal speed improvement, a result for every request or a labor saving.\n\nSource snapshot: fictional packet version 1, dated 2026-10-01. SHA-256: 5d14e97515765e190d776989b03cc59412e6169d4ccdb714585eee78b00e799f. Public source links follow the main branch and may change."
+    },
+    {
+      "number": 3,
+      "title": "Reopenings leave quality unresolved",
+      "layout": "comparison",
+      "lead": "Requests reopened within seven calendar days",
+      "comparisons": [
+        {
+          "label": "Baseline",
+          "value": "4 / 40",
+          "detail": "10.0% of completed requests"
+        },
+        {
+          "label": "Pilot",
+          "value": "7 / 60",
+          "detail": "11.7% of completed requests"
+        }
+      ],
+      "body": [
+        "All completions have the full seven-day follow-up",
+        "Request mix and case complexity were not recorded"
+      ],
+      "caveat": "Small, unmatched samples do not establish unchanged quality.",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "notes": "Four of 40 baseline requests reopened within seven calendar days, giving 10.0%. Seven of 60 pilot requests reopened, giving 11.666...%, displayed as 11.7% to one decimal place. The denominator is completed requests in each period. Every completion has a full seven-day reopening window, ending no later than September 25. The pilot fraction is numerically higher, but the small, unmatched samples do not establish either equivalence or a causal deterioration. Case complexity and workload mix are unknown. There is no satisfaction measurement or supplied significance test. Review individual reopened cases rather than claiming that quality is unchanged.\n\nSource snapshot: fictional packet version 1, dated 2026-10-01. SHA-256: 5d14e97515765e190d776989b03cc59412e6169d4ccdb714585eee78b00e799f. Public source links follow the main branch and may change."
+    },
+    {
+      "number": 4,
+      "title": "The extension would close measurement gaps",
+      "layout": "plan",
+      "lead": "Proposed responsibilities, subject to approval",
+      "body": [
+        "Operations lead: log completions, open and abandoned requests, and actual staff-hours",
+        "Quality lead: review reopened cases",
+        "November 6 review: complete seven-day follow-up for October 30 completions"
+      ],
+      "caveat": "The 8-hour weekly coverage cap is a proposal, not measured savings.",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "notes": "If leaders approve the extension, the operations lead would own delivery and record request volume, completion times, reopening counts, open or abandoned requests and actual staff-hours. The quality lead would review reopened cases. These are proposed responsibilities, not accepted commitments. The requested coverage cap is eight staff-hours per week reassigned from existing coverage. Recording actual time would expose the currently unknown staff-time cost, but no cost or labor-saving claim is supported today. The review on November 6 permits seven calendar days of follow-up for the final October 30 completion cohort. Keep the same queue and checklist during the extension.\n\nSource snapshot: fictional packet version 1, dated 2026-10-01. SHA-256: 5d14e97515765e190d776989b03cc59412e6169d4ccdb714585eee78b00e799f. Public source links follow the main branch and may change."
+    },
+    {
+      "number": 5,
+      "title": "Proposed review rules need a decision",
+      "layout": "rules",
+      "lead": "Discussion criteria for the November 6 review",
+      "body": [
+        "Median response time: at most 12 hours for completed requests",
+        "Seven-day reopening rate: at most 12%, with counts shown",
+        "Staff time: at most 8 staff-hours per week",
+        "Any logged serious service failure: pause and leadership review"
+      ],
+      "caveat": "These are proposed thresholds. Expansion requires a separate decision.",
+      "sources": [
+        "S0",
+        "S4"
+      ],
+      "notes": "Ask leaders to decide whether to approve the four-workweek extension and these proposed review rules. The sponsor proposes a median response-time target of at most 12 elapsed hours for completed requests, a seven-day reopening ceiling of 12% with both numerator and denominator visible, and a cap of eight staff-hours each week. These thresholds have not been validated statistically and are not achieved results. Any logged serious service failure triggers an immediate pause and leadership review. At the November 6 review, leaders choose whether to stop, revise or consider a separately approved expansion. Passing the proposed thresholds would not establish causal benefit or quality equivalence. Keep small denominators and differences in request mix visible. This deck authorizes no operational action.\n\nSource snapshot: fictional packet version 1, dated 2026-10-01. SHA-256: 5d14e97515765e190d776989b03cc59412e6169d4ccdb714585eee78b00e799f. Public source links follow the main branch and may change."
+    }
+  ],
+  "rejected_claims": [
+    {
+      "claim": "Every request became 33% faster",
+      "reason": "Only two sample medians are supplied; no per-request effect or causal comparison is available",
+      "sources": [
+        "S1",
+        "S2",
+        "S5"
+      ]
+    },
+    {
+      "claim": "Quality was unchanged",
+      "reason": "Different reopening fractions in small, unmatched samples do not establish equivalence",
+      "sources": [
+        "S1",
+        "S2",
+        "S5"
+      ]
+    },
+    {
+      "claim": "The team saved eight staff-hours each week",
+      "reason": "Eight staff-hours is a proposed coverage cap; staff time was not measured",
+      "sources": [
+        "S2",
+        "S3",
+        "S5"
+      ]
+    }
+  ],
+  "artifact_source_urls": {
+    "S0": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s0-brief",
+    "S1": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s1-measurement-notes",
+    "S2": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s2-interpretation-limits",
+    "S3": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s3-extension-proposal",
+    "S4": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s4-proposed-review-rules",
+    "S5": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s5-rejected-draft-claims"
+  },
+  "source_packet": {
+    "version": 1,
+    "date": "2026-10-01",
+    "sha256": "5d14e97515765e190d776989b03cc59412e6169d4ccdb714585eee78b00e799f"
+  }
+}
