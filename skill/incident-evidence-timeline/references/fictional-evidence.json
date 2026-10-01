@@ -1,0 +1,54 @@
+{
+  "fictional": true,
+  "scope": "Cedar preview API; west; pod-a and pod-b; completed HTTP attempts",
+  "window": ["2026-05-14T13:00:00Z", "2026-05-14T13:04:00Z"],
+  "clock_contract": "Skew means recorded minus actual UTC, in seconds. Bounds apply to event timestamps throughout this window. Synthetic timestamps have zero additional representation uncertainty. Ingestion timestamps use the fixture's exact UTC receipt clock. These are supplied fixture facts, not inferred synchronization.",
+  "sources": {
+    "CHG": {
+      "origin": "fictional change export", "revision": "changes-r3", "available": true,
+      "captured_at": "2026-05-14T13:06:00Z", "selection": "event time; service Cedar; west; all pods",
+      "coverage": [["2026-05-14T13:00:00Z", "2026-05-14T13:04:00Z"]],
+      "completeness": "All pages returned for this fictional query; not independent runtime verification",
+      "skew_seconds": [0, 0], "namespace": "cedar/west/change-journal"
+    },
+    "LOG": {
+      "origin": "fictional app log export", "revision": "logs-r2", "available": true,
+      "captured_at": "2026-05-14T13:06:00Z", "selection": "Raw event time [13:00:03Z,13:04:05Z) on 2026-05-14 covers the requested actual-time window under supplied skew bounds; Cedar; west; pod-a; all severities; supplied buffered export",
+      "coverage": [["2026-05-14T13:00:00Z", "2026-05-14T13:04:00Z"]],
+      "completeness": "All pod-a pages returned; pod-b export unavailable; no sampling in returned pod-a rows",
+      "skew_seconds": [3, 5], "namespace": "cedar/west/pod-a/boot-7"
+    },
+    "MET": {
+      "origin": "fictional aggregate metric export", "revision": "metrics-r5", "available": true,
+      "captured_at": "2026-05-14T13:06:00Z", "selection": "one-minute event-time bins; Cedar; west; both pods",
+      "coverage": [["2026-05-14T13:00:00Z", "2026-05-14T13:01:00Z"], ["2026-05-14T13:02:00Z", "2026-05-14T13:04:00Z"]],
+      "completeness": "All export pages returned; 13:01 minute missing; 13:02 attempts denominator unavailable",
+      "skew_seconds": [0, 0], "namespace": "cedar/west/http-attempts",
+      "metric_contract": "Disjoint half-open UTC bins; counts of completed HTTP attempts; 5xx count is a subset of attempts; same west cohort across both pods; no sampling or counter resets; retries count as separate attempts; unique people not measured"
+    },
+    "NOTE": {
+      "origin": "fictional incident-note export", "revision": "notes-r1", "available": true,
+      "captured_at": "2026-05-14T13:06:00Z", "selection": "one supplied incident note; event-time range unknown",
+      "coverage": null, "completeness": "Offset and event clock calibration omitted from this export",
+      "skew_seconds": null, "namespace": "cedar/incident-notes"
+    },
+    "TRACE": {
+      "origin": "fictional trace source", "revision": null, "available": false,
+      "captured_at": null, "selection": "Cedar; west; incident window",
+      "coverage": null, "completeness": "No trace export supplied; no read was performed",
+      "skew_seconds": null, "namespace": "cedar/west/traces"
+    }
+  },
+  "events": [
+    {"row": "C1", "source": "CHG", "event_id": "change-7", "event_time": "2026-05-14T09:00:30-04:00", "ingested_at": "2026-05-14T13:00:31Z", "kind": "recorded action", "action_stage": "completed", "message": "Journal records renderer revision c17 applied to pod-a"},
+    {"row": "L1", "source": "LOG", "event_id": "error-101", "event_time": "2026-05-14T13:00:34+00:00", "ingested_at": "2026-05-14T13:01:40Z", "kind": "observed error", "message": "Render queue deadline exceeded"},
+    {"row": "L1-copy", "source": "LOG", "event_id": "error-101", "event_time": "2026-05-14T13:00:34+00:00", "ingested_at": "2026-05-14T13:01:41Z", "kind": "observed error", "message": "Render queue deadline exceeded"},
+    {"row": "L2", "source": "LOG", "event_id": "error-102", "event_time": "2026-05-14T13:00:39+00:00", "ingested_at": "2026-05-14T13:00:40Z", "kind": "observed error", "message": "Render queue deadline exceeded"},
+    {"row": "N1", "source": "NOTE", "event_id": "note-4", "event_time": "2026-05-14T09:02:15", "ingested_at": "2026-05-14T13:02:30Z", "kind": "reported plan", "action_stage": "proposed", "message": "Rollback prepared; awaiting decision"}
+  ],
+  "metrics": [
+    {"row": "M1", "source": "MET", "start": "2026-05-14T13:00:00Z", "end": "2026-05-14T13:01:00Z", "ingested_at": "2026-05-14T13:01:10Z", "errors_5xx": 12, "attempts": 200},
+    {"row": "M3", "source": "MET", "start": "2026-05-14T13:02:00Z", "end": "2026-05-14T13:03:00Z", "ingested_at": "2026-05-14T13:03:10Z", "errors_5xx": 3, "attempts": null},
+    {"row": "M4", "source": "MET", "start": "2026-05-14T13:03:00Z", "end": "2026-05-14T13:04:00Z", "ingested_at": "2026-05-14T13:04:10Z", "errors_5xx": 0, "attempts": 180}
+  ]
+}
