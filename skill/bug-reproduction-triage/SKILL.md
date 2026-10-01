@@ -57,7 +57,7 @@ Run only the expressly permitted existing test or local fixture after checking i
 
 - Use fictional records or approved sanitized samples; remove customer identifiers, credentials and session tokens
 - Local execution requires an available authorized environment and the project's toolchain; a text-only brief is still useful
-- Ask before installing dependencies, editing product code, creating an issue or running against any external environment
+- Stay within the requested reproduction scope. New dependency installation, product-code edits or an additional environment require applicable authorization. If filing the resulting ticket in a named destination was already requested, do it once and verify the saved content rather than asking again
 - Stop if a proposed test could delete records, send notifications or incur charges; request a safer fixture
 
 ## Example request
@@ -69,7 +69,7 @@ Begin with separate lists of reported facts, observed evidence, unknowns and hyp
 
 Build a small test matrix covering the normal case, an empty result, a changed filter followed by a repeated export, and a fresh session. Give each case an expected value derived from the supplied rows. Rank possible causes by the observations that would distinguish them, rather than asserting a root cause.
 
-If I have authorized local execution and the required toolchain is available, run only the existing relevant test or disposable fixture and record its command, environment and result. Otherwise return executable instructions with checks marked unrun. Do not install software, contact external systems, edit product code, send a ticket or expand scope without asking. Stop before production data or credentials are needed. Finish with a concise ticket draft and the evidence needed to call the issue reproduced, then resolved.
+If I have authorized local execution and the required toolchain is available, run only the existing relevant test or disposable fixture and record its command, environment and result. Otherwise return executable instructions with checks marked unrun. Use the evidence sources and local execution already authorized for this task. Do not install software, edit product code or expand to another environment without applicable authorization. If I explicitly requested filing the ticket in a named destination, complete that routine handoff and verify it; otherwise return a private draft. Stop before production data or credentials are needed. Finish with a concise ticket draft and the evidence needed to call the issue reproduced, then resolved.
 ```
 
 ## Focused follow-ups

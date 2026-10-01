@@ -9,12 +9,12 @@ Convert a bounded release candidate into a go, hold or unknown decision packet w
 
 ## When to use
 
-A fictional scheduling service plans a release that changes reminder timing and adds a database column. Test results exist in several exports, but nobody can tell which results belong to the candidate being released. The release owner needs a decision packet tied to one immutable candidate, including what would make the team stop or reverse the rollout.
+A service plans a release that changes reminder timing and adds a database column. Test results exist in several exports, but nobody can tell which results belong to the candidate being released. The release owner needs a decision packet tied to one immutable candidate, including what would make the team stop or reverse the rollout.
 
 ## Required inputs
 
 - A candidate identifier, change summary and exact included change list
-- Sanitized test, build and staging result exports with timestamps and candidate identifiers
+- Test, build and staging evidence from authorized connected sources or sanitized exports, with timestamps and candidate identifiers
 - Release policy, required approvals and known exceptions
 - Rollout stages, observable health measures and acceptable thresholds
 - Rollback or recovery instructions, including any data change that cannot be reversed
@@ -23,7 +23,7 @@ A fictional scheduling service plans a release that changes reminder timing and 
 
 ### Reconcile candidate and policy
 
-Create a candidate record containing immutable identifier, included changes, build artifact reference and proposed release scope. Inventory each evidence item with type, producing command or process, candidate identifier, timestamp, environment, result and completeness. Extract mandatory gates, exception authority, evidence freshness rules and required approvals from the supplied policy. If candidate identity is missing or contradictory, prepare the evidence inventory but stop the readiness recommendation until it is resolved.
+Create a candidate record containing immutable identifier, included changes, build artifact reference and proposed release scope. Read relevant evidence from already-authorized connected build, staging or observability sources when available; an export is a fallback, not a required extra step. Limit reads to this candidate, service and evidence window, and avoid copying unnecessary personal or secret data. Inventory each evidence item with type, producing command or process, candidate identifier, timestamp, environment, result and completeness. Extract mandatory gates, exception authority, evidence freshness rules and required approvals from the supplied policy. If candidate identity is missing or contradictory, prepare the evidence inventory but stop the readiness recommendation until it is resolved.
 
 ### Evaluate gates and rollout decisions
 
@@ -37,7 +37,7 @@ Create a candidate record containing immutable identifier, included changes, bui
 
 Walk four fictional evidence sets through the gate rules: all requirements met, one mandatory failure, stale or different-candidate results, and a release with an irreversible migration. Record the expected recommendation and blocking stage for each; this is a logic check, not release execution. Reconcile every policy requirement to a gate and every accepted result to its candidate identity.
 
-Deliver a one-page advisory decision summary, full evidence ledger, staged checklist, recovery branch and unresolved owner decisions. Separate existing approvals in supplied evidence from approval still required. If the policy lacks exception authority, stage thresholds or recovery prerequisites, ask the release owner the smallest necessary question while completing unaffected sections. Stop before changing status in a release system, recording approval, deploying or carrying out recovery.
+Deliver a concise advisory decision summary, full evidence ledger, staged checklist, recovery branch and unresolved owner decisions. If the user already requested an ordinary artifact save or handoff to a specific authorized destination, complete it and read back the result rather than asking again. Separate existing approvals in supplied evidence from approval still required. If the policy lacks exception authority, stage thresholds or recovery prerequisites, ask the release owner the smallest necessary question while completing unaffected sections. The assessment does not itself authorize a release-status change, approval, deployment or recovery. Treat any such operation as a distinct step requiring the applicable authority and safeguards; never imply that the decision packet performed it.
 
 ## Deliverables
 
@@ -57,21 +57,21 @@ Deliver a one-page advisory decision summary, full evidence ledger, staged check
 
 ## Stop and ask
 
-- Begin with sanitized evidence exports; production dashboards and logs require separate authorized access
+- Use relevant existing authorized read-only dashboard, log and build access or supplied exports. Ask only when a required source needs new access or the evidence boundary is unclear
 - Thresholds and exception authority must come from the supplied policy or a human owner
 - Stop the dependent recommendation if candidate identity cannot be established
-- Deployment, rollback execution, external communication and approval recording require a separate user decision
+- A readiness assessment is not deployment or approval. Perform an already-requested routine artifact handoff within its exact audience and scope; operational actions or new disclosures require their applicable authorization
 
 ## Example request
 
 ```text
-dot, prepare a release-readiness decision packet for [RELEASE CANDIDATE] of [SERVICE] using only [SUPPLIED EVIDENCE] and [RELEASE POLICY]. The reader is [RELEASE OWNER]. This is a review exercise; do not deploy, approve a release, change settings or message anybody.
+dot, prepare a release-readiness decision packet for [RELEASE CANDIDATE] of [SERVICE] using [AUTHORIZED EVIDENCE SOURCES] and [RELEASE POLICY]. The reader is [RELEASE OWNER]. This is a review exercise; do not deploy, approve a release, change settings or message anybody.
 
 Inventory the candidate's changes and map each required gate to its evidence, candidate identifier, timestamp, owner and current state: satisfied, failed or unknown. Evidence from a different build must not count unless the supplied policy explicitly allows it and the reason is recorded. Explain unfamiliar terms briefly for a first-time release coordinator.
 
 Construct a staged checklist covering preparation, the first rollout group, wider rollout and closure. For each stage specify the observation window, numerical or clearly observable success condition, stop condition and responsible role. Use supplied thresholds; leave a visible decision blank rather than inventing a production safety limit. Treat rollback as a recovery procedure with prerequisites, data consequences and a validation step, not just a command.
 
-Test the decision logic against a passing candidate, a failed required gate, stale evidence and a migration that cannot be reversed. Show how each changes the recommendation. Return the packet with unresolved blockers and the smallest owner decisions needed. Any command execution requires a separately authorized environment and available toolchain. Ask before obtaining additional access, taking any external action or expanding into deployment work; keep supplied operational details private.
+Test the decision logic against a passing candidate, a failed required gate, stale evidence and a migration that cannot be reversed. Show how each changes the recommendation. Return the packet with unresolved blockers and the smallest owner decisions needed. Use relevant existing authorized read-only evidence sources without asking again. Any execution needs an authorized environment and available toolchain. Stop for new access, operational changes or deployment work outside the request; keep operational details within the authorized audience.
 ```
 
 ## Focused follow-ups
@@ -91,7 +91,7 @@ Use a fictional failed first-stage rollout to walk through the recovery procedur
 ### 3. Prepare the meeting decision
 
 ```text
-Condense the packet into a five-minute release review agenda. Put unresolved mandatory gates first and include a place to record each human decision, owner and rationale without implying approval.
+Condense the packet into a short release review agenda. Put unresolved mandatory gates first and include a place to record each human decision, owner and rationale without implying approval.
 ```
 
 ## Evidence status

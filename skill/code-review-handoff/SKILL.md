@@ -70,7 +70,7 @@ Summarize the intended behavior before and after the change, then group files by
 
 Create a short verification ledger with checked revision, command, observed result and unresolved limits. If a test result predates the supplied head, do not present it as verification of the final change. Identify precise reviewer questions about assumptions, edge cases and compatibility, and distinguish a demonstrated defect from a concern needing investigation. Avoid inventing author intent or implementation facts absent from the inputs.
 
-Check a normal path, an empty or invalid input path and any repeated operation affected by the change. If execution is not authorized or the local toolchain is unavailable, review statically and label tests unrun. Keep source private and ask before external actions, additional access, installations, code edits or posting to a review system. Return a concise handoff draft plus a source-linked evidence appendix.
+Check a normal path, an empty or invalid input path and any repeated operation affected by the change. If execution is not authorized or the local toolchain is unavailable, review statically and label tests unrun. Read relevant already-authorized source and test evidence within the immutable scope. Create the handoff and, if I already requested a specific permitted review-system destination, post it once and verify the saved result. Otherwise return the private draft. Ask only for missing authority, additional access, installation, code edits or changed scope. Include a source-linked evidence appendix.
 ```
 
 ## Focused follow-ups
