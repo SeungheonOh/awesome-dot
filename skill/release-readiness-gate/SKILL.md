@@ -27,15 +27,24 @@ Create a candidate record containing immutable identifier, included changes, bui
 
 ### Evaluate gates and rollout decisions
 
-1. Map each policy gate to evidence for this candidate. Assign satisfied, failed or unknown, with the reason and source. Missing, truncated, stale or wrong-candidate evidence is unknown unless a supplied policy explicitly permits reuse. Record the precise reuse rule rather than assuming unchanged files make old evidence current.
+1. Map each policy gate to evidence for this candidate. Assign satisfied, failed or unknown, with the reason and source. Missing, truncated, stale or wrong-candidate evidence is unknown unless a supplied policy explicitly permits reuse. Reconcile supplied artifact and migration digests as well as the release label; a shared label is not proof of identical contents. Record the precise reuse rule rather than assuming unchanged files make old evidence current. Preserve conflicting current failures until the supplied policy explains how a replacement result resolves them; do not cherry-pick a newer pass.
 2. Inventory change-specific risks, including timing behavior, schema changes and dependencies that must coexist. Link each to a required check or an unresolved release question. A green build does not automatically satisfy a behavioral or recovery gate.
-3. Build the recommendation using mandatory gates: any failed mandatory gate means hold; any unknown mandatory gate means pending evidence; all required gates satisfied permits an advisory ready-for-owner-decision result. Apply an exception only when the supplied record names the authorized approver, scope and validity. Never create an exception by inference.
-4. Define preparation, first rollout group, expansion and closure rows. Each needs entry evidence, responsible role, observation window, measurement source, success threshold, stop condition and next decision. Use supplied thresholds; a blank threshold blocks that stage rather than becoming an invented safe value. If measurements have reporting delay, expose it in the window and decision limits.
-5. Write recovery as a separate decision branch. Identify the preserved prior artifact, prerequisite access, changed data compatibility, recovery action described by the supplied instructions and evidence of restored behavior. For irreversible data changes, state where artifact rollback is insufficient and what recovery choice remains for an owner.
+3. Build the recommendation using mandatory gates: any failed mandatory gate without a valid exception means hold; otherwise any unknown mandatory gate means unknown (pending evidence); all required gates satisfied or validly excepted permits an advisory ready-for-owner-decision result only when the requested stage’s planning requirements are also satisfied. Keep these recommendation states distinct from operational authorization. Apply an exception only when the supplied record names the authorized approver, candidate, exact gate/check scope and validity. Preserve the raw failure alongside the effective exception result. Check that the exception covers the intended stage, cohort and observation window including reporting delay; it cannot waive another gate or silently extend to expansion. Never create an exception by inference.
+4. Define preparation, first rollout group, expansion and closure rows. Each needs entry evidence, responsible role, observation window, measurement source, success threshold, stop condition and next decision. Use supplied thresholds; a blank threshold blocks that stage rather than becoming an invented safe value. Validate the proposed scope and observation duration against those requirements before reporting scoped readiness, even when every evidence gate passes. If a proposed start is already past, use the supplied policy to decide whether it needs rescheduling. If measurements have reporting delay, expose it in the window and decision limits.
+5. Write recovery as a separate decision branch. Identify the preserved prior artifact, prerequisite access, changed data compatibility, recovery action described by the supplied instructions and evidence of restored behavior. For irreversible data changes, state where artifact rollback is insufficient and what recovery choice remains for an owner. Check new post-migration writes, snapshot/journal reconciliation and older readers; the application rollout percentage does not establish the migration blast radius.
 
 ### Test the packet's logic
 
 Walk four fictional evidence sets through the gate rules: all requirements met, one mandatory failure, stale or different-candidate results, and a release with an irreversible migration. Record the expected recommendation and blocking stage for each; this is a logic check, not release execution. Reconcile every policy requirement to a gate and every accepted result to its candidate identity.
+
+For a concrete worked case and reproducible offline checks, use [the fictional Rivet packet](references/fictional-release-packet.md) and its [raw evidence input](references/fictional-release-input.json). From this skill folder:
+
+```bash
+python scripts/check-fictional-release.py
+python scripts/check-fictional-release.py --report
+```
+
+The first command checks candidate binding, policy coverage, exception scope/expiry, first-rollout planning and hold → unknown → advisory-ready transitions; the second prints the derived ledger. These standard-library checks read only the local fixture and modify synthetic copies in memory; they establish no live release result. The example policy and limits belong only to that case.
 
 Deliver a concise advisory decision summary, full evidence ledger, staged checklist, recovery branch and unresolved owner decisions. If the user already requested an ordinary artifact save or handoff to a specific authorized destination, complete it and read back the result rather than asking again. Separate existing approvals in supplied evidence from approval still required. If the policy lacks exception authority, stage thresholds or recovery prerequisites, ask the release owner the smallest necessary question while completing unaffected sections. The assessment does not itself authorize a release-status change, approval, deployment or recovery. Treat any such operation as a distinct step requiring the applicable authority and safeguards; never imply that the decision packet performed it.
 
@@ -96,4 +105,4 @@ Condense the packet into a short release review agenda. Put unresolved mandatory
 
 ## Evidence status
 
-This is an implementation guide. End-to-end execution has not been established; report actual checks and unrun steps for each use.
+The bundled fictional case has reproducible local logic checks, described in its packet. These checks do not establish live evidence authenticity or end-to-end release execution. Report actual checks and unrun steps for each use.

@@ -1,0 +1,498 @@
+{
+  "fictional": true,
+  "purpose": "Synthetic, offline release-gate logic example. All identities, people, evidence and policy are invented. Hashes identify fixture labels, not real code or artifacts.",
+  "as_of": "2026-10-01T12:00:00Z",
+  "candidate": {
+    "release_id": "RIVET-2026-10-01.2",
+    "source_commit": "36ff22950454f542a16cc9d48c109794b6bbf71b",
+    "artifact_sha256": "7524852606c76187de7d0e328f26041ade14e8fa6262b06ea5c129c86737178c",
+    "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+  },
+  "candidate_artifact": "fixture:rivet-build-418",
+  "previous_artifact": "fixture:rivet-build-417",
+  "included_changes": [
+    {
+      "id": "CHANGE-201",
+      "summary": "Defer reminder dispatch until canonical due_at_utc; add DST-boundary replay coverage."
+    },
+    {
+      "id": "CHANGE-202",
+      "summary": "Migration M042 adds due_at_utc, converts legacy local timestamps, then clears their source local-time and zone fields during cutover."
+    },
+    {
+      "id": "CHANGE-203",
+      "summary": "Measure duplicate sends, late reminders and per-cohort queue age."
+    }
+  ],
+  "requested_scope": {
+    "environment": "fictional-prod-eu1",
+    "stage": "first_rollout",
+    "cohort_pct": 2,
+    "starts_at": "2026-10-01T12:10:00Z",
+    "ends_at": "2026-10-01T12:40:00Z"
+  },
+  "policy": {
+    "id": "RIVET-POLICY-7",
+    "effective_at": "2026-09-28T00:00:00Z",
+    "source": "fixture:policy-7",
+    "evidence_reuse": "No cross-candidate reuse. All four identity fields must match. Timestamps are UTC. Age is measured from ended_at to as_of; exact freshness boundary is allowed. Future, incomplete or missing-metric evidence is unknown.",
+    "conflicts": "Any current, complete, candidate-bound failure remains a failure. A passing export alone does not supersede it. This fixture has no supersession mechanism.",
+    "decision_order": [
+      "hold if any mandatory gate is failed after a valid exception, or the scoped first-rollout plan fails",
+      "unknown if any mandatory gate or required first-rollout planning value is unknown",
+      "ready_for_owner_decision only if all mandatory gates are satisfied or validly excepted and the scoped first-rollout plan is satisfied"
+    ],
+    "gates": [
+      {
+        "id": "G1",
+        "name": "Build and contract suite",
+        "owner": "Build owner",
+        "mandatory": true,
+        "evidence_type": "build-export",
+        "environment": "fictional-ci",
+        "max_age_hours": 24,
+        "checks": {
+          "unit_failures": {
+            "op": "eq",
+            "value": 0
+          },
+          "contract_failures": {
+            "op": "eq",
+            "value": 0
+          },
+          "artifact_attestation_present": {
+            "op": "eq",
+            "value": true
+          }
+        }
+      },
+      {
+        "id": "G2",
+        "name": "Reminder timing behavior",
+        "owner": "Reminder QA owner",
+        "mandatory": true,
+        "evidence_type": "behavior-export",
+        "environment": "fictional-staging",
+        "max_age_hours": 6,
+        "checks": {
+          "duplicate_deliveries": {
+            "op": "eq",
+            "value": 0
+          },
+          "late_over_60s": {
+            "op": "eq",
+            "value": 0
+          },
+          "dst_cases_passed": {
+            "op": "eq",
+            "value": 24
+          }
+        }
+      },
+      {
+        "id": "G3",
+        "name": "Staging load and error budget",
+        "owner": "SRE lead",
+        "mandatory": true,
+        "evidence_type": "load-export",
+        "environment": "fictional-staging",
+        "max_age_hours": 2,
+        "checks": {
+          "p99_ms": {
+            "op": "lte",
+            "value": 200
+          },
+          "error_rate_pct": {
+            "op": "lte",
+            "value": 0.1
+          }
+        }
+      },
+      {
+        "id": "G4",
+        "name": "Post-migration recovery",
+        "owner": "Data owner",
+        "mandatory": true,
+        "evidence_type": "recovery-export",
+        "environment": "fictional-recovery-sandbox",
+        "max_age_hours": 24,
+        "checks": {
+          "new_row_recovery_ok": {
+            "op": "eq",
+            "value": true
+          },
+          "replay_duplicates": {
+            "op": "eq",
+            "value": 0
+          },
+          "lost_acknowledged_rows": {
+            "op": "eq",
+            "value": 0
+          },
+          "restore_drill_succeeded": {
+            "op": "eq",
+            "value": true
+          },
+          "data_owner_approved_strategy": {
+            "op": "eq",
+            "value": true
+          },
+          "migration_scope_and_old_reader_plan_verified": {
+            "op": "eq",
+            "value": true
+          }
+        }
+      },
+      {
+        "id": "G5",
+        "name": "Rollout measurement readiness",
+        "owner": "On-call SRE",
+        "mandatory": true,
+        "evidence_type": "observability-export",
+        "environment": "fictional-staging",
+        "max_age_hours": 6,
+        "checks": {
+          "reporting_lag_s": {
+            "op": "lte",
+            "value": 120
+          },
+          "duplicate_alert_verified": {
+            "op": "eq",
+            "value": true
+          },
+          "per_cohort_metrics_verified": {
+            "op": "eq",
+            "value": true
+          }
+        }
+      },
+      {
+        "id": "G6",
+        "name": "Scoped change review",
+        "owner": "Release reviewer",
+        "mandatory": true,
+        "evidence_type": "review-export",
+        "environment": "fictional-review",
+        "max_age_hours": 24,
+        "checks": {
+          "review_complete": {
+            "op": "eq",
+            "value": true
+          },
+          "reviewer_role": {
+            "op": "eq",
+            "value": "Release reviewer"
+          }
+        }
+      }
+    ],
+    "exceptions": {
+      "approver_role": "SRE lead",
+      "allowed_gate": "G3",
+      "allowed_failed_checks": [
+        "p99_ms"
+      ],
+      "max_p99_ms": 225,
+      "max_cohort_pct": 2,
+      "allowed_stage": "first_rollout",
+      "required_mitigations": [
+        "prepared_queue_stop_guard",
+        "prepared_duplicate_stop_guard"
+      ],
+      "no_extension_by_inference": true
+    },
+    "stage_rules": {
+      "preparation": {
+        "require_all_mandatory_gates": true,
+        "live_start_requires": "Explicit release-owner deployment authorization, followed by operator verification of prepared guards and actual metrics"
+      },
+      "first_rollout": {
+        "cohort_pct": 2,
+        "observation_minutes": 30,
+        "reporting_lag_s": 120,
+        "normal_p99_ms": 200,
+        "exception_p99_ms": 225,
+        "error_rate_pct": 0.1,
+        "duplicate_deliveries": 0,
+        "late_over_60s": 0,
+        "queue_age_s": 60,
+        "environment": "fictional-prod-eu1",
+        "start_at_or_after_assessment": true,
+        "planning_rule": "Before advisory readiness, the proposed window must start at or after as_of and provide at least observation_minutes continuously. Missing, non-finite or invalid thresholds make stage planning unknown. A known short window, past start or wrong environment/stage/cohort fails planning and requires a new proposed scope."
+      },
+      "expansion": {
+        "cohort_pct": 25,
+        "observation_minutes": 30,
+        "reporting_lag_s": 120,
+        "p99_ms": 200,
+        "error_rate_pct": 0.1,
+        "duplicate_deliveries": 0,
+        "late_over_60s": 0,
+        "queue_age_s": 60,
+        "requires_fresh_normal_G3_pass": true
+      },
+      "closure": {
+        "cohort_pct": 100,
+        "observation_minutes": 60,
+        "reporting_lag_s": 120,
+        "p99_ms": 200,
+        "error_rate_pct": 0.1,
+        "duplicate_deliveries": 0,
+        "late_over_60s": 0,
+        "queue_age_s": 60,
+        "requires_data_owner_reconciliation": true
+      },
+      "measurement_rule": "Every live limit must hold in every complete one-minute per-cohort window. Missing data or reporting lag over 120 seconds blocks continuation or expansion."
+    }
+  },
+  "gate_evidence": {
+    "G1": [
+      "E-BUILD-418"
+    ],
+    "G2": [
+      "E-BHV-OLD",
+      "E-BHV-OTHER"
+    ],
+    "G3": [
+      "E-LOAD-218"
+    ],
+    "G4": [
+      "E-RECOVERY-FAIL"
+    ],
+    "G5": [
+      "E-METRICS-120"
+    ],
+    "G6": [
+      "E-REVIEW-9"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "E-BUILD-418",
+      "gate_id": "G1",
+      "candidate": {
+        "release_id": "RIVET-2026-10-01.2",
+        "source_commit": "36ff22950454f542a16cc9d48c109794b6bbf71b",
+        "artifact_sha256": "7524852606c76187de7d0e328f26041ade14e8fa6262b06ea5c129c86737178c",
+        "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+      },
+      "policy_id": "RIVET-POLICY-7",
+      "type": "build-export",
+      "environment": "fictional-ci",
+      "ended_at": "2026-09-30T23:10:00Z",
+      "complete": true,
+      "reported_result": "passed",
+      "source": "fixture:E-BUILD-418",
+      "producer": "CI export, build 418",
+      "metrics": {
+        "unit_failures": 0,
+        "contract_failures": 0,
+        "artifact_attestation_present": true
+      },
+      "notes": "Fixture claims an attestation is present; this does not verify any real signature."
+    },
+    {
+      "id": "E-BHV-OLD",
+      "gate_id": "G2",
+      "candidate": {
+        "release_id": "RIVET-2026-10-01.2",
+        "source_commit": "36ff22950454f542a16cc9d48c109794b6bbf71b",
+        "artifact_sha256": "7524852606c76187de7d0e328f26041ade14e8fa6262b06ea5c129c86737178c",
+        "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+      },
+      "policy_id": "RIVET-POLICY-7",
+      "type": "behavior-export",
+      "environment": "fictional-staging",
+      "ended_at": "2026-10-01T04:30:00Z",
+      "complete": true,
+      "reported_result": "passed",
+      "source": "fixture:E-BHV-OLD",
+      "producer": "Timing replay export, scenario set 24",
+      "metrics": {
+        "duplicate_deliveries": 0,
+        "late_over_60s": 0,
+        "dst_cases_passed": 24
+      },
+      "notes": "Correct candidate, but older than the six-hour policy limit."
+    },
+    {
+      "id": "E-BHV-OTHER",
+      "gate_id": "G2",
+      "candidate": {
+        "release_id": "RIVET-2026-10-01.1",
+        "source_commit": "53f5f2a81bfc7b0c94c5a31e01208827b31c28b7",
+        "artifact_sha256": "cf11b02d1d37ceb65bed32ba5c8dc1c0837aec553f38940ae5402847fa9f7f31",
+        "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+      },
+      "policy_id": "RIVET-POLICY-7",
+      "type": "behavior-export",
+      "environment": "fictional-staging",
+      "ended_at": "2026-10-01T10:45:00Z",
+      "complete": true,
+      "reported_result": "passed",
+      "source": "fixture:E-BHV-OTHER",
+      "producer": "Timing replay export, scenario set 24",
+      "metrics": {
+        "duplicate_deliveries": 0,
+        "late_over_60s": 0,
+        "dst_cases_passed": 24
+      },
+      "notes": "Fresh result belongs to the previous candidate, not the requested artifact."
+    },
+    {
+      "id": "E-LOAD-218",
+      "gate_id": "G3",
+      "candidate": {
+        "release_id": "RIVET-2026-10-01.2",
+        "source_commit": "36ff22950454f542a16cc9d48c109794b6bbf71b",
+        "artifact_sha256": "7524852606c76187de7d0e328f26041ade14e8fa6262b06ea5c129c86737178c",
+        "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+      },
+      "policy_id": "RIVET-POLICY-7",
+      "type": "load-export",
+      "environment": "fictional-staging",
+      "ended_at": "2026-10-01T11:00:00Z",
+      "complete": true,
+      "reported_result": "failed",
+      "source": "fixture:E-LOAD-218",
+      "producer": "Fixed-load staging replay export",
+      "metrics": {
+        "p99_ms": 218,
+        "error_rate_pct": 0.04
+      },
+      "notes": "Only p99 latency fails the normal limit; EX-P99-007 may cover that one check."
+    },
+    {
+      "id": "E-RECOVERY-FAIL",
+      "gate_id": "G4",
+      "candidate": {
+        "release_id": "RIVET-2026-10-01.2",
+        "source_commit": "36ff22950454f542a16cc9d48c109794b6bbf71b",
+        "artifact_sha256": "7524852606c76187de7d0e328f26041ade14e8fa6262b06ea5c129c86737178c",
+        "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+      },
+      "policy_id": "RIVET-POLICY-7",
+      "type": "recovery-export",
+      "environment": "fictional-recovery-sandbox",
+      "ended_at": "2026-10-01T11:25:00Z",
+      "complete": true,
+      "reported_result": "failed",
+      "source": "fixture:E-RECOVERY-FAIL",
+      "producer": "Disposable sandbox recovery rehearsal export",
+      "metrics": {
+        "new_row_recovery_ok": false,
+        "replay_duplicates": 0,
+        "lost_acknowledged_rows": 0,
+        "restore_drill_succeeded": true,
+        "data_owner_approved_strategy": false,
+        "migration_scope_and_old_reader_plan_verified": false
+      },
+      "notes": "Snapshot restores in isolation, but previous binary skips post-cutover canonical UTC rows. No data-owner-approved forward-fix or replay strategy is established. Migration blast radius and isolation of old readers are not established."
+    },
+    {
+      "id": "E-METRICS-120",
+      "gate_id": "G5",
+      "candidate": {
+        "release_id": "RIVET-2026-10-01.2",
+        "source_commit": "36ff22950454f542a16cc9d48c109794b6bbf71b",
+        "artifact_sha256": "7524852606c76187de7d0e328f26041ade14e8fa6262b06ea5c129c86737178c",
+        "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+      },
+      "policy_id": "RIVET-POLICY-7",
+      "type": "observability-export",
+      "environment": "fictional-staging",
+      "ended_at": "2026-10-01T11:35:00Z",
+      "complete": true,
+      "reported_result": "passed",
+      "source": "fixture:E-METRICS-120",
+      "producer": "Synthetic measurement probe export",
+      "metrics": {
+        "reporting_lag_s": 120,
+        "duplicate_alert_verified": true,
+        "per_cohort_metrics_verified": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "E-REVIEW-9",
+      "gate_id": "G6",
+      "candidate": {
+        "release_id": "RIVET-2026-10-01.2",
+        "source_commit": "36ff22950454f542a16cc9d48c109794b6bbf71b",
+        "artifact_sha256": "7524852606c76187de7d0e328f26041ade14e8fa6262b06ea5c129c86737178c",
+        "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+      },
+      "policy_id": "RIVET-POLICY-7",
+      "type": "review-export",
+      "environment": "fictional-review",
+      "ended_at": "2026-10-01T11:45:00Z",
+      "complete": true,
+      "reported_result": "passed",
+      "source": "fixture:E-REVIEW-9",
+      "producer": "Recorded scope review export",
+      "metrics": {
+        "review_complete": true,
+        "reviewer_role": "Release reviewer"
+      },
+      "notes": "Fictional reviewer Rowan approved the change scope for assessment. This is not deployment authorization."
+    }
+  ],
+  "exception_records": [
+    {
+      "id": "EX-P99-007",
+      "policy_id": "RIVET-POLICY-7",
+      "candidate": {
+        "release_id": "RIVET-2026-10-01.2",
+        "source_commit": "36ff22950454f542a16cc9d48c109794b6bbf71b",
+        "artifact_sha256": "7524852606c76187de7d0e328f26041ade14e8fa6262b06ea5c129c86737178c",
+        "migration_sha256": "3c435e60e1705e95d2b4d95f2649ef1b94a4e295aed022f48f91f89e748d5be7"
+      },
+      "gate_id": "G3",
+      "failed_checks": [
+        "p99_ms"
+      ],
+      "p99_ceiling_ms": 225,
+      "approved_by": "Mira Chen (fictional)",
+      "approver_role": "SRE lead",
+      "approved_at": "2026-10-01T11:30:00Z",
+      "valid_from": "2026-10-01T11:30:00Z",
+      "expires_at": "2026-10-01T13:00:00Z",
+      "scope": {
+        "environment": "fictional-prod-eu1",
+        "stage": "first_rollout",
+        "cohort_pct": 2,
+        "starts_at": "2026-10-01T12:10:00Z",
+        "ends_at": "2026-10-01T12:40:00Z"
+      },
+      "mitigations": {
+        "prepared_queue_stop_guard": true,
+        "prepared_duplicate_stop_guard": true
+      },
+      "source": "fixture:EX-P99-007",
+      "reason": "Temporary acceptance of 218 ms p99 for this candidate and a 2% first rollout only; the 0.1% error ceiling and all other gates remain unchanged."
+    }
+  ],
+  "recovery": {
+    "irreversible_step": "M042 cutover clears legacy local-time and zone fields after UTC canonicalization, while new rows are written using only due_at_utc.",
+    "why_binary_revert_is_insufficient": "Previous binary 417 requires legacy fields. It skips new canonical rows and cannot reconstruct cleared source time-zone choices.",
+    "preserved_assets": [
+      "fixture:rivet-build-417",
+      "fixture:pre-cutover-snapshot",
+      "fixture:append-only-dispatch-journal"
+    ],
+    "prerequisites": [
+      "Authorized on-call operator access and ability to pause dispatch/writes",
+      "Data owner selects a forward-fix or reconciled snapshot-plus-journal recovery plan",
+      "Verified journal completeness and deduplication rules for post-snapshot acknowledgments",
+      "Rehearsal proving recovery of both migrated rows and new post-cutover rows",
+      "Verified migration blast radius and a coexistence plan preventing old readers from misreading canonical-only rows"
+    ],
+    "existing_evidence": "E-RECOVERY-FAIL proves only isolated snapshot restore, not lossless post-cutover service recovery.",
+    "required_post_recovery_checks": [
+      "Zero lost acknowledged reminders",
+      "Zero duplicate sends when journal entries are replayed",
+      "Both migrated and post-cutover rows dispatch at the expected UTC instant",
+      "Backlog drains within policy limits using complete, current measurements"
+    ]
+  }
+}
