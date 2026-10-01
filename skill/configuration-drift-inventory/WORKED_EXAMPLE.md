@@ -24,6 +24,7 @@ These are application rendering settings. Credential material and security setti
 ```json
 {
   "comparison_time": "2026-10-01T09:15:00Z",
+  "scoped_fields": ["render.timeout", "render.labels", "render.fallbacks", "render.locale", "render.watermark", "render.retry_limit", "render.concurrency", "render.dpi", "render.annotation"],
   "baseline": {"id": "preview-template-v8", "owner": "Rendering lead", "captured_at": "2026-10-01T09:00:00Z", "source": "supplied/baseline.json", "complete": true},
   "target": {"id": "east-test-export-41", "template": "preview-template-v8", "captured_at": "2026-10-01T09:02:00Z", "source": "supplied/east-overrides.json", "complete": true},
   "template": {
@@ -100,12 +101,17 @@ from pathlib import Path
 text = Path("skill/configuration-drift-inventory/WORKED_EXAMPLE.md").read_text()
 f = json.loads(re.search(r"```json\n(.*?)\n```", text, re.S).group(1))
 MISSING, UNKNOWN = object(), object()
-fields = set(f["template"]) | set(f["east_overrides"])
+def baseline_value(data, field):
+    if field in data["template"]:
+        return data["template"][field]
+    return MISSING if data["baseline"]["complete"] is True else UNKNOWN
 
-def effective(field, overrides, complete=True):
-    if field in overrides:
-        return overrides[field]
-    return f["template"].get(field, MISSING) if complete else UNKNOWN
+def effective(data, field):
+    if field in data["east_overrides"]:
+        return data["east_overrides"][field]
+    if data["target"]["complete"] is not True:
+        return UNKNOWN
+    return baseline_value(data, field)
 
 def normalize(field, value):
     if field == "render.timeout":
@@ -117,17 +123,17 @@ def normalize(field, value):
         return UNKNOWN
     return value
 
-def classify(field, overrides, complete=True):
-    a = normalize(field, f["template"].get(field, MISSING))
-    b = normalize(field, effective(field, overrides, complete))
+def classify(data, field):
+    a = normalize(field, baseline_value(data, field))
+    b = normalize(field, effective(data, field))
     if a is UNKNOWN or b is UNKNOWN:
         return "unknown"
     if a == b:
         return "equivalent"
-    for ex in f["exceptions"]:
-        if (ex["environment"] == f["target"]["id"] and
+    for ex in data["exceptions"]:
+        if (ex["environment"] == data["target"]["id"] and
             ex["field"] == field and ex["allowed_value"] == b):
-            now = datetime.fromisoformat(f["comparison_time"])
+            now = datetime.fromisoformat(data["comparison_time"])
             start, end = map(datetime.fromisoformat, (ex["approved_at"], ex["expires_at"]))
             if start <= now < end:
                 return "expected"
@@ -135,7 +141,12 @@ def classify(field, overrides, complete=True):
                 return "stale exception"
     return "unexplained"
 
-actual = {key: classify(key, f["east_overrides"]) for key in fields}
+def inventory(data):
+    fields = data["scoped_fields"]  # Scope is independent of which values are present.
+    assert len(fields) == len(set(fields)), "duplicate scoped field"
+    return {key: classify(data, key) for key in fields}
+
+actual = inventory(f)
 assert actual == {
     "render.timeout": "equivalent", "render.labels": "equivalent",
     "render.fallbacks": "unexplained", "render.locale": "equivalent",
@@ -143,21 +154,34 @@ assert actual == {
     "render.concurrency": "expected", "render.dpi": "unknown",
     "render.annotation": "unexplained"
 }
-assert effective("render.annotation", {}) is MISSING
-assert effective("render.annotation", f["east_overrides"]) is None
-assert effective("render.watermark", f["east_overrides"]) == ""
+assert baseline_value(f, "render.annotation") is MISSING
+assert effective(f, "render.annotation") is None
+assert effective(f, "render.watermark") == ""
 assert "render.locale" not in f["east_overrides"]
-assert classify("render.locale", f["east_overrides"], False) == "unknown"
-assert classify("render.watermark", f["east_overrides"], False) == "unknown"
-changed = copy.deepcopy(f["east_overrides"])
-changed["render.timeout"] = {"value": 2, "unit": "ticks"}
-assert classify("render.timeout", changed) == "unknown"
-changed["render.concurrency"] = 3
-assert classify("render.concurrency", changed) == "unexplained"
-changed["render.dpi"] = 144
-assert classify("render.dpi", changed) == "equivalent"
+# Exercise the comparison entry point from snapshot metadata, not a helper-only flag.
+incomplete = copy.deepcopy(f)
+incomplete["target"]["complete"] = False
+partial = inventory(incomplete)
+assert set(partial) == set(f["scoped_fields"])
+assert partial["render.locale"] == partial["render.watermark"] == "unknown"
+assert partial["render.timeout"] == "equivalent"  # Present override is still known.
+# Optional absence on both sides remains one of all nine scoped comparisons.
+absent = copy.deepcopy(f)
+del absent["east_overrides"]["render.annotation"]
+assert effective(absent, "render.annotation") is MISSING
+assert len(inventory(absent)) == 9
+assert inventory(absent)["render.annotation"] == "equivalent"
+absent["baseline"]["complete"] = False
+assert inventory(absent)["render.annotation"] == "unknown"
+changed = copy.deepcopy(f)
+changed["east_overrides"]["render.timeout"] = {"value": 2, "unit": "ticks"}
+assert inventory(changed)["render.timeout"] == "unknown"
+changed["east_overrides"]["render.concurrency"] = 3
+assert inventory(changed)["render.concurrency"] == "unexplained"
+changed["east_overrides"]["render.dpi"] = 144
+assert inventory(changed)["render.dpi"] == "equivalent"
 assert sum(v != "unknown" for v in actual.values()) == 8
 print("PASS: value semantics, nine-field reconciliation, exception scope and ambiguity branches")
 ```
 
-Observed validation: the fenced check passed with Python 3.12.14 on 2026-10-01. JSON parsing, all table classifications, missing/null/empty distinctions, object and list ordering, unit equivalence, exception scope and ambiguous-input branches were checked locally. This validates the example's comparison logic, not a general configuration parser or any live renderer.
+Observed validation: the fenced check passed with Python 3.12.14 on 2026-10-01. JSON parsing, all table classifications, explicit nine-field scope, metadata-driven completeness, missing/null/empty distinctions, object and list ordering, unit equivalence, exception scope and ambiguous-input branches were checked locally. The optional field remains in scope when absent on both sides; incomplete baseline or target evidence cannot prove its absence. This validates the example's comparison logic, not a general configuration parser or any live renderer.
