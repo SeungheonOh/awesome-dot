@@ -26,7 +26,11 @@ No account connections, repository access or installation needed for the example
 Each original recipe has a specific goal, an input checklist, a standalone copyable prompt, three follow-up iterations, expected deliverables, observable acceptance checks and project-specific boundaries. Canonical content is Markdown, readable by people and usable as a brief for another dot agent.
 
 <!-- catalog-summary:start -->
-The collection structure is ready. Original recipe batches are being authored and checked.
+**10 original recipes · 1 categories · every recipe marked not run**
+
+| Explore | Recipes |
+| --- | ---: |
+| [Web games](recipes/web-games/README.md) | 10 |
 <!-- catalog-summary:end -->
 
 ### Start a useful conversation
