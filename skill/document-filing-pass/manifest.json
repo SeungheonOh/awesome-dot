@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "run_id": "fictional-filing-1",
+  "evidence_mode": "Fictional fixture with simulated readbacks; no service was changed",
+  "service": "Fictional Cloud Drawer",
+  "account": "fictional-owner",
+  "recorded_at": "2026-09-25T14:00:00Z",
+  "source_folder_id": "folder-inbox",
+  "source_file_ids": [
+    "doc-101",
+    "doc-102",
+    "doc-103",
+    "doc-104",
+    "doc-105",
+    "doc-106"
+  ],
+  "supporting_read_only_ids": [
+    "doc-900"
+  ],
+  "source_listing_complete": true,
+  "access_snapshots": {
+    "private-owner": {
+      "owner": "fictional-owner",
+      "effective_readers": [
+        "fictional-owner"
+      ]
+    },
+    "team-readable": {
+      "owner": "fictional-owner",
+      "effective_readers": [
+        "fictional-owner",
+        "fictional-project-group"
+      ]
+    }
+  },
+  "folders": {
+    "folder-inbox": {
+      "name": "Inbox",
+      "access": "private-owner"
+    },
+    "folder-invoices": {
+      "name": "Invoices",
+      "access": "private-owner"
+    },
+    "folder-receipts": {
+      "name": "Receipts",
+      "access": "private-owner"
+    },
+    "folder-manuals": {
+      "name": "Manuals",
+      "access": "private-owner"
+    },
+    "folder-warranties": {
+      "name": "Warranties",
+      "access": "team-readable"
+    }
+  },
+  "destination_baseline": [
+    {
+      "id": "doc-900",
+      "name": "2026-09-20_Quill-Repair_Receipt.pdf",
+      "parents": [
+        "folder-receipts"
+      ],
+      "access": "private-owner",
+      "checksum": "fixture-content-Z"
+    }
+  ],
+  "records": [
+    {
+      "id": "doc-101",
+      "classification": "invoice",
+      "evidence": "Page 1: Marlow Studio, invoice MS-104, issue date 2026-09-18",
+      "status": "applied_verified_fixture",
+      "before": {
+        "id": "doc-101",
+        "name": "scan_21.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "a1",
+        "access": "private-owner",
+        "checksum": "fixture-content-A"
+      },
+      "planned": {
+        "name": "2026-09-18_Marlow-Studio_Invoice_MS-104.pdf",
+        "parents": [
+          "folder-invoices"
+        ]
+      },
+      "observed_after": {
+        "id": "doc-101",
+        "name": "2026-09-18_Marlow-Studio_Invoice_MS-104.pdf",
+        "parents": [
+          "folder-invoices"
+        ],
+        "revision": "a3",
+        "access": "private-owner",
+        "checksum": "fixture-content-A"
+      },
+      "operations": [
+        {
+          "type": "rename",
+          "before": "scan_21.pdf",
+          "after": "2026-09-18_Marlow-Studio_Invoice_MS-104.pdf",
+          "revision_before": "a1",
+          "revision_after": "a2",
+          "status": "verified_fixture"
+        },
+        {
+          "type": "move",
+          "before": [
+            "folder-inbox"
+          ],
+          "after": [
+            "folder-invoices"
+          ],
+          "revision_before": "a2",
+          "revision_after": "a3",
+          "status": "verified_fixture"
+        }
+      ],
+      "recovery": "After current-state and access checks, move to folder-inbox, then rename to scan_21.pdf"
+    },
+    {
+      "id": "doc-102",
+      "classification": "receipt",
+      "evidence": "Page 1: Quill Repair, 2026-09-20, 16:45, replacement knob. doc-900 page 1 instead records a 09:12 window-latch repair. No printed receipt reference on either document",
+      "status": "held_duplicate",
+      "before": {
+        "id": "doc-102",
+        "name": "scan_22.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "b1",
+        "access": "private-owner",
+        "checksum": "fixture-content-B"
+      },
+      "planned": {
+        "name": "2026-09-20_Quill-Repair_Receipt__102.pdf",
+        "parents": [
+          "folder-receipts"
+        ]
+      },
+      "observed_after": {
+        "id": "doc-102",
+        "name": "scan_22.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "b1",
+        "access": "private-owner",
+        "checksum": "fixture-content-B"
+      },
+      "collision": {
+        "base_name": "2026-09-20_Quill-Repair_Receipt.pdf",
+        "existing_id": "doc-900",
+        "resolution": "The approved suffix gives a noncolliding candidate name, but duplicate-group hold prevents applying it"
+      },
+      "operations": [],
+      "duplicate_group": [
+        "doc-102",
+        "doc-103"
+      ],
+      "decision_needed": "Both byte-identical members remain untouched under the current instruction; choose a representative and filing treatment only with explicit authority"
+    },
+    {
+      "id": "doc-103",
+      "classification": "receipt",
+      "evidence": "Supplied trustworthy fixture byte checksum equals doc-102; no additional content read needed",
+      "status": "held_duplicate",
+      "before": {
+        "id": "doc-103",
+        "name": "scan_22_copy.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "c1",
+        "access": "private-owner",
+        "checksum": "fixture-content-B"
+      },
+      "planned": null,
+      "observed_after": {
+        "id": "doc-103",
+        "name": "scan_22_copy.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "c1",
+        "access": "private-owner",
+        "checksum": "fixture-content-B"
+      },
+      "duplicate_of": "doc-102",
+      "operations": [],
+      "decision_needed": "Keep both untouched or choose an explicitly authorized filing treatment; do not delete or merge"
+    },
+    {
+      "id": "doc-104",
+      "classification": "unknown",
+      "evidence": "First-page header only: date 03/04/26, issuer unreadable and no reliable date-locale context",
+      "status": "held_unknown",
+      "before": {
+        "id": "doc-104",
+        "name": "IMG_0451.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "d1",
+        "access": "private-owner",
+        "checksum": "fixture-content-D"
+      },
+      "planned": null,
+      "observed_after": {
+        "id": "doc-104",
+        "name": "IMG_0451.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "d1",
+        "access": "private-owner",
+        "checksum": "fixture-content-D"
+      },
+      "operations": [],
+      "decision_needed": "Identify document kind and issuer, and whether the date means March 4 or April 3; do not substitute upload date"
+    },
+    {
+      "id": "doc-105",
+      "classification": "manual",
+      "evidence": "Cover: Marlow Devices, model M8, User Manual; no publication date. The supplied naming convention allows undated manuals",
+      "status": "applied_verified_fixture",
+      "before": {
+        "id": "doc-105",
+        "name": "setup.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "e1",
+        "access": "private-owner",
+        "checksum": "fixture-content-E"
+      },
+      "planned": {
+        "name": "Marlow-Devices_M8_User-Manual.pdf",
+        "parents": [
+          "folder-manuals"
+        ]
+      },
+      "observed_after": {
+        "id": "doc-105",
+        "name": "Marlow-Devices_M8_User-Manual.pdf",
+        "parents": [
+          "folder-manuals"
+        ],
+        "revision": "e3",
+        "access": "private-owner",
+        "checksum": "fixture-content-E"
+      },
+      "operations": [
+        {
+          "type": "rename",
+          "before": "setup.pdf",
+          "after": "Marlow-Devices_M8_User-Manual.pdf",
+          "revision_before": "e1",
+          "revision_after": "e2",
+          "status": "verified_fixture"
+        },
+        {
+          "type": "move",
+          "before": [
+            "folder-inbox"
+          ],
+          "after": [
+            "folder-manuals"
+          ],
+          "revision_before": "e2",
+          "revision_after": "e3",
+          "status": "verified_fixture"
+        }
+      ],
+      "recovery": "After current-state and access checks, move to folder-inbox, then rename to setup.pdf"
+    },
+    {
+      "id": "doc-106",
+      "classification": "warranty",
+      "evidence": "Cover: Marlow Devices M8 warranty. Requested destination inherits fictional-project-group readership; source is owner-only",
+      "status": "held_access_change",
+      "before": {
+        "id": "doc-106",
+        "name": "warranty.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "f1",
+        "access": "private-owner",
+        "checksum": "fixture-content-F"
+      },
+      "planned": {
+        "name": "Marlow-Devices_M8_Warranty.pdf",
+        "parents": [
+          "folder-warranties"
+        ]
+      },
+      "observed_after": {
+        "id": "doc-106",
+        "name": "warranty.pdf",
+        "parents": [
+          "folder-inbox"
+        ],
+        "revision": "f1",
+        "access": "private-owner",
+        "checksum": "fixture-content-F"
+      },
+      "operations": [],
+      "decision_needed": "Choose a private destination; the current filing request does not authorize broader access"
+    }
+  ]
+}
