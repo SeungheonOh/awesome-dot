@@ -9,7 +9,7 @@ Explain one immutable code change through its intent, affected behavior, verific
 
 ## When to use
 
-An engineer has finished a fictional booking-calendar change and wants a colleague to review it efficiently. The diff mixes the behavior change with generated files, and the local test results came from an earlier revision. A useful handoff shows what to inspect, why it changed and which claims have evidence, while leaving approval to the reviewer.
+An engineer has finished a bounded code change and wants a colleague to review it efficiently. The diff mixes the behavior change with generated files, and the local test results came from an earlier revision. A useful handoff shows what to inspect, why it changed and which claims have evidence, while leaving approval to the reviewer.
 
 ## Required inputs
 
@@ -92,6 +92,10 @@ Apply [NEW TEST RESULTS] to the verification ledger. Check their revision and en
 ```text
 Use [SANITIZED REVIEW COMMENTS] to draft a response plan grouped into clarification, code change and deferred decision. Identify which requests are already satisfied by evidence and which still need work; do not post replies.
 ```
+
+## Worked example
+
+Read [Preview metadata handoff](WORKED_EXAMPLE.md) for immutable source bundles, a source-to-test evidence map, stale and canceled result handling, and independently executable assertions. The fixture is synthetic; real handoffs should inspect and test authorized actual changes within their scope.
 
 ## Evidence status
 
