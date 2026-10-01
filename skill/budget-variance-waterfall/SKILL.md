@@ -26,23 +26,23 @@ Use this when household, club or project spending differs from its plan and the 
 
 3. **Calculate the bridge.** For each category use variance = actual minus plan, in currency units. Total planned spending plus the sum of signed variances must equal total actual spending. When plan is nonzero, percentage variance is variance divided by plan times 100; label negative-plan cases separately because refund budgets can invert the usual interpretation. Do not calculate a conventional percentage against a zero plan.
 
-4. **Choose an honest presentation.** Start the waterfall at the planned total, draw each signed category change, and finish at the actual total. Use identical ordering and values in the accompanying table. If the net variance is zero or very small, omit contribution-to-net percentages and explain cancellation; show separate gross increases and reductions instead. Do not describe an arithmetic driver as a behavioral cause.
+4. **Choose an honest presentation.** Start the waterfall at the planned total, draw each signed category change, and finish at the actual total. When a chart is optional or an exact text bridge is requested, list every signed movement and running amount instead; keep an unresolved endpoint symbolic rather than inventing a numerical total. Use identical ordering and values in the accompanying table. If the net variance is zero or very small, omit contribution-to-net percentages and explain cancellation; show separate gross increases and reductions instead. Do not describe an arithmetic driver as a behavioral cause.
 
-5. **Reconcile and probe boundaries.** Compare input spending totals, category totals and chart endpoints independently. Verify a negative refund, a new category with no budget, a split purchase and equal opposing variances. Retain full calculation precision and report the displayed rounding residual, if any; never hide it in an arbitrary category.
+5. **Reconcile and probe boundaries.** Compare input spending totals, category totals and chart or text-bridge endpoints independently. Verify a negative refund, a new category with no budget, a split purchase and equal opposing variances. Retain full calculation precision and report the displayed rounding residual, if any; never hide it in an arbitrary category.
 
 6. **Return a reviewable package.** Supply the category table, accessible waterfall or text bridge, mapping decisions and a check register with expected and observed results. List unresolved amounts and whether they prevent a complete total. Ask for classification only where it changes the interpretation; otherwise deliver the known subtotal with a clear limitation. Create the requested table, document or workbook and, if a destination is already authorized, save it there and read back the result. Keep financial sources unchanged: an unexplained variance does not authorize broader account access, record changes, blame or financial recommendations.
 
 ## Deliverables
 
 - A category-level variance table
-- A waterfall chart with a text equivalent
+- An accessible waterfall chart with a text equivalent, or an exact text bridge when a chart is optional
 - An input-to-category mapping log
 - A reconciliation and edge-case report
 
 ## Verification
 
 - Planned total plus all category variances equals actual total
-- The chart and table use the same sign convention
+- The chart or text bridge and category table use the same sign convention
 - Transfers do not become spending by default
 - A refund reduces spending consistently with the documented rule
 - A zero budget does not produce an infinite percentage
@@ -65,7 +65,7 @@ dot, explain the variance between [AUTHORIZED BUDGET] and [SANITIZED ACTUAL TOTA
 
 Confirm the sign convention first. Define positive variance as actual spending minus planned spending, and label whether a higher number means overspending. Separate transfers, refunds and uncategorized entries before calculating. Do not guess missing categories or infer motives from a transaction label. Record any mapping decisions in a small audit table.
 
-Show each category's planned amount, actual amount, absolute variance and share of total variance when that share is meaningful. Avoid misleading percentages where the planned amount or total variance is zero. Reconcile all steps in the chart to the same totals as the table. Check a refund, an unbudgeted category and exactly offsetting over- and underspending. Return the artifacts, an explanation of the largest arithmetic drivers and any unresolved classification choices. Minimize identifying details and keep the result private unless I have authorized a specific destination and audience.
+Show each category's planned amount, actual amount, signed currency variance (actual minus plan) and share of total variance when that share is meaningful. Avoid misleading percentages where the planned amount or total variance is zero. Reconcile all steps in the chart to the same totals as the table. Check a refund, an unbudgeted category and exactly offsetting over- and underspending. Return the artifacts, an explanation of the largest arithmetic drivers and any unresolved classification choices. Minimize identifying details and keep the result private unless I have authorized a specific destination and audience.
 ```
 
 ## Focused follow-ups
@@ -90,4 +90,4 @@ Revise the chart for a reader unfamiliar with waterfalls. Add start and end tota
 
 ## Evidence status
 
-This is an implementation guide. End-to-end execution has not been established; report actual checks and unrun steps for each use.
+The [synthetic rehearsal](rehearsal/result.md) includes a [fictional input packet](rehearsal/input.md) and [local verification note](rehearsal/verification.md). In this one case, integer-cent calculations and artifact readback checked a duplicate refund, split purchase, excluded transfer and missing positive amount. The result is an exact text bridge with a known subtotal and symbolic complete total. No connected account, spreadsheet application or graphical chart renderer was exercised; this is bounded evidence for one synthetic case, not end-to-end or universal certification. Report actual checks and unrun steps for each use.
