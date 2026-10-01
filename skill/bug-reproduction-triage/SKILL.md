@@ -1,97 +1,123 @@
 ---
 name: bug-reproduction-triage
-description: "Separate a reported correctness defect from hypotheses and define the smallest safe experiment that could reproduce it."
+description: "Turn a reported correctness problem into a minimal, repeatable experiment with independent expectations, reset steps and evidence for the next decision."
 ---
 
 # Turn a Bug Report into a Reproduction Brief
 
-Separate a reported correctness defect from hypotheses and define the smallest safe experiment that could reproduce it.
-
-## When to use
-
-A support ticket for the fictional Fieldboard dashboard says that changing a date filter updates the table but leaves an old total in the exported report. The engineer receiving the ticket has no recording, reliable reproduction steps or confirmed environment. A useful first result is a testable investigation brief, not a guessed fix.
+Use this skill when a report says that a normal product action gives the wrong result, but the starting state, exact sequence or evidence is unclear. The result is an experiment another engineer can repeat and a ticket that separates what happened from what might explain it. This applies to interface state, saved data, calculations, exports, batch operations and similar correctness behavior.
 
 ## Required inputs
 
-- A sanitized report with expected and observed behavior, preserving any uncertainty
-- A tiny fictional dataset with known totals and at least one empty-result filter
-- Available application version, environment and timestamps, with unknown fields labeled
-- The authorized local repository or test fixture, if any, plus its existing test instructions
-- A boundary for permitted work, such as analysis only or local disposable test execution
+- The authorized report, including expected and reported behavior without removing uncertainty
+- Relevant requirements, user-confirmed expectations or another independent basis for the expected result
+- The smallest safe example of the relevant starting state: a test account, sample file, form values, sequence, record set or function arguments, as appropriate
+- Application revision, environment and useful timestamps; unknown fields can remain unknown
+- The permitted investigation scope, available repository or disposable fixture, and existing test instructions
+
+Do not demand a dataset for a state-transition problem or an account for a pure function. Read the supplied evidence first. Ask about a missing rule only when it changes the expected result or whether an experiment is permitted.
 
 ## Workflow
 
-### Normalize the report
+### 1. Normalize the claim and its evidence
 
-Build a case record with report identifier, component, application revision, environment, timezone, starting state, action sequence, expected behavior and reported behavior. Use `unknown` for missing fields. Keep reporter statements separate from artifacts you can inspect and observations produced during this task. Establish whether the work is analysis-only or permits a particular disposable local fixture. If the expected result depends on an unspecified date boundary, timezone or aggregation rule, ask that question before calculating the affected case.
+Create a case record with an ID, component, revision, environment, reported starting state, triggering actions, expected result, reported result and supporting locators. Label each item as a reporter statement, a directly inspected artifact, a local observation or an inference. Keep date and timezone context where timing affects the behavior.
 
-### Construct the smallest discriminating experiment
+Identify the contract being tested. “Cancel should not save changes” may be a supplied requirement; “Cancel always clears the draft from every screen” is a different claim and must not be invented. A screenshot of an unexpected total does not prove that the underlying records are wrong. If there is no agreed expected behavior, first prepare the competing interpretations and the one decision needed to choose between them.
 
-1. Create a synthetic dataset with stable row identifiers and independently calculable totals. Use at least two filter ranges with different totals and one range with no rows. Write the expected included row set before computing each total; this exposes off-by-one date and duplicate-row errors.
-2. Define a baseline: load the fixture, open a fresh session, select the initial filter, wait for the documented completion signal and capture the visible rows and total. State how to reset the fixture and session between attempts. If no reliable completion signal exists, name that uncertainty rather than inserting an arbitrary wait as a guarantee.
-3. Specify the changed-filter experiment as numbered actions. Capture selected dates, displayed row identifiers, displayed total, exported rows and exported total. Derive expectations from the fixture rather than from the application's display, which may itself be wrong. Repeat export without changing the filter to test stability.
-4. Add separate cases for empty results and a fresh session. Change one dimension at a time. If a mismatch occurs only after a prior export, preserve that sequence while removing unnecessary rows and actions. If it does not occur, retain the attempted conditions and do not label the ticket invalid.
-5. Build a hypothesis table whose rows name a possible correctness cause, supporting evidence, contradicting evidence and the next distinguishing observation. For example, correct exported rows with a wrong summary differs from an export containing the previous row set. Do not promote either pattern to a root cause without tracing the responsible behavior.
+### 2. Define the experiment state
 
-### Execute within bounds and hand off
+Choose the smallest relevant state representation and an independent expected-result check:
 
-Run only the expressly permitted existing test or local fixture after checking its documented side effects. Otherwise return the exact experiment with execution marked unrun. Log each attempt with case ID, revision, environment, reset performed, expected values, actual values and evidence filenames or references. Produce a concise ticket containing the reproducible sequence, mismatch and impact, followed by the case matrix and hypothesis log. Recalculate synthetic totals independently and confirm another reader can follow the reset without hidden session state. Resolution evidence must include the formerly failing sequence and a neighboring unchanged behavior. Stop if reproduction requires production access, identifying data, credentials or unapproved writes; report the minimal safe substitute needed.
+- **Interface state:** initial saved values, current draft, selected view and navigation history; observe visible state separately from persisted state
+- **Calculation or transformation:** a small input with a hand-checkable result, preserving units, ordering and missing values
+- **Data selection or export:** stable record IDs, selection rules and expected included IDs before calculating totals
+- **Repeated or batch operation:** initial records, operation identity and the specified duplicate/retry behavior
+- **Timing-dependent behavior:** event order and documented completion signals; distinguish elapsed time from local clock labels where relevant
 
-## Deliverables
+Use synthetic or sanitized material when it preserves the behavior. Explain any limitation introduced by substitution. Do not make a sample so small that it removes the sequence or boundary that triggers the report.
 
-- A ticket draft with environment, expected behavior and reported behavior kept separate
-- A minimal reproduction procedure with setup, reset and evidence-capture steps
-- A case matrix with exact expected outputs from the fictional data
-- A hypothesis log and check report distinguishing execution from proposed tests
+### 3. Establish a reproducible baseline and reset
+
+Write numbered setup steps: restore the fixture, establish the initial saved state, start the required session or process, and reach the intended screen or entry point. State how the investigator knows loading or background work has completed. If no completion signal is known, record that uncertainty; an arbitrary delay is not proof of completion.
+
+Define a reset that restores all state relevant to the hypothesis, including saved data, draft state, caches, pending work and counters where applicable. A visual refresh alone may not reset persisted state. If a reset would affect real records, replace it with a disposable fixture or stop for a safe scope decision.
+
+### 4. Specify the shortest triggering sequence
+
+For each action, record the exact input, observable completion condition and evidence to capture. Keep expected and actual values in separate fields. Verify the expected result from the contract or independent calculation rather than copying the possibly incorrect screen.
+
+Preserve the important order. A defect that appears only after canceling twice needs that sequence; a defect after changing a filter needs both the old and new selection. Remove unrelated actions one at a time and retain the last sequence that still shows the mismatch. Record a failed reproduction as a tested set of conditions, not proof that the original report is false.
+
+### 5. Choose relevant neighboring cases
+
+Add a small matrix that tests the reported case, one normal neighboring behavior, and a repeated, interrupted or reset path relevant to the contract. Add empty, boundary or invalid inputs only when those concepts apply. Mark irrelevant cases as such rather than inventing rows, filters or totals for every product.
+
+Examples of useful distinctions are Cancel versus Save; first call versus repeated call; no matching records versus one matching record; and a resumed operation versus a fresh session. Each case needs a reset, expected outcome and observation that would distinguish plausible explanations. Avoid changing several dimensions at once.
+
+### 6. Run authorized checks and evaluate hypotheses
+
+Use an available authorized test environment and inspect the documented side effects before executing the existing relevant test or disposable fixture. Do not install dependencies, modify product code, access another environment or trigger consequential effects merely to obtain evidence when those actions are outside the request.
+
+Log case ID, exact revision, environment, reset, action sequence, expected result, actual result and evidence reference. If execution is unavailable, deliver the same experiment with actual-result fields marked unrun. An executable procedure is useful; it must not be presented as an observation.
+
+Maintain a hypothesis table: possible cause, supporting observation, contradicting observation and next discriminating check. For example, an unsaved value visible only in a reused editor differs from that value appearing in a fresh read of the saved record. Both can look like “Cancel saved my change” to a reporter. Trace the responsible behavior before naming a root cause.
+
+### 7. Deliver the brief and the next decision
+
+Return a concise ticket, reproducible procedure, case matrix, evidence ledger and hypothesis table. Make clear whether the defect was reproduced, not reproduced under the attempted conditions, or not run. A resolution claim needs the formerly failing sequence, relevant neighboring behavior and evidence from the actual fixed revision.
+
+If the user already requested filing the ticket in a named authorized destination, create or update it within that scope and read back the saved content. On an uncertain response, inspect existing state before retrying. Otherwise return a private ready-to-use draft. Keep proposed fixes separate from the reproduction result unless implementation was also authorized.
+
+## Deliverable record
+
+```text
+case_id:
+component_and_revision:
+environment_and_coverage:
+contract_and_source:
+starting_state:
+reset_steps:
+triggering_actions:
+completion_signal:
+expected_result_and_independent_basis:
+observed_result_or_unrun_reason:
+evidence_references:
+relevant_neighbor_cases:
+hypotheses_and_discriminating_checks:
+next_decision:
+```
 
 ## Verification
 
-- A second engineer can follow the procedure without choosing an unstated initial filter or dataset
-- Expected totals can be recalculated from the supplied fictional rows
-- The empty-result case specifies whether the report is empty, zero-valued or intentionally unavailable
-- Repeating an export after a filter change has a distinct expected result and a reset path
-- An unsuccessful reproduction is recorded as such rather than interpreted as proof that no defect exists
-- No hypothesis is promoted to a confirmed cause without identifying the supporting observation
+- Another engineer can follow the setup and reset without choosing hidden starting values
+- The expected outcome has an independent source or calculation
+- UI appearance, stored state, reported behavior and direct observations remain distinct
+- The repeated/reset case tests a plausible source of state leakage or ordering error
+- Every actual result names the environment and revision on which it was observed
+- Missing evidence and unsuccessful reproduction remain visible
+- No root cause, fix, ticket publication or test success is invented
 
 ## Stop and ask
 
-- Use fictional records or approved sanitized samples; remove customer identifiers, credentials and session tokens
-- Local execution requires an available authorized environment and the project's toolchain; a text-only brief is still useful
-- Stay within the requested reproduction scope. New dependency installation, product-code edits or an additional environment require applicable authorization. If filing the resulting ticket in a named destination was already requested, do it once and verify the saved content rather than asking again
-- Stop if a proposed test could delete records, send notifications or incur charges; request a safer fixture
+Stop the dependent experiment when expected behavior is undecided, the permitted environment is unclear, or the test would require new access, credentials, identifying production data, destructive changes, notifications or charges. Continue the safe brief and name the smallest missing input. Ordinary already-authorized reads and routine ticket placement do not need duplicate approval.
+
+This workflow addresses bounded correctness reports. A request for broader access or a different class of investigation is a scope change, not a reason to improvise a risky experiment.
+
+## Worked examples
+
+[Two different report types](WORKED_EXAMPLE.md) show a Cancel-state investigation and a filtered export investigation. The same procedure works without forcing a tabular-data model onto the first case.
 
 ## Example request
 
 ```text
-dot, turn [SANITIZED BUG REPORT] into a reproduction brief for the engineer responsible for [COMPONENT]. Use [SYNTHETIC DATA] and [AUTHORIZED FILES], and limit the investigation to the reported correctness behavior. The output should let a colleague attempt the same experiment without this conversation.
+dot, turn [REPORT] into a reproduction brief for [COMPONENT]. Use [AUTHORIZED EVIDENCE] and [RELEVANT SAFE STARTING STATE]. Stay within [INVESTIGATION SCOPE].
 
-Begin with separate lists of reported facts, observed evidence, unknowns and hypotheses. Identify the minimum starting state, exact user actions, expected result and evidence to capture. Specify how to reset between attempts so a previous filter or cached result cannot silently change the experiment. Ask about a missing detail only when it changes the expected behavior or the permitted environment.
+Separate the contract, reported facts, direct observations and hypotheses. Define setup, reset, exact actions, completion signals and an independently justified expected result. Choose neighboring and repeated-action cases that fit this behavior, rather than adding irrelevant tests.
 
-Build a small test matrix covering the normal case, an empty result, a changed filter followed by a repeated export, and a fresh session. Give each case an expected value derived from the supplied rows. Rank possible causes by the observations that would distinguish them, rather than asserting a root cause.
-
-If I have authorized local execution and the required toolchain is available, run only the existing relevant test or disposable fixture and record its command, environment and result. Otherwise return executable instructions with checks marked unrun. Use the evidence sources and local execution already authorized for this task. Do not install software, edit product code or expand to another environment without applicable authorization. If I explicitly requested filing the ticket in a named destination, complete that routine handoff and verify it; otherwise return a private draft. Stop before production data or credentials are needed. Finish with a concise ticket draft and the evidence needed to call the issue reproduced, then resolved.
-```
-
-## Focused follow-ups
-
-### 1. Shrink the reproduction
-
-```text
-Reduce the synthetic dataset and action sequence while preserving the reported mismatch. Explain why each remaining row and step is necessary, and retain a reset instruction.
-```
-
-### 2. Incorporate one observation
-
-```text
-Use [NEW SANITIZED OBSERVATION] to update the hypothesis list. Identify what it rules out, what it supports, and the one next observation with the most diagnostic value.
-```
-
-### 3. Define resolution evidence
-
-```text
-Write acceptance criteria for a proposed fix without implementing it. Include a formerly failing case, a neighboring behavior that must remain correct, and the evidence a reviewer should request.
+Run the permitted checks if the required environment is available; otherwise mark them unrun. Return a concise ticket, case matrix and the observation that would best distinguish the leading explanations. If I already requested filing the ticket in [DESTINATION], do so within that scope and verify the saved result. Do not expand access or claim a cause or fix without evidence.
 ```
 
 ## Evidence status
 
-This is an implementation guide. End-to-end execution has not been established; report actual checks and unrun steps for each use.
+The worked examples are synthetic investigation designs. They do not establish a defect in a real product or a completed application test. Report the actual evidence and execution limits for each use.
