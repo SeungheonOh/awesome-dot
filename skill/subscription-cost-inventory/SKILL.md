@@ -54,6 +54,10 @@ Use this when recurring charges, memberships and trials are scattered across rec
 - Missing renewal rules or material prices may block a precise calendar
 - Cancellation, renewal changes and provider contact require a separate request and authorization
 
+## Worked example
+
+[Inspect a fictional inventory where annualized cost differs from upcoming charges](WORKED-EXAMPLE.md), including an unknown trial price, duplicate-record question and repeatable recurrence checks.
+
 ## Example request
 
 ```text
