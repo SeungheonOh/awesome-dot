@@ -1,34 +1,56 @@
 # awesome-dot
 
-**Build interesting, useful things with OpenAI dot.**
+## A practical dot guide for engineers
 
-An independent, project-first playbook: choose an outcome, give dot a clear brief, iterate on the result, and check what it produced.
+**Use OpenAI dot to make progress on familiar work, even if you are new to AI assistants.**
 
-## What belongs here
+Start with a small task, give dot enough context, and check the result. Then explore original project recipes for engineering, research, everyday life, visual work and playful experiments.
 
-Original project ideas and practical usage guides focused on dot, including:
+**[Start at work: turn a fictional bug report into a useful plan](docs/WORKPLACE-QUICKSTART.md)**
 
-- **Web games:** small playable browser experiences, game mechanics, and creative experiments
-- **3D and spatial projects:** modeling briefs, scenes, and export workflows with explicit tool requirements
-- **Images and visual design:** editing, illustration, asset preparation, and iterative art direction
-- **Personal organization:** reminders, recurring briefs, planning, and everyday assistance
-- **Finance:** budgeting, expense analysis, and source-backed financial research for your review
-- **News and research:** focused digests, evidence tracking, and useful synthesis
+No account connections, repository access or installation needed for the example. It is a short first-session exercise, not a promise about completion time.
 
-More areas will be added when they offer a distinct, practical project.
+[Browse recipes](CATALOG.md) · [Write a better task brief](docs/TASK-BRIEFS.md) · [Read as a dot agent](docs/AGENT-GUIDE.md) · [Understand access](docs/CAPABILITIES.md)
 
-## Recipe design
+### What would you like to do?
 
-Each guide will include a concrete goal, required inputs and access, a copyable starting prompt, an iteration plan, expected deliverables, completion checks, and important limitations.
+- **Make a vague work request actionable:** [try the workplace quickstart](docs/WORKPLACE-QUICKSTART.md)
+- **Get better results with less back-and-forth:** [use a task brief](docs/TASK-BRIEFS.md)
+- **Know what is safe to provide at work:** [check the corporate data guide](docs/CORPORATE-DATA.md)
+- **Find a concrete project:** [open the catalog](CATALOG.md)
+- **Understand unfamiliar terms:** [read the plain-language glossary](docs/GLOSSARY.md)
+- **Grow beyond your first task:** [follow a learning path](docs/LEARNING-PATHS.md)
 
-Recipes will distinguish proposed ideas from demonstrated results. Access to apps, files, modeling tools, or scheduled tasks depends on your setup. Review outputs before publishing, sending, or relying on them.
+### What is inside?
 
-## Start with an outcome
+Each original recipe has a specific goal, an input checklist, a standalone copyable prompt, three follow-up iterations, expected deliverables, observable acceptance checks and project-specific boundaries. Canonical content is Markdown, readable by people and usable as a brief for another dot agent.
 
-> Help me build [specific result] for [audience]. Use [inputs] and respect [constraints]. First identify missing information and access requirements. Build a reviewable first version, then check [acceptance criteria]. Tell me what you verified and what still needs my review.
+<!-- catalog-summary:start -->
+The collection structure is ready. Original recipe batches are being authored and checked.
+<!-- catalog-summary:end -->
 
-## Work in progress
+### Start a useful conversation
 
-This is the initial repository checkpoint. The structured project guides, navigation, contribution templates, and validation checks are being developed in small commits.
+> dot, help me achieve [OUTCOME] using [INPUTS]. The audience is [WHO] and the constraints are [LIMITS]. First check what you can do with the access available here. Produce [DELIVERABLE], then check [ACCEPTANCE CRITERIA]. Ask before any step that needs a decision from me. Keep the first version private and tell me what remains unverified.
 
-This project is independent and does not claim official affiliation or endorsement. It contains no generic AI-tool directory or repository-comparison catalog.
+For a more specific starting point, copy a recipe's main prompt and replace its bracketed placeholders. You do **not** need to install this repository into dot. An [optional reusable planning prompt](skills/dot-project-planner/SKILL.md) is provided as text; automatic installation or loading is not claimed.
+
+### Be ambitious about the result, precise about the evidence
+
+All project recipes are **proposed, not executed demonstrations**. Their acceptance checks tell you how to inspect a future result; they are not proof that the project already works. Repository checks only validate the collection itself. Access, tools and supported actions vary by account and environment.
+
+Scheduling needs confirmed setup. 3D scripts and exports need compatible software. Image inputs must be authorized. Finance projects are read-only analysis and budgeting, not transactions or investment recommendations. Review data, recipients and visibility before sharing. See [capabilities](docs/CAPABILITIES.md), [safe use](docs/SAFE-USE.md) and [status definitions](docs/STATUS.md).
+
+### A Markdown-first repository
+
+| Path | Purpose |
+| --- | --- |
+| `recipes/` | Canonical project guides, grouped by outcome |
+| `docs/` | Workplace onboarding, task briefing, access and review guidance |
+| `templates/` | A recipe template and an honest project run log |
+| `skills/dot-project-planner/` | Optional original planning prompt, with copy/paste fallback |
+| `scripts/` and `tests/` | Small index and content checks, not a required runtime |
+
+See the [architecture](docs/ARCHITECTURE.md) and [contribution guide](CONTRIBUTING.md) for the content contract and maintenance workflow.
+
+This community-authored repository is not an official OpenAI project or endorsement. Original text and code use the [MIT License](LICENSE); product names and third-party assets remain subject to their owners' rights.
