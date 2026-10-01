@@ -2,7 +2,7 @@
 
 # Project catalog
 
-**50 original recipes. All are proposed, not executed.**
+**60 original recipes. All are proposed, not executed.**
 
 Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes are first-session planning budgets; capability labels identify access to check.
 
@@ -15,6 +15,7 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 - [Creative coding](recipes/creative-coding/README.md): 10 recipes
 - [Image editing](recipes/image-editing/README.md): 10 recipes
 - [Design and publishing](recipes/design-publishing/README.md): 10 recipes
+- [Finance](recipes/finance/README.md): 10 recipes
 
 ## Web games
 
@@ -90,6 +91,21 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 | [Recipe Card Collection](recipes/design-publishing/recipe-card-collection.md) | beginner | 90 min | files, images |
 | [Small-Press Zine Layout](recipes/design-publishing/small-press-zine-layout.md) | intermediate | 150 min | files, images |
 | [Volunteer Handbook Design](recipes/design-publishing/volunteer-handbook-design.md) | intermediate | 150 min | files |
+
+## Finance
+
+| Project | Level | First session | Capabilities to check |
+| --- | --- | --- | --- |
+| [Budget Variance Waterfall](recipes/finance/budget-variance-waterfall.md) | beginner | 40 min | files |
+| [Cash-Flow Timing Calendar](recipes/finance/cash-flow-timing-calendar.md) | beginner | 30 min | files |
+| [Fee Schedule Cost Comparison](recipes/finance/fee-schedule-cost-comparison.md) | intermediate | 45 min | files |
+| [Irregular-Income Scenario Grid](recipes/finance/irregular-income-scenarios.md) | intermediate | 45 min | files |
+| [Loan Offer Math Explainer](recipes/finance/loan-offer-math-explainer.md) | intermediate | 50 min | files |
+| [Savings Goal Arithmetic Lab](recipes/finance/savings-goal-arithmetic-lab.md) | beginner | 30 min | files |
+| [Sinking-Fund Goal Planner](recipes/finance/sinking-fund-goal-planner.md) | beginner | 30 min | files |
+| [Small Project Break-Even Map](recipes/finance/small-project-break-even.md) | intermediate | 45 min | files |
+| [Subscription Cost Inventory](recipes/finance/subscription-cost-inventory.md) | beginner | 35 min | files |
+| [Travel Cost Scenario Budget](recipes/finance/travel-cost-scenario-budget.md) | beginner | 40 min | files |
 
 ## Machine-readable navigation
 
