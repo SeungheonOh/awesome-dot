@@ -2,7 +2,7 @@
 
 # Project catalog
 
-**60 original recipes. All are proposed, not executed.**
+**70 original recipes. All are proposed, not executed.**
 
 Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes are first-session planning budgets; capability labels identify access to check.
 
@@ -10,12 +10,28 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 
 ## Categories
 
+- [Team operations](recipes/team-operations/README.md): 10 recipes
 - [Web games](recipes/web-games/README.md): 10 recipes
 - [3D and spatial studies](recipes/3d-spatial/README.md): 10 recipes
 - [Creative coding](recipes/creative-coding/README.md): 10 recipes
 - [Image editing](recipes/image-editing/README.md): 10 recipes
 - [Design and publishing](recipes/design-publishing/README.md): 10 recipes
 - [Finance](recipes/finance/README.md): 10 recipes
+
+## Team operations
+
+| Project | Level | First session | Capabilities to check |
+| --- | --- | --- | --- |
+| [Cross-Team Dependency Board](recipes/team-operations/cross-team-dependency-board.md) | intermediate | 45 min | files |
+| [Evidence-First Async Status Brief](recipes/team-operations/evidence-first-async-status.md) | beginner | 30 min | files |
+| [Evidence-Linked Decision Log](recipes/team-operations/evidence-linked-decision-log.md) | beginner | 45 min | files |
+| [Knowledge Base Gap Map](recipes/team-operations/knowledge-base-gap-map.md) | beginner | 45 min | files |
+| [Meeting Action Audit](recipes/team-operations/meeting-action-audit.md) | beginner | 30 min | files |
+| [New-Hire Onboarding Map](recipes/team-operations/new-hire-onboarding-map.md) | beginner | 60 min | files |
+| [Retrospective Evidence Pack](recipes/team-operations/retrospective-evidence-pack.md) | intermediate | 60 min | files |
+| [Rotation Readiness Review](recipes/team-operations/rotation-readiness-review.md) | intermediate | 60 min | files |
+| [Service Ownership Handoff](recipes/team-operations/service-ownership-handoff.md) | intermediate | 60 min | files |
+| [Stakeholder Launch FAQ](recipes/team-operations/stakeholder-launch-faq.md) | beginner | 45 min | files |
 
 ## Web games
 

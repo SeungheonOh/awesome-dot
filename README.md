@@ -26,10 +26,11 @@ No account connections, repository access or installation needed for the example
 Each original recipe has a specific goal, an input checklist, a standalone copyable prompt, three follow-up iterations, expected deliverables, observable acceptance checks and project-specific boundaries. Canonical content is Markdown, readable by people and usable as a brief for another dot agent.
 
 <!-- catalog-summary:start -->
-**60 original recipes · 6 categories · every recipe marked not run**
+**70 original recipes · 7 categories · every recipe marked not run**
 
 | Explore | Recipes |
 | --- | ---: |
+| [Team operations](recipes/team-operations/README.md) | 10 |
 | [Web games](recipes/web-games/README.md) | 10 |
 | [3D and spatial studies](recipes/3d-spatial/README.md) | 10 |
 | [Creative coding](recipes/creative-coding/README.md) | 10 |
