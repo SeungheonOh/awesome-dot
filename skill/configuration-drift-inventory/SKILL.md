@@ -9,7 +9,7 @@ Compare sanitized environment snapshots against an agreed baseline and separate 
 
 ## When to use
 
-The fictional Cedar service behaves differently in two test environments. Their configuration files look similar, but one environment has a shorter timeout and a feature flag inherited from an older template. The team needs an inventory of effective differences and their ownership, without assuming that one environment is correct or applying any changes.
+A service behaves differently across environments and the team needs a field-level explanation. Their configuration files look similar, but one environment has a shorter timeout and a feature flag inherited from an older template. The team needs an inventory of effective differences and their ownership, without assuming that one environment is correct or applying any changes.
 
 ## Required inputs
 
@@ -92,6 +92,10 @@ Review the differences whose approved exceptions have expired. Draft a decision 
 ```text
 For [ONE APPROVED DRIFT ITEM], outline the minimal proposed change, owner approval, behavioral check and recovery step. Identify any security-sensitive setting that needs a separate explicit decision.
 ```
+
+## Worked example
+
+Read [Larch renderer snapshots](WORKED_EXAMPLE.md) for complete synthetic inputs, a field-level inventory and local assertions covering units, inheritance, ordered lists and exception validity. Use the workflow on authorized real snapshots; the example does not require live tasks to remain hypothetical.
 
 ## Evidence status
 
