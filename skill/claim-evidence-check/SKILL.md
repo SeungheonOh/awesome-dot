@@ -9,7 +9,9 @@ Use this skill when a consequential statistic, quotation or factual assertion is
 
 ## Capture the claim before investigating
 
-Require the exact wording, the place it appeared and the user's question about it. Keep the quotation unchanged in the input record. Separate the author who made the claim from someone who merely quoted it. Establish population, geography, measurement period and the as-of cutoff where available. Ask for the starting source if the claim could refer to different events or versions.
+Capture the exact wording, the supplied starting locator and the user's question about it. Keep the quotation unchanged in the input record. Separate the author who made the claim from someone who merely quoted it. Establish population, geography, measurement period and the as-of cutoff where available. Ask for the starting source if the claim could refer to different events or versions.
+
+When the user bounds the assessment to a supplied packet, that packet can be the starting source. Record unknown claimant, publication time or venue as evidence gaps rather than forcing external lookup. If missing identity materially changes the proposition being assessed, ask for the needed clarification or mark the affected component unresolved within the permitted scope. Do not invent attribution or expand the source set without authorization.
 
 ```text
 claim_input:
@@ -81,3 +83,7 @@ Stop when each component has a defensible status or an identified evidence gap, 
 ## Worked example
 
 [The fictional processing-time claim](examples/fictional-processing-time-claim.md) includes mock reporting, original numbers, a correction and expected calculations. It tests median-versus-mean confusion, revised evidence, missing populations and causal overstatement. It contains no real-source claims and does not represent an executed fact-check.
+
+## Completed synthetic rehearsal
+
+The [corrected case-mix input](rehearsal/input.md), [completed assessment](rehearsal/assessment.md) and [verification note](rehearsal/verification.md) record one completed supplied-packet rehearsal. It checks count-weighted means, an eligible correction, aggregate versus case-type changes, approximate numerical wording, derivative reporting and an as-of cutoff. The arithmetic was independently rechecked. All sources are fictional; this evidence does not establish live-source access, underlying-study validity or performance across connected applications.
