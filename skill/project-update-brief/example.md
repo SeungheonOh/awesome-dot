@@ -28,7 +28,7 @@ All records are fictional. Prepare a private update under 180 words for the Part
 
 ```json
 {
-  "brief": "Partner Portal update, October 2–8; as of October 8 at 12:00 UTC.\n\nThe preview demo is available, and its earlier sample-data approval blocker is resolved [S1, P0]. The export change is merged, but validation is incomplete: 18 of 20 checks passed at r42, with two custom-column failures [S2]. No release evidence was supplied.\n\nThe training guide is last known to be in draft as of September 29. That update is stale under the seven-day rule, so current completion is unknown [S3].\n\nDecision needed by October 9: choose a standard-only pilot export or wait for custom columns. Until then, pilot scope remains unresolved [S4].",
+  "brief": "Partner Portal update, October 2–8; as of October 8 at 12:00 UTC.\n\nThe preview demo is available in the approved review environment, and its earlier sample-data approval blocker is resolved [S1, P0]. The export change is merged, but validation is incomplete: 18 of 20 checks passed at r42, with two custom-column failures [S2]. No release evidence was supplied.\n\nThe training guide is last known to be in draft as of September 29. That update is stale under the seven-day rule, so current completion is unknown [S3].\n\nDecision needed by October 9: choose a standard-only pilot export or wait for custom columns. Until then, pilot scope remains unresolved [S4].",
   "accepted_current_sources": ["S1", "S2", "S4"],
   "carry_forward_source": "S3",
   "prior_comparison_source": "P0",
@@ -44,7 +44,7 @@ All records are fictional. Prepare a private update under 180 words for the Part
 
 ## Why this wording follows the evidence
 
-S1 resolves the old approval blocker and supports an available preview demo, but says nothing about a public release. S2 establishes a merged change and a partial test result for r42. Eighteen divided by twenty is 90% for that test set; it does not establish that the project is 90% complete. S3 is nine days old, so the current guide state is unknown. S5 is excluded because its timestamp is four hours after the cutoff, even though its wording sounds reassuring. The October 9 decision deadline and the consequence of waiting come directly from S4.
+S1 resolves the old approval blocker and supports a preview demo in the approved review environment only. The brief retains that audience/environment boundary and makes no public-release claim. S2 establishes a merged change and a partial test result for r42. Eighteen divided by twenty is 90% for that test set; it does not establish that the project is 90% complete. S3 is nine days old, so the current guide state is unknown. S5 is excluded because its timestamp is four hours after the cutoff, even though its wording sounds reassuring. The October 9 decision deadline and the consequence of waiting come directly from S4.
 
 ## Checks to perform
 
