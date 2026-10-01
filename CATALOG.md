@@ -2,7 +2,7 @@
 
 # Project catalog
 
-**30 original recipes. All are proposed, not executed.**
+**40 original recipes. All are proposed, not executed.**
 
 Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes are first-session planning budgets; capability labels identify access to check.
 
@@ -13,6 +13,7 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 - [Web games](recipes/web-games/README.md): 10 recipes
 - [3D and spatial studies](recipes/3d-spatial/README.md): 10 recipes
 - [Image editing](recipes/image-editing/README.md): 10 recipes
+- [Design and publishing](recipes/design-publishing/README.md): 10 recipes
 
 ## Web games
 
@@ -58,6 +59,21 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 | [Recipe Step Photo Unifier](recipes/image-editing/recipe-step-photo-unifier.md) | beginner | 75 min | files, images |
 | [Room Palette Preview Board](recipes/image-editing/room-palette-preview-board.md) | beginner | 60 min | files, images |
 | [Travel Photo Distraction Cleanup](recipes/image-editing/travel-photo-distraction-cleanup.md) | beginner | 45 min | files, images |
+
+## Design and publishing
+
+| Project | Level | First session | Capabilities to check |
+| --- | --- | --- | --- |
+| [Accessible Slide Theme](recipes/design-publishing/accessible-slide-theme.md) | intermediate | 150 min | files |
+| [Annual Impact Report Layout](recipes/design-publishing/annual-impact-report-layout.md) | advanced | 180 min | files |
+| [Community Event Poster System](recipes/design-publishing/community-event-poster-system.md) | beginner | 90 min | files, images |
+| [Conference Wayfinding Pack](recipes/design-publishing/conference-wayfinding-pack.md) | intermediate | 150 min | files |
+| [Exhibition Label System](recipes/design-publishing/exhibition-label-system.md) | intermediate | 120 min | files |
+| [Field Guide Pocket Booklet](recipes/design-publishing/field-guide-pocket-booklet.md) | intermediate | 120 min | files |
+| [Product Instruction Leaflet](recipes/design-publishing/product-instruction-leaflet.md) | intermediate | 120 min | files, images |
+| [Recipe Card Collection](recipes/design-publishing/recipe-card-collection.md) | beginner | 90 min | files, images |
+| [Small-Press Zine Layout](recipes/design-publishing/small-press-zine-layout.md) | intermediate | 150 min | files, images |
+| [Volunteer Handbook Design](recipes/design-publishing/volunteer-handbook-design.md) | intermediate | 150 min | files |
 
 ## Machine-readable navigation
 
