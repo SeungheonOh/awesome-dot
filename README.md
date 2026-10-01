@@ -1,67 +1,53 @@
 # awesome-dot
 
-## A practical dot guide for engineers
+## Less busywork. Clearer next steps.
 
-**Use OpenAI dot to make progress on familiar work, even if you are new to AI assistants.**
+**Practical skills that help dot turn everyday admin and technical work into useful results.**
 
-Start with a small task, give dot enough context, and check the result. Then explore original project recipes for engineering, research, everyday life, visual work and playful experiments.
+A pile of information is not a finished task. These guides explain how to turn it into something you can use: a reconciled spending overview, a preparation reminder, a focused investigation or a review-ready change handoff.
 
-**[Start at work: turn a fictional bug report into a useful plan](docs/WORKPLACE-QUICKSTART.md)**
+Each skill gives another dot agent the inputs, steps, decisions, outputs and checks needed to carry out one concrete workflow. Pick the job you want done, give dot the skill and your relevant inputs, and review the result.
 
-No account connections, repository access or installation needed for the example. It is a short first-session exercise, not a promise about completion time.
+### Make everyday work easier
 
-[Browse recipes](CATALOG.md) · [Write a better task brief](docs/TASK-BRIEFS.md) · [Read as a dot agent](docs/AGENT-GUIDE.md) · [Understand access](docs/CAPABILITIES.md)
+- **Understand where the money went:** turn planned and actual totals into a [clear budget variance explanation](skill/budget-variance-waterfall/SKILL.md)
+- **Get ahead of a deadline:** create [one useful preparation reminder](skill/deadline-leadtime-alert/SKILL.md), with the timing and delivery checked
+- **Untangle recurring charges:** build a [subscription cost inventory](skill/subscription-cost-inventory/SKILL.md) from a sanitized list
+- **Learn with a purpose:** turn a weak spot into [focused practice with feedback](skill/deliberate-practice-workbook/SKILL.md)
 
-### What would you like to do?
+### Make technical work easier
 
-- **Make a vague work request actionable:** [try the workplace quickstart](docs/WORKPLACE-QUICKSTART.md)
-- **Get better results with less back-and-forth:** [use a task brief](docs/TASK-BRIEFS.md)
-- **Know what is safe to provide at work:** [check the corporate data guide](docs/CORPORATE-DATA.md)
-- **Find a concrete project:** [open the catalog](CATALOG.md)
-- **Understand unfamiliar terms:** [read the plain-language glossary](docs/GLOSSARY.md)
-- **Grow beyond your first task:** [follow a learning path](docs/LEARNING-PATHS.md)
+- **Make a vague bug actionable:** prepare a [reproduction brief with expected results](skill/bug-reproduction-triage/SKILL.md)
+- **Reduce review back-and-forth:** build a [source-linked change handoff](skill/code-review-handoff/SKILL.md)
+- **Plan a dependency change:** identify [affected usage, checks and decision gates](skill/dependency-upgrade-plan/SKILL.md)
+- **Make a release decision from evidence:** prepare a [readiness packet with explicit gaps](skill/release-readiness-gate/SKILL.md)
 
-### What is inside?
+### Give dot a job, not just a topic
 
-Each original recipe has a specific goal, an input checklist, a standalone copyable prompt, three follow-up iterations, expected deliverables, observable acceptance checks and project-specific boundaries. Canonical content is Markdown, readable by people and usable as a brief for another dot agent.
+```text
+dot, use this skill to help me finish [TASK]: [SKILL LINK OR TEXT].
 
-<!-- catalog-summary:start -->
-**80 original recipes · 8 categories · every recipe marked not run**
+Use [INPUTS]. Produce [DELIVERABLE] for [AUDIENCE] and stay within [SCOPE]. Follow the skill's decision points and checks. Ask when a missing answer changes the result, and tell me which checks you actually performed.
 
-| Explore | Recipes |
-| --- | ---: |
-| [Team operations](recipes/team-operations/README.md) | 10 |
-| [Web games](recipes/web-games/README.md) | 10 |
-| [3D and spatial studies](recipes/3d-spatial/README.md) | 10 |
-| [Creative coding](recipes/creative-coding/README.md) | 10 |
-| [Image editing](recipes/image-editing/README.md) | 10 |
-| [Design and publishing](recipes/design-publishing/README.md) | 10 |
-| [Personal reminders](recipes/personal-reminders/README.md) | 10 |
-| [Finance](recipes/finance/README.md) | 10 |
-<!-- catalog-summary:end -->
+Keep the work private. Before any external action that needs my decision, explain what will change and where.
+```
 
-### Start a useful conversation
+These are readable instructions, not a claim that dot automatically installs arbitrary files. Capabilities depend on the tools and access available in the conversation. A useful draft, an executed check and a completed external action are different milestones.
 
-> dot, help me achieve [OUTCOME] using [INPUTS]. The audience is [WHO] and the constraints are [LIMITS]. First check what you can do with the access available here. Produce [DELIVERABLE], then check [ACCEPTANCE CRITERIA]. Ask before any step that needs a decision from me. Keep the first version private and tell me what remains unverified.
+### One skill, one folder
 
-For a more specific starting point, copy a recipe's main prompt and replace its bracketed placeholders. You do **not** need to install this repository into dot. An [optional reusable planning prompt](skills/dot-project-planner/SKILL.md) is provided as text; automatic installation or loading is not claimed.
+Everything for a workflow belongs together:
 
-### Be ambitious about the result, precise about the evidence
+```text
+skill/
+  workflow-name/
+    SKILL.md
+    examples/       # only when useful
+    supporting files
+```
 
-All project recipes are **proposed, not executed demonstrations**. Their acceptance checks tell you how to inspect a future result; they are not proof that the project already works. Repository checks only validate the collection itself. Access, tools and supported actions vary by account and environment.
+Start with the skill's inputs. Follow its procedure. Inspect the actual deliverable. Stop at a missing permission, consequential decision or unsupported capability instead of inventing a successful result.
 
-Scheduling needs confirmed setup. 3D scripts and exports need compatible software. Image inputs must be authorized. Finance projects are read-only analysis and budgeting, not transactions or investment recommendations. Review data, recipients and visibility before sharing. See [capabilities](docs/CAPABILITIES.md), [safe use](docs/SAFE-USE.md) and [status definitions](docs/STATUS.md).
+[Contribute a useful workflow](CONTRIBUTING.md)
 
-### A Markdown-first repository
-
-| Path | Purpose |
-| --- | --- |
-| `recipes/` | Canonical project guides, grouped by outcome |
-| `docs/` | Workplace onboarding, task briefing, access and review guidance |
-| `templates/` | A recipe template and an honest project run log |
-| `skills/dot-project-planner/` | Optional original planning prompt, with copy/paste fallback |
-| `scripts/` and `tests/` | Small index and content checks, not a required runtime |
-
-See the [architecture](docs/ARCHITECTURE.md) and [contribution guide](CONTRIBUTING.md) for the content contract and maintenance workflow.
-
-This community-authored repository is not an official OpenAI project or endorsement. Original text and code use the [MIT License](LICENSE); product names and third-party assets remain subject to their owners' rights.
+This is a community project, not an official OpenAI project or endorsement. Original text and code use the [MIT License](LICENSE).
