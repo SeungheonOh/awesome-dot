@@ -105,7 +105,7 @@ Return the requested artifact through the authorized destination. If asked to up
 - Confirm that retracted commitments are absent from the current action list, and belief/conflict is not presented as settled fact
 - Check that claims of audio inspection are limited to intervals actually reviewed
 
-Run the small local [example checker](check_example.py) and consult [its recorded scope](verification.md). Its arithmetic and exact-excerpt checks do not validate acoustic accuracy, speaker identity or the correctness of an inferred commitment.
+Run the small local [example checker](check_example.py) and consult [its recorded scope](verification.md). Its arithmetic and exact-excerpt checks do not validate acoustic accuracy, speaker identity or the correctness of an inferred commitment. A [fresh edited-clip rehearsal](rehearsal-edited-clip/result.md) also exercises a speed change and a citation crossing a cut; [its verification](rehearsal-edited-clip/verification.md) records the preserved uncertainty and source-time calculations.
 
 ## Stop and ask
 
