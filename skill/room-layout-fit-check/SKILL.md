@@ -70,3 +70,5 @@ Stop after the requested comparison and clarification list. It does not authoriz
 ## Worked example and bounded verification
 
 [example.md](example.md) contains a nominally feasible layout and a rejected alternative with identical furniture but an obstructed desk-clearance zone. [check_example.py](check_example.py) uses the Python standard library and Decimal arithmetic to verify those fictional rectangles, rotation, contact rules, room bounds and input rejection. [candidate-a.svg](candidate-a.svg) is a small schematic derived from the same values. The checker is a fixture, not a general room survey, polygon engine or tolerance solver.
+
+[The L-shaped example](l-shaped-example.md) checks a supplied union of two rectangles. It shows why a solid bounding box can falsely reject a cabinet in an open notch, while actual footprint overlap or prohibited boundary contact still rejects another position.
