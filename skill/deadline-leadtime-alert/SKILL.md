@@ -56,6 +56,10 @@ Return the date calculation, exact message, saved reminder reference and verific
 - Access to a destination must be verified before claiming setup
 - Stop for a past or ambiguous time that changes when the warning will arrive
 
+## Worked example
+
+[Compare a calendar-day warning with an elapsed-hour warning across a clock change](WORKED-EXAMPLE.md). The repeatable check also detects repeated and skipped local hours; it does not create a reminder.
+
 ## Example request
 
 ```text
