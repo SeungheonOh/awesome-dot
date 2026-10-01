@@ -52,6 +52,7 @@ Run this Python 3 block in any empty working directory. It uses only the standar
 import csv
 import hashlib
 import json
+import re
 import tempfile
 from collections import Counter, defaultdict
 from decimal import Decimal as D, ROUND_HALF_UP
@@ -113,12 +114,31 @@ assert D('30.00') + D('12.00') == transactions['T2'][1]
 assert D('54.00') + D('6.00') == transactions['T3'][1]
 assert D('-18.00') + D('-2.00') == transactions['T4'][1]
 assert D('5.00') + D('2.00') == D('7.00')  # source tax once
-assert D(rows[1][6]) == min(D('30.00'), D('25.00'))
-assert D(rows[2][6]) == max(D('30.00') - D('25.00'), D('0'))
+# Independent expected allocations derive from the fixture's source amounts and
+# reviewed policy mapping, never from the CSV-producing rows above.
+food = D(re.search(r'food=([0-9.]+)', raw['S3'])[1])
+wine = D(re.search(r'wine=([0-9.]+)', raw['S3'])[1])
+cap = D(re.search(r'meal is capped at EUR ([0-9.]+) gross', raw['P1'])[1])
+rail = D(raw['S1'].split('gross=')[1])
+expected_allocations = {
+    'L1': ('T1', 'allowed', rail, rail, 'U1;P1/R1'),
+    'L2': ('T2', 'allowed', min(food, cap), min(food, cap), 'U1;P1/R2'),
+    'L3': ('T2', 'disallowed', max(food-cap, D('0')), max(food-cap, D('0')), 'P1/R2 cap'),
+    'L4': ('T2', 'disallowed', wine, wine, 'P1/R2 alcohol'),
+    'L5': ('T3', 'allowed', D(raw['S4'].split('gross=')[1]), D(raw['C1'].split('|')[-1]), 'U1;P1/R1/R4'),
+    'L6': ('T4', 'allowed', D(raw['S5'].split('gross=')[1]), D(raw['C2'].split('|')[-1]), 'T3 item;P1/R4/R5'),
+    'L7': ('T5', 'unresolved', D('18.00'), D('18.00'), 'P1/R3 purpose missing'),
+}
 
 
 def validate(saved):
     assert len(saved) == 7 and len({r['line'] for r in saved}) == 7
+    assert {r['line'] for r in saved} == set(expected_allocations)
+    for row in saved:
+        assert set(row) == set(header)
+        transaction, status, original, eur, basis = expected_allocations[row['line']]
+        assert (row['transaction'], row['status'], row['basis']) == (transaction, status, basis)
+        assert (D(row['original']), D(row['eur'])) == (original, eur)
     assert Counter(r['transaction'] for r in saved) == Counter({'T1': 1, 'T2': 3, 'T3': 1, 'T4': 1, 'T5': 1})
     for key, (currency, original, eur) in transactions.items():
         group = [r for r in saved if r['transaction'] == key]
@@ -242,6 +262,45 @@ with tempfile.TemporaryDirectory() as directory:
             pass
         else:
             raise AssertionError('corrupted fixture was accepted')
+    # A compensating policy violation preserves every transaction and status total.
+    # Persist it and bind the companion to its new bytes: a matching digest alone
+    # must not let the wine become claimable or the food allocation change.
+    changed = [dict(row) for row in saved]
+    for row in changed:
+        if row['line'] == 'L2':
+            row['original'] = row['eur'] = '13.00'
+        elif row['line'] == 'L3':
+            row['original'] = row['eur'] = '17.00'
+        elif row['line'] == 'L4':
+            row['status'] = 'allowed'
+    assert {s: sum(D(r['eur']) for r in changed if r['status'] == s)
+            for s in totals} == {s: D(v) for s, v in totals.items()}
+    changed_csv = Path(directory) / 'changed-allocation.csv'
+    with changed_csv.open('w', newline='') as handle:
+        writer = csv.DictWriter(handle, fieldnames=header)
+        writer.writeheader()
+        writer.writerows(changed)
+    with changed_csv.open(newline='') as handle:
+        changed_saved = list(csv.DictReader(handle))
+    rebound = json.loads(companion.read_text(encoding='utf-8'))
+    rebound['allocation_artifact']['sha256'] = hashlib.sha256(changed_csv.read_bytes()).hexdigest()
+    rebound_path = Path(directory) / 'changed-allocation-report.json'
+    rebound_path.write_text(json.dumps(rebound), encoding='utf-8')
+    try:
+        validate_companion(json.loads(rebound_path.read_text(encoding='utf-8')),
+                           changed_saved, changed_csv.read_bytes())
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError('compensating policy-allocation corruption was accepted')
+    changed = [dict(row) for row in saved]
+    changed[0]['basis'] = 'P1/R2'
+    try:
+        validate(changed)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError('wrong policy basis was accepted')
     # Persist and reopen each corrupted companion to test saved-artifact validation.
     corruptions = [
         (['sources', 'S3', 'metadata', 'tax'], None),
@@ -271,9 +330,9 @@ assert all(digest(raw[key]) == value for key, value in hashes.items())
 print(json.dumps({'eur_totals': totals, 'originals_unchanged': len(hashes),
                   'source_coverage': len(coverage), 'status': 'private draft; not submitted'}, sort_keys=True))
 print('PASS: CSV and complete companion JSON readback; source texts/digests, dates/IDs, tax, purpose/policy, coverage, signed credit and reconciliation preserved')
-print('PASS: two allocation corruptions and seven saved companion corruptions rejected; original report remains valid')
+print('PASS: four allocation corruptions (including compensating policy changes) and seven saved companion corruptions rejected; original report remains valid')
 ```
 
-Observed on 2026-10-01 in the repository’s Linux environment with Python 3.12.14: exit status 0, ten original evidence digests unchanged, eight monetary-source mappings, seven allocation lines, the stated three EUR disposition totals, and both PASS lines. CSV and companion JSON readbacks preserve the original policy/purpose texts, receipt identifiers/dates, S3 tax and itemization, S6 unknown tax/purpose, linked credit, coverage and reconciled summary. Two allocation corruptions and seven saved-and-reopened companion corruptions were rejected; the original saved report remained valid. Both outputs and corrupted test copies were confined to the temporary fixture destination and removed when the check ended; no persistent expense report or external submission was created.
+Observed on 2026-10-01 in the repository’s Linux environment with Python 3.12.14: exit status 0, ten original evidence digests unchanged, eight monetary-source mappings, seven allocation lines, the stated three EUR disposition totals, and both PASS lines. CSV and companion JSON readbacks preserve the original policy/purpose texts, receipt identifiers/dates, S3 tax and itemization, S6 unknown tax/purpose, linked credit, coverage and reconciled summary. Four allocation corruptions were rejected: changed credit sign, changed unresolved amount, wrong policy basis, and a saved compensating change that preserves all disposition totals while making alcohol claimable. The compensating case was saved and reopened with a correctly rebound companion digest, so its rejection depends on per-line source/policy checks rather than an obsolete hash. Seven saved-and-reopened companion corruptions were also rejected; the original saved report remained valid. Both outputs and corrupted test copies were confined to the temporary fixture destination and removed when the check ended; no persistent expense report or external submission was created.
 
 This fixture does not demonstrate OCR, native workbook preservation, a live expense portal, actual exchange-rate retrieval, tax review or employer approval. The check validates a declared allocation against independent fixture amounts; it is not a general policy-classification engine.
