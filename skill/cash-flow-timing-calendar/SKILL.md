@@ -54,6 +54,10 @@ Use this when income and bills arrive on different dates and a monthly total hid
 - Stop for a user decision if ambiguous dates materially change the shortfall finding
 - Any real payment, bank interaction or new sharing is outside this exercise
 
+## Worked example
+
+[Inspect a fictional cash calendar with a delayed receipt and a month-boundary bill](WORKED-EXAMPLE.md). The repeatable calculation distinguishes daily closing balances from within-day shortfalls.
+
 ## Example request
 
 ```text
