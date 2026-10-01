@@ -1,0 +1,7 @@
+export const MU=1800000, RADIUS=46, DT=1/120;
+export const missions=[{name:'First orbit',r:215,v:91.5,angle:-90,tip:'An orbit is a fall that keeps missing the planet. Try a launch near 92.'},{name:'Long way home',r:250,v:105,angle:-78,tip:'A faster launch stretches the orbit. Aim a little toward the planet.'},{name:'Close encounter',r:285,v:69,angle:-102,tip:'Slower launches fall deeper into the gravity well. Watch the close pass.'}];
+export function launch(m,speed=m.v,angle=m.angle){const a=angle*Math.PI/180;return {x:-m.r,y:0,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,t:0,status:'flying'};}
+export function energy(s){return (s.vx*s.vx+s.vy*s.vy)/2-MU/Math.hypot(s.x,s.y);}
+export function step(s,dt=DT){if(s.status!=='flying')return s;const acc=(x,y)=>{const r=Math.max(1,Math.hypot(x,y)),f=-MU/(r*r*r);return [x*f,y*f]};let [ax,ay]=acc(s.x,s.y);const x=s.x+s.vx*dt+.5*ax*dt*dt,y=s.y+s.vy*dt+.5*ay*dt*dt;const [bx,by]=acc(x,y);return {x,y,vx:s.vx+(ax+bx)*dt/2,vy:s.vy+(ay+by)*dt/2,t:s.t+dt,status:Math.hypot(x,y)<RADIUS+5?'impact':Math.hypot(x,y)>780?'escaped':s.t+dt>=28?'finished':'flying'};}
+export function trace(m,speed,angle,seconds=28){let s=launch(m,speed,angle);const a=[s];for(let i=0;i<seconds/DT&&s.status==='flying';i++){s=step(s);if(i%8===0||s.status!=='flying')a.push(s)}return a;}
+export function gates(m){let s=launch(m);const result=[];for(let i=0;i<12/DT;i++){s=step(s);if([360,720,1080].includes(i))result.push({x:s.x,y:s.y});}return result;}
