@@ -1,6 +1,6 @@
 # Worked example: a comfortable month can still dip below zero
 
-All entries below are fictional USD amounts. The horizon is October 2026 in UTC. The opening balance is 300.00 immediately before October 1. A warning means strictly below 0.00; equality does not trigger it.
+All entries below are fictional USD amounts for sanitized account A. The horizon is October 2026 in UTC. The opening balance is a ledger balance of 300.00 immediately before October 1, with no pending amounts already reflected and no bridge needed. All E1–E7 entries belong to A. A warning means strictly below 0.00; equality does not trigger it.
 
 ## Event register
 
@@ -16,7 +16,7 @@ These are expected cash-movement dates, not invoice creation dates. Date certain
 | E6 | 2026-10-20 | Out | 200.00 | Fourth bill |
 | E7 | 2026-11-01 | Out | 150.00 | Outside the October horizon |
 
-A real workflow would retain source references and uncertainty for each date. This fixture supplies no account, payment instructions or real personal data.
+A real workflow would retain source references and uncertainty for each date. This fixture supplies no real account, payment instructions or personal data.
 
 ## Expected baseline
 
@@ -118,8 +118,135 @@ print("PASS: baseline, quiet day, same-day ordering, delay and boundary cases")
 
 If E3's amount is unknown, the expected output is an incomplete balance from October 3 onward, not the table above with E3 replaced by zero. Show the known subtotal and name the one missing amount. If the opening balance was measured after E1 settled, do not subtract E1 a second time; clarify the opening timestamp before finalizing any balance.
 
+## Opening-balance and account regressions
+
+These additional, independent fictional records do not change E1–E7. They illustrate three checks before running a daily calendar:
+
+- **Balance basis:** A has ledger 100.00 and available 80.00 at October 1, with a 20.00 hold already reflected only in available. The supplied scenario says October 2's 20.00 settlement replaces that exact hold simultaneously. Available therefore stays 80.00; subtracting another 20.00 would falsely show 60.00. Ledger drops from 100.00 to 80.00. This is a supplied posting assumption, not a bank rule or a claim about unobserved intraday release timing. Unknown linkage, reflection or release timing leaves the effect unresolved
+- **Older snapshot:** A's ledger snapshot is 300.00 at September 30 09:00 UTC. A confirmed 100.00 debit at noon belongs in the separate bridge, giving October's opening 200.00. It is outside October but cannot be dropped from the bridge. The snapshot's inclusion of any event at exactly 09:00 must be explicit; incomplete bridge coverage leaves the opening unresolved
+- **Account boundary:** A opens at 100.00 and B at 1,000.00, both USD ledger balances at October's boundary with no reflected pending amounts. A alone pays 200.00. A reaches −100.00 even though the optional same-currency aggregate is 900.00. No transfer is assumed. Unknown account assignment blocks a complete result, and a mixed-currency total is not calculated
+
+The following standalone snippet checks only these stated fixtures and guards. It is not a bank-data importer or a model of posting rules. `None` means unresolved, never zero. Amounts passed to the account check are already reconciled remaining effects on the stated ledger basis.
+
+```python
+from datetime import datetime as DT
+from decimal import Decimal as D
+
+def utc(s):
+    return DT.fromisoformat(s + "+00:00")
+
+boundary = utc("2026-10-01T00:00:00")
+
+def remaining_effect(snapshot, event):
+    if (snapshot["account"], snapshot["currency"]) != (event["account"], event["currency"]):
+        return None
+    if snapshot["basis"] not in {"ledger", "available"}:
+        return None  # An "other" basis would need its own supplied definition.
+    reflected = snapshot["reflected"].get(event["movement"])
+    if reflected is None or event["signed_effect"] is None:
+        return None
+    if reflected != 0 and event["simultaneous_replacement"] is not True:
+        return None
+    return event["signed_effect"] - reflected
+
+available = dict(account="A", currency="USD", at=boundary,
+                 basis="available", amount=D("80"), reflected={"P1": D("-20")})
+ledger = dict(available, basis="ledger", amount=D("100"), reflected={"P1": D("0")})
+settlement = dict(id="S1", movement="P1", account="A", currency="USD",
+                  at=utc("2026-10-02T00:00:00"), signed_effect=D("-20"),
+                  simultaneous_replacement=True)
+assert available["amount"] + remaining_effect(available, settlement) == D("80")
+assert ledger["amount"] + remaining_effect(ledger, settlement) == D("80")
+assert remaining_effect(dict(available, reflected={"P1": None}), settlement) is None
+assert remaining_effect(available, dict(settlement, movement="unlinked")) is None
+assert remaining_effect(available, dict(settlement, simultaneous_replacement=None)) is None
+assert remaining_effect(dict(available, basis="unspecified"), settlement) is None
+
+def bridge_opening(snapshot, bridge, horizon, coverage_complete):
+    # Tuples are (ID, account, currency, timestamp, signed remaining effect).
+    ids = [e[0] for e in bridge + horizon]
+    if len(set(ids)) != len(ids):
+        raise ValueError("Duplicate or overlapping bridge/horizon movement")
+    if not coverage_complete:
+        return None
+    if (snapshot["at"] is None or snapshot["at"] > boundary
+            or snapshot["amount"] is None):
+        return None  # No backward inference from a later or unknown snapshot.
+    balance = snapshot["amount"]
+    for ident, account, currency, at, effect in bridge:
+        if not snapshot["at"] <= at < boundary:
+            raise ValueError("Not a snapshot-to-boundary movement")
+        if (account, currency) != (snapshot["account"], snapshot["currency"]):
+            return None
+        if at == snapshot["at"]:
+            included = snapshot["included_at_timestamp"].get(ident)
+            if included is None:
+                return None
+            if included:
+                continue
+        if effect is None:
+            return None
+        balance += effect
+    return balance
+
+snapshot = dict(account="A", currency="USD", basis="ledger", amount=D("300"),
+                at=utc("2026-09-30T09:00:00"), included_at_timestamp={})
+debit = ("D1", "A", "USD", utc("2026-09-30T12:00:00"), D("-100"))
+assert bridge_opening(snapshot, [debit], [], True) == D("200")
+assert bridge_opening(dict(snapshot, at=utc("2026-10-02T00:00:00")), [], [], True) is None
+assert bridge_opening(dict(snapshot, amount=None), [debit], [], True) is None
+assert bridge_opening(dict(snapshot, at=None), [debit], [], True) is None
+assert bridge_opening(snapshot, [debit], [], False) is None
+assert bridge_opening(snapshot, [debit[:-1] + (None,)], [], True) is None
+tie = ("T1", "A", "USD", snapshot["at"], D("-10"))
+assert bridge_opening(snapshot, [tie, debit], [], True) is None
+assert bridge_opening(dict(snapshot, included_at_timestamp={"T1": True}),
+                      [tie, debit], [], True) == D("200")
+assert bridge_opening(dict(snapshot, included_at_timestamp={"T1": False}),
+                      [tie, debit], [], True) == D("190")
+try:
+    bridge_opening(snapshot, [debit], [debit], True)
+except ValueError:
+    pass
+else:
+    raise AssertionError("Bridge/horizon overlap was counted twice")
+try:
+    bridge_opening(snapshot, [("H1", "A", "USD", boundary, D("-10"))], [], True)
+except ValueError:
+    pass
+else:
+    raise AssertionError("A horizon-boundary event was put in the bridge")
+
+def close_accounts(openings, effects):
+    balances = dict(openings)
+    for _, account, currency, effect in effects:
+        key = (account, currency)
+        if key not in balances or effect is None or balances[key] is None:
+            return None  # Do not guess which account/currency an event affects.
+        balances[key] += effect
+    return balances
+
+def same_currency_total(balances):
+    if balances is None or len({currency for _, currency in balances}) != 1:
+        return None
+    return None if None in balances.values() else sum(balances.values(), D("0"))
+
+# Both openings are USD ledger balances immediately before boundary movements;
+# no pending amounts are reflected, and effects occur within October.
+openings = {("A", "USD"): D("100"), ("B", "USD"): D("1000")}
+effects = [("A-bill", "A", "USD", D("-200"))]
+closed = close_accounts(openings, effects)
+assert closed == {("A", "USD"): D("-100"), ("B", "USD"): D("1000")}
+assert [key for key, value in closed.items() if value < 0] == [("A", "USD")]
+assert same_currency_total(closed) == D("900")  # A's warning still stands.
+assert close_accounts(openings, [("unknown", None, "USD", D("-200"))]) is None
+assert close_accounts(openings, [("mismatch", "A", "EUR", D("-200"))]) is None
+assert same_currency_total({("A", "USD"): D("-100"), ("B", "EUR"): D("1000")}) is None
+print("PASS: balance basis, reflected hold, bridge, unknowns, overlap and account boundaries")
+```
+
 ## Evidence
 
-The exact snippet was executed with Python 3.12.14 on 2026-10-01 and produced its stated PASS line. The grouped display was checked against the computed daily values. No spreadsheet application, bank connection, reminder or payment workflow was exercised. This verifies the fictional arithmetic and date boundaries only.
+Both exact snippets were executed separately with Python 3.12.14 on 2026-10-01 and each produced its stated PASS line. The original grouped display was rechecked against all 31 computed daily values. No spreadsheet application, bank connection, reminder or payment workflow was exercised. These checks verify the supplied fictional arithmetic and boundary guards only; they do not establish real posting behavior or end-to-end account-data handling.
 
 [Return to the skill](SKILL.md)
