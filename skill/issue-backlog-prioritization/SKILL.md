@@ -82,7 +82,7 @@ The finished output must make the following inspectable:
 
 Recompute scores independently, confirm interval endpoints, and check all rows against source data. Verify equal scores stay tied and blocked work retains its importance. Check that no final priority claims depend on an invented input. For writes, compare readback against the exact authorized field set and avoid claiming unrelated fields were preserved unless the available response supports it.
 
-The [fictional fixture](example.md) and `python3 check_example.py` exercise score arithmetic, an unknown, a tie, a blocked dependency, a missing prerequisite and a cycle. They are a test of the reasoning rules, not a live tracker integration.
+The [fictional fixture](example.md) and `python3 check_example.py` exercise score arithmetic, an unknown, a tie, a blocked dependency, a missing prerequisite and a cycle. They are a test of the reasoning rules, not a live tracker integration. A [fresh-input rehearsal](rehearsal/result.md) adds a subtractive effort criterion, failed and unknown gates, and conditional choices; its [verification](rehearsal/verification.md) separates arithmetic from the source-to-output review.
 
 ## Example request
 
