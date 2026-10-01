@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="544" viewBox="0 0 1280 544" role="img" aria-labelledby="title desc">
+  <title id="title">awesome-dot — workflow skills for dot</title>
+  <desc id="desc">An illustrative spending workflow connects a question about what changed to category mapping, calculation, and reconciliation, ending in category changes and reconciled totals. This is an illustration, not a product screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172831"/>
+      <stop offset="0.65" stop-color="#101b26"/>
+      <stop offset="1" stop-color="#172f33"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#92edc4"/>
+      <stop offset="0.55" stop-color="#c1f8b3"/>
+      <stop offset="1" stop-color="#f6db98"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#88b1ac" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="544" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="544" rx="24" fill="url(#grid)"/>
+  <g fill="none" stroke="#92edc4" opacity="0.16">
+    <circle cx="1083" cy="137" r="78"/>
+    <circle cx="1083" cy="137" r="110"/>
+    <circle cx="1083" cy="137" r="144"/>
+    <path d="M939 137h288M1083 0v281"/>
+  </g>
+  <circle cx="1083" cy="137" r="44" fill="#92edc4"/>
+  <circle cx="1083" cy="137" r="17" fill="#152b31"/>
+  <circle cx="1161" cy="137" r="6" fill="#f6db98"/>
+  <circle cx="1005" cy="59" r="4" fill="#92edc4"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="71" fill="#b8c9cc" font-size="20" font-weight="700" letter-spacing="3">WORKFLOW SKILLS FOR DOT</text>
+    <text x="58" y="179" fill="#f5f1e8" font-size="104" font-weight="700" letter-spacing="-5">awesome<tspan fill="#92edc4">-dot</tspan></text>
+    <text x="64" y="229" fill="#d5e3e1" font-size="28">Steps, examples and checks for completing a task.</text>
+    <text x="64" y="300" fill="#b8c9cc" font-size="18" font-weight="700" letter-spacing="2">ILLUSTRATIVE WORKFLOW</text>
+    <path d="M88 321h1102" fill="none" stroke="url(#signal)" stroke-width="3"/>
+    <g>
+      <rect x="64" y="343" width="350" height="143" rx="14" fill="#1d303b" stroke="#36545c"/>
+      <circle cx="90" cy="321" r="6" fill="#92edc4"/>
+      <text x="88" y="378" fill="#a8f0cf" font-size="17" font-weight="700" letter-spacing="1.5">YOUR TASK</text>
+      <text x="88" y="420" fill="#f5f1e8" font-size="27" font-weight="700">What changed in</text>
+      <text x="88" y="455" fill="#f5f1e8" font-size="27" font-weight="700">my spending?</text>
+    </g>
+    <g>
+      <rect x="465" y="343" width="350" height="143" rx="14" fill="#1d303b" stroke="#36545c"/>
+      <circle cx="490" cy="321" r="6" fill="#b6f3ba"/>
+      <text x="489" y="378" fill="#bff2be" font-size="17" font-weight="700" letter-spacing="1.5">THE WORKFLOW</text>
+      <text x="489" y="420" fill="#f5f1e8" font-size="27" font-weight="700">Map categories.</text>
+      <text x="489" y="455" fill="#f5f1e8" font-size="27" font-weight="700">Calculate. Reconcile.</text>
+    </g>
+    <g>
+      <rect x="866" y="343" width="350" height="143" rx="14" fill="#2a3338" stroke="#857752"/>
+      <circle cx="891" cy="321" r="6" fill="#f6db98"/>
+      <text x="890" y="378" fill="#f6db98" font-size="17" font-weight="700" letter-spacing="1.5">THE RESULT TO REVIEW</text>
+      <text x="890" y="420" fill="#f5f1e8" font-size="27" font-weight="700">Category changes</text>
+      <text x="890" y="455" fill="#f5f1e8" font-size="27" font-weight="700">+ reconciled totals</text>
+    </g>
+  </g>
+</svg>
