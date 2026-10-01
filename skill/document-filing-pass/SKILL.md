@@ -76,6 +76,8 @@ For each executable row:
 
 If rename succeeded but move failed, record the actual intermediate state as partially applied and decide recovery from that state. Preserve multi-parent semantics and handle shared-drive moves only when their special behavior is understood and authorized. Otherwise hold them. If an unexpected access change is detected, stop that batch, report the exact discrepancy and seek the needed recovery decision; do not improvise permission changes.
 
+The [interrupted-pass example](rehearsal-interrupted/result.md) distinguishes a timeout resolved by readback, an explicitly failed move and a still-unknown outcome. Its [source packet](rehearsal-interrupted/input.md) and [checks](rehearsal-interrupted/verification.md) show why a last successful observation must not silently become a current-state claim.
+
 ### 6. Reconcile and deliver the completed pass
 
 Re-list the authorized scope and look up moved files by ID. Every initial file must reconcile to exactly one manifest row: verified change, held, excluded or already correct. Check that no source file vanished and no new file was created to simulate a move. Ensure the manifest's observed state matches the service, not merely the intended plan.

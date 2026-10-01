@@ -1,0 +1,811 @@
+{
+  "title": "Fictional interrupted filing pass",
+  "summary": {
+    "verified_change": [
+      "F014",
+      "F016"
+    ],
+    "held": [
+      "F011",
+      "F012",
+      "F013",
+      "F015"
+    ],
+    "partially_applied": [
+      "F017"
+    ],
+    "unresolved": [
+      "F018"
+    ],
+    "verified_final_states": 7,
+    "initial_files": 8,
+    "collection_fully_verified": false
+  },
+  "scope": {
+    "service": "Fictional; unnamed",
+    "account_id": null,
+    "run_timestamp": null,
+    "source_folder_id": "inbox-a",
+    "authorized_file_ids": [
+      "F011",
+      "F012",
+      "F013",
+      "F014",
+      "F015",
+      "F016",
+      "F017",
+      "F018"
+    ],
+    "destination_folder_ids": [
+      "invoices-a",
+      "receipts-a",
+      "manuals-a"
+    ],
+    "subfolders_included": false,
+    "all_other_files_outside_mutation_scope": true,
+    "authorized": "Clear ordinary renames/moves preserving IDs, bytes and effective access, plus a private manifest.",
+    "not_authorized": [
+      "deletion",
+      "folder creation",
+      "sharing changes",
+      "replacement uploads",
+      "content edits",
+      "additional reversal"
+    ],
+    "manifest_saved_before_mutations": true,
+    "service_urls": null
+  },
+  "shared_original_metadata": {
+    "owner_id": "owner-a",
+    "effective_access": "private-owner-a",
+    "file_type": "application/pdf"
+  },
+  "state_semantics": {
+    "explicit_reference_only": "A non-null original or observed state explicitly marked metadata_ref=shared_original_metadata has those owner/access/type values. A planned required_metadata_ref is a constraint, not an observation.",
+    "null_means_unknown": "A null current_state is wholly unknown. Never inherit metadata, name, parents, revision or checksum from originals, last observations, planned targets or shared metadata.",
+    "time_boundary": "Current means the final supplied observation O8; no later event is inferred.",
+    "checksums": "Trustworthy PDF byte-equality labels, not actual cryptographic digests.",
+    "revisions": "Planned revisions are unknown. Each successful metadata write creates a new revision; historical revisions must never be reset."
+  },
+  "folders": {
+    "same_owner_ref": "shared_original_metadata.owner_id",
+    "private_folder_ids": [
+      "inbox-a",
+      "invoices-a",
+      "receipts-a"
+    ],
+    "private_access_ref": "shared_original_metadata.effective_access",
+    "manuals-a_effective_access": "project-group",
+    "evidence": "Supplied folder identities/access remain unchanged. This is not a successful post-O7 destination listing."
+  },
+  "naming_and_write_rules": {
+    "name": "YYYY-MM-DD_Issuer_Type.pdf using printed issue/purchase date, not due date.",
+    "undated_manual": "Issuer_Model_User-Manual.pdf is authorized.",
+    "comparison": "ASCII case-insensitive.",
+    "distinct_collision_suffix": "__ plus the final three stable-ID characters, if unique.",
+    "duplicates": "Hold every member untouched.",
+    "writes": "Separate rename and move; move replaces the single parent set without creating a copy. Successful ID readback verifies a change; timeout alone does not."
+  },
+  "relationships": [
+    {
+      "id": "DUP-01",
+      "members": [
+        "F012",
+        "F013"
+      ],
+      "basis": "Matching trustworthy bytes-duplicate labels establish identical PDF bytes.",
+      "treatment": "Both held untouched; no canonical representative."
+    },
+    {
+      "id": "COLLISION-01",
+      "members": [
+        "F014",
+        "D900"
+      ],
+      "destination_id": "receipts-a",
+      "existing_name": "2026-10-01_North-Paper_Receipt.pdf",
+      "basis": "Distinct transactions established by page evidence and different bytes. D900 is outside scope and unchanged.",
+      "resolution": "Approved __014 suffix; initially absent, passed O3 collision checks, no other collision at the successful F014 destination readback time."
+    }
+  ],
+  "preflight_and_collision_evidence": {
+    "F011": "O1 name/revision differ from the saved plan; no write attempted.",
+    "F012_F013": "O2 duplicate hold; no writes.",
+    "F014": "O3 preflight and collision checks passed.",
+    "F015": "O4 access broadening detected; no writes.",
+    "F016_F017_F018": "Preflight passed per O5/O6/O7; separate pre-write collision rechecks are not detailed.",
+    "successful_destination_collision_checks": "F014/F016 readbacks show no other collisions only at their observed times.",
+    "post_O7_limit": "No destination listing after O7 succeeded. No successful destination collision readback is supplied for F017/F018."
+  },
+  "files": [
+    {
+      "file_id": "F011",
+      "original": {
+        "name": "scan-a.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r11",
+        "checksum": "bytes-a",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "planned_target": {
+        "name": "2026-09-28_Alder-Studio_Invoice.pdf",
+        "parent_ids": [
+          "invoices-a"
+        ],
+        "revision": null,
+        "required_metadata_ref": "shared_original_metadata",
+        "required_checksum_ref": "F011.original.checksum",
+        "initial_disposition": "execute"
+      },
+      "classification": {
+        "kind": "Invoice",
+        "issuer": "Alder Studio",
+        "date": "2026-09-28",
+        "date_role": "issue date",
+        "evidence": "Before-state record, page 1",
+        "unused_due_date": "2026-10-30"
+      },
+      "last_observed": {
+        "name": "reviewed-by-owner.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r11b",
+        "checksum": "bytes-a",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "last_observed_refs": [
+        "O1",
+        "O8"
+      ],
+      "current_state": {
+        "name": "reviewed-by-owner.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r11b",
+        "checksum": "bytes-a",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "current_confidence": "verified_at_O8",
+      "disposition": "held",
+      "reason": "Concurrent rename invalidated the saved name/revision preconditions; no write attempted.",
+      "operation_refs": [],
+      "relationship_refs": [],
+      "next_step": "Hold the concurrent rename. Refresh evidence and resolve the intended name before re-planning; do not replace it using the stale plan.",
+      "recovery": {
+        "status": "not_applicable",
+        "steps": [
+          "No filing write to reverse. Do not undo the concurrent rename."
+        ]
+      }
+    },
+    {
+      "file_id": "F012",
+      "original": {
+        "name": "receipt-copy-a.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r12",
+        "checksum": "bytes-duplicate",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "planned_target": {
+        "name": "2026-09-29_North-Paper_Receipt.pdf",
+        "parent_ids": [
+          "receipts-a"
+        ],
+        "revision": null,
+        "required_metadata_ref": "shared_original_metadata",
+        "required_checksum_ref": "F012.original.checksum",
+        "initial_disposition": "held_for_review"
+      },
+      "classification": {
+        "kind": "Receipt",
+        "issuer": "North Paper",
+        "date": "2026-09-29",
+        "date_role": "purchase date",
+        "evidence": "Before-state record, page 1"
+      },
+      "last_observed": {
+        "name": "receipt-copy-a.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r12",
+        "checksum": "bytes-duplicate",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "last_observed_refs": [
+        "O2",
+        "O8"
+      ],
+      "current_state": {
+        "name": "receipt-copy-a.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r12",
+        "checksum": "bytes-duplicate",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "current_confidence": "verified_at_O8",
+      "disposition": "held",
+      "reason": "Member of duplicate group DUP-01; all members held untouched.",
+      "operation_refs": [],
+      "relationship_refs": [
+        "DUP-01"
+      ],
+      "next_step": "Leave unchanged with F013; do not choose a representative, merge or delete.",
+      "recovery": {
+        "status": "not_applicable",
+        "steps": [
+          "No write to reverse."
+        ]
+      }
+    },
+    {
+      "file_id": "F013",
+      "original": {
+        "name": "receipt-copy-b.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r13",
+        "checksum": "bytes-duplicate",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "planned_target": {
+        "name": "2026-09-29_North-Paper_Receipt.pdf",
+        "parent_ids": [
+          "receipts-a"
+        ],
+        "revision": null,
+        "required_metadata_ref": "shared_original_metadata",
+        "required_checksum_ref": "F013.original.checksum",
+        "initial_disposition": "held_for_review"
+      },
+      "classification": {
+        "kind": "Receipt",
+        "issuer": "North Paper",
+        "date": "2026-09-29",
+        "date_role": "purchase date",
+        "evidence": "Before-state record: identical bytes to F012; F012 page 1"
+      },
+      "last_observed": {
+        "name": "receipt-copy-b.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r13",
+        "checksum": "bytes-duplicate",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "last_observed_refs": [
+        "O2",
+        "O8"
+      ],
+      "current_state": {
+        "name": "receipt-copy-b.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r13",
+        "checksum": "bytes-duplicate",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "current_confidence": "verified_at_O8",
+      "disposition": "held",
+      "reason": "Member of duplicate group DUP-01; all members held untouched.",
+      "operation_refs": [],
+      "relationship_refs": [
+        "DUP-01"
+      ],
+      "next_step": "Leave unchanged with F012; do not choose a representative, merge or delete.",
+      "recovery": {
+        "status": "not_applicable",
+        "steps": [
+          "No write to reverse."
+        ]
+      }
+    },
+    {
+      "file_id": "F014",
+      "original": {
+        "name": "receipt-late.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r14",
+        "checksum": "bytes-d",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "planned_target": {
+        "name": "2026-10-01_North-Paper_Receipt__014.pdf",
+        "parent_ids": [
+          "receipts-a"
+        ],
+        "revision": null,
+        "required_metadata_ref": "shared_original_metadata",
+        "required_checksum_ref": "F014.original.checksum",
+        "initial_disposition": "execute"
+      },
+      "classification": {
+        "kind": "Receipt",
+        "issuer": "North Paper",
+        "date": "2026-10-01",
+        "date_role": "purchase date",
+        "evidence": "Before-state record, page 1; existing D900 receipt evidence; O3"
+      },
+      "last_observed": {
+        "name": "2026-10-01_North-Paper_Receipt__014.pdf",
+        "parent_ids": [
+          "receipts-a"
+        ],
+        "revision": "r14c",
+        "checksum": "bytes-d",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "last_observed_refs": [
+        "O3",
+        "O8"
+      ],
+      "current_state": {
+        "name": "2026-10-01_North-Paper_Receipt__014.pdf",
+        "parent_ids": [
+          "receipts-a"
+        ],
+        "revision": "r14c",
+        "checksum": "bytes-d",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "current_confidence": "verified_at_O8",
+      "disposition": "verified_change",
+      "reason": "Both rename and move verified by ID, with unchanged ID/type/checksum/owner/effective access.",
+      "operation_refs": [
+        "F014-rename",
+        "F014-move"
+      ],
+      "relationship_refs": [
+        "COLLISION-01"
+      ],
+      "next_step": "Complete; retain the verified record. No additional filing action.",
+      "recovery": {
+        "status": "conditional_only",
+        "start_state_ref": "F014.current_state",
+        "steps": [
+          "After separate reversal approval and common recovery checks, move to inbox-a with the planned name; verify the new revision.",
+          "Then rename to receipt-late.pdf using that newly verified state/revision; verify again."
+        ]
+      }
+    },
+    {
+      "file_id": "F015",
+      "original": {
+        "name": "device-guide.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r15",
+        "checksum": "bytes-e",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "planned_target": {
+        "name": "Alder-Devices_L2_User-Manual.pdf",
+        "parent_ids": [
+          "manuals-a"
+        ],
+        "revision": null,
+        "required_metadata_ref": "shared_original_metadata",
+        "required_checksum_ref": "F015.original.checksum",
+        "initial_disposition": "held_for_review"
+      },
+      "classification": {
+        "kind": "User Manual",
+        "issuer": "Alder Devices",
+        "date": null,
+        "date_role": null,
+        "evidence": "Before-state record, cover",
+        "model": "L2"
+      },
+      "last_observed": {
+        "name": "device-guide.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r15",
+        "checksum": "bytes-e",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "last_observed_refs": [
+        "O4",
+        "O8"
+      ],
+      "current_state": {
+        "name": "device-guide.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r15",
+        "checksum": "bytes-e",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "current_confidence": "verified_at_O8",
+      "disposition": "held",
+      "reason": "Moving to manuals-a would change effective access from private-owner-a to project-group.",
+      "operation_refs": [],
+      "relationship_refs": [],
+      "next_step": "Keep private in inbox-a. Ask U1 to choose an authorized existing private destination or explicitly decide on the access-broadening move; do not change sharing.",
+      "recovery": {
+        "status": "not_applicable",
+        "steps": [
+          "No write to reverse."
+        ]
+      }
+    },
+    {
+      "file_id": "F016",
+      "original": {
+        "name": "invoice-clear.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r16",
+        "checksum": "bytes-f",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "planned_target": {
+        "name": "2026-09-30_Cedar-Works_Invoice.pdf",
+        "parent_ids": [
+          "invoices-a"
+        ],
+        "revision": null,
+        "required_metadata_ref": "shared_original_metadata",
+        "required_checksum_ref": "F016.original.checksum",
+        "initial_disposition": "execute"
+      },
+      "classification": {
+        "kind": "Invoice",
+        "issuer": "Cedar Works",
+        "date": "2026-09-30",
+        "date_role": "issue date",
+        "evidence": "Before-state record, page 1"
+      },
+      "last_observed": {
+        "name": "2026-09-30_Cedar-Works_Invoice.pdf",
+        "parent_ids": [
+          "invoices-a"
+        ],
+        "revision": "r16c",
+        "checksum": "bytes-f",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "last_observed_refs": [
+        "O5",
+        "O8"
+      ],
+      "current_state": {
+        "name": "2026-09-30_Cedar-Works_Invoice.pdf",
+        "parent_ids": [
+          "invoices-a"
+        ],
+        "revision": "r16c",
+        "checksum": "bytes-f",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "current_confidence": "verified_at_O8",
+      "disposition": "verified_change",
+      "reason": "Move timed out, but subsequent ID read verified the complete target state at r16c; no retry needed.",
+      "operation_refs": [
+        "F016-rename",
+        "F016-move"
+      ],
+      "relationship_refs": [],
+      "next_step": "Complete; no second move. Readback resolved the timeout.",
+      "recovery": {
+        "status": "conditional_only",
+        "start_state_ref": "F016.current_state",
+        "steps": [
+          "After separate reversal approval and common recovery checks, move to inbox-a with the planned name; verify the new revision.",
+          "Then rename to invoice-clear.pdf using that newly verified state/revision; verify again."
+        ]
+      }
+    },
+    {
+      "file_id": "F017",
+      "original": {
+        "name": "receipt-clear.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r17",
+        "checksum": "bytes-g",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "planned_target": {
+        "name": "2026-09-30_Meadow-Goods_Receipt.pdf",
+        "parent_ids": [
+          "receipts-a"
+        ],
+        "revision": null,
+        "required_metadata_ref": "shared_original_metadata",
+        "required_checksum_ref": "F017.original.checksum",
+        "initial_disposition": "execute"
+      },
+      "classification": {
+        "kind": "Receipt",
+        "issuer": "Meadow Goods",
+        "date": "2026-09-30",
+        "date_role": "purchase date",
+        "evidence": "Before-state record, page 1"
+      },
+      "last_observed": {
+        "name": "2026-09-30_Meadow-Goods_Receipt.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r17b",
+        "checksum": "bytes-g",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "last_observed_refs": [
+        "O6",
+        "O8"
+      ],
+      "current_state": {
+        "name": "2026-09-30_Meadow-Goods_Receipt.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r17b",
+        "checksum": "bytes-g",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "current_confidence": "verified_at_O8",
+      "disposition": "partially_applied",
+      "reason": "Rename verified; move explicitly failed without a state change. File remains renamed in inbox-a.",
+      "operation_refs": [
+        "F017-rename",
+        "F017-move"
+      ],
+      "relationship_refs": [],
+      "next_step": "When available, re-read F017 and receipts-a, check current name/revision/parent/content/access and collisions, then retry only the move under existing authorization; verify by ID.",
+      "recovery": {
+        "status": "conditional_only",
+        "start_state_ref": "F017.current_state",
+        "steps": [
+          "After separate reversal approval and common recovery checks, rename back to receipt-clear.pdf in inbox-a and verify a new revision. No successful move exists to reverse."
+        ]
+      }
+    },
+    {
+      "file_id": "F018",
+      "original": {
+        "name": "invoice-last.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r18",
+        "checksum": "bytes-h",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "planned_target": {
+        "name": "2026-10-01_Elm-Services_Invoice.pdf",
+        "parent_ids": [
+          "invoices-a"
+        ],
+        "revision": null,
+        "required_metadata_ref": "shared_original_metadata",
+        "required_checksum_ref": "F018.original.checksum",
+        "initial_disposition": "execute"
+      },
+      "classification": {
+        "kind": "Invoice",
+        "issuer": "Elm Services",
+        "date": "2026-10-01",
+        "date_role": "issue date",
+        "evidence": "Before-state record, page 1"
+      },
+      "last_observed": {
+        "name": "2026-10-01_Elm-Services_Invoice.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r18b",
+        "checksum": "bytes-h",
+        "metadata_ref": "shared_original_metadata"
+      },
+      "last_observed_refs": [
+        "O7"
+      ],
+      "current_state": null,
+      "current_confidence": "unknown_after_timeout",
+      "disposition": "unresolved",
+      "reason": "Rename verified historically at r18b; move timed out and all subsequent ID/parent-list reads failed. Current state is unverified.",
+      "operation_refs": [
+        "F018-rename",
+        "F018-move"
+      ],
+      "relationship_refs": [],
+      "next_step": "Read F018 by ID before any retry or recovery. If the target state is confirmed, finish; if the renamed inbox state is confirmed, recheck all preconditions before retrying only the move; hold any other state.",
+      "recovery": {
+        "status": "blocked_unknown_current_state",
+        "start_state_ref": null,
+        "steps": [
+          "Establish and record current state before planning any reversal; r18b/inbox-a is historical only.",
+          "With separate reversal approval and common recovery checks, reverse a move only if it is verified applied, then reverse the rename. If still in the verified renamed inbox state, reverse only the rename."
+        ]
+      }
+    }
+  ],
+  "operation_journal": [
+    {
+      "id": "F014-rename",
+      "order": 1,
+      "file_id": "F014",
+      "action": "rename",
+      "observation": "O3",
+      "response": "success",
+      "outcome": "verified_applied",
+      "before_state_ref": "F014.original",
+      "requested_name_ref": "F014.planned_target.name",
+      "readback": {
+        "name": "2026-10-01_North-Paper_Receipt__014.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r14b",
+        "checksum": "bytes-d",
+        "metadata_ref": "shared_original_metadata"
+      }
+    },
+    {
+      "id": "F014-move",
+      "order": 2,
+      "file_id": "F014",
+      "action": "move",
+      "observation": "O3",
+      "response": "success",
+      "outcome": "verified_applied",
+      "before_state_ref": "F014-rename.readback",
+      "requested_parent_ids": [
+        "receipts-a"
+      ],
+      "readback_ref": "F014.last_observed",
+      "retried": false
+    },
+    {
+      "id": "F016-rename",
+      "order": 3,
+      "file_id": "F016",
+      "action": "rename",
+      "observation": "O5",
+      "response": "success",
+      "outcome": "verified_applied",
+      "before_state_ref": "F016.original",
+      "requested_name_ref": "F016.planned_target.name",
+      "readback": {
+        "name": "2026-09-30_Cedar-Works_Invoice.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r16b",
+        "checksum": "bytes-f",
+        "metadata_ref": "shared_original_metadata"
+      }
+    },
+    {
+      "id": "F016-move",
+      "order": 4,
+      "file_id": "F016",
+      "action": "move",
+      "observation": "O5",
+      "response": "timeout",
+      "outcome": "verified_applied_after_timeout",
+      "before_state_ref": "F016-rename.readback",
+      "requested_parent_ids": [
+        "invoices-a"
+      ],
+      "readback_ref": "F016.last_observed",
+      "retried": false
+    },
+    {
+      "id": "F017-rename",
+      "order": 5,
+      "file_id": "F017",
+      "action": "rename",
+      "observation": "O6",
+      "response": "success",
+      "outcome": "verified_applied",
+      "before_state_ref": "F017.original",
+      "requested_name_ref": "F017.planned_target.name",
+      "readback": {
+        "name": "2026-09-30_Meadow-Goods_Receipt.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r17b",
+        "checksum": "bytes-g",
+        "metadata_ref": "shared_original_metadata"
+      }
+    },
+    {
+      "id": "F017-move",
+      "order": 6,
+      "file_id": "F017",
+      "action": "move",
+      "observation": "O6",
+      "response": "explicit_failure_before_state_change: move unavailable",
+      "outcome": "verified_not_applied",
+      "before_state_ref": "F017-rename.readback",
+      "requested_parent_ids": [
+        "receipts-a"
+      ],
+      "readback_ref": "F017.last_observed",
+      "retried": false
+    },
+    {
+      "id": "F018-rename",
+      "order": 7,
+      "file_id": "F018",
+      "action": "rename",
+      "observation": "O7",
+      "response": "success",
+      "outcome": "verified_applied",
+      "before_state_ref": "F018.original",
+      "requested_name_ref": "F018.planned_target.name",
+      "readback": {
+        "name": "2026-10-01_Elm-Services_Invoice.pdf",
+        "parent_ids": [
+          "inbox-a"
+        ],
+        "revision": "r18b",
+        "checksum": "bytes-h",
+        "metadata_ref": "shared_original_metadata"
+      }
+    },
+    {
+      "id": "F018-move",
+      "order": 8,
+      "file_id": "F018",
+      "action": "move",
+      "observation": "O7",
+      "response": "timeout",
+      "outcome": "unknown",
+      "before_state_ref": "F018-rename.readback",
+      "requested_parent_ids": [
+        "invoices-a"
+      ],
+      "readback_ref": null,
+      "retried": false,
+      "verification_limit": "All post-timeout ID reads and possible-parent listings failed; no current state established."
+    }
+  ],
+  "recovery_policy": {
+    "authorized_now": false,
+    "common_preconditions": [
+      "Obtain separate reversal authorization. Then read the stable ID and require its complete current state/revision to match the recorded verified post-change state; stop on mismatch or unavailable read.",
+      "Verify the restoration folder by ID, its existence, appropriate unchanged ownership/effective access and no ASCII-case-insensitive collision for each restored or intermediate name.",
+      "Reverse only verified applied operations, in reverse journal order. Preserve ID, exact parent semantics, PDF type, bytes and effective access; do not simulate moves by reuploading.",
+      "After each inverse action, verify by ID and append the newly assigned revision. Use that new state for the next inverse action, never an old intermediate revision.",
+      "Inspect ambiguous results before retrying. Stop for concurrent edits, unexpected access changes or unavailable verification; do not improvise sharing changes."
+    ]
+  },
+  "reconciliation_limits": {
+    "original_inventory_complete": true,
+    "one_row_per_source_id": true,
+    "no_create_delete_calls_in_supplied_journal": true,
+    "absence_of_calls_does_not_prove_unreachable_file_state": true,
+    "unverified_id": "F018",
+    "unknowns": [
+      "F018 current existence/location/name/revision/owner/access/type/checksum and move outcome.",
+      "F017 move unavailable cause.",
+      "Reason for F011 concurrent rename.",
+      "Destination collision state after O7."
+    ],
+    "no_later_events_or_actions_assumed": true
+  }
+}
