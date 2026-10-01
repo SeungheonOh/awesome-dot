@@ -54,6 +54,10 @@ A project club planned a modest monthly budget, but its actual total is higher. 
 - Ask when a transfer or reimbursement cannot be classified from supplied evidence
 - Do not share the chart with club members or change connected records without separate authorization
 
+## Worked example
+
+[Inspect a fictional flat-total budget with offsetting category changes](WORKED-EXAMPLE.md), including a repeatable arithmetic check and unresolved-transfer branch.
+
 ## Example request
 
 ```text
