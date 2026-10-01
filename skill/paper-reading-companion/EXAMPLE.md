@@ -98,7 +98,7 @@ Should this file be accepted? Would rearranging the columns fix the issue? Predi
 
 ## Solution boundary: Illustrative answer guide
 
-- **Q1:** Basic editor versus editor with row preview; 40 volunteers, 20 per group; 10 judgments per participant and 200 per group. Each judgment correctly accepted or rejected a file under the supplied rules, rather than counting correct rows. Sources: M1–M2
+- **Q1:** Basic editor versus editor with row preview; 40 volunteers, 20 per group; 10 judgments per participant and 200 per group. A judgment counted as correct when the participant correctly accepted a valid file or rejected an invalid file; the unit was a file judgment, rather than a row. R1 reports 270 correct and 130 incorrect judgments across both groups. Sources: M1–M2 and R1
 - **Q2:** Correct rate rose from 60% to 75%, an increase of 15 percentage points or 25% relative to the 60% baseline. The calculation is (75−60)/60 = 0.25. Source: R1
 - **Q3:** Large files and collaborative editing were not assessed. Suitable next evidence would include an authorized evaluation using representative large-file tasks and collaboration conditions, with an outcome relevant to real data-entry mistakes. This is an evidence-needed proposal, not permission to run it. Source: L1. Other justified answers about task or persistence may also be valid
 - **Conceptual example:** Reject because identifier 11 appears twice. Reordering columns leaves the duplicate unchanged. Source: M2

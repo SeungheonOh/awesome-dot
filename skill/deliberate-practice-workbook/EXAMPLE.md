@@ -38,11 +38,13 @@ Score each dimension separately; these are observations about one written criter
 
 | Dimension | 0 | 1 | 2 |
 |---|---|---|---|
-| Condition | No test condition | A broad class such as “invalid” | Exact supplied value or explicit missing input |
+| Condition and action | Missing or incorrect condition, or a conflicting action | A compatible broad input class with Preview or no stated action; or the exact supplied input with the action omitted | Exact supplied value or explicit missing input, with the specified Preview action |
 | Outcome | Wrong or unobservable result | Correct accept/reject decision, but missing value or exact message | Exact preview value or required message, including preview absence on rejection |
 | Scope | Claims a submission or save occurs | Submission/save behavior omitted | Explicitly states no submission or save |
 
-No response means **unevaluated**, not three zeros. Equivalent wording is acceptable unless the product note specifies exact displayed text.
+No response means **unevaluated**, not three zeros. Equivalent wording is acceptable unless the product note specifies exact displayed text. A named conflicting action, such as Submit, earns 0 for Condition and action even when the exact input is present; do not infer Preview from a correct expected result. A conflicting exact input also earns 0 (for example, quantity 4 in the quantity-0 exercise), even if its trigger is Preview. Apply a 0 anchor before considering partial credit.
+
+T1 also requires a separate explanation: the new source changes the allowed range from 1–5 to 2–8, so reusing the old error message would contradict that source. Mark this explanation **supported**, **missing**, or **contradicted**, citing the response. T1 is complete only when its three dimensions earn 2 and its explanation is supported. B0 and D1–D3 do not require this additional explanation.
 
 ### Learner record
 
@@ -50,7 +52,8 @@ No response means **unevaluated**, not three zeros. Equivalent wording is accept
 Exercise ID:
 Actual response:
 Assistance used:
-Condition / Outcome / Scope evidence:
+Condition and action / Outcome / Scope evidence:
+T1 explanation evidence and completion status (if applicable):
 Revision:
 Next exercise and reason:
 ```
@@ -76,7 +79,7 @@ Nothing is submitted or saved.
 
 Illustrative feedback:
 
-“You specified the exact input and kept Preview separate from saving. Condition: 2; Outcome: 0; Scope: 2. The phrase ‘show a preview of 0’ conflicts with P1 and P3. Check the smallest permitted quantity, then revise only the displayed outcome. What must appear instead?”
+“You specified the exact input and kept Preview separate from saving. Condition and action: 2; Outcome: 0; Scope: 2. The phrase ‘show a preview of 0’ conflicts with P1 and P3. Check the smallest permitted quantity, then revise only the displayed outcome. What must appear instead?”
 
 The next step is a revised D2 attempt. Do not mark the skill mastered or advance solely because the other dimensions scored well. If the learner asks for the answer, reveal D2 and label the later retry as assisted.
 
@@ -97,9 +100,11 @@ Leave the response and score empty. Do not invent a failure, add an assessment r
 5. Score the fictional wrong answer independently: exact condition and no-save statement earn 2 each; the contradicted outcome earns 0
 6. Replace “nothing is submitted or saved” with “no request is committed”; accept it if its meaning clearly covers both prohibited effects
 7. Inspect T1: 9 is outside 2–8, and its message must use the new limits
+8. Replace Preview with Submit in an otherwise correct D2 response: Condition and action is 0, while Outcome and Scope can still be 2; this does not demonstrate the requested trigger
+9. Remove only the explanation from an otherwise correct T1 response: the three dimensions remain 2, but explanation is missing and T1 is incomplete. Saying “the old message is wrong” without relating it to the changed limits is not a supported explanation
 
 ## Actual verification and limits
 
-During authoring, the supplied rule was checked against missing input, 0, 1, 3, 5, 6, and 1.5 using a small independent rule calculation. The listed accept/reject outcomes and message distinctions agreed. Exercise identifiers, solution coverage, and the wrong-answer rubric were also reviewed.
+During authoring, the supplied rule was checked against missing input, 0, 1, 3, 5, 6, and 1.5 using a small independent rule calculation. The listed accept/reject outcomes and message distinctions agreed. Exercise identifiers, solution coverage, and the wrong-answer rubric were also reviewed. A later manual rubric review checked a wrong-trigger response, an omitted-trigger response, and a correct T1 criterion with its explanation removed; the anchors now distinguish these from a complete answer. This was a review of stated criteria, not automated grading of free text.
 
 These are checks of this fictional artifact. Product execution, learner performance, retention, and transfer remain untested.
