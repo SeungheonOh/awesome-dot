@@ -1,0 +1,48 @@
+{
+  "fixture": "fictional-text-only-v1",
+  "audience": "Taylor Reed, venue coordinator, taylor@venue.example",
+  "purpose": "Provide venue logistics without organizer or internal planning details",
+  "authority": "example.md: Source and audience policy; create and save only",
+  "source": {
+    "file": "source.md",
+    "sha256": "af698c7c2514a5dc3aa9964af3b293d9ca531913fffde8bc086b578e4f235b58",
+    "preserved": true
+  },
+  "output": {
+    "file": "venue-copy.txt",
+    "format": "UTF-8 plain text, LF line endings",
+    "bytes": 158,
+    "sha256": "f7d402b4c900d7c1973dcda9c12cbb051d88d7388a36110704a3bb427cf4b943"
+  },
+  "retained": [
+    {"locator": "source.md:5", "category": "title", "result": "retained without Markdown heading marker"},
+    {"locator": "source.md:8-13", "category": "approved logistics", "result": "all six lines retained exactly"}
+  ],
+  "removed": [
+    {"locator": "source.md:1-4", "category": "frontmatter", "result": "omitted from rebuilt copy"},
+    {"locator": "source.md:15-17", "category": "personal contacts", "result": "omitted from rebuilt copy"},
+    {"locator": "source.md:19-20", "category": "internal planning", "result": "omitted from rebuilt copy"},
+    {"locator": "source.md:21", "category": "HTML comment", "result": "omitted from rebuilt copy"},
+    {"locator": "source.md:22", "category": "link and target", "result": "omitted from rebuilt copy"}
+  ],
+  "surfaces": [
+    {"surface": "complete output bytes", "state": "checked", "evidence": "exact equality to fixed approved text; 158 bytes"},
+    {"surface": "source raw Markdown", "state": "checked", "evidence": "all 22 lines inspected; frontmatter, comment and link identified"},
+    {"surface": "retained meaning", "state": "checked", "evidence": "title and all six approved lines match; cleanup constraint preserved"},
+    {"surface": "binary containers, attachments and layers", "state": "not_applicable", "evidence": "the complete output is the exact plain-text bytes, not a binary document container"},
+    {"surface": "filesystem attributes and provider history", "state": "uninspected", "evidence": "outside text-only fixture; no claim about metadata outside these bytes"}
+  ],
+  "verification": {
+    "method": "Read final files again; fixed-content, hash and review-record checks",
+    "environment": "Python 3.12.14 standard library on Linux",
+    "date_utc": "2026-10-01",
+    "scope": "text bytes only",
+    "claims": "Prepared output matches this fictional audience policy; not a PDF or Office redaction test"
+  },
+  "holds": [
+    "No sending or upload authorized",
+    "Any real delivery needs destination/access checks and relevant metadata checks outside the file bytes"
+  ],
+  "release": "prepared_only",
+  "shared": false
+}
