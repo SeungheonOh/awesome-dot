@@ -94,6 +94,8 @@ After an authorized transaction, read the provider's confirmation and verify eac
 
 The [fictional worked example](example.md) demonstrates overnight arithmetic, a failed connection, a fragile ground transfer and unknown seat availability. Use it to check the method, never as live travel evidence.
 
+The [repeated-hour rehearsal](rehearsal-clock-change/README.md) adds a fresh fictional [input packet](rehearsal-clock-change/input.md), a [recorded comparison](rehearsal-clock-change/output.md) and an offline [arithmetic verifier](rehearsal-clock-change/verify.py). Use it to check date-specific offsets, elapsed durations across the clock change, unresolved arrival occurrences and full payable-now costs.
+
 ## Date arithmetic guardrail
 
 Treat provider-local departure and arrival times as clock values that must map to a real, unambiguous instant. A timezone label alone does not validate a repeated or skipped hour; obtain the intended offset where needed. Calculate flight, processing, connection and ground-transfer durations on the UTC timeline, then convert the resulting instant for display. Adding an elapsed duration directly to local wall-clock time can be wrong across a daylight-saving change.
@@ -106,4 +108,4 @@ dot, use the authorized itinerary for my canceled journey and find alternatives 
 
 ## Evidence status
 
-This is an executable research-and-decision workflow. The example verifies arithmetic only. Real availability, rules, prices, eligibility and transaction completion must be checked in the tools and services available during the actual task.
+This is an executable research-and-decision workflow with a worked example and one recorded fresh-input fictional rehearsal. The rehearsal's local verifier passed 25 fixture checks for IANA offset mappings, UTC elapsed durations, costs and unresolved branches; it does not validate free-form responses or certify the workflow broadly. Real availability, rules, prices, eligibility and transaction completion remain untested here and must be checked in the tools and services available during the actual task.
