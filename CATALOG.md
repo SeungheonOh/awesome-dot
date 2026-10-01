@@ -2,7 +2,7 @@
 
 # Project catalog
 
-**20 original recipes. All are proposed, not executed.**
+**30 original recipes. All are proposed, not executed.**
 
 Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes are first-session planning budgets; capability labels identify access to check.
 
@@ -12,6 +12,7 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 
 - [Web games](recipes/web-games/README.md): 10 recipes
 - [3D and spatial studies](recipes/3d-spatial/README.md): 10 recipes
+- [Image editing](recipes/image-editing/README.md): 10 recipes
 
 ## Web games
 
@@ -42,6 +43,21 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 | [Tactile Trail Map Prototype](recipes/3d-spatial/tactile-map-model.md) | advanced | 150 min | code, files |
 | [Tiny Theater Sightline Explorer](recipes/3d-spatial/tiny-theater-sightlines.md) | advanced | 150 min | code, files |
 | [Wayfinding Signage Maquette](recipes/3d-spatial/accessible-wayfinding-maquette.md) | advanced | 150 min | code, files |
+
+## Image editing
+
+| Project | Level | First session | Capabilities to check |
+| --- | --- | --- | --- |
+| [Album Privacy Edition](recipes/image-editing/album-privacy-edition.md) | intermediate | 90 min | files, images |
+| [Artwork Print Preflight Preview](recipes/image-editing/artwork-print-preflight-preview.md) | intermediate | 90 min | files, images |
+| [Garment Colorway Contact Sheet](recipes/image-editing/garment-colorway-contact-sheet.md) | intermediate | 75 min | files, images |
+| [Heirloom Photo Conservation Study](recipes/image-editing/heirloom-photo-conservation-study.md) | intermediate | 90 min | files, images |
+| [Marketplace Photo Background Kit](recipes/image-editing/marketplace-photo-background-kit.md) | beginner | 60 min | files, images |
+| [Panorama Crop Storyboard](recipes/image-editing/panorama-crop-storyboard.md) | beginner | 45 min | files, images |
+| [Portrait Lighting Study](recipes/image-editing/portrait-lighting-study.md) | intermediate | 60 min | files, images |
+| [Recipe Step Photo Unifier](recipes/image-editing/recipe-step-photo-unifier.md) | beginner | 75 min | files, images |
+| [Room Palette Preview Board](recipes/image-editing/room-palette-preview-board.md) | beginner | 60 min | files, images |
+| [Travel Photo Distraction Cleanup](recipes/image-editing/travel-photo-distraction-cleanup.md) | beginner | 45 min | files, images |
 
 ## Machine-readable navigation
 
