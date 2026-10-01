@@ -2,7 +2,7 @@
 
 # Project catalog
 
-**40 original recipes. All are proposed, not executed.**
+**50 original recipes. All are proposed, not executed.**
 
 Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes are first-session planning budgets; capability labels identify access to check.
 
@@ -12,6 +12,7 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 
 - [Web games](recipes/web-games/README.md): 10 recipes
 - [3D and spatial studies](recipes/3d-spatial/README.md): 10 recipes
+- [Creative coding](recipes/creative-coding/README.md): 10 recipes
 - [Image editing](recipes/image-editing/README.md): 10 recipes
 - [Design and publishing](recipes/design-publishing/README.md): 10 recipes
 
@@ -44,6 +45,21 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 | [Tactile Trail Map Prototype](recipes/3d-spatial/tactile-map-model.md) | advanced | 150 min | code, files |
 | [Tiny Theater Sightline Explorer](recipes/3d-spatial/tiny-theater-sightlines.md) | advanced | 150 min | code, files |
 | [Wayfinding Signage Maquette](recipes/3d-spatial/accessible-wayfinding-maquette.md) | advanced | 150 min | code, files |
+
+## Creative coding
+
+| Project | Level | First session | Capabilities to check |
+| --- | --- | --- | --- |
+| [Accessible Timeline Explorer](recipes/creative-coding/accessible-timeline-explorer.md) | intermediate | 180 min | code, files |
+| [Cellular Automata Studio](recipes/creative-coding/cellular-automata-studio.md) | intermediate | 120 min | code, files, websites |
+| [Color-Contrast Laboratory](recipes/creative-coding/color-contrast-laboratory.md) | intermediate | 150 min | code, files |
+| [Data Sonification Score](recipes/creative-coding/data-sonification-score.md) | advanced | 150 min | code, files, websites |
+| [Digital Postcard Generator](recipes/creative-coding/digital-postcard-generator.md) | intermediate | 150 min | code, files, images |
+| [Generative Type Foundry](recipes/creative-coding/generative-type-foundry.md) | intermediate | 100 min | code, files, websites |
+| [Interactive Story Map](recipes/creative-coding/interactive-story-map.md) | intermediate | 150 min | code, files |
+| [Kinetic Sculpture Simulator](recipes/creative-coding/kinetic-sculpture-simulator.md) | advanced | 180 min | code, files |
+| [Plotter Art Workbench](recipes/creative-coding/plotter-art-workbench.md) | intermediate | 100 min | code, files, websites |
+| [Procedural Music Visualizer](recipes/creative-coding/procedural-music-visualizer.md) | intermediate | 120 min | code, files, websites |
 
 ## Image editing
 
