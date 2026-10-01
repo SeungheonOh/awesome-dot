@@ -2,7 +2,7 @@
 
 # Project catalog
 
-**70 original recipes. All are proposed, not executed.**
+**80 original recipes. All are proposed, not executed.**
 
 Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes are first-session planning budgets; capability labels identify access to check.
 
@@ -16,6 +16,7 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 - [Creative coding](recipes/creative-coding/README.md): 10 recipes
 - [Image editing](recipes/image-editing/README.md): 10 recipes
 - [Design and publishing](recipes/design-publishing/README.md): 10 recipes
+- [Personal reminders](recipes/personal-reminders/README.md): 10 recipes
 - [Finance](recipes/finance/README.md): 10 recipes
 
 ## Team operations
@@ -107,6 +108,21 @@ Choose an outcome, open the full guide, and copy its prompt into dot. Timeboxes 
 | [Recipe Card Collection](recipes/design-publishing/recipe-card-collection.md) | beginner | 90 min | files, images |
 | [Small-Press Zine Layout](recipes/design-publishing/small-press-zine-layout.md) | intermediate | 150 min | files, images |
 | [Volunteer Handbook Design](recipes/design-publishing/volunteer-handbook-design.md) | intermediate | 150 min | files |
+
+## Personal reminders
+
+| Project | Level | First session | Capabilities to check |
+| --- | --- | --- | --- |
+| [A Bounded Rotation of Household Chores](recipes/personal-reminders/rotating-chores-bounded-series.md) | intermediate | 30 min | scheduling, files |
+| [A Private Nudge for an Awaited Reply](recipes/personal-reminders/awaiting-reply-user-followup.md) | intermediate | 30 min | scheduling, connected-apps |
+| [A Quiet-Hours Digest for Routine Reminders](recipes/personal-reminders/quiet-hours-reminder-digest.md) | intermediate | 35 min | scheduling, files |
+| [A Reminder Before Subscription Renewal](recipes/personal-reminders/subscription-renewal-review-reminder.md) | beginner | 20 min | scheduling, files |
+| [A Trip Countdown with Milestones](recipes/personal-reminders/trip-countdown-milestones.md) | intermediate | 30 min | scheduling, files |
+| [Annual Document Renewal Lead Time](recipes/personal-reminders/annual-document-renewal-leadtime.md) | intermediate | 30 min | scheduling, files |
+| [One Deadline, One Useful Warning](recipes/personal-reminders/deadline-leadtime-alert.md) | beginner | 15 min | scheduling |
+| [Project Checkpoints with a Finish Line](recipes/personal-reminders/bounded-project-checkpoint.md) | beginner | 25 min | scheduling, files |
+| [Review Reminders After a Timezone Move](recipes/personal-reminders/timezone-move-schedule-review.md) | intermediate | 30 min | scheduling |
+| [Study Sessions That Respect Exceptions](recipes/personal-reminders/study-sessions-with-exceptions.md) | beginner | 25 min | scheduling, files |
 
 ## Finance
 
