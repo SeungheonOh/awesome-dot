@@ -114,3 +114,5 @@ List preparation does not authorize checkout, purchases, subscriptions, pantry d
 ## Worked check
 
 [The fictional example](example.md) contains two recipes, fractional scaling, shared ingredients, confirmed stock, two-can rounding, an unknown-size can and an optional garnish. Its executable check covers every source ingredient and demonstrates where numeric reconciliation must stop. Use real user inputs in practice; the sample is not a recipe recommendation or a live shopping-list write.
+
+A [fresh-input rehearsal](rehearsal/result.md) checks total versus per-batch yields, a duplicate pantry record, reservations, dry/cooked identity boundaries and unresolved stock/units. Its [input and arithmetic checks](rehearsal/verification.md) make the result inspectable without a shopping integration.
