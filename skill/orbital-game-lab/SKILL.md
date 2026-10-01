@@ -26,7 +26,7 @@ Use fictional units and synthetic missions. No account, API key, live data, mode
 6. **Connect feedback and recovery.** Recompute the prediction after edits, show progress in text as well as rings, distinguish impact from escape, and preserve the last path as a faint comparison. Disable launch edits during flight. Provide pause/resume and reset; pause when the page is hidden. Keep keyboard controls usable without hijacking slider or button keys.
 7. **Test numerical and interaction invariants.** Run the example tests below. Check mission switching, pause, reset, prediction toggling, control labels, mobile layout and hidden-tab behavior when a real browser is available. Make deterministic tests independent of the UI. Report unavailable browser checks honestly.
 8. **Publish the product, then extract the method.** Use the user's selected hosting service and keep its initial audience private unless wider sharing is authorized. Verify terminal deployment success. Never commit host credentials, private data, runtime state or host account metadata to the public skill folder.
-9. **Contribute the reusable result.** Bundle a small runnable example, the tested equations, observed checks and limits. Pull current main, review only your diff, run the checks again, commit and push within the granted scope. On a non-fast-forward rejection, fetch and reconcile; never discard another contributor's changes. Verify the remote commit before claiming it was pushed.
+9. **Contribute the reusable result.** Contribute only the skill instructions. Keep product source, test files, deployment metadata and build notes outside the skills repository. Summarize the tested method and relevant limits within the skill itself. Pull current main, review only your diff, run the checks again, commit and push within the granted scope. On a non-fast-forward rejection, fetch and reconcile; never discard another contributor's changes. Verify the remote commit before claiming it was pushed.
 
 ## Model and trade-offs
 
@@ -36,21 +36,10 @@ The example chooses `mu = 1,800,000`, surface radius `46`, an impact threshold o
 
 This model omits atmosphere, thrust after launch, relativity, rotating reference frames and interacting celestial bodies. It must never be used for real navigation or engineering safety decisions.
 
-## Runnable example and checks
+## Validation and delivery
 
-Source: [example/dist/index.html](example/dist/index.html), [physics.mjs](example/dist/physics.mjs), [app.mjs](example/dist/app.mjs), [style.css](example/dist/style.css).
+Keep the implementation and test suite in the product workspace, not in the skills contribution. Validate these observable properties before calling the product complete:
 
-From this skill folder:
-
-```sh
-node example/test.mjs
-node --check example/dist/app.mjs
-python3 -m http.server 8766 --directory example/dist
-```
-
-Open the server on a browser that can reach that environment. Do not confuse a remote machine's loopback with the user's computer. See [BUILD-NOTES.md](BUILD-NOTES.md) for the actual build history and verified limits.
-
-Acceptance:
 - All three reference launches intersect all three gates
 - Repeat runs return identical trajectories
 - Zero speed impacts; sufficiently high speed escapes
@@ -58,6 +47,10 @@ Acceptance:
 - Prediction uses the same integration code as the live flight
 - A failed or paused flight can be reset without retaining old gate progress
 - The page labels its fictional model and needs no remote dependencies
+
+For the original build, the three reference trajectories passed with maximum relative energy drifts of 2.75e-10, 2.48e-6 and 6.48e-6. Impact, escape, deterministic replay and JavaScript syntax checks passed. A hosting-provided desktop image was inspected. Local browser access was unavailable, so full keyboard/touch, mobile visual and optional WebMCP execution checks remained unverified. These observations describe that build; rerun checks on each new implementation rather than inheriting its success.
+
+Deliver the finished product through the requested hosting channel. The repository contribution is this skill alone: the chronological procedure, model choices, acceptance criteria and honest limits. Do not upload the app, tests or a separate build diary unless explicitly requested.
 
 ## Failure handling
 
