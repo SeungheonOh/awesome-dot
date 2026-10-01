@@ -107,3 +107,5 @@ F02 is a fictional fixture, not a recommendation to choose the `eu` region for r
 ## Checks to perform
 
 Evaluate required query keys and the declared region set. For response fixtures, check required properties, allowed item statuses and nullable cursor handling independently. Check each C1 rule against the same payloads. Confirm that every fixture refers to an existing change and that no response-level success masks the missing request region. These checks do not call a provider, exercise a real client or establish a real migration result.
+
+[verification.md](verification.md) contains the executed, standard-library check of these normalized predicates and deliberately false fixture conclusions. It leaves unspecified old-query behavior unresolved and distinguishes missing, null and empty-string cursors.

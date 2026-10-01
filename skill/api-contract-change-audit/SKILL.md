@@ -87,6 +87,8 @@ Reconcile every in-scope changed operation to a finding or an explicit no-materi
 
 [The fictional worked example](example.md) includes a new request requirement, an additive response enum, a default change and a final-page shape change. Its expected results are based on supplied contract extracts and a fictional consumer rule set.
 
+[The repeatable check](verification.md) evaluates those bounded request, response and consumer predicates separately, retaining unknown old-provider query handling. It is not a complete schema validator or a live endpoint test.
+
 ## Stop and ask
 
 - Ask when field meaning, version overlap, policy authority or contradictory source evidence changes a release recommendation
