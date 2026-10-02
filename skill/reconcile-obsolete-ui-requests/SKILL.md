@@ -23,7 +23,7 @@ If a live operation can charge, publish or create a record, separate display can
 
 1. **Define request identity.** List the inputs that determine the result: resource, version, filters, selected file and mode as appropriate. State which user actions supersede it. A new request, changed input, loaded example, Cancel and component disposal may all invalidate the previous result.
 2. **Map result consumers.** Find every place that stores data or enables dependent controls. Export should consume the same validated result shown on screen, not a separate stale cache or newly edited input fields. Clear or visibly mark results stale when inputs change; disable consequential consumers until a current result exists.
-3. **Assign ownership at start.** Use a monotonically increasing generation or equivalent unique request token. Capture it before awaiting. Keep cancellation handles request-local so an old completion cannot cancel a newer operation. Increment the generation on every superseding action, not only on the next fetch.
+3. **Assign ownership at start.** Use a monotonically increasing generation or equivalent unique request token. Capture it before awaiting. Keep cancellation handles request-local so an old completion cannot cancel a newer operation. Increment the generation on every superseding action, not only on the next fetch. Choose the ownership scope deliberately: independent editor fields may need separate revisions. A global token must not accidentally discard a valid import for one field merely because the user starts loading another field.
 4. **Use cancellation to release resources.** Abort supported fetches, terminate workers or cancel readers when appropriate. Keep the ownership check even when cancellation exists: some work may finish before the cancellation is processed, and test doubles or decoders may not support abort. Cancellation and stale-result suppression solve different problems.
 5. **Guard every completion path.** Success, failure, progress and finally/cleanup must check that they still own the view before changing shared state. A guarded success with an unguarded catch can still replace a newer result with an old error. A stale finally must not clear the newer loading indicator or disable its Cancel button.
 6. **Handle multi-part requests as one result.** For a comparison requiring two inputs, commit only when both belong to the same generation and have passed identity/shape checks. If either fails, cancel remaining work where supported and avoid displaying a new half beside an old half. Partial results are acceptable only when explicitly designed and labeled as partial.
@@ -40,6 +40,12 @@ A deterministic test can hold two resolver functions returned by a mock fetch, i
 
 For a separate Cancel test, start a request, invoke Cancel, then resolve the obsolete promise. The view remains empty or explicitly canceled and export remains disabled. A subsequent valid request must still complete normally.
 
+### Independent input fields
+
+Consider two separate dictionary file pickers. Source read S and target read T may complete in either order; loading T does not supersede S. Track a revision and pending flag per field, invalidate the derived comparison when either field changes, and keep comparison disabled while either current read is pending. A manual edit supersedes only that field's read. Loading a complete example supersedes both. This differs from two fetches started as one atomic comparison request: choose the ownership boundary from the interaction contract, not from the number of promises.
+
+Test T completing before S and verify both selected files remain. Then edit the source while both are pending: S must be ignored, T may still complete, and comparison must use the manually edited source with the newly loaded target. The old source read's cleanup must not clear the target's pending flag.
+
 ## Verification matrix
 
 - A succeeds after B succeeds: B remains visible
@@ -48,6 +54,8 @@ For a separate Cancel test, start a request, invoke Cancel, then resolve the obs
 - A finishes after Cancel or unmount: no result is committed
 - One half of a comparison fails: no unlabeled mixed-generation result
 - Old finally runs during B: B's loading/cancel state remains correct
+- Independent field imports finish in reverse order: both current selections are retained
+- One field is edited while another loads: only the edited field's old read is discarded
 - Current request fails or exceeds a limit: concrete error and recoverable controls
 
 ## Deliverable and limits
