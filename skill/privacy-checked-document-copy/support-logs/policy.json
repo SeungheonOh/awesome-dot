@@ -1,0 +1,22 @@
+{
+  "schema": "support-log-policy-v1",
+  "audience": "Fictional RelaySync support team, case DEMO-73",
+  "purpose": "Review the observed sync sequence and incomplete outcome",
+  "source_files": ["originals/diagnostics.jsonl"],
+  "row_handling": "retain_every_object_in_source_order",
+  "unlisted_top_level": "omit_and_record",
+  "release": "prepare_only",
+  "packet_files": ["events.jsonl", "summary.txt"],
+  "fields": {
+    "event_at": {"type": "utc_window", "allow_missing": true, "allow_null": true, "start": "2026-09-30T09:14:00.000Z", "end": "2026-09-30T09:14:05.000Z"},
+    "severity": {"type": "enum", "allow_missing": false, "values": ["INFO", "WARN", "ERROR"]},
+    "component": {"type": "enum", "allow_missing": false, "values": ["client", "sync", "network"]},
+    "event": {"type": "enum", "allow_missing": false, "values": ["client_ready", "enqueue", "attempt_failed", "retry_scheduled", "link_state", "connectivity_probe", "retry_dispatched", "sync_status", "remote_response"]},
+    "code": {"type": "enum", "allow_missing": false, "values": ["C_READY", "Q_ENQUEUED", "E_TIMEOUT", "R_RETRY", "N_OFFLINE", "E_UNREACHABLE", "R_DISPATCHED", "S_PENDING", "E_REMOTE_BUSY"]},
+    "operation_id": {"type": "local_alias", "allow_missing": true, "allow_null": true, "prefix": "OP"},
+    "device_id": {"type": "local_alias", "allow_missing": true, "allow_null": true, "prefix": "DEV"},
+    "attempt": {"type": "integer", "allow_missing": true, "allow_null": true, "min": 0, "max": 8},
+    "elapsed_ms": {"type": "integer", "allow_missing": true, "allow_null": true, "min": 0, "max": 60000},
+    "bytes_sent": {"type": "integer", "allow_missing": true, "allow_null": true, "min": 0, "max": 1048576}
+  }
+}

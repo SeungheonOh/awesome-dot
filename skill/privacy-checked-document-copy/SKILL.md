@@ -115,3 +115,5 @@ Release: prepared only / held / verified sent; actual destination if sent
 ```
 
 The [fictional example](example.md) includes a real, minimized text output and a private-style review record. Run its [reproducible checker](check_example.py) and read the [observed verification and limits](verification.md). The fixture exercises text minimization and output identity only; it does not test PDF, Office, image or provider-history removal.
+
+For a selected diagnostic excerpt, the [support-log companion](support-logs/README.md) adds value-level field review, occurrence and alias reconciliation, and an actual two-file recipient packet. Its separate original JSONL fixture includes tied, backwards, missing and null timestamps plus an unresolved outcome. The executed checks cover that explicit source and audience policy; they do not establish general anonymity or inspect a real support channel.

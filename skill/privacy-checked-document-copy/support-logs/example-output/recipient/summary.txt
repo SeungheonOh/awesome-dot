@@ -1,0 +1,39 @@
+RelaySync support excerpt — fictional case DEMO-73
+
+Audience: Fictional RelaySync support team, case DEMO-73
+Purpose: Review the observed sync sequence and incomplete outcome
+
+Selected excerpt: 9 event occurrences in source order.
+Occurrence numbers preserve the supplied order; timestamps have not been used to sort events.
+
+Observed sequence:
+1. INFO client/client_ready: C_READY; operation absent
+2. INFO sync/enqueue: Q_ENQUEUED; operation OP-001
+3. ERROR sync/attempt_failed: E_TIMEOUT; operation OP-001
+4. WARN sync/retry_scheduled: R_RETRY; operation OP-001
+5. WARN network/link_state: N_OFFLINE; operation absent
+6. ERROR network/connectivity_probe: E_UNREACHABLE; operation OP-002
+7. INFO sync/retry_dispatched: R_DISPATCHED; operation OP-001
+8. INFO sync/sync_status: S_PENDING; operation OP-001
+9. ERROR sync/remote_response: E_REMOTE_BUSY; operation OP-001
+
+ERROR occurrences: 3, 6, 9.
+Missing timestamp occurrences: 7.
+Explicit-null timestamp occurrences: 6.
+Equal adjacent timestamps: occurrences 3 and 4.
+Backwards adjacent timestamp: occurrences 4 and 5.
+
+Outcome: unknown. No terminal success or terminal failure is present in this selected excerpt.
+Pending status, a dispatched retry, absent counters and zero sent bytes do not establish completion.
+The timestamp anomalies do not establish a causal order or a clock-corrected duration.
+No continuation, server-side trace or cause of the interruption was supplied.
+
+Reading the event file:
+Each optional field has a state: present, absent, or explicit_null. Integers keep their original units:
+attempt is a count; elapsed_ms is milliseconds; bytes_sent is bytes.
+OP and DEV aliases preserve only approved within-excerpt equality, separately by identifier field.
+An absent or null identifier is not attributed to an earlier alias. Aliases are not cross-packet IDs.
+
+Limit: all free-text messages and unlisted nested context were omitted by the supplied audience policy.
+Those omissions can remove explanatory detail; the retained codes alone do not prove root cause.
+Preparation only. The recipient packet contains events.jsonl and summary.txt; nothing was sent.

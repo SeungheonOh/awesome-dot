@@ -1,0 +1,650 @@
+{
+  "fixture": "fictional-support-log-v1",
+  "audience": "Fictional RelaySync support team, case DEMO-73",
+  "source": {
+    "file": "originals/diagnostics.jsonl",
+    "sha256": "75ab81aae71f8a336a4e0f4b4ac5f0483ccf439a9b75117a2513c77bf3d9b3c9",
+    "events": 9,
+    "preserved": true
+  },
+  "policy": {
+    "file": "policy.json",
+    "sha256": "26a58115fec53310e744422e1b46ca4cf4399f4abc87a8d51b5de9248c891c07"
+  },
+  "packet": {
+    "events.jsonl": {
+      "bytes": 3234,
+      "sha256": "114460484942e8925dd9ae384c63ced444a9b0021d60872094a2a437388f08c1"
+    },
+    "summary.txt": {
+      "bytes": 2132,
+      "sha256": "9feb191a18fd1c33383648a5ccf40f7fe3aa73acb845791dfce8b31b39599520"
+    }
+  },
+  "decisions": [
+    {
+      "source_locator": "originals/diagnostics.jsonl:1",
+      "packet_occurrence": 1,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "present"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "absent"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "present",
+          "alias": "DEV-001"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "absent"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "absent"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "absent"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/account_label",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        },
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    },
+    {
+      "source_locator": "originals/diagnostics.jsonl:2",
+      "packet_occurrence": 2,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "present"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "present",
+          "alias": "OP-001"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "present",
+          "alias": "DEV-001"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "present"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "absent"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "present"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/context",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        },
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    },
+    {
+      "source_locator": "originals/diagnostics.jsonl:3",
+      "packet_occurrence": 3,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "present"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "present",
+          "alias": "OP-001"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "present",
+          "alias": "DEV-001"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "present"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "present"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "present"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        },
+        {
+          "pointer": "/request_context",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    },
+    {
+      "source_locator": "originals/diagnostics.jsonl:4",
+      "packet_occurrence": 4,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "present"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "present",
+          "alias": "OP-001"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "present",
+          "alias": "DEV-001"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "present"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "absent"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "absent"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    },
+    {
+      "source_locator": "originals/diagnostics.jsonl:5",
+      "packet_occurrence": 5,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "present"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "absent"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "present",
+          "alias": "DEV-001"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "absent"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "absent"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "absent"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/context",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        },
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    },
+    {
+      "source_locator": "originals/diagnostics.jsonl:6",
+      "packet_occurrence": 6,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "explicit_null"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "present",
+          "alias": "OP-002"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "explicit_null"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "absent"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "explicit_null"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "absent"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/diagnostic_payload",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        },
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    },
+    {
+      "source_locator": "originals/diagnostics.jsonl:7",
+      "packet_occurrence": 7,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "absent"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "present",
+          "alias": "OP-001"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "present",
+          "alias": "DEV-001"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "present"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "absent"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "present"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    },
+    {
+      "source_locator": "originals/diagnostics.jsonl:8",
+      "packet_occurrence": 8,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "present"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "present",
+          "alias": "OP-001"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "absent"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "present"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "absent"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "absent"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    },
+    {
+      "source_locator": "originals/diagnostics.jsonl:9",
+      "packet_occurrence": 9,
+      "fields": {
+        "event_at": {
+          "action": "utc_window",
+          "output": "event_at",
+          "state": "present"
+        },
+        "severity": {
+          "action": "enum",
+          "output": "severity",
+          "state": "present"
+        },
+        "component": {
+          "action": "enum",
+          "output": "component",
+          "state": "present"
+        },
+        "event": {
+          "action": "enum",
+          "output": "event",
+          "state": "present"
+        },
+        "code": {
+          "action": "enum",
+          "output": "code",
+          "state": "present"
+        },
+        "operation_id": {
+          "action": "local_alias",
+          "output": "operation_id",
+          "state": "present",
+          "alias": "OP-001"
+        },
+        "device_id": {
+          "action": "local_alias",
+          "output": "device_id",
+          "state": "present",
+          "alias": "DEV-001"
+        },
+        "attempt": {
+          "action": "integer",
+          "output": "attempt",
+          "state": "present"
+        },
+        "elapsed_ms": {
+          "action": "integer",
+          "output": "elapsed_ms",
+          "state": "explicit_null"
+        },
+        "bytes_sent": {
+          "action": "integer",
+          "output": "bytes_sent",
+          "state": "present"
+        }
+      },
+      "omitted_subtrees": [
+        {
+          "pointer": "/diagnostic_payload",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        },
+        {
+          "pointer": "/message",
+          "action": "omit_complete_subtree",
+          "reason": "unlisted content, no value approval"
+        }
+      ]
+    }
+  ],
+  "scope": "selected local UTF-8 text bytes and packet membership",
+  "uninspected": [
+    "filesystem attributes",
+    "transport metadata",
+    "remote access or history",
+    "logs outside the supplied excerpt"
+  ],
+  "holds": [
+    "No sending or upload authorized",
+    "Real delivery needs destination and metadata checks"
+  ],
+  "release": "prepared_only",
+  "shared": false
+}
