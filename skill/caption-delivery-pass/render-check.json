@@ -1,0 +1,40 @@
+{
+  "ffmpeg_version": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "input_sha256": {
+    "captions.srt": "582b5ebeb12024cd123d413b3ce91b43c47678cd062ba2ca8edea5eef6604ce6",
+    "captions.vtt": "94bbd2b0b5e28c9197972c21e206e45b447729a00d622d5228eb9614fa84c4d1"
+  },
+  "output_sha256": {
+    "caption-render.mp4": "7366cfc7f8712681287fbe7da46a94a5068893d2f3a28e3734cce5ec8c8ce99d",
+    "render-preview.png": "11af48acef3140cf5b4a0ca020e2357db0f57dcef8b30dcf74bd538470960c99"
+  },
+  "decoded_frames_each": 360,
+  "all_decoded_frames_equal": true,
+  "contact_sheet_seconds": [
+    0.0,
+    3.0,
+    7.0,
+    12.0,
+    16.0,
+    21.0,
+    26.0,
+    31.0
+  ],
+  "stream_inspection": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 960,
+        "height": 540,
+        "nb_frames": "360"
+      }
+    ],
+    "format": {
+      "duration": "36.000000"
+    }
+  },
+  "source_media_alignment_checked": false,
+  "audio_present": false
+}

@@ -7,7 +7,7 @@ description: "Turn authorized timed speech material into SRT and WebVTT caption 
 
 Use this workflow when someone needs caption files they can load beside a specific media version. Deliver `.srt`, `.vtt` and a concise cue-review sheet. This is a caption authoring and handoff task: retain the words in order, their display intervals and unresolved edits. It does not produce an action list or evidence brief.
 
-The [worked example](example.md) uses an original fictional transcript and produces actual [SRT](captions.srt) and [WebVTT](captions.vtt) files. No recording is included or has been reviewed.
+The [worked example](example.md) uses an original fictional transcript and produces actual [SRT](captions.srt) and [WebVTT](captions.vtt) files. A [synthetic render preview](render-preview.png) shows their display in one renderer; no source recording is included or has been reviewed.
 
 ## Start with the source and destination
 
@@ -104,3 +104,5 @@ python3 check_example.py
 ```
 
 The small check compares the supplied fictional transcript to the actual files, recomputes the source map and checks the example's own layout limits. [Verification notes](verification.md) report the observed run and its limits. This is a runnable example check, not a general subtitle validator or an audio test.
+
+For an available FFmpeg installation, the same notes also describe reproducing the [silent synthetic render](caption-render.mp4) with [render_example.py](render_example.py). It tests the delivered captions on a labeled blank background, never substitutes for checking the real media, and writes to a new output directory.

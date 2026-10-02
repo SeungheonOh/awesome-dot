@@ -42,4 +42,20 @@ ffprobe -v error -show_packets -show_entries packet=pts_time,duration_time -of j
 
 The [official ffprobe documentation](https://ffmpeg.org/ffprobe.html) describes these inspection options. This provides an additional format-parser check; it does not check visible wrapping, audio or media synchronization. A browser-rendering attempt did not start successfully, so no browser rendering result is claimed.
 
-Unrun: playback, acoustic review, synchronization, rendering in a media player, upload/import into a hosting platform, sound-event coverage, complete accessibility review and release approval. C03 remains an unresolved transcription alternative even when every mechanical check passes.
+## Synthetic render check
+
+FFmpeg 7.1.5 with its libass subtitle filter actually rendered each delivered caption format over an original 960×540 blank background at 10 frames per second. The background is visibly labeled “Synthetic background only. No source audio or video.” Both complete 36-second renders yielded the same 360 decoded frames; in this run their encoded bytes also matched. No audio stream exists. The [MP4](caption-render.mp4) is one of those identical outputs, and the [preview](render-preview.png) contains samples at 0, 3, 7, 12, 16, 21, 26 and 31 seconds.
+
+The preview was inspected for all seven cues, including the negation in C02, unresolved date in C03, Unicode names and French text. No clipping or lost characters was seen at the rendered size. The [machine-readable check](render-check.json) binds the input and output bytes and records the observed stream properties. This is a consumer rendering result, not an audio alignment test or a claim about other players.
+
+To reproduce with an existing compatible FFmpeg build and a locally available DejaVu Sans font, supply the path to its `DejaVuSans.ttf` file and a new output directory:
+
+```sh
+python3 render_example.py --font /path/to/DejaVuSans.ttf --output render-check-new
+```
+
+The [renderer](render_example.py) first runs the existing source/caption check, makes its own temporary labeled background, renders both files, compares every decoded frame and writes the MP4, preview and report. It refuses an existing output directory and leaves the source files unchanged. No software or font is downloaded. The supplied font draws the background labels and is exposed to libass through the [subtitle filter's font-directory option](https://ffmpeg.org/ffmpeg-filters.html#subtitles). Rendering behavior or bytes may differ with another FFmpeg/libass/font environment, so inspect the new preview rather than treating a matching command as proof.
+
+The portable helper was run into a second fresh directory in the recorded environment and reproduced both committed binary files byte for byte. A subsequent attempt to reuse that directory was rejected, with its existing files unchanged. Metadata inspection found only ordinary container/codec fields, no audio stream and no private source paths or account details.
+
+Unrun: source-media playback, acoustic review, source synchronization, interactive-player or hosting-platform import/rendering, sound-event coverage, complete accessibility review and release approval. C03 remains an unresolved transcription alternative even when every mechanical check passes.

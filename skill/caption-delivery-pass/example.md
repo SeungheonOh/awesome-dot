@@ -60,3 +60,9 @@ The bracketed alternatives and “I think” both remain. Neither a format check
 - Awaiting: resolution of C03 if required for release, synchronization and rendering review against the exact clip and intended player, and any review of sound events needed for the user's captioning purpose
 
 No upload, publication, contact with speakers, recording, playback or audio review was performed. The supplied constraints are an example request, not an accessibility standard.
+
+## Display check in an actual renderer
+
+The caption files were subsequently rendered by FFmpeg/libass over an original blank background. The [silent MP4](caption-render.mp4) carries a visible synthetic-background label; the [preview sheet](render-preview.png) shows the opening blank frame followed by all seven cues. SRT and WebVTT produced the same 360 decoded frames in that environment. The negation, uncertain date, speaker labels and accents are visible without clipping in the inspected preview.
+
+This demonstrates display in that renderer. It does not demonstrate synchronization with the unavailable workshop recording, sound-event coverage or behavior in the user's eventual hosting platform. [Reproduction and scope](verification.md#synthetic-render-check) identify the exact consumer and what remains untested.

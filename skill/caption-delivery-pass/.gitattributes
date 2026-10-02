@@ -1,2 +1,4 @@
 *.srt whitespace=-blank-at-eof
 *.vtt whitespace=-blank-at-eof
+*.mp4 binary
+*.png binary
