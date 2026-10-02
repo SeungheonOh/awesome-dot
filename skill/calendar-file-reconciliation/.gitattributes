@@ -1,0 +1,2 @@
+# Calendar source hashes and serialization checks include CRLF bytes.
+*.ics -text whitespace=cr-at-eol

@@ -1,0 +1,53 @@
+{
+  "contract": "offline-event-snapshot-v1",
+  "purpose": "Prepare a partial file for review before transfer to a separate empty calendar; no live import is authorized.",
+  "source_lineage": "These fictional files are two snapshots from the same local calendar. Revision ordering is comparable only within each UID and recurrence identity.",
+  "sources": {
+    "earlier.ics": "0ddc8efdc207a88e5a91d47bcc52762493effbe8e181b5aa39d52cf85e467874",
+    "revised.ics": "ece1c7cac9650061f4a0356bc942b47add461cc49f7b4740d1ac39124f9db5b8"
+  },
+  "evidence_file": "owner-notes.md",
+  "decisions": [
+    {
+      "uid": "office-hour@example.invalid",
+      "action": "include",
+      "select": [
+        "revised.ics#1",
+        "revised.ics#2"
+      ],
+      "evidence": "Owner notes A confirm the revised room, recurrence exceptions and one moved occurrence. Repeated revised.ics#3 is an identical exported component."
+    },
+    {
+      "uid": "swap-weekend@example.invalid",
+      "action": "include",
+      "select": [
+        "revised.ics#4"
+      ],
+      "evidence": "Owner notes B confirm October 24, 25 and 26, so the revised DATE end is October 27."
+    },
+    {
+      "uid": "separate-office-hour@example.invalid",
+      "action": "include",
+      "select": [
+        "earlier.ics#3"
+      ],
+      "evidence": "Owner notes C identify this separate UTC event; its matching title does not make it a duplicate."
+    },
+    {
+      "uid": "repair-appointment@example.invalid",
+      "action": "hold",
+      "reason": "The floating 09:00 has no authoritative zone. A fixed-instant transfer requires the intended local zone or confirmation that it should remain floating."
+    },
+    {
+      "uid": "design-review@example.invalid",
+      "action": "hold",
+      "reason": "Two different times have the same UID, SEQUENCE and DTSTAMP. The notes do not choose between them."
+    },
+    {
+      "uid": "repair-clinic@example.invalid",
+      "action": "hold",
+      "reason": "A later cancelled component exists. Do not restore the older active copy; decide how the intended destination handles this cancellation before any live change."
+    }
+  ],
+  "evidence_sha256": "dc720d83a8be4e863228d227fc0f8a2626c1b3cd049824d024d9972284fbd05c"
+}
