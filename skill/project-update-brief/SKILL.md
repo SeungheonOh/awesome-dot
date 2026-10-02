@@ -21,7 +21,7 @@ A bundle of files or pasted updates is enough. Use a connected source only if it
 
 ### 1. Define what the brief can know
 
-Register each source with `source_id`, workstream, author or reporting role if supplied, event time, recorded time, locator, evidence type and audience restrictions. Preserve event time separately from when an update was written: a message posted this week may describe work completed last week.
+Keep each retained claim traceable to the relevant source and its workstream, date, evidence type and audience restrictions. Preserve event time separately from when an update was written: a message posted this week may describe work completed last week. Use a compact source register when many records, versions or restricted audiences make one useful; a short update from a few clear sources does not need a separate register.
 
 Apply the reporting window to the event date and the as-of cutoff to the information available for the brief. If late-arriving evidence changes an earlier event, label it as a correction or carry-forward rather than claiming it happened in the current period. An update after the cutoff may belong in a later revision, but must not silently change this one.
 
@@ -29,7 +29,7 @@ List expected workstreams and their latest available updates. Use the supplied f
 
 ### 2. Extract atomic claims and define their proof
 
-Give each claim a stable ID. Store its workstream, observable claim, outcome stage, event date, evidence locator, support strength, relevance to a milestone and any contradiction. Break a compound claim into parts when their proof differs.
+Identify the observable claim, outcome stage, event date, supporting source and any contradiction. Break a compound claim into parts when their proof differs. Use stable claim IDs and a structured record when repeated reporting or complex evidence needs them, rather than requiring a claim ledger for every short update.
 
 Match completion language to the outcome actually supported:
 
@@ -40,7 +40,7 @@ Match completion language to the outcome actually supported:
 - “Released” needs release evidence for the stated audience or environment
 - “Improved the outcome” needs a defined measure, comparison period and observation; release alone does not demonstrate benefit
 
-Use the milestones that fit the project, rather than forcing nontechnical work into a software sequence. A statement from a workstream owner can support “the owner reports completion,” while a directly inspectable result may support a stronger statement. Keep that distinction in the appendix.
+Use the milestones that fit the project, rather than forcing nontechnical work into a software sequence. A statement from a workstream owner can support “the owner reports completion,” while a directly inspectable result may support a stronger statement. Keep that distinction in the supporting evidence and in the brief wherever it changes what the reader can conclude.
 
 ### 3. Reconcile history, blockers and contradictions
 
@@ -66,7 +66,7 @@ Distinguish a blocker, which currently prevents a next step, from a risk that ma
 
 Lead with a plain-language synthesis of the strongest supported outcome and the main constraint. Then cover meaningful completed results, in-progress work with remaining conditions, material blockers or risks, and the decisions needed. Keep activity such as meetings or investigation only when it explains a result or uncertainty.
 
-Use status colors only when the supplied criteria establish them. Do not compress conflicting or missing evidence into “on track.” Place detailed sources in an appendix with compact claim labels in the brief if helpful. Check the main brief's word count, including labels, and move supporting detail to the appendix while preserving consequential caveats.
+Use status colors only when the supplied criteria establish them. Do not compress conflicting or missing evidence into “on track.” Use direct source links or compact references when they help the reader. Keep longer evidence records separate when requested or materially useful; do not automatically add an appendix. Honor the requested length and format, including labels when they count toward the limit, while retaining consequential caveats in the brief.
 
 ### 7. Deliver within the requested scope
 
@@ -76,13 +76,11 @@ For an existing document, preserve unrelated sections and replace only the reque
 
 ## Deliverables
 
-Return three parts:
+Return the audience-ready update in the requested format and length. Include the reporting period or as-of context where needed to interpret it; a word-count label, separate title block or review package is not automatically part of the deliverable.
 
-1. The audience-ready private draft, labeled with project, reporting period, as-of time and main-text word count
-2. An evidence appendix containing claim ID, workstream, outcome stage, source and event dates, support strength, contradictions and the wording justified by the evidence
-3. A short list of missing facts or owner decisions that could materially change the brief, with the smallest useful question for each
+Keep sources recoverable through useful links, locators or working records. Include an evidence appendix when the user requests one or the complexity makes it useful for review. In that case, show the claims, workstreams, outcome stages, source/event dates, support strength, contradictions and justified wording needed to assess the brief. Stable claim IDs are helpful for ongoing or complicated reports, not mandatory decoration.
 
-The appendix is part of the review package, not an excuse for unsupported headline wording. Keep any optional audience-specific rewrite tied to the same claim records.
+Surface missing facts or owner decisions that materially affect the update, in the brief or a short separate note as appropriate. Do not add a question list when none is needed. An appendix cannot repair unsupported headline wording; any audience-specific rewrite must remain tied to the same evidence.
 
 ## Verification
 
@@ -91,7 +89,7 @@ The appendix is part of the review package, not an excuse for unsupported headli
 - Recompute metrics from their numerator and denominator; never promote a workstream measure into an overall project score
 - Verify the reporting window, cutoff, last-known dates and source locators
 - Confirm decisions contain no invented deadline, owner, promise or consequence
-- Count the main text, then reread it without the appendix to ensure it remains accurate on its own
+- Check the requested length, then reread the update without supporting records to ensure it remains accurate on its own
 
 Use [the fictional worked example](example.md) to test a resolved old blocker, a partial test result, stale coverage and an update that arrives after the cutoff.
 
