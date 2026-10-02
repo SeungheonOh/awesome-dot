@@ -1,0 +1,233 @@
+{
+  "fixture_sha256": "b8a1bf769fa0402321128cccd21692dde1bdc416af48dd9c9bca874703a51196",
+  "python_version": "3.12.14",
+  "sqlite_version": "3.53.1",
+  "files": {
+    "original-stale.sqlite": {
+      "bytes": 24576,
+      "sha256": "c329cb1c858434bd74aa18f2e272b8a4864a712561663ccce5b6729e687bc676"
+    },
+    "candidate-rebuilt.sqlite": {
+      "bytes": 24576,
+      "sha256": "e9a9ad3dd4010b01963f1f8ef11ee0796e79ce1567ee35ab538b75c6ce5dbd83"
+    }
+  },
+  "candidate_before_sha256": "c329cb1c858434bd74aa18f2e272b8a4864a712561663ccce5b6729e687bc676",
+  "checks": {
+    "original_bytes_preserved": true,
+    "candidate_readback_preserved": true,
+    "source_rows_preserved": true,
+    "schema_and_tokenizer_preserved": true
+  },
+  "observations": {
+    "before": {
+      "source_rows": [
+        {
+          "doc_id": 101,
+          "revision": 2,
+          "title": "Orchard packing note",
+          "body": "Pack cobalt crates beside the east rack."
+        },
+        {
+          "doc_id": 102,
+          "revision": 1,
+          "title": "Café meeting note",
+          "body": "Résumé discussion includes a handover checklist."
+        },
+        {
+          "doc_id": 104,
+          "revision": 1,
+          "title": "Workshop arrival note",
+          "body": "Bring the mint toolkit to the courtyard."
+        }
+      ],
+      "source_count": 3,
+      "ordinary_fts_count": 3,
+      "posting_doc_ids": [
+        101,
+        102,
+        103
+      ],
+      "source_ids_missing_from_postings": [
+        104
+      ],
+      "posting_ids_missing_from_source": [
+        103
+      ],
+      "fts_internal_check": {
+        "status": "pass"
+      },
+      "fts_source_check": {
+        "status": "error",
+        "sqlite_errorname": "SQLITE_CORRUPT_VTAB",
+        "message": "database disk image is malformed"
+      }
+    },
+    "after": {
+      "source_rows": [
+        {
+          "doc_id": 101,
+          "revision": 2,
+          "title": "Orchard packing note",
+          "body": "Pack cobalt crates beside the east rack."
+        },
+        {
+          "doc_id": 102,
+          "revision": 1,
+          "title": "Café meeting note",
+          "body": "Résumé discussion includes a handover checklist."
+        },
+        {
+          "doc_id": 104,
+          "revision": 1,
+          "title": "Workshop arrival note",
+          "body": "Bring the mint toolkit to the courtyard."
+        }
+      ],
+      "source_count": 3,
+      "ordinary_fts_count": 3,
+      "posting_doc_ids": [
+        101,
+        102,
+        104
+      ],
+      "source_ids_missing_from_postings": [],
+      "posting_ids_missing_from_source": [],
+      "fts_internal_check": {
+        "status": "pass"
+      },
+      "fts_source_check": {
+        "status": "pass"
+      }
+    }
+  },
+  "queries": [
+    {
+      "expression": "cobalt",
+      "purpose": "current term in revised document",
+      "before_ids": [],
+      "after_ids": [
+        101
+      ]
+    },
+    {
+      "expression": "amber",
+      "purpose": "retired term in revised document",
+      "before_ids": [
+        101
+      ],
+      "after_ids": []
+    },
+    {
+      "expression": "mint",
+      "purpose": "newly added document",
+      "before_ids": [],
+      "after_ids": [
+        104
+      ]
+    },
+    {
+      "expression": "saffron",
+      "purpose": "deleted document's old posting",
+      "before_ids": [
+        103
+      ],
+      "after_ids": []
+    },
+    {
+      "expression": "handover",
+      "purpose": "unchanged document control",
+      "before_ids": [
+        102
+      ],
+      "after_ids": [
+        102
+      ]
+    },
+    {
+      "expression": "café",
+      "purpose": "accent-preserving token",
+      "before_ids": [
+        102
+      ],
+      "after_ids": [
+        102
+      ]
+    },
+    {
+      "expression": "cafe",
+      "purpose": "unaccented query is different",
+      "before_ids": [],
+      "after_ids": []
+    },
+    {
+      "expression": "résumé",
+      "purpose": "accent-preserving body token",
+      "before_ids": [
+        102
+      ],
+      "after_ids": [
+        102
+      ]
+    },
+    {
+      "expression": "resume",
+      "purpose": "unaccented body query is different",
+      "before_ids": [],
+      "after_ids": []
+    },
+    {
+      "expression": "cobal*",
+      "purpose": "explicit token prefix",
+      "before_ids": [],
+      "after_ids": [
+        101
+      ]
+    },
+    {
+      "expression": "balt",
+      "purpose": "interior substring is not a token match",
+      "before_ids": [],
+      "after_ids": []
+    },
+    {
+      "expression": "title:orchard",
+      "purpose": "correct indexed column",
+      "before_ids": [
+        101
+      ],
+      "after_ids": [
+        101
+      ]
+    },
+    {
+      "expression": "body:orchard",
+      "purpose": "wrong column remains empty",
+      "before_ids": [],
+      "after_ids": []
+    }
+  ],
+  "separate_fts_content_probes": {
+    "original_preserved": true,
+    "probes": [
+      {
+        "query": "SELECT rowid, body FROM documents_fts WHERE documents_fts MATCH ? ORDER BY rowid",
+        "parameter": "amber",
+        "rows": [
+          {
+            "rowid": 101,
+            "body": "Pack cobalt crates beside the east rack."
+          }
+        ]
+      },
+      {
+        "query": "SELECT rowid, body FROM documents_fts WHERE documents_fts MATCH ? ORDER BY rowid",
+        "parameter": "saffron",
+        "error": {
+          "sqlite_errorname": "SQLITE_CORRUPT_VTAB",
+          "message": "fts5: missing row 103 from content table 'main'.'documents'"
+        }
+      }
+    ]
+  }
+}

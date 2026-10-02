@@ -1,0 +1,28 @@
+{
+  "collection": "Fictional Alder workshop notes",
+  "initial_rows": [
+    {"doc_id": 101, "revision": 1, "title": "Orchard packing note", "body": "Pack amber crates beside the north rack."},
+    {"doc_id": 102, "revision": 1, "title": "Café meeting note", "body": "Résumé discussion includes a handover checklist."},
+    {"doc_id": 103, "revision": 1, "title": "Spare labels", "body": "Use saffron labels for the retired kit."}
+  ],
+  "current_rows": [
+    {"doc_id": 101, "revision": 2, "title": "Orchard packing note", "body": "Pack cobalt crates beside the east rack."},
+    {"doc_id": 102, "revision": 1, "title": "Café meeting note", "body": "Résumé discussion includes a handover checklist."},
+    {"doc_id": 104, "revision": 1, "title": "Workshop arrival note", "body": "Bring the mint toolkit to the courtyard."}
+  ],
+  "queries": [
+    {"expression": "cobalt", "purpose": "current term in revised document"},
+    {"expression": "amber", "purpose": "retired term in revised document"},
+    {"expression": "mint", "purpose": "newly added document"},
+    {"expression": "saffron", "purpose": "deleted document's old posting"},
+    {"expression": "handover", "purpose": "unchanged document control"},
+    {"expression": "café", "purpose": "accent-preserving token"},
+    {"expression": "cafe", "purpose": "unaccented query is different"},
+    {"expression": "résumé", "purpose": "accent-preserving body token"},
+    {"expression": "resume", "purpose": "unaccented body query is different"},
+    {"expression": "cobal*", "purpose": "explicit token prefix"},
+    {"expression": "balt", "purpose": "interior substring is not a token match"},
+    {"expression": "title:orchard", "purpose": "correct indexed column"},
+    {"expression": "body:orchard", "purpose": "wrong column remains empty"}
+  ]
+}
