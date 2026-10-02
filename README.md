@@ -17,8 +17,8 @@
 These files are already in the repository. The scenarios and data are fictional; the downloadable artifacts are real.
 
 <p align="center">
-  <a href="skill/source-backed-presentation/intake-pilot-example.pptx"><img src="skill/source-backed-presentation/preview.png" width="430" alt="All five slides in the fictional intake-pilot presentation"></a>
-  <a href="skill/source-backed-form-fill/room-enquiry-draft.pdf"><img src="skill/source-backed-form-fill/preview.png" width="300" alt="Fictional room-use enquiry draft with supplied answers filled and unresolved fields left blank"></a>
+  <a href="skill/source-backed-presentation/intake-pilot-example.pptx"><img src="skill/source-backed-presentation/preview.png" width="390" alt="All five slides in the fictional intake-pilot presentation"></a>
+  <a href="skill/source-backed-form-fill/room-enquiry-draft.pdf"><img src="skill/source-backed-form-fill/preview.png" width="270" alt="Fictional room-use enquiry draft with supplied answers filled and unresolved fields left blank"></a>
 </p>
 
 - **A decision deck:** Approved notes → five editable slides, an evidence chart, source links, and speaker notes. [Get the PPTX](skill/source-backed-presentation/intake-pilot-example.pptx) · [Use the skill](skill/source-backed-presentation/SKILL.md) · [Verification](skill/source-backed-presentation/verification.md)
