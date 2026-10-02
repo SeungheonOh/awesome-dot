@@ -41,7 +41,7 @@ Preserve meaning through the transformation:
 - Keep uncertainty and conditions attached to the claims they limit. “May,” “estimated,” “subject to,” and similar wording can carry substantive meaning.
 - Retain citations and source attribution with the claims they support when moving or rewriting text. Do not expand a claim beyond its evidence or imply that an editorial pass independently verified a source.
 - Keep exact quotations exact. If a paraphrase is appropriate, distinguish it from quoted wording and preserve its attribution.
-- Resolve stylistic inconsistency consistently, but do not choose between contradictory facts just to smooth the prose. Keep the supported wording and flag the precise unresolved point outside the clean text, or use the requested comment mechanism.
+- Resolve stylistic inconsistency consistently, but do not choose between contradictory facts just to smooth the prose. Keep the supported wording and make the precise unresolved point visible. When the conflict is part of the document's meaning or requested purpose, retain it in the text; otherwise flag the editorial question separately or through the requested comment mechanism.
 
 If the requested length or format would force removal of essential meaning, make the best supported revision and explain the specific tradeoff. Do not fill missing evidence with plausible prose or conceal a substantive gap in a fluent sentence.
 
