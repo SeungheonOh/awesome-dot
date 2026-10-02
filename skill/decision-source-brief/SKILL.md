@@ -1,86 +1,66 @@
 ---
 name: decision-source-brief
-description: "Turn a bounded decision into a source-backed brief with explicit options, evidence gaps and the next question that could change the choice."
+description: Compare options against the user's criteria and deliver a reasoned decision brief or conditional recommendation from supplied or researched evidence. Use when the choice remains open, rather than when the task is to argue for an already selected proposal or summarize research without a decision.
 ---
 
 # Decision Source Brief
 
-Help someone arrive at a useful discussion or decision with the evidence already organized. The result is a short decision brief and an inspectable source appendix, rather than a general news digest. Use this when public facts affect a concrete choice. Produce the requested artifact and complete any explicitly authorized routine handoff; the research itself does not authorize commitments or unsolicited contact.
+Help the reader make a concrete choice. Lead with the supported answer, the condition that changes it, or the specific evidence gap preventing it. Use supplied documents, code, analysis, observations, or authorized research as the decision requires. A short request can need only a few paragraphs with source references; an appendix or formal decision record is useful only when the task warrants it.
+
+If the user has already chosen the course of action and wants an approval request or persuasive proposal, use that chosen direction rather than reopening the decision. If they want an evidence synthesis without choosing between options, answer that research question. Do not turn every decision into a new research project or implementation plan.
 
 ## Establish the decision
 
-Obtain the question, decision owner, audience, options already under consideration, must-have constraints, research cutoff and timezone. Ask for the decision deadline only when it changes which information is useful. Clarify whether the user wants a neutral comparison or a conditional recommendation against their stated criteria. Do not invent their priorities, risk tolerance or preferred outcome.
+Read the request and available material. Identify the decision, options, intended reader, must-have constraints, preferences, and whether the user wants a neutral comparison or a recommendation. Reuse stated priorities. Ask only when a missing constraint or preference could reverse the choice; do not require the user to invent numerical weights or fill a standard intake record.
 
-Separate sanitized decision context from search terms. Private budgets, team plans and personal circumstances can remain in the brief without appearing in external queries. Confirm any source restrictions, permitted languages and relevant jurisdiction or location. If the decision itself is unclear, ask one question that distinguishes the competing interpretations and gather only evidence useful to both in the meantime.
+Honor a supplied source boundary, cutoff, format, and length. A closed packet can be sufficient. Use external research when requested or when permitted evidence needed for the decision is missing; do not search merely to add citations. Keep private context out of public search terms. Establish a deadline, location, jurisdiction, or timezone only when it changes the comparison.
 
-Use the following input record. It can be a table or a labeled object; no special software is required:
+Distinguish the choice from actions that might follow it. Comparing services does not authorize buying one; recommending a code change does not implement it. Continue already requested work within its authority, but do not infer a commitment from the act of making a brief.
 
-```text
-decision: exact question and named options
-owner_and_audience: who uses the brief, not permission to contact them
-criteria: [{id, requirement, must_have_or_preference, user_supplied_priority}]
-scope: subject identities, place, date window, excluded topics
-cutoff: timestamp with timezone; current snapshot or historical evidence boundary
-source_constraints: approved starting sources, access and language limits
-private_context: facts allowed in the private result but excluded from queries
-output: requested length, format, neutral comparison or conditional recommendation
-```
+## Build the comparison from relevant evidence
 
-A missing preference may remain unspecified. A missing hard constraint that reverses the comparison requires clarification.
+Translate the criteria into answerable questions and inspect the sources that can answer them. Focus on decision-changing facts before background. A capacity requirement needs evidence for the exact option and configuration; a general claim about its category may not apply.
 
-## Build the brief
+Use original requirements, current specifications, inspected source behavior, supplied records, or other primary material appropriate to the question. Search snippets and remembered details are leads, not substitutes for reading a decisive source. A provider can establish its stated policy, but its own performance claim is not independent verification. Treat repeated reports of one underlying observation as one source of evidence.
 
-1. **Turn the decision into answerable questions.** Map each criterion to a factual question and the evidence that could answer it. Identify decision-critical questions separately from background. For example, a stated capacity requirement needs a current specification for the exact space; publicity about the building as a whole is inadequate. Give each question an identifier so irrelevant discoveries do not expand the task.
+Keep enough provenance for the reader to check important claims: a direct source link or file/section locator, relevant version or date, and the portion actually inspected. Use a compact source note or appendix for substantial research; do not collect irrelevant metadata or create a separate ledger for a simple answer. Mark missing or inaccessible evidence rather than filling it from assumptions.
 
-2. **Retrieve the strongest available evidence.** Open original policy documents, specifications, official notices, datasets or other primary material appropriate to the question. Retrieve them during the actual run; remembered facts and search snippets are leads, not inspected evidence. Then consult independent reporting where it adds observation, context or a genuine challenge. A first-party source can establish its issuer's stated rule but does not independently verify its performance claims. Respect restricted access and label a partial excerpt as partial.
+Preserve the evidence's meaning:
 
-3. **Record dates and provenance as you read.** For each source retain title, issuer, direct URL or authorized file locator, document version, publication time, update time, event/effective date, retrieval time and accessible coverage. Use “not stated” for missing dates. A page update date is not necessarily the date every sentence changed. Trace repeated claims to their underlying source so ten articles repeating one notice do not become ten independent confirmations.
+- Separate observed facts, calculations, source claims, estimates, proposed choices, and your inference about their effect on the decision
+- Keep units, populations, configuration, geography and dates aligned. A result for a small sample or one local environment does not establish general performance
+- For a current decision, check whether decisive evidence is still applicable. For a historical cutoff, distinguish what was knowable then from later evidence about the same event. Do not present a mutable current page as its historical version without a dated copy
+- Compare conflicting sources at the relevant version and scope before declaring a disagreement. When comparable evidence still conflicts, retain the uncertainty; do not automatically choose the newest or most confident account
 
-4. **Apply the cutoff consistently.** For a current brief, disclose the latest retrieval time and any source older than the relevant change. For a historical brief, distinguish “what was knowable by the cutoff” from “what later evidence says about an earlier event.” Exclude later-published evidence from the former, or place it in a clearly separate hindsight note only if requested. Do not claim a mutable page represents its historical version without a dated snapshot or supplied copy.
+Compare each option against the criteria as supported, contradicted, conditional, or unresolved. An option that fails a real must-have cannot be rescued by an invented score. Unknown is not the same as failure unless the criterion requires positive verification before proceeding. A proposed or unimplemented feature does not meet a requirement for behavior available now.
 
-5. **Compare each option against each criterion.** Mark a criterion supported, contradicted, conditional or unresolved, citing the exact passage, section or table. Separate a fact from your synthesis about its effect on the choice. Unknown is not a failure unless the user's criterion explicitly requires positive verification. An option that fails a documented must-have cannot be rescued by an invented weighting score. If all options lack decisive evidence, the useful result is a precise next question rather than a forced winner.
+## Make the reasoning useful
 
-6. **Resolve consequential disagreements.** Check entity identity, geography, measurement units, document version and event date before treating sources as contradictory. Prefer evidence with direct relevance and adequate methodology, not automatically whichever source is newest or most confident. A newer summary may still repeat an older rule. When comparable primary records genuinely conflict, show both and explain which criterion remains unsettled; do not infer motives or manufacture balance between unequal evidence.
+For a recommendation, explain why the preferred option fits the stated priorities and the strongest reason to choose an alternative. For a neutral comparison, show the consequential tradeoff without choosing priorities for the user. Do not manufacture a winner when all options miss a must-have or decisive evidence is unavailable.
 
-7. **Write for the actual decision.** Lead with the supported answer or the blocker. Include only background needed to understand the comparison, developments that change an option, and neutral questions for discussion. If requested, make a recommendation conditional on the user's stated criteria and spell out what new fact would change it. Do not transform an operational brief into individualized medical, legal or investment advice.
+Use calculations or a comparison table when they make the choice clearer. Recalculate totals from the inspected inputs and label assumptions. A weighted score is appropriate only when the criteria, scores and weights have a defensible meaning for this decision; precision must not conceal judgment or missing evidence.
 
-## Return these records
+Check the uncertainty that could change the answer. This might mean testing a plausible assumption, comparing a different supported interpretation, or examining the weak claim on which the recommendation depends. Keep this proportional: do not run a fixed sensitivity ritual when the constraints settle the choice. Say what new fact or changed requirement would reverse the recommendation and what evidence would establish it.
 
-The brief should be readable without opening the appendix. The appendix should let another reader audit it.
+When the full decision remains unresolved, give the useful bounded conclusion and the smallest next question or check. For example, an option may fit the supplied functional requirements while its untested import behavior remains a launch condition. Do not convert that conditional fit into a completed implementation, approval, or performance result.
 
-```text
-brief:
-  decision, cutoff, scope
-  answer_or_blocker
-  option_comparison: [{option, criterion_id, finding, evidence_ids, condition}]
-  decision_changing_unknowns: [{question, affected_options, evidence_needed}]
-  next_step: a question or user decision, not an action already taken
-sources:
-  [{id, title, issuer, direct_locator, version, publication_time, update_time,
-    event_or_effective_time, retrieval_time, access_coverage, source_type,
-    originating_evidence_id}]
-evidence:
-  [{id, question_id, claim, source_id, exact_locator, attribution,
-    support_status, limitation, assistant_inference_if_any}]
-checks:
-  [{check, result, evidence_or_unrun_reason}]
-```
+## Write and verify the brief
 
-Do not invent a confidence percentage. Explain evidence strength in terms of directness, current applicability, independence, completeness and unresolved conflict.
+Deliver the requested artifact at the requested level of detail. A compact brief usually needs the answer, the few decisive comparisons, material uncertainty, and the next decision or check. Put qualifications beside the claim they change. The main answer should remain understandable without opening supporting notes.
 
-Create the requested brief in the format and destination the user authorized. If they explicitly requested a routine delivery to a named audience, complete it using available access without asking again merely because it is a delivery. Check the saved artifact, citations and intended permissions, and verify the delivered reference or message before reporting success. A failed save or send is a specific blocker; retain the completed private artifact and report the smallest recovery step. New audiences, sensitive disclosures and consequential commitments still require the applicable authorization.
+For a substantial or consequential comparison, include enough supporting sources and assumptions for another reader to audit the reasoning. Use a source appendix when it helps; it is not a universal output requirement. Avoid repeating the same background in the brief, table, and appendix.
 
-## Check before handing it over
+Before handing over the result:
 
-- Open or revisit every decision-critical citation and verify that its passage supports the wording, not just the topic
-- Confirm entity, location, event/effective date and research cutoff are distinct and correct
-- Inspect one potentially stale source and one apparently conflicting account; record “none found in the bounded source set” when appropriate rather than inventing a conflict
-- Check that an unanswered question stays open and a repeated assertion is not counted as independent evidence
-- Re-evaluate the answer after temporarily removing the weakest decisive source; disclose if the conclusion depends entirely on it
-- Verify that every recommended next step belongs to the stated decision and no unauthorized or unverified communication or commitment is reported as completed
+- Check that decisive citations support the exact wording and refer to the right option, version, population and date
+- Check the derived values and whether the recommendation actually follows the user's criteria
+- Confirm that uncertainty remains visible and repeated claims have not become independent confirmations
+- Read back the saved result, verify its links where possible, and distinguish inspected sources or executed checks from proposed future work
 
-Stop researching when all decision-critical questions have usable evidence or specific documented gaps, the conflicts have been investigated within scope, and more background would not change the comparison. Do not promise exhaustive research. Ask before widening the decision or taking an action without the needed authority, such as paying for access, unsolicited source contact, new sharing or future monitoring. Honor an already explicit, permitted request to save or deliver the result rather than seeking duplicate approval. If access blocks a decisive source, return the useful partial brief and the smallest missing input.
+Stop gathering evidence when the decision-critical questions have usable answers or specific gaps and more background would not change the choice. Do not promise exhaustive research or a numerical confidence level without a basis.
+
+Save or deliver the brief to the destination already authorized. Complete an explicitly requested routine handoff when supported, verifying the saved or delivered result; do not add a new approval round for the same action. New audiences, sensitive disclosure, commitments, payments, or future monitoring require their own applicable authority. A failed save or send leaves a concrete delivery blocker, not an unfinished analysis or permission to try a different recipient.
 
 ## Worked example
 
-[The fictional venue decision](examples/fictional-venue-decision.md) supplies mock excerpts and an expected analysis. It demonstrates a decision blocked by one unverified must-have, a misleading headline and a post-cutoff update. It is an authored exercise, not evidence of a real investigation or a completed external action.
+[The fictional venue decision](examples/fictional-venue-decision.md) illustrates a choice blocked by an unverified must-have, a misleading headline, and a post-cutoff update. Its mock excerpts are an authored exercise, not evidence of a real investigation or external action. Use the reasoning where relevant; its detailed records are not a required template for every decision.
