@@ -1,0 +1,10 @@
+{
+  "purpose": "Reconstruct the exact initial harness from the corrected harness without duplicating the implementation.",
+  "corrected_source": "example/verify.py",
+  "initial_source_sha256": "d2439f913acb5c7430e232abe94a035d0612935b27bc37a6372f41cf0ce70ed0",
+  "corrected_source_sha256": "95fe27ab553c9933f5f93271aa425e5caae5e228d024ee8fd1752077442f85c8",
+  "reconstruction": "Replace the single corrected_fragment occurrence with original_fragment in corrected_source; hash the resulting UTF-8 bytes. Do not execute the reconstruction to check existing samples.",
+  "original_fragment": "\"orders\": list(itertools.permutations(VARIANTS))",
+  "corrected_fragment": "\"orders\": [list(order) for order in itertools.permutations(VARIANTS)]",
+  "retry_reason": "Measurements and in-memory readback finished, but the final saved == result check failed because JSON arrays round-tripped as lists while design.orders contained tuples. Corrected only representation of design.orders before retrying."
+}

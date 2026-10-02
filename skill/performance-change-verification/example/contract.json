@@ -1,0 +1,47 @@
+{
+  "version": "observation-summary-v1",
+  "input_domain": "A list of records with string id and optional value that is an integer (not boolean) or null; a list of string request IDs. Inputs are validated before the measured boundary.",
+  "output_contract": [
+    "Return one object per request occurrence in exactly request order, including repeated requests.",
+    "Preserve IDs exactly: strings 07 and 7 differ; case and empty strings are significant.",
+    "matches counts all record occurrences for that ID, including duplicate identical records and records with missing or null value.",
+    "known counts values that are integers, including zero and negative integers. Missing and null both mean unknown, never zero.",
+    "total sums known values exactly as integers; it is null when known is zero, including absent IDs. A known sum of zero is integer zero.",
+    "Return exactly id, matches, known, total per object. Do not mutate either input. Dictionary key order is not a semantic requirement; array order is.",
+    "No claim is made for malformed inputs, floats, streaming, concurrent callers, persistence, or a remote service."
+  ],
+  "cases": [
+    {
+      "name": "duplicates-zero-unknown-id-order",
+      "records": [
+        {"id": "07", "value": 0},
+        {"id": "7", "value": 4},
+        {"id": "07", "value": 3},
+        {"id": "07", "value": 3},
+        {"id": "unknown", "value": null},
+        {"id": "unknown"},
+        {"id": "cancel", "value": -2},
+        {"id": "cancel", "value": 2},
+        {"id": "zero", "value": 0},
+        {"id": "A", "value": 6},
+        {"id": "a", "value": 9},
+        {"id": "", "value": -1}
+      ],
+      "requests": ["unknown", "07", "missing", "zero", "7", "07", "cancel", "a", "A", ""],
+      "expected": [
+        {"id": "unknown", "matches": 2, "known": 0, "total": null},
+        {"id": "07", "matches": 3, "known": 3, "total": 6},
+        {"id": "missing", "matches": 0, "known": 0, "total": null},
+        {"id": "zero", "matches": 1, "known": 1, "total": 0},
+        {"id": "7", "matches": 1, "known": 1, "total": 4},
+        {"id": "07", "matches": 3, "known": 3, "total": 6},
+        {"id": "cancel", "matches": 2, "known": 2, "total": 0},
+        {"id": "a", "matches": 1, "known": 1, "total": 9},
+        {"id": "A", "matches": 1, "known": 1, "total": 6},
+        {"id": "", "matches": 1, "known": 1, "total": -1}
+      ]
+    },
+    {"name": "empty-requests", "records": [{"id": "unused", "value": 1}], "requests": [], "expected": []},
+    {"name": "empty-records", "records": [], "requests": ["7", "7"], "expected": [{"id": "7", "matches": 0, "known": 0, "total": null}, {"id": "7", "matches": 0, "known": 0, "total": null}]}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "current_readback": {
+    "source_files_checked": 4,
+    "samples_checked": 144,
+    "summaries_recomputed": 4,
+    "correctness_reexecuted": true
+  },
+  "readback_guard_rejections": [
+    "changed_source",
+    "missing_sample",
+    "changed_summary",
+    "changed_output"
+  ],
+  "initial_attempt_checks": {
+    "harness_reconstructed_and_sha256_matched": true,
+    "source_input_contract_files_checked": 4,
+    "raw_sample_summaries_recomputed": 4,
+    "sample_identities_orders_loop_counts_output_hashes_and_dispositions_checked": 144,
+    "positive_elapsed_values_checked": 144,
+    "initial_final_saved_object_comparison": "failed because tuples round-tripped as lists; exact raw measurements retained"
+  },
+  "measured_attempts": 2,
+  "raw_samples_retained": 288,
+  "additional_benchmarks_during_readback": 0,
+  "timing_acceptance_threshold": null,
+  "source_files_reviewed": [
+    "example/summary.py",
+    "example/verify.py",
+    "example/contract.json",
+    "example/workloads.json"
+  ],
+  "scope_limit": "Offline fictional inputs; correctness and descriptive timing only; shared host; no production or productivity claims"
+}
