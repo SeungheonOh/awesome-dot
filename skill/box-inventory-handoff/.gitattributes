@@ -1,0 +1,2 @@
+# Preserve exact native PDF bytes across checkouts and diffs.
+*.pdf binary

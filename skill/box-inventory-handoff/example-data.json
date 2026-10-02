@@ -1,0 +1,35 @@
+{
+  "revision": 2,
+  "imports": ["S01", "S02", "S03", "S04", "S05", "S06", "S07", "S01", "S08", "S09"],
+  "sources": {
+    "S01": "applied baseline; unchanged repeated import",
+    "S02": "supporting duplicate for I01",
+    "S03": "applied reservations",
+    "S04": "applied plan and rooms",
+    "S05": "claim 1 superseded; claims 2 and 3 applied",
+    "S06": "supporting duplicate for I03 after S08:2",
+    "S07": "unresolved",
+    "S08": "applied correction and identity resolution",
+    "S09": "reported closure and no contents changed"
+  },
+  "boxes": {"B01": "Kitchen", "B02": "Kitchen", "B03": "Bathroom", "B04": "Study"},
+  "items": [
+    {"id": "I01", "label": "Plain white mug pool", "unit": "piece", "scope": 6, "reserve": 2, "source": "S01:1", "plan": {"B01": 2, "B02": 2}, "outside": 2, "outside_source": "S05:3", "verified": null},
+    {"id": "I02", "label": "Bath towel pool", "unit": "piece", "scope": 5, "reserve": 1, "source": "S01:2", "plan": {"B03": 4}, "outside": 2, "outside_source": "S05:3", "verified": null},
+    {"id": "I03", "label": "Blue-tape desk lamp", "unit": "piece", "scope": 1, "reserve": 0, "source": "S01:3", "plan": {"B04": 1}, "outside": 0, "outside_source": "S01:3 + S05:2 (remainder, not a separate observation)", "verified": null},
+    {"id": "I04", "label": "Red-tie extension lead", "unit": "piece", "scope": 1, "reserve": 1, "source": "S01:4", "plan": {}, "outside": 1, "outside_source": "S05:3", "verified": null},
+    {"id": "I05", "label": "Closed utensil pouch", "unit": "pouch", "scope": 1, "reserve": 0, "source": "S01:5", "plan": {"B02": 1}, "outside": 0, "outside_source": "S01:5 + S05:2 (remainder, not a separate observation)", "verified": null, "contents": "unlisted"}
+  ],
+  "reported_observations": [
+    {"id": "R01", "source": "S05:1", "item": "I01", "locations": {"B01": 4}, "superseded_by": "R05"},
+    {"id": "R02", "source": "S05:2", "item": "I02", "locations": {"B03": 3}},
+    {"id": "R03", "source": "S05:2", "item": "I03", "locations": {"B04": 1}},
+    {"id": "R04", "source": "S05:2", "item": "I05", "locations": {"B02": 1}},
+    {"id": "R05", "source": "S08:1", "item": "I01", "locations": {"B01": 2, "B02": 2}, "corrects": "R01"}
+  ],
+  "report_imports": ["R01", "R02", "R03", "R04", "R05", "R05"],
+  "identity_resolutions": [{"source": "S08:2", "claim": "S06:1", "item": "I03", "effect": "same physical item; no quantity added"}],
+  "unresolved": [{"source": "S07:1", "claim": "box of cables?", "item": null, "quantity": null, "box": null}],
+  "expected_current": {"I01": {"B01": 2, "B02": 2}, "I02": {"B03": 3}, "I03": {"B04": 1}, "I04": {}, "I05": {"B02": 1}},
+  "expected_plan_gap": {"I01": 0, "I02": 1, "I03": 0, "I04": 0, "I05": 0}
+}
