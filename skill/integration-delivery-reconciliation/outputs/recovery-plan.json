@@ -1,0 +1,96 @@
+{
+  "fictional": true,
+  "packet_id": "larkspur-lantern-2026-05-12-r1",
+  "as_of": "2026-05-12T10:00:00Z",
+  "status": "conditional_plan_only_not_executable",
+  "live_changes_performed": 0,
+  "destination": {
+    "source_account": "larkspur-demo",
+    "target_project": "lantern-demo",
+    "integration_id": "link-17"
+  },
+  "candidate_allowlist": [
+    "ev-002"
+  ],
+  "maximum_recovery_events": 1,
+  "candidates": [
+    {
+      "event_id": "ev-002",
+      "entity_id": "CR-102",
+      "source_event_sha256": "df4d1cd39cc67e1a1b1cad484fa5e8c8cd9fe78f730f8e743f29a52201489710",
+      "receipt_id": "ib-002",
+      "prior_run_ids": [
+        "run-002"
+      ],
+      "operation": "create",
+      "proposed_route": "retry_dead_letter_v2",
+      "expected_source": {
+        "version": 1,
+        "event_id": "ev-002",
+        "deleted": false
+      },
+      "expected_target": {
+        "matching_records": 0,
+        "tombstones": 0
+      },
+      "intended_values": {
+        "external_source_id": "CR-102",
+        "title": "Asset handoff",
+        "status": "Open"
+      },
+      "still_required": [
+        "Implement and verify transformation and guarded recovery route in the actual authorized environment",
+        "Obtain authority for this one-event live recovery and its effects",
+        "Refresh source, job ownership, effects, target absence and tombstone state",
+        "Enforce preconditions atomically when writing; retain one recovery operation identity",
+        "Read terminal receipt, exact target identity count and effect journal before declaring recovery"
+      ]
+    }
+  ],
+  "excluded_events": [
+    {
+      "event_id": "ev-001",
+      "disposition": "no_replay",
+      "reason": "One committed effect with corroborating target/deletion readback"
+    },
+    {
+      "event_id": "ev-003",
+      "disposition": "hold_newer_target",
+      "reason": "Expected target revision is stale or a human edit must be preserved"
+    },
+    {
+      "event_id": "ev-004",
+      "disposition": "hold_tombstone",
+      "reason": "A deletion marker protects this entity from stale recreation"
+    },
+    {
+      "event_id": "ev-005",
+      "disposition": "no_replay",
+      "reason": "One committed effect with corroborating target/deletion readback"
+    },
+    {
+      "event_id": "ev-006",
+      "disposition": "hold_unknown",
+      "reason": "Missing, conflicting or incomplete lineage/effect evidence; matching values do not prove origin"
+    },
+    {
+      "event_id": "ev-007",
+      "disposition": "hold_duplicate_cleanup",
+      "reason": "Two committed creates and two targets; preserve independent comments and decide cleanup separately"
+    },
+    {
+      "event_id": "ev-008",
+      "disposition": "hold_first_delivery",
+      "reason": "Initial delivery is a distinct operation requiring its own validated scope"
+    }
+  ],
+  "stop_conditions": [
+    "Any prerequisite or immutable event changes",
+    "Any active retry or ambiguous effect appears",
+    "Unexpected target, tombstone or target revision",
+    "Scope or side effects expand",
+    "The real route lacks a necessary atomic guard",
+    "Terminal result or target readback is unknown"
+  ],
+  "input_sha256": "f41d6a832425d47a5c5266b193876372e8b7f628f73882815de4df72d9194ffb"
+}

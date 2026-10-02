@@ -1,0 +1,104 @@
+{
+  "fictional": true,
+  "packet_id": "larkspur-lantern-2026-05-12-r1",
+  "scope": {"source_account": "larkspur-demo", "target_project": "lantern-demo", "integration_id": "link-17", "event_window_start": "2026-05-12T09:00:00Z", "event_window_end_exclusive": "2026-05-12T09:10:00Z", "as_of": "2026-05-12T10:00:00Z", "source_events_complete": true},
+  "contract": {
+    "row_id": "C01", "revision": "fictional-link-contract-1",
+    "identity": "Source event IDs are unique within this account and integration. Object versions increase per entity; target revisions are a separate namespace.",
+    "accepted_202": "A response 202 with inbox ID means a durable inbox receipt exists, not that transformation or target application completed.",
+    "ingress_retry": "Ingress deduplicates by integration ID and event ID. Redelivery of a retained accepted event returns the existing receipt and does not restart a dead-letter job.",
+    "ingress_retention_until": "2026-05-19T09:00:00Z",
+    "intended_effect": "Each source event intends exactly one corresponding target create, update or delete. Repeated attempts or runs must not create an additional target effect for the same event.",
+    "legacy_worker": "worker-1 has no general effect-idempotency guarantee. Its transform-error path terminates before target mutation or notifications. An applied run alone is insufficient without the commit journal.",
+    "transform_v1": {"todo": "Open", "done": "Done"},
+    "proposed_transform_v2": {"todo": "Open", "queued": "Open", "done": "Done"},
+    "source_queued_meaning": "queued is an open task awaiting assignment; mapping to Open is the supplied domain requirement",
+    "target_identity": "Target IDs are unique. External source entity IDs are searchable but not constrained unique; exact lookup includes archived records and deletion markers.",
+    "side_effects": "For this isolated demo integration notifications and downstream webhooks are disabled. Effect journal covers target creates, updates and deletions. No claim applies to a real service.",
+    "guarded_recovery_route": "retry_dead_letter_v2 is a fictional proposed repair route, not an existing deployed capability. It must validate source version/payload, acquire exclusive job recovery ownership, and atomically check target revision/absence plus tombstones when committing the target effect and journal. Until implementation and verification establish these conditions, the candidate is not executable.",
+    "authorization": "Offline diagnosis and recovery-plan construction only. No deployed patch, replay, first delivery, cleanup or external message is authorized by this packet."
+  },
+  "coverage": {
+    "row_id": "CV01", "revision": "evidence-export-4",
+    "source_dispatch_complete": true,
+    "delivery_receipt_gap_events": ["ev-006"],
+    "worker_complete_events": ["ev-001", "ev-002", "ev-003", "ev-004", "ev-005", "ev-007", "ev-008"],
+    "effect_complete_events": ["ev-001", "ev-002", "ev-003", "ev-004", "ev-005", "ev-007", "ev-008"],
+    "target_lookup_complete_entities": ["CR-101", "CR-102", "CR-103", "CR-104", "CR-106", "CR-107", "CR-108"],
+    "source_current_complete_entities": ["CR-101", "CR-102", "CR-103", "CR-104", "CR-106", "CR-107", "CR-108"],
+    "gap": "Receiver, worker and effect-journal segment for ev-006 is unavailable after export failure. This packet cannot establish its processing history. Target exact lookups are independently complete at the as-of point."
+  },
+  "events": [
+    {"row_id": "S01", "event_id": "ev-001", "entity_id": "CR-101", "version": 1, "type": "create", "at": "2026-05-12T09:00:01Z", "payload": {"title": "Sketch review", "status": "todo"}},
+    {"row_id": "S02", "event_id": "ev-002", "entity_id": "CR-102", "version": 1, "type": "create", "at": "2026-05-12T09:01:01Z", "payload": {"title": "Asset handoff", "status": "queued"}},
+    {"row_id": "S03", "event_id": "ev-003", "entity_id": "CR-103", "version": 3, "type": "update", "expected_target_revision": 8, "at": "2026-05-12T09:02:01Z", "payload": {"title": "Review interactions", "status": "queued"}},
+    {"row_id": "S04", "event_id": "ev-004", "entity_id": "CR-104", "version": 4, "type": "update", "expected_target_revision": 6, "at": "2026-05-12T09:03:01Z", "payload": {"title": "Retired mockup", "status": "queued"}},
+    {"row_id": "S05", "event_id": "ev-005", "entity_id": "CR-104", "version": 5, "type": "delete", "at": "2026-05-12T09:04:01Z", "payload": {}},
+    {"row_id": "S06", "event_id": "ev-006", "entity_id": "CR-106", "version": 1, "type": "create", "at": "2026-05-12T09:05:01Z", "payload": {"title": "Copy review", "status": "todo"}},
+    {"row_id": "S07", "event_id": "ev-007", "entity_id": "CR-107", "version": 1, "type": "create", "at": "2026-05-12T09:06:01Z", "payload": {"title": "Component inventory", "status": "todo"}},
+    {"row_id": "S08", "event_id": "ev-008", "entity_id": "CR-108", "version": 1, "type": "create", "at": "2026-05-12T09:07:01Z", "payload": {"title": "Navigation notes", "status": "todo"}}
+  ],
+  "source_current": [
+    {"row_id": "SC01", "entity_id": "CR-101", "version": 1, "deleted": false, "event_id": "ev-001"},
+    {"row_id": "SC02", "entity_id": "CR-102", "version": 1, "deleted": false, "event_id": "ev-002"},
+    {"row_id": "SC03", "entity_id": "CR-103", "version": 3, "deleted": false, "event_id": "ev-003"},
+    {"row_id": "SC04", "entity_id": "CR-104", "version": 5, "deleted": true, "event_id": "ev-005"},
+    {"row_id": "SC06", "entity_id": "CR-106", "version": 1, "deleted": false, "event_id": "ev-006"},
+    {"row_id": "SC07", "entity_id": "CR-107", "version": 1, "deleted": false, "event_id": "ev-007"},
+    {"row_id": "SC08", "entity_id": "CR-108", "version": 1, "deleted": false, "event_id": "ev-008"}
+  ],
+  "dispatch": [
+    {"row_id": "DS01", "event_id": "ev-001", "state": "sent", "delivery_ids": ["d-001a", "d-001b"]},
+    {"row_id": "DS02", "event_id": "ev-002", "state": "sent", "delivery_ids": ["d-002"]},
+    {"row_id": "DS03", "event_id": "ev-003", "state": "sent", "delivery_ids": ["d-003"]},
+    {"row_id": "DS04", "event_id": "ev-004", "state": "sent", "delivery_ids": ["d-004"]},
+    {"row_id": "DS05", "event_id": "ev-005", "state": "sent", "delivery_ids": ["d-005"]},
+    {"row_id": "DS06", "event_id": "ev-006", "state": "sent", "delivery_ids": ["d-006"]},
+    {"row_id": "DS07", "event_id": "ev-007", "state": "sent", "delivery_ids": ["d-007"]},
+    {"row_id": "DS08", "event_id": "ev-008", "state": "unsent", "delivery_ids": [], "reason": "integration temporarily paused before this event was scheduled"}
+  ],
+  "deliveries": [
+    {"row_id": "D01", "attempt_id": "d-001a", "event_id": "ev-001", "response": 202, "receipt_id": "ib-001", "at": "2026-05-12T09:00:02Z"},
+    {"row_id": "D02", "attempt_id": "d-001b", "event_id": "ev-001", "response": 202, "receipt_id": "ib-001", "at": "2026-05-12T09:00:04Z"},
+    {"row_id": "D03", "attempt_id": "d-002", "event_id": "ev-002", "response": 202, "receipt_id": "ib-002", "at": "2026-05-12T09:01:02Z"},
+    {"row_id": "D04", "attempt_id": "d-003", "event_id": "ev-003", "response": 202, "receipt_id": "ib-003", "at": "2026-05-12T09:02:02Z"},
+    {"row_id": "D05", "attempt_id": "d-004", "event_id": "ev-004", "response": 202, "receipt_id": "ib-004", "at": "2026-05-12T09:03:02Z"},
+    {"row_id": "D06", "attempt_id": "d-005", "event_id": "ev-005", "response": 202, "receipt_id": "ib-005", "at": "2026-05-12T09:04:02Z"},
+    {"row_id": "D07", "attempt_id": "d-006", "event_id": "ev-006", "response": "timeout", "receipt_id": null, "at": "2026-05-12T09:05:02Z"},
+    {"row_id": "D08", "attempt_id": "d-007", "event_id": "ev-007", "response": 202, "receipt_id": "ib-007", "at": "2026-05-12T09:06:02Z"}
+  ],
+  "receipts": [
+    {"row_id": "I01", "receipt_id": "ib-001", "event_id": "ev-001", "state": "durable"},
+    {"row_id": "I02", "receipt_id": "ib-002", "event_id": "ev-002", "state": "durable"},
+    {"row_id": "I03", "receipt_id": "ib-003", "event_id": "ev-003", "state": "durable"},
+    {"row_id": "I04", "receipt_id": "ib-004", "event_id": "ev-004", "state": "durable"},
+    {"row_id": "I05", "receipt_id": "ib-005", "event_id": "ev-005", "state": "durable"},
+    {"row_id": "I07", "receipt_id": "ib-007", "event_id": "ev-007", "state": "durable"}
+  ],
+  "runs": [
+    {"row_id": "W01", "run_id": "run-001a", "event_id": "ev-001", "receipt_id": "ib-001", "handler": "worker-1", "status": "applied", "retry_state": "none", "phase": "commit"},
+    {"row_id": "W02", "run_id": "run-001b", "event_id": "ev-001", "receipt_id": "ib-001", "handler": "worker-1", "status": "duplicate_suppressed", "retry_state": "none", "phase": "lookup"},
+    {"row_id": "W03", "run_id": "run-002", "event_id": "ev-002", "receipt_id": "ib-002", "handler": "worker-1", "status": "dead_letter", "retry_state": "none", "phase": "transform", "error": "unmapped source status: queued"},
+    {"row_id": "W04", "run_id": "run-003", "event_id": "ev-003", "receipt_id": "ib-003", "handler": "worker-1", "status": "dead_letter", "retry_state": "none", "phase": "transform", "error": "unmapped source status: queued"},
+    {"row_id": "W05", "run_id": "run-004", "event_id": "ev-004", "receipt_id": "ib-004", "handler": "worker-1", "status": "dead_letter", "retry_state": "none", "phase": "transform", "error": "unmapped source status: queued"},
+    {"row_id": "W06", "run_id": "run-005", "event_id": "ev-005", "receipt_id": "ib-005", "handler": "worker-1", "status": "applied", "retry_state": "none", "phase": "commit"},
+    {"row_id": "W07", "run_id": "run-007a", "event_id": "ev-007", "receipt_id": "ib-007", "handler": "worker-1", "status": "applied", "retry_state": "none", "phase": "commit"},
+    {"row_id": "W08", "run_id": "run-007b", "event_id": "ev-007", "receipt_id": "ib-007", "handler": "worker-1", "status": "applied", "retry_state": "none", "phase": "commit"}
+  ],
+  "effects": [
+    {"row_id": "E01", "effect_id": "tx-001", "event_id": "ev-001", "run_id": "run-001a", "target_id": "LT-101", "action": "create", "committed": true, "at": "2026-05-12T09:00:03Z"},
+    {"row_id": "E02", "effect_id": "tx-005", "event_id": "ev-005", "run_id": "run-005", "target_id": "LT-104", "action": "delete", "committed": true, "at": "2026-05-12T09:04:03Z"},
+    {"row_id": "E03", "effect_id": "tx-007a", "event_id": "ev-007", "run_id": "run-007a", "target_id": "LT-107A", "action": "create", "committed": true, "at": "2026-05-12T09:06:03Z"},
+    {"row_id": "E04", "effect_id": "tx-007b", "event_id": "ev-007", "run_id": "run-007b", "target_id": "LT-107B", "action": "create", "committed": true, "at": "2026-05-12T09:06:04Z"}
+  ],
+  "targets": [
+    {"row_id": "T01", "target_id": "LT-101", "entity_id": "CR-101", "revision": 1, "source_version": 1, "origin_event": "ev-001", "title": "Sketch review", "status": "Open", "last_editor": "integration", "comments": 0},
+    {"row_id": "T03", "target_id": "LT-103", "entity_id": "CR-103", "revision": 10, "source_version": 2, "origin_event": "pre-window", "title": "Review interactions", "status": "Blocked", "last_editor": "human", "last_changed_at": "2026-05-12T09:20:00Z", "comments": 1},
+    {"row_id": "T06", "target_id": "LT-106", "entity_id": "CR-106", "revision": 1, "source_version": null, "origin_event": null, "title": "Copy review", "status": "Open", "last_editor": "unknown", "comments": 0},
+    {"row_id": "T07A", "target_id": "LT-107A", "entity_id": "CR-107", "revision": 2, "source_version": 1, "origin_event": "ev-007", "title": "Component inventory", "status": "Open", "last_editor": "human", "comments": 2},
+    {"row_id": "T07B", "target_id": "LT-107B", "entity_id": "CR-107", "revision": 3, "source_version": 1, "origin_event": "ev-007", "title": "Component inventory", "status": "Open", "last_editor": "human", "comments": 1}
+  ],
+  "tombstones": [
+    {"row_id": "TB04", "target_id": "LT-104", "entity_id": "CR-104", "revision": 7, "source_version": 5, "origin_event": "ev-005", "deleted_at": "2026-05-12T09:04:03Z"}
+  ]
+}
