@@ -49,3 +49,7 @@ The original build checked 200 generated boards across 4×4 and 5×5, determinis
 ## Stop conditions
 
 If generation produces an unsolvable board, repair the shared press rule or solver before styling. If a returned hint cannot be applied to clear the board, remove the correctness claim until fixed. If shortestness is not established, label hints as a valid solution rather than a minimum. Do not add accounts, paid hints, saved progress, telemetry, or external services just because the game can support them.
+
+## Subsequent verification
+
+A hosting-provided desktop image was inspected, prompting a more compact board layout. A jsdom interaction test passed hint-to-win, undo after winning, restart, size changes, arrow-key focus, and read-tool behavior; these are simulated DOM checks, not real-browser coverage.

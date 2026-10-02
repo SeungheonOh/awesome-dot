@@ -53,3 +53,7 @@ The original Signal Foundry build passed the numerical checks above, including 1
 If spectra look wrong, verify frequency-bin mapping, window normalization, and common axis scaling before styling. If filters produce invalid values, validate sample rate, cutoff, and window bounds before rendering. If a browser or publishing step is unavailable, retain the tested local product and state the exact unverified stage. Never portray synthetic examples as real measurements or this educational instrument as calibrated engineering equipment.
 
 A completed product and skill are one iteration. If the user requested ongoing creation, continue to the next distinct useful product within the same authorized scope; a successful first release is not a stopping instruction.
+
+## Subsequent verification
+
+A jsdom interaction test subsequently passed filter-control visibility, preset synchronization, noise-seed regeneration, reset, guide toggling, and read-tool validation; this is simulated DOM coverage, not real-browser validation.

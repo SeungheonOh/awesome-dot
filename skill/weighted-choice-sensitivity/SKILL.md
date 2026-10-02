@@ -53,3 +53,7 @@ The original build passed numerical checks for baseline ranking, weight scale in
 ## Stop or repair
 
 If scores are not comparable, repair the rubric before ranking. If a hard constraint makes an option unacceptable, model that as an explicit eligibility condition for ordinary choices rather than silently burying it in a small weight. Ask the user to resolve contradictory requirements. When publishing or verification fails, retain the local artifact and report the exact unfinished stage; never claim a robust recommendation from unverified assumptions.
+
+## Subsequent verification
+
+A jsdom interaction test subsequently passed score edits and blank recovery, row/column changes, zero-weight display, reset, name escaping, and read-tool validation. This simulated DOM coverage does not replace real-browser checks.
