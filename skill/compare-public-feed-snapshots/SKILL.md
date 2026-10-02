@@ -56,3 +56,23 @@ If the 11:00 fetch fails instead, keep the 10:00 snapshot dated and report no ve
 ## Evidence status
 
 The worked example illustrates the stated inputs and reasoning. Unless an execution result is explicitly identified, it is not a claim that external services, real devices or user data were tested. Report actual checks and unrun stages on each use.
+
+## Joining a catalog to changing status
+
+Some public services separate stable location/identity records from operational status. Validate uniqueness in both feeds and join by the documented ID. Report missing status, unmatched status and malformed rows separately; do not convert an absent count into zero or silently discard coverage differences.
+
+Carry both the feed update time and the individual record's last-report time. Fetching a fresh file does not make every contained observation fresh. Define an explicit age threshold suited to the task and the provider's TTL, with a visible rule for future-dated observations or clock disagreement. Decode timestamps according to the selected schema version rather than guessing seconds versus milliseconds or treating a new version as the old schema.
+
+For availability views, combine freshness with the relevant operational flags. A positive count at a closed or non-renting station is not evidence that a user can obtain a vehicle there. A filtered availability total should say which rows it excludes. Re-evaluate age as time passes even when the interface does not fetch again.
+
+A short in-memory server cache can reduce repeated public requests, but it must preserve the original observation and provider dates. Concurrent requests may share a fetch; a cache hit must not reset evidence age. A failed refresh should retain the dated prior snapshot, not report a newly observed zero.
+
+### Additional worked example
+
+A status feed was generated at 20:00, but one station last reported at 19:40. The application uses a 180-second age limit. That station's three reported vehicles are excluded from current pickup availability even though the file itself is fresh. A second station reported at 19:59 with three vehicles but has renting disabled; it is excluded for a different reason. Keep both explanations available rather than collapsing them into “no vehicles.”
+
+### Executed checks
+
+A bounded local HTTP service was tested against synthetic catalog/status feeds for exact-ID joins, duplicate rejection, missing and invalid status, future timestamps, age expiry, operating flags, cache reuse and simultaneous-request deduplication. Simulated-interface tests verified that displayed freshness expired without a new network request and that a failed or late refresh could not replace the accepted newer snapshot.
+
+A separate authorized public-feed check joined 2,520 information records to 2,520 status records with no unmatched or malformed rows at the time observed. It still found stale and closed stations; successful transport was not treated as universal availability. The same fixed-endpoint reader was verified through its local HTTP interface. Real-browser rendering and future provider uptime were not established.
