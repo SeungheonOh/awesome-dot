@@ -1,0 +1,20 @@
+{
+  "schema": "fictional-source-control-v1",
+  "provenance": "Separate fictional source-listing evidence supplied with the export; the audit does not derive it from any archive manifest or member.",
+  "account_id": "account-demo",
+  "collection_id": "collection-007",
+  "generation": "generation-42",
+  "observed_at": "2026-09-20T12:00:00Z",
+  "scope": {"collection_id": "collection-007", "include_archived": true, "include_comments": true, "include_deletion_markers": true},
+  "expected_export_request_id": "export-cobalt",
+  "expected_part_numbers": [1, 2],
+  "listing_pages": [
+    {"cursor": null, "next_cursor": "control-page-2", "ids": ["collection-007", "note-0001", "note-0002"]},
+    {"cursor": "control-page-2", "next_cursor": null, "ids": ["comment-0001", "note-0003", "note-9000"]}
+  ],
+  "attachments": [
+    {"id": "attachment-001", "owner_id": "note-0001", "path": "attachments/attachment-001/notes.txt", "bytes": 39, "sha256": "cd7a452074c6aad9f029042d8ab52c66d9a325bfc76199f9b787036f7e958f80"},
+    {"id": "attachment-002", "owner_id": "note-0002", "path": "attachments/attachment-002/notes.txt", "bytes": 56, "sha256": "08cf429a3a5a0631ef504348437dfd8b820bdea1080d7f50193c0771060fd7f6"}
+  ],
+  "limitations": ["This is supplied fictional evidence, not an authenticated provider response.", "Record bodies have no independent content digest; presence and preserved values can be checked, but their fidelity to live source text cannot.", "The control lists only the stated selection and one explicit exclusion; it is not an inventory of the whole account."]
+}

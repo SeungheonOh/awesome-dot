@@ -1,0 +1,17 @@
+{
+  "purpose": "Keep a readable offline copy of the selected collection's current and archived notes, comments, deletion markers and original attachment bytes at the specified snapshot.",
+  "account_id": "account-demo",
+  "collection_id": "collection-007",
+  "generation": "generation-42",
+  "snapshot_at": "2026-09-20T12:00:00Z",
+  "export_request_id": "export-cobalt",
+  "scope": {
+    "collection_id": "collection-007",
+    "include_archived": true,
+    "include_comments": true,
+    "include_deletion_markers": true
+  },
+  "required_properties": ["exact IDs", "lifecycle and revision", "parent relationships", "present note and comment bodies", "deletion markers without invented bodies", "attachment ownership and original bytes"],
+  "excluded_properties": ["other collections", "earlier revision history", "deleted bodies", "account settings", "access permissions", "rich-text rendering", "destination import behavior", "post-snapshot changes"],
+  "consolidation_authorized": true
+}

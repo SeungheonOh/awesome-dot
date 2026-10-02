@@ -1,0 +1,57 @@
+[
+  {
+    "id": "collection-007",
+    "kind": "collection",
+    "state": "active",
+    "revision": "3",
+    "parent_id": null,
+    "title": "Equipment notes",
+    "attachment_ids": []
+  },
+  {
+    "id": "note-0001",
+    "kind": "note",
+    "state": "active",
+    "revision": "4",
+    "parent_id": "collection-007",
+    "title": "Desk kit",
+    "body": "",
+    "attachment_ids": [
+      "attachment-001"
+    ]
+  },
+  {
+    "id": "note-0002",
+    "kind": "note",
+    "state": "archived",
+    "revision": "7",
+    "parent_id": "collection-007",
+    "title": "Loaner bag",
+    "body": "USB-C hub and short cable\nKeep together.",
+    "color": null,
+    "tags": [
+      "loaner",
+      "café"
+    ],
+    "attachment_ids": [
+      "attachment-002"
+    ]
+  },
+  {
+    "id": "comment-0001",
+    "kind": "comment",
+    "state": "active",
+    "revision": "1",
+    "parent_id": "note-0002",
+    "body": "Return the adapter with its pouch.",
+    "attachment_ids": []
+  },
+  {
+    "id": "note-0003",
+    "kind": "note",
+    "state": "deleted",
+    "revision": "9",
+    "parent_id": "collection-007",
+    "deleted_at": "2026-09-19T09:30:00Z"
+  }
+]

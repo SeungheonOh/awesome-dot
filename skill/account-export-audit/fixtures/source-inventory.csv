@@ -1,0 +1,7 @@
+id,kind,state,revision,parent_id,in_scope,body_presence,attachment_ids,reason
+collection-007,collection,active,3,,yes,not_applicable,[],selected collection
+note-0001,note,active,4,collection-007,yes,present,"[""attachment-001""]",selected current note
+note-0002,note,archived,7,collection-007,yes,present,"[""attachment-002""]",archived notes included by request
+comment-0001,comment,active,1,note-0002,yes,present,[],selected comment
+note-0003,note,deleted,9,collection-007,yes,absent_expected,[],deletion marker required; original body not expected
+note-9000,note,active,2,collection-099,no,unexamined,[],different collection explicitly excluded

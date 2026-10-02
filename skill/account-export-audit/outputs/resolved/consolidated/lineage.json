@@ -1,0 +1,37 @@
+[
+  {
+    "id": "collection-007",
+    "archive": "cobalt-part-1.zip",
+    "archive_sha256": "8b239906387b7a08ee345cf2e3619f6662867df2954c12d3d33664ad29ea315f",
+    "member": "records.json",
+    "record_index": 0
+  },
+  {
+    "id": "note-0001",
+    "archive": "cobalt-part-1.zip",
+    "archive_sha256": "8b239906387b7a08ee345cf2e3619f6662867df2954c12d3d33664ad29ea315f",
+    "member": "records.json",
+    "record_index": 1
+  },
+  {
+    "id": "note-0002",
+    "archive": "cobalt-part-2.zip",
+    "archive_sha256": "375cbf30b470752159b2de4c5662ec8d104cdf52e93714ddec2f2e41c32e9523",
+    "member": "records.json",
+    "record_index": 0
+  },
+  {
+    "id": "comment-0001",
+    "archive": "cobalt-part-2.zip",
+    "archive_sha256": "375cbf30b470752159b2de4c5662ec8d104cdf52e93714ddec2f2e41c32e9523",
+    "member": "records.json",
+    "record_index": 1
+  },
+  {
+    "id": "note-0003",
+    "archive": "cobalt-part-2.zip",
+    "archive_sha256": "375cbf30b470752159b2de4c5662ec8d104cdf52e93714ddec2f2e41c32e9523",
+    "member": "records.json",
+    "record_index": 2
+  }
+]

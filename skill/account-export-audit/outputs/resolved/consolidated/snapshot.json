@@ -1,0 +1,12 @@
+{
+  "account_id": "account-demo",
+  "collection_id": "collection-007",
+  "generation": "generation-42",
+  "snapshot_at": "2026-09-20T12:00:00Z",
+  "scope": {
+    "collection_id": "collection-007",
+    "include_archived": true,
+    "include_comments": true,
+    "include_deletion_markers": true
+  }
+}

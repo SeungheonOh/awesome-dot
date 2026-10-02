@@ -1,0 +1,299 @@
+{
+  "status": "supported-for-stated-snapshot-copy",
+  "purpose": "Keep a readable offline copy of the selected collection's current and archived notes, comments, deletion markers and original attachment bytes at the specified snapshot.",
+  "snapshot": {
+    "account_id": "account-demo",
+    "collection_id": "collection-007",
+    "generation": "generation-42",
+    "snapshot_at": "2026-09-20T12:00:00Z",
+    "scope": {
+      "collection_id": "collection-007",
+      "include_archived": true,
+      "include_comments": true,
+      "include_deletion_markers": true
+    }
+  },
+  "control_complete": true,
+  "control_variant": "as-supplied",
+  "attachment_controls_complete": true,
+  "unexpected_attachment_controls": [],
+  "control_hashes": {
+    "need.json": "08078452c73e98e350781008cb7ecb7706b86c7706d20c8f1a346a9aad1300d2",
+    "source-control.json": "9744eb81aca36c72621769987b52139a31b3bb0dd67bdb336dd1363d6e110e21",
+    "source-inventory.csv": "2edff448b577868ce0e13f17ea1dd29641f4935d26c0d102393caa262e200f16"
+  },
+  "counts": {
+    "expected_objects": 5,
+    "matched_objects": 5,
+    "missing_objects": 0,
+    "conflicting_objects": 0,
+    "unexpected_objects": 0,
+    "excluded_control_objects": 1,
+    "expected_attachments": 2,
+    "matched_attachments": 2,
+    "expected_attachment_bytes": 95,
+    "matched_attachment_bytes": 95,
+    "observed_attachment_references": 2,
+    "held_archives": 1
+  },
+  "missing_parts": [],
+  "archives": [
+    {
+      "name": "cobalt-part-1.zip",
+      "bytes": 1341,
+      "sha256": "8b239906387b7a08ee345cf2e3619f6662867df2954c12d3d33664ad29ea315f",
+      "generation": "generation-42",
+      "request_id": "export-cobalt",
+      "part_number": 1,
+      "record_ids": [
+        "collection-007",
+        "note-0001"
+      ],
+      "record_versions": [
+        {
+          "id": "collection-007",
+          "revision": "3"
+        },
+        {
+          "id": "note-0001",
+          "revision": "4"
+        }
+      ],
+      "members": [
+        {
+          "path": "attachments/attachment-001/notes.txt",
+          "bytes": 39,
+          "sha256": "cd7a452074c6aad9f029042d8ab52c66d9a325bfc76199f9b787036f7e958f80"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 515,
+          "sha256": "630ceea9b3195bacf058b035abe096b5a1537878fe7a355096a2b32b65ae8a9a"
+        },
+        {
+          "path": "records.json",
+          "bytes": 415,
+          "sha256": "93c4ff324ebec655c150311ac80a0e921fcf871a877d163466d1b013a1e310fb"
+        }
+      ],
+      "status": "selected",
+      "reason": "Matches the requested snapshot identity; reconciliation still required."
+    },
+    {
+      "name": "cobalt-part-2.zip",
+      "bytes": 1666,
+      "sha256": "375cbf30b470752159b2de4c5662ec8d104cdf52e93714ddec2f2e41c32e9523",
+      "generation": "generation-42",
+      "request_id": "export-cobalt",
+      "part_number": 2,
+      "record_ids": [
+        "note-0002",
+        "comment-0001",
+        "note-0003"
+      ],
+      "record_versions": [
+        {
+          "id": "note-0002",
+          "revision": "7"
+        },
+        {
+          "id": "comment-0001",
+          "revision": "1"
+        },
+        {
+          "id": "note-0003",
+          "revision": "9"
+        }
+      ],
+      "members": [
+        {
+          "path": "attachments/attachment-002/notes.txt",
+          "bytes": 56,
+          "sha256": "08cf429a3a5a0631ef504348437dfd8b820bdea1080d7f50193c0771060fd7f6"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 515,
+          "sha256": "bc0f45bb57249da05be08e5e09a43807c2326760531fda70f0d9dcf790a90270"
+        },
+        {
+          "path": "records.json",
+          "bytes": 723,
+          "sha256": "b6745415023c0af08b4449fd67c914097ac0f53198c7220787ede97c552a016a"
+        }
+      ],
+      "status": "selected",
+      "reason": "Matches the requested snapshot identity; reconciliation still required."
+    },
+    {
+      "name": "amber-part-2.zip",
+      "bytes": 1069,
+      "sha256": "f3b2db50368057f8118a974a9b8d61dc73d752d78081d328845a3fd963bf0b44",
+      "generation": "generation-43",
+      "request_id": "export-amber",
+      "part_number": 2,
+      "record_ids": [
+        "note-0002"
+      ],
+      "record_versions": [
+        {
+          "id": "note-0002",
+          "revision": "8"
+        }
+      ],
+      "members": [
+        {
+          "path": "manifest.json",
+          "bytes": 514,
+          "sha256": "52fe37d27e2bd7b595468393caaf0639bc9ad48f2bd6266a341873efcacd9c6d"
+        },
+        {
+          "path": "records.json",
+          "bytes": 331,
+          "sha256": "cdba9ee7008cb5f65624e8cff00efbda04b44f79dfc567918a9be383ec397ad8"
+        }
+      ],
+      "status": "held",
+      "reason": "Different generation, snapshot_at, request_id; never used to fill this snapshot."
+    }
+  ],
+  "records": [
+    {
+      "id": "collection-007",
+      "kind": "collection",
+      "state": "active",
+      "expected_revision": "3",
+      "status": "matched",
+      "body_presence": "absent",
+      "issues": []
+    },
+    {
+      "id": "note-0001",
+      "kind": "note",
+      "state": "active",
+      "expected_revision": "4",
+      "status": "matched",
+      "body_presence": "empty",
+      "issues": []
+    },
+    {
+      "id": "note-0002",
+      "kind": "note",
+      "state": "archived",
+      "expected_revision": "7",
+      "status": "matched",
+      "body_presence": "present",
+      "issues": []
+    },
+    {
+      "id": "comment-0001",
+      "kind": "comment",
+      "state": "active",
+      "expected_revision": "1",
+      "status": "matched",
+      "body_presence": "present",
+      "issues": []
+    },
+    {
+      "id": "note-0003",
+      "kind": "note",
+      "state": "deleted",
+      "expected_revision": "9",
+      "status": "matched",
+      "body_presence": "absent",
+      "issues": []
+    }
+  ],
+  "attachments": [
+    {
+      "id": "attachment-001",
+      "owner_id": "note-0001",
+      "path": "attachments/attachment-001/notes.txt",
+      "bytes": 39,
+      "sha256": "cd7a452074c6aad9f029042d8ab52c66d9a325bfc76199f9b787036f7e958f80",
+      "status": "matched",
+      "observed_bytes": 39,
+      "observed_sha256": "cd7a452074c6aad9f029042d8ab52c66d9a325bfc76199f9b787036f7e958f80",
+      "archive": "cobalt-part-1.zip"
+    },
+    {
+      "id": "attachment-002",
+      "owner_id": "note-0002",
+      "path": "attachments/attachment-002/notes.txt",
+      "bytes": 56,
+      "sha256": "08cf429a3a5a0631ef504348437dfd8b820bdea1080d7f50193c0771060fd7f6",
+      "status": "matched",
+      "observed_bytes": 56,
+      "observed_sha256": "08cf429a3a5a0631ef504348437dfd8b820bdea1080d7f50193c0771060fd7f6",
+      "archive": "cobalt-part-2.zip"
+    }
+  ],
+  "lineage": [
+    {
+      "id": "collection-007",
+      "archive": "cobalt-part-1.zip",
+      "archive_sha256": "8b239906387b7a08ee345cf2e3619f6662867df2954c12d3d33664ad29ea315f",
+      "member": "records.json",
+      "record_index": 0
+    },
+    {
+      "id": "note-0001",
+      "archive": "cobalt-part-1.zip",
+      "archive_sha256": "8b239906387b7a08ee345cf2e3619f6662867df2954c12d3d33664ad29ea315f",
+      "member": "records.json",
+      "record_index": 1
+    },
+    {
+      "id": "note-0002",
+      "archive": "cobalt-part-2.zip",
+      "archive_sha256": "375cbf30b470752159b2de4c5662ec8d104cdf52e93714ddec2f2e41c32e9523",
+      "member": "records.json",
+      "record_index": 0
+    },
+    {
+      "id": "comment-0001",
+      "archive": "cobalt-part-2.zip",
+      "archive_sha256": "375cbf30b470752159b2de4c5662ec8d104cdf52e93714ddec2f2e41c32e9523",
+      "member": "records.json",
+      "record_index": 1
+    },
+    {
+      "id": "note-0003",
+      "archive": "cobalt-part-2.zip",
+      "archive_sha256": "375cbf30b470752159b2de4c5662ec8d104cdf52e93714ddec2f2e41c32e9523",
+      "member": "records.json",
+      "record_index": 2
+    }
+  ],
+  "excluded_control_rows": [
+    {
+      "id": "note-9000",
+      "kind": "note",
+      "state": "active",
+      "revision": "2",
+      "parent_id": "collection-099",
+      "in_scope": "no",
+      "body_presence": "unexamined",
+      "attachment_ids": "[]",
+      "reason": "different collection explicitly excluded"
+    }
+  ],
+  "unexpected_ids": [],
+  "duplicate_ids": [],
+  "unreferenced_payloads": [],
+  "blockers": [],
+  "limitations": [
+    "This is supplied fictional evidence, not an authenticated provider response.",
+    "Record bodies have no independent content digest; presence and preserved values can be checked, but their fidelity to live source text cannot.",
+    "The control lists only the stated selection and one explicit exclusion; it is not an inventory of the whole account.",
+    "other collections",
+    "earlier revision history",
+    "deleted bodies",
+    "account settings",
+    "access permissions",
+    "rich-text rendering",
+    "destination import behavior",
+    "post-snapshot changes"
+  ],
+  "consolidated_copy_created": true
+}
