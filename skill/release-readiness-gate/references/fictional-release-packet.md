@@ -121,7 +121,7 @@ python scripts/check-fictional-release.py
 python scripts/check-fictional-release.py --report
 ```
 
-The first command runs 20 standard-library test methods. The second prints the derived candidate-bound gate ledger and first-rollout planning checks as JSON. Both read the checked-in fixture, write no files, use no network, and run no build, migration, deployment or recovery command.
+The first command runs 21 standard-library test methods. The second prints the derived candidate-bound gate ledger and first-rollout planning checks as JSON. Both read the checked-in fixture, write no files, use no network, and run no build, migration, deployment or recovery command. The named-approver field must be nonblank text; missing, boolean, numeric or container values cannot satisfy it. This checks the supplied field's shape, not a real person's identity or authority.
 
 | Independent synthetic evidence set | Expected recommendation | Blocking stage / decision |
 | --- | --- | --- |

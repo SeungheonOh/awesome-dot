@@ -158,7 +158,9 @@ def exception_errors(record, data, gate, failures, eligible):
     if (set(record['failed_checks']) != failures
             or not failures <= set(policy['allowed_failed_checks'])):
         errors.append('failed-check scope is not permitted')
-    if not record['approved_by'] or record['approver_role'] != policy['approver_role']:
+    approver = record.get('approved_by')
+    if (type(approver) is not str or not approver.strip()
+            or record['approver_role'] != policy['approver_role']):
         errors.append('unauthorized approver')
     approved, start, end = map(instant, (record['approved_at'], record['valid_from'], record['expires_at']))
     if not approved <= start <= now < end:
@@ -370,6 +372,18 @@ class PacketChecks(unittest.TestCase):
 
     def test_exception_ceiling_is_enforced(self):
         item(self.data, 'E-LOAD-218')['metrics']['p99_ms'] = 226
+        self.assertEqual(gate_row(assess(self.data), 'G3')['state'], 'failed')
+
+    def test_exception_requires_a_nonblank_text_approver(self):
+        for value in (None, True, False, 0, 1, [], ['name'], {}, {'name': 'fixture'}, '', '   '):
+            with self.subTest(value=value):
+                data = copy.deepcopy(self.data)
+                data['exception_records'][0]['approved_by'] = value
+                result = gate_row(assess(data), 'G3')
+                self.assertEqual(result['raw_state'], 'failed')
+                self.assertEqual(result['state'], 'failed')
+                self.assertIn('unauthorized approver', result['exception_checks'][0]['reasons'])
+        del self.data['exception_records'][0]['approved_by']
         self.assertEqual(gate_row(assess(self.data), 'G3')['state'], 'failed')
 
     def test_missing_future_and_incomplete_evidence_cannot_pass(self):
