@@ -1,6 +1,6 @@
 <picture>
-  <source media="(max-width: 600px)" srcset=".github/assets/landing-hero-mobile.svg">
-  <img src=".github/assets/landing-hero.svg" width="1280" alt="awesome-dot: community skills for dot. Reusable workflows for presentations, forms, code, and creative projects. Pick a task, follow the workflow, and check the result.">
+  <source media="(max-width: 600px)" srcset=".github/assets/landing-hero-mobile-v2.svg">
+  <img src=".github/assets/landing-hero-v2.svg" width="1280" alt="awesome-dot: community skills for dot. Reusable workflows for presentations, forms, code, and creative projects. Pick a task, follow the workflow, and check the result.">
 </picture>
 
 <p align="center">
