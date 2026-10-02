@@ -1,0 +1,232 @@
+{
+  "fictional": true,
+  "mode": "fresh-build",
+  "observed_utc": "2026-10-02T04:17:14.094887+00:00",
+  "python": "3.12.14",
+  "platform": "linux",
+  "machine": "x86_64",
+  "build_tools": {
+    "pip": "26.2.1",
+    "setuptools": "84.0.0",
+    "wheel": "0.48.0"
+  },
+  "helper_sha256": {
+    "probe_installed.py": "e6075f253e604abf87a9976fb0c6bf0f6335bbafa3d69afaedd3452204d1e88a",
+    "reproduce.py": "c218962ca8a0a708638e95da6da85730b80595f0b7d28ec6151c10cdab45e9b0"
+  },
+  "source_before": {
+    "package-data-repair.toml": "624aeed6ce6a838a18ed0d2b36a39a990300bc511fd1a3b49a6c9068a0cd85b5",
+    "source/pyproject.toml": "526655b164266fa4d58776df2579444263d85792409d80488ad0204590dc2930",
+    "source/src/packet_stamp/__init__.py": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1",
+    "source/src/packet_stamp/cli.py": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7",
+    "source/src/packet_stamp/formats.json": "c093966c588a7304a4123cc0716f69c0935816cb1d1c46b50239eb2f4948cbe1"
+  },
+  "artifacts": {
+    "rejected": {
+      "filename": "packet_stamp_demo-0.3.0-py3-none-any.whl",
+      "bytes": 2237,
+      "sha256": "123eb61e134938fea1cd9509ce69bd6e3a0f64e65067ae83aaec508addcbad6b",
+      "distribution": "packet-stamp-demo",
+      "version": "0.3.0",
+      "requires_python": ">=3.10",
+      "tag": "py3-none-any",
+      "generator": "setuptools (84.0.0)",
+      "record_verified": true,
+      "required_data_present": false,
+      "members": [
+        {
+          "path": "packet_stamp/__init__.py",
+          "bytes": 101,
+          "sha256": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1"
+        },
+        {
+          "path": "packet_stamp/cli.py",
+          "bytes": 853,
+          "sha256": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/METADATA",
+          "bytes": 142,
+          "sha256": "8315f975c79db2eadfc508d0f4c396b46c51b69fc29d9e442f1eba8522c9d24a"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/RECORD",
+          "bytes": 597,
+          "sha256": "51709b4f9708dfbe4f549d2895e9fadabde035a9a246a1749b6935625c4593f0"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/WHEEL",
+          "bytes": 91,
+          "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/entry_points.txt",
+          "bytes": 55,
+          "sha256": "364cba49bc66ab1f6349fa8d8bfcadd5def702ed7f471f19de00ff3db63de43f"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/top_level.txt",
+          "bytes": 13,
+          "sha256": "e375b1774c00a93408dc0a02b0a53b0ee7101ff5ff552bddd6176c6a4178ecc4"
+        }
+      ]
+    },
+    "verified": {
+      "filename": "packet_stamp_demo-0.3.0-py3-none-any.whl",
+      "bytes": 2464,
+      "sha256": "f8196f39158568c1764a10639e0a2cd5136fa7767725954a3e5e0f9f8ab548bf",
+      "distribution": "packet-stamp-demo",
+      "version": "0.3.0",
+      "requires_python": ">=3.10",
+      "tag": "py3-none-any",
+      "generator": "setuptools (84.0.0)",
+      "record_verified": true,
+      "required_data_present": true,
+      "members": [
+        {
+          "path": "packet_stamp/__init__.py",
+          "bytes": 101,
+          "sha256": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1"
+        },
+        {
+          "path": "packet_stamp/cli.py",
+          "bytes": 853,
+          "sha256": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7"
+        },
+        {
+          "path": "packet_stamp/formats.json",
+          "bytes": 65,
+          "sha256": "c093966c588a7304a4123cc0716f69c0935816cb1d1c46b50239eb2f4948cbe1"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/METADATA",
+          "bytes": 142,
+          "sha256": "8315f975c79db2eadfc508d0f4c396b46c51b69fc29d9e442f1eba8522c9d24a"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/RECORD",
+          "bytes": 677,
+          "sha256": "32a578d564890558594d5462b2ceb8622d93fcd0f751fcf36f3ac41515a5620a"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/WHEEL",
+          "bytes": 91,
+          "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/entry_points.txt",
+          "bytes": 55,
+          "sha256": "364cba49bc66ab1f6349fa8d8bfcadd5def702ed7f471f19de00ff3db63de43f"
+        },
+        {
+          "path": "packet_stamp_demo-0.3.0.dist-info/top_level.txt",
+          "bytes": 13,
+          "sha256": "e375b1774c00a93408dc0a02b0a53b0ee7101ff5ff552bddd6176c6a4178ecc4"
+        }
+      ]
+    }
+  },
+  "results": {
+    "rejected": {
+      "prefix": "$RUN/rejected-venv",
+      "base_prefix": "$BASE_PYTHON",
+      "python": "3.12.14",
+      "executable": "$RUN/rejected-venv/bin/python",
+      "user_site_enabled": false,
+      "system_site_enabled": false,
+      "isolated_probe": true,
+      "sys_path": [
+        "$BASE_PYTHON/lib/python312.zip",
+        "$BASE_PYTHON/lib/python3.12",
+        "$BASE_PYTHON/lib/python3.12/lib-dynload",
+        "$RUN/rejected-venv/lib/python3.12/site-packages"
+      ],
+      "cwd": "$RUN/rejected-consumer",
+      "module_origin": "$RUN/rejected-venv/lib/python3.12/site-packages/packet_stamp/__init__.py",
+      "distribution_version": "0.3.0",
+      "console_scripts": [
+        [
+          "packet-stamp",
+          "packet_stamp.cli:main"
+        ]
+      ],
+      "installed_package_sha256": {
+        "__init__.py": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1",
+        "cli.py": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7",
+        "formats.json": null
+      },
+      "installed_artifact_sha256": "123eb61e134938fea1cd9509ce69bd6e3a0f64e65067ae83aaec508addcbad6b",
+      "packaging_contract": "fail",
+      "installation": "pass",
+      "runtime_contract": "fail",
+      "public_wrapper": {
+        "path": "$RUN/rejected-venv/bin/packet-stamp",
+        "sha256": "0cb033e65059e1fdd165bf1843549dbefa309861ca2b67185d320819f24cf800",
+        "interpreter_readback": "#!$RUN/rejected-venv/bin/python"
+      },
+      "public_output": "",
+      "public_error": "packet-stamp: required bundled data formats.json is missing\n",
+      "public_exit_code": 2
+    },
+    "verified": {
+      "prefix": "$RUN/verified-venv",
+      "base_prefix": "$BASE_PYTHON",
+      "python": "3.12.14",
+      "executable": "$RUN/verified-venv/bin/python",
+      "user_site_enabled": false,
+      "system_site_enabled": false,
+      "isolated_probe": true,
+      "sys_path": [
+        "$BASE_PYTHON/lib/python312.zip",
+        "$BASE_PYTHON/lib/python3.12",
+        "$BASE_PYTHON/lib/python3.12/lib-dynload",
+        "$RUN/verified-venv/lib/python3.12/site-packages"
+      ],
+      "cwd": "$RUN/verified-consumer",
+      "module_origin": "$RUN/verified-venv/lib/python3.12/site-packages/packet_stamp/__init__.py",
+      "distribution_version": "0.3.0",
+      "console_scripts": [
+        [
+          "packet-stamp",
+          "packet_stamp.cli:main"
+        ]
+      ],
+      "installed_package_sha256": {
+        "__init__.py": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1",
+        "cli.py": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7",
+        "formats.json": "c093966c588a7304a4123cc0716f69c0935816cb1d1c46b50239eb2f4948cbe1"
+      },
+      "installed_artifact_sha256": "f8196f39158568c1764a10639e0a2cd5136fa7767725954a3e5e0f9f8ab548bf",
+      "packaging_contract": "pass",
+      "installation": "pass",
+      "runtime_contract": "pass",
+      "public_wrapper": {
+        "path": "$RUN/verified-venv/bin/packet-stamp",
+        "sha256": "f57e6b64cf1a56bd6681066c17cd8d8ddf7c8348984a3aafb2c6097514221951",
+        "interpreter_readback": "#!$RUN/verified-venv/bin/python"
+      },
+      "public_output": "PRIORITY: Ada\n",
+      "public_error": "",
+      "public_exit_code": 0
+    }
+  },
+  "environment_overrides": {
+    "PATH": "/bin:/usr/bin",
+    "LC_ALL": "C",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONUTF8": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PIP_CONFIG_FILE": "/dev/null",
+    "SOURCE_DATE_EPOCH": "1704067200",
+    "TMPDIR": "$RUN"
+  },
+  "source_after": {
+    "package-data-repair.toml": "624aeed6ce6a838a18ed0d2b36a39a990300bc511fd1a3b49a6c9068a0cd85b5",
+    "source/pyproject.toml": "526655b164266fa4d58776df2579444263d85792409d80488ad0204590dc2930",
+    "source/src/packet_stamp/__init__.py": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1",
+    "source/src/packet_stamp/cli.py": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7",
+    "source/src/packet_stamp/formats.json": "c093966c588a7304a4123cc0716f69c0935816cb1d1c46b50239eb2f4948cbe1"
+  },
+  "inputs_preserved": true,
+  "status": "expected omitted-data defect observed; corrected artifact passed bounded checks"
+}

@@ -1,0 +1,34 @@
+{
+  "fictional": true,
+  "results": [
+    {
+      "case": "changed resource bytes with original RECORD",
+      "result": "rejected",
+      "reason": "RECORD mismatch: packet_stamp/formats.json"
+    },
+    {
+      "case": "omitted-data wheel evaluated against passing content contract",
+      "result": "rejected",
+      "reason": "unexpected or missing wheel member"
+    },
+    {
+      "case": "reuse existing output",
+      "result": "refused before changing content",
+      "exit_code": 1,
+      "exception": "FileExistsError",
+      "all_existing_file_hashes_unchanged": true
+    },
+    {
+      "case": "two fresh builds on recorded toolchain",
+      "result": "both wheel files byte-identical"
+    },
+    {
+      "case": "separate installed readback of shipped wheel bytes",
+      "result": "expected omitted-data failure and corrected pass",
+      "observed_utc": "2026-10-02T04:14:04.583318+00:00",
+      "mode": "bundled-readback",
+      "verified_sha256": "f8196f39158568c1764a10639e0a2cd5136fa7767725954a3e5e0f9f8ab548bf"
+    }
+  ],
+  "original_wheel_unchanged": true
+}

@@ -1,0 +1,3 @@
+
+[tool.setuptools.package-data]
+packet_stamp = ["formats.json"]

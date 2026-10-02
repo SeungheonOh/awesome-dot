@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "packet-stamp-demo"
+version = "0.3.0"
+description = "Original offline packaging verification fixture"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+packet-stamp = "packet_stamp.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["packet_stamp"]
+include-package-data = false

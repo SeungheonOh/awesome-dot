@@ -1,0 +1,422 @@
+[
+  {
+    "label": "rejected: source smoke (not artifact proof)",
+    "argv": [
+      "$PYTHON",
+      "-I",
+      "-B",
+      "-c",
+      "import sys; sys.path.insert(0, sys.argv.pop(1)); from packet_stamp.cli import main; raise SystemExit(main())",
+      "$RUN/rejected-source/src",
+      "--style",
+      "priority",
+      "Ada"
+    ],
+    "cwd": "$RUN/rejected-source",
+    "started_utc": "2026-10-02T04:17:14.096526+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "PRIORITY: Ada\n",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: build wheel",
+    "argv": [
+      "$PYTHON",
+      "-I",
+      "-m",
+      "pip",
+      "--isolated",
+      "wheel",
+      "--no-index",
+      "--no-deps",
+      "--no-build-isolation",
+      "--no-cache-dir",
+      "--disable-pip-version-check",
+      "--wheel-dir",
+      "$OUTPUT/rejected",
+      "$RUN/rejected-source"
+    ],
+    "cwd": "$RUN",
+    "started_utc": "2026-10-02T04:17:14.141098+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "Processing ./rejected-source\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: packet-stamp-demo\n  Building wheel for packet-stamp-demo (pyproject.toml): started\n  Building wheel for packet-stamp-demo (pyproject.toml): finished with status 'done'\n  Created wheel for packet-stamp-demo: filename=packet_stamp_demo-0.3.0-py3-none-any.whl size=2237 sha256=123eb61e134938fea1cd9509ce69bd6e3a0f64e65067ae83aaec508addcbad6b\n  Stored in directory: $RUN/pip-ephem-wheel-cache-40tc0tu9/wheels/42/3d/b4/9c2437df56aae95acb9eb332e0a931f1fa9ebba70e69c12e82\nSuccessfully built packet-stamp-demo\n",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: create venv",
+    "argv": [
+      "$PYTHON",
+      "-I",
+      "-m",
+      "venv",
+      "$RUN/rejected-venv"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:14.792658+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: package absent before install",
+    "argv": [
+      "$RUN/rejected-venv/bin/python",
+      "-I",
+      "-c",
+      "import importlib.util; assert importlib.util.find_spec('packet_stamp') is None"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:16.349558+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: pip version",
+    "argv": [
+      "$RUN/rejected-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "--version"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:16.363417+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "pip 25.0.1 from $RUN/rejected-venv/lib/python3.12/site-packages/pip (python 3.12)\n",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: install exact wheel",
+    "argv": [
+      "$RUN/rejected-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "--isolated",
+      "install",
+      "--no-index",
+      "--no-deps",
+      "--no-cache-dir",
+      "--disable-pip-version-check",
+      "--no-compile",
+      "--report",
+      "$RUN/rejected-pip-report.json",
+      "$OUTPUT/rejected/packet_stamp_demo-0.3.0-py3-none-any.whl"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:16.489572+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "Processing $OUTPUT/rejected/packet_stamp_demo-0.3.0-py3-none-any.whl\nInstalling collected packages: packet-stamp-demo\nSuccessfully installed packet-stamp-demo-0.3.0\n",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: dependency consistency",
+    "argv": [
+      "$RUN/rejected-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "--isolated",
+      "check",
+      "--no-cache-dir",
+      "--disable-pip-version-check"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:16.739472+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: installed provenance",
+    "argv": [
+      "$RUN/rejected-venv/bin/python",
+      "-I",
+      "-B",
+      "$SKILL/scripts/probe_installed.py",
+      "$RUN/rejected-venv",
+      "$SKILL/fixtures/source",
+      "$RUN/rejected-source",
+      "$RUN/verified-source"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:16.911302+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "{\n  \"prefix\": \"$RUN/rejected-venv\",\n  \"base_prefix\": \"$BASE_PYTHON\",\n  \"python\": \"3.12.14\",\n  \"executable\": \"$RUN/rejected-venv/bin/python\",\n  \"user_site_enabled\": false,\n  \"system_site_enabled\": false,\n  \"isolated_probe\": true,\n  \"sys_path\": [\n    \"$BASE_PYTHON/lib/python312.zip\",\n    \"$BASE_PYTHON/lib/python3.12\",\n    \"$BASE_PYTHON/lib/python3.12/lib-dynload\",\n    \"$RUN/rejected-venv/lib/python3.12/site-packages\"\n  ],\n  \"cwd\": \"$RUN/rejected-consumer\",\n  \"module_origin\": \"$RUN/rejected-venv/lib/python3.12/site-packages/packet_stamp/__init__.py\",\n  \"distribution_version\": \"0.3.0\",\n  \"console_scripts\": [\n    [\n      \"packet-stamp\",\n      \"packet_stamp.cli:main\"\n    ]\n  ],\n  \"installed_package_sha256\": {\n    \"__init__.py\": \"0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1\",\n    \"cli.py\": \"04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7\",\n    \"formats.json\": null\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: public help",
+    "argv": [
+      "$RUN/rejected-venv/bin/packet-stamp",
+      "--help"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:16.967142+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "usage: packet-stamp [-h] [--version] [--style {standard,priority}] name\n\npositional arguments:\n  name\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n  --style {standard,priority}\n",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: public version",
+    "argv": [
+      "$RUN/rejected-venv/bin/packet-stamp",
+      "--version"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:17.024996+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "0.3.0\n",
+    "stderr": ""
+  },
+  {
+    "label": "rejected: data-dependent public command",
+    "argv": [
+      "$RUN/rejected-venv/bin/packet-stamp",
+      "--style",
+      "priority",
+      "Ada"
+    ],
+    "cwd": "$RUN/rejected-consumer",
+    "started_utc": "2026-10-02T04:17:17.064270+00:00",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "stdout": "",
+    "stderr": "packet-stamp: required bundled data formats.json is missing\n"
+  },
+  {
+    "label": "verified: source smoke (not artifact proof)",
+    "argv": [
+      "$PYTHON",
+      "-I",
+      "-B",
+      "-c",
+      "import sys; sys.path.insert(0, sys.argv.pop(1)); from packet_stamp.cli import main; raise SystemExit(main())",
+      "$RUN/verified-source/src",
+      "--style",
+      "priority",
+      "Ada"
+    ],
+    "cwd": "$RUN/verified-source",
+    "started_utc": "2026-10-02T04:17:17.117342+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "PRIORITY: Ada\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: build wheel",
+    "argv": [
+      "$PYTHON",
+      "-I",
+      "-m",
+      "pip",
+      "--isolated",
+      "wheel",
+      "--no-index",
+      "--no-deps",
+      "--no-build-isolation",
+      "--no-cache-dir",
+      "--disable-pip-version-check",
+      "--wheel-dir",
+      "$OUTPUT/verified",
+      "$RUN/verified-source"
+    ],
+    "cwd": "$RUN",
+    "started_utc": "2026-10-02T04:17:17.161621+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "Processing ./verified-source\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: packet-stamp-demo\n  Building wheel for packet-stamp-demo (pyproject.toml): started\n  Building wheel for packet-stamp-demo (pyproject.toml): finished with status 'done'\n  Created wheel for packet-stamp-demo: filename=packet_stamp_demo-0.3.0-py3-none-any.whl size=2464 sha256=f8196f39158568c1764a10639e0a2cd5136fa7767725954a3e5e0f9f8ab548bf\n  Stored in directory: $RUN/pip-ephem-wheel-cache-i7zgt5ah/wheels/28/3e/ec/41d80e0ebf074566806f2a1f34a34ebaf5d3a15a5255f7d98b\nSuccessfully built packet-stamp-demo\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: create venv",
+    "argv": [
+      "$PYTHON",
+      "-I",
+      "-m",
+      "venv",
+      "$RUN/verified-venv"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:17.783303+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "verified: package absent before install",
+    "argv": [
+      "$RUN/verified-venv/bin/python",
+      "-I",
+      "-c",
+      "import importlib.util; assert importlib.util.find_spec('packet_stamp') is None"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:19.318739+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "verified: pip version",
+    "argv": [
+      "$RUN/verified-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "--version"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:19.330858+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "pip 25.0.1 from $RUN/verified-venv/lib/python3.12/site-packages/pip (python 3.12)\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: install exact wheel",
+    "argv": [
+      "$RUN/verified-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "--isolated",
+      "install",
+      "--no-index",
+      "--no-deps",
+      "--no-cache-dir",
+      "--disable-pip-version-check",
+      "--no-compile",
+      "--report",
+      "$RUN/verified-pip-report.json",
+      "$OUTPUT/verified/packet_stamp_demo-0.3.0-py3-none-any.whl"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:19.469294+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "Processing $OUTPUT/verified/packet_stamp_demo-0.3.0-py3-none-any.whl\nInstalling collected packages: packet-stamp-demo\nSuccessfully installed packet-stamp-demo-0.3.0\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: dependency consistency",
+    "argv": [
+      "$RUN/verified-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "--isolated",
+      "check",
+      "--no-cache-dir",
+      "--disable-pip-version-check"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:19.724936+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: installed provenance",
+    "argv": [
+      "$RUN/verified-venv/bin/python",
+      "-I",
+      "-B",
+      "$SKILL/scripts/probe_installed.py",
+      "$RUN/verified-venv",
+      "$SKILL/fixtures/source",
+      "$RUN/rejected-source",
+      "$RUN/verified-source"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:19.920803+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "{\n  \"prefix\": \"$RUN/verified-venv\",\n  \"base_prefix\": \"$BASE_PYTHON\",\n  \"python\": \"3.12.14\",\n  \"executable\": \"$RUN/verified-venv/bin/python\",\n  \"user_site_enabled\": false,\n  \"system_site_enabled\": false,\n  \"isolated_probe\": true,\n  \"sys_path\": [\n    \"$BASE_PYTHON/lib/python312.zip\",\n    \"$BASE_PYTHON/lib/python3.12\",\n    \"$BASE_PYTHON/lib/python3.12/lib-dynload\",\n    \"$RUN/verified-venv/lib/python3.12/site-packages\"\n  ],\n  \"cwd\": \"$RUN/verified-consumer\",\n  \"module_origin\": \"$RUN/verified-venv/lib/python3.12/site-packages/packet_stamp/__init__.py\",\n  \"distribution_version\": \"0.3.0\",\n  \"console_scripts\": [\n    [\n      \"packet-stamp\",\n      \"packet_stamp.cli:main\"\n    ]\n  ],\n  \"installed_package_sha256\": {\n    \"__init__.py\": \"0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1\",\n    \"cli.py\": \"04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7\",\n    \"formats.json\": \"c093966c588a7304a4123cc0716f69c0935816cb1d1c46b50239eb2f4948cbe1\"\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: public help",
+    "argv": [
+      "$RUN/verified-venv/bin/packet-stamp",
+      "--help"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:19.972622+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "usage: packet-stamp [-h] [--version] [--style {standard,priority}] name\n\npositional arguments:\n  name\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n  --style {standard,priority}\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: public version",
+    "argv": [
+      "$RUN/verified-venv/bin/packet-stamp",
+      "--version"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:20.013789+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "0.3.0\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: data-dependent public command",
+    "argv": [
+      "$RUN/verified-venv/bin/packet-stamp",
+      "--style",
+      "priority",
+      "Ada"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:20.051505+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "PRIORITY: Ada\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: UTF-8 name",
+    "argv": [
+      "$RUN/verified-venv/bin/packet-stamp",
+      "Zoë"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:20.095075+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout": "TO: Zoë\n",
+    "stderr": ""
+  },
+  {
+    "label": "verified: invalid style",
+    "argv": [
+      "$RUN/verified-venv/bin/packet-stamp",
+      "--style",
+      "unknown",
+      "Ada"
+    ],
+    "cwd": "$RUN/verified-consumer",
+    "started_utc": "2026-10-02T04:17:20.139313+00:00",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: packet-stamp [-h] [--version] [--style {standard,priority}] name\npacket-stamp: error: argument --style: invalid choice: 'unknown' (choose from standard, priority)\n"
+  }
+]

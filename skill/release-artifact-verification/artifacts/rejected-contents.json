@@ -1,0 +1,49 @@
+{
+  "filename": "packet_stamp_demo-0.3.0-py3-none-any.whl",
+  "bytes": 2237,
+  "sha256": "123eb61e134938fea1cd9509ce69bd6e3a0f64e65067ae83aaec508addcbad6b",
+  "distribution": "packet-stamp-demo",
+  "version": "0.3.0",
+  "requires_python": ">=3.10",
+  "tag": "py3-none-any",
+  "generator": "setuptools (84.0.0)",
+  "record_verified": true,
+  "required_data_present": false,
+  "members": [
+    {
+      "path": "packet_stamp/__init__.py",
+      "bytes": 101,
+      "sha256": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1"
+    },
+    {
+      "path": "packet_stamp/cli.py",
+      "bytes": 853,
+      "sha256": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7"
+    },
+    {
+      "path": "packet_stamp_demo-0.3.0.dist-info/METADATA",
+      "bytes": 142,
+      "sha256": "8315f975c79db2eadfc508d0f4c396b46c51b69fc29d9e442f1eba8522c9d24a"
+    },
+    {
+      "path": "packet_stamp_demo-0.3.0.dist-info/RECORD",
+      "bytes": 597,
+      "sha256": "51709b4f9708dfbe4f549d2895e9fadabde035a9a246a1749b6935625c4593f0"
+    },
+    {
+      "path": "packet_stamp_demo-0.3.0.dist-info/WHEEL",
+      "bytes": 91,
+      "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1"
+    },
+    {
+      "path": "packet_stamp_demo-0.3.0.dist-info/entry_points.txt",
+      "bytes": 55,
+      "sha256": "364cba49bc66ab1f6349fa8d8bfcadd5def702ed7f471f19de00ff3db63de43f"
+    },
+    {
+      "path": "packet_stamp_demo-0.3.0.dist-info/top_level.txt",
+      "bytes": 13,
+      "sha256": "e375b1774c00a93408dc0a02b0a53b0ee7101ff5ff552bddd6176c6a4178ecc4"
+    }
+  ]
+}

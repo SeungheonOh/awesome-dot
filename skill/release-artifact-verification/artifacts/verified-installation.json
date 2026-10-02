@@ -1,0 +1,40 @@
+{
+  "version": "1",
+  "pip_version": "25.0.1",
+  "install": [
+    {
+      "download_info": {
+        "url": "file://$OUTPUT/verified/packet_stamp_demo-0.3.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=f8196f39158568c1764a10639e0a2cd5136fa7767725954a3e5e0f9f8ab548bf",
+          "hashes": {
+            "sha256": "f8196f39158568c1764a10639e0a2cd5136fa7767725954a3e5e0f9f8ab548bf"
+          }
+        }
+      },
+      "is_direct": true,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "packet-stamp-demo",
+        "version": "0.3.0",
+        "summary": "Original offline packaging verification fixture",
+        "requires_python": ">=3.10"
+      }
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.12.14",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_release": "6.18.44",
+    "platform_system": "Linux",
+    "platform_version": "#1 SMP Sat Sep 26 20:02:31 UTC 2026",
+    "python_full_version": "3.12.14",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.12",
+    "sys_platform": "linux"
+  }
+}

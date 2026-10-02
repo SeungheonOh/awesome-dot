@@ -1,0 +1,41 @@
+{
+  "prefix": "$RUN/rejected-venv",
+  "base_prefix": "$BASE_PYTHON",
+  "python": "3.12.14",
+  "executable": "$RUN/rejected-venv/bin/python",
+  "user_site_enabled": false,
+  "system_site_enabled": false,
+  "isolated_probe": true,
+  "sys_path": [
+    "$BASE_PYTHON/lib/python312.zip",
+    "$BASE_PYTHON/lib/python3.12",
+    "$BASE_PYTHON/lib/python3.12/lib-dynload",
+    "$RUN/rejected-venv/lib/python3.12/site-packages"
+  ],
+  "cwd": "$RUN/rejected-consumer",
+  "module_origin": "$RUN/rejected-venv/lib/python3.12/site-packages/packet_stamp/__init__.py",
+  "distribution_version": "0.3.0",
+  "console_scripts": [
+    [
+      "packet-stamp",
+      "packet_stamp.cli:main"
+    ]
+  ],
+  "installed_package_sha256": {
+    "__init__.py": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1",
+    "cli.py": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7",
+    "formats.json": null
+  },
+  "installed_artifact_sha256": "123eb61e134938fea1cd9509ce69bd6e3a0f64e65067ae83aaec508addcbad6b",
+  "packaging_contract": "fail",
+  "installation": "pass",
+  "runtime_contract": "fail",
+  "public_wrapper": {
+    "path": "$RUN/rejected-venv/bin/packet-stamp",
+    "sha256": "0cb033e65059e1fdd165bf1843549dbefa309861ca2b67185d320819f24cf800",
+    "interpreter_readback": "#!$RUN/rejected-venv/bin/python"
+  },
+  "public_output": "",
+  "public_error": "packet-stamp: required bundled data formats.json is missing\n",
+  "public_exit_code": 2
+}

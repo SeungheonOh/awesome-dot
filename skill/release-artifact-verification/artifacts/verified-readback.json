@@ -1,0 +1,41 @@
+{
+  "prefix": "$RUN/verified-venv",
+  "base_prefix": "$BASE_PYTHON",
+  "python": "3.12.14",
+  "executable": "$RUN/verified-venv/bin/python",
+  "user_site_enabled": false,
+  "system_site_enabled": false,
+  "isolated_probe": true,
+  "sys_path": [
+    "$BASE_PYTHON/lib/python312.zip",
+    "$BASE_PYTHON/lib/python3.12",
+    "$BASE_PYTHON/lib/python3.12/lib-dynload",
+    "$RUN/verified-venv/lib/python3.12/site-packages"
+  ],
+  "cwd": "$RUN/verified-consumer",
+  "module_origin": "$RUN/verified-venv/lib/python3.12/site-packages/packet_stamp/__init__.py",
+  "distribution_version": "0.3.0",
+  "console_scripts": [
+    [
+      "packet-stamp",
+      "packet_stamp.cli:main"
+    ]
+  ],
+  "installed_package_sha256": {
+    "__init__.py": "0e9ea0562ca98c1c26c8e127720b735c3264b05a0b5124a0b1b85b22d9d3edb1",
+    "cli.py": "04380bcaaafc790902fada2f5cdb4645d7982c67404a75fd384353ea088a45f7",
+    "formats.json": "c093966c588a7304a4123cc0716f69c0935816cb1d1c46b50239eb2f4948cbe1"
+  },
+  "installed_artifact_sha256": "f8196f39158568c1764a10639e0a2cd5136fa7767725954a3e5e0f9f8ab548bf",
+  "packaging_contract": "pass",
+  "installation": "pass",
+  "runtime_contract": "pass",
+  "public_wrapper": {
+    "path": "$RUN/verified-venv/bin/packet-stamp",
+    "sha256": "f57e6b64cf1a56bd6681066c17cd8d8ddf7c8348984a3aafb2c6097514221951",
+    "interpreter_readback": "#!$RUN/verified-venv/bin/python"
+  },
+  "public_output": "PRIORITY: Ada\n",
+  "public_error": "",
+  "public_exit_code": 0
+}
