@@ -1,0 +1,27 @@
+{
+  "source_id": "fictional-archive-workshop-r1",
+  "clip_id": "fictional-sign-photography-clip-r1",
+  "fictional": true,
+  "media_available": false,
+  "review_mode": "transcript only",
+  "transcript_coverage": "supplied dialogue only; sound events are not described",
+  "timebase": "clip-relative milliseconds",
+  "clip_duration_ms": 36000,
+  "original_offset_ms": 137250,
+  "offset_basis": "fictional supplier states contiguous unedited normal-speed excerpt",
+  "constraints": {
+    "max_lines": 2,
+    "max_line_codepoints": 34,
+    "target_cps": 18,
+    "counting": "Unicode code points; labels, punctuation and spaces included; line breaks excluded"
+  },
+  "segments": [
+    {"id": "S01", "cue_id": "C01", "start_ms": 600, "end_ms": 4700, "speaker": "Speaker A", "text": "At Café Lumière, we keep the old signs."},
+    {"id": "S02", "cue_id": "C02", "start_ms": 5000, "end_ms": 9400, "speaker": "Speaker A", "text": "Do not crop the date off the photograph."},
+    {"id": "S03", "cue_id": "C03", "start_ms": 9800, "end_ms": 14300, "speaker": "Speaker B", "text": "The date reads [1908/1909?], I think."},
+    {"id": "S04.a", "cue_id": "C04", "start_ms": 15000, "end_ms": 18500, "speaker": "Speaker A", "text": "Keep the uncropped image too."},
+    {"id": "S04.b", "cue_id": "C05", "start_ms": 18800, "end_ms": 23200, "speaker": "Speaker A", "text": "It may help someone check the lettering."},
+    {"id": "S05", "cue_id": "C06", "start_ms": 23900, "end_ms": 28600, "speaker": "Speaker B", "text": "Leave José’s note in French."},
+    {"id": "S06", "cue_id": "C07", "start_ms": 29000, "end_ms": 33800, "speaker": "Speaker A", "text": "Oui, la façade a changé."}
+  ]
+}
