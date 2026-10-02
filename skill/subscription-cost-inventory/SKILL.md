@@ -32,6 +32,16 @@ Use this when recurring charges, memberships and trials are scattered across rec
 
 6. **Return an actionable inventory.** Provide the normalized register, run-rate table, dated charge calendar, unresolved-price list and duplicate candidates with check outcomes. Identify which totals are incomplete and which supplied terms need review first. Describe hypothetical reductions as modeled differences only. Create the requested inventory, including a usable worksheet if appropriate, and verify any save to the already authorized destination. Keep source services unchanged: do not cancel, renew, contact providers, expand account access, claim achieved savings or recommend investments. Any subsequent service change needs its own instruction.
 
+### Keep arithmetic exact until presentation
+
+Parse supplied decimal prices without first converting them to binary floating point. Use the currency's defined minor-unit scale or an appropriate decimal representation; do not assume every currency has two decimal places. Reject excess precision or apply only the rounding rule the task explicitly permits.
+
+Keep normalized rates as rational amounts until the currency subtotal is complete. Rounding each annual charge's monthly equivalent before adding them can change the total. Round the aggregate once for display, state the rounding convention, and preserve exact supplied charge amounts in the dated calendar. Currency conversion and changing tax assumptions are separate transformations requiring their own supplied rules.
+
+As a synthetic arithmetic check, twelve annual charges of 0.01 in a two-decimal currency sum to 0.12 annually and 0.01 per month. Rounding each individual 0.01/12 monthly equivalent to cents first would incorrectly produce a zero subtotal. This is a comparison-rate calculation, not a prediction of twelve monthly charges.
+
+Reconcile the known calendar subtotal in two independent ways: sum events by subscription, and group them by calendar month and currency. Count unknown-price events separately. A zero known subtotal with unresolved prices or dates must remain explicitly incomplete. Preserve a supplied next charge that conflicts with an inactive status as a review conflict rather than silently erasing either record.
+
 ## Deliverables
 
 - A sanitized subscription inventory with source and uncertainty fields
@@ -92,3 +102,9 @@ Make a manual checklist organized by upcoming renewal date, with the specific mi
 ## Evidence status
 
 This is an implementation guide. End-to-end execution has not been established; report actual checks and unrun steps for each use.
+
+## Executed local checks
+
+A bounded calendar-and-money calculator exercised explicit original-day clamping with 93 independently enumerated calendars covering anchor days 1–31 at monthly, quarterly and annual intervals in a leap year. Separate cases covered missing anchors, conflicting next dates, a past next charge, an unknown trial conversion amount, explicit zero prices, retained duplicate candidates and separate currencies.
+
+The twelve-small-annual-charges example above and calendar subtotal reconciliation passed using exact minor-unit arithmetic. Simulated-interface checks kept unknown amounts visible and disabled stale exports after edits. These checks used fictional records; they did not verify any provider's terms, actual payment, tax treatment, account status or real-browser presentation.
