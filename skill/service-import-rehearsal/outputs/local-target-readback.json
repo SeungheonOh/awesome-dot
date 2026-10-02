@@ -1,0 +1,208 @@
+{
+  "scope": {
+    "destination": "synthetic-account/asset-registry",
+    "next_id": 4
+  },
+  "records": [
+    {
+      "record_id": "F-101",
+      "external_id": "0007",
+      "label": "Build runner α",
+      "status": "active",
+      "details": "preserve me",
+      "revision": "v3"
+    },
+    {
+      "record_id": "F-102",
+      "external_id": "0042",
+      "label": "Build cache, east",
+      "status": "active",
+      "details": null,
+      "revision": "v8"
+    },
+    {
+      "record_id": "F-103",
+      "external_id": "0008",
+      "label": "Legacy runner",
+      "status": "retired",
+      "details": "keep",
+      "revision": "v2"
+    },
+    {
+      "record_id": "F-104",
+      "external_id": "0009",
+      "label": "Spare bridge",
+      "status": "active",
+      "details": null,
+      "revision": "v1"
+    },
+    {
+      "record_id": "F-105",
+      "external_id": "0900",
+      "label": "Other bridge",
+      "status": "active",
+      "details": null,
+      "revision": "v4"
+    },
+    {
+      "record_id": "F-106",
+      "external_id": "0006",
+      "label": "Worker 🧪",
+      "status": "retired",
+      "details": null,
+      "revision": "v5"
+    },
+    {
+      "record_id": "F-107",
+      "external_id": "0200",
+      "label": "Mirror one",
+      "status": "active",
+      "details": null,
+      "revision": "v1"
+    },
+    {
+      "record_id": "F-108",
+      "external_id": "0200",
+      "label": "Mirror two",
+      "status": "retired",
+      "details": null,
+      "revision": "v2"
+    },
+    {
+      "record_id": "LOCAL-0001",
+      "external_id": "0099",
+      "label": "CI spool",
+      "status": "active",
+      "details": "R&D; café\nrack B",
+      "revision": "v1"
+    },
+    {
+      "record_id": "LOCAL-0002",
+      "external_id": "0100",
+      "label": "=VERSION()",
+      "status": "active",
+      "details": "@queue",
+      "revision": "v1"
+    },
+    {
+      "record_id": "LOCAL-0003",
+      "external_id": "0400",
+      "label": "Rack Z",
+      "status": "active",
+      "details": "new",
+      "revision": "v1"
+    }
+  ],
+  "operations": [
+    {
+      "destination": "synthetic-account/asset-registry",
+      "idempotency_key": "op-14898630450d6f55e68bf140394d24fd77550b578f1429bd95f7754c529c6443",
+      "request": {
+        "details": "new",
+        "expected_revision": "",
+        "external_id": "0400",
+        "idempotency_key": "op-14898630450d6f55e68bf140394d24fd77550b578f1429bd95f7754c529c6443",
+        "label": "Rack Z",
+        "operation": "create",
+        "record_id": "",
+        "source_id": "S013",
+        "status": "active"
+      },
+      "first_submission": 0,
+      "receipt": {
+        "record_id": "LOCAL-0003",
+        "result": "applied",
+        "revision": "v1",
+        "source_id": "S013"
+      }
+    },
+    {
+      "destination": "synthetic-account/asset-registry",
+      "idempotency_key": "op-2f4d96a5b5b5fdef1ad77a37ef12bcd9820f4de1488315b212c2ade32865cc17",
+      "request": {
+        "details": "@queue",
+        "expected_revision": "",
+        "external_id": "0100",
+        "idempotency_key": "op-2f4d96a5b5b5fdef1ad77a37ef12bcd9820f4de1488315b212c2ade32865cc17",
+        "label": "=VERSION()",
+        "operation": "create",
+        "record_id": "",
+        "source_id": "S004",
+        "status": "active"
+      },
+      "first_submission": 0,
+      "receipt": {
+        "record_id": "LOCAL-0002",
+        "result": "applied",
+        "revision": "v1",
+        "source_id": "S004"
+      }
+    },
+    {
+      "destination": "synthetic-account/asset-registry",
+      "idempotency_key": "op-a761a4b92f6bf76fad8f2eab74f545f99c748010578caa6c2fbe645fc52115a4",
+      "request": {
+        "details": "R&D; café\nrack B",
+        "expected_revision": "",
+        "external_id": "0099",
+        "idempotency_key": "op-a761a4b92f6bf76fad8f2eab74f545f99c748010578caa6c2fbe645fc52115a4",
+        "label": "CI spool",
+        "operation": "create",
+        "record_id": "",
+        "source_id": "S003",
+        "status": "active"
+      },
+      "first_submission": 0,
+      "receipt": {
+        "record_id": "LOCAL-0001",
+        "result": "applied",
+        "revision": "v1",
+        "source_id": "S003"
+      }
+    },
+    {
+      "destination": "synthetic-account/asset-registry",
+      "idempotency_key": "op-ac672a6d1164a36fa3f5a903adde0762d347b45d4fbea367990c6b1d88193ebd",
+      "request": {
+        "details": "__CLEAR__",
+        "expected_revision": "v7",
+        "external_id": "0042",
+        "idempotency_key": "op-ac672a6d1164a36fa3f5a903adde0762d347b45d4fbea367990c6b1d88193ebd",
+        "label": "Build cache, east",
+        "operation": "update",
+        "record_id": "F-102",
+        "source_id": "S002",
+        "status": ""
+      },
+      "first_submission": 0,
+      "receipt": {
+        "record_id": "F-102",
+        "result": "applied",
+        "revision": "v8",
+        "source_id": "S002"
+      }
+    },
+    {
+      "destination": "synthetic-account/asset-registry",
+      "idempotency_key": "op-fd40f637cea1ac654e4c49b209c6819d76c16bd9c302ef154e05607a326cc397",
+      "request": {
+        "details": "__CLEAR__",
+        "expected_revision": "v4",
+        "external_id": "0006",
+        "idempotency_key": "op-fd40f637cea1ac654e4c49b209c6819d76c16bd9c302ef154e05607a326cc397",
+        "label": "Worker 🧪",
+        "operation": "update",
+        "record_id": "F-106",
+        "source_id": "S015",
+        "status": ""
+      },
+      "first_submission": 0,
+      "receipt": {
+        "record_id": "F-106",
+        "result": "applied",
+        "revision": "v5",
+        "source_id": "S015"
+      }
+    }
+  ]
+}

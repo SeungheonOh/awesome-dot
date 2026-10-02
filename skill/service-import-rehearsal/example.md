@@ -65,3 +65,7 @@ python3 scripts/verify.py
 The helper uses only the Python standard library. It deliberately rejects another adapter name, another target scope, contradictory lookup records, duplicate headers and ragged records. The JSON contract contains human-readable semantics; its prose is not an executable rule language. Changing that prose alone does not change the adapter. To use the pattern for a real service, replace and review the adapter against current official rules, accepted file syntax, actual identity evidence and the user's bounded authorization, then test distinguishing cases before any live import.
 
 Retain original operation keys and bytes for recovery. Editing the source creates a new input identity; regenerating the plan is not a substitute for recovering an uncertain earlier job. Never treat the generated idempotency column as protection unless the real service actually supports it.
+
+## Separate executed consumer example
+
+The [local SQLite round trip](local-target-roundtrip.md) consumes the same five-row candidate, persists three creates and two updates, and verifies the stored results through fresh connections. That distinct run uses actual local transactions and deliberate failure injection. It does not load or replace the fictional partial-result packet above; in particular, its primary run accepts S013 rather than simulating the packet's additional collection restriction.

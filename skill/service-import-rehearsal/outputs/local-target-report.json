@@ -1,0 +1,216 @@
+{
+  "evidence_kind": "Executed local SQLite sample implementing an explicitly fictional contract",
+  "executed_at_utc": "2026-10-02T02:15:16.419373+00:00",
+  "runtime": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1"
+  },
+  "scope": "No network, live accounts, external services, or supplied fictional receipt packet used",
+  "input_sha256": {
+    "fixtures/import-contract.json": "2fca41606076c5adb1a3dc244ba0116be2ac0b81f684a85bb6ba34225f591ec4",
+    "fixtures/target-before.json": "686136fc9b4cb5efcfb3a307029ec6a4484ee4dccbe005824403cbacc71d0963",
+    "fixtures/source.csv": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f",
+    "outputs/import-ready.csv": "15a20affbd89d522b2ac21a11b14c2ecd42369510ee78553105019eb19bd0eba",
+    "scripts/rehearse.py": "3d8df0115d854ba9e881ddf7982d7aa3853d0e6fff5fd65909063dcb73858ea9"
+  },
+  "consumer_sha256": "38396de1cbbb5452f355df027226e2e377fe8d40a3df9795fa9b7f9e63213f82",
+  "verifier_sha256": "d5e3d414eb52c714cc7d97bc4681e79e2d0e7ab7d705d4c087a0bd824fcff1b1",
+  "accepted_csv_rows": 5,
+  "created": 3,
+  "updated": 2,
+  "persisted_records": 11,
+  "unchanged_original_records": 6,
+  "legacy_duplicate_records_preserved": 2,
+  "passed_checks": [
+    "Actual import CSV equals the adapter's five accepted rows",
+    "All eight original target records are seeded without alteration",
+    "Three creates and two updates committed to disk with durable receipts",
+    "S002: fresh-connection state equals planned field values",
+    "S003: fresh-connection state equals planned field values",
+    "S004: fresh-connection state equals planned field values",
+    "S013: fresh-connection state equals planned field values",
+    "S015: fresh-connection state equals planned field values",
+    "Six untouched original records, including both legacy 0200 duplicates, are unchanged",
+    "Updated rows increment their target-generated revisions exactly once",
+    "Lost response is absent at caller while its real committed receipt is reopened from disk",
+    "Same-key create and stale-original-revision update replay return original receipts without effects",
+    "Changed payload and expired replay fail without changing state or original receipts",
+    "Another connection's revision change blocks the stale fifth update while four rows commit",
+    "A new-key duplicate create and an update of legacy duplicate identity are rejected",
+    "Blank update cells preserve old details/status; explicit clear writes SQL NULL and preserves label",
+    "Create defaults, distinct leading zeros, formula-like text, whitespace and Unicode persist literally",
+    "Two threaded submissions with different keys create exactly one record for one identity",
+    "A real commit between record and receipt SELECTs cannot mix readback snapshots",
+    "A receipt-write failure rolls back the record and ID allocation in the same transaction",
+    "Repeated source/key rows are rejected before any batch writes",
+    "All five original input files retain their exact bytes",
+    "The record-ID index is unique; no external-ID uniqueness index is falsely claimed",
+    "SQLite integrity check passes on reopened primary target"
+  ],
+  "passed_check_count": 24,
+  "caller_observations_with_injected_lost_response": [
+    {
+      "source_id": "S002",
+      "receipt": {
+        "source_id": "S002",
+        "result": "applied",
+        "record_id": "F-102",
+        "revision": "v8"
+      }
+    },
+    {
+      "source_id": "S003",
+      "receipt": null
+    },
+    {
+      "source_id": "S004",
+      "receipt": {
+        "source_id": "S004",
+        "result": "applied",
+        "record_id": "LOCAL-0002",
+        "revision": "v1"
+      }
+    },
+    {
+      "source_id": "S013",
+      "receipt": {
+        "source_id": "S013",
+        "result": "applied",
+        "record_id": "LOCAL-0003",
+        "revision": "v1"
+      }
+    },
+    {
+      "source_id": "S015",
+      "receipt": {
+        "source_id": "S015",
+        "result": "applied",
+        "record_id": "F-106",
+        "revision": "v5"
+      }
+    }
+  ],
+  "replay_at_logical_seconds": 60,
+  "replay_receipts": [
+    {
+      "record_id": "LOCAL-0001",
+      "result": "applied",
+      "revision": "v1",
+      "source_id": "S003"
+    },
+    {
+      "record_id": "F-102",
+      "result": "applied",
+      "revision": "v8",
+      "source_id": "S002"
+    }
+  ],
+  "replay_rejections": [
+    {
+      "source_id": "S003",
+      "result": "rejected",
+      "error": "idempotency_payload_mismatch"
+    },
+    {
+      "source_id": "S003",
+      "result": "rejected",
+      "error": "replay_outside_retention"
+    }
+  ],
+  "stale_revision_batch_receipts": [
+    {
+      "source_id": "S002",
+      "receipt": {
+        "source_id": "S002",
+        "result": "applied",
+        "record_id": "F-102",
+        "revision": "v8"
+      }
+    },
+    {
+      "source_id": "S003",
+      "receipt": {
+        "source_id": "S003",
+        "result": "applied",
+        "record_id": "LOCAL-0001",
+        "revision": "v1"
+      }
+    },
+    {
+      "source_id": "S004",
+      "receipt": {
+        "source_id": "S004",
+        "result": "applied",
+        "record_id": "LOCAL-0002",
+        "revision": "v1"
+      }
+    },
+    {
+      "source_id": "S013",
+      "receipt": {
+        "source_id": "S013",
+        "result": "applied",
+        "record_id": "LOCAL-0003",
+        "revision": "v1"
+      }
+    },
+    {
+      "source_id": "S015",
+      "receipt": {
+        "source_id": "S015",
+        "result": "rejected",
+        "error": "revision_conflict"
+      }
+    }
+  ],
+  "other_writer_record_after_rejected_update": {
+    "record_id": "F-106",
+    "external_id": "0006",
+    "label": "Concurrent owner edit",
+    "status": "retired",
+    "details": "separate writer",
+    "revision": "v5"
+  },
+  "concurrent_create_receipts": [
+    {
+      "source_id": "P-race-1",
+      "result": "rejected",
+      "error": "external_id_exists"
+    },
+    {
+      "source_id": "P-race-2",
+      "result": "applied",
+      "record_id": "LOCAL-0001",
+      "revision": "v1"
+    }
+  ],
+  "readback_interleaving": {
+    "journal_mode": "wal",
+    "writer_committed": "after records SELECT, before receipt-ledger SELECT",
+    "reader_record_count": 8,
+    "reader_operation_count": 0,
+    "reader_next_id": 1,
+    "fresh_read_record_count": 9,
+    "fresh_read_operation_count": 1,
+    "fresh_read_next_id": 2
+  },
+  "record_indexes": [
+    {
+      "seq": 0,
+      "name": "sqlite_autoindex_records_1",
+      "unique": 1,
+      "origin": "pk",
+      "partial": 0
+    }
+  ],
+  "limitations": [
+    "This original local implementation provides no evidence about a real service.",
+    "Only fixture records seed the sample; the truncated external snapshot is not made complete.",
+    "Atomic uniqueness applies to writers using this consumer; direct SQL can bypass its checks.",
+    "Failure injection discards a returned local receipt after commit; it is not a network test.",
+    "Replay time is controlled logical time. Expired keys are held, never treated as safe new work.",
+    "The two-thread submission test is a bounded check, not a production concurrency or power-loss proof.",
+    "CSV quoting is decoded first; idempotency compares canonical UTF-8 bytes of exact cell strings.",
+    "Revision generation supports this sample's v-number fixture format only."
+  ]
+}

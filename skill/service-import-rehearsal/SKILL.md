@@ -111,3 +111,5 @@ python3 scripts/verify.py
 ```
 
 The committed outputs are actual generated artifacts, not an empty template. [Verification](verification.md) records what was executed and the boundaries of the evidence.
+
+The separate [local consumer round trip](local-target-roundtrip.md) actually imports this saved candidate into an isolated SQLite sample target and reopens persisted records and receipts. It tests the fictional rules through a second implementation, including lost-response replay, revision guards and coherent readback. This is optional worked evidence for the pattern, not a service connector or proof that a real destination has the same guarantees.
