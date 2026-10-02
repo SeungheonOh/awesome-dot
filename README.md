@@ -11,6 +11,10 @@
 
 **Reusable Markdown workflows for dot.** Each skill brings together the inputs, steps, examples, and checks for a concrete task. Give dot a skill and your materials, then review the work it produces.
 
+**Describe your task and let dot choose the workflow.** [Start with the task router →](skill/task-to-skill-router/SKILL.md) It checks the available skills, chooses the smallest suitable route, and proceeds with the work you authorized.
+
+Try: “Use the task router for this task: [describe the result you need]. I have [files or context]. Choose the right workflow, ask only for what matters, and carry it out within these limits: [constraints].”
+
 ## Pick your next task
 
 - **Explain a spending change.** Compare plan versus actual, handle refunds, and reconcile the totals. The [worked example](skill/budget-variance-waterfall/WORKED-EXAMPLE.md) shows why a flat total can hide category changes. [Use the skill →](skill/budget-variance-waterfall/SKILL.md)
