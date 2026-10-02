@@ -1,0 +1,40 @@
+{
+  "status": 206,
+  "request": {
+    "Accept": "text/plain",
+    "Accept-Encoding": "identity",
+    "Range": "bytes=67-",
+    "If-Range": "\"cedar-card-v1\""
+  },
+  "headers": [
+    [
+      "Server",
+      "BaseHTTP/0.6 Python/3.12.14"
+    ],
+    [
+      "Date",
+      "Fri, 02 Oct 2026 06:08:25 GMT"
+    ],
+    [
+      "Content-Type",
+      "text/plain; charset=utf-8"
+    ],
+    [
+      "Connection",
+      "close"
+    ],
+    [
+      "ETag",
+      "\"cedar-card-v1\""
+    ],
+    [
+      "Content-Range",
+      "bytes 67-226/227"
+    ],
+    [
+      "Content-Length",
+      "160"
+    ]
+  ],
+  "body_length": 160
+}

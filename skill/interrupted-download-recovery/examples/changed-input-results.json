@@ -1,0 +1,405 @@
+{
+  "scope": "independent changed-input in-process response objects; no socket/HTTP framing claim",
+  "source_sha256_before": "503a4ce3609be81b91b91af3c5d539b84ac757759d18305741d5df724e1bf239",
+  "source_sha256_after": "503a4ce3609be81b91b91af3c5d539b84ac757759d18305741d5df724e1bf239",
+  "payload_bytes": 151,
+  "cut_inside_utf8_character": 43,
+  "fixture_source_is_distinct": true,
+  "cases": [
+    {
+      "case": "utf8_split_prefix",
+      "cut": 43,
+      "outcome": "resumed",
+      "reason": null,
+      "requests": [
+        {
+          "case": "utf8_split_prefix",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "utf8_readable_and_exact": true
+      }
+    },
+    {
+      "case": "empty_prefix",
+      "cut": 0,
+      "outcome": "resumed",
+      "reason": null,
+      "requests": [
+        {
+          "case": "empty_prefix",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=0-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "utf8_readable_and_exact": true
+      }
+    },
+    {
+      "case": "one_byte_suffix",
+      "cut": 150,
+      "outcome": "resumed",
+      "reason": null,
+      "requests": [
+        {
+          "case": "one_byte_suffix",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=150-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "utf8_readable_and_exact": true
+      }
+    },
+    {
+      "case": "range_ignored",
+      "cut": 43,
+      "outcome": "restarted_full",
+      "reason": null,
+      "requests": [
+        {
+          "case": "range_ignored",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "utf8_readable_and_exact": true
+      }
+    },
+    {
+      "case": "weak_restart",
+      "cut": 43,
+      "outcome": "restarted_full",
+      "reason": null,
+      "requests": [
+        {
+          "case": "weak_restart",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity"
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "utf8_readable_and_exact": true
+      }
+    },
+    {
+      "case": "no_validator_restart",
+      "cut": 43,
+      "outcome": "restarted_full",
+      "reason": null,
+      "requests": [
+        {
+          "case": "no_validator_restart",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity"
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "utf8_readable_and_exact": true
+      }
+    },
+    {
+      "case": "different_complete_body",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "full_digest_mismatch",
+      "requests": [
+        {
+          "case": "different_complete_body",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "failed_candidate_retained": true
+      }
+    },
+    {
+      "case": "different_suffix",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "full_digest_mismatch",
+      "requests": [
+        {
+          "case": "different_suffix",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "failed_candidate_retained": true
+      }
+    },
+    {
+      "case": "prefix_disagrees_with_receipt",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "partial_changed_since_receipt",
+      "requests": [],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "stopped_before_request": true
+      }
+    },
+    {
+      "case": "existing_destination",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "destination_exists",
+      "requests": [
+        {
+          "case": "existing_destination",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true,
+        "failed_candidate_retained": true
+      }
+    },
+    {
+      "case": "short_response",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "truncated_or_misframed_body",
+      "requests": [
+        {
+          "case": "short_response",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true
+      }
+    },
+    {
+      "case": "duplicate_content_length",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "duplicate_content-length",
+      "requests": [
+        {
+          "case": "duplicate_content_length",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true
+      }
+    },
+    {
+      "case": "different_validator",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "response_validator_conflict",
+      "requests": [
+        {
+          "case": "different_validator",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true
+      }
+    },
+    {
+      "case": "different_coding",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "changed_content_encoding",
+      "requests": [
+        {
+          "case": "different_coding",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true
+      }
+    },
+    {
+      "case": "transfer_encoding",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "unsupported_transfer_encoding",
+      "requests": [
+        {
+          "case": "transfer_encoding",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true
+      }
+    },
+    {
+      "case": "shorter_valid_range",
+      "cut": 43,
+      "outcome": "held",
+      "reason": "range_end_or_total_conflict",
+      "requests": [
+        {
+          "case": "shorter_valid_range",
+          "phase": "recover",
+          "headers": {
+            "Accept": "text/plain",
+            "Accept-Encoding": "identity",
+            "Range": "bytes=43-",
+            "If-Range": "\"meadow-v7\""
+          }
+        }
+      ],
+      "checks": {
+        "expected_outcome": true,
+        "expected_hold_reason": true,
+        "partial_preserved": true,
+        "final_bytes": true,
+        "correct_resume_or_restart_request": true
+      }
+    }
+  ],
+  "all_passed": true
+}

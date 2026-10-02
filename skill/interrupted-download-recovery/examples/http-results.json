@@ -1,0 +1,272 @@
+{
+  "transport": "actual HTTP/1.1 over IPv4 loopback",
+  "python": "3.12.14",
+  "contract": {
+    "identity": "fictional-cedar-card/revision-1/identity",
+    "length": 227,
+    "sha256": "7d8d90b25ff4dcb10ea245210102d157bf045ca77d74e32b3e26a0346b855bfa",
+    "digest_provenance": "Original fixture bytes defined in this script; byte-equivalence control, not proof of a publisher's authenticity."
+  },
+  "limits": {
+    "response_bytes": 4096,
+    "requests": 64,
+    "run_seconds": 20,
+    "request_seconds": 2,
+    "retries": 0
+  },
+  "request_count": 48,
+  "case_count": 25,
+  "all_passed": true,
+  "cases": [
+    {
+      "case": "resume",
+      "outcome": "resumed",
+      "reason": null,
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "ignore_range",
+      "outcome": "restarted_full",
+      "reason": null,
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "weak_restart",
+      "outcome": "restarted_full",
+      "reason": null,
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "no_validator_restart",
+      "outcome": "restarted_full",
+      "reason": null,
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "changed_200",
+      "outcome": "held",
+      "reason": "full_digest_mismatch",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "wrong_start",
+      "outcome": "held",
+      "reason": "range_start_or_bounds_conflict",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "wrong_end",
+      "outcome": "held",
+      "reason": "range_end_or_total_conflict",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "wrong_total",
+      "outcome": "held",
+      "reason": "range_end_or_total_conflict",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "unknown_total",
+      "outcome": "held",
+      "reason": "invalid_or_unknown_content_range",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "wrong_etag",
+      "outcome": "held",
+      "reason": "response_validator_conflict",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "missing_etag",
+      "outcome": "held",
+      "reason": "response_validator_conflict",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "weak_206",
+      "outcome": "held",
+      "reason": "response_validator_conflict",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "truncated_206",
+      "outcome": "held",
+      "reason": "truncated_or_misframed_body",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "bad_length",
+      "outcome": "held",
+      "reason": "truncated_or_misframed_body",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "truncated_200",
+      "outcome": "held",
+      "reason": "truncated_or_misframed_body",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "corrupt_suffix",
+      "outcome": "held",
+      "reason": "full_digest_mismatch",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "complete_416",
+      "outcome": "verified_complete_partial",
+      "reason": null,
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "short_416",
+      "outcome": "held",
+      "reason": "416_does_not_prove_completion",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "wrong_416_total",
+      "outcome": "held",
+      "reason": "416_total_conflict",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "encoded",
+      "outcome": "held",
+      "reason": "changed_content_encoding",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "duplicate_range",
+      "outcome": "held",
+      "reason": "duplicate_content-range",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "multipart",
+      "outcome": "held",
+      "reason": "unsupported_multipart",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "missing_binding",
+      "outcome": "held",
+      "reason": "missing_or_changed_identity_binding",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "changed_partial",
+      "outcome": "held",
+      "reason": "partial_changed_since_receipt",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    },
+    {
+      "case": "destination_exists",
+      "outcome": "held",
+      "reason": "destination_exists",
+      "checks": {
+        "expected_outcome": true,
+        "partial_preserved": true,
+        "final_bytes": true
+      }
+    }
+  ]
+}
