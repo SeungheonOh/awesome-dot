@@ -1,0 +1,62 @@
+{
+  "checked_at_utc": "2026-10-02",
+  "application": {
+    "name": "Kdenlive",
+    "version": "24.12.3",
+    "mlt_version": "7.30.0"
+  },
+  "method": "Native desktop import, paused monitor inspection, playback command and saved project/subtitle readback",
+  "inputs": {
+    "compatible.mp4": "fe32fb2c81024b01c84cdb94563f4e352131c76c0deaa21930a3b27a867366e2",
+    "compatible.en.srt": "6a4eae4fec7807a663db4ab5b4b561860b50a8859000e89914f657832553c85c"
+  },
+  "project_profile": {
+    "colorspace": "601",
+    "description": "320x180 12.00fps",
+    "display_aspect_den": "9",
+    "display_aspect_num": "16",
+    "frame_rate_den": "1",
+    "frame_rate_num": "12",
+    "height": "180",
+    "progressive": "1",
+    "sample_aspect_den": "1",
+    "sample_aspect_num": "1",
+    "width": "320"
+  },
+  "import_options": {
+    "encoding": "UTF-8",
+    "import_at_cursor": false,
+    "transform_framerate": false
+  },
+  "observed_monitor_timecodes": [
+    "00:00:00:06",
+    "00:00:02:00"
+  ],
+  "timecode_rate_fps": 12,
+  "saved_subtitle_format": "ASS",
+  "saved_subtitle_file": "kdenlive-cues.ass",
+  "saved_subtitle_sha256": "d39605161578c54fecd629da57e33d7b42c61bdaf22049894005eced0b19c9be",
+  "cues": [
+    {
+      "source_srt_start": "0.200",
+      "source_srt_end": "1.100",
+      "saved_ass_start": "0.17",
+      "saved_ass_end": "1.08",
+      "text": "Synthetic test pattern. No source recording."
+    },
+    {
+      "source_srt_start": "1.400",
+      "source_srt_end": "2.800",
+      "saved_ass_start": "1.42",
+      "saved_ass_end": "2.83",
+      "text": "Tone pair changes; video continues after audio."
+    }
+  ],
+  "original_mp4_and_srt_unchanged": true,
+  "limits": [
+    "Saved subtitle boundaries differ from input SRT by up to 0.03 seconds",
+    "Paused rendered cue text was inspected; continuous rendering quality, dropped frames and listening were not assessed",
+    "No target service or uploader used",
+    "The native project itself is not part of the portable delivery"
+  ]
+}

@@ -1,0 +1,5 @@
+*.mkv binary
+*.mp4 binary
+*.png binary
+# SRT cue files intentionally end with a blank separator.
+*.srt whitespace=-blank-at-eof

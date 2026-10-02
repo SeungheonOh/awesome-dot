@@ -1,0 +1,496 @@
+{
+  "target": "Fictional ClipDrop Desk contract v1; invented for this local example, not a real service",
+  "versions": {
+    "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe": "ffprobe version 7.1.5-0+deb13u1 Copyright (c) 2007-2026 the FFmpeg developers"
+  },
+  "source_unchanged": true,
+  "source_local_contract_failures": [
+    "MP4 container",
+    "file size",
+    "video codec",
+    "pixel format",
+    "even dimensions",
+    "audio codec",
+    "sample rate",
+    "channel layout unreported",
+    "no embedded subtitle"
+  ],
+  "output_local_contract_failures": [],
+  "source_frame_pts_seconds": [
+    0.0,
+    0.083,
+    0.167,
+    0.25,
+    0.333,
+    0.417,
+    0.5,
+    0.583,
+    0.667,
+    0.75,
+    0.833,
+    0.917,
+    1.0,
+    1.083,
+    1.167,
+    1.25,
+    1.333,
+    1.417,
+    1.5,
+    1.583,
+    1.667,
+    1.75,
+    1.833,
+    1.917,
+    2.0,
+    2.083,
+    2.167,
+    2.25,
+    2.333,
+    2.417,
+    2.5,
+    2.583,
+    2.667,
+    2.75,
+    2.833,
+    2.917
+  ],
+  "output_frame_pts_seconds": [
+    0.0,
+    0.083333,
+    0.166667,
+    0.25,
+    0.333333,
+    0.416667,
+    0.5,
+    0.583333,
+    0.666667,
+    0.75,
+    0.833333,
+    0.916667,
+    1.0,
+    1.083333,
+    1.166667,
+    1.25,
+    1.333333,
+    1.416667,
+    1.5,
+    1.583333,
+    1.666667,
+    1.75,
+    1.833333,
+    1.916667,
+    2.0,
+    2.083333,
+    2.166667,
+    2.25,
+    2.333333,
+    2.416667,
+    2.5,
+    2.583333,
+    2.666667,
+    2.75,
+    2.833333,
+    2.916667
+  ],
+  "max_frame_pts_difference_seconds": 0.00033300000000013874,
+  "visual_landmarks": {
+    "source": {
+      "decoded_frames": 36,
+      "corner_markers_checked_per_frame": 4,
+      "result": "magenta / green / blue / white remain in their original corners"
+    },
+    "output": {
+      "decoded_frames": 36,
+      "corner_markers_checked_per_frame": 4,
+      "result": "magenta / green / blue / white remain in their original corners"
+    }
+  },
+  "audio_content": {
+    "source": {
+      "decoded_samples_per_channel": 114660,
+      "decoded_duration_seconds": 2.6,
+      "tone_windows": [
+        {
+          "window_seconds": [
+            0.4,
+            0.6000000000000001
+          ],
+          "expected_hz_L_R": [
+            440,
+            880
+          ],
+          "estimated_hz_L_R": [
+            440.05,
+            880.1
+          ]
+        },
+        {
+          "window_seconds": [
+            1.7,
+            1.9
+          ],
+          "expected_hz_L_R": [
+            660,
+            990
+          ],
+          "estimated_hz_L_R": [
+            660.07,
+            990.11
+          ]
+        },
+        {
+          "window_seconds": [
+            2.3,
+            2.5
+          ],
+          "expected_hz_L_R": [
+            660,
+            990
+          ],
+          "estimated_hz_L_R": [
+            660.07,
+            990.11
+          ]
+        }
+      ],
+      "listening_test": "not performed"
+    },
+    "output": {
+      "decoded_samples_per_channel": 124928,
+      "decoded_duration_seconds": 2.6026666666666665,
+      "tone_windows": [
+        {
+          "window_seconds": [
+            0.4,
+            0.6000000000000001
+          ],
+          "expected_hz_L_R": [
+            440,
+            880
+          ],
+          "estimated_hz_L_R": [
+            435.05,
+            880.09
+          ]
+        },
+        {
+          "window_seconds": [
+            1.7,
+            1.9
+          ],
+          "expected_hz_L_R": [
+            660,
+            990
+          ],
+          "estimated_hz_L_R": [
+            660.07,
+            990.1
+          ]
+        },
+        {
+          "window_seconds": [
+            2.3,
+            2.5
+          ],
+          "expected_hz_L_R": [
+            660,
+            990
+          ],
+          "estimated_hz_L_R": [
+            660.07,
+            990.1
+          ]
+        }
+      ],
+      "listening_test": "not performed"
+    }
+  },
+  "audio_decoded_duration_difference_seconds": 0.002666666666666373,
+  "subtitle_result": "Two cues; times and text match the supplied SRT exactly",
+  "mp4_top_level_boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+  ],
+  "full_av_decode": "passed with -xerror",
+  "target_service_acceptance": "not tested; target contract is fictional",
+  "artifacts": {
+    "source.mkv": {
+      "bytes": 713562,
+      "sha256": "85f527821aae6d657b822f2df4be245996115d456317eb8b79f96f88ba35abf0"
+    },
+    "compatible.mp4": {
+      "bytes": 66164,
+      "sha256": "fe32fb2c81024b01c84cdb94563f4e352131c76c0deaa21930a3b27a867366e2"
+    },
+    "compatible.en.srt": {
+      "bytes": 159,
+      "sha256": "6a4eae4fec7807a663db4ab5b4b561860b50a8859000e89914f657832553c85c"
+    },
+    "preview.png": {
+      "bytes": 85101,
+      "sha256": "124062533a58e94465bf40b9c9639ae8a53205b83dc46c60042296e6023c7d25"
+    }
+  },
+  "commands": [
+    [
+      "ffmpeg",
+      "-version"
+    ],
+    [
+      "ffprobe",
+      "-version"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-f",
+      "lavfi",
+      "-i",
+      "testsrc=size=319x179:rate=12:duration=3,format=yuv444p,drawbox=x=0:y=0:w=14:h=14:color=magenta:t=fill,drawbox=x=305:y=0:w=14:h=14:color=green:t=fill,drawbox=x=0:y=165:w=14:h=14:color=blue:t=fill,drawbox=x=305:y=165:w=14:h=14:color=white:t=fill,drawtext=fontfile=label-font.ttf:text='SYNTHETIC TEST PATTERN':fontsize=17:fontcolor=white:box=1:boxcolor=black:x=22:y=70,drawtext=fontfile=label-font.ttf:text='No source recording':fontsize=14:fontcolor=white:box=1:boxcolor=black:x=80:y=95",
+      "-f",
+      "lavfi",
+      "-i",
+      "aevalsrc='0.1*sin(2*PI*if(lt(t,1.3),440,660)*t)|0.1*sin(2*PI*if(lt(t,1.3),880,990)*t)':s=44100:d=2.6:c=stereo",
+      "-i",
+      "source-captions.srt",
+      "-map",
+      "0:v:0",
+      "-map",
+      "1:a:0",
+      "-map",
+      "2:s:0",
+      "-c:v",
+      "ffv1",
+      "-c:a",
+      "pcm_s16le",
+      "-c:s",
+      "srt",
+      "-metadata",
+      "title=Original synthetic compatibility fixture",
+      "-metadata:s:s:0",
+      "language=eng",
+      "source.mkv"
+    ],
+    [
+      "ffprobe",
+      "-v",
+      "error",
+      "-of",
+      "json",
+      "-show_format",
+      "-show_streams",
+      "-show_chapters",
+      "source.mkv"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-i",
+      "source.mkv",
+      "-map",
+      "0:v:0",
+      "-map",
+      "0:a:0",
+      "-vf",
+      "pad=ceil(iw/2)*2:ceil(ih/2)*2:0:0:black,format=yuv420p",
+      "-c:v",
+      "libx264",
+      "-crf",
+      "18",
+      "-preset",
+      "medium",
+      "-fps_mode:v",
+      "passthrough",
+      "-c:a",
+      "aac",
+      "-ar",
+      "48000",
+      "-b:a",
+      "128k",
+      "-movflags",
+      "+faststart",
+      "compatible.mp4"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-i",
+      "source.mkv",
+      "-map",
+      "0:s:0",
+      "-c:s",
+      "srt",
+      "compatible.en.srt"
+    ],
+    [
+      "ffprobe",
+      "-v",
+      "error",
+      "-of",
+      "json",
+      "-show_format",
+      "-show_streams",
+      "-show_chapters",
+      "compatible.mp4"
+    ],
+    [
+      "ffprobe",
+      "-v",
+      "error",
+      "-of",
+      "json",
+      "-select_streams",
+      "v:0",
+      "-show_frames",
+      "-show_entries",
+      "frame=best_effort_timestamp_time",
+      "source.mkv"
+    ],
+    [
+      "ffprobe",
+      "-v",
+      "error",
+      "-of",
+      "json",
+      "-select_streams",
+      "v:0",
+      "-show_frames",
+      "-show_entries",
+      "frame=best_effort_timestamp_time",
+      "compatible.mp4"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-i",
+      "source.mkv",
+      "-map",
+      "0:v:0",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "pipe:1"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-i",
+      "compatible.mp4",
+      "-map",
+      "0:v:0",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "pipe:1"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-i",
+      "source.mkv",
+      "-map",
+      "0:a:0",
+      "-c:a",
+      "pcm_s16le",
+      "-f",
+      "s16le",
+      "pipe:1"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-i",
+      "compatible.mp4",
+      "-map",
+      "0:a:0",
+      "-c:a",
+      "pcm_s16le",
+      "-f",
+      "s16le",
+      "pipe:1"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-xerror",
+      "-i",
+      "compatible.mp4",
+      "-map",
+      "0:v:0",
+      "-map",
+      "0:a:0",
+      "-f",
+      "null",
+      "-"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-i",
+      "source.mkv",
+      "-i",
+      "compatible.mp4",
+      "-filter_complex",
+      "[0:v]select='eq(n,0)+eq(n,18)+eq(n,35)',pad=320:180:0:0:black,tile=3x1,pad=iw:ih+28:0:28:color=0x202020,drawtext=fontfile='label-font.ttf':text='Source | frame 0 | 0.000 s':fontsize=13:fontcolor=white:x=8:y=7,drawtext=fontfile='label-font.ttf':text='Source | frame 18 | 1.500 s':fontsize=13:fontcolor=white:x=328:y=7,drawtext=fontfile='label-font.ttf':text='Source | frame 35 | 2.917 s':fontsize=13:fontcolor=white:x=648:y=7[top];[1:v]select='eq(n,0)+eq(n,18)+eq(n,35)',tile=3x1,pad=iw:ih+28:0:28:color=0x202020,drawtext=fontfile='label-font.ttf':text='Converted | frame 0 | 0.000000 s':fontsize=13:fontcolor=white:x=8:y=7,drawtext=fontfile='label-font.ttf':text='Converted | frame 18 | 1.500000 s':fontsize=13:fontcolor=white:x=328:y=7,drawtext=fontfile='label-font.ttf':text='Converted | frame 35 | 2.916667 s':fontsize=13:fontcolor=white:x=648:y=7[bottom];[top][bottom]vstack[preview]",
+      "-map",
+      "[preview]",
+      "-frames:v",
+      "1",
+      "preview.png"
+    ]
+  ],
+  "font_input": {
+    "filename": "DejaVuSans.ttf",
+    "sha256": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e"
+  },
+  "path_note": "Commands are portable equivalents: absolute output paths and the separate final-preview destination are localized to this report directory; the font locator is label-font.ttf, a temporary copy of font_input. Tool-version lookups do not depend on cwd. Measurements and artifact hashes are unchanged.",
+  "preview": {
+    "dimensions": [
+      960,
+      416
+    ],
+    "panels": "Source and converted frames 0, 18 and 35 with their sampled timestamps",
+    "media_modified_by_preview": false
+  }
+}

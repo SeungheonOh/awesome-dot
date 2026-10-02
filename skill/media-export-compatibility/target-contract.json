@@ -1,0 +1,45 @@
+{
+  "identity": "Fictional ClipDrop Desk contract v1; invented for this local example, not a real service",
+  "container": "mp4",
+  "max_bytes": 524288,
+  "video": {
+    "count": 1,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "max_width": 640,
+    "max_height": 360,
+    "even_dimensions": true,
+    "sample_aspect_ratio": "1:1",
+    "max_frame_rate": 30,
+    "variable_frame_rate_allowed": true,
+    "rotation_degrees": 0
+  },
+  "audio": {
+    "count": 1,
+    "codec": "aac",
+    "sample_rate": 48000,
+    "channels": 2,
+    "channel_layout": "stereo"
+  },
+  "subtitles": {
+    "embedded_count": 0,
+    "delivery": "UTF-8 SRT sidecar preserving all supplied cue times and text"
+  },
+  "faststart_required": true,
+  "authorized_changes": [
+    "Pad the odd-sized image with black on the right and bottom; do not crop, rescale or rotate",
+    "Encode video as H.264 yuv420p; lossy chroma subsampling and compression are accepted for this test pattern",
+    "Resample stereo audio to 48000 Hz and encode AAC; preserve both channels and the tone sequence",
+    "Move the embedded plain English subtitle track to a separate SRT file without text or timing edits"
+  ],
+  "preservation": {
+    "video_frame_count": 36,
+    "video_duration_seconds": 3.0,
+    "video_timestamp_tolerance_seconds": 0.001,
+    "source_audio_duration_seconds": 2.6,
+    "decoded_audio_duration_tolerance_seconds": 0.022,
+    "preserve_full_clip": true,
+    "no_trim_crop_speed_change_or_added_silence": true
+  },
+  "scope": "Local preparation and verification only; no account access, uploading or publishing authorized"
+}
