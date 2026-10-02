@@ -29,8 +29,10 @@ This finding is an unsupported test assumption: valid response ordering changes 
 Run from this folder:
 
 ```sh
-python3 check_example.py > example-results.json
+python3 -B check_example.py
 ```
+
+This prints a fresh result to stdout and leaves the bundled evidence file unchanged.
 
 The script uses only Python's standard library and in-memory fictional data. [example-results.json](example-results.json) records the observed results, environment, source digests, per-attempt seeds and returned order. It distinguishes implementation content digests from real repository commits.
 

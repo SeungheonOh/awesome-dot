@@ -36,8 +36,10 @@ Mark the document as a draft candidate. Its COVER sentence is retained because t
 From this folder, run:
 
 ```sh
-python3 check_example.py > example-results.json
+python3 -B check_example.py
 ```
+
+This prints a fresh result to stdout and leaves the bundled evidence file unchanged.
 
 The checked script embeds the fictional source snapshots and decisions, exercises them, saves a candidate to a temporary folder inside this skill folder, reads that file back, then removes the temporary folder. It writes no real document or account. The checked result is in [example-results.json](example-results.json), including the actual Python version, platform, source/candidate digests and decision ledger.
 
