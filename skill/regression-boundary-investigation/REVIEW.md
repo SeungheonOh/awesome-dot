@@ -58,7 +58,7 @@ A second review regenerated the original histories in a fresh local fixture and 
 
 ## Limits
 
-This is a finite integer-domain check with at most two positive-length bookings. It does not establish behavior for noninteger coordinates, malformed bookings, unusual Python objects, or arbitrary repositories. Snapshot equality covers recorded file bytes, regular-file modes, HEAD, branch, Git status, and staged/unstaged diffs; it is not a timestamp/directory-metadata audit or a general backup guarantee. Isolated Python mode, empty hooks, and empty templates reduce ambient interference but do not form a security sandbox. No production workflow or real external execution was validated.
+The original exhaustive oracle used at most two positive-length bookings; the additional nonuniform-grid review used at most three. Both checks cover finite integer domains. It does not establish behavior for noninteger coordinates, malformed bookings, unusual Python objects, or arbitrary repositories. Snapshot equality covers recorded file bytes, regular-file modes, HEAD, branch, Git status, and staged/unstaged diffs; it is not a timestamp/directory-metadata audit or a general backup guarantee. Isolated Python mode, empty hooks, and empty templates reduce ambient interference but do not form a security sandbox. No production workflow or real external execution was validated.
 
 ## Reproduction and artifact identity
 
