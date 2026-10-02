@@ -46,7 +46,7 @@ Do not call the spectrum a power density: it is an amplitude estimate. Peak freq
 - Reset restores source, filter, seed, and trace-visibility defaults; presets overwrite all intended settings
 - Keyboard, mobile, 200% text sizing, plot labels, and resize behavior are checked in a real browser when available
 
-The original Signal Foundry build passed the numerical checks above, including 12 waveform/filter edge combinations and JavaScript syntax validation. Its private deployment reached success. Full browser interaction, mobile visual, and optional WebMCP execution checks were unavailable in that environment; those remain explicit verification limits, not inherited passes for future implementations.
+The original Signal Foundry build passed the numerical checks above, including 12 waveform/filter edge combinations and JavaScript syntax validation. Its deployment reached success, and a hosting-provided desktop screenshot was inspected. Full browser interaction, mobile visual, and optional WebMCP execution checks were unavailable in that environment; those remain explicit verification limits, not inherited passes for future implementations.
 
 ## Failure and stopping conditions
 
