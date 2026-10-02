@@ -1,0 +1,273 @@
+{
+  "source_revision": "lantern-export-1",
+  "contract": {
+    "start": "2026-09-30T10:00:00Z",
+    "end": "2026-09-30T10:10:00Z",
+    "expected_shards": [
+      "amber",
+      "birch"
+    ],
+    "window_boundary": "[start,end)",
+    "snapshot_boundary": "terminal_event_time < timestamp",
+    "denominator_unit": "terminal_noncanceled_attempt",
+    "retry_policy": "count_each_attempt",
+    "cancel_policy": "exclude_from_error_and_latency_denominators",
+    "error_policy": "server_failure_or_application_deadline_timeout",
+    "latency_population": "terminal_noncanceled_attempt",
+    "latency_unit": "s",
+    "latency_measurement": "attempt_admission_to_terminal_event",
+    "snapshot_temporality": "cumulative_since_epoch",
+    "bucket_representation": "cumulative_le",
+    "upper_bounds": [
+      0.1,
+      0.3,
+      1,
+      "+Inf"
+    ],
+    "quantile_policy": "nearest_rank_bound",
+    "quantiles": [
+      "0.50",
+      "0.90",
+      "0.95"
+    ],
+    "error_target_max": "0.05",
+    "latency_threshold": 0.3,
+    "latency_target_min": "0.75",
+    "target_requires_complete_window": true
+  },
+  "count_coverage": {
+    "observed_shard_seconds": 1080,
+    "expected_shard_seconds": 1200,
+    "shard_time_coverage": {
+      "numerator": 1080,
+      "denominator": 1200,
+      "percent": "90.000000"
+    },
+    "all_shards_observed_seconds": 480,
+    "missing": [
+      {
+        "shard": "birch",
+        "start": "2026-09-30T10:04:00Z",
+        "end": "2026-09-30T10:06:00Z"
+      }
+    ],
+    "complete": false
+  },
+  "latency_coverage": {
+    "observed_shard_seconds": 1080,
+    "expected_shard_seconds": 1200,
+    "shard_time_coverage": {
+      "numerator": 1080,
+      "denominator": 1200,
+      "percent": "90.000000"
+    },
+    "all_shards_observed_seconds": 480,
+    "missing": [
+      {
+        "shard": "birch",
+        "start": "2026-09-30T10:04:00Z",
+        "end": "2026-09-30T10:06:00Z"
+      }
+    ],
+    "complete": false
+  },
+  "accepted_intervals": [
+    {
+      "id": "A-00-05",
+      "shard": "amber",
+      "start": "2026-09-30T10:00:00Z",
+      "end": "2026-09-30T10:05:00Z",
+      "sources": [
+        "telemetry.json:spans/A-00-05",
+        "telemetry.json:snapshots/a00",
+        "telemetry.json:snapshots/a05"
+      ],
+      "attempts": 20,
+      "errors": 1,
+      "canceled": 1,
+      "eligible": 19,
+      "latency_cumulative_le": [
+        8,
+        15,
+        18,
+        19
+      ]
+    },
+    {
+      "id": "A-05-10",
+      "shard": "amber",
+      "start": "2026-09-30T10:05:00Z",
+      "end": "2026-09-30T10:10:00Z",
+      "sources": [
+        "telemetry.json:spans/A-05-10",
+        "telemetry.json:snapshots/a05",
+        "telemetry.json:snapshots/a10"
+      ],
+      "attempts": 30,
+      "errors": 3,
+      "canceled": 1,
+      "eligible": 29,
+      "latency_cumulative_le": [
+        8,
+        21,
+        27,
+        29
+      ]
+    },
+    {
+      "id": "B-00-04",
+      "shard": "birch",
+      "start": "2026-09-30T10:00:00Z",
+      "end": "2026-09-30T10:04:00Z",
+      "sources": [
+        "telemetry.json:spans/B-00-04",
+        "telemetry.json:snapshots/b00",
+        "telemetry.json:snapshots/b04"
+      ],
+      "attempts": 16,
+      "errors": 2,
+      "canceled": 1,
+      "eligible": 15,
+      "latency_cumulative_le": [
+        4,
+        10,
+        14,
+        15
+      ]
+    },
+    {
+      "id": "B-06-10",
+      "shard": "birch",
+      "start": "2026-09-30T10:06:00Z",
+      "end": "2026-09-30T10:10:00Z",
+      "sources": [
+        "telemetry.json:spans/B-06-10",
+        "telemetry.json:snapshots/b06",
+        "telemetry.json:snapshots/b10"
+      ],
+      "attempts": 20,
+      "errors": 1,
+      "canceled": 1,
+      "eligible": 19,
+      "latency_cumulative_le": [
+        5,
+        14,
+        18,
+        19
+      ]
+    }
+  ],
+  "excluded_intervals": [
+    {
+      "id": "B-04-06",
+      "shard": "birch",
+      "start": "2026-09-30T10:04:00Z",
+      "end": "2026-09-30T10:06:00Z",
+      "sources": [
+        "telemetry.json:spans/B-04-06",
+        "telemetry.json:snapshots/b04",
+        "telemetry.json:snapshots/b06"
+      ],
+      "reason": "Unknown continuity or changed epoch; no whole-span delta"
+    }
+  ],
+  "known_counts": {
+    "attempts": 86,
+    "errors": 7,
+    "canceled": 4,
+    "eligible": 82,
+    "success": 75,
+    "error_fraction": {
+      "numerator": 7,
+      "denominator": 82,
+      "percent": "8.536585"
+    }
+  },
+  "latency": {
+    "unit": "s",
+    "count": 82,
+    "upper_bounds": [
+      0.1,
+      0.3,
+      1,
+      "+Inf"
+    ],
+    "cumulative_le": [
+      25,
+      60,
+      77,
+      82
+    ],
+    "disjoint_bins": [
+      25,
+      35,
+      17,
+      5
+    ],
+    "threshold_fraction": {
+      "numerator": 60,
+      "denominator": 82,
+      "percent": "73.170732"
+    },
+    "quantile_bounds": [
+      {
+        "q": "0.50",
+        "rank": 41,
+        "lower": 0.1,
+        "lower_inclusive": false,
+        "upper": 0.3,
+        "upper_inclusive": true
+      },
+      {
+        "q": "0.90",
+        "rank": 74,
+        "lower": 0.3,
+        "lower_inclusive": false,
+        "upper": 1,
+        "upper_inclusive": true
+      },
+      {
+        "q": "0.95",
+        "rank": 78,
+        "lower": 1,
+        "lower_inclusive": false,
+        "upper": null,
+        "upper_inclusive": false
+      }
+    ]
+  },
+  "observed_subset_target_comparison": {
+    "error_meets": false,
+    "latency_meets": false
+  },
+  "full_window_verdict": "undetermined",
+  "diagnostic_ledger": {
+    "source": "telemetry.json:diagnostic_requests",
+    "service_coverage": "unknown; selected examples only",
+    "selected_request_ids": 6,
+    "terminal_logical_outcomes_in_window": {
+      "success": 3,
+      "error": 1,
+      "canceled": 1
+    },
+    "logical_error_fraction": {
+      "numerator": 1,
+      "denominator": 4,
+      "percent": "25.000000"
+    },
+    "unresolved_requests": 1,
+    "terminal_attempt_outcomes_in_window": {
+      "success": 3,
+      "error": 3,
+      "canceled": 1
+    },
+    "attempt_error_fraction": {
+      "numerator": 3,
+      "denominator": 6,
+      "percent": "50.000000"
+    },
+    "unfinished_attempts": 1,
+    "terminal_attempts_outside_window": 1
+  },
+  "input_sha256": "6a534ff0e05aeaa34b7c9ecc8ffde195dbb8782843d55d3ddf97ea1c82a2ec69"
+}

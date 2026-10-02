@@ -1,0 +1,61 @@
+{
+  "format": "quality-window-v1",
+  "fictional": true,
+  "source_manifest": {
+    "revision": "lantern-export-1",
+    "origin": "Fictional Lantern producer export",
+    "capture_at": "2026-09-30T10:12:00Z",
+    "filter": "service=lantern-lookup; environment=exercise; route=lookup; shards=amber,birch",
+    "metric_export": "All supplied snapshots; no pagination, sampling, or row limit",
+    "continuity_evidence": "Original exercise assertions in each spans entry; no independent authentication",
+    "logical_export": "Six deliberately selected support examples, incomplete for the service",
+    "clock_and_finalization": "Exact UTC terminal-event time; complete spans finalized by capture"
+  },
+  "contract": {
+    "start": "2026-09-30T10:00:00Z",
+    "end": "2026-09-30T10:10:00Z",
+    "expected_shards": ["amber", "birch"],
+    "window_boundary": "[start,end)",
+    "snapshot_boundary": "terminal_event_time < timestamp",
+    "denominator_unit": "terminal_noncanceled_attempt",
+    "retry_policy": "count_each_attempt",
+    "cancel_policy": "exclude_from_error_and_latency_denominators",
+    "error_policy": "server_failure_or_application_deadline_timeout",
+    "latency_population": "terminal_noncanceled_attempt",
+    "latency_unit": "s",
+    "latency_measurement": "attempt_admission_to_terminal_event",
+    "snapshot_temporality": "cumulative_since_epoch",
+    "bucket_representation": "cumulative_le",
+    "upper_bounds": [0.1, 0.3, 1, "+Inf"],
+    "quantile_policy": "nearest_rank_bound",
+    "quantiles": ["0.50", "0.90", "0.95"],
+    "error_target_max": "0.05",
+    "latency_threshold": 0.3,
+    "latency_target_min": "0.75",
+    "target_requires_complete_window": true
+  },
+  "snapshots": [
+    {"id":"a00", "shard":"amber", "at":"2026-09-30T10:00:00Z", "epoch":"A1", "attempts":100, "errors":10, "canceled":2, "latency":{"unit":"s", "population":"terminal_noncanceled_attempt", "upper_bounds":[0.1,0.3,1,"+Inf"], "cumulative_le":[30,70,93,98], "count":98}},
+    {"id":"a05", "shard":"amber", "at":"2026-09-30T10:05:00Z", "epoch":"A1", "attempts":120, "errors":11, "canceled":3, "latency":{"unit":"s", "population":"terminal_noncanceled_attempt", "upper_bounds":[0.1,0.3,1,"+Inf"], "cumulative_le":[38,85,111,117], "count":117}},
+    {"id":"a10", "shard":"amber", "at":"2026-09-30T10:10:00Z", "epoch":"A1", "attempts":150, "errors":14, "canceled":4, "latency":{"unit":"s", "population":"terminal_noncanceled_attempt", "upper_bounds":[0.1,0.3,1,"+Inf"], "cumulative_le":[46,106,138,146], "count":146}},
+    {"id":"b00", "shard":"birch", "at":"2026-09-30T10:00:00Z", "epoch":"B1", "attempts":200, "errors":20, "canceled":5, "latency":{"unit":"s", "population":"terminal_noncanceled_attempt", "upper_bounds":[0.1,0.3,1,"+Inf"], "cumulative_le":[80,150,180,195], "count":195}},
+    {"id":"b04", "shard":"birch", "at":"2026-09-30T10:04:00Z", "epoch":"B1", "attempts":216, "errors":22, "canceled":6, "latency":{"unit":"s", "population":"terminal_noncanceled_attempt", "upper_bounds":[0.1,0.3,1,"+Inf"], "cumulative_le":[84,160,194,210], "count":210}},
+    {"id":"b06", "shard":"birch", "at":"2026-09-30T10:06:00Z", "epoch":"B2", "attempts":3, "errors":1, "canceled":0, "latency":{"unit":"s", "population":"terminal_noncanceled_attempt", "upper_bounds":[0.1,0.3,1,"+Inf"], "cumulative_le":[1,2,2,3], "count":3}},
+    {"id":"b10", "shard":"birch", "at":"2026-09-30T10:10:00Z", "epoch":"B2", "attempts":23, "errors":2, "canceled":1, "latency":{"unit":"s", "population":"terminal_noncanceled_attempt", "upper_bounds":[0.1,0.3,1,"+Inf"], "cumulative_le":[6,16,20,22], "count":22}}
+  ],
+  "spans": [
+    {"id":"A-00-05", "start":"a00", "end":"a05", "complete_observation":true, "evidence":"Producer assertion: all outcome and duration observations continuously recorded in epoch A1"},
+    {"id":"A-05-10", "start":"a05", "end":"a10", "complete_observation":true, "evidence":"Producer assertion: all outcome and duration observations continuously recorded in epoch A1"},
+    {"id":"B-00-04", "start":"b00", "end":"b04", "complete_observation":true, "evidence":"Producer assertion: all outcome and duration observations continuously recorded in epoch B1"},
+    {"id":"B-04-06", "start":"b04", "end":"b06", "complete_observation":false, "evidence":"Epoch changed; exact reset time and pre/post-reset boundary samples absent"},
+    {"id":"B-06-10", "start":"b06", "end":"b10", "complete_observation":true, "evidence":"Producer assertion: all outcome and duration observations continuously recorded in epoch B2"}
+  ],
+  "diagnostic_requests": [
+    {"id":"r01", "shard":"amber", "final":"success", "final_at":"2026-09-30T10:01:03Z", "attempts":[{"id":"a-r01-1", "outcome":"error", "terminal_at":"2026-09-30T10:01:00Z"},{"id":"a-r01-2", "outcome":"success", "terminal_at":"2026-09-30T10:01:03Z"}]},
+    {"id":"r02", "shard":"amber", "final":"success", "final_at":"2026-09-30T10:02:00Z", "attempts":[{"id":"a-r02-1", "outcome":"success", "terminal_at":"2026-09-30T10:02:00Z"}]},
+    {"id":"r03", "shard":"amber", "final":"error", "final_at":"2026-09-30T10:07:02Z", "attempts":[{"id":"a-r03-1", "outcome":"error", "terminal_at":"2026-09-30T10:07:00Z"},{"id":"a-r03-2", "outcome":"error", "terminal_at":"2026-09-30T10:07:02Z"}]},
+    {"id":"r04", "shard":"amber", "final":"canceled", "final_at":"2026-09-30T10:08:00Z", "attempts":[{"id":"a-r04-1", "outcome":"canceled", "terminal_at":"2026-09-30T10:08:00Z"}]},
+    {"id":"r05", "shard":"amber", "final":"success", "final_at":"2026-09-30T10:00:01Z", "attempts":[{"id":"a-r05-1", "outcome":"error", "terminal_at":"2026-09-30T09:59:59Z"},{"id":"a-r05-2", "outcome":"success", "terminal_at":"2026-09-30T10:00:01Z"}]},
+    {"id":"r06", "shard":"amber", "final":"unresolved", "final_at":null, "attempts":[{"id":"a-r06-1", "outcome":"unfinished", "terminal_at":null}]}
+  ]
+}
