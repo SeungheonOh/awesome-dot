@@ -1,0 +1,26 @@
+[
+  [
+    "record_id",
+    "label",
+    "note",
+    "quantity"
+  ],
+  [
+    "0007",
+    "caf\u00e9",
+    "\u201csmall, blue\u201d costs \u20ac5",
+    "0"
+  ],
+  [
+    "0012",
+    "pi\u00f1ata",
+    "first line\r\nsecond line",
+    ""
+  ],
+  [
+    "0030",
+    "fa\u00e7ade",
+    "He said \"s\u00ed\".",
+    "2"
+  ]
+]

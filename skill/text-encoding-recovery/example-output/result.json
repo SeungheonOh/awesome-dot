@@ -1,0 +1,93 @@
+{
+  "source": {
+    "file": "catalog-windows1252.csv",
+    "size_bytes": 142,
+    "sha256": "86c2754f2bf7da20dc5a1d1ff28a5f6027a2f9f95dc328f663ca6c5610a4b7e5",
+    "bytes_preserved": true,
+    "interpretation": "declared cp1252"
+  },
+  "candidate": {
+    "file": "catalog-utf8.csv",
+    "size_bytes": 152,
+    "sha256": "e5320aff2bdf1a77e574130d0a5679748ce52c800296dc1428797bfc547b73c5",
+    "encoding": "utf-8",
+    "leading_signature": false,
+    "exact_character_readback": true,
+    "source_roundtrip": true,
+    "newline_characters_preserved": true,
+    "crlf_sequences": 5,
+    "csv_header_and_all_records_match": true,
+    "data_record_count": 3,
+    "all_fields_remain_strings": true
+  },
+  "controls": {
+    "utf8_strict_source_decode": {
+      "status": "rejected",
+      "error": {
+        "start": 39,
+        "end": 40,
+        "reason": "invalid continuation byte"
+      }
+    },
+    "lossy_utf8_decoders": {
+      "replace": {
+        "source_bytes_preserved": false,
+        "expected_rows_preserved": false,
+        "status": "rejected; demonstration only, not saved"
+      },
+      "ignore": {
+        "source_bytes_preserved": false,
+        "expected_rows_preserved": false,
+        "status": "rejected; demonstration only, not saved"
+      }
+    },
+    "latin1": {
+      "status": "rejected by independent known text",
+      "roundtrip": true,
+      "note": "\u0093small, blue\u0094 costs \u00805"
+    },
+    "ambiguous": {
+      "status": "held; no recovered file",
+      "candidates": {
+        "utf-8": {
+          "label": "\u00e9",
+          "code_points": [
+            "U+00E9"
+          ],
+          "roundtrip": true
+        },
+        "cp1252": {
+          "label": "\u00c3\u00a9",
+          "code_points": [
+            "U+00C3",
+            "U+00A9"
+          ],
+          "roundtrip": true
+        }
+      }
+    },
+    "known_lossy": {
+      "status": "held; no guessed correction or recovered file",
+      "strict_utf8_accepts": true,
+      "affected_fields": [
+        "0041/name",
+        "0041/title"
+      ],
+      "distinct_predecessors_produce_same_current_fields": true
+    }
+  },
+  "literal_unicode": {
+    "file": "literal-unicode-preserved.csv",
+    "size_bytes": 68,
+    "sha256": "8d0bade8d837c2a168443867fc594e6dbce47fd5dec9c3eb346a17c0129a0caf",
+    "source_bytes_and_parsed_fields_preserved": true,
+    "literal_U_FFFD_and_question_mark_preserved": true,
+    "interior_U_FEFF_preserved": true
+  },
+  "scope": "Python csv.reader with explicit UTF-8 strict decoding, newline='', comma delimiter, double ASCII quotes, and all-string fields. No Excel, service ingestion, visual rendering, or semantic correctness claim.",
+  "run": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "date_utc": "2026-10-02"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "fixture_version": 1,
+  "provenance": "Original synthetic miniature catalog, authored for this example. No real customer, vendor, live export, or external service is represented.",
+  "source": {
+    "file": "catalog-windows1252.csv",
+    "size_bytes": 142,
+    "sha256": "86c2754f2bf7da20dc5a1d1ff28a5f6027a2f9f95dc328f663ca6c5610a4b7e5",
+    "export_profile": "tiny-catalog-export-v1",
+    "encoding": "cp1252",
+    "signature": "none",
+    "profile_evidence": "This fixture export profile explicitly serialized the independently authored expected rows as Windows-1252, with comma delimiters, doubled ASCII quotes and CRLF record separators. This declaration applies only to the captured filename, byte size and SHA-256 above. It is a construction record, not an inference from readability or decoder acceptance.",
+    "independent_sample": {
+      "record_id": "0007",
+      "field": "note",
+      "text": "\u201csmall, blue\u201d costs \u20ac5",
+      "code_points_at_distinctive_characters": [
+        "U+201C",
+        "U+201D",
+        "U+20AC"
+      ]
+    }
+  },
+  "consumer": {
+    "name": "Python standard-library csv.reader",
+    "encoding": "utf-8",
+    "errors": "strict",
+    "newline": "",
+    "delimiter": ",",
+    "quotechar": "\"",
+    "doublequote": true,
+    "escapechar": null,
+    "skipinitialspace": false,
+    "quoting": "QUOTE_MINIMAL",
+    "strict": true,
+    "field_types": "all strings; no type inference or evaluation"
+  },
+  "output": {
+    "file": "catalog-utf8.csv",
+    "encoding": "utf-8",
+    "signature": "forbidden",
+    "newline_policy": "preserve_all_CR_and_LF",
+    "newline_detail": "Preserve every decoded CR and LF at its original character position, including quoted embedded CRLF. Do not reserialize CSV.",
+    "allowed_transformations": [
+      "strict cp1252 decode",
+      "strict utf-8 encode"
+    ],
+    "other_text_changes": "none",
+    "expected_rows_file": "expected-rows.json"
+  },
+  "controls": {
+    "ambiguous.csv": {
+      "size_bytes": 26,
+      "sha256": "90b9aae55ef8af520b5428fe100b261e017d1037b8420b4f3ff4202fc72a56b5",
+      "status": "held",
+      "history": "Authored with raw C3 A9 in label. Deliberately no export profile or independent intended label is supplied. Both UTF-8 and Windows-1252 are plausible byte interpretations.",
+      "next_request": "Provide the export encoding tied to these bytes or the authoritative label for record 0040."
+    },
+    "known-lossy-utf8.csv": {
+      "size_bytes": 41,
+      "sha256": "9f0149fba15a7df782b5b17e08b3d92cbc84f6d244cd59e45d423a89977d5ded",
+      "encoding": "utf-8",
+      "status": "held",
+      "history": "Original synthetic loss experiment: name was saved after cp1252 bytes were incorrectly decoded as UTF-8 with replacement; title was saved after ASCII encoding with replacement. The record-specific pre-loss strings are not retained. The checker gives two distinct possible predecessors for each field, which yield the identical current text. The known history, not the mere presence of U+FFFD or ?, establishes the hold.",
+      "affected_fields": [
+        "0041/name",
+        "0041/title"
+      ],
+      "next_request": "Obtain an earlier original or authoritative replacement for both affected fields; keep the current file unchanged."
+    },
+    "literal-unicode-utf8.csv": {
+      "size_bytes": 68,
+      "sha256": "8d0bade8d837c2a168443867fc594e6dbce47fd5dec9c3eb346a17c0129a0caf",
+      "encoding": "utf-8",
+      "status": "preserve exactly",
+      "history": "Authored directly as UTF-8 with intentional literal U+FFFD, an ordinary question mark, and interior U+FEFF between pre and post. There is no leading signature and no recorded lossy conversion. The interior U+FEFF is content under this fixture contract, not a removable signature.",
+      "expected_rows": [
+        [
+          "record_id",
+          "label",
+          "note",
+          "marker"
+        ],
+        [
+          "0050",
+          "literal \ufffd",
+          "question?",
+          "pre\ufeffpost"
+        ]
+      ]
+    }
+  },
+  "limits": [
+    "Fixture-specific rehearsal; changed inputs need their own provenance and contract.",
+    "The hashes tie checks to captured bytes, not authenticity.",
+    "Parser readback does not establish Excel import, service ingestion, glyph appearance, or real-world semantic correctness."
+  ]
+}
