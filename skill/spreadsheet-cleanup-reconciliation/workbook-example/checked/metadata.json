@@ -1,0 +1,42 @@
+{
+  "inventory-source.xlsx": {
+    "docProps/core.xml": {
+      "created": "2026-10-02T03:26:37Z",
+      "creator": "awesome-dot fictional example",
+      "description": null,
+      "language": "en-US",
+      "lastModifiedBy": "awesome-dot fictional example",
+      "modified": "2026-10-02T03:26:37Z",
+      "revision": "0",
+      "subject": "Inventory cleanup and formula preservation",
+      "title": "Fictional equipment export"
+    },
+    "docProps/app.xml": {
+      "Template": null,
+      "TotalTime": "0",
+      "Application": "LibreOfficeDev/26.8.0.0.alpha0$Linux_X86_64 LibreOffice_project/2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+      "AppVersion": "15.0000"
+    },
+    "docProps/custom.xml": {}
+  },
+  "inventory-cleaned.xlsx": {
+    "docProps/core.xml": {
+      "created": "2026-10-02T03:26:37Z",
+      "creator": "awesome-dot fictional example",
+      "description": null,
+      "language": "en-US",
+      "lastModifiedBy": "awesome-dot fictional example",
+      "modified": "2026-10-02T03:26:56Z",
+      "revision": "0",
+      "subject": "Inventory cleanup and formula preservation",
+      "title": "Fictional equipment export"
+    },
+    "docProps/app.xml": {
+      "Template": null,
+      "TotalTime": "0",
+      "Application": "LibreOfficeDev/26.8.0.0.alpha0$Linux_X86_64 LibreOffice_project/2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+      "AppVersion": "15.0000"
+    },
+    "docProps/custom.xml": {}
+  }
+}

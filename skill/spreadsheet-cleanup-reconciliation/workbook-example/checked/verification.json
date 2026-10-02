@@ -1,0 +1,452 @@
+{
+  "result": "pass",
+  "checked_at_utc": "2026-10-02T03:27:25.472441+00:00",
+  "engine": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "python": "3.12.14",
+  "openpyxl": "3.1.5",
+  "xlsxwriter": "3.2.9",
+  "source_preserved": true,
+  "artifacts": {
+    "inventory-source.xlsx": {
+      "bytes": 10918,
+      "sha256": "a071ed3b3b13e6e4f4c6af4d961feedd060ea130fac7475bf97ee4839a371176"
+    },
+    "inventory-cleaned.xlsx": {
+      "bytes": 10956,
+      "sha256": "7af51e41a55b387290ed637936e2b420a7feab69d6872e4a63b3edb27b11e6b0"
+    }
+  },
+  "source_caches": {
+    "overview": {
+      "B4": 6,
+      "B5": 3,
+      "B6": 6,
+      "B7": 2,
+      "B8": 6,
+      "B9": 0,
+      "B10": 3,
+      "B12": "Incomplete",
+      "B13": "Unresolved"
+    },
+    "available": [
+      "unknown",
+      0,
+      "unknown",
+      "unknown",
+      2,
+      4
+    ]
+  },
+  "candidate_caches": {
+    "overview": {
+      "B4": 9,
+      "B5": 2,
+      "B6": 6,
+      "B7": 2,
+      "B8": 6,
+      "B9": 3,
+      "B10": 4,
+      "B12": "Incomplete",
+      "B13": "Unresolved"
+    },
+    "available": [
+      3,
+      0,
+      "unknown",
+      "unknown",
+      2,
+      4
+    ]
+  },
+  "probe": {
+    "change": "Inventory!D10: blank to numeric 0 in a disposable copy",
+    "saved_caches": {
+      "overview": {
+        "B4": 8,
+        "B5": 1,
+        "B6": 6,
+        "B7": 2,
+        "B8": 6,
+        "B9": 2,
+        "B10": 5,
+        "B12": "Incomplete",
+        "B13": "Unresolved"
+      },
+      "available": [
+        3,
+        0,
+        -1,
+        "unknown",
+        2,
+        4
+      ]
+    }
+  },
+  "saved_file_checks": {
+    "changed_cells": [
+      {
+        "cell": "B8",
+        "before": " 0007 ",
+        "after": "0007"
+      },
+      {
+        "cell": "D8",
+        "before": " 4 ",
+        "after": 4
+      },
+      {
+        "cell": "G8",
+        "before": " READY ",
+        "after": "ready"
+      },
+      {
+        "cell": "G10",
+        "before": " count pending ",
+        "after": "needs_count"
+      },
+      {
+        "cell": "H10",
+        "before": null,
+        "after": "Missing ready count: source blank"
+      },
+      {
+        "cell": "D11",
+        "before": "N/A",
+        "after": null
+      },
+      {
+        "cell": "G11",
+        "before": "HOLD",
+        "after": "on_hold"
+      },
+      {
+        "cell": "H11",
+        "before": null,
+        "after": "Missing count: source_marker (N/A)"
+      },
+      {
+        "cell": "G12",
+        "before": "Ready",
+        "after": "ready"
+      },
+      {
+        "cell": "H12",
+        "before": null,
+        "after": "Conflicting kit ID 0044"
+      },
+      {
+        "cell": "H13",
+        "before": null,
+        "after": "Conflicting kit ID 0044"
+      }
+    ],
+    "formula_expressions": {
+      "Overview!B4": "=SUM(AvailableUnits)",
+      "Overview!B5": "=COUNTIF(Inventory!F8:F13,\"unknown\")",
+      "Overview!B6": "=COUNTA(Inventory!A8:A13)",
+      "Overview!B7": "=COUNTIF(Inventory!B8:B13,\"0044\")",
+      "Overview!B8": "=SUMIF(Inventory!B8:B13,\"0044\",Inventory!F8:F13)",
+      "Overview!B9": "=B4-B8",
+      "Overview!B10": "=COUNT(Inventory!D8:D13)",
+      "Overview!B12": "=IF(B5>0,\"Incomplete\",\"Complete\")",
+      "Overview!B13": "=IF(B7>1,\"Unresolved\",\"No repeat\")",
+      "Inventory!F8": "=IF(OR(NOT(ISNUMBER(D8)),NOT(ISNUMBER(E8))),\"unknown\",D8-E8)",
+      "Inventory!F9": "=IF(OR(NOT(ISNUMBER(D9)),NOT(ISNUMBER(E9))),\"unknown\",D9-E9)",
+      "Inventory!F10": "=IF(OR(NOT(ISNUMBER(D10)),NOT(ISNUMBER(E10))),\"unknown\",D10-E10)",
+      "Inventory!F11": "=IF(OR(NOT(ISNUMBER(D11)),NOT(ISNUMBER(E11))),\"unknown\",D11-E11)",
+      "Inventory!F12": "=IF(OR(NOT(ISNUMBER(D12)),NOT(ISNUMBER(E12))),\"unknown\",D12-E12)",
+      "Inventory!F13": "=IF(OR(NOT(ISNUMBER(D13)),NOT(ISNUMBER(E13))),\"unknown\",D13-E13)"
+    },
+    "structure": {
+      "sheet_names": [
+        "Overview",
+        "Inventory"
+      ],
+      "sheet_states": {
+        "Overview": "visible",
+        "Inventory": "visible"
+      },
+      "names": {
+        "AvailableUnits": "Inventory!$F$8:$F$13"
+      },
+      "filter": "A7:H13",
+      "freeze_panes": "C8",
+      "validation": [
+        [
+          "D8:E13",
+          "whole",
+          "greaterThanOrEqual",
+          "0",
+          true
+        ]
+      ],
+      "conditional_formats": [
+        [
+          "F8:F13",
+          [
+            [
+              "cellIs",
+              "equal",
+              [
+                "\"unknown\""
+              ]
+            ],
+            [
+              "cellIs",
+              "lessThan",
+              [
+                "0"
+              ]
+            ]
+          ]
+        ],
+        [
+          "H8:H13",
+          [
+            [
+              "expression",
+              null,
+              [
+                "$H8<>\"\""
+              ]
+            ]
+          ]
+        ]
+      ],
+      "tables": {
+        "Overview": [],
+        "Inventory": []
+      },
+      "merged_ranges": {
+        "Overview": [],
+        "Inventory": []
+      },
+      "hidden_rows": {
+        "Overview": [],
+        "Inventory": []
+      },
+      "hidden_columns": {
+        "Overview": [],
+        "Inventory": []
+      },
+      "print_areas": {
+        "Overview": "'Overview'!$A$1:$C$21",
+        "Inventory": "'Inventory'!$A$1:$H$17"
+      },
+      "show_gridlines": {
+        "Overview": false,
+        "Inventory": false
+      }
+    },
+    "annotation_style": "Four newly populated Review reason cells match the existing body style; all other inspected cell styles are unchanged"
+  },
+  "raw_xml_formula_caches": {
+    "xl/worksheets/sheet1.xml:B4": {
+      "type": "n",
+      "value": "9"
+    },
+    "xl/worksheets/sheet1.xml:B5": {
+      "type": "n",
+      "value": "2"
+    },
+    "xl/worksheets/sheet1.xml:B6": {
+      "type": "n",
+      "value": "6"
+    },
+    "xl/worksheets/sheet1.xml:B7": {
+      "type": "n",
+      "value": "2"
+    },
+    "xl/worksheets/sheet1.xml:B8": {
+      "type": "n",
+      "value": "6"
+    },
+    "xl/worksheets/sheet1.xml:B9": {
+      "type": "n",
+      "value": "3"
+    },
+    "xl/worksheets/sheet1.xml:B10": {
+      "type": "n",
+      "value": "4"
+    },
+    "xl/worksheets/sheet1.xml:B12": {
+      "type": "str",
+      "value": "Incomplete"
+    },
+    "xl/worksheets/sheet1.xml:B13": {
+      "type": "str",
+      "value": "Unresolved"
+    },
+    "xl/worksheets/sheet2.xml:F8": {
+      "type": "n",
+      "value": "3"
+    },
+    "xl/worksheets/sheet2.xml:F9": {
+      "type": "n",
+      "value": "0"
+    },
+    "xl/worksheets/sheet2.xml:F10": {
+      "type": "str",
+      "value": "unknown"
+    },
+    "xl/worksheets/sheet2.xml:F11": {
+      "type": "str",
+      "value": "unknown"
+    },
+    "xl/worksheets/sheet2.xml:F12": {
+      "type": "n",
+      "value": "2"
+    },
+    "xl/worksheets/sheet2.xml:F13": {
+      "type": "n",
+      "value": "4"
+    }
+  },
+  "reconciliation": {
+    "source_records": 6,
+    "candidate_records": 6,
+    "absorbed_or_excluded_records": 0,
+    "known_ready_units": 12,
+    "reserved_units_on_rows_with_known_ready": 3,
+    "known_available_units": 9,
+    "missing_ready_counts": 2,
+    "zero_ready_counts": 1,
+    "conflict_available_contribution": 6,
+    "available_outside_conflict": 3,
+    "independent_business_control": null
+  },
+  "previews": [
+    "overview.png",
+    "inventory.png"
+  ],
+  "operations": [
+    {
+      "command": [
+        "soffice",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+      "stderr_unique_lines": []
+    },
+    {
+      "command": [
+        "soffice",
+        "-env:UserInstallation=file://{run_directory}/source-profile",
+        "--headless",
+        "--convert-to",
+        "xlsx:Calc MS Excel 2007 XML",
+        "--outdir",
+        "{run_directory}/source",
+        "{run_directory}/seed/inventory-source.xlsx"
+      ],
+      "returncode": 0,
+      "stdout": "convert {run_directory}/seed/inventory-source.xlsx as a Calc document -> {run_directory}/source/inventory-source.xlsx using filter : Calc MS Excel 2007 XML",
+      "stderr_unique_lines": [
+        "Fontconfig error: No writable cache directories"
+      ]
+    },
+    {
+      "command": [
+        "soffice",
+        "-env:UserInstallation=file://{run_directory}/source-pdf-profile",
+        "--headless",
+        "--convert-to",
+        "pdf:calc_pdf_Export",
+        "--outdir",
+        "{run_directory}/source-pdf",
+        "{run_directory}/source/inventory-source.xlsx"
+      ],
+      "returncode": 0,
+      "stdout": "convert {run_directory}/source/inventory-source.xlsx as a Calc document -> {run_directory}/source-pdf/inventory-source.pdf using filter : calc_pdf_Export",
+      "stderr_unique_lines": [
+        "Fontconfig error: No writable cache directories"
+      ]
+    },
+    {
+      "command": [
+        "pdftoppm",
+        "-scale-to",
+        "1400",
+        "-png",
+        "{run_directory}/source-pdf/inventory-source.pdf",
+        "{run_directory}/source-preview/page"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr_unique_lines": []
+    },
+    {
+      "command": [
+        "soffice",
+        "-env:UserInstallation=file://{run_directory}/candidate-profile",
+        "--headless",
+        "--convert-to",
+        "xlsx:Calc MS Excel 2007 XML",
+        "--outdir",
+        "{run_directory}/candidate",
+        "{run_directory}/edited/inventory-cleaned.xlsx"
+      ],
+      "returncode": 0,
+      "stdout": "convert {run_directory}/edited/inventory-cleaned.xlsx as a Calc document -> {run_directory}/candidate/inventory-cleaned.xlsx using filter : Calc MS Excel 2007 XML",
+      "stderr_unique_lines": [
+        "Fontconfig error: No writable cache directories"
+      ]
+    },
+    {
+      "command": [
+        "soffice",
+        "-env:UserInstallation=file://{run_directory}/probe-profile",
+        "--headless",
+        "--convert-to",
+        "xlsx:Calc MS Excel 2007 XML",
+        "--outdir",
+        "{run_directory}/probe-result",
+        "{run_directory}/probe-input/zero-probe.xlsx"
+      ],
+      "returncode": 0,
+      "stdout": "convert {run_directory}/probe-input/zero-probe.xlsx as a Calc document -> {run_directory}/probe-result/zero-probe.xlsx using filter : Calc MS Excel 2007 XML",
+      "stderr_unique_lines": [
+        "Fontconfig error: No writable cache directories"
+      ]
+    },
+    {
+      "command": [
+        "soffice",
+        "-env:UserInstallation=file://{run_directory}/candidate-pdf-profile",
+        "--headless",
+        "--convert-to",
+        "pdf:calc_pdf_Export",
+        "--outdir",
+        "{run_directory}/candidate-pdf",
+        "{run_directory}/candidate/inventory-cleaned.xlsx"
+      ],
+      "returncode": 0,
+      "stdout": "convert {run_directory}/candidate/inventory-cleaned.xlsx as a Calc document -> {run_directory}/candidate-pdf/inventory-cleaned.pdf using filter : calc_pdf_Export",
+      "stderr_unique_lines": [
+        "Fontconfig error: No writable cache directories"
+      ]
+    },
+    {
+      "command": [
+        "pdftoppm",
+        "-scale-to",
+        "1400",
+        "-png",
+        "{run_directory}/candidate-pdf/inventory-cleaned.pdf",
+        "{run_directory}/candidate-preview/page"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr_unique_lines": []
+    }
+  ],
+  "limits": [
+    "Fictional six-row local XLSX fixture only; no independent business control",
+    "LibreOffice version is the engine above; Microsoft Excel and live Google Sheets were not tested",
+    "No macros, external links, pivots, charts, native tables, protection or data connections are present or tested",
+    "Verification covers saved formulas, caches and listed structure; it is not a general workbook-fidelity guarantee",
+    "Automated checks do not assess visual readability; the accompanying verification describes separate preview inspection"
+  ],
+  "path_notation": "Artifact and preview names are relative to this report. Command evidence uses {run_directory} for the reproduction output directory; these placeholders are documentation, not literal commands to paste. Run reproduce.py to execute the workflow."
+}

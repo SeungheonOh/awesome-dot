@@ -116,6 +116,8 @@ Do not bury a material unresolved key conflict in an “all checks passed” sta
 
 Use [the fictional worked example](example.md) for an executable-sized fixture with authorized duplicate collapse, a retained key conflict, nullable amounts and currency-separated reconciliation.
 
+For native formulas and saved XLSX readback, use [the equipment-workbook example](workbook-example/workbook-example.md). It preserves text IDs and workbook structure, retains missing-count and key-conflict evidence, and checks saved results after a local LibreOffice round trip and a disposable zero-input probe.
+
 ## Stop and ask
 
 - Ask when a locale, key rule, missing-value convention or target range would materially change the result; finish unaffected cleanup first
@@ -131,4 +133,4 @@ dot, clean this supplied order-ledger export into a new workbook. Keep customer 
 
 ## Evidence status
 
-This is an implementation guide with fictional input and expected output. Fixture checks establish the example's internal consistency, not that any live workbook was opened, recalculated or changed. Report only the operations and verification actually performed during each use.
+The CSV fixture establishes internal consistency. The native workbook companion records the exact local LibreOffice build, recalculation and saved-file checks actually performed on fictional data. Neither example establishes a live-system write or broad application compatibility. Report only the operations and verification actually performed during each use.

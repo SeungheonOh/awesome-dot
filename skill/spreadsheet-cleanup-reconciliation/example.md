@@ -164,3 +164,5 @@ assert 10 == 9 + 1
 ```
 
 Verify that each ordinal 1 through 10 occurs exactly once in output lineage, identifiers retain their zeros, exactly two dates remain unresolved, one zero survives, and neither missing amount has become zero. A source hash and a post-save readback should be checked when this fixture is materialized as files. These example checks do not establish a live application write or any business control total.
+
+For an XLSX companion with preserved formulas and a real local-consumer check, see [the equipment-workbook example](workbook-example/workbook-example.md).

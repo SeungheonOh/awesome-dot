@@ -1,0 +1,18 @@
+{
+  "checked/inventory-source.xlsx": {
+    "bytes": 10918,
+    "sha256": "a071ed3b3b13e6e4f4c6af4d961feedd060ea130fac7475bf97ee4839a371176"
+  },
+  "checked/inventory-cleaned.xlsx": {
+    "bytes": 10956,
+    "sha256": "7af51e41a55b387290ed637936e2b420a7feab69d6872e4a63b3edb27b11e6b0"
+  },
+  "checked/overview.png": {
+    "bytes": 126567,
+    "sha256": "661c19e8efbc47d618e3edeba721d90880165ced8eae9b51d2dd2d1e7884064f"
+  },
+  "checked/inventory.png": {
+    "bytes": 113686,
+    "sha256": "c94a2e337418f1dce07d8ce8b8936fb9cbbc07b99e2eca2683fa67f7a6647845"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "changes": [
+    {"cell": "B8", "before": " 0007 ", "after": "0007", "rule": "ID_PADDING"},
+    {"cell": "D8", "before": " 4 ", "after": 4, "rule": "WHOLE_UNIT_TEXT"},
+    {"cell": "G8", "before": " READY ", "after": "ready", "rule": "STATUS_MAP"},
+    {"cell": "G10", "before": " count pending ", "after": "needs_count", "rule": "STATUS_MAP"},
+    {"cell": "H10", "before": null, "after": "Missing ready count: source blank", "rule": "REVIEW_EVIDENCE"},
+    {"cell": "D11", "before": "N/A", "after": null, "rule": "MISSING_MARKER"},
+    {"cell": "G11", "before": "HOLD", "after": "on_hold", "rule": "STATUS_MAP"},
+    {"cell": "H11", "before": null, "after": "Missing count: source_marker (N/A)", "rule": "REVIEW_EVIDENCE"},
+    {"cell": "G12", "before": "Ready", "after": "ready", "rule": "STATUS_MAP"},
+    {"cell": "H12", "before": null, "after": "Conflicting kit ID 0044", "rule": "REVIEW_EVIDENCE"},
+    {"cell": "H13", "before": null, "after": "Conflicting kit ID 0044", "rule": "REVIEW_EVIDENCE"}
+  ],
+  "source_caches": {"B4": 6, "B5": 3, "B6": 6, "B7": 2, "B8": 6, "B9": 0, "B10": 3, "B12": "Incomplete", "B13": "Unresolved"},
+  "candidate_caches": {"B4": 9, "B5": 2, "B6": 6, "B7": 2, "B8": 6, "B9": 3, "B10": 4, "B12": "Incomplete", "B13": "Unresolved"},
+  "candidate_available": [3, 0, "unknown", "unknown", 2, 4],
+  "probe_caches": {"B4": 8, "B5": 1, "B6": 6, "B7": 2, "B8": 6, "B9": 2, "B10": 5, "B12": "Incomplete", "B13": "Unresolved"},
+  "probe_available": [3, 0, -1, "unknown", 2, 4],
+  "reconciliation": {
+    "source_records": 6,
+    "candidate_records": 6,
+    "absorbed_or_excluded_records": 0,
+    "known_ready_units": 12,
+    "reserved_units_on_rows_with_known_ready": 3,
+    "known_available_units": 9,
+    "missing_ready_counts": 2,
+    "zero_ready_counts": 1,
+    "conflict_available_contribution": 6,
+    "available_outside_conflict": 3,
+    "independent_business_control": null
+  }
+}

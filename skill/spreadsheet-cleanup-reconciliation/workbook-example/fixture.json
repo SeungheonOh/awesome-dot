@@ -1,0 +1,20 @@
+{
+  "fictional": true,
+  "source_id": "equipment-export-A",
+  "source_rows": [
+    ["export-A:1", " 0007 ", "USB-C dock", " 4 ", 1, " READY "],
+    ["export-A:2", "0012", "HDMI adapter", 0, 0, "ready"],
+    ["export-A:3", "0025", "Webcam", null, 1, " count pending "],
+    ["export-A:4", "0031", "Headset", "N/A", 0, "HOLD"],
+    ["export-A:5", "0044", "Laptop stand", 3, 1, "Ready"],
+    ["export-A:6", "0044", "Laptop stand", 5, 1, "ready"]
+  ],
+  "rules": {
+    "kit_id": "Text; remove surrounding export padding only. Retain every leading zero.",
+    "ready_units": "Non-negative whole units. Surrounding padding on digit strings is insignificant. Keep source blanks empty with reason blank. Convert the exact source marker N/A to an empty numeric count with reason source_marker; preserve N/A in the row review and change ledger. Neither missing state means zero.",
+    "reserved_units": "Already typed non-negative whole units. Preserve as supplied.",
+    "status": {"ready": "ready", "count pending": "needs_count", "hold": "on_hold"},
+    "duplicate": "No collapse or survivor rule is supplied. Keep both kit 0044 records and their counts.",
+    "scope": "Edit justified input values and Review reason cells in a cleaned copy. Preserve row order, formulas, names, filters, freeze panes, validation, formatting and source. No live import or stock adjustment."
+  }
+}
