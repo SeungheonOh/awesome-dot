@@ -1,0 +1,23 @@
+{
+  "ambiguity_error": "Unresolved semantics; schema was not changed",
+  "injected_error": "UNIQUE constraint failed: work_estimate.item_id",
+  "injection_point": "after backfill and DROP COLUMN, before COMMIT",
+  "transaction_trace": [
+    "BEGIN IMMEDIATE",
+    "CREATE TABLE work_estimate (\n    item_id TEXT NOT NULL PRIMARY KEY REFERENCES work_item(id) ON DELETE RESTRICT,\n    estimated_minutes INTEGER NOT NULL\n        CHECK (typeof(estimated_minutes) = 'integer' AND estimated_minutes >= 0),\n    original_text TEXT NOT NULL\n)",
+    "INSERT INTO work_estimate VALUES ('W-001', 90, '1h 30m')",
+    "INSERT INTO work_estimate VALUES ('W-010', 0, '0m')",
+    "INSERT INTO work_estimate VALUES ('W-041', 420, '1d')",
+    "INSERT INTO work_estimate VALUES ('W-900', 120, '2h')",
+    "ALTER TABLE work_item DROP COLUMN estimate_text",
+    "INSERT INTO work_estimate VALUES ('W-001', 90, '1h 30m')",
+    "ROLLBACK"
+  ],
+  "reopened_state_equals_before": true,
+  "logical_sha256": "bed02bb7f789bb1c4b436e171d7a91fddbb00659dd073539d9c9f5f8ec235abe",
+  "integrity_check": [
+    "ok"
+  ],
+  "foreign_key_check": [],
+  "foreign_keys_enabled": true
+}

@@ -1,0 +1,134 @@
+{
+  "user_version": 2,
+  "schema": [
+    {
+      "type": "index",
+      "name": "item_note_item",
+      "tbl_name": "item_note",
+      "sql": "CREATE INDEX item_note_item ON item_note(item_id)"
+    },
+    {
+      "type": "index",
+      "name": "work_item_owner",
+      "tbl_name": "work_item",
+      "sql": "CREATE INDEX work_item_owner ON work_item(owner_id)"
+    },
+    {
+      "type": "table",
+      "name": "item_note",
+      "tbl_name": "item_note",
+      "sql": "CREATE TABLE item_note (\n    id TEXT NOT NULL PRIMARY KEY,\n    item_id TEXT NOT NULL REFERENCES work_item(id) ON DELETE RESTRICT,\n    body TEXT NOT NULL\n)"
+    },
+    {
+      "type": "table",
+      "name": "owner",
+      "tbl_name": "owner",
+      "sql": "CREATE TABLE owner (\n    id TEXT NOT NULL PRIMARY KEY,\n    label TEXT NOT NULL\n)"
+    },
+    {
+      "type": "table",
+      "name": "work_estimate",
+      "tbl_name": "work_estimate",
+      "sql": "CREATE TABLE work_estimate (\n    item_id TEXT NOT NULL PRIMARY KEY REFERENCES work_item(id) ON DELETE RESTRICT,\n    estimated_minutes INTEGER NOT NULL\n        CHECK (typeof(estimated_minutes) = 'integer' AND estimated_minutes >= 0),\n    original_text TEXT NOT NULL\n)"
+    },
+    {
+      "type": "table",
+      "name": "work_item",
+      "tbl_name": "work_item",
+      "sql": "CREATE TABLE work_item (\n    id TEXT NOT NULL PRIMARY KEY,\n    title TEXT NOT NULL,\n    owner_id TEXT REFERENCES owner(id) ON DELETE RESTRICT,\n    archived_at TEXT\n)"
+    }
+  ],
+  "rows": {
+    "owner": [
+      {
+        "id": "team-01",
+        "label": "Reader tools"
+      },
+      {
+        "id": "team-02",
+        "label": "Export tools"
+      }
+    ],
+    "work_item": [
+      {
+        "id": "W-001",
+        "title": "Parser documentation",
+        "owner_id": "team-01",
+        "archived_at": null
+      },
+      {
+        "id": "W-002",
+        "title": "Export checksum",
+        "owner_id": null,
+        "archived_at": null
+      },
+      {
+        "id": "W-010",
+        "title": "Retry indicator",
+        "owner_id": "team-02",
+        "archived_at": null
+      },
+      {
+        "id": "W-041",
+        "title": "Batch preview",
+        "owner_id": "team-01",
+        "archived_at": null
+      },
+      {
+        "id": "W-900",
+        "title": "Legacy console — retained",
+        "owner_id": null,
+        "archived_at": "2026-09-15T10:00:00Z"
+      }
+    ],
+    "item_note": [
+      {
+        "id": "N-001",
+        "item_id": "W-001",
+        "body": "Keep the worked example."
+      },
+      {
+        "id": "N-002",
+        "item_id": "W-001",
+        "body": "Check the Unicode heading."
+      },
+      {
+        "id": "N-003",
+        "item_id": "W-002",
+        "body": "Estimate has not been supplied."
+      },
+      {
+        "id": "N-004",
+        "item_id": "W-010",
+        "body": "Zero means no remaining effort, not unknown."
+      },
+      {
+        "id": "N-005",
+        "item_id": "W-900",
+        "body": "Archived notes remain attached."
+      }
+    ],
+    "work_estimate": [
+      {
+        "item_id": "W-001",
+        "estimated_minutes": 90,
+        "original_text": "1h 30m"
+      },
+      {
+        "item_id": "W-010",
+        "estimated_minutes": 0,
+        "original_text": "0m"
+      },
+      {
+        "item_id": "W-041",
+        "estimated_minutes": 420,
+        "original_text": "1d"
+      },
+      {
+        "item_id": "W-900",
+        "estimated_minutes": 120,
+        "original_text": "2h"
+      }
+    ]
+  }
+}

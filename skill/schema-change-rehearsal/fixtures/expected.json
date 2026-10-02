@@ -1,0 +1,12 @@
+{
+  "minutes_by_item": {"W-001": 90, "W-002": null, "W-010": 0, "W-041": 420, "W-900": 120},
+  "business_totals": {
+    "active": {"items": 4, "known_estimates": 3, "unknown_estimates": 1, "known_minutes": 510},
+    "archived": {"items": 1, "known_estimates": 1, "unknown_estimates": 0, "known_minutes": 120}
+  },
+  "item_count": 5,
+  "estimate_count": 4,
+  "note_count": 5,
+  "owner_count": 2,
+  "nullable_owner_items": ["W-002", "W-900"]
+}

@@ -1,0 +1,42 @@
+{
+  "change_id": "work-estimates-v2",
+  "status": "blocked",
+  "source_logical_sha256": "bed02bb7f789bb1c4b436e171d7a91fddbb00659dd073539d9c9f5f8ec235abe",
+  "decision_sha256": "afc7d720bd015b98781833eb93fd84d6128a90d54d9ab46c99f67ba82d9b8b1b",
+  "contract_sha256": "cd5cb04e245b921c2b8928e6222c6745073f06bb92f962697e3c70d43d39daec",
+  "blocked_items": [
+    "W-041"
+  ],
+  "entries": [
+    {
+      "item_id": "W-001",
+      "original_text": "1h 30m",
+      "estimated_minutes": 90,
+      "action": "backfill"
+    },
+    {
+      "item_id": "W-002",
+      "original_text": null,
+      "estimated_minutes": null,
+      "action": "no estimate row"
+    },
+    {
+      "item_id": "W-010",
+      "original_text": "0m",
+      "estimated_minutes": 0,
+      "action": "backfill"
+    },
+    {
+      "item_id": "W-041",
+      "original_text": "1d",
+      "action": "blocked",
+      "reason": "Supply the queue owner's workday-minutes decision"
+    },
+    {
+      "item_id": "W-900",
+      "original_text": "2h",
+      "estimated_minutes": 120,
+      "action": "backfill"
+    }
+  ]
+}

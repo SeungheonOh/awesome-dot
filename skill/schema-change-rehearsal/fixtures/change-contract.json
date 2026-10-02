@@ -1,0 +1,17 @@
+{
+  "change_id": "work-estimates-v2",
+  "request": "In an isolated copy of this fictional work queue, replace work_item.estimate_text with work_estimate.estimated_minutes, keyed by the original work item ID. Retain the original text as migration provenance. Preserve owners, notes, item IDs, titles and archived state. Test recovery and old application compatibility.",
+  "source_version": 1,
+  "target_version": 2,
+  "unit": "integer minutes of estimated work",
+  "accepted_nonnull_forms": ["ASCII integer followed by m", "ASCII integer followed by h", "ASCII integer followed by h, one space, ASCII integer followed by m", "ASCII integer followed by d, after the workday decision is supplied"],
+  "whitespace": "No trimming or normalization. Preserve exact source text.",
+  "null": "Unknown estimate: create no work_estimate row; a left join must return NULL minutes.",
+  "zero": "Known zero: create a work_estimate row with estimated_minutes = 0.",
+  "archived": "Migrate archived items too; preserve archived_at exactly.",
+  "day_decision": "No default. The owner must state the number of work minutes represented by d for this source population.",
+  "constraint": "Each estimate belongs to one existing item; at most one estimate per item; minutes must be a nonnegative SQLite integer; item_id and original_text are not nullable.",
+  "provenance": "original_text records the source value at migration time; it is not a current-value down-conversion after later estimate edits.",
+  "application": "The new reader uses a left join. Old SQL that names work_item.estimate_text is expected to fail after removal; mixed-version application compatibility is not requested.",
+  "recovery": "Retain a pre-change SQLite backup. Restore it into a new isolated database and validate version-1 behavior. Demonstrate that later writes are absent from that snapshot; do not overwrite the changed branch."
+}

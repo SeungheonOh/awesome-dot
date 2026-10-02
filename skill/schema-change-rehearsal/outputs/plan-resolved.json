@@ -1,0 +1,40 @@
+{
+  "change_id": "work-estimates-v2",
+  "status": "ready",
+  "source_logical_sha256": "bed02bb7f789bb1c4b436e171d7a91fddbb00659dd073539d9c9f5f8ec235abe",
+  "decision_sha256": "4da6114a835795696487bed7e803e50b65cca07d799a8378c4d9d1b8015690a0",
+  "contract_sha256": "cd5cb04e245b921c2b8928e6222c6745073f06bb92f962697e3c70d43d39daec",
+  "blocked_items": [],
+  "entries": [
+    {
+      "item_id": "W-001",
+      "original_text": "1h 30m",
+      "estimated_minutes": 90,
+      "action": "backfill"
+    },
+    {
+      "item_id": "W-002",
+      "original_text": null,
+      "estimated_minutes": null,
+      "action": "no estimate row"
+    },
+    {
+      "item_id": "W-010",
+      "original_text": "0m",
+      "estimated_minutes": 0,
+      "action": "backfill"
+    },
+    {
+      "item_id": "W-041",
+      "original_text": "1d",
+      "estimated_minutes": 420,
+      "action": "backfill"
+    },
+    {
+      "item_id": "W-900",
+      "original_text": "2h",
+      "estimated_minutes": 120,
+      "action": "backfill"
+    }
+  ]
+}

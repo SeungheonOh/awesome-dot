@@ -1,0 +1,232 @@
+{
+  "status": "passed",
+  "runtime": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1"
+  },
+  "input_sha256": {
+    "change-contract.json": "bb97978436683866b951f9b182cfed6df13e2bc74c403238b3ad64325041e2a1",
+    "decision-pending.json": "35e00a9f4fc04bd2a87c2857264a6243ce5f54f3132b10660c2883c1d4aaa8e6",
+    "decision-resolved.json": "6650b7d297660fd21b43f3dfb84bea44bf04e68322285231875daf3855d2b4aa",
+    "expected.json": "f1e96da5934dc290e3f334fcb9452cdaf539620ef0c2d2c310de6518d43e8be4",
+    "source.sql": "8dfcdf57ec764e006091784fd88cf68b034c7e6df5b1a54812dc676cbbe4a9b6"
+  },
+  "snapshot": {
+    "method": "sqlite3.Connection.backup",
+    "source_journal_mode": "wal",
+    "source_wal_had_committed_content": true,
+    "source_wal_bytes_observed": 90672,
+    "concurrent_writers_tested": false
+  },
+  "logical_sha256": {
+    "before": "bed02bb7f789bb1c4b436e171d7a91fddbb00659dd073539d9c9f5f8ec235abe",
+    "after": "862b8211c9c3ec789bffd4a786a8eb4bdac22ded156baed816dff14667d8e1c5",
+    "failed_after_rollback": "bed02bb7f789bb1c4b436e171d7a91fddbb00659dd073539d9c9f5f8ec235abe",
+    "restored": "bed02bb7f789bb1c4b436e171d7a91fddbb00659dd073539d9c9f5f8ec235abe",
+    "later_writes": "67dde18748b6dfb22c26d9f29d6e2cc533e93d402062fc0da758bcae0d75b6e1"
+  },
+  "migration": {
+    "status": "committed",
+    "readback": [
+      {
+        "id": "W-001",
+        "title": "Parser documentation",
+        "owner_id": "team-01",
+        "archived_at": null,
+        "estimated_minutes": 90
+      },
+      {
+        "id": "W-002",
+        "title": "Export checksum",
+        "owner_id": null,
+        "archived_at": null,
+        "estimated_minutes": null
+      },
+      {
+        "id": "W-010",
+        "title": "Retry indicator",
+        "owner_id": "team-02",
+        "archived_at": null,
+        "estimated_minutes": 0
+      },
+      {
+        "id": "W-041",
+        "title": "Batch preview",
+        "owner_id": "team-01",
+        "archived_at": null,
+        "estimated_minutes": 420
+      },
+      {
+        "id": "W-900",
+        "title": "Legacy console — retained",
+        "owner_id": null,
+        "archived_at": "2026-09-15T10:00:00Z",
+        "estimated_minutes": 120
+      }
+    ],
+    "business_totals": {
+      "active": {
+        "items": 4,
+        "known_estimates": 3,
+        "unknown_estimates": 1,
+        "known_minutes": 510
+      },
+      "archived": {
+        "items": 1,
+        "known_estimates": 1,
+        "unknown_estimates": 0,
+        "known_minutes": 120
+      }
+    },
+    "integrity_check": [
+      "ok"
+    ],
+    "foreign_key_check": [],
+    "foreign_keys_enabled": true
+  },
+  "reopened_readback": {
+    "readback": [
+      {
+        "id": "W-001",
+        "title": "Parser documentation",
+        "owner_id": "team-01",
+        "archived_at": null,
+        "estimated_minutes": 90
+      },
+      {
+        "id": "W-002",
+        "title": "Export checksum",
+        "owner_id": null,
+        "archived_at": null,
+        "estimated_minutes": null
+      },
+      {
+        "id": "W-010",
+        "title": "Retry indicator",
+        "owner_id": "team-02",
+        "archived_at": null,
+        "estimated_minutes": 0
+      },
+      {
+        "id": "W-041",
+        "title": "Batch preview",
+        "owner_id": "team-01",
+        "archived_at": null,
+        "estimated_minutes": 420
+      },
+      {
+        "id": "W-900",
+        "title": "Legacy console — retained",
+        "owner_id": null,
+        "archived_at": "2026-09-15T10:00:00Z",
+        "estimated_minutes": 120
+      }
+    ],
+    "business_totals": {
+      "active": {
+        "items": 4,
+        "known_estimates": 3,
+        "unknown_estimates": 1,
+        "known_minutes": 510
+      },
+      "archived": {
+        "items": 1,
+        "known_estimates": 1,
+        "unknown_estimates": 0,
+        "known_minutes": 120
+      }
+    },
+    "integrity_check": [
+      "ok"
+    ],
+    "foreign_key_check": [],
+    "foreign_keys_enabled": true
+  },
+  "constraint_and_application_probes": [
+    {
+      "name": "orphan estimate",
+      "error": "FOREIGN KEY constraint failed",
+      "state_unchanged": true
+    },
+    {
+      "name": "negative minutes",
+      "error": "CHECK constraint failed: typeof(estimated_minutes) = 'integer' AND estimated_minutes >= 0",
+      "state_unchanged": true
+    },
+    {
+      "name": "fractional minutes",
+      "error": "CHECK constraint failed: typeof(estimated_minutes) = 'integer' AND estimated_minutes >= 0",
+      "state_unchanged": true
+    },
+    {
+      "name": "null source text",
+      "error": "NOT NULL constraint failed: work_estimate.original_text",
+      "state_unchanged": true
+    },
+    {
+      "name": "old reader",
+      "error": "no such column: estimate_text",
+      "state_unchanged": true
+    },
+    {
+      "name": "old writer",
+      "error": "no such column: estimate_text",
+      "state_unchanged": true
+    }
+  ],
+  "recovery": {
+    "method": "sqlite3.Connection.backup from pre-change snapshot into a new file",
+    "reopened_state_equals_before": true,
+    "old_reader": [
+      {
+        "id": "W-001",
+        "estimate_text": "1h 30m"
+      },
+      {
+        "id": "W-002",
+        "estimate_text": null
+      },
+      {
+        "id": "W-010",
+        "estimate_text": "0m"
+      },
+      {
+        "id": "W-041",
+        "estimate_text": "1d"
+      },
+      {
+        "id": "W-900",
+        "estimate_text": "2h"
+      }
+    ],
+    "integrity_check": [
+      "ok"
+    ],
+    "foreign_key_check": [],
+    "foreign_keys_enabled": true,
+    "later_writes_not_in_snapshot": [
+      {
+        "item_id": "W-041",
+        "field": "title",
+        "later": "Batch preview v2",
+        "restored": "Batch preview"
+      },
+      {
+        "item_id": "W-041",
+        "field": "estimated_minutes",
+        "later": 600,
+        "restored_version_has_this_column": false,
+        "restored_legacy_text": "1d",
+        "legacy_text_minutes_under_supplied_decision": 420
+      }
+    ],
+    "application_rollback_alone_compatible": false
+  },
+  "limits": [
+    "Synthetic local fixture only; no production migration or deployment occurred.",
+    "Old reader and writer fail against version 2; deploy matching application code.",
+    "Snapshot recovery omits later writes; no lossless down migration is claimed.",
+    "No crash, disk-full, concurrent-writer, load, or mixed-version rollout test was performed.",
+    "Database binaries were temporary; the saved SQL and JSON are inspection evidence."
+  ]
+}
