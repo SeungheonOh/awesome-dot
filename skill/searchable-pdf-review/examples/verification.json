@@ -1,0 +1,301 @@
+{
+  "status": "pass",
+  "scope": "Bundled fictional three-page example only",
+  "versions": {
+    "pypdf": "6.10.0",
+    "PyMuPDF_VersionBind": "1.26.6",
+    "Pillow": "12.3.0",
+    "pdftoppm": "pdftoppm version 26.05.0",
+    "pdftotext": "pdftotext version 25.03.0"
+  },
+  "files": {
+    "source-mixed.pdf": {
+      "sha256": "6d86638077a4b2ca7d9068f4fa7fb15a35da298b98f8f8d65602a834946f4020",
+      "bytes": 131892
+    },
+    "searchable-reviewed.pdf": {
+      "sha256": "7ed5b0bc648784b5d5b39ae4cbbe3906826197422258eedd2a35ac887083ddaa",
+      "bytes": 154396
+    }
+  },
+  "pages": [
+    {
+      "page": 1,
+      "effective_boxes": {
+        "mediabox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "cropbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "bleedbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "trimbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "artbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      },
+      "rotation": 0,
+      "user_unit": 1.0,
+      "geometry_equal": true,
+      "decoded_images_equal": true,
+      "decoded_images": [
+        {
+          "size_px": [
+            2125,
+            2750
+          ],
+          "mode": "RGB",
+          "decoded_samples_sha256": "318926205cc8fe34a12c4d0b29bc21d6fbad7127045c77fdbad14172e1f24876"
+        }
+      ],
+      "image_placement_equal": true,
+      "render_100dpi": {
+        "size_px": [
+          850,
+          1100
+        ],
+        "rgb_pixels_equal": true,
+        "rgb_pixels_sha256": "759bd02241dc497a1a6d5fef54c7dc6389a4d9a44c86b9ccc8bfc2e13ac3a3b7"
+      }
+    },
+    {
+      "page": 2,
+      "effective_boxes": {
+        "mediabox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "cropbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "bleedbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "trimbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "artbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      },
+      "rotation": 0,
+      "user_unit": 1.0,
+      "geometry_equal": true,
+      "decoded_images_equal": true,
+      "decoded_images": [],
+      "image_placement_equal": true,
+      "render_100dpi": {
+        "size_px": [
+          850,
+          1100
+        ],
+        "rgb_pixels_equal": true,
+        "rgb_pixels_sha256": "daff9d4463738a6e639d31fea549569dbd741cb821ebfbfe95c3baf9857dd347"
+      }
+    },
+    {
+      "page": 3,
+      "effective_boxes": {
+        "mediabox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "cropbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "bleedbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "trimbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "artbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      },
+      "rotation": 0,
+      "user_unit": 1.0,
+      "geometry_equal": true,
+      "decoded_images_equal": true,
+      "decoded_images": [],
+      "image_placement_equal": true,
+      "render_100dpi": {
+        "size_px": [
+          850,
+          1100
+        ],
+        "rgb_pixels_equal": true,
+        "rgb_pixels_sha256": "bab9ad47b95e2b13a74ea0f0a900adf93ffdb551ecd4abfa7997f77626bc748c"
+      }
+    }
+  ],
+  "whole_document_extraction": {
+    "consumers": [
+      "pypdf",
+      "PyMuPDF",
+      "Poppler pdftotext -layout"
+    ],
+    "reviewed_page_1_matches_all_authored_lines_in_order": true,
+    "native_page_2_text_and_content_stream_preserved": true,
+    "blank_page_3_text_and_content_stream_preserved": true,
+    "superseded_ocr_lines_absent": true
+  },
+  "search": [
+    {
+      "query": "O012-001",
+      "source": [],
+      "reviewed": [
+        {
+          "page": 1,
+          "rect": [
+            167.2204,
+            161.9994,
+            230.9535,
+            175.0779
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Keep labels O012 and 0012 distinct.",
+      "source": [],
+      "reviewed": [
+        {
+          "page": 1,
+          "rect": [
+            48.96,
+            252.6711,
+            282.8297,
+            265.0551
+          ]
+        }
+      ]
+    },
+    {
+      "query": "capture_001.csv",
+      "source": [],
+      "reviewed": [
+        {
+          "page": 1,
+          "rect": [
+            160.0569,
+            312.1375,
+            266.4162,
+            325.0974
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Do not reset before saving the export.",
+      "source": [],
+      "reviewed": [
+        {
+          "page": 1,
+          "rect": [
+            48.96,
+            222.7191,
+            296.3716,
+            235.1031
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Firmware floor: 2.08",
+      "source": [],
+      "reviewed": [
+        {
+          "page": 1,
+          "rect": [
+            48.96,
+            192.039,
+            179.1337,
+            205.0022
+          ]
+        }
+      ]
+    },
+    {
+      "query": "native-page-B",
+      "source": [
+        {
+          "page": 2,
+          "rect": [
+            122.841,
+            132.123,
+            214.231,
+            145.123
+          ]
+        }
+      ],
+      "reviewed": [
+        {
+          "page": 2,
+          "rect": [
+            122.841,
+            132.123,
+            214.231,
+            145.123
+          ]
+        }
+      ]
+    }
+  ],
+  "corrected_full_lines_near_source_regions": true,
+  "limitations": [
+    "Pixel equality is measured at 100 DPI with the recorded Poppler version.",
+    "Decoded image samples were compared independently of the render.",
+    "Search checks cover short single-line queries in this fixture.",
+    "Viewer UI search, clipboard copying and word-level selection were not tested.",
+    "No accessibility, PDF/A, signature or general security certification.",
+    "No forms, annotations, protected files, rotated pages or other languages were exercised."
+  ]
+}

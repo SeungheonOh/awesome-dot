@@ -1,0 +1,240 @@
+{
+  "record_date_utc": "2026-10-02",
+  "provenance": "Original fictional fixture authored for this searchable-PDF workflow. No real product manual, private document, external scan or online upload was used.",
+  "files": {
+    "source-mixed.pdf": {
+      "sha256": "6d86638077a4b2ca7d9068f4fa7fb15a35da298b98f8f8d65602a834946f4020",
+      "bytes": 131892
+    },
+    "searchable-reviewed.pdf": {
+      "sha256": "7ed5b0bc648784b5d5b39ae4cbbe3906826197422258eedd2a35ac887083ddaa",
+      "bytes": 154396
+    }
+  },
+  "authored_source": {
+    "page_1_lines": [
+      "Device setup sheet",
+      "Original fictional page for an OCR and search check",
+      "Model: LYRA-12",
+      "Device reference: O012-001",
+      "Firmware floor: 2.08",
+      "Do not reset before saving the export.",
+      "Keep labels O012 and 0012 distinct.",
+      "Connect the USB cable after the status light is steady.",
+      "Export filename: capture_001.csv",
+      "Example page 1 of 3"
+    ],
+    "page_2_lines": [
+      "Export review notes",
+      "This second page already contains native selectable text",
+      "Reference: native-page-B",
+      "Keep the original export before changing a copy.",
+      "A successful export is not a verified import.",
+      "The third page is intentionally blank.",
+      "Example page 2 of 3"
+    ],
+    "page_3": "Intentionally blank"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "source_type": "image-only",
+      "reviewed_type": "original image plus corrected invisible text",
+      "size_pt": [
+        612,
+        792
+      ],
+      "rotation": 0
+    },
+    {
+      "page": 2,
+      "source_type": "native text",
+      "reviewed_type": "native text preserved",
+      "size_pt": [
+        612,
+        792
+      ],
+      "rotation": 0
+    },
+    {
+      "page": 3,
+      "source_type": "blank",
+      "reviewed_type": "blank preserved",
+      "size_pt": [
+        612,
+        792
+      ],
+      "rotation": 0
+    }
+  ],
+  "scan_image": {
+    "size_px": [
+      2125,
+      2750
+    ],
+    "source_render_dpi": 250,
+    "bbox_convention": "hOCR pixel coordinates; origin at image upper-left"
+  },
+  "observed_tools": {
+    "OCRmyPDF": "16.7.0+dfsg1",
+    "Tesseract": "5.5.0",
+    "pypdf": "6.10.0",
+    "ReportLab": "4.4.9",
+    "PyMuPDF_VersionBind": "1.26.6"
+  },
+  "historical_ocr_commands": [
+    "ocrmypdf --skip-text --output-type pdf --optimize 0 --jobs 1 --sidecar ocr-sidecar.txt source-mixed.pdf searchable-draft.pdf",
+    "tesseract scan-page.png scan-page -l eng --psm 6 hocr"
+  ],
+  "method": "The OCRmyPDF draft and a separate Tesseract hOCR pass were preserved as intermediate evidence. A corrected invisible ReportLab text layer (render mode 3), positioned from actual hOCR line boxes and baselines, was merged onto the clean original page 1 using pypdf. Only the three recorded OCR lines were corrected. The reviewed PDF was not built by layering text onto the erroneous OCRmyPDF draft. Pages 2 and 3 were preserved.",
+  "raw_line_source": "Actual Tesseract hOCR tokens joined into lines. Extracted PDF whitespace can differ from hOCR token joining.",
+  "line_review": [
+    {
+      "line_id": "line_1_1",
+      "raw_text": "Device setup sheet",
+      "reviewed_text": "Device setup sheet",
+      "bbox_px": [
+        173,
+        139,
+        900,
+        213
+      ],
+      "correction_basis": "unchanged OCR line"
+    },
+    {
+      "line_id": "line_1_2",
+      "raw_text": "Original fictional page for an OCR and search check",
+      "reviewed_text": "Original fictional page for an OCR and search check",
+      "bbox_px": [
+        168,
+        266,
+        1155,
+        303
+      ],
+      "correction_basis": "unchanged OCR line"
+    },
+    {
+      "line_id": "line_1_3",
+      "raw_text": "Model: LYRA-12",
+      "reviewed_text": "Model: LYRA-12",
+      "bbox_px": [
+        170,
+        459,
+        515,
+        494
+      ],
+      "correction_basis": "unchanged OCR line"
+    },
+    {
+      "line_id": "line_1_4",
+      "raw_text": "Device reference: 0012-001",
+      "reviewed_text": "Device reference: O012-001",
+      "bbox_px": [
+        170,
+        563,
+        802,
+        598
+      ],
+      "correction_basis": "original fictional source text and rendered source page"
+    },
+    {
+      "line_id": "line_1_5",
+      "raw_text": "Firmware floor: 2.08",
+      "reviewed_text": "Firmware floor: 2.08",
+      "bbox_px": [
+        170,
+        667,
+        622,
+        702
+      ],
+      "correction_basis": "unchanged OCR line"
+    },
+    {
+      "line_id": "line_1_6",
+      "raw_text": "Do not reset before saving the export.",
+      "reviewed_text": "Do not reset before saving the export.",
+      "bbox_px": [
+        170,
+        771,
+        1029,
+        814
+      ],
+      "correction_basis": "unchanged OCR line"
+    },
+    {
+      "line_id": "line_1_7",
+      "raw_text": "Keep labels 0012 and 0012 distinct.",
+      "reviewed_text": "Keep labels O012 and 0012 distinct.",
+      "bbox_px": [
+        170,
+        875,
+        982,
+        918
+      ],
+      "correction_basis": "original fictional source text and rendered source page"
+    },
+    {
+      "line_id": "line_1_8",
+      "raw_text": "Connect the USB cable after the status light is steady.",
+      "reviewed_text": "Connect the USB cable after the status light is steady.",
+      "bbox_px": [
+        169,
+        979,
+        1389,
+        1022
+      ],
+      "correction_basis": "unchanged OCR line"
+    },
+    {
+      "line_id": "line_1_9",
+      "raw_text": "Export filename: capture _001.csv",
+      "reviewed_text": "Export filename: capture_001.csv",
+      "bbox_px": [
+        170,
+        1084,
+        925,
+        1129
+      ],
+      "correction_basis": "original fictional source text and rendered source page"
+    },
+    {
+      "line_id": "line_1_10",
+      "raw_text": "Example page 1 of 3",
+      "reviewed_text": "Example page 1 of 3",
+      "bbox_px": [
+        169,
+        2557,
+        522,
+        2590
+      ],
+      "correction_basis": "unchanged OCR line"
+    }
+  ],
+  "review_scope": "All ten short page-1 lines were checked against original authored wording and rendered source. The three changes have that source support. Native page and blank page were checked separately. A source lacking this evidence must retain unresolved readings rather than copy these corrections.",
+  "original_draft_search_observation": {
+    "consumer": "PyMuPDF 1.26.6",
+    "missing_on_page_1": [
+      "O012-001",
+      "Keep labels O012 and 0012 distinct.",
+      "capture_001.csv"
+    ],
+    "present_on_page_1": [
+      "Do not reset before saving the export."
+    ],
+    "present_on_page_2": [
+      "native-page-B"
+    ],
+    "note": "Observed on the actual intermediate OCRmyPDF draft. That intermediate is not included; the portable checker rechecks only the included source and reviewed artifacts."
+  },
+  "publication": "The two PDFs and preview are byte-for-byte copies of the original example artifacts. PDF metadata contains fictional titles and no personal author. Intermediate files are omitted.",
+  "not_tested": [
+    "viewer UI search",
+    "clipboard copying",
+    "word-level selection",
+    "accessibility or screen readers",
+    "signed or protected files",
+    "forms or annotations",
+    "rotated/cropped pages",
+    "other languages"
+  ]
+}
