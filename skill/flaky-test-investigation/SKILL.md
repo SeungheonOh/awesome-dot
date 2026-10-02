@@ -110,3 +110,5 @@ Use calibrated completion language: “the order assumption was repaired and the
 ## Worked example
 
 Read [example.md](example.md) for a fictional unordered-record response whose test accidentally requires list order. Run `python3 check_example.py` from this folder to compare the original assertion with a multiplicity-preserving repair, execute every permutation of the small fixture, and prove invalid records still fail. [example-results.json](example-results.json) contains the actual local outcomes, denominator, seeds, implementation digests and environment. The demonstration makes no claim about a live repository or CI service.
+
+For a product-logic concurrency defect, read [the controlled lost-addition companion](concurrency/example.md). It keeps the exact-total assertion while comparing a shared-lock repair under forced interleavings and ordinary local runs. The actual result ledger separates expected before-repair failures from runner errors and bounds the repair to one owner on one event loop.

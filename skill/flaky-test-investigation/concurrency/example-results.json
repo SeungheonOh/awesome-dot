@@ -1,0 +1,2425 @@
+{
+  "scope": "Original fictional local asyncio tally; one loop, one tally owner, no external services",
+  "command": "python3 -B check_concurrency.py",
+  "source_files_sha256": {
+    "check_concurrency.py": "b9ad2793fabbce0f7427777cb1aefad60952edaaeecf983cae27c314db954a78",
+    "tally_before.py": "950df702707b6a629faecc3a62cf106094e8da8b74fbb051ecee123db2907c3a",
+    "tally_after.py": "539db8035d893234d4154f7a1ec6ed4ff85d0c389376fed55092a71c3cbbf4b0"
+  },
+  "product_sources_sha256": {
+    "before": "1dc4408bb841e7464585853522c7528e7f50f5422c2c2fa2b56b85b61db1d67b",
+    "after": "8e0b0466d9bad66e97c5e5679cc9d6d06a23c5fb1173790fe2045a6b89fc6092"
+  },
+  "correctness_assertion_sha256": "64270142765279df699769ba0c63af6899be1ad6622ce3ac9ff2a27afbb01bea",
+  "fixture_sha256": "9d29819e12b6f9f3ed64460f44dc3906cad6a0157c53847413bd00cb8f5a8b64",
+  "environment": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "os": "Linux",
+    "machine": "x86_64",
+    "optimization": 0,
+    "dependencies": "standard library only",
+    "event_loop": "_UnixSelectorEventLoop",
+    "workers": "two asyncio worker tasks on one thread",
+    "randomness": "none; no seeds",
+    "clock": "monotonic timeout only; no sleeps",
+    "timezone_locale": "not used"
+  },
+  "budget": {
+    "planned": 26,
+    "attempts_per_slot": 1,
+    "hidden_retries": 0,
+    "case_timeout_seconds": 5,
+    "invalid_total_controls": 4,
+    "stop": "Finish fixed plan, or stop concurrency cases on timeout/cancellation/runner error",
+    "planned_cases": [
+      {
+        "slot": 1,
+        "revision": "before",
+        "mode": "serial",
+        "order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "slot": 2,
+        "revision": "before",
+        "mode": "serial",
+        "order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "slot": 3,
+        "revision": "before",
+        "mode": "controlled",
+        "order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "slot": 4,
+        "revision": "before",
+        "mode": "controlled",
+        "order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "slot": 5,
+        "revision": "before",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 1
+      },
+      {
+        "slot": 6,
+        "revision": "before",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 2
+      },
+      {
+        "slot": 7,
+        "revision": "before",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 3
+      },
+      {
+        "slot": 8,
+        "revision": "before",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 4
+      },
+      {
+        "slot": 9,
+        "revision": "before",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 5
+      },
+      {
+        "slot": 10,
+        "revision": "before",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 6
+      },
+      {
+        "slot": 11,
+        "revision": "before",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 7
+      },
+      {
+        "slot": 12,
+        "revision": "before",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 8
+      },
+      {
+        "slot": 13,
+        "revision": "after",
+        "mode": "serial",
+        "order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "slot": 14,
+        "revision": "after",
+        "mode": "serial",
+        "order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "slot": 15,
+        "revision": "after",
+        "mode": "controlled",
+        "order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "slot": 16,
+        "revision": "after",
+        "mode": "controlled",
+        "order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "slot": 17,
+        "revision": "after",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 1
+      },
+      {
+        "slot": 18,
+        "revision": "after",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 2
+      },
+      {
+        "slot": 19,
+        "revision": "after",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 3
+      },
+      {
+        "slot": 20,
+        "revision": "after",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 4
+      },
+      {
+        "slot": 21,
+        "revision": "after",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 5
+      },
+      {
+        "slot": 22,
+        "revision": "after",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 6
+      },
+      {
+        "slot": 23,
+        "revision": "after",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 7
+      },
+      {
+        "slot": 24,
+        "revision": "after",
+        "mode": "ordinary",
+        "order": [
+          "A",
+          "B"
+        ],
+        "repetition": 8
+      },
+      {
+        "slot": 25,
+        "revision": "per_call_lock",
+        "mode": "controlled",
+        "order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "slot": 26,
+        "revision": "write_only_lock",
+        "mode": "controlled",
+        "order": [
+          "A",
+          "B"
+        ]
+      }
+    ]
+  },
+  "ledger": {
+    "attempted": 26,
+    "completed_comparisons": 26,
+    "assertion_pass": 14,
+    "assertion_fail": 12,
+    "runner_error": 0,
+    "timeout": 0,
+    "cancelled": 0,
+    "unrun": [],
+    "skipped": 0
+  },
+  "groups": {
+    "before/serial": {
+      "attempted": 2,
+      "completed_comparisons": 2,
+      "assertion_pass": 2,
+      "assertion_fail": 0,
+      "runner_error": 0,
+      "timeout": 0,
+      "cancelled": 0
+    },
+    "before/controlled": {
+      "attempted": 2,
+      "completed_comparisons": 2,
+      "assertion_pass": 0,
+      "assertion_fail": 2,
+      "runner_error": 0,
+      "timeout": 0,
+      "cancelled": 0
+    },
+    "before/ordinary": {
+      "attempted": 8,
+      "completed_comparisons": 8,
+      "assertion_pass": 0,
+      "assertion_fail": 8,
+      "runner_error": 0,
+      "timeout": 0,
+      "cancelled": 0
+    },
+    "after/serial": {
+      "attempted": 2,
+      "completed_comparisons": 2,
+      "assertion_pass": 2,
+      "assertion_fail": 0,
+      "runner_error": 0,
+      "timeout": 0,
+      "cancelled": 0
+    },
+    "after/controlled": {
+      "attempted": 2,
+      "completed_comparisons": 2,
+      "assertion_pass": 2,
+      "assertion_fail": 0,
+      "runner_error": 0,
+      "timeout": 0,
+      "cancelled": 0
+    },
+    "after/ordinary": {
+      "attempted": 8,
+      "completed_comparisons": 8,
+      "assertion_pass": 8,
+      "assertion_fail": 0,
+      "runner_error": 0,
+      "timeout": 0,
+      "cancelled": 0
+    },
+    "per_call_lock/controlled": {
+      "attempted": 1,
+      "completed_comparisons": 1,
+      "assertion_pass": 0,
+      "assertion_fail": 1,
+      "runner_error": 0,
+      "timeout": 0,
+      "cancelled": 0
+    },
+    "write_only_lock/controlled": {
+      "attempted": 1,
+      "completed_comparisons": 1,
+      "assertion_pass": 0,
+      "assertion_fail": 1,
+      "runner_error": 0,
+      "timeout": 0,
+      "cancelled": 0
+    }
+  },
+  "runs": [
+    {
+      "slot": 1,
+      "revision": "before",
+      "mode": "serial",
+      "order": [
+        "A",
+        "B"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 5,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 2,
+      "revision": "before",
+      "mode": "serial",
+      "order": [
+        "B",
+        "A"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 2,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "read",
+          "value": 10
+        },
+        {
+          "sequence": 7,
+          "actor": "A",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "A",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 3,
+      "revision": "before",
+      "mode": "controlled",
+      "order": [
+        "A",
+        "B"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 9,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "A",
+          "step": "pause_after_read"
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 5,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 8,
+          "actor": "controller",
+          "step": "release_first",
+          "reason": "second_completed_while_first_paused"
+        },
+        {
+          "sequence": 9,
+          "actor": "A",
+          "step": "resume_after_read"
+        },
+        {
+          "sequence": 10,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 11,
+          "actor": "A",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 9",
+      "schedule_check": "passed",
+      "observed_branch": "second_completed_while_first_paused",
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 4,
+      "revision": "before",
+      "mode": "controlled",
+      "order": [
+        "B",
+        "A"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 2,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "pause_after_read"
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 8,
+          "actor": "controller",
+          "step": "release_first",
+          "reason": "second_completed_while_first_paused"
+        },
+        {
+          "sequence": 9,
+          "actor": "B",
+          "step": "resume_after_read"
+        },
+        {
+          "sequence": 10,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 11,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "passed",
+      "observed_branch": "second_completed_while_first_paused",
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 5,
+      "revision": "before",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 1,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 6,
+      "revision": "before",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 2,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 7,
+      "revision": "before",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 3,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 8,
+      "revision": "before",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 4,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 9,
+      "revision": "before",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 5,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 10,
+      "revision": "before",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 6,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 11,
+      "revision": "before",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 7,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 12,
+      "revision": "before",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 8,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 10,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 10",
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 13,
+      "revision": "after",
+      "mode": "serial",
+      "order": [
+        "A",
+        "B"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 5,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 14,
+      "revision": "after",
+      "mode": "serial",
+      "order": [
+        "B",
+        "A"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 2,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "read",
+          "value": 10
+        },
+        {
+          "sequence": 7,
+          "actor": "A",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "A",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 15,
+      "revision": "after",
+      "mode": "controlled",
+      "order": [
+        "A",
+        "B"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "lock_attempt",
+          "observed_locked": false
+        },
+        {
+          "sequence": 3,
+          "actor": "A",
+          "step": "lock_acquired"
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "pause_after_read"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "lock_attempt",
+          "observed_locked": true
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "lock_contended"
+        },
+        {
+          "sequence": 9,
+          "actor": "controller",
+          "step": "release_first",
+          "reason": "second_contended_on_held_lock"
+        },
+        {
+          "sequence": 10,
+          "actor": "A",
+          "step": "resume_after_read"
+        },
+        {
+          "sequence": 11,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 12,
+          "actor": "A",
+          "step": "lock_released"
+        },
+        {
+          "sequence": 13,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 14,
+          "actor": "B",
+          "step": "lock_acquired"
+        },
+        {
+          "sequence": 15,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 16,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 17,
+          "actor": "B",
+          "step": "lock_released"
+        },
+        {
+          "sequence": 18,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "passed",
+      "observed_branch": "second_contended_on_held_lock",
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 16,
+      "revision": "after",
+      "mode": "controlled",
+      "order": [
+        "B",
+        "A"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 2,
+          "actor": "B",
+          "step": "lock_attempt",
+          "observed_locked": false
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "lock_acquired"
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 5,
+          "actor": "B",
+          "step": "pause_after_read"
+        },
+        {
+          "sequence": 6,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 7,
+          "actor": "A",
+          "step": "lock_attempt",
+          "observed_locked": true
+        },
+        {
+          "sequence": 8,
+          "actor": "A",
+          "step": "lock_contended"
+        },
+        {
+          "sequence": 9,
+          "actor": "controller",
+          "step": "release_first",
+          "reason": "second_contended_on_held_lock"
+        },
+        {
+          "sequence": 10,
+          "actor": "B",
+          "step": "resume_after_read"
+        },
+        {
+          "sequence": 11,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 12,
+          "actor": "B",
+          "step": "lock_released"
+        },
+        {
+          "sequence": 13,
+          "actor": "B",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 14,
+          "actor": "A",
+          "step": "lock_acquired"
+        },
+        {
+          "sequence": 15,
+          "actor": "A",
+          "step": "read",
+          "value": 10
+        },
+        {
+          "sequence": 16,
+          "actor": "A",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 17,
+          "actor": "A",
+          "step": "lock_released"
+        },
+        {
+          "sequence": 18,
+          "actor": "A",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "passed",
+      "observed_branch": "second_contended_on_held_lock",
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 17,
+      "revision": "after",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 1,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 18,
+      "revision": "after",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 2,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 19,
+      "revision": "after",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 3,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 20,
+      "revision": "after",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 4,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 21,
+      "revision": "after",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 5,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 22,
+      "revision": "after",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 6,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 23,
+      "revision": "after",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 7,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 24,
+      "revision": "after",
+      "mode": "ordinary",
+      "order": [
+        "A",
+        "B"
+      ],
+      "repetition": 8,
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 12,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 4,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 5,
+          "actor": "A",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "read",
+          "value": 9
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "write",
+          "value": 12
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "call_completed"
+        }
+      ],
+      "detail": null,
+      "schedule_check": "not_applicable",
+      "observed_branch": null,
+      "outcome": "assertion_pass"
+    },
+    {
+      "slot": 25,
+      "revision": "per_call_lock",
+      "mode": "controlled",
+      "order": [
+        "A",
+        "B"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 9,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "A",
+          "step": "pause_after_read"
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 5,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 8,
+          "actor": "controller",
+          "step": "release_first",
+          "reason": "second_completed_while_first_paused"
+        },
+        {
+          "sequence": 9,
+          "actor": "A",
+          "step": "resume_after_read"
+        },
+        {
+          "sequence": 10,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 11,
+          "actor": "A",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 9",
+      "schedule_check": "not_applicable",
+      "observed_branch": "second_completed_while_first_paused",
+      "outcome": "assertion_fail"
+    },
+    {
+      "slot": 26,
+      "revision": "write_only_lock",
+      "mode": "controlled",
+      "order": [
+        "A",
+        "B"
+      ],
+      "attempt": 1,
+      "initial": 7,
+      "additions": {
+        "A": 2,
+        "B": 3
+      },
+      "expected": 12,
+      "actual": 9,
+      "trace": [
+        {
+          "sequence": 1,
+          "actor": "A",
+          "step": "call_started",
+          "amount": 2
+        },
+        {
+          "sequence": 2,
+          "actor": "A",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 3,
+          "actor": "A",
+          "step": "pause_after_read"
+        },
+        {
+          "sequence": 4,
+          "actor": "B",
+          "step": "call_started",
+          "amount": 3
+        },
+        {
+          "sequence": 5,
+          "actor": "B",
+          "step": "read",
+          "value": 7
+        },
+        {
+          "sequence": 6,
+          "actor": "B",
+          "step": "lock_attempt",
+          "observed_locked": false
+        },
+        {
+          "sequence": 7,
+          "actor": "B",
+          "step": "lock_acquired"
+        },
+        {
+          "sequence": 8,
+          "actor": "B",
+          "step": "write",
+          "value": 10
+        },
+        {
+          "sequence": 9,
+          "actor": "B",
+          "step": "lock_released"
+        },
+        {
+          "sequence": 10,
+          "actor": "B",
+          "step": "call_completed"
+        },
+        {
+          "sequence": 11,
+          "actor": "controller",
+          "step": "release_first",
+          "reason": "second_completed_while_first_paused"
+        },
+        {
+          "sequence": 12,
+          "actor": "A",
+          "step": "resume_after_read"
+        },
+        {
+          "sequence": 13,
+          "actor": "A",
+          "step": "lock_attempt",
+          "observed_locked": false
+        },
+        {
+          "sequence": 14,
+          "actor": "A",
+          "step": "lock_acquired"
+        },
+        {
+          "sequence": 15,
+          "actor": "A",
+          "step": "write",
+          "value": 9
+        },
+        {
+          "sequence": 16,
+          "actor": "A",
+          "step": "lock_released"
+        },
+        {
+          "sequence": 17,
+          "actor": "A",
+          "step": "call_completed"
+        }
+      ],
+      "detail": "Lost or extra addition: expected 12, got 9",
+      "schedule_check": "not_applicable",
+      "observed_branch": "second_completed_while_first_paused",
+      "outcome": "assertion_fail"
+    }
+  ],
+  "invalid_total_controls": [
+    {
+      "name": "lost_A",
+      "actual": 10,
+      "outcome": "assertion_fail",
+      "detail": "Lost or extra addition: expected 12, got 10"
+    },
+    {
+      "name": "lost_B",
+      "actual": 9,
+      "outcome": "assertion_fail",
+      "detail": "Lost or extra addition: expected 12, got 9"
+    },
+    {
+      "name": "extra_addition",
+      "actual": 13,
+      "outcome": "assertion_fail",
+      "detail": "Lost or extra addition: expected 12, got 13"
+    },
+    {
+      "name": "wrong_type",
+      "actual": "12",
+      "outcome": "assertion_fail",
+      "detail": "The stored total must be an integer"
+    }
+  ],
+  "checks": {
+    "source_files_unchanged": true,
+    "problems": [],
+    "verified": true
+  },
+  "limits": [
+    "Controlled schedules are chosen witnesses, not a probability estimate or exhaustive schedule search",
+    "Ordinary runs have no controller or observed lock, but still use the same synthetic async store",
+    "The repair covers a single owner on one event loop, not other instances, threads, processes, or external writers",
+    "No live repository, CI, network, throughput, fairness, or product cancellation guarantee was tested",
+    "Timeouts bound cooperative fixture waits; cancellation cleanup can exceed the nominal deadline"
+  ]
+}
