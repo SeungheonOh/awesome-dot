@@ -47,12 +47,20 @@ Name the action sequence, expected ownership, observed divergence and exact test
 
 ## Worked example
 
-The supplied trace is: Play starts session A; AudioContext.resume remains pending; Stop invalidatesA; Play starts session B and schedules its first notes; thenA’s resume promise rejects. The observed bug is thatA’s catch handler calls a global Stop and silencesB.
+The supplied trace is: Play starts session A; AudioContext.resume remains pending; Stop invalidates A; Play starts session B and schedules its first notes; then A’s resume promise rejects. The observed bug is that A’s catch handler calls a global Stop and silences B.
 
-The diagnosis is stale-session cleanup, not an incorrect tempo. The proposed authorized fix checksA’s generation before changing current playback and cleans up onlyA-owned sources. The regression reproduces this exact resolution order and requiresB to remain active. A separate test resolvesA successfully after Stop and requires no restarted sources.
+The diagnosis is stale-session cleanup, not an incorrect tempo. The proposed authorized fix checks A’s generation before changing current playback and cleans up only A-owned sources. The regression reproduces this exact resolution order and requires B to remain active. A separate test resolves A successfully after Stop and requires no restarted sources.
 
 Mocked promise/source tests establish lifecycle behavior for this sequence. The report still leaves real-device latency and audible quality unverified until those checks are performed.
 
 ## Evidence status
 
 The worked example illustrates the stated inputs and reasoning. Unless an execution result is explicitly identified, it is not a claim that external services, real devices or user data were tested. Report actual checks and unrun stages on each use.
+
+## Executed synthetic checks
+
+A bounded two-tone scheduler was exercised with mocked AudioContext methods on Node 24.19. One test held resume pending, called Stop, then resolved resume; no oscillator was created. Another let a newer session schedule its tones, then rejected the older resume; the current status and newer sources remained unchanged. Stop disconnected all owned sources.
+
+A clock check placed two tones 0.85 seconds apart using the same audio-clock origin and verified oscillator frequencies of 440 Hz and 880 Hz. Simulated-interface checks required an explicit Play before answering, counted only the first answer, and preserved usable practice when browser storage failed. No microphone, real device, audible output or real-browser layout was verified by these tests.
+
+For short bounded phrases, scheduling the complete phrase against one audio-clock origin can be appropriate; a repeating or unbounded sequencer needs a bounded lookahead strategy. Do not add a timer loop merely to satisfy the form of the workflow.
