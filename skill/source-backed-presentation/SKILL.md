@@ -1,11 +1,11 @@
 ---
 name: source-backed-presentation
-description: "Turn an approved source packet into an audience-specific editable deck with full slide copy, evidence links, speaker notes and honest slide-by-slide verification."
+description: "Turn an approved source packet into an audience-specific editable presentation with complete slide content, traceable evidence and honest slide-by-slide verification."
 ---
 
-# Make a Source-Backed Decision Deck
+# Make a Source-Backed Presentation
 
-Use this when someone needs an actual presentation from approved notes, rather than advice about slide topics. Deliver the editable deck, the source map and any requested preview. A written script is useful supporting material but does not replace the deck.
+Use this when someone needs an actual presentation from approved notes, rather than advice about slide topics. Deliver the editable deck and any requested preview or supporting material. Keep sources traceable through suitable slide references, notes or a source map without requiring every form for every deck. A written script is useful supporting material but does not replace the deck.
 
 This workflow handles the editorial and evidence decisions that connect a packet of notes to a finished presentation. Use the available presentation authoring and inspection capability for the file itself. Do not install software or use a new service merely because an example mentions a format.
 
@@ -20,8 +20,8 @@ If the audience or requested decision is missing and materially changes the pres
 ## Build the argument and evidence together
 
 1. State the specific takeaway the evidence can support. Identify any recommendation separately from observed findings. Do not turn a proposal into an accepted commitment
-2. Assign each slide a purpose and write its complete title, visible copy and notes. Use a supported factual title for a finding and a direct subject title for background or a proposal. Include the actual decision early when the audience can make it
-3. Maintain a claim map: exact claim, source locator, observed/derived/proposed/unknown, calculation if any, and required caveat. Link important claims in the notes and use a readable slide-level source marker. Preserve the original source packet
+2. Assign each slide a purpose and write its complete title and visible copy. Add speaker notes when requested or useful for the intended presentation mode; a self-contained quick reference need not become a talk script. Use a supported factual title for a finding and a direct subject title for background or a proposal. Include the actual decision early when the audience can make it
+3. Keep important claims traceable to their source, status, calculation if any, and required caveat. A claim map is useful for complex evidence; simple slides may need only exact source locators. Use readable slide references and notes where they serve the audience, and preserve the original source packet
 4. Recalculate derived values from inspected inputs. Keep populations, units, denominators, windows, rounding and uncertainty visible. A change in sample medians does not mean every case changed. Proposed budgets, caps and targets are not measured outcomes
 5. Reject unsupported claims explicitly in the working record. If a claim drives the recommendation, narrow or remove the recommendation, or ask for missing evidence. Never invent a statistic, quote, causal story or citation to complete a narrative
 
@@ -37,13 +37,13 @@ Build accessibility into the source:
 
 - Use meaningful slide titles and logical reading order, with native title placeholders where possible
 - Set legible text and chart labels, adequate contrast and sufficient spacing. Label evidence directly so color carries no meaning alone
-- Put a text description of essential chart values and interpretation in the notes and companion transcript
+- Provide a text description of essential chart values and interpretation where the audience can use it, such as visible text, speaker notes or a requested transcript
 - Add concise alternative text for informative visuals when the format supports it. Check the exported accessibility metadata and the target application's reading order where available
 - Keep decorative assets separate from evidence. Never use an invented image as proof of an event or a real product state
 
-Keep caveats that alter interpretation on the slide. Use notes for definitions, calculations, context and talking points, not a second unsupported narrative. Include source links in the notes when supported. Otherwise include exact source locators plus a linked companion source map and disclose that links are not interactive. Do not invent a public URL for a local source.
+Keep caveats that alter interpretation on the slide. When notes are used, put definitions, calculations, context and talking points there, not a second unsupported narrative. Place source references where they fit the requested file: readable slide footers, notes, or a companion source map when needed. Use actual links when supported and useful; exact locators can be enough for a compact reference deck. Distinguish a locator from a tested interactive link, and do not invent a public URL for a local source.
 
-Create the native file and speaker notes, export it, and retain the authored source specification. If authoring is unavailable, return the complete slide script and the precise file-creation blocker. Label that result a script, not a completed deck. If only export or rendering is blocked, preserve the actual deck and say exactly what remains unchecked.
+Create the native file with the requested or useful supporting material, export it, and retain the authored source specification. If authoring is unavailable, return the complete slide script and the precise file-creation blocker. Label that result a script, not a completed deck. If only export or rendering is blocked, preserve the actual deck and say exactly what remains unchecked.
 
 ## Verify the exact export
 
@@ -65,7 +65,7 @@ Return the actual editable deck through the authorized destination, with the req
 
 Creating a deck does not authorize sending it, publishing it, changing audience access, uploading it to a new service or implementing its recommendation. Obtain the specific file, recipient/audience and permission authority before those actions. Check sensitive-data approval before placing it in a shared original. Existing authorization covers ordinary in-scope creation, saves and verification without redundant questions.
 
-Stop when the authorized artifact exists, the evidence is reconciled, every available check has run and remaining limitations are clear. A materially missing source, destination permission or required capability is a blocker for the dependent step, not a reason to invent completion.
+Stop when the authorized artifact exists, the evidence is reconciled, the relevant available checks have run and remaining limitations are clear. A materially missing source, destination permission or required capability is a blocker for the dependent step, not a reason to invent completion.
 
 ## Worked example
 
