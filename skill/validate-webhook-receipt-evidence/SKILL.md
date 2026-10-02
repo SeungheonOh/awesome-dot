@@ -29,6 +29,14 @@ Use an existing authorized authentication path; synthetic fixtures can test vali
 
 Treat authentication, deduplication, persistence and processing as separate checkpoints. A receiver 200 response may establish acceptance under that endpoint’s contract, but it does not prove a downstream job committed its business action. Inspect the actual durable receipt and processing result only within the granted scope.
 
+### Keep a filtered review in one scope
+
+When reviewing retained receipts, record the exact event/repository filters, case sensitivity, ordering and cursor semantics. Keep those filters fixed while paging; a cursor from another filter does not establish complete coverage. Distinguish a global retained count from the number of matching records actually reviewed.
+
+Treat an edited filter as an unreviewed view until its request succeeds. Do not export old rows under a new filter label or combine pages from different request generations. A failed current query should leave a concrete error, not a successful-looking previous result. Include applied filters and observation/export time in the evidence artifact where appropriate.
+
+For example, an exact repository filter can return zero retained receipts while the receiver's global counter shows105. Those statements are compatible. They do not prove that the repository never sent a delivery: spelling/case, retention pruning and missing coverage must be considered. Unknown or repeated query parameters should be surfaced rather than silently changing the intended scope.
+
 ## Output
 
 A bounded receipt/authentication assessment, duplicate/conflict findings, retained evidence fields and unresolved downstream status.
