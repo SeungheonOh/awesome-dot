@@ -1,0 +1,73 @@
+{
+  "scope": "Only the five newly generated files in fictional-files",
+  "authority": "Move the separate copy to Review, verify it, then restore it; no deletion",
+  "before_files": [
+    {
+      "path": "Downloads/export-copy.csv",
+      "device": 27,
+      "inode": 534471,
+      "link_count": 1,
+      "logical_bytes": 8192,
+      "allocated_512_byte_blocks": 16,
+      "reported_allocated_bytes": 8192,
+      "mtime_ns": 1790910104208703602,
+      "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+    },
+    {
+      "path": "Downloads/export-linked.csv",
+      "device": 27,
+      "inode": 534470,
+      "link_count": 2,
+      "logical_bytes": 8192,
+      "allocated_512_byte_blocks": 16,
+      "reported_allocated_bytes": 8192,
+      "mtime_ns": 1790910104208642159,
+      "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+    },
+    {
+      "path": "Downloads/scratch-capture.bin",
+      "device": 27,
+      "inode": 534473,
+      "link_count": 1,
+      "logical_bytes": 65536,
+      "allocated_512_byte_blocks": 8,
+      "reported_allocated_bytes": 4096,
+      "mtime_ns": 1790910104208783642,
+      "sha256": "deadaa19a847ebe17739fdbb95c26161ea95f4e6c5fed5a151b097991136ef30"
+    },
+    {
+      "path": "Projects/current-export.csv",
+      "device": 27,
+      "inode": 534470,
+      "link_count": 2,
+      "logical_bytes": 8192,
+      "allocated_512_byte_blocks": 16,
+      "reported_allocated_bytes": 8192,
+      "mtime_ns": 1790910104208642159,
+      "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+    },
+    {
+      "path": "Projects/keep-notes.txt",
+      "device": 27,
+      "inode": 534472,
+      "link_count": 1,
+      "logical_bytes": 42,
+      "allocated_512_byte_blocks": 8,
+      "reported_allocated_bytes": 4096,
+      "mtime_ns": 1790910104208758815,
+      "sha256": "6cb467e0bf6e1bb4e885ee99046c3c0b6f8e3a8b45603a1823d194fd91af5538"
+    }
+  ],
+  "ordered_actions": [
+    {
+      "source": "Downloads/export-copy.csv",
+      "destination": "Review/export-copy.csv"
+    },
+    {
+      "source": "Review/export-copy.csv",
+      "destination": "Downloads/export-copy.csv"
+    }
+  ],
+  "expected_payload_bytes_freed": 0,
+  "recovery": "Inspect both names and compare the saved identity and digest before any retry or reversal"
+}

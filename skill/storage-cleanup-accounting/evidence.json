@@ -1,0 +1,323 @@
+{
+  "scope": "Five generated regular-file paths; Linux fixture only",
+  "environment": {
+    "system": "Linux",
+    "python": "3.12.14",
+    "filesystem_type": "overlayfs",
+    "tools": {
+      "du": "du (GNU coreutils) 9.7",
+      "stat": "stat (GNU coreutils) 9.7"
+    }
+  },
+  "before": {
+    "observed_at_utc": "2026-10-02T03:01:44.211133+00:00",
+    "files": [
+      {
+        "path": "Downloads/export-copy.csv",
+        "device": 27,
+        "inode": 534471,
+        "link_count": 1,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208703602,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      {
+        "path": "Downloads/export-linked.csv",
+        "device": 27,
+        "inode": 534470,
+        "link_count": 2,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208642159,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      {
+        "path": "Downloads/scratch-capture.bin",
+        "device": 27,
+        "inode": 534473,
+        "link_count": 1,
+        "logical_bytes": 65536,
+        "allocated_512_byte_blocks": 8,
+        "reported_allocated_bytes": 4096,
+        "mtime_ns": 1790910104208783642,
+        "sha256": "deadaa19a847ebe17739fdbb95c26161ea95f4e6c5fed5a151b097991136ef30"
+      },
+      {
+        "path": "Projects/current-export.csv",
+        "device": 27,
+        "inode": 534470,
+        "link_count": 2,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208642159,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      {
+        "path": "Projects/keep-notes.txt",
+        "device": 27,
+        "inode": 534472,
+        "link_count": 1,
+        "logical_bytes": 42,
+        "allocated_512_byte_blocks": 8,
+        "reported_allocated_bytes": 4096,
+        "mtime_ns": 1790910104208758815,
+        "sha256": "6cb467e0bf6e1bb4e885ee99046c3c0b6f8e3a8b45603a1823d194fd91af5538"
+      }
+    ],
+    "totals": {
+      "regular_file_paths": 5,
+      "distinct_file_inodes": 4,
+      "logical_bytes_summed_by_path": 90154,
+      "logical_bytes_counted_once_per_inode": 81962,
+      "reported_allocated_bytes_summed_by_path": 32768,
+      "reported_allocated_bytes_counted_once_per_inode": 24576
+    },
+    "volume": {
+      "device": 27,
+      "fragment_bytes": 4096,
+      "available_fragments": 7744435,
+      "available_bytes": 31721205760
+    },
+    "gnu_du_explicit_files_bytes": "8192\tDownloads/export-copy.csv\n8192\tDownloads/export-linked.csv\n4096\tDownloads/scratch-capture.bin\n4096\tProjects/keep-notes.txt\n24576\ttotal",
+    "gnu_du_explicit_files_apparent_bytes": "8192\tDownloads/export-copy.csv\n8192\tDownloads/export-linked.csv\n65536\tDownloads/scratch-capture.bin\n42\tProjects/keep-notes.txt\n81962\ttotal"
+  },
+  "after_move": {
+    "observed_at_utc": "2026-10-02T03:01:44.213484+00:00",
+    "files": [
+      {
+        "path": "Downloads/export-linked.csv",
+        "device": 27,
+        "inode": 534470,
+        "link_count": 2,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208642159,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      {
+        "path": "Downloads/scratch-capture.bin",
+        "device": 27,
+        "inode": 534473,
+        "link_count": 1,
+        "logical_bytes": 65536,
+        "allocated_512_byte_blocks": 8,
+        "reported_allocated_bytes": 4096,
+        "mtime_ns": 1790910104208783642,
+        "sha256": "deadaa19a847ebe17739fdbb95c26161ea95f4e6c5fed5a151b097991136ef30"
+      },
+      {
+        "path": "Projects/current-export.csv",
+        "device": 27,
+        "inode": 534470,
+        "link_count": 2,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208642159,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      {
+        "path": "Projects/keep-notes.txt",
+        "device": 27,
+        "inode": 534472,
+        "link_count": 1,
+        "logical_bytes": 42,
+        "allocated_512_byte_blocks": 8,
+        "reported_allocated_bytes": 4096,
+        "mtime_ns": 1790910104208758815,
+        "sha256": "6cb467e0bf6e1bb4e885ee99046c3c0b6f8e3a8b45603a1823d194fd91af5538"
+      },
+      {
+        "path": "Review/export-copy.csv",
+        "device": 27,
+        "inode": 534471,
+        "link_count": 1,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208703602,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      }
+    ],
+    "totals": {
+      "regular_file_paths": 5,
+      "distinct_file_inodes": 4,
+      "logical_bytes_summed_by_path": 90154,
+      "logical_bytes_counted_once_per_inode": 81962,
+      "reported_allocated_bytes_summed_by_path": 32768,
+      "reported_allocated_bytes_counted_once_per_inode": 24576
+    },
+    "volume": {
+      "device": 27,
+      "fragment_bytes": 4096,
+      "available_fragments": 7744435,
+      "available_bytes": 31721205760
+    },
+    "gnu_du_explicit_files_bytes": "8192\tDownloads/export-linked.csv\n4096\tDownloads/scratch-capture.bin\n4096\tProjects/keep-notes.txt\n8192\tReview/export-copy.csv\n24576\ttotal",
+    "gnu_du_explicit_files_apparent_bytes": "8192\tDownloads/export-linked.csv\n65536\tDownloads/scratch-capture.bin\n42\tProjects/keep-notes.txt\n8192\tReview/export-copy.csv\n81962\ttotal"
+  },
+  "after_restore": {
+    "observed_at_utc": "2026-10-02T03:01:44.215786+00:00",
+    "files": [
+      {
+        "path": "Downloads/export-copy.csv",
+        "device": 27,
+        "inode": 534471,
+        "link_count": 1,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208703602,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      {
+        "path": "Downloads/export-linked.csv",
+        "device": 27,
+        "inode": 534470,
+        "link_count": 2,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208642159,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      {
+        "path": "Downloads/scratch-capture.bin",
+        "device": 27,
+        "inode": 534473,
+        "link_count": 1,
+        "logical_bytes": 65536,
+        "allocated_512_byte_blocks": 8,
+        "reported_allocated_bytes": 4096,
+        "mtime_ns": 1790910104208783642,
+        "sha256": "deadaa19a847ebe17739fdbb95c26161ea95f4e6c5fed5a151b097991136ef30"
+      },
+      {
+        "path": "Projects/current-export.csv",
+        "device": 27,
+        "inode": 534470,
+        "link_count": 2,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208642159,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      {
+        "path": "Projects/keep-notes.txt",
+        "device": 27,
+        "inode": 534472,
+        "link_count": 1,
+        "logical_bytes": 42,
+        "allocated_512_byte_blocks": 8,
+        "reported_allocated_bytes": 4096,
+        "mtime_ns": 1790910104208758815,
+        "sha256": "6cb467e0bf6e1bb4e885ee99046c3c0b6f8e3a8b45603a1823d194fd91af5538"
+      }
+    ],
+    "totals": {
+      "regular_file_paths": 5,
+      "distinct_file_inodes": 4,
+      "logical_bytes_summed_by_path": 90154,
+      "logical_bytes_counted_once_per_inode": 81962,
+      "reported_allocated_bytes_summed_by_path": 32768,
+      "reported_allocated_bytes_counted_once_per_inode": 24576
+    },
+    "volume": {
+      "device": 27,
+      "fragment_bytes": 4096,
+      "available_fragments": 7744435,
+      "available_bytes": 31721205760
+    },
+    "gnu_du_explicit_files_bytes": "8192\tDownloads/export-copy.csv\n8192\tDownloads/export-linked.csv\n4096\tDownloads/scratch-capture.bin\n4096\tProjects/keep-notes.txt\n24576\ttotal",
+    "gnu_du_explicit_files_apparent_bytes": "8192\tDownloads/export-copy.csv\n8192\tDownloads/export-linked.csv\n65536\tDownloads/scratch-capture.bin\n42\tProjects/keep-notes.txt\n81962\ttotal"
+  },
+  "journal": [
+    {
+      "operation": "same-filesystem rename",
+      "source": "Downloads/export-copy.csv",
+      "destination": "Review/export-copy.csv",
+      "before": {
+        "path": "Downloads/export-copy.csv",
+        "device": 27,
+        "inode": 534471,
+        "link_count": 1,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208703602,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      "after": {
+        "path": "Review/export-copy.csv",
+        "device": 27,
+        "inode": 534471,
+        "link_count": 1,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208703602,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      "source_absent": true,
+      "content_and_inode_preserved": true,
+      "status": "verified",
+      "observed_at_utc": "2026-10-02T03:01:44.213478+00:00"
+    },
+    {
+      "operation": "same-filesystem rename",
+      "source": "Review/export-copy.csv",
+      "destination": "Downloads/export-copy.csv",
+      "before": {
+        "path": "Review/export-copy.csv",
+        "device": 27,
+        "inode": 534471,
+        "link_count": 1,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208703602,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      "after": {
+        "path": "Downloads/export-copy.csv",
+        "device": 27,
+        "inode": 534471,
+        "link_count": 1,
+        "logical_bytes": 8192,
+        "allocated_512_byte_blocks": 16,
+        "reported_allocated_bytes": 8192,
+        "mtime_ns": 1790910104208703602,
+        "sha256": "40622fd91a1a3e834987837fef71eeb21cbb5a6bdb30f0772184f3ad50f126dd"
+      },
+      "source_absent": true,
+      "content_and_inode_preserved": true,
+      "status": "verified",
+      "observed_at_utc": "2026-10-02T03:01:44.215780+00:00"
+    }
+  ],
+  "verification": {
+    "independent_copy_same_bytes": true,
+    "hard_link_same_inode": true,
+    "sparse_allocation_observed": true,
+    "move_readback": true,
+    "restore_readback": true,
+    "other_files_preserved": true,
+    "collision_rejected_without_overwrite": true,
+    "gnu_du_totals_agree": true
+  },
+  "accounting": {
+    "requested_additional_available_bytes": 8192,
+    "regular_file_reported_allocation_reduction_bytes": 0,
+    "observed_volume_available_delta_after_move_bytes": 0,
+    "observed_volume_available_delta_after_restore_bytes": 0,
+    "attributable_payload_bytes_freed_by_rename": 0,
+    "target_met_by_this_action": false,
+    "caution": "Volume deltas can include unrelated activity and directory metadata; they are not attributed savings. Inode-deduplicated allocation is not exclusive physical usage."
+  }
+}
