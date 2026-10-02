@@ -15,7 +15,7 @@ Identify from the request and available evidence:
 
 - The exact artifact or source candidate, expected distribution name/version, permitted local workspace, and intended delivery format
 - The user's installation method and target operating system, architecture, runtime and dependency expectations
-- One real public workflow with a concrete input and observable result, plus the packaged resource it depends on
+- One real public workflow with a concrete input and observable result, including any required packaged resource or module-loading relationship
 - Whether the request authorizes verification only, building, installing in a disposable environment, or repairing and rebuilding a copy
 - Where to preserve the original and write the checked artifact and evidence
 
@@ -67,7 +67,7 @@ Exclude development leakage deliberately. For Python:
 
 Do not make the source unavailable by deleting, renaming or changing permissions on a real checkout. Import-path and origin evidence should establish the boundary without destructive preparation. Environment isolation reduces contamination; it does not sandbox an unknown program.
 
-Run the consumer workflow that needs the required data, not just `--help`, `--version` or an empty import. Compare actual output, exit status and relevant installed bytes with the established contract. Add a nearby boundary only when it tests something meaningful, such as a non-ASCII input or invalid option. Keep the observation scoped: one successful Linux CLI run cannot establish Windows wrapper behavior, GUI operation, upgrade compatibility or all documented features.
+Run the consumer workflow that exercises the required resource or module-loading behavior. A `--help`, `--version` or empty-import check alone does not establish that behavior. Compare actual output, exit status and relevant installed bytes with the established contract. Add a nearby boundary only when it tests something meaningful, such as a non-ASCII input or invalid option. Keep the observation scoped: one successful Linux CLI run cannot establish Windows wrapper behavior, GUI operation, upgrade compatibility or all documented features.
 
 ## Diagnose and, only if requested, repair
 
@@ -89,7 +89,7 @@ Install the new artifact in another fresh environment and rerun the same consume
 Return the requested actual artifact, not only a recommendation document. If no candidate passed, preserve the received artifact and explicitly label it rejected or unverified. Include a compact verification note with:
 
 - Exact filename, distribution version, byte size, SHA-256 and build/source relationship
-- Packaging membership and required-resource evidence
+- Packaging membership, entry-point and required-resource evidence
 - Installation command, environment and installed provenance
 - Public invocation, input, output, exit status and stage-by-stage verdicts
 - Preserved baseline failure and authorized repair, if any
@@ -103,13 +103,15 @@ Stop when the identified artifact's scoped consumer contract has an evidenced re
 
 [The Packet Stamp example](EXAMPLE.md) preserves an original source fixture, a wheel that omits its required JSON data, a two-line packaging repair, and the checked wheel. Both wheels install and report version `0.3.0`; only one can format a label from outside the checkout. [The verification note](VERIFICATION.md) records actual hashes, commands, contents and limits.
 
-The adjacent helpers are intentionally restricted to this reviewed original fixture. Read their scope in the example before running them. They create new output directories, use the existing toolchain, install only the local fixture into disposable environments, and preserve the source inputs. They are not generic installers for arbitrary supplied wheels.
+[The Switchboard Registry companion](javascript/README.md) tests a JavaScript package whose ESM and CommonJS branches work alone but violate an explicit shared-state contract when combined. It verifies both load orders from exact offline-installed tarballs; a one-file repair makes both entries share the same core.
+
+The example helpers are intentionally restricted to their respective reviewed original fixtures. Read their scope in the example before running them. They create new output directories, use the existing toolchain, install only the local fixture into disposable environments, and preserve the source inputs. They are not generic installers for arbitrary supplied packages.
 
 ## Example request
 
 ```text
 Check [EXACT LOCAL ARTIFACT] as a fresh user of [PUBLIC COMMAND] on [TARGET].
-Verify [EXPECTED INPUT/OUTPUT] and the required [BUNDLED RESOURCE]. Preserve
+Verify [EXPECTED INPUT/OUTPUT] and the required [BUNDLED RESOURCE OR LOADING CONTRACT]. Preserve
 the received bytes and report the artifact's exact version, size and SHA-256.
 Inspect its packaging, install this reviewed package only in a new disposable
 local environment with the existing permitted tools, and run outside the source

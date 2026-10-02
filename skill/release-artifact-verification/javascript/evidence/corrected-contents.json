@@ -1,0 +1,27 @@
+{
+  "size": 687,
+  "sha256": "cfe9b1895f1592b49f3af939055fb5e0d2449e3d02fd428135114a275eb904ca",
+  "members": [
+    {
+      "member": "package/core.cjs",
+      "size": 400,
+      "sha256": "e056b37e9232a0b12b92e53942778ed25d3c6d31b3aa99632fc2fabe73af87a8"
+    },
+    {
+      "member": "package/index.cjs",
+      "size": 54,
+      "sha256": "849884cbc4bd2b48bce706264840b5f2d01bf5690533141d2a9f5fd1b37cb46b"
+    },
+    {
+      "member": "package/index.mjs",
+      "size": 151,
+      "sha256": "85ba6bfd12641ba7c7d1bf0edce5ff2d17edf8000a26b22b05bf88a060e45262"
+    },
+    {
+      "member": "package/package.json",
+      "size": 373,
+      "sha256": "cbbf0059d7467d6e9c42847aa0a5fc62d39364e8d07cfc78520d247375b055b1"
+    }
+  ],
+  "artifact": "artifacts/corrected/switchboard-registry-demo-0.4.0.tgz"
+}

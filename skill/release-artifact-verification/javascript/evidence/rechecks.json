@@ -1,0 +1,181 @@
+{
+  "bundled_artifact_recheck": {
+    "mode": "verify-bundled",
+    "runtime": {
+      "node": "v24.19.0",
+      "npm": "11.9.0",
+      "python": "3.12.14",
+      "platform": "linux",
+      "architecture": "x86_64",
+      "environment": {
+        "inherited_names": [
+          "PATH"
+        ],
+        "literal": {
+          "LANG": "C.UTF-8"
+        },
+        "all_other_variables_omitted": true
+      }
+    },
+    "candidates": {
+      "rejected": {
+        "artifact": "artifacts/rejected/switchboard-registry-demo-0.4.0.tgz",
+        "size": 669,
+        "sha256": "0100c3ac89308f153d172dc49cdd0f721d0f83a012c7fc855fac3d3cd5b7d6af",
+        "archive_members": 4,
+        "installation": "pass",
+        "standalone_modes": "pass",
+        "mixed_modes": "fail"
+      },
+      "corrected": {
+        "artifact": "artifacts/corrected/switchboard-registry-demo-0.4.0.tgz",
+        "size": 687,
+        "sha256": "cfe9b1895f1592b49f3af939055fb5e0d2449e3d02fd428135114a275eb904ca",
+        "archive_members": 4,
+        "installation": "pass",
+        "standalone_modes": "pass",
+        "mixed_modes": "pass"
+      }
+    },
+    "result": "expected rejected failures and corrected contract passes observed"
+  },
+  "independent_consumer_sha256": "035e3e651dcdc27d2a974d6c34116d87f7d6f5aa022b6e6e5a86fc8d2449aa24",
+  "changed_input": {
+    "seed": "独立レビュー-Δ-🙂",
+    "inserted_suffix_order": [
+      ":z",
+      ":a"
+    ],
+    "expected_sorted_suffix_order": [
+      ":a",
+      ":z"
+    ],
+    "invalid_registration_inputs": [
+      "",
+      0
+    ]
+  },
+  "observations": [
+    {
+      "candidate": "rejected",
+      "mode": "import-only",
+      "expected_exit": 0,
+      "exit": 0,
+      "failed_checks": [],
+      "contract_pass": true
+    },
+    {
+      "candidate": "rejected",
+      "mode": "require-only",
+      "expected_exit": 0,
+      "exit": 0,
+      "failed_checks": [],
+      "contract_pass": true
+    },
+    {
+      "candidate": "rejected",
+      "mode": "import-first",
+      "expected_exit": 1,
+      "exit": 1,
+      "failed_checks": [
+        "first_write_visible_to_second",
+        "names_agree",
+        "replacement_visible_to_first",
+        "second_write_visible_to_first"
+      ],
+      "contract_pass": false
+    },
+    {
+      "candidate": "rejected",
+      "mode": "require-first",
+      "expected_exit": 1,
+      "exit": 1,
+      "failed_checks": [
+        "first_write_visible_to_second",
+        "names_agree",
+        "replacement_visible_to_first",
+        "second_write_visible_to_first"
+      ],
+      "contract_pass": false
+    },
+    {
+      "candidate": "corrected",
+      "mode": "import-only",
+      "expected_exit": 0,
+      "exit": 0,
+      "failed_checks": [],
+      "contract_pass": true
+    },
+    {
+      "candidate": "corrected",
+      "mode": "require-only",
+      "expected_exit": 0,
+      "exit": 0,
+      "failed_checks": [],
+      "contract_pass": true
+    },
+    {
+      "candidate": "corrected",
+      "mode": "import-first",
+      "expected_exit": 0,
+      "exit": 0,
+      "failed_checks": [],
+      "contract_pass": true
+    },
+    {
+      "candidate": "corrected",
+      "mode": "require-first",
+      "expected_exit": 0,
+      "exit": 0,
+      "failed_checks": [],
+      "contract_pass": true
+    },
+    {
+      "candidate": "restored-defect",
+      "mode": "import-first",
+      "expected_exit": 1,
+      "exit": 1,
+      "failed_checks": [
+        "first_write_visible_to_second",
+        "names_agree",
+        "replacement_visible_to_first",
+        "second_write_visible_to_first"
+      ],
+      "contract_pass": false
+    },
+    {
+      "candidate": "restored-defect",
+      "mode": "require-first",
+      "expected_exit": 1,
+      "exit": 1,
+      "failed_checks": [
+        "first_write_visible_to_second",
+        "names_agree",
+        "replacement_visible_to_first",
+        "second_write_visible_to_first"
+      ],
+      "contract_pass": false
+    }
+  ],
+  "negative_control": {
+    "source": "corrected installed package copied into an independent consumer",
+    "only_changed_package_member": "index.mjs",
+    "replacement": "original rejected fixture bytes",
+    "replacement_sha256": "60bf753c5b549109cd74e3e4fc4d8e52a90f3788d3442c2bfb3c1634ca207f7d",
+    "not_an_installation_test": true
+  },
+  "no_clobber": {
+    "expected_exit": 1,
+    "exit": 1,
+    "exception": "FileExistsError: Output already exists; choose a new directory",
+    "sentinel_sha256_before": "81e65a6a274ccb502665d3b1b9eff237a270d708dc65bdf6a4830dd2c901442b",
+    "sentinel_sha256_after": "81e65a6a274ccb502665d3b1b9eff237a270d708dc65bdf6a4830dd2c901442b",
+    "existing_tree_unchanged": true
+  },
+  "preserved_inputs": {
+    "checked_file_count": 25,
+    "all_bytes_unchanged": true
+  },
+  "provenance_issues": [],
+  "result": "pass"
+}

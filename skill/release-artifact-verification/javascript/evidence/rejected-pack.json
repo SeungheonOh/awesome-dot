@@ -1,0 +1,36 @@
+[
+  {
+    "id": "switchboard-registry-demo@0.4.0",
+    "name": "switchboard-registry-demo",
+    "version": "0.4.0",
+    "size": 669,
+    "unpackedSize": 1248,
+    "shasum": "20c323a64316fa858345bb6cccae21386c1464dc",
+    "integrity": "sha512-laSArXjBxm4an9VRFb1wol3vrTaNO4fUCdbm8rAkmme/5ymC0uHmqEueCZ51bvSqkoaCXh1fQxxS2w+DGBGAhw==",
+    "filename": "switchboard-registry-demo-0.4.0.tgz",
+    "files": [
+      {
+        "path": "core.cjs",
+        "size": 400,
+        "mode": 420
+      },
+      {
+        "path": "index.cjs",
+        "size": 54,
+        "mode": 420
+      },
+      {
+        "path": "index.mjs",
+        "size": 421,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 373,
+        "mode": 420
+      }
+    ],
+    "entryCount": 4,
+    "bundled": []
+  }
+]
