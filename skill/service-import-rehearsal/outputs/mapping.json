@@ -1,0 +1,57 @@
+[
+  {
+    "source": "external_id",
+    "target": "external_id",
+    "type": "text",
+    "create_requirement": "required",
+    "update_requirement": "required",
+    "blank_on_create": "reject",
+    "blank_on_update": "reject",
+    "rule_source": "import-contract.json",
+    "conversion": "Exact text identity; no coercion or normalization"
+  },
+  {
+    "source": "target_id",
+    "target": "record_id",
+    "type": "text",
+    "create_requirement": "omit",
+    "update_requirement": "optional identity cross-check",
+    "blank_on_create": "no existing record ID",
+    "blank_on_update": "resolve by external_id",
+    "rule_source": "import-contract.json",
+    "conversion": "Exact target ID; must agree with external_id"
+  },
+  {
+    "source": "display_name",
+    "target": "label",
+    "type": "text",
+    "create_requirement": "required",
+    "update_requirement": "optional",
+    "blank_on_create": "reject",
+    "blank_on_update": "preserve",
+    "rule_source": "import-contract.json",
+    "conversion": "Exact text; clear token is rejected"
+  },
+  {
+    "source": "lifecycle",
+    "target": "status",
+    "type": "text",
+    "create_requirement": "optional",
+    "update_requirement": "optional",
+    "blank_on_create": "default active",
+    "blank_on_update": "preserve",
+    "rule_source": "import-contract.json",
+    "conversion": "Exact active or retired; no aliases"
+  },
+  {
+    "source": "note",
+    "target": "details",
+    "type": "nullable text",
+    "create_requirement": "optional",
+    "update_requirement": "optional",
+    "blank_on_create": "null",
+    "blank_on_update": "preserve",
+    "rule_source": "import-contract.json",
+    "conversion": "Clear token sets null; other text is literal"
+  }
+]

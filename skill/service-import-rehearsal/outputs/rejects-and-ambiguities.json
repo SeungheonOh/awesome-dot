@@ -1,0 +1,121 @@
+[
+  {
+    "source_id": "S006",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S006",
+    "source_record_ordinal": 6,
+    "raw": {
+      "external_id": "0101",
+      "target_id": "",
+      "display_name": "Test relay",
+      "lifecycle": "sleeping",
+      "note": ""
+    },
+    "disposition": "reject",
+    "reason": "unsupported_status"
+  },
+  {
+    "source_id": "S007",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S007",
+    "source_record_ordinal": 7,
+    "raw": {
+      "external_id": "0102",
+      "target_id": "",
+      "display_name": "",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "reject",
+    "reason": "create_requires_label"
+  },
+  {
+    "source_id": "S008",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S008",
+    "source_record_ordinal": 8,
+    "raw": {
+      "external_id": "0200",
+      "target_id": "",
+      "display_name": "Packet mirror",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "duplicate_target_identity",
+    "candidates": [
+      "F-107",
+      "F-108"
+    ]
+  },
+  {
+    "source_id": "S009",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S009",
+    "source_record_ordinal": 9,
+    "raw": {
+      "external_id": "0300",
+      "target_id": "",
+      "display_name": "Conflicting A",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "conflicting_source_identity"
+  },
+  {
+    "source_id": "S010",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S010",
+    "source_record_ordinal": 10,
+    "raw": {
+      "external_id": "0300",
+      "target_id": "",
+      "display_name": "Conflicting B",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "conflicting_source_identity"
+  },
+  {
+    "source_id": "S011",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S011",
+    "source_record_ordinal": 11,
+    "raw": {
+      "external_id": "0009",
+      "target_id": "F-105",
+      "display_name": "Wrong pointer",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "external_and_internal_identity_disagree",
+    "candidates": [
+      "F-104"
+    ]
+  },
+  {
+    "source_id": "S012",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S012",
+    "source_record_ordinal": 12,
+    "raw": {
+      "external_id": "",
+      "target_id": "",
+      "display_name": "Missing identity",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "reject",
+    "reason": "missing_external_id"
+  },
+  {
+    "source_id": "S016",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S016",
+    "source_record_ordinal": 16,
+    "raw": {
+      "external_id": "0500",
+      "target_id": "",
+      "display_name": "Unseen on first page",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "identity_lookup_incomplete"
+  }
+]

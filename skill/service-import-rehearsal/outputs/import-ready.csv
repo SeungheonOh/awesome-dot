@@ -1,0 +1,7 @@
+source_id,operation,external_id,record_id,expected_revision,idempotency_key,label,status,details
+S002,update,0042,F-102,v7,op-ac672a6d1164a36fa3f5a903adde0762d347b45d4fbea367990c6b1d88193ebd,"Build cache, east",,__CLEAR__
+S003,create,0099,,,op-a761a4b92f6bf76fad8f2eab74f545f99c748010578caa6c2fbe645fc52115a4,CI spool,active,"R&D; café
+rack B"
+S004,create,0100,,,op-2f4d96a5b5b5fdef1ad77a37ef12bcd9820f4de1488315b212c2ade32865cc17,=VERSION(),active,@queue
+S013,create,0400,,,op-14898630450d6f55e68bf140394d24fd77550b578f1429bd95f7754c529c6443,Rack Z,active,new
+S015,update,0006,F-106,v4,op-fd40f637cea1ac654e4c49b209c6819d76c16bd9c302ef154e05607a326cc397,Worker 🧪,,__CLEAR__

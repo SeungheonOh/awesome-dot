@@ -1,0 +1,15 @@
+{
+  "destination": "synthetic-account/asset-registry",
+  "adapter": "fictional-asset-registry-v1",
+  "inputs": {
+    "import-contract.json": "2fca41606076c5adb1a3dc244ba0116be2ac0b81f684a85bb6ba34225f591ec4",
+    "source.csv": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f",
+    "target-before.json": "686136fc9b4cb5efcfb3a307029ec6a4484ee4dccbe005824403cbacc71d0963",
+    "partial-result.json": "da5973966eab92f2cde22ea186435a7eaed204b0d8a5e502eb279afbf8b395a4"
+  },
+  "source_id_namespace": "source SHA-256 plus logical CSV record ordinal",
+  "import_ready_sha256": "15a20affbd89d522b2ac21a11b14c2ecd42369510ee78553105019eb19bd0eba",
+  "snapshot_revision": "catalog-r17",
+  "retrieved_at": "2026-01-12T09:59:00Z",
+  "same_key_retry_candidate_sha256": "db6a13d2050de0102eedb140166006f7d22017bd0408d79840171c991d81a176"
+}

@@ -1,0 +1,21 @@
+{
+  "source_records": 16,
+  "counts": {
+    "create": 3,
+    "update": 2,
+    "no-op": 3,
+    "reject": 3,
+    "ambiguous": 5
+  },
+  "import_ready_records": 5,
+  "source_accounting_pass": true,
+  "import_accounting_pass": true,
+  "saved_csv_roundtrip_pass": true,
+  "source_unchanged_pass": true,
+  "target_export_complete": false,
+  "coverage_limit": "Only listed complete exact-key lookups establish match cardinality or current absence.",
+  "unresolved_lookup_source_ids": [
+    "S016"
+  ],
+  "live_write_performed": false
+}

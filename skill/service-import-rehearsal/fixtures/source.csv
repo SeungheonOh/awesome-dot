@@ -1,0 +1,18 @@
+external_id,target_id,display_name,lifecycle,note
+0007,F-101,Build runner α,active,
+0042,F-102,"Build cache, east",active,__CLEAR__
+0099,,CI spool,active,"R&D; café
+rack B"
+0100,,=VERSION(),active,@queue
+0008,,,retired,
+0101,,Test relay,sleeping,
+0102,,,active,
+0200,,Packet mirror,active,
+0300,,Conflicting A,active,
+0300,,Conflicting B,active,
+0009,F-105,Wrong pointer,active,
+,,Missing identity,active,
+0400,,Rack Z,active,new
+0400,,Rack Z,active,new
+0006,F-106,Worker 🧪,,__CLEAR__
+0500,,Unseen on first page,active,

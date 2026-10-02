@@ -1,0 +1,21 @@
+{
+  "fictional": true,
+  "destination": "synthetic-account/asset-registry",
+  "batch_outcome": "connection_lost_after_partial_response",
+  "submitted_at": "2026-01-12T10:00:00Z",
+  "evaluated_at": "2026-01-12T10:01:00Z",
+  "idempotency_retention_hours": 24,
+  "binding": "Synthetic evidence refers to source record ordinals S001 through S016 in the supplied source.csv. The helper binds these fixture-only receipts to the generated immutable operations; real receipts must independently identify the actual submitted job and operations.",
+  "receipts": [
+    {"source_id":"S002","result":"applied","record_id":"F-102"},
+    {"source_id":"S003","result":"applied","record_id":"F-201"},
+    {"source_id":"S013","result":"rejected","error":"label_locked_by_collection_rule"}
+  ],
+  "exact_readback": {
+    "0042": {"complete":true,"records":[{"record_id":"F-102","external_id":"0042","label":"Build cache, east","status":"active","details":null,"revision":"v8"}]},
+    "0099": {"complete":true,"records":[{"record_id":"F-201","external_id":"0099","label":"CI spool","status":"active","details":"R&D; café\nrack B","revision":"v1"}]},
+    "0100": {"complete":true,"records":[]},
+    "0400": {"complete":true,"records":[]},
+    "0006": {"complete":true,"records":[{"record_id":"F-106","external_id":"0006","label":"Manual edit","status":"retired","details":"keep","revision":"v5"}]}
+  }
+}

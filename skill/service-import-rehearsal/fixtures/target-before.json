@@ -1,0 +1,32 @@
+{
+  "fictional": true,
+  "destination": "synthetic-account/asset-registry",
+  "snapshot_revision": "catalog-r17",
+  "retrieved_at": "2026-01-12T09:59:00Z",
+  "export_complete": false,
+  "export_coverage": "First page only; continuation was not fetched. Exact-key lookups below are authoritative independently of export completeness.",
+  "records": [
+    {"record_id":"F-101","external_id":"0007","label":"Build runner α","status":"active","details":"preserve me","revision":"v3"},
+    {"record_id":"F-102","external_id":"0042","label":"Build cache, west","status":"active","details":"old rack","revision":"v7"},
+    {"record_id":"F-103","external_id":"0008","label":"Legacy runner","status":"retired","details":"keep","revision":"v2"},
+    {"record_id":"F-104","external_id":"0009","label":"Spare bridge","status":"active","details":null,"revision":"v1"},
+    {"record_id":"F-105","external_id":"0900","label":"Other bridge","status":"active","details":null,"revision":"v4"},
+    {"record_id":"F-106","external_id":"0006","label":"Worker old","status":"retired","details":"keep","revision":"v4"},
+    {"record_id":"F-107","external_id":"0200","label":"Mirror one","status":"active","details":null,"revision":"v1"},
+    {"record_id":"F-108","external_id":"0200","label":"Mirror two","status":"retired","details":null,"revision":"v2"}
+  ],
+  "exact_lookups": {
+    "0007": {"complete":true,"record_ids":["F-101"]},
+    "0042": {"complete":true,"record_ids":["F-102"]},
+    "0099": {"complete":true,"record_ids":[]},
+    "0100": {"complete":true,"record_ids":[]},
+    "0008": {"complete":true,"record_ids":["F-103"]},
+    "0101": {"complete":true,"record_ids":[]},
+    "0102": {"complete":true,"record_ids":[]},
+    "0200": {"complete":true,"record_ids":["F-107","F-108"]},
+    "0300": {"complete":true,"record_ids":[]},
+    "0009": {"complete":true,"record_ids":["F-104"]},
+    "0400": {"complete":true,"record_ids":[]},
+    "0006": {"complete":true,"record_ids":["F-106"]}
+  }
+}

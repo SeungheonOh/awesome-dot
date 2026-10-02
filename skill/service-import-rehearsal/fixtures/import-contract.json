@@ -1,0 +1,26 @@
+{
+  "fictional": true,
+  "adapter": "fictional-asset-registry-v1",
+  "destination": "synthetic-account/asset-registry",
+  "source_headers": ["external_id", "target_id", "display_name", "lifecycle", "note"],
+  "mapping": {
+    "external_id": "external_id",
+    "target_id": "record_id",
+    "display_name": "label",
+    "lifecycle": "status",
+    "note": "details"
+  },
+  "identity": "Exact external_id within destination, including archived records; no trim, case folding, numeric conversion or Unicode normalization. A supplied record_id must match that same identity. Multiple matches are ambiguous.",
+  "allowed_status": ["active", "retired"],
+  "clear_token": "__CLEAR__",
+  "create_default_status": "active",
+  "create_rules": "Nonempty external_id and label required. Empty details becomes null. Empty status becomes active. Clear token is allowed only for details and means null; it cannot represent literal text.",
+  "update_rules": "Empty mutable cells mean leave unchanged. Clear token in details sets null. Label and status cannot be cleared. Only supplied changed values are sent. Every update requires an exact expected_revision.",
+  "text_behavior": "All cells are UTF-8 text; formula-like strings are stored literally and never evaluated. No whitespace or Unicode normalization.",
+  "exact_source_duplicate_rule": "Identical repeated source records in this synthetic object export are duplicated representations of one object. Keep the first representative and preserve later source lineage as duplicate-suppressed no-op. Conflicting repeats all remain ambiguous.",
+  "lookup_rules": "Only a complete exact-key lookup in the same destination and identity scope proves match cardinality or current absence. The general export is truncated. Lookup evidence includes archived records. A lookup and its expanded records are a coherent fictional snapshot.",
+  "import_headers": ["source_id", "operation", "external_id", "record_id", "expected_revision", "idempotency_key", "label", "status", "details"],
+  "import_rules": "One operation per external_id. Creates enforce unique external_id atomically. Updates require expected_revision. Rows apply independently and may partially succeed; no notifications or external side effects. Success receipts contain source_id and record_id.",
+  "retry_rules": "Same destination, same idempotency_key and byte-equivalent payload replay returns the original result without new effects for 24 hours after initial submission. Changed payload under a used key is rejected. Keys are checked before update revision conditions. Never invent a new key to recover a lost response. The fixture is evaluated one minute after submission.",
+  "readback_rules": "Exact-key readback is strongly consistent and complete when complete is true. Matching state plus success receipt confirms applied. Matching state without receipt confirms desired state only. Missing state with no terminal receipt may be retried using the same valid key under the stated replay guarantees; that does not prove it was never applied. Conflicting state is held. Record IDs and revisions are service generated."
+}

@@ -1,0 +1,112 @@
+{
+  "evidence_kind": "synthetic, offline; no submission or retry performed",
+  "batch_outcome": "connection_lost_after_partial_response",
+  "evaluated_at": "2026-01-12T10:01:00Z",
+  "counts": {
+    "confirmed_applied": 2,
+    "safe_same_key_retry": 1,
+    "confirmed_rejected": 1,
+    "hold_conflict": 1
+  },
+  "operations": [
+    {
+      "source_id": "S002",
+      "idempotency_key": "op-ac672a6d1164a36fa3f5a903adde0762d347b45d4fbea367990c6b1d88193ebd",
+      "payload_sha256": "0c90eca2f142fd14c3b065e356611d8c9bff90cda309edfa283397208054eb70",
+      "status": "confirmed_applied",
+      "reason": "Success receipt and exact readback agree; exclude from retries.",
+      "receipt": {
+        "source_id": "S002",
+        "result": "applied",
+        "record_id": "F-102"
+      },
+      "readback": {
+        "complete": true,
+        "records": [
+          {
+            "record_id": "F-102",
+            "external_id": "0042",
+            "label": "Build cache, east",
+            "status": "active",
+            "details": null,
+            "revision": "v8"
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "S003",
+      "idempotency_key": "op-a761a4b92f6bf76fad8f2eab74f545f99c748010578caa6c2fbe645fc52115a4",
+      "payload_sha256": "b9e9d2e78ce1cbd857db7459f236bb6c266a4296ed97d3e402fb3785ad33f410",
+      "status": "confirmed_applied",
+      "reason": "Success receipt and exact readback agree; exclude from retries.",
+      "receipt": {
+        "source_id": "S003",
+        "result": "applied",
+        "record_id": "F-201"
+      },
+      "readback": {
+        "complete": true,
+        "records": [
+          {
+            "record_id": "F-201",
+            "external_id": "0099",
+            "label": "CI spool",
+            "status": "active",
+            "details": "R&D; café\nrack B",
+            "revision": "v1"
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "S004",
+      "idempotency_key": "op-2f4d96a5b5b5fdef1ad77a37ef12bcd9820f4de1488315b212c2ade32865cc17",
+      "payload_sha256": "eaab2c8952aa1176291329a9e6daf62470086abf2c0f107e4f2af6e2501cf720",
+      "status": "safe_same_key_retry",
+      "reason": "Complete lookup is empty; replay is within documented retention with the identical payload/key and atomic uniqueness. Earlier application is not disproved.",
+      "receipt": null,
+      "readback": {
+        "complete": true,
+        "records": []
+      }
+    },
+    {
+      "source_id": "S013",
+      "idempotency_key": "op-14898630450d6f55e68bf140394d24fd77550b578f1429bd95f7754c529c6443",
+      "payload_sha256": "71cbbd2b2864a5b3b51d90381216053486e1104a6d2c72ff36a2c830587c393a",
+      "status": "confirmed_rejected",
+      "reason": "Service rejected: label_locked_by_collection_rule; revise and rehearse before resubmission.",
+      "receipt": {
+        "source_id": "S013",
+        "result": "rejected",
+        "error": "label_locked_by_collection_rule"
+      },
+      "readback": {
+        "complete": true,
+        "records": []
+      }
+    },
+    {
+      "source_id": "S015",
+      "idempotency_key": "op-fd40f637cea1ac654e4c49b209c6819d76c16bd9c302ef154e05607a326cc397",
+      "payload_sha256": "b84753fd8f3e333a67690ad7955062f18df4e55e2be8a91c26a6a96ce41ba162",
+      "status": "hold_conflict",
+      "reason": "State differs, identity is duplicated, or replay protection expired; no automatic retry.",
+      "receipt": null,
+      "readback": {
+        "complete": true,
+        "records": [
+          {
+            "record_id": "F-106",
+            "external_id": "0006",
+            "label": "Manual edit",
+            "status": "retired",
+            "details": "keep",
+            "revision": "v5"
+          }
+        ]
+      }
+    }
+  ]
+}

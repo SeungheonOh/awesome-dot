@@ -1,0 +1,374 @@
+[
+  {
+    "source_id": "S001",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S001",
+    "source_record_ordinal": 1,
+    "raw": {
+      "external_id": "0007",
+      "target_id": "F-101",
+      "display_name": "Build runner α",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "no-op",
+    "reason": "target_already_has_intended_values",
+    "before": {
+      "record_id": "F-101",
+      "external_id": "0007",
+      "label": "Build runner α",
+      "status": "active",
+      "details": "preserve me",
+      "revision": "v3"
+    },
+    "intended": {
+      "external_id": "0007",
+      "label": "Build runner α",
+      "status": "active",
+      "details": "preserve me"
+    }
+  },
+  {
+    "source_id": "S002",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S002",
+    "source_record_ordinal": 2,
+    "raw": {
+      "external_id": "0042",
+      "target_id": "F-102",
+      "display_name": "Build cache, east",
+      "lifecycle": "active",
+      "note": "__CLEAR__"
+    },
+    "disposition": "update",
+    "reason": "field_differences",
+    "before": {
+      "record_id": "F-102",
+      "external_id": "0042",
+      "label": "Build cache, west",
+      "status": "active",
+      "details": "old rack",
+      "revision": "v7"
+    },
+    "intended": {
+      "external_id": "0042",
+      "label": "Build cache, east",
+      "status": "active",
+      "details": null
+    },
+    "payload": {
+      "operation": "update",
+      "external_id": "0042",
+      "record_id": "F-102",
+      "expected_revision": "v7",
+      "fields": {
+        "label": "Build cache, east",
+        "details": null
+      }
+    },
+    "payload_sha256": "0c90eca2f142fd14c3b065e356611d8c9bff90cda309edfa283397208054eb70",
+    "idempotency_key": "op-ac672a6d1164a36fa3f5a903adde0762d347b45d4fbea367990c6b1d88193ebd"
+  },
+  {
+    "source_id": "S003",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S003",
+    "source_record_ordinal": 3,
+    "raw": {
+      "external_id": "0099",
+      "target_id": "",
+      "display_name": "CI spool",
+      "lifecycle": "active",
+      "note": "R&D; café\nrack B"
+    },
+    "disposition": "create",
+    "reason": "authoritative_absence",
+    "before": null,
+    "intended": {
+      "external_id": "0099",
+      "label": "CI spool",
+      "status": "active",
+      "details": "R&D; café\nrack B"
+    },
+    "payload": {
+      "operation": "create",
+      "external_id": "0099",
+      "record_id": "",
+      "expected_revision": "",
+      "fields": {
+        "label": "CI spool",
+        "status": "active",
+        "details": "R&D; café\nrack B"
+      }
+    },
+    "payload_sha256": "b9e9d2e78ce1cbd857db7459f236bb6c266a4296ed97d3e402fb3785ad33f410",
+    "idempotency_key": "op-a761a4b92f6bf76fad8f2eab74f545f99c748010578caa6c2fbe645fc52115a4"
+  },
+  {
+    "source_id": "S004",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S004",
+    "source_record_ordinal": 4,
+    "raw": {
+      "external_id": "0100",
+      "target_id": "",
+      "display_name": "=VERSION()",
+      "lifecycle": "active",
+      "note": "@queue"
+    },
+    "disposition": "create",
+    "reason": "authoritative_absence",
+    "before": null,
+    "intended": {
+      "external_id": "0100",
+      "label": "=VERSION()",
+      "status": "active",
+      "details": "@queue"
+    },
+    "payload": {
+      "operation": "create",
+      "external_id": "0100",
+      "record_id": "",
+      "expected_revision": "",
+      "fields": {
+        "label": "=VERSION()",
+        "status": "active",
+        "details": "@queue"
+      }
+    },
+    "payload_sha256": "eaab2c8952aa1176291329a9e6daf62470086abf2c0f107e4f2af6e2501cf720",
+    "idempotency_key": "op-2f4d96a5b5b5fdef1ad77a37ef12bcd9820f4de1488315b212c2ade32865cc17"
+  },
+  {
+    "source_id": "S005",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S005",
+    "source_record_ordinal": 5,
+    "raw": {
+      "external_id": "0008",
+      "target_id": "",
+      "display_name": "",
+      "lifecycle": "retired",
+      "note": ""
+    },
+    "disposition": "no-op",
+    "reason": "target_already_has_intended_values",
+    "before": {
+      "record_id": "F-103",
+      "external_id": "0008",
+      "label": "Legacy runner",
+      "status": "retired",
+      "details": "keep",
+      "revision": "v2"
+    },
+    "intended": {
+      "external_id": "0008",
+      "label": "Legacy runner",
+      "status": "retired",
+      "details": "keep"
+    }
+  },
+  {
+    "source_id": "S006",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S006",
+    "source_record_ordinal": 6,
+    "raw": {
+      "external_id": "0101",
+      "target_id": "",
+      "display_name": "Test relay",
+      "lifecycle": "sleeping",
+      "note": ""
+    },
+    "disposition": "reject",
+    "reason": "unsupported_status"
+  },
+  {
+    "source_id": "S007",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S007",
+    "source_record_ordinal": 7,
+    "raw": {
+      "external_id": "0102",
+      "target_id": "",
+      "display_name": "",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "reject",
+    "reason": "create_requires_label"
+  },
+  {
+    "source_id": "S008",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S008",
+    "source_record_ordinal": 8,
+    "raw": {
+      "external_id": "0200",
+      "target_id": "",
+      "display_name": "Packet mirror",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "duplicate_target_identity",
+    "candidates": [
+      "F-107",
+      "F-108"
+    ]
+  },
+  {
+    "source_id": "S009",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S009",
+    "source_record_ordinal": 9,
+    "raw": {
+      "external_id": "0300",
+      "target_id": "",
+      "display_name": "Conflicting A",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "conflicting_source_identity"
+  },
+  {
+    "source_id": "S010",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S010",
+    "source_record_ordinal": 10,
+    "raw": {
+      "external_id": "0300",
+      "target_id": "",
+      "display_name": "Conflicting B",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "conflicting_source_identity"
+  },
+  {
+    "source_id": "S011",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S011",
+    "source_record_ordinal": 11,
+    "raw": {
+      "external_id": "0009",
+      "target_id": "F-105",
+      "display_name": "Wrong pointer",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "external_and_internal_identity_disagree",
+    "candidates": [
+      "F-104"
+    ]
+  },
+  {
+    "source_id": "S012",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S012",
+    "source_record_ordinal": 12,
+    "raw": {
+      "external_id": "",
+      "target_id": "",
+      "display_name": "Missing identity",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "reject",
+    "reason": "missing_external_id"
+  },
+  {
+    "source_id": "S013",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S013",
+    "source_record_ordinal": 13,
+    "raw": {
+      "external_id": "0400",
+      "target_id": "",
+      "display_name": "Rack Z",
+      "lifecycle": "active",
+      "note": "new"
+    },
+    "disposition": "create",
+    "reason": "authoritative_absence",
+    "before": null,
+    "intended": {
+      "external_id": "0400",
+      "label": "Rack Z",
+      "status": "active",
+      "details": "new"
+    },
+    "payload": {
+      "operation": "create",
+      "external_id": "0400",
+      "record_id": "",
+      "expected_revision": "",
+      "fields": {
+        "label": "Rack Z",
+        "status": "active",
+        "details": "new"
+      }
+    },
+    "payload_sha256": "71cbbd2b2864a5b3b51d90381216053486e1104a6d2c72ff36a2c830587c393a",
+    "idempotency_key": "op-14898630450d6f55e68bf140394d24fd77550b578f1429bd95f7754c529c6443"
+  },
+  {
+    "source_id": "S014",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S014",
+    "source_record_ordinal": 14,
+    "raw": {
+      "external_id": "0400",
+      "target_id": "",
+      "display_name": "Rack Z",
+      "lifecycle": "active",
+      "note": "new"
+    },
+    "disposition": "no-op",
+    "reason": "exact_source_duplicate_suppressed",
+    "representative": "S013"
+  },
+  {
+    "source_id": "S015",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S015",
+    "source_record_ordinal": 15,
+    "raw": {
+      "external_id": "0006",
+      "target_id": "F-106",
+      "display_name": "Worker 🧪",
+      "lifecycle": "",
+      "note": "__CLEAR__"
+    },
+    "disposition": "update",
+    "reason": "field_differences",
+    "before": {
+      "record_id": "F-106",
+      "external_id": "0006",
+      "label": "Worker old",
+      "status": "retired",
+      "details": "keep",
+      "revision": "v4"
+    },
+    "intended": {
+      "external_id": "0006",
+      "label": "Worker 🧪",
+      "status": "retired",
+      "details": null
+    },
+    "payload": {
+      "operation": "update",
+      "external_id": "0006",
+      "record_id": "F-106",
+      "expected_revision": "v4",
+      "fields": {
+        "label": "Worker 🧪",
+        "details": null
+      }
+    },
+    "payload_sha256": "b84753fd8f3e333a67690ad7955062f18df4e55e2be8a91c26a6a96ce41ba162",
+    "idempotency_key": "op-fd40f637cea1ac654e4c49b209c6819d76c16bd9c302ef154e05607a326cc397"
+  },
+  {
+    "source_id": "S016",
+    "lineage_id": "15c97806e81fb3e39d8054aaf84e6ffbfc26203f45648dfaddee6bf236442a4f:S016",
+    "source_record_ordinal": 16,
+    "raw": {
+      "external_id": "0500",
+      "target_id": "",
+      "display_name": "Unseen on first page",
+      "lifecycle": "active",
+      "note": ""
+    },
+    "disposition": "ambiguous",
+    "reason": "identity_lookup_incomplete"
+  }
+]

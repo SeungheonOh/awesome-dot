@@ -1,0 +1,2 @@
+source_id,operation,external_id,record_id,expected_revision,idempotency_key,label,status,details
+S004,create,0100,,,op-2f4d96a5b5b5fdef1ad77a37ef12bcd9820f4de1488315b212c2ade32865cc17,=VERSION(),active,@queue
