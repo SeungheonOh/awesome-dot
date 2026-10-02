@@ -76,3 +76,5 @@ A user may still have asked for an ordinary task the assistant can perform with 
 Before completing, confirm that the chosen path exists, its current full instructions were read, the outcome matches the request, each extra step is necessary, and no authority or input was invented. Report the actual deliverable, where it was saved if requested, the meaningful checks, and remaining limits. If the route changed after inspecting the inputs, explain the changed fact briefly rather than concealing the switch.
 
 [Routing examples](examples.md) show goal-based distinctions, a minimal sequence, an incomplete listing and a no-fit outcome. They demonstrate decisions for fictional requests; they do not claim that every available integration was exercised.
+
+[The repository-link rehearsal](remote-discovery-rehearsal.md) records an actual remote discovery and full-guide read at a pinned public revision, followed by a bounded answer from fictional descriptions. It keeps file parsing and live-account checks explicitly unperformed.
