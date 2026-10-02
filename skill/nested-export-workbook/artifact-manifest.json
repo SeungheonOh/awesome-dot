@@ -1,0 +1,40 @@
+{
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "fixture/source.json",
+      "bytes": 1089,
+      "sha256": "f4290c9d0107385284e0b5abeac81ff782d3d1674f636098d7ae9c0c0178d21c"
+    },
+    {
+      "path": "outputs/example/nested-export.xlsx",
+      "bytes": 13980,
+      "sha256": "0737603d594ddf5fb9bac5dd4cfb962864f623beb6134dd47dc949715d1f5ba8"
+    },
+    {
+      "path": "outputs/example/previews/collections.png",
+      "bytes": 56231,
+      "sha256": "84b76c8f35593eddb57d24eef4f947fbe19ffb5886d69665c4df2117bc9d50ba"
+    },
+    {
+      "path": "outputs/example/previews/items.png",
+      "bytes": 44763,
+      "sha256": "24e9e21dfdc0dffb4e5fff0529d210ea819182e93c00c38c8354bfc3d666ac96"
+    },
+    {
+      "path": "outputs/example/previews/labels.png",
+      "bytes": 19994,
+      "sha256": "ffb4a26dace7efca8c7559b4710c1ad7b83b41c409cbf9ae34a887ddb555bfca"
+    },
+    {
+      "path": "outputs/example/previews/read-me.png",
+      "bytes": 121687,
+      "sha256": "c6d4dff77d10b0113d22de0ccf84c4dc2c449dbb24c188f90d35422d4b8f2182"
+    },
+    {
+      "path": "outputs/example/previews/source-paths.png",
+      "bytes": 382283,
+      "sha256": "905ba97401ea2337b7e617f308a1942bad6449912e00e818dd14db520e78d2a2"
+    }
+  ]
+}

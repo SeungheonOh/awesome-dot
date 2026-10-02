@@ -1,0 +1,28 @@
+{
+  "source": {
+    "file": "source.json",
+    "bytes": 1089,
+    "sha256": "f4290c9d0107385284e0b5abeac81ff782d3d1674f636098d7ae9c0c0178d21c"
+  },
+  "workbook": {
+    "file": "nested-export.xlsx",
+    "bytes": 19458,
+    "sha256": "b921ab1a36ca50c4d89cb4eafcbbae2bd72e29d19db0d21f7d5708c77b0478cf"
+  },
+  "counts": {
+    "collections": 5,
+    "items": 4,
+    "labels": 3,
+    "actual_source_nodes": 51,
+    "missing_schema_fields": 6
+  },
+  "checks": [
+    "all source node paths, states, values and order reconstructed",
+    "parent/child rows and sibling arrays reconciled",
+    "identifiers and date-like strings retained as text",
+    "zero/null/empty/missing distinctions retained",
+    "no formulas, external relationships, macros or spreadsheet errors",
+    "tables, filter ranges and frozen panes checked",
+    "source identity metadata matched"
+  ]
+}

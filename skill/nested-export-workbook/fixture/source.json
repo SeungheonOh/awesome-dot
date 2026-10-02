@@ -1,0 +1,43 @@
+{
+  "format": "pocket-shelf/1",
+  "exportedAt": "2026-09-28T17:30:00+02:00",
+  "collections": [
+    {
+      "id": "000123456789012345678901",
+      "name": "Repair drawer",
+      "note": "",
+      "items": [
+        {"id": "90071992547409930001", "name": "Washers", "quantity": 0, "note": null},
+        {"id": "90071992547409930002", "name": "=1+1", "quantity": 2, "note": ""}
+      ],
+      "labels": ["home", "home"]
+    },
+    {
+      "id": "000123456789012345678902",
+      "name": "Travel pouch",
+      "note": null,
+      "items": [],
+      "labels": null
+    },
+    {
+      "id": "000123456789012345678903",
+      "name": "Spare box",
+      "items": null,
+      "labels": []
+    },
+    {
+      "id": "000123456789012345678904",
+      "name": "Ideas",
+      "note": "03/04/05",
+      "labels": ["try/later~maybe"]
+    },
+    {
+      "id": "000123456789012345678905",
+      "name": "Desk tray",
+      "items": [
+        {"id": "90071992547409930003", "name": "Cable", "note": "Uncounted"},
+        {"id": "90071992547409930004", "name": "Clip", "quantity": null}
+      ]
+    }
+  ]
+}

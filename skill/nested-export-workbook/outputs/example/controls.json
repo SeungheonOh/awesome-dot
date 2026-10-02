@@ -1,0 +1,31 @@
+{
+  "rejected_inputs": [
+    "malformed JSON",
+    "duplicate object key",
+    "escaped duplicate object key",
+    "non-finite number",
+    "decimal conversion",
+    "large numeric value",
+    "negative zero",
+    "wrong relationship type",
+    "unknown schema field",
+    "XML control character",
+    "unrepresentable cell length",
+    "unsupported direct timestamp text",
+    "unsupported quote-formula prefix"
+  ],
+  "detected_saved_file_corruptions": [
+    "zero erased",
+    "long ID changed",
+    "wrong parent link",
+    "missing relabelled as null",
+    "literal made into formula",
+    "label occurrence removed",
+    "source pointer altered"
+  ],
+  "positive_controls": [
+    "repeated business ID retained by source occurrence",
+    "repeated sibling label retained"
+  ],
+  "source_unchanged": true
+}
