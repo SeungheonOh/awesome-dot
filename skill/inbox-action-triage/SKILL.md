@@ -105,8 +105,10 @@ Lead with decisions or obligations that materially need attention, followed by w
 
 ## Deliverables
 
+Match the requested format and the size of the triage. A small one-time request can be a few source-linked bullets and the requested reply text; it does not need a separate full register.
+
 - A concise prioritized summary of what the user needs to do or decide
-- An action register with stable ID, request/commitment basis, outcome, owner/basis, current state, deadline wording/resolution, urgency evidence, dependencies, source locators and next step
+- An action register when the user requests one or the number of items, dependencies or ongoing follow-up makes one useful. Include the stable IDs, request/commitment basis, outcome, ownership, current state, dates, urgency evidence, dependencies, source locators and next steps that the reader needs. For a compact response, preserve the material distinctions and sources directly in the bullets
 - Requested response text or verified saved drafts with exact recipient/thread context
 - Verified authorized label/archive results, or the specific blocked operations and unchanged targets
 - Coverage gaps, unresolved identities and uncertain dates that could change the result
