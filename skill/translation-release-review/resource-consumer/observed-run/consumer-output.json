@@ -1,0 +1,479 @@
+{
+  "status": "PASS for the stated mechanical and consumer tests; semantic control intentionally exposes a gap",
+  "runtime": {
+    "node": "24.19.0",
+    "icu": "78.3",
+    "cldr": "48.0",
+    "unicode": "17.0"
+  },
+  "localeOptions": {
+    "source": {
+      "locale": "en",
+      "type": "cardinal",
+      "minimumIntegerDigits": 1,
+      "minimumFractionDigits": 0,
+      "maximumFractionDigits": 3,
+      "pluralCategories": [
+        "one",
+        "other"
+      ],
+      "roundingIncrement": 1,
+      "roundingMode": "halfExpand",
+      "roundingPriority": "auto",
+      "trailingZeroDisplay": "auto"
+    },
+    "target": {
+      "locale": "fr",
+      "type": "cardinal",
+      "minimumIntegerDigits": 1,
+      "minimumFractionDigits": 0,
+      "maximumFractionDigits": 3,
+      "pluralCategories": [
+        "one",
+        "many",
+        "other"
+      ],
+      "roundingIncrement": 1,
+      "roundingMode": "halfExpand",
+      "roundingPriority": "auto",
+      "trailingZeroDisplay": "auto"
+    }
+  },
+  "inputHashes": {
+    "source.en-US.json": "faa0716bfcedbf34cc8f4f0731d515e03244bb571ba9a4060ed98f06f3914ba7",
+    "target.fr-FR.json": "b0ccf735a702df40863e88a150674d20050f59303c9cf1d86ceffc6048ac4d1e",
+    "contract.json": "27292beb63f7a4bc0971ec760024963235f8ea4376d8b16efbf0f26e2e1a639f",
+    "consumer.mjs": "2a9edddb4e24b7bdb87012c3560bd468ca957708c0657cd9e8f5d3c9b8226152",
+    "verify.mjs": "043d1c97dfdcd4a01254cbbaa088d67e6af58e0380478e1240d835c26d2607db",
+    "json-preflight.py": "93e2aa961fd37581d12e270fa5984e5048397ec904213ed62ebc71357e63ed47"
+  },
+  "controls": [
+    {
+      "id": "malformed-json-escape",
+      "result": "rejected",
+      "code": "SyntaxError"
+    },
+    {
+      "id": "wrong-resource-kind",
+      "result": "rejected",
+      "code": "E_STRUCTURE"
+    },
+    {
+      "id": "unknown-schema-field",
+      "result": "rejected",
+      "code": "E_STRUCTURE"
+    },
+    {
+      "id": "placeholder-case-change",
+      "result": "rejected",
+      "code": "E_PLACEHOLDER"
+    },
+    {
+      "id": "missing-placeholder",
+      "result": "rejected",
+      "code": "E_PLACEHOLDER"
+    },
+    {
+      "id": "duplicate-placeholder",
+      "result": "rejected",
+      "code": "E_PLACEHOLDER"
+    },
+    {
+      "id": "malformed-opening-brace",
+      "result": "rejected",
+      "code": "E_GRAMMAR"
+    },
+    {
+      "id": "malformed-closing-brace",
+      "result": "rejected",
+      "code": "E_GRAMMAR"
+    },
+    {
+      "id": "unsupported-icu-expression",
+      "result": "rejected",
+      "code": "E_GRAMMAR"
+    },
+    {
+      "id": "url-language-change",
+      "result": "rejected",
+      "code": "E_EXACT"
+    },
+    {
+      "id": "product-token-change",
+      "result": "rejected",
+      "code": "E_EXACT"
+    },
+    {
+      "id": "missing-many-release",
+      "result": "rejected",
+      "code": "E_BRANCH"
+    },
+    {
+      "id": "missing-other-release",
+      "result": "rejected",
+      "code": "E_BRANCH"
+    },
+    {
+      "id": "missing-key-release",
+      "result": "rejected",
+      "code": "E_KEY"
+    },
+    {
+      "id": "unexpected-plural-category",
+      "result": "rejected",
+      "code": "E_BRANCH"
+    },
+    {
+      "id": "short-warning-too-long",
+      "result": "rejected",
+      "code": "E_LENGTH"
+    },
+    {
+      "id": "count-negative",
+      "result": "rejected",
+      "code": "E_COUNT"
+    },
+    {
+      "id": "count-fraction",
+      "result": "rejected",
+      "code": "E_COUNT"
+    },
+    {
+      "id": "count-not-finite",
+      "result": "rejected",
+      "code": "E_COUNT"
+    },
+    {
+      "id": "count-not-a-number",
+      "result": "rejected",
+      "code": "E_COUNT"
+    },
+    {
+      "id": "count-numeric-string",
+      "result": "rejected",
+      "code": "E_COUNT"
+    },
+    {
+      "id": "count-above-bound",
+      "result": "rejected",
+      "code": "E_COUNT"
+    },
+    {
+      "id": "missing-call-argument",
+      "result": "rejected",
+      "code": "E_ARGUMENTS"
+    },
+    {
+      "id": "extra-call-argument",
+      "result": "rejected",
+      "code": "E_ARGUMENTS"
+    },
+    {
+      "id": "wrong-call-type",
+      "result": "rejected",
+      "code": "E_ARGUMENTS"
+    },
+    {
+      "id": "unknown-message-key",
+      "result": "rejected",
+      "code": "E_KEY"
+    },
+    {
+      "id": "incomplete-source-cannot-fallback",
+      "result": "rejected",
+      "code": "E_KEY"
+    },
+    {
+      "id": "malformed-target-cannot-fallback",
+      "result": "rejected",
+      "code": "E_GRAMMAR"
+    },
+    {
+      "id": "invalid-fallback-option-string-false",
+      "result": "rejected",
+      "code": "E_OPTIONS"
+    },
+    {
+      "id": "invalid-fallback-option-null",
+      "result": "rejected",
+      "code": "E_OPTIONS"
+    },
+    {
+      "id": "invalid-fallback-option-number",
+      "result": "rejected",
+      "code": "E_OPTIONS"
+    },
+    {
+      "id": "invalid-fallback-option-undefined",
+      "result": "rejected",
+      "code": "E_OPTIONS"
+    },
+    {
+      "id": "explicit-false-keeps-strict-gate",
+      "result": "rejected",
+      "code": "E_BRANCH"
+    },
+    {
+      "id": "explicit-false-complete-target",
+      "result": "accepted",
+      "code": "complete target compiled with strict gate enabled"
+    },
+    {
+      "id": "fallback-traces",
+      "result": "observed",
+      "code": "whole-message English fallback; release still blocked for incomplete French"
+    },
+    {
+      "id": "changed-contract-rejects-two",
+      "result": "rejected",
+      "code": "E_COUNT"
+    },
+    {
+      "id": "changed-contract-rejects-old-call-site",
+      "result": "rejected",
+      "code": "E_ARGUMENTS"
+    },
+    {
+      "id": "changed-placeholder-contract",
+      "result": "accepted",
+      "code": "new argument and resources compiled; old call rejected"
+    },
+    {
+      "id": "lost-negation",
+      "result": "mechanically accepted; meaning review must reject",
+      "code": "no semantic guarantee"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "en-US-drafts-0",
+      "key": "drafts",
+      "requestedLocale": "en-US",
+      "usedLocale": "en-US",
+      "category": "other",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "0 drafts in Ideas."
+    },
+    {
+      "id": "en-US-drafts-1",
+      "key": "drafts",
+      "requestedLocale": "en-US",
+      "usedLocale": "en-US",
+      "category": "one",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "1 draft in Ideas."
+    },
+    {
+      "id": "en-US-drafts-2",
+      "key": "drafts",
+      "requestedLocale": "en-US",
+      "usedLocale": "en-US",
+      "category": "other",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "2 drafts in Ideas."
+    },
+    {
+      "id": "en-US-drafts-21",
+      "key": "drafts",
+      "requestedLocale": "en-US",
+      "usedLocale": "en-US",
+      "category": "other",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "21 drafts in Ideas."
+    },
+    {
+      "id": "en-US-drafts-1000000",
+      "key": "drafts",
+      "requestedLocale": "en-US",
+      "usedLocale": "en-US",
+      "category": "other",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "1000000 drafts in Ideas."
+    },
+    {
+      "id": "fr-FR-drafts-0",
+      "key": "drafts",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": "one",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "0 brouillon dans Idées."
+    },
+    {
+      "id": "fr-FR-drafts-1",
+      "key": "drafts",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": "one",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "1 brouillon dans Idées."
+    },
+    {
+      "id": "fr-FR-drafts-2",
+      "key": "drafts",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": "other",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "2 brouillons dans Idées."
+    },
+    {
+      "id": "fr-FR-drafts-21",
+      "key": "drafts",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": "other",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "21 brouillons dans Idées."
+    },
+    {
+      "id": "fr-FR-drafts-1000000",
+      "key": "drafts",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": "many",
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "1000000 brouillons dans Idées."
+    },
+    {
+      "id": "fr-FR-welcome",
+      "key": "welcome",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": null,
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "Bienvenue dans Brume Notes, Anaïs."
+    },
+    {
+      "id": "fr-FR-saveWarning",
+      "key": "saveWarning",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": null,
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "Ne fermez pas Brume Notes pendant l’enregistrement de carnet.txt. Ne réessayez pas, sauf si une erreur s’affiche."
+    },
+    {
+      "id": "fr-FR-closeWarning",
+      "key": "closeWarning",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": null,
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "Ne fermez pas."
+    },
+    {
+      "id": "fr-FR-help",
+      "key": "help",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": null,
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "Aide pour Brume Notes : https://help.brume.invalid/guide?lang=en&topic=drafts"
+    },
+    {
+      "id": "fr-FR-entryHint",
+      "key": "entryHint",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": null,
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "Saisissez « Idées ».\nDossier : C:\\Brume\\Drafts"
+    },
+    {
+      "id": "fr-FR-patternHint",
+      "key": "patternHint",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": null,
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "Modèle : {draft} ; valeur : {count} & <nom>."
+    },
+    {
+      "id": "missing-many-recovery",
+      "key": "drafts",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "en-US",
+      "category": "other",
+      "fallback": "missing-branch",
+      "releaseBlockers": [
+        "fallback-used"
+      ],
+      "text": "1000000 drafts in Idées."
+    },
+    {
+      "id": "missing-key-recovery-zero",
+      "key": "drafts",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "en-US",
+      "category": "other",
+      "fallback": "missing-key",
+      "releaseBlockers": [
+        "fallback-used"
+      ],
+      "text": "0 drafts in Idées."
+    },
+    {
+      "id": "missing-bundle-fr-CA",
+      "key": "drafts",
+      "requestedLocale": "fr-CA",
+      "usedLocale": "en-US",
+      "category": "other",
+      "fallback": "missing-bundle",
+      "releaseBlockers": [
+        "fallback-used"
+      ],
+      "text": "0 drafts in Idées."
+    },
+    {
+      "id": "changed-contract-customer",
+      "key": "welcome",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": null,
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "Bienvenue dans Brume Notes, Zoé."
+    },
+    {
+      "id": "semantic-negative-control",
+      "key": "closeWarning",
+      "requestedLocale": "fr-FR",
+      "usedLocale": "fr-FR",
+      "category": null,
+      "fallback": null,
+      "releaseBlockers": [],
+      "text": "Fermez."
+    }
+  ],
+  "releaseAssessment": {
+    "originalCandidateMechanicalGate": "pass",
+    "incompleteTargetControls": "blocked",
+    "fallbackRequestedLocaleReleaseValid": false,
+    "linguisticApproval": "not established by this runner",
+    "visualIntegration": "untested"
+  },
+  "untested": [
+    "real framework parser/compiler",
+    "native application integration",
+    "visual layout",
+    "screen-reader behavior",
+    "independent native-speaker approval"
+  ]
+}

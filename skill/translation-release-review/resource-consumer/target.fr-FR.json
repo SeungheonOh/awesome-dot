@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "locale": "fr-FR",
+  "messages": {
+    "welcome": {
+      "kind": "text",
+      "value": "Bienvenue dans Brume Notes, {name}."
+    },
+    "drafts": {
+      "kind": "plural",
+      "countArgument": "count",
+      "forms": {
+        "one": "{count} brouillon dans {folder}.",
+        "many": "{count} brouillons dans {folder}.",
+        "other": "{count} brouillons dans {folder}."
+      }
+    },
+    "saveWarning": {
+      "kind": "text",
+      "value": "Ne fermez pas Brume Notes pendant l’enregistrement de {file}. Ne réessayez pas, sauf si une erreur s’affiche."
+    },
+    "closeWarning": {
+      "kind": "text",
+      "value": "Ne fermez pas."
+    },
+    "help": {
+      "kind": "text",
+      "value": "Aide pour Brume Notes : https://help.brume.invalid/guide?lang=en&topic=drafts"
+    },
+    "entryHint": {
+      "kind": "text",
+      "value": "Saisissez « {label} ».\nDossier : C:\\Brume\\Drafts"
+    },
+    "patternHint": {
+      "kind": "text",
+      "value": "Modèle : {{draft}} ; valeur : {value}."
+    }
+  }
+}

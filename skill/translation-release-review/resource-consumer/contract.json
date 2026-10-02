@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "sourceLocale": "en-US",
+  "targetLocale": "fr-FR",
+  "maximumCount": 1000000,
+  "messages": {
+    "welcome": {
+      "kind": "text",
+      "arguments": {
+        "name": "string"
+      },
+      "occurrences": {
+        "name": 1
+      },
+      "exact": [
+        "Brume Notes"
+      ]
+    },
+    "drafts": {
+      "kind": "plural",
+      "countArgument": "count",
+      "arguments": {
+        "count": "count",
+        "folder": "string"
+      },
+      "occurrences": {
+        "count": 1,
+        "folder": 1
+      },
+      "exact": []
+    },
+    "saveWarning": {
+      "kind": "text",
+      "arguments": {
+        "file": "string"
+      },
+      "occurrences": {
+        "file": 1
+      },
+      "exact": [
+        "Brume Notes"
+      ]
+    },
+    "closeWarning": {
+      "kind": "text",
+      "arguments": {},
+      "occurrences": {},
+      "exact": [],
+      "maximumCodePoints": 14
+    },
+    "help": {
+      "kind": "text",
+      "arguments": {},
+      "occurrences": {},
+      "exact": [
+        "Brume Notes",
+        "https://help.brume.invalid/guide?lang=en&topic=drafts"
+      ]
+    },
+    "entryHint": {
+      "kind": "text",
+      "arguments": {
+        "label": "string"
+      },
+      "occurrences": {
+        "label": 1
+      },
+      "exact": [
+        "C:\\Brume\\Drafts"
+      ]
+    },
+    "patternHint": {
+      "kind": "text",
+      "arguments": {
+        "value": "string"
+      },
+      "occurrences": {
+        "value": 1
+      },
+      "exact": [
+        "{{draft}}"
+      ]
+    }
+  }
+}

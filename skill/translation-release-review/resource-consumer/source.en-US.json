@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "locale": "en-US",
+  "messages": {
+    "welcome": {
+      "kind": "text",
+      "value": "Welcome to Brume Notes, {name}."
+    },
+    "drafts": {
+      "kind": "plural",
+      "countArgument": "count",
+      "forms": {
+        "one": "{count} draft in {folder}.",
+        "other": "{count} drafts in {folder}."
+      }
+    },
+    "saveWarning": {
+      "kind": "text",
+      "value": "Do not close Brume Notes while saving {file}. Do not retry unless an error appears."
+    },
+    "closeWarning": {
+      "kind": "text",
+      "value": "Do not close."
+    },
+    "help": {
+      "kind": "text",
+      "value": "Help for Brume Notes: https://help.brume.invalid/guide?lang=en&topic=drafts"
+    },
+    "entryHint": {
+      "kind": "text",
+      "value": "Type \"{label}\".\nFolder: C:\\Brume\\Drafts"
+    },
+    "patternHint": {
+      "kind": "text",
+      "value": "Pattern: {{draft}}; value: {value}."
+    }
+  }
+}
