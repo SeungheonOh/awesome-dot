@@ -1,0 +1,240 @@
+{
+  "page_count": 4,
+  "page_content_text_boxes_rotation": "pass",
+  "internal_links": [
+    {
+      "page": 1,
+      "target": 4,
+      "rect": [
+        46.0,
+        450.0,
+        325.0,
+        474.0
+      ],
+      "contents": "Open equipment appendix"
+    }
+  ],
+  "outlines": [
+    {
+      "title": "Setup summary",
+      "output_page": 1
+    },
+    {
+      "title": "Reading room layout",
+      "output_page": 2
+    },
+    {
+      "title": "Equipment appendix",
+      "output_page": 4
+    }
+  ],
+  "renders": [
+    {
+      "output_page": 1,
+      "same_rgb_pixels": true,
+      "render_size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "output_page": 2,
+      "same_rgb_pixels": true,
+      "render_size": [
+        1100,
+        850
+      ]
+    },
+    {
+      "output_page": 3,
+      "same_rgb_pixels": true,
+      "render_size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "output_page": 4,
+      "same_rgb_pixels": true,
+      "render_size": [
+        850,
+        1100
+      ]
+    }
+  ],
+  "tools": {
+    "python": "3.12.14",
+    "pypdf": "6.10.0",
+    "reportlab": "4.4.9",
+    "Pillow": "12.3.0",
+    "pdftoppm": "pdftoppm version 26.05.0"
+  },
+  "render_dpi": 100,
+  "preflight": {
+    "source-a.pdf": {
+      "page_count": 3,
+      "links": [
+        {
+          "page": 1,
+          "target": 3,
+          "rect": [
+            46.0,
+            450.0,
+            325.0,
+            474.0
+          ],
+          "contents": "Open equipment appendix"
+        }
+      ],
+      "outlines": [
+        {
+          "title": "Setup summary",
+          "target": 1
+        },
+        {
+          "title": "Equipment appendix",
+          "target": 3
+        }
+      ],
+      "encryption": false,
+      "form_or_signature_indicators": false,
+      "catalog_embedded_files_or_names": false,
+      "unsupported_catalog_page_or_annotation_features": []
+    },
+    "source-b.pdf": {
+      "page_count": 2,
+      "links": [],
+      "outlines": [
+        {
+          "title": "Reading room layout",
+          "target": 2
+        }
+      ],
+      "encryption": false,
+      "form_or_signature_indicators": false,
+      "catalog_embedded_files_or_names": false,
+      "unsupported_catalog_page_or_annotation_features": []
+    }
+  },
+  "files": {
+    "source-a.pdf": {
+      "bytes": 43498,
+      "sha256": "5c39023adab77a661f28ad754b8e09dc7f00837e03dbb82e50ef3abdc8c0f3d1"
+    },
+    "source-b.pdf": {
+      "bytes": 42947,
+      "sha256": "7cb86eb048badec8ebc55e2c36e3782b60b4badc12330a95105a50b82620aae5"
+    },
+    "packet.pdf": {
+      "bytes": 84614,
+      "sha256": "d9b84156679d5641a9047ab9c37f6301ef5ffd15d384ae022f21f6cd955a5dfb"
+    },
+    "preview.png": {
+      "bytes": 108701,
+      "sha256": "372f27c606779ec3f5d04b80e2ff40ccbbbbb2631c4b6786b752435754b52600"
+    }
+  },
+  "originals_unchanged": true,
+  "manual_visual_review": {
+    "status": "pass",
+    "source_pages": [
+      "A1",
+      "A2",
+      "A3",
+      "B1",
+      "B2"
+    ],
+    "output_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "observations": "All nine full-page renders inspected. Text and diagram are readable without clipping or overlap. Selected blank is truly blank. Output order and mixed portrait/landscape layout match the map. Preview labels remain outside page images."
+  },
+  "viewer_click_test": "not performed",
+  "scope": "Four original fixture pages; same-renderer pixels and direct navigation only",
+  "independent_navigation": {
+    "library": "PyMuPDF 1.26.6",
+    "internal_uri": "#page=4&view=Fit",
+    "resolved_output_page": 4,
+    "outline_destinations": [
+      1,
+      2,
+      4
+    ],
+    "method": "Page.first_link.uri, Document.resolve_link and Document.get_toc; no viewer click or URL visit"
+  },
+  "negative_checks": [
+    {
+      "test": "omitted internal-link target",
+      "result": "caught",
+      "reason": "Missing link target: source-a.pdf page 3"
+    },
+    {
+      "test": "existing output",
+      "result": "caught",
+      "reason": "Output already exists: packet.pdf"
+    },
+    {
+      "test": "unsupported optional-content catalog",
+      "result": "caught",
+      "reason": "Unsupported catalog feature(s): ['/OCProperties']"
+    },
+    {
+      "test": "wrong order",
+      "result": "caught",
+      "reason": "Content, boxes or rotation mismatch at output page 1"
+    },
+    {
+      "test": "dropped blank",
+      "result": "caught",
+      "reason": "Output page count differs from the selection"
+    },
+    {
+      "test": "changed rotation",
+      "result": "caught",
+      "reason": "Content, boxes or rotation mismatch at output page 2"
+    },
+    {
+      "test": "changed crop box",
+      "result": "caught",
+      "reason": "Content, boxes or rotation mismatch at output page 2"
+    },
+    {
+      "test": "broken link",
+      "result": "caught",
+      "reason": "Output internal link target/rectangle mismatch"
+    },
+    {
+      "test": "graphics-only content change",
+      "result": "caught",
+      "reason": "Content, boxes or rotation mismatch at output page 2",
+      "extracted_text_unchanged": true,
+      "decoded_content_hash_changed": true
+    }
+  ],
+  "review_date": "2026-10-02",
+  "native_content_readback": [
+    {
+      "output_page": 1,
+      "decoded_bytes": 937,
+      "sha256": "01e06bb4551333fe6ca2ee149a0757c58fabe8b3bed70a6a75a6b54774acb223"
+    },
+    {
+      "output_page": 2,
+      "decoded_bytes": 1477,
+      "sha256": "d7a1132f0c25342eaac6d2adaab5238afbaa5873e1e8be3e9cff9cf8dd0291f8"
+    },
+    {
+      "output_page": 3,
+      "decoded_bytes": 42,
+      "sha256": "f7ac222654d26a9cb26ce3bd9a2475e49599e30866f6d349e2468eddb6999c08"
+    },
+    {
+      "output_page": 4,
+      "decoded_bytes": 617,
+      "sha256": "812b17f602db5c57397fc654584ec5c59c9ba0176ddd78633bd6a2469698e3a2"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "output_page": 1,
+    "source": "source-a.pdf",
+    "source_physical_page": 1,
+    "source_identity": {
+      "bytes": 43498,
+      "sha256": "5c39023adab77a661f28ad754b8e09dc7f00837e03dbb82e50ef3abdc8c0f3d1"
+    },
+    "intentional_blank": false,
+    "boxes": {
+      "mediabox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "cropbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "bleedbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "trimbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "artbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    },
+    "rotation": 0,
+    "user_unit": 1.0,
+    "text": "SOURCE A / PHYSICAL PAGE 1\nPine Room setup\nFictional planning notes for a quiet reading session.\nUse the east table for supplies.\nKeep the door path clear.\nChairs: 12. Table groups: 3.\nOpen the equipment appendix\nOriginal source numbering is retained in this packet.\nSource A page 2 is an intentionally blank divider.\n",
+    "decoded_content_sha256": "01e06bb4551333fe6ca2ee149a0757c58fabe8b3bed70a6a75a6b54774acb223"
+  },
+  {
+    "output_page": 2,
+    "source": "source-b.pdf",
+    "source_physical_page": 2,
+    "source_identity": {
+      "bytes": 42947,
+      "sha256": "7cb86eb048badec8ebc55e2c36e3782b60b4badc12330a95105a50b82620aae5"
+    },
+    "intentional_blank": false,
+    "boxes": {
+      "mediabox": [
+        0.0,
+        0.0,
+        792.0,
+        612.0
+      ],
+      "cropbox": [
+        0.0,
+        0.0,
+        792.0,
+        612.0
+      ],
+      "bleedbox": [
+        0.0,
+        0.0,
+        792.0,
+        612.0
+      ],
+      "trimbox": [
+        0.0,
+        0.0,
+        792.0,
+        612.0
+      ],
+      "artbox": [
+        0.0,
+        0.0,
+        792.0,
+        612.0
+      ]
+    },
+    "rotation": 0,
+    "user_unit": 1.0,
+    "text": "SOURCE B / PHYSICAL PAGE 2\nReading room layout\nTable 1\nTable 2\nTable 3\nClear door path\nEast supply table\nFictional diagram. Landscape page retained at its original size.\n",
+    "decoded_content_sha256": "d7a1132f0c25342eaac6d2adaab5238afbaa5873e1e8be3e9cff9cf8dd0291f8"
+  },
+  {
+    "output_page": 3,
+    "source": "source-a.pdf",
+    "source_physical_page": 2,
+    "source_identity": {
+      "bytes": 43498,
+      "sha256": "5c39023adab77a661f28ad754b8e09dc7f00837e03dbb82e50ef3abdc8c0f3d1"
+    },
+    "intentional_blank": true,
+    "boxes": {
+      "mediabox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "cropbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "bleedbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "trimbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "artbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    },
+    "rotation": 0,
+    "user_unit": 1.0,
+    "text": "",
+    "decoded_content_sha256": "f7ac222654d26a9cb26ce3bd9a2475e49599e30866f6d349e2468eddb6999c08"
+  },
+  {
+    "output_page": 4,
+    "source": "source-a.pdf",
+    "source_physical_page": 3,
+    "source_identity": {
+      "bytes": 43498,
+      "sha256": "5c39023adab77a661f28ad754b8e09dc7f00837e03dbb82e50ef3abdc8c0f3d1"
+    },
+    "intentional_blank": false,
+    "boxes": {
+      "mediabox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "cropbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "bleedbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "trimbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "artbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    },
+    "rotation": 0,
+    "user_unit": 1.0,
+    "text": "SOURCE A / PHYSICAL PAGE 3\nEquipment appendix\nBring these items to the east table:\n12 chairs\n3 table markers\n1 supply tray\nNo power equipment is needed.\n",
+    "decoded_content_sha256": "812b17f602db5c57397fc654584ec5c59c9ba0176ddd78633bd6a2469698e3a2"
+  }
+]
