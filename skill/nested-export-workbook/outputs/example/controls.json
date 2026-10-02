@@ -21,7 +21,9 @@
     "missing relabelled as null",
     "literal made into formula",
     "label occurrence removed",
-    "source pointer altered"
+    "source pointer altered",
+    "unmapped review content",
+    "unmapped metadata content"
   ],
   "positive_controls": [
     "repeated business ID retained by source occurrence",

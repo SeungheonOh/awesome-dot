@@ -61,14 +61,20 @@ def controls(source, workbook, scratch):
         ('missing relabelled as null', 'Items', 'F4', 'NULL'),
         ('literal made into formula', 'Items', 'D3', ('formula', '1+1')),
         ('label occurrence removed', 'Labels', 'A3', ('remove-row', None)),
-        ('source pointer altered', 'Source paths', 'B10', '/wrong')
+        ('source pointer altered', 'Source paths', 'B10', '/wrong'),
+        ('unmapped review content', 'Items', 'K2', 'Unexpected value outside the mapped table'),
+        ('unmapped metadata content', 'Read me', 'C2', 'Unexpected value outside the metadata area')
     ]
     for name, sheet, ref, change in mutations:
         target = sheet_files[sheet]
         with zipfile.ZipFile(workbook) as original_zip:
             root = ET.fromstring(original_zip.read(target))
             cell = root.find(f'.//s:c[@r="{ref}"]', NS)
-            assert cell is not None
+            if cell is None:
+                row_number = ''.join(c for c in ref if c.isdigit())
+                row = root.find(f'.//s:row[@r="{row_number}"]', NS)
+                assert row is not None
+                cell = ET.SubElement(row, '{'+NS['s']+'}c', {'r': ref})
             if isinstance(change, tuple) and change[0] == 'remove-row':
                 rows = root.find('s:sheetData', NS)
                 rows.remove(root.find('.//s:row[@r="3"]', NS))

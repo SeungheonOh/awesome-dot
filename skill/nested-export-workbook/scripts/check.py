@@ -228,6 +228,15 @@ def check(source, workbook):
     require(all(blank(r[0]) and blank(r[5]) for r in missing), 'Missing observation has invented value/order')
     require(len({r[1] or '' for r in nodes}) == len(nodes), 'Duplicate source pointer')
     require(sheets['Source paths']['tables'] == [{'ref': f'A1:G{len(nodes)+1}', 'filter': True}] and sheets['Source paths']['pane'], 'Source path table/filter/pane')
+    regions = {'Collections': (len(expected['Collections'])+1, 10),
+               'Items': (len(expected['Items'])+1, 10),
+               'Labels': (len(expected['Labels'])+1, 5),
+               'Source paths': (len(source_nodes)+len(absent)+1, 7),
+               'Read me': (16, 2)}
+    for name, (height, width) in regions.items():
+        allowed = {f'{col(c)}{r}' for r in range(1, height+1) for c in range(1, width+1)}
+        require(all(ref in allowed or blank(value) for ref, value in sheets[name]['cells'].items()),
+                name+' has content outside its declared review area')
     metadata = sheets['Read me']['cells']
     require(metadata.get('B2') == source.name and metadata.get('B3') == len(raw) and metadata.get('B4') == hashlib.sha256(raw).hexdigest(), 'Source metadata mismatch')
     require(metadata.get('B7') == json.dumps(data['exportedAt']), 'Timestamp inferred/changed')
