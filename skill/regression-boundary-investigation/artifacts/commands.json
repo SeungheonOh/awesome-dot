@@ -1,0 +1,2758 @@
+[
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "init",
+      "--object-format=sha1",
+      "--template=<fixture>/empty-hooks-and-template",
+      "-b",
+      "fixture-main"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "config",
+      "user.name",
+      "Fixture"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "config",
+      "user.email",
+      "fixture@example.invalid"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py",
+      "README.md",
+      ".gitignore",
+      "draft.txt",
+      "scratchpad.txt",
+      "merge-note.txt"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Define half-open room availability"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "README.md"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Document integer slot coordinates"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Sort bookings before checking overlap"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Consolidate contact checks"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "README.md"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Document the reservation adapter"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Add module usage note"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "switch",
+      "-c",
+      "fixture-gap",
+      "9b5f41ce67e46c2773ccb96084f9831315cbfcf9"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Rename availability interface during migration"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Restore API with compatibility-dependent contacts"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Use one contact rule in both modes"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "README.md"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Document migration state"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "switch",
+      "-c",
+      "fixture-return",
+      "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Use inclusive contact checks"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Restore half-open contact checks"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "README.md"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Add adapter note 3"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "README.md"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Add adapter note 4"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "README.md"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Add adapter note 5"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "README.md"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Add adapter note 6"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "slots.py"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Reintroduce inclusive contact checks"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "README.md"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Record adapter deployment notes"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "switch",
+      "-c",
+      "preserve-right",
+      "b1955b5e3e0abdace0af6a5b441f30404bfeaf12"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "merge-note.txt"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Write right planning note"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "switch",
+      "-c",
+      "preserve-left",
+      "b1955b5e3e0abdace0af6a5b441f30404bfeaf12"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "merge-note.txt"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "commit",
+      "-q",
+      "-m",
+      "Write left planning note"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "merge",
+      "--no-commit",
+      "preserve-right"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "add",
+      "--",
+      "draft.txt"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "symbolic-ref",
+      "--short",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "status",
+      "--porcelain=v1",
+      "--untracked-files=all",
+      "--ignored"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--cached",
+      "--binary"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--binary"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--no-checkout",
+      "--template=<fixture>/empty-hooks-and-template",
+      "<fixture>/original",
+      "<fixture>/monotonic"
+    ],
+    "cwd": "<fixture>",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "b1955b5e3e0abdace0af6a5b441f30404bfeaf12"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "monotonic:endpoint-good"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "b1955b5e3e0abdace0af6a5b441f30404bfeaf12"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "monotonic:endpoint-bad"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "start",
+      "b1955b5e3e0abdace0af6a5b441f30404bfeaf12",
+      "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "run",
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "monotonic:bisect"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "log"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "refs/bisect/bad"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "reset"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "9b5f41ce67e46c2773ccb96084f9831315cbfcf9"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "neighbor:M2"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "5394db61bf56f39fde8de6623e89d40b947ab4c5"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "neighbor:M3"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "af6fe1dd3a9d931a381e6745ee61bc622985ec70"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "neighbor:M4"
+    ],
+    "cwd": "<fixture>/monotonic",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--no-checkout",
+      "--template=<fixture>/empty-hooks-and-template",
+      "<fixture>/original",
+      "<fixture>/gap"
+    ],
+    "cwd": "<fixture>",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "1dbb39f575bede4d08a84d5741415c98f673f58b"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "gap:endpoint-good"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "1dbb39f575bede4d08a84d5741415c98f673f58b"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "gap:endpoint-bad"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "start",
+      "1dbb39f575bede4d08a84d5741415c98f673f58b",
+      "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "run",
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "gap:bisect"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 2
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "log"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "refs/bisect/bad"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "reset"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "9b5f41ce67e46c2773ccb96084f9831315cbfcf9"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "gap-audit:M2"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "efd58170ab13fb2bc10078c4450d1f1c68c97684"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "gap-audit:S3"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 125
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "a501011017630f23e7ae8225af693aad62af25cd"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "gap-audit:S4"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 125
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "37463128c968789a79c0a2468368153aaea87298"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "gap-audit:S5"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "1dbb39f575bede4d08a84d5741415c98f673f58b"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "gap-audit:S6"
+    ],
+    "cwd": "<fixture>/gap",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--no-checkout",
+      "--template=<fixture>/empty-hooks-and-template",
+      "<fixture>/original",
+      "<fixture>/returning"
+    ],
+    "cwd": "<fixture>",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "fb9073a0cfcacf4caaebdbba396f816ea281b44f"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "returning:endpoint-good"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "fb9073a0cfcacf4caaebdbba396f816ea281b44f"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "returning:endpoint-bad"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "start",
+      "fb9073a0cfcacf4caaebdbba396f816ea281b44f",
+      "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "run",
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "returning:bisect"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "log"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "refs/bisect/bad"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "bisect",
+      "reset"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:M0"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "bfcc568d238c7513eca21d8f90d49b8e35a3a785"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:N1"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "d0702e14c43bf78b1660ff537d5921e7cf2434fa"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:N2"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "4d45f766596f44590e734cb1dbcfbd735dafbef5"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:N3"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "30d69ae3f3995aea4ae920b65a1e80a13b2740da"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:N4"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "c3af18c6cb02e5911e7e78ad20d2e88ea793bba7"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:N5"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "c5835da83139b09193a18147d3e646b8bb06b8da"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:N6"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "68ee9d12f02a66b24cd764a3975f9c86dfc77ebd"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:N7"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "fb9073a0cfcacf4caaebdbba396f816ea281b44f"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "ordered-audit:N8"
+    ],
+    "cwd": "<fixture>/returning",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--no-checkout",
+      "--template=<fixture>/empty-hooks-and-template",
+      "<fixture>/original",
+      "<fixture>/control-repair"
+    ],
+    "cwd": "<fixture>",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "5394db61bf56f39fde8de6623e89d40b947ab4c5"
+    ],
+    "cwd": "<fixture>/control-repair",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "<fixture>/control-repair",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "control:candidate-only-relation-repaired"
+    ],
+    "cwd": "<fixture>/control-repair",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "control:candidate-restored"
+    ],
+    "cwd": "<fixture>/control-repair",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--no-checkout",
+      "--template=<fixture>/empty-hooks-and-template",
+      "<fixture>/original",
+      "<fixture>/control-introduce"
+    ],
+    "cwd": "<fixture>",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "checkout",
+      "--quiet",
+      "--detach",
+      "9b5f41ce67e46c2773ccb96084f9831315cbfcf9"
+    ],
+    "cwd": "<fixture>/control-introduce",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "<fixture>/control-introduce",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "<python>",
+      "-I",
+      "-B",
+      "<skill>/scripts/predicate.py",
+      "--record",
+      "<fixture>/artifacts/checks.jsonl",
+      "--label",
+      "control:parent-only-relation-introduced"
+    ],
+    "cwd": "<fixture>/control-introduce",
+    "exit": 1
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "symbolic-ref",
+      "--short",
+      "HEAD"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "status",
+      "--porcelain=v1",
+      "--untracked-files=all",
+      "--ignored"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--cached",
+      "--binary"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--binary"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "log",
+      "--all",
+      "--graph",
+      "--format=%h %s"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  },
+  {
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "-c",
+      "core.hooksPath=<fixture>/empty-hooks-and-template",
+      "-c",
+      "commit.gpgSign=false",
+      "-c",
+      "core.autocrlf=false",
+      "--version"
+    ],
+    "cwd": "<fixture>/original",
+    "exit": 0
+  }
+]

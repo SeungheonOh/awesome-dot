@@ -1,0 +1,10 @@
+# bad: [b1955b5e3e0abdace0af6a5b441f30404bfeaf12] Add module usage note
+# good: [3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a] Define half-open room availability
+git bisect start 'b1955b5e3e0abdace0af6a5b441f30404bfeaf12' '3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a'
+# good: [9b5f41ce67e46c2773ccb96084f9831315cbfcf9] Sort bookings before checking overlap
+git bisect good 9b5f41ce67e46c2773ccb96084f9831315cbfcf9
+# bad: [af6fe1dd3a9d931a381e6745ee61bc622985ec70] Document the reservation adapter
+git bisect bad af6fe1dd3a9d931a381e6745ee61bc622985ec70
+# bad: [5394db61bf56f39fde8de6623e89d40b947ab4c5] Consolidate contact checks
+git bisect bad 5394db61bf56f39fde8de6623e89d40b947ab4c5
+# first bad commit: [5394db61bf56f39fde8de6623e89d40b947ab4c5] Consolidate contact checks

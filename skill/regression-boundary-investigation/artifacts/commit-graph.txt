@@ -1,0 +1,24 @@
+* dbfa6ba Write left planning note
+| * fbb0132 Write right planning note
+|/  
+* b1955b5 Add module usage note
+* af6fe1d Document the reservation adapter
+* 5394db6 Consolidate contact checks
+| * fb9073a Record adapter deployment notes
+| * 68ee9d1 Reintroduce inclusive contact checks
+| * c5835da Add adapter note 6
+| * c3af18c Add adapter note 5
+| * 30d69ae Add adapter note 4
+| * 4d45f76 Add adapter note 3
+| * d0702e1 Restore half-open contact checks
+| * bfcc568 Use inclusive contact checks
+| | * 1dbb39f Document migration state
+| | * 3746312 Use one contact rule in both modes
+| | * a501011 Restore API with compatibility-dependent contacts
+| | * efd5817 Rename availability interface during migration
+| |/  
+|/|   
+* | 9b5f41c Sort bookings before checking overlap
+* | 8a1bf66 Document integer slot coordinates
+|/  
+* 3b6445b Define half-open room availability

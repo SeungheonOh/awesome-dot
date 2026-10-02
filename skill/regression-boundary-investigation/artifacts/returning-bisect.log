@@ -1,0 +1,10 @@
+# bad: [fb9073a0cfcacf4caaebdbba396f816ea281b44f] Record adapter deployment notes
+# good: [3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a] Define half-open room availability
+git bisect start 'fb9073a0cfcacf4caaebdbba396f816ea281b44f' '3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a'
+# good: [30d69ae3f3995aea4ae920b65a1e80a13b2740da] Add adapter note 4
+git bisect good 30d69ae3f3995aea4ae920b65a1e80a13b2740da
+# good: [c5835da83139b09193a18147d3e646b8bb06b8da] Add adapter note 6
+git bisect good c5835da83139b09193a18147d3e646b8bb06b8da
+# bad: [68ee9d12f02a66b24cd764a3975f9c86dfc77ebd] Reintroduce inclusive contact checks
+git bisect bad 68ee9d12f02a66b24cd764a3975f9c86dfc77ebd
+# first bad commit: [68ee9d12f02a66b24cd764a3975f9c86dfc77ebd] Reintroduce inclusive contact checks

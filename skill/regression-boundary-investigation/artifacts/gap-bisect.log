@@ -1,0 +1,15 @@
+# bad: [1dbb39f575bede4d08a84d5741415c98f673f58b] Document migration state
+# good: [3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a] Define half-open room availability
+git bisect start '1dbb39f575bede4d08a84d5741415c98f673f58b' '3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a'
+# skip: [efd58170ab13fb2bc10078c4450d1f1c68c97684] Rename availability interface during migration
+git bisect skip efd58170ab13fb2bc10078c4450d1f1c68c97684
+# skip: [a501011017630f23e7ae8225af693aad62af25cd] Restore API with compatibility-dependent contacts
+git bisect skip a501011017630f23e7ae8225af693aad62af25cd
+# good: [9b5f41ce67e46c2773ccb96084f9831315cbfcf9] Sort bookings before checking overlap
+git bisect good 9b5f41ce67e46c2773ccb96084f9831315cbfcf9
+# bad: [37463128c968789a79c0a2468368153aaea87298] Use one contact rule in both modes
+git bisect bad 37463128c968789a79c0a2468368153aaea87298
+# only skipped commits left to test
+# possible first bad commit: [37463128c968789a79c0a2468368153aaea87298] Use one contact rule in both modes
+# possible first bad commit: [a501011017630f23e7ae8225af693aad62af25cd] Restore API with compatibility-dependent contacts
+# possible first bad commit: [efd58170ab13fb2bc10078c4450d1f1c68c97684] Rename availability interface during migration

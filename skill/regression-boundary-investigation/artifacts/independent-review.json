@@ -1,0 +1,1219 @@
+{
+  "classification": {
+    "cli_all_pass": true,
+    "cli_cases": 13,
+    "cli_results": [
+      {
+        "attempts": [
+          {
+            "child_exit": 0,
+            "mode": "standard",
+            "outcome": "good",
+            "result": {
+              "case_count": 10,
+              "failures": [],
+              "kind": "evaluated"
+            }
+          },
+          {
+            "child_exit": 0,
+            "mode": "legacy",
+            "outcome": "good",
+            "result": {
+              "case_count": 10,
+              "failures": [],
+              "kind": "evaluated"
+            }
+          },
+          {
+            "child_exit": 0,
+            "mode": "standard",
+            "outcome": "good",
+            "result": {
+              "case_count": 10,
+              "failures": [],
+              "kind": "evaluated"
+            }
+          }
+        ],
+        "classification": "good",
+        "exit": 0,
+        "label": "good"
+      },
+      {
+        "attempts": [
+          {
+            "child_exit": 10,
+            "mode": "standard",
+            "outcome": "bad",
+            "result": {
+              "case_count": 10,
+              "failures": [
+                {
+                  "actual": false,
+                  "case": "touch-after",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "touch-before",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "exact-gap",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "negative-touch",
+                  "expected": true
+                }
+              ],
+              "kind": "evaluated"
+            }
+          },
+          {
+            "child_exit": 10,
+            "mode": "legacy",
+            "outcome": "bad",
+            "result": {
+              "case_count": 10,
+              "failures": [
+                {
+                  "actual": false,
+                  "case": "touch-after",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "touch-before",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "exact-gap",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "negative-touch",
+                  "expected": true
+                }
+              ],
+              "kind": "evaluated"
+            }
+          },
+          {
+            "child_exit": 10,
+            "mode": "standard",
+            "outcome": "bad",
+            "result": {
+              "case_count": 10,
+              "failures": [
+                {
+                  "actual": false,
+                  "case": "touch-after",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "touch-before",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "exact-gap",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "negative-touch",
+                  "expected": true
+                }
+              ],
+              "kind": "evaluated"
+            }
+          }
+        ],
+        "classification": "bad",
+        "exit": 1,
+        "label": "bad"
+      },
+      {
+        "attempts": [
+          {
+            "child_exit": 20,
+            "mode": "standard",
+            "outcome": "unavailable",
+            "result": {
+              "kind": "unavailable",
+              "reason": "named API is absent"
+            }
+          },
+          {
+            "child_exit": 20,
+            "mode": "legacy",
+            "outcome": "unavailable",
+            "result": {
+              "kind": "unavailable",
+              "reason": "named API is absent"
+            }
+          },
+          {
+            "child_exit": 20,
+            "mode": "standard",
+            "outcome": "unavailable",
+            "result": {
+              "kind": "unavailable",
+              "reason": "named API is absent"
+            }
+          }
+        ],
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "label": "missing-api"
+      },
+      {
+        "attempts": [
+          {
+            "child_exit": 0,
+            "mode": "standard",
+            "outcome": "good",
+            "result": {
+              "case_count": 10,
+              "failures": [],
+              "kind": "evaluated"
+            }
+          },
+          {
+            "child_exit": 10,
+            "mode": "legacy",
+            "outcome": "bad",
+            "result": {
+              "case_count": 10,
+              "failures": [
+                {
+                  "actual": false,
+                  "case": "touch-after",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "touch-before",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "exact-gap",
+                  "expected": true
+                },
+                {
+                  "actual": false,
+                  "case": "negative-touch",
+                  "expected": true
+                }
+              ],
+              "kind": "evaluated"
+            }
+          },
+          {
+            "child_exit": 0,
+            "mode": "standard",
+            "outcome": "good",
+            "result": {
+              "case_count": 10,
+              "failures": [],
+              "kind": "evaluated"
+            }
+          }
+        ],
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "label": "environment-sensitive"
+      },
+      {
+        "attempts": [
+          {
+            "mode": "standard",
+            "outcome": "abort",
+            "reason": "JSONDecodeError"
+          }
+        ],
+        "classification": "abort",
+        "exit": 128,
+        "label": "import-exception"
+      },
+      {
+        "attempts": [
+          {
+            "mode": "standard",
+            "outcome": "abort",
+            "reason": "JSONDecodeError"
+          }
+        ],
+        "classification": "abort",
+        "exit": 128,
+        "label": "syntax-error"
+      },
+      {
+        "attempts": [
+          {
+            "mode": "standard",
+            "outcome": "abort",
+            "reason": "JSONDecodeError"
+          }
+        ],
+        "classification": "abort",
+        "exit": 128,
+        "label": "child-exit-126"
+      },
+      {
+        "attempts": [
+          {
+            "mode": "standard",
+            "outcome": "abort",
+            "reason": "JSONDecodeError"
+          }
+        ],
+        "classification": "abort",
+        "exit": 128,
+        "label": "child-signal"
+      },
+      {
+        "attempts": [
+          {
+            "mode": "standard",
+            "outcome": "abort",
+            "reason": "JSONDecodeError"
+          }
+        ],
+        "classification": "abort",
+        "exit": 128,
+        "label": "non-json-stdout"
+      },
+      {
+        "attempts": [
+          {
+            "mode": "standard",
+            "outcome": "abort",
+            "reason": "TimeoutExpired"
+          }
+        ],
+        "classification": "abort",
+        "exit": 128,
+        "label": "timeout"
+      },
+      {
+        "attempts": [
+          {
+            "mode": "standard",
+            "outcome": "abort",
+            "reason": "JSONDecodeError"
+          }
+        ],
+        "classification": "abort",
+        "exit": 128,
+        "label": "missing-source"
+      },
+      {
+        "exit": 128,
+        "label": "record-is-directory",
+        "stderr": "predicate infrastructure error: IsADirectoryError"
+      },
+      {
+        "exit": 128,
+        "label": "not-a-repository",
+        "stderr": "predicate infrastructure error: CalledProcessError"
+      }
+    ],
+    "environment_sensitive_note": "S4 is deterministic for a given BOOKING_POLICY; standard/legacy/standard produces good/bad/good. This demonstrates policy sensitivity, not random flakiness.",
+    "truth_table": [
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": []
+      },
+      {
+        "classification": "good",
+        "exit": 0,
+        "outcomes": [
+          "good"
+        ]
+      },
+      {
+        "classification": "bad",
+        "exit": 1,
+        "outcomes": [
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort"
+        ]
+      },
+      {
+        "classification": "good",
+        "exit": 0,
+        "outcomes": [
+          "good",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "good",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "good"
+        ]
+      },
+      {
+        "classification": "bad",
+        "exit": 1,
+        "outcomes": [
+          "bad",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "bad",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "unavailable",
+          "abort"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "good"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "bad"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "abort"
+        ]
+      },
+      {
+        "classification": "good",
+        "exit": 0,
+        "outcomes": [
+          "good",
+          "good",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "good",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "good",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "good",
+          "good",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "bad",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "bad",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "bad",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "good",
+          "bad",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "unavailable",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "unavailable",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "good",
+          "unavailable",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "good",
+          "unavailable",
+          "abort"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "good",
+          "abort",
+          "good"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "good",
+          "abort",
+          "bad"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "good",
+          "abort",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "good",
+          "abort",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "good",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "good",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "good",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "bad",
+          "good",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unstable-matrix",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "bad",
+          "good"
+        ]
+      },
+      {
+        "classification": "bad",
+        "exit": 1,
+        "outcomes": [
+          "bad",
+          "bad",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "bad",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "bad",
+          "bad",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "unavailable",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "unavailable",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "bad",
+          "unavailable",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "bad",
+          "unavailable",
+          "abort"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "bad",
+          "abort",
+          "good"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "bad",
+          "abort",
+          "bad"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "bad",
+          "abort",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "bad",
+          "abort",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "good",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "good",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "good",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "unavailable",
+          "good",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "bad",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "bad",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "bad",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "unavailable",
+          "bad",
+          "abort"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "unavailable",
+          "good"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "unavailable",
+          "bad"
+        ]
+      },
+      {
+        "classification": "skip-unavailable",
+        "exit": 125,
+        "outcomes": [
+          "unavailable",
+          "unavailable",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "unavailable",
+          "unavailable",
+          "abort"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "unavailable",
+          "abort",
+          "good"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "unavailable",
+          "abort",
+          "bad"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "unavailable",
+          "abort",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "unavailable",
+          "abort",
+          "abort"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "good",
+          "good"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "good",
+          "bad"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "good",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "good",
+          "abort"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "bad",
+          "good"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "bad",
+          "bad"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "bad",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "bad",
+          "abort"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "unavailable",
+          "good"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "unavailable",
+          "bad"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "unavailable",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "unavailable",
+          "abort"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "abort",
+          "good"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "abort",
+          "bad"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "abort",
+          "unavailable"
+        ]
+      },
+      {
+        "classification": "abort",
+        "exit": 128,
+        "outcomes": [
+          "abort",
+          "abort",
+          "abort"
+        ]
+      }
+    ],
+    "truth_table_all_pass": true,
+    "truth_table_cases": 85
+  },
+  "input_hashes": {
+    "predicate.py": "282ad50e90bd291798114e0028a7ede5c23819c3309d844289dcc5e4bfe48440",
+    "rehearse.py": "708c848b96441f018e2136b53004130ec5649509bc2177f2a2a31ed18c9ae496"
+  },
+  "limitations": [
+    "Finite integer grid and at most two positive-length bookings; no claims for noninteger coordinates, malformed bookings, unusual objects, or arbitrary repository code.",
+    "Snapshots cover file bytes, regular-file modes, HEAD, branch, Git status, and staged/unstaged diffs; not filesystem timestamps, directory metadata, or a general-purpose backup guarantee.",
+    "Controlled BOOKING_POLICY sensitivity is not a stochastic-flakiness experiment.",
+    "Python isolated mode and empty hooks/templates reduce ambient interference but are not a security sandbox.",
+    "The helper intentionally generates new synthetic repositories only; the review does not validate a production repository workflow."
+  ],
+  "oracle": {
+    "booking_list_coverage": "Ordered lists of length zero, one, or two; overlaps, duplicates, and both booking orders included.",
+    "booking_lists": 463,
+    "coordinates": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "invalid_queries": 28,
+    "method": "Integer half-open intervals mapped to sets of unit cells; no overlap iff query cells are disjoint from the union of booking cells.",
+    "total_checks": 68061,
+    "valid_intervals": 21,
+    "variants": [
+      {
+        "examples": [],
+        "invalid_query_checks": 12964,
+        "invalid_query_passes": 12964,
+        "label": "M2",
+        "mismatch_count": 0,
+        "mismatches_by_kind": {},
+        "source_sha256": "590e947d3b0566f46aede08c789bbe89f98ab7639d62c8ee653e0947cc11168b",
+        "valid_query_checks": 9723
+      },
+      {
+        "examples": [
+          {
+            "actual": false,
+            "bookings": [
+              [
+                -3,
+                -2
+              ]
+            ],
+            "expected": true,
+            "query": [
+              -2,
+              -1
+            ]
+          },
+          {
+            "actual": false,
+            "bookings": [
+              [
+                -3,
+                -2
+              ]
+            ],
+            "expected": true,
+            "query": [
+              -2,
+              0
+            ]
+          },
+          {
+            "actual": false,
+            "bookings": [
+              [
+                -3,
+                -2
+              ]
+            ],
+            "expected": true,
+            "query": [
+              -2,
+              1
+            ]
+          },
+          {
+            "actual": false,
+            "bookings": [
+              [
+                -3,
+                -2
+              ]
+            ],
+            "expected": true,
+            "query": [
+              -2,
+              2
+            ]
+          }
+        ],
+        "invalid_query_checks": 12964,
+        "invalid_query_passes": 12964,
+        "label": "M3",
+        "mismatch_count": 966,
+        "mismatches_by_kind": {
+          "false_unavailable": 966
+        },
+        "source_sha256": "7c1584bc3575e5742f13210a3ca21350c74f5f4592d062bbcbbdae751f34f19c",
+        "valid_query_checks": 9723
+      },
+      {
+        "examples": [],
+        "invalid_query_checks": 12964,
+        "invalid_query_passes": 12964,
+        "label": "M3-controlled-repair",
+        "mismatch_count": 0,
+        "mismatches_by_kind": {},
+        "source_sha256": "590e947d3b0566f46aede08c789bbe89f98ab7639d62c8ee653e0947cc11168b",
+        "valid_query_checks": 9723
+      }
+    ]
+  },
+  "preservation": {
+    "control_source_restored": true,
+    "file_count_including_git": 91,
+    "merge_head_present": true,
+    "post_review_files_match": true,
+    "post_review_status_matches": true,
+    "saved_before_after_equal": true,
+    "status": "MM draft.txt\nUU merge-note.txt\n M scratchpad.txt\n?? ideas.txt\n!! scratch.cache\n"
+  },
+  "rehearsal": {
+    "attempts": 108,
+    "case_evaluations": 1020,
+    "evaluated_attempts": 102,
+    "gap_candidates": [
+      "S3",
+      "S4",
+      "S5"
+    ],
+    "monotonic_boundary": "M3",
+    "predicate_invocations": 36,
+    "returning_bisect_result": "N7",
+    "returning_first_bad_in_order": "N1",
+    "unavailable_attempts": 6
+  },
+  "reviewed_at": "2026-10-02T05:18:01.517362+00:00",
+  "scope": "Only inspected original synthetic local repositories and small controlled test modules; no network, external code, packages, credentials, real repositories, or remote operations.",
+  "scripts_modified": false
+}

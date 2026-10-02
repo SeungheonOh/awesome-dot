@@ -1,0 +1,21 @@
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'gap:bisect'
+{"classification": "skip-unavailable", "exit": 125, "revision": "efd58170ab13fb2bc10078c4450d1f1c68c97684"}
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[a501011017630f23e7ae8225af693aad62af25cd] Restore API with compatibility-dependent contacts
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'gap:bisect'
+{"classification": "skip-unstable-matrix", "exit": 125, "revision": "a501011017630f23e7ae8225af693aad62af25cd"}
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[9b5f41ce67e46c2773ccb96084f9831315cbfcf9] Sort bookings before checking overlap
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'gap:bisect'
+{"classification": "good", "exit": 0, "revision": "9b5f41ce67e46c2773ccb96084f9831315cbfcf9"}
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[37463128c968789a79c0a2468368153aaea87298] Use one contact rule in both modes
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'gap:bisect'
+{"classification": "bad", "exit": 1, "revision": "37463128c968789a79c0a2468368153aaea87298"}
+There are only 'skip'ped commits left to test.
+The first bad commit could be any of:
+a501011017630f23e7ae8225af693aad62af25cd
+efd58170ab13fb2bc10078c4450d1f1c68c97684
+37463128c968789a79c0a2468368153aaea87298
+We cannot bisect more!
+error: bisect run cannot continue any more

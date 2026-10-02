@@ -1,0 +1,20 @@
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'monotonic:bisect'
+{"classification": "good", "exit": 0, "revision": "9b5f41ce67e46c2773ccb96084f9831315cbfcf9"}
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[af6fe1dd3a9d931a381e6745ee61bc622985ec70] Document the reservation adapter
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'monotonic:bisect'
+{"classification": "bad", "exit": 1, "revision": "af6fe1dd3a9d931a381e6745ee61bc622985ec70"}
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[5394db61bf56f39fde8de6623e89d40b947ab4c5] Consolidate contact checks
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'monotonic:bisect'
+{"classification": "bad", "exit": 1, "revision": "5394db61bf56f39fde8de6623e89d40b947ab4c5"}
+5394db61bf56f39fde8de6623e89d40b947ab4c5 is the first bad commit
+commit 5394db61bf56f39fde8de6623e89d40b947ab4c5
+Author: Fixture <fixture@example.invalid>
+Date:   Wed Jan 1 00:03:00 2025 +0000
+
+    Consolidate contact checks
+
+ slots.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bisect found first bad commit

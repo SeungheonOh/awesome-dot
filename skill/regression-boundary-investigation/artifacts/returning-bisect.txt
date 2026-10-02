@@ -1,0 +1,20 @@
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'returning:bisect'
+{"classification": "good", "exit": 0, "revision": "30d69ae3f3995aea4ae920b65a1e80a13b2740da"}
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[c5835da83139b09193a18147d3e646b8bb06b8da] Add adapter note 6
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'returning:bisect'
+{"classification": "good", "exit": 0, "revision": "c5835da83139b09193a18147d3e646b8bb06b8da"}
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[68ee9d12f02a66b24cd764a3975f9c86dfc77ebd] Reintroduce inclusive contact checks
+running '<python>' '-I' '-B' '<skill>/scripts/predicate.py' '--record' '<fixture>/artifacts/checks.jsonl' '--label' 'returning:bisect'
+{"classification": "bad", "exit": 1, "revision": "68ee9d12f02a66b24cd764a3975f9c86dfc77ebd"}
+68ee9d12f02a66b24cd764a3975f9c86dfc77ebd is the first bad commit
+commit 68ee9d12f02a66b24cd764a3975f9c86dfc77ebd
+Author: Fixture <fixture@example.invalid>
+Date:   Wed Jan 1 00:16:00 2025 +0000
+
+    Reintroduce inclusive contact checks
+
+ slots.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bisect found first bad commit

@@ -1,0 +1,9 @@
+--- a/slots.py
++++ b/slots.py
+@@ -2,5 +2,5 @@
+     """Queries and bookings are half-open intervals; touching is allowed."""
+     if end <= start:
+         raise ValueError("the query needs positive duration")
+-    return not any(start <= booked_end and booked_start <= end
++    return not any(start < booked_end and booked_start < end
+                    for booked_start, booked_end in sorted(bookings))

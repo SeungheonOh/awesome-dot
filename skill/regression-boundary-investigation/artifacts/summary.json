@@ -1,0 +1,44 @@
+{
+  "attempts": 108,
+  "cases_per_evaluated_attempt": 10,
+  "input_hashes": {
+    "predicate.py": "282ad50e90bd291798114e0028a7ede5c23819c3309d844289dcc5e4bfe48440",
+    "rehearse.py": "708c848b96441f018e2136b53004130ec5649509bc2177f2a2a31ed18c9ae496"
+  },
+  "original_merge_still_in_progress": true,
+  "original_snapshot_equal": true,
+  "predicate_invocations": 36,
+  "preserved_file_count_including_git": 91,
+  "scope": "Original synthetic repositories only; no network, dependencies, remote services, or real project execution.",
+  "searches": {
+    "gap": {
+      "bad": "1dbb39f575bede4d08a84d5741415c98f673f58b",
+      "bad_ref": "37463128c968789a79c0a2468368153aaea87298",
+      "bisect_exit": 2,
+      "good": "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a",
+      "restored_head": "1dbb39f575bede4d08a84d5741415c98f673f58b",
+      "unique": false
+    },
+    "monotonic": {
+      "bad": "b1955b5e3e0abdace0af6a5b441f30404bfeaf12",
+      "bad_ref": "5394db61bf56f39fde8de6623e89d40b947ab4c5",
+      "bisect_exit": 0,
+      "good": "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a",
+      "restored_head": "b1955b5e3e0abdace0af6a5b441f30404bfeaf12",
+      "unique": true
+    },
+    "returning": {
+      "bad": "fb9073a0cfcacf4caaebdbba396f816ea281b44f",
+      "bad_ref": "68ee9d12f02a66b24cd764a3975f9c86dfc77ebd",
+      "bisect_exit": 0,
+      "good": "3b6445b6e9c43f79a5a9ed61aca1a00cb51a3d9a",
+      "restored_head": "fb9073a0cfcacf4caaebdbba396f816ea281b44f",
+      "unique": true
+    }
+  },
+  "tools": {
+    "git": "git version 2.52.0",
+    "python": "3.12.14"
+  },
+  "verified_at": "2026-10-02T05:14:56.378347+00:00"
+}
