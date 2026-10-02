@@ -1,0 +1,169 @@
+{
+  "captured_at": "2026-09-18T10:06:00Z",
+  "evidence_mode": "fictional_offline_only",
+  "file_id": "file-042",
+  "incidental_access": {
+    "account": "casey@studio.example",
+    "additional_possible_capabilities": [],
+    "confirmed_routes": [
+      {
+        "grant_id": "grant-casey",
+        "origin": "folder",
+        "principal": "casey@studio.example",
+        "principal_type": "person",
+        "role": "editor",
+        "source_id": "folder-017"
+      }
+    ],
+    "evidence_conflict": false,
+    "grant_capability_floor": [
+      "comment",
+      "edit",
+      "view"
+    ],
+    "permission": "confirmed",
+    "policy": "allowed",
+    "recipient_opening": {
+      "evidence": [],
+      "excluded_observations": 2,
+      "status": "untested"
+    },
+    "requested_capability": "view",
+    "session": "untested",
+    "unknown_routes": []
+  },
+  "input_sha256": {
+    "after": "a47994309d53eee217837521bf3618dd147e84dfc7cd1b23fc5074d416101ab6",
+    "before": "664c260d190bb80f915cdf947e0f0735e31acd36481e4ce1d5c79de0aa318d77",
+    "request": "ef4e9cb1ddfa5e0bd7a6c8c259257db8c8c64614014db1c36ad8a107ca07ab2c"
+  },
+  "permission_revision": "perm-12",
+  "recipients": [
+    {
+      "account": "priya@studio.example",
+      "additional_possible_capabilities": [],
+      "confirmed_routes": [
+        {
+          "grant_id": "grant-priya",
+          "origin": "direct",
+          "principal": "priya@studio.example",
+          "principal_type": "person",
+          "role": "viewer",
+          "source_id": "file-042"
+        }
+      ],
+      "evidence_conflict": false,
+      "grant_capability_floor": [
+        "view"
+      ],
+      "permission": "confirmed",
+      "policy": "allowed",
+      "recipient_opening": {
+        "evidence": [],
+        "excluded_observations": 2,
+        "status": "untested"
+      },
+      "requested_capability": "view",
+      "session": "untested",
+      "unknown_routes": []
+    },
+    {
+      "account": "dana@guest.example",
+      "additional_possible_capabilities": [],
+      "confirmed_routes": [
+        {
+          "grant_id": "grant-dana",
+          "origin": "direct",
+          "principal": "dana@guest.example",
+          "principal_type": "person",
+          "role": "viewer",
+          "source_id": "file-042"
+        }
+      ],
+      "evidence_conflict": false,
+      "grant_capability_floor": [
+        "view"
+      ],
+      "permission": "confirmed",
+      "policy": "allowed",
+      "recipient_opening": {
+        "evidence": [
+          {
+            "account": "dana@guest.example",
+            "action": "view",
+            "file_id": "file-042",
+            "kind": "recipient_report",
+            "observed_at": "2026-09-18T10:05:00Z",
+            "permission_revision": "perm-12",
+            "result": "success",
+            "session_account": "dana@guest.example"
+          }
+        ],
+        "excluded_observations": 1,
+        "status": "reported_success"
+      },
+      "requested_capability": "view",
+      "session": "matching_account",
+      "unknown_routes": []
+    },
+    {
+      "account": "morgan@studio.example",
+      "additional_possible_capabilities": [
+        "comment",
+        "view"
+      ],
+      "confirmed_routes": [],
+      "evidence_conflict": false,
+      "grant_capability_floor": [],
+      "permission": "unknown",
+      "policy": "allowed",
+      "recipient_opening": {
+        "evidence": [],
+        "excluded_observations": 2,
+        "status": "untested"
+      },
+      "requested_capability": "view",
+      "session": "untested",
+      "unknown_routes": [
+        {
+          "grant_id": "grant-review",
+          "origin": "direct",
+          "principal": "review-circle",
+          "principal_type": "group",
+          "role": "commenter",
+          "source_id": "file-042"
+        }
+      ]
+    },
+    {
+      "account": "lee@studio.example",
+      "additional_possible_capabilities": [],
+      "confirmed_routes": [
+        {
+          "grant_id": "grant-lee",
+          "origin": "shared_drive",
+          "principal": "lee@studio.example",
+          "principal_type": "person",
+          "role": "editor",
+          "source_id": "drive-004"
+        }
+      ],
+      "evidence_conflict": false,
+      "grant_capability_floor": [
+        "comment",
+        "edit",
+        "view"
+      ],
+      "permission": "blocked",
+      "policy": "blocked",
+      "recipient_opening": {
+        "evidence": [],
+        "excluded_observations": 2,
+        "status": "untested"
+      },
+      "requested_capability": "view",
+      "session": "untested",
+      "unknown_routes": []
+    }
+  ]
+}

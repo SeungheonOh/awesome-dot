@@ -1,0 +1,121 @@
+{
+  "fictional": true,
+  "contract": "Workshop Files v1",
+  "file": {
+    "id": "file-042",
+    "name": "Workshop plan",
+    "content_revision": "content-7",
+    "owner": "owner@studio.example",
+    "ancestors": [
+      {
+        "id": "folder-017",
+        "kind": "folder"
+      },
+      {
+        "id": "drive-004",
+        "kind": "shared_drive"
+      }
+    ]
+  },
+  "captured_at": "2026-09-18T10:06:00Z",
+  "permission_revision": "perm-12",
+  "coverage": "complete",
+  "organization": "studio.example",
+  "link": {
+    "audience": "restricted",
+    "role": "viewer"
+  },
+  "grants": [
+    {
+      "id": "grant-priya",
+      "source_id": "file-042",
+      "principal_type": "person",
+      "principal": "priya@studio.example",
+      "role": "viewer",
+      "active": true
+    },
+    {
+      "id": "grant-review",
+      "source_id": "file-042",
+      "principal_type": "group",
+      "principal": "review-circle",
+      "role": "commenter",
+      "active": true
+    },
+    {
+      "id": "grant-casey",
+      "source_id": "folder-017",
+      "principal_type": "person",
+      "principal": "casey@studio.example",
+      "role": "editor",
+      "active": true
+    },
+    {
+      "id": "grant-lee",
+      "source_id": "drive-004",
+      "principal_type": "person",
+      "principal": "lee@studio.example",
+      "role": "editor",
+      "active": true
+    },
+    {
+      "id": "grant-dana",
+      "source_id": "file-042",
+      "principal_type": "person",
+      "principal": "dana@guest.example",
+      "role": "viewer",
+      "active": true
+    }
+  ],
+  "memberships": {
+    "review-circle": {
+      "priya@studio.example": "no",
+      "dana@guest.example": "no",
+      "morgan@studio.example": "unknown",
+      "lee@studio.example": "no",
+      "casey@studio.example": "no"
+    }
+  },
+  "policy": {
+    "priya@studio.example": "allowed",
+    "dana@guest.example": "allowed",
+    "morgan@studio.example": "allowed",
+    "lee@studio.example": "blocked",
+    "casey@studio.example": "allowed"
+  },
+  "sessions": {
+    "dana@guest.example": "dana@guest.example"
+  },
+  "observations": [
+    {
+      "file_id": "file-042",
+      "account": "owner@studio.example",
+      "session_account": "owner@studio.example",
+      "action": "view",
+      "result": "success",
+      "kind": "authorized_observation",
+      "permission_revision": "perm-11",
+      "observed_at": "2026-09-18T09:59:00Z"
+    },
+    {
+      "file_id": "file-042",
+      "account": "dana@guest.example",
+      "session_account": "dana@guest.example",
+      "action": "view",
+      "result": "success",
+      "kind": "recipient_report",
+      "permission_revision": "perm-12",
+      "observed_at": "2026-09-18T10:05:00Z"
+    }
+  ],
+  "notifications_sent": false,
+  "simulated_receipt": {
+    "id": "change-001",
+    "result": "applied",
+    "changes": [
+      "direct viewer grant for Dana",
+      "organization link restricted"
+    ],
+    "live_action": false
+  }
+}

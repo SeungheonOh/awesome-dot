@@ -1,0 +1,14 @@
+{
+  "evaluated_changes": [
+    "exact direct grant addition",
+    "link audience restriction"
+  ],
+  "input_sha256": {
+    "after": "a47994309d53eee217837521bf3618dd147e84dfc7cd1b23fc5074d416101ab6",
+    "before": "664c260d190bb80f915cdf947e0f0735e31acd36481e4ce1d5c79de0aa318d77",
+    "request": "ef4e9cb1ddfa5e0bd7a6c8c259257db8c8c64614014db1c36ad8a107ca07ab2c"
+  },
+  "live_actions_performed": 0,
+  "problems": [],
+  "status": "matches_fictional_approval"
+}
