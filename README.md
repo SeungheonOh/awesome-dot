@@ -5,24 +5,11 @@
 
 <p align="center">
   <a href="#use-it-with-dot"><strong>Use a skill</strong></a> ·
-  <a href="#open-the-actual-output">See real files</a> ·
   <a href="#what-ai-research-has-measured">Read the research</a> ·
   <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
 **Reusable Markdown workflows for dot.** Each skill brings together the inputs, steps, examples, and checks for a concrete task. Give dot a skill and your materials, then review the work it produces.
-
-## Open the actual output
-
-These files are already in the repository. The scenarios and data are fictional; the downloadable artifacts are real.
-
-<p align="center">
-  <a href="skill/source-backed-presentation/intake-pilot-example.pptx"><img src="skill/source-backed-presentation/preview.png" width="390" alt="All five slides in the fictional intake-pilot presentation"></a>
-  <a href="skill/source-backed-form-fill/room-enquiry-draft.pdf"><img src="skill/source-backed-form-fill/preview.png" width="270" alt="Fictional room-use enquiry draft with supplied answers filled and unresolved fields left blank"></a>
-</p>
-
-- **A decision deck:** Approved notes → five editable slides, an evidence chart, source links, and speaker notes. [Get the PPTX](skill/source-backed-presentation/intake-pilot-example.pptx) · [Use the skill](skill/source-backed-presentation/SKILL.md) · [Verification](skill/source-backed-presentation/verification.md)
-- **A filled form:** Supplied facts → nine answers in native PDF fields, with unresolved questions left open. [Open the PDF](skill/source-backed-form-fill/room-enquiry-draft.pdf) · [Use the skill](skill/source-backed-form-fill/SKILL.md) · [Verification](skill/source-backed-form-fill/verification.md)
 
 ## Pick your next task
 
