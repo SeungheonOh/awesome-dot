@@ -1,0 +1,874 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "status": "prepared_only",
+  "source_file": "source-bookmarks.html",
+  "source_sha256": "ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df",
+  "prepared_file": "import-ready.html",
+  "prepared_sha256": "f850819763b29f8b1bd989be82d040c8d345080e08f1f0a4e04e3e6cef8ebfb1",
+  "wrapper_title": "Riverdesk migration • 2026-10-02",
+  "ordinal_basis": "zero-based sibling positions; all item kinds count",
+  "lineage_basis": "SHA-256 of unchanged export plus one-based preorder occurrence number",
+  "native_id_note": "IDs in the source are fictional exporter IDs; actual browser exports may omit IDs.",
+  "metadata_retention": {
+    "original_export_and_sidecar": "all original attributes and descriptions retained",
+    "prepared_html": "creation/modification times, tags, keyword and description carried where present",
+    "sidecar_only": "source native IDs, icon URI and toolbar marker",
+    "target_browser": "not tested; no field retention asserted"
+  },
+  "counts": {
+    "source_folders": 7,
+    "source_bookmarks": 15,
+    "prepared_source_folders": 7,
+    "wrapper_folders": 1,
+    "included_bookmarks": 8,
+    "held_bookmarks": 7
+  },
+  "records": [
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0001",
+        "native_source_id": "fixture-toolbar",
+        "parent_lineage_id": null,
+        "ordinal_path": [
+          0
+        ],
+        "display_path": [
+          "Bookmarks Bar"
+        ],
+        "kind": "folder",
+        "title": "Bookmarks Bar",
+        "attributes": {
+          "id": "fixture-toolbar",
+          "add_date": "1759276800",
+          "last_modified": "1790812800",
+          "personal_toolbar_folder": "true"
+        },
+        "description": "",
+        "source_line": 7
+      },
+      "disposition": "included",
+      "reason": "Folder retained, including empty folders",
+      "carried_attributes": {
+        "add_date": "1759276800",
+        "last_modified": "1790812800"
+      },
+      "sidecar_only_attributes": {
+        "id": "fixture-toolbar",
+        "personal_toolbar_folder": "true"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0002",
+        "native_source_id": "fixture-work",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0001",
+        "ordinal_path": [
+          0,
+          0
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work"
+        ],
+        "kind": "folder",
+        "title": "Software & work",
+        "attributes": {
+          "id": "fixture-work",
+          "add_date": "1759276801"
+        },
+        "description": "",
+        "source_line": 9
+      },
+      "disposition": "included",
+      "reason": "Folder retained, including empty folders",
+      "carried_attributes": {
+        "add_date": "1759276801"
+      },
+      "sidecar_only_attributes": {
+        "id": "fixture-work"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0003",
+        "native_source_id": "fixture-ref-a",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0002",
+        "ordinal_path": [
+          0,
+          0,
+          0
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work",
+          "Reference"
+        ],
+        "kind": "folder",
+        "title": "Reference",
+        "attributes": {
+          "id": "fixture-ref-a"
+        },
+        "description": "",
+        "source_line": 11
+      },
+      "disposition": "included",
+      "reason": "Folder retained, including empty folders",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-ref-a"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0004",
+        "native_source_id": "fixture-api-a",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0003",
+        "ordinal_path": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work",
+          "Reference",
+          "Riverdesk API & error guide"
+        ],
+        "kind": "bookmark",
+        "title": "Riverdesk API & error guide",
+        "attributes": {
+          "id": "fixture-api-a",
+          "href": "https://docs.riverdesk.example/api?version=2&lang=en#errors",
+          "add_date": "1759276802",
+          "last_modified": "1790812801",
+          "tags": "api,review",
+          "shortcuturl": "rd",
+          "icon_uri": "https://icons.riverdesk.example/api.png"
+        },
+        "description": "Response fields & retry notes. Fictional reference.",
+        "source_line": 13
+      },
+      "disposition": "included",
+      "reason": "HTTP(S) syntax accepted locally; destination not opened",
+      "carried_attributes": {
+        "add_date": "1759276802",
+        "last_modified": "1790812801",
+        "tags": "api,review",
+        "shortcuturl": "rd"
+      },
+      "sidecar_only_attributes": {
+        "id": "fixture-api-a",
+        "icon_uri": "https://icons.riverdesk.example/api.png"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0005",
+        "native_source_id": "fixture-unicode",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0003",
+        "ordinal_path": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work",
+          "Reference",
+          "Café UI — 日本語"
+        ],
+        "kind": "bookmark",
+        "title": "Café UI — 日本語",
+        "attributes": {
+          "id": "fixture-unicode",
+          "href": "https://design.riverdesk.example/caf%C3%A9#日本語",
+          "add_date": "1759276803"
+        },
+        "description": "",
+        "source_line": 15
+      },
+      "disposition": "included",
+      "reason": "HTTP(S) syntax accepted locally; destination not opened",
+      "carried_attributes": {
+        "add_date": "1759276803"
+      },
+      "sidecar_only_attributes": {
+        "id": "fixture-unicode"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0006",
+        "native_source_id": "fixture-blank-title",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0003",
+        "ordinal_path": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work",
+          "Reference",
+          ""
+        ],
+        "kind": "bookmark",
+        "title": "",
+        "attributes": {
+          "id": "fixture-blank-title",
+          "href": "https://status.riverdesk.example",
+          "add_date": "1759276804"
+        },
+        "description": "",
+        "source_line": 16
+      },
+      "disposition": "included",
+      "reason": "HTTP(S) syntax accepted locally; destination not opened",
+      "carried_attributes": {
+        "add_date": "1759276804"
+      },
+      "sidecar_only_attributes": {
+        "id": "fixture-blank-title"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0007",
+        "native_source_id": "fixture-ref-b",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0002",
+        "ordinal_path": [
+          0,
+          0,
+          1
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work",
+          "Reference"
+        ],
+        "kind": "folder",
+        "title": "Reference",
+        "attributes": {
+          "id": "fixture-ref-b"
+        },
+        "description": "",
+        "source_line": 18
+      },
+      "disposition": "included",
+      "reason": "Folder retained, including empty folders",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-ref-b"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0008",
+        "native_source_id": "fixture-repeat-a",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0007",
+        "ordinal_path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work",
+          "Reference",
+          "Release checklist"
+        ],
+        "kind": "bookmark",
+        "title": "Release checklist",
+        "attributes": {
+          "id": "fixture-repeat-a",
+          "href": "https://review.riverdesk.example/checklist"
+        },
+        "description": "",
+        "source_line": 20
+      },
+      "disposition": "included",
+      "reason": "HTTP(S) syntax accepted locally; destination not opened",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-repeat-a"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0009",
+        "native_source_id": "fixture-repeat-b",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0007",
+        "ordinal_path": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work",
+          "Reference",
+          "Release checklist"
+        ],
+        "kind": "bookmark",
+        "title": "Release checklist",
+        "attributes": {
+          "id": "fixture-repeat-b",
+          "href": "https://review.riverdesk.example/checklist"
+        },
+        "description": "",
+        "source_line": 21
+      },
+      "disposition": "included",
+      "reason": "HTTP(S) syntax accepted locally; destination not opened",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-repeat-b"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0010",
+        "native_source_id": "fixture-empty",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0002",
+        "ordinal_path": [
+          0,
+          0,
+          2
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Software & work",
+          "Empty • later"
+        ],
+        "kind": "folder",
+        "title": "Empty • later",
+        "attributes": {
+          "id": "fixture-empty",
+          "add_date": "1759276805"
+        },
+        "description": "",
+        "source_line": 23
+      },
+      "disposition": "included",
+      "reason": "Folder retained, including empty folders",
+      "carried_attributes": {
+        "add_date": "1759276805"
+      },
+      "sidecar_only_attributes": {
+        "id": "fixture-empty"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0011",
+        "native_source_id": "fixture-everyday",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0001",
+        "ordinal_path": [
+          0,
+          1
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Everyday / Quotidien"
+        ],
+        "kind": "folder",
+        "title": "Everyday / Quotidien",
+        "attributes": {
+          "id": "fixture-everyday"
+        },
+        "description": "",
+        "source_line": 27
+      },
+      "disposition": "included",
+      "reason": "Folder retained, including empty folders",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-everyday"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        1
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0012",
+        "native_source_id": "fixture-transit",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0011",
+        "ordinal_path": [
+          0,
+          1,
+          0
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Everyday / Quotidien",
+          "Montréal – accès"
+        ],
+        "kind": "bookmark",
+        "title": "Montréal – accès",
+        "attributes": {
+          "id": "fixture-transit",
+          "href": "https://transit.example/routes/été?direction=inbound&mode=step-free#stop-2"
+        },
+        "description": "",
+        "source_line": 29
+      },
+      "disposition": "included",
+      "reason": "HTTP(S) syntax accepted locally; destination not opened",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-transit"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0013",
+        "native_source_id": "fixture-api-b",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0011",
+        "ordinal_path": [
+          0,
+          1,
+          1
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Everyday / Quotidien",
+          "Riverdesk API & error guide"
+        ],
+        "kind": "bookmark",
+        "title": "Riverdesk API & error guide",
+        "attributes": {
+          "id": "fixture-api-b",
+          "href": "https://docs.riverdesk.example/api?version=2&lang=en#errors"
+        },
+        "description": "",
+        "source_line": 30
+      },
+      "disposition": "included",
+      "reason": "HTTP(S) syntax accepted locally; destination not opened",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-api-b"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0014",
+        "native_source_id": "fixture-review",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0001",
+        "ordinal_path": [
+          0,
+          2
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Needs review"
+        ],
+        "kind": "folder",
+        "title": "Needs review",
+        "attributes": {
+          "id": "fixture-review"
+        },
+        "description": "",
+        "source_line": 32
+      },
+      "disposition": "included",
+      "reason": "Folder retained, including empty folders",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-review"
+      },
+      "prepared_ordinal_path": [
+        0,
+        0,
+        2
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0015",
+        "native_source_id": "fixture-no-host",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0014",
+        "ordinal_path": [
+          0,
+          2,
+          0
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Needs review",
+          "Incomplete address"
+        ],
+        "kind": "bookmark",
+        "title": "Incomplete address",
+        "attributes": {
+          "id": "fixture-no-host",
+          "href": "https://"
+        },
+        "description": "",
+        "source_line": 34
+      },
+      "disposition": "held",
+      "reason": "Malformed HTTP(S) address",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-no-host",
+        "href": "https://"
+      },
+      "prepared_ordinal_path": null,
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0016",
+        "native_source_id": "fixture-bad-escape",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0014",
+        "ordinal_path": [
+          0,
+          2,
+          1
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Needs review",
+          "Broken escape"
+        ],
+        "kind": "bookmark",
+        "title": "Broken escape",
+        "attributes": {
+          "id": "fixture-bad-escape",
+          "href": "https://riverdesk.example/%ZZ"
+        },
+        "description": "",
+        "source_line": 35
+      },
+      "disposition": "held",
+      "reason": "Malformed percent escape",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-bad-escape",
+        "href": "https://riverdesk.example/%ZZ"
+      },
+      "prepared_ordinal_path": null,
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0017",
+        "native_source_id": "fixture-internal",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0014",
+        "ordinal_path": [
+          0,
+          2,
+          2
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Needs review",
+          "Browser preferences"
+        ],
+        "kind": "bookmark",
+        "title": "Browser preferences",
+        "attributes": {
+          "id": "fixture-internal",
+          "href": "about:preferences"
+        },
+        "description": "",
+        "source_line": 36
+      },
+      "disposition": "held",
+      "reason": "Scheme requires a target-specific decision: about",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-internal",
+        "href": "about:preferences"
+      },
+      "prepared_ordinal_path": null,
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0018",
+        "native_source_id": "fixture-file",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0014",
+        "ordinal_path": [
+          0,
+          2,
+          3
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Needs review",
+          "Local reading file"
+        ],
+        "kind": "bookmark",
+        "title": "Local reading file",
+        "attributes": {
+          "id": "fixture-file",
+          "href": "file:///fictional-notes/reading.html"
+        },
+        "description": "",
+        "source_line": 37
+      },
+      "disposition": "held",
+      "reason": "Scheme requires a target-specific decision: file",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-file",
+        "href": "file:///fictional-notes/reading.html"
+      },
+      "prepared_ordinal_path": null,
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0019",
+        "native_source_id": "fixture-mail",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0014",
+        "ordinal_path": [
+          0,
+          2,
+          4
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Needs review",
+          "Contact address"
+        ],
+        "kind": "bookmark",
+        "title": "Contact address",
+        "attributes": {
+          "id": "fixture-mail",
+          "href": "mailto:team@riverdesk.example"
+        },
+        "description": "",
+        "source_line": 38
+      },
+      "disposition": "held",
+      "reason": "Scheme requires a target-specific decision: mailto",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-mail",
+        "href": "mailto:team@riverdesk.example"
+      },
+      "prepared_ordinal_path": null,
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0020",
+        "native_source_id": "fixture-bookmarklet",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0014",
+        "ordinal_path": [
+          0,
+          2,
+          5
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Needs review",
+          "No-op bookmarklet"
+        ],
+        "kind": "bookmark",
+        "title": "No-op bookmarklet",
+        "attributes": {
+          "id": "fixture-bookmarklet",
+          "href": "javascript:void(0)"
+        },
+        "description": "",
+        "source_line": 39
+      },
+      "disposition": "held",
+      "reason": "Scheme requires a target-specific decision: javascript",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-bookmarklet",
+        "href": "javascript:void(0)"
+      },
+      "prepared_ordinal_path": null,
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0021",
+        "native_source_id": "fixture-no-href",
+        "parent_lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0014",
+        "ordinal_path": [
+          0,
+          2,
+          6
+        ],
+        "display_path": [
+          "Bookmarks Bar",
+          "Needs review",
+          "Missing address"
+        ],
+        "kind": "bookmark",
+        "title": "Missing address",
+        "attributes": {
+          "id": "fixture-no-href"
+        },
+        "description": "",
+        "source_line": 40
+      },
+      "disposition": "held",
+      "reason": "Missing address",
+      "carried_attributes": {},
+      "sidecar_only_attributes": {
+        "id": "fixture-no-href"
+      },
+      "prepared_ordinal_path": null,
+      "target_status": "not_run",
+      "target_id": null
+    },
+    {
+      "source": {
+        "lineage_id": "sha256:ae3aa6800123ca1f4d5999e1e29024227068c97bbb2a7ebc751012e59030c7df#occurrence:0022",
+        "native_source_id": null,
+        "parent_lineage_id": null,
+        "ordinal_path": [
+          1
+        ],
+        "display_path": [
+          "Archive notes"
+        ],
+        "kind": "bookmark",
+        "title": "Archive notes",
+        "attributes": {
+          "href": "http://archive.riverdesk.example/notes?view=plain#2024",
+          "add_date": "1735689600"
+        },
+        "description": "",
+        "source_line": 43
+      },
+      "disposition": "included",
+      "reason": "HTTP(S) syntax accepted locally; destination not opened",
+      "carried_attributes": {
+        "add_date": "1735689600"
+      },
+      "sidecar_only_attributes": {},
+      "prepared_ordinal_path": [
+        0,
+        1
+      ],
+      "target_status": "not_run",
+      "target_id": null
+    }
+  ]
+}
