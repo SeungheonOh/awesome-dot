@@ -1,0 +1,205 @@
+{
+  "fictional": true,
+  "recipient": "Rowan Alder (fictional)",
+  "target": "Windows 11; File Explorer ZIP extraction; plain UTF-8 text/Markdown viewing",
+  "source_count": 10,
+  "selected_count": 7,
+  "excluded": [
+    {
+      "path": "drafts/old-help.md",
+      "reason": "Superseded draft explicitly excluded from this handoff."
+    },
+    {
+      "path": "preview-cache/ui-preview.txt",
+      "reason": "Regenerable preview cache explicitly excluded; no selected reference points here."
+    },
+    {
+      "path": "scratch/personal-reminder.txt",
+      "reason": "Scratch notes explicitly excluded from the recipient's package."
+    }
+  ],
+  "generated_members": [
+    "MANIFEST.json",
+    "HANDOFF.txt"
+  ],
+  "records": [
+    {
+      "source": "Start here.md",
+      "destination": "Start here.md",
+      "source_bytes": 404,
+      "source_sha256": "741ee9e966818c0a9e25ed108ce58691830a2b0d109067bbcbe9844693609df5",
+      "package_bytes": 424,
+      "package_sha256": "1188b738359a8cd3c4a9e18d80d75610ce777c885f5f6773bf30b281d5c388a2",
+      "byte_identical": false,
+      "approved_reference_changes": [
+        {
+          "old": "(docs/Guide.md)",
+          "new": "(docs/setup-guide.md)",
+          "count": 1
+        },
+        {
+          "old": "(docs/guide.md)",
+          "new": "(docs/troubleshooting-guide.md)",
+          "count": 1
+        },
+        {
+          "old": "(notes/Release%3Anotes.md)",
+          "new": "(notes/release-notes.md)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "docs/Guide.md",
+      "destination": "docs/setup-guide.md",
+      "source_bytes": 221,
+      "source_sha256": "ac636a45db7cce87cca1677a3410d5fda2d07ed76186b2ba919cd453022017f2",
+      "package_bytes": 221,
+      "package_sha256": "ac636a45db7cce87cca1677a3410d5fda2d07ed76186b2ba919cd453022017f2",
+      "byte_identical": true,
+      "approved_reference_changes": []
+    },
+    {
+      "source": "docs/guide.md",
+      "destination": "docs/troubleshooting-guide.md",
+      "source_bytes": 268,
+      "source_sha256": "9aa4a1c725b40a3fc75d2b22df13138ac66d8b9f98b49259bd17f964639f5815",
+      "package_bytes": 266,
+      "package_sha256": "cb324f6a01923b8c3674ace6ee602efc65eb181345bf8464fce475d79cfde20f",
+      "byte_identical": false,
+      "approved_reference_changes": [
+        {
+          "old": "(../notes/Release%3Anotes.md)",
+          "new": "(../notes/release-notes.md)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "notes/Release:notes.md",
+      "destination": "notes/release-notes.md",
+      "source_bytes": 184,
+      "source_sha256": "890948c37f98a3b2a2a7c461f15e5042a10ead799af79f101774ce6446c33112",
+      "package_bytes": 206,
+      "package_sha256": "c444395e44d45f0998cf674fd52ebb0fad3b6619ddfe1918143ce9f836d43789",
+      "byte_identical": false,
+      "approved_reference_changes": [
+        {
+          "old": "(../docs/Guide.md)",
+          "new": "(../docs/setup-guide.md)",
+          "count": 1
+        },
+        {
+          "old": "(../docs/guide.md)",
+          "new": "(../docs/troubleshooting-guide.md)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "assets/Interface Colors.txt",
+      "destination": "assets/Interface Colors.txt",
+      "source_bytes": 168,
+      "source_sha256": "6ac5c1f0d04c80dab7aefa64c617e3d36073e46a2420a40917556d5d0de6907f",
+      "package_bytes": 168,
+      "package_sha256": "6ac5c1f0d04c80dab7aefa64c617e3d36073e46a2420a40917556d5d0de6907f",
+      "byte_identical": true,
+      "approved_reference_changes": []
+    },
+    {
+      "source": "reference/Keyboard shortcuts.txt",
+      "destination": "reference/Keyboard shortcuts.txt",
+      "source_bytes": 101,
+      "source_sha256": "5a44dc96529f3581b6ede5b7edf06c6952bb35dfc4a4eeb477734a33caf0972f",
+      "package_bytes": 101,
+      "package_sha256": "5a44dc96529f3581b6ede5b7edf06c6952bb35dfc4a4eeb477734a33caf0972f",
+      "byte_identical": true,
+      "approved_reference_changes": []
+    },
+    {
+      "source": "LICENSE.txt",
+      "destination": "LICENSE.txt",
+      "source_bytes": 84,
+      "source_sha256": "b043afbbdec7729ad643426f01ff9baae16d12c655e2c1caaa9374e5db4adc7b",
+      "package_bytes": 84,
+      "package_sha256": "b043afbbdec7729ad643426f01ff9baae16d12c655e2c1caaa9374e5db4adc7b",
+      "byte_identical": true,
+      "approved_reference_changes": []
+    }
+  ],
+  "relative_links": [
+    {
+      "from": "Start here.md",
+      "ordinal": 1,
+      "label": "Setup guide",
+      "to": "docs/setup-guide.md"
+    },
+    {
+      "from": "Start here.md",
+      "ordinal": 2,
+      "label": "Troubleshooting guide",
+      "to": "docs/troubleshooting-guide.md"
+    },
+    {
+      "from": "Start here.md",
+      "ordinal": 3,
+      "label": "Interface colours",
+      "to": "assets/Interface Colors.txt"
+    },
+    {
+      "from": "Start here.md",
+      "ordinal": 4,
+      "label": "Release notes",
+      "to": "notes/release-notes.md"
+    },
+    {
+      "from": "Start here.md",
+      "ordinal": 5,
+      "label": "Keyboard shortcuts",
+      "to": "reference/Keyboard shortcuts.txt"
+    },
+    {
+      "from": "docs/setup-guide.md",
+      "ordinal": 1,
+      "label": "interface colours",
+      "to": "assets/Interface Colors.txt"
+    },
+    {
+      "from": "docs/setup-guide.md",
+      "ordinal": 2,
+      "label": "Back to the start",
+      "to": "Start here.md"
+    },
+    {
+      "from": "docs/troubleshooting-guide.md",
+      "ordinal": 1,
+      "label": "release notes",
+      "to": "notes/release-notes.md"
+    },
+    {
+      "from": "docs/troubleshooting-guide.md",
+      "ordinal": 2,
+      "label": "keyboard shortcuts",
+      "to": "reference/Keyboard shortcuts.txt"
+    },
+    {
+      "from": "docs/troubleshooting-guide.md",
+      "ordinal": 3,
+      "label": "Back to the start",
+      "to": "Start here.md"
+    },
+    {
+      "from": "notes/release-notes.md",
+      "ordinal": 1,
+      "label": "setup guide",
+      "to": "docs/setup-guide.md"
+    },
+    {
+      "from": "notes/release-notes.md",
+      "ordinal": 2,
+      "label": "troubleshooting guide",
+      "to": "docs/troubleshooting-guide.md"
+    }
+  ],
+  "metadata_policy": "Preserve file bytes except the six approved reference replacements. Use fixed fixture ZIP timestamps, ordinary 0644 regular-file attributes, no extra fields, no comments. Source timestamps, ACLs, extended attributes and native document identities are outside this plain-file example."
+}

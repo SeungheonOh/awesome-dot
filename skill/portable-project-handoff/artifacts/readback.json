@@ -1,0 +1,47 @@
+{
+  "observed_platform": "Linux",
+  "python": "3.12.14",
+  "archive": {
+    "name": "maple-client-help.zip",
+    "bytes": 9846,
+    "sha256": "58168fa9f6580545de2f64b20b2efebf254c6b027325a02cfddbed4c1e3bcab8",
+    "members": 9,
+    "expanded_bytes": 8462
+  },
+  "inputs": {
+    "source-bundle.json": {
+      "bytes": 2941,
+      "sha256": "3433cf0f5e59dd0fcbcd94b12f7048dd8f2e9883e8909991aa60cfff80b1c9a8",
+      "unchanged": true
+    },
+    "reviewed-map.json": {
+      "bytes": 2581,
+      "sha256": "025cb246e8990892720da191b28fbb8a3dd7970aa49699bf3db24c314ab4399a",
+      "unchanged": true
+    }
+  },
+  "counts": {
+    "source": 10,
+    "selected": 7,
+    "excluded": 3,
+    "generated": 2,
+    "source_byte_identical": 4,
+    "reference_edited": 3,
+    "relative_links_resolved": 12
+  },
+  "source_naming_findings": [
+    "Windows-incompatible component: notes/Release:notes.md",
+    "case/type collision: docs/Guide.md <> docs/guide.md"
+  ],
+  "destination_naming_findings": [],
+  "native_or_library_readback": {
+    "method": "installed native unzip",
+    "tool": "UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.",
+    "exit_code": 0
+  },
+  "all_extracted_members_exact": true,
+  "all_extracted_members_utf8_readable": true,
+  "target_windows_extraction": "not tested",
+  "target_viewer_behavior": "not tested",
+  "sent_or_uploaded": false
+}

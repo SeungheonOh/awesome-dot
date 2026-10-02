@@ -1,0 +1,60 @@
+{
+  "fictional": true,
+  "project": "Maple client help",
+  "encoding": "UTF-8",
+  "files": [
+    {
+      "path": "Start here.md",
+      "selected": true,
+      "text": "# Maple client help\n\nA fictional client-help handoff for Rowan Alder. The app itself is not included.\n\n- [Setup guide](docs/Guide.md)\n- [Troubleshooting guide](docs/guide.md)\n- [Interface colours](assets/Interface%20Colors.txt)\n- [Release notes](notes/Release%3Anotes.md)\n- [Keyboard shortcuts](reference/Keyboard%20shortcuts.txt)\n\nRead both guides: setup and troubleshooting answer different questions.\n"
+    },
+    {
+      "path": "docs/Guide.md",
+      "selected": true,
+      "text": "# Setup guide\n\nIn the fictional Maple client, open Help from the main menu. This bundle contains documentation only. See the [interface colours](../assets/Interface%20Colors.txt).\n\n[Back to the start](../Start%20here.md)\n"
+    },
+    {
+      "path": "docs/guide.md",
+      "selected": true,
+      "text": "# Troubleshooting guide\n\nIf the help viewer is unavailable, read these UTF-8 files in a plain-text editor. Check the [release notes](../notes/Release%3Anotes.md) and [keyboard shortcuts](../reference/Keyboard%20shortcuts.txt).\n\n[Back to the start](../Start%20here.md)\n"
+    },
+    {
+      "path": "notes/Release:notes.md",
+      "selected": true,
+      "text": "# Release notes\n\nThis fictional 2.4 help refresh uses the Help menu label consistently.\n\nRead the [setup guide](../docs/Guide.md) before the [troubleshooting guide](../docs/guide.md).\n"
+    },
+    {
+      "path": "assets/Interface Colors.txt",
+      "selected": true,
+      "text": "Fictional Maple interface palette\nHelp link colour: #247B7B\nHelp panel background: #FFFFFF\nText design notes only; no rendered contrast or application test is implied.\n"
+    },
+    {
+      "path": "reference/Keyboard shortcuts.txt",
+      "selected": true,
+      "text": "Fictional Maple client shortcuts\nF1: open Help\nCtrl+F: search within Help\nEsc: close the help search\n"
+    },
+    {
+      "path": "LICENSE.txt",
+      "selected": true,
+      "text": "This original fictional sample may be copied and adapted for the handoff rehearsal.\n"
+    },
+    {
+      "path": "drafts/old-help.md",
+      "selected": false,
+      "reason": "Superseded draft explicitly excluded from this handoff.",
+      "text": "# Superseded help draft\nAn earlier fictional draft called the menu Support.\n"
+    },
+    {
+      "path": "preview-cache/ui-preview.txt",
+      "selected": false,
+      "reason": "Regenerable preview cache explicitly excluded; no selected reference points here.",
+      "text": "Fictional cached help-panel preview description.\n"
+    },
+    {
+      "path": "scratch/personal-reminder.txt",
+      "selected": false,
+      "reason": "Scratch notes explicitly excluded from the recipient's package.",
+      "text": "Fictional reminder: compare menu wording at the next review.\n"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "fictional_authorization": "Prepare local client-help documentation copies for Rowan Alder's Windows 11 handoff. The three destination renames and six exact reference replacements below are approved in this fictional scenario. Preserve original source records. Do not send or upload the package.",
+  "recipient": "Rowan Alder (fictional)",
+  "target": "Windows 11; File Explorer ZIP extraction; plain UTF-8 text/Markdown viewing",
+  "target_extraction_base": "C:\\Handoffs",
+  "package_root": "Maple-client-help",
+  "rows": [
+    {
+      "source": "Start here.md",
+      "destination": "Start here.md",
+      "replacements": [
+        {
+          "old": "(docs/Guide.md)",
+          "new": "(docs/setup-guide.md)",
+          "count": 1
+        },
+        {
+          "old": "(docs/guide.md)",
+          "new": "(docs/troubleshooting-guide.md)",
+          "count": 1
+        },
+        {
+          "old": "(notes/Release%3Anotes.md)",
+          "new": "(notes/release-notes.md)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "docs/Guide.md",
+      "destination": "docs/setup-guide.md",
+      "replacements": []
+    },
+    {
+      "source": "docs/guide.md",
+      "destination": "docs/troubleshooting-guide.md",
+      "replacements": [
+        {
+          "old": "(../notes/Release%3Anotes.md)",
+          "new": "(../notes/release-notes.md)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "notes/Release:notes.md",
+      "destination": "notes/release-notes.md",
+      "replacements": [
+        {
+          "old": "(../docs/Guide.md)",
+          "new": "(../docs/setup-guide.md)",
+          "count": 1
+        },
+        {
+          "old": "(../docs/guide.md)",
+          "new": "(../docs/troubleshooting-guide.md)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "assets/Interface Colors.txt",
+      "destination": "assets/Interface Colors.txt",
+      "replacements": []
+    },
+    {
+      "source": "reference/Keyboard shortcuts.txt",
+      "destination": "reference/Keyboard shortcuts.txt",
+      "replacements": []
+    },
+    {
+      "source": "LICENSE.txt",
+      "destination": "LICENSE.txt",
+      "replacements": []
+    }
+  ],
+  "generated_members": [
+    "MANIFEST.json",
+    "HANDOFF.txt"
+  ],
+  "metadata_policy": "Preserve file bytes except the six approved reference replacements. Use fixed fixture ZIP timestamps, ordinary 0644 regular-file attributes, no extra fields, no comments. Source timestamps, ACLs, extended attributes and native document identities are outside this plain-file example."
+}
