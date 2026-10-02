@@ -1,0 +1,41 @@
+From: Mira Vale <mira@cedar-works.example>
+To: Ellis North <ellis@field-notes.example>
+Date: Wed, 30 Sep 2026 09:00:00 +0000
+Message-ID: <cedar-05@cedar-works.example>
+Subject: Cedar reading-room handoff
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="cedar-05"
+
+--cedar-05
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Forwarded old correspondence for context. No final roster attached at this level.
+
+--cedar-05
+Content-Type: message/rfc822
+Content-Disposition: attachment; filename=earlier-message.eml
+
+From: Mira Vale <mira@cedar-works.example>
+To: Ellis North <ellis@field-notes.example>
+Date: Sun, 27 Sep 2026 15:00:00 +0000
+Message-ID: <cedar-nested@cedar-works.example>
+Subject: Cedar reading-room handoff
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="cedar-nested"
+
+--cedar-nested
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Old roster for context only.
+
+--cedar-nested
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="door-roster.txt"
+Content-Transfer-Encoding: base64
+
+RG9vciByb3N0ZXIgZHJhZnQNCldlc3QgZ2F0ZTogcGVuZGluZw0K
+--cedar-nested--
+
+--cedar-05--

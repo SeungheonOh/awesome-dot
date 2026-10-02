@@ -1,0 +1,47 @@
+From: Mira Vale <mira@cedar-works.example>
+To: Ellis North <ellis@field-notes.example>
+Date: Wed, 30 Sep 2026 08:30:00 +0000
+Message-ID: <cedar-04@cedar-works.example>
+Subject: Cedar reading-room handoff
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="cedar-04"
+
+--cedar-04
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Use revision B from my 29 September message for the route note.
+Both count-sheet attachments below are provisional; I have not chosen one.
+The final door roster is still to come.
+
+--cedar-04
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="packing-list.txt"
+Content-Transfer-Encoding: base64
+
+UGFja2luZyBsaXN0CjIgZm9sZGluZyBzaWducwoxIHBlbmNpbCB0aW4K
+--cedar-04
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="../handoff/count-sheet.txt"
+Content-Transfer-Encoding: base64
+
+Q291bnQgc2hlZXQgb3B0aW9uIEENCkNoYWlyczogMjQNCg==
+--cedar-04
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="../handoff/count-sheet.txt"
+Content-Transfer-Encoding: base64
+
+Q291bnQgc2hlZXQgb3B0aW9uIEINCkNoYWlyczogMjYNCg==
+--cedar-04
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="damaged-note.txt"
+Content-Transfer-Encoding: base64
+
+SGVsbG8*
+--cedar-04
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="legacy-note.txt"
+Content-Transfer-Encoding: x-cedar-placeholder
+
+Legacy placeholder
+--cedar-04--

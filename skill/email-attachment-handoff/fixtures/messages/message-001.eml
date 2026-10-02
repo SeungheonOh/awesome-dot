@@ -1,0 +1,42 @@
+From: Mira Vale <mira@cedar-works.example>
+To: Ellis North <ellis@field-notes.example>
+Date: Mon, 28 Sep 2026 09:00:00 +0000
+Message-ID: <cedar-01@cedar-works.example>
+Subject: Cedar reading-room handoff
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="cedar-01"
+
+--cedar-01
+Content-Type: multipart/alternative; boundary=cedar-alt
+
+--cedar-alt
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+First draft. The route note is provisional.
+
+--cedar-alt
+Content-Type: multipart/related; boundary=cedar-rel; start="<body@cedar.example>"
+
+--cedar-rel
+Content-Type: text/html; charset=utf-8
+Content-ID: <body@cedar.example>
+
+<p>First draft. <a href="https://assets.cedar.example/map">Map reference</a></p>
+--cedar-rel
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline; filename=legend.txt
+Content-ID: <legend@cedar.example>
+
+Legend for the body illustration, not a requested file.
+--cedar-rel--
+
+--cedar-alt--
+
+--cedar-01
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="route-note.txt"
+Content-Transfer-Encoding: base64
+
+Um91dGUgbm90ZSByZXZpc2lvbiBBDQpNZWV0IGF0IHRoZSB3ZXN0IGdhdGUuDQo=
+--cedar-01--

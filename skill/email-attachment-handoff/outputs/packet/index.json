@@ -1,0 +1,915 @@
+{
+  "schema": "cedar-attachment-packet-v1",
+  "request": "Prepare a local packet of corrected route note, packing list and cafe floor plan, retaining every selected occurrence. Also resolve the final count sheet and final door roster if supported by these supplied top-level messages. Leave attachments inside attached messages outside the selection. Keep originals and report unresolved files.",
+  "scope": "Five supplied message occurrences; top-level attachment selection. No mailbox completeness or sender-authenticity claim.",
+  "sources": [
+    {
+      "source": "s001",
+      "supplied_file": "message-001.eml",
+      "bytes": 1221,
+      "sha256": "dae5bdf4b036aa03532bbafd798bd161a0b2a149e4a69f6f1c757f9f953e34a8",
+      "reviewed_sha256": "dae5bdf4b036aa03532bbafd798bd161a0b2a149e4a69f6f1c757f9f953e34a8",
+      "matches_reviewed_source": true,
+      "message_id_display": "<cedar-01@cedar-works.example>",
+      "from_display": "Mira Vale <mira@cedar-works.example>",
+      "date_display": "Mon, 28 Sep 2026 09:00:00 +0000",
+      "saved_original": "originals/s001.eml"
+    },
+    {
+      "source": "s002",
+      "supplied_file": "message-002.eml",
+      "bytes": 1210,
+      "sha256": "67b69635d00196493688ee2eeb11de7c90bb3957f91ee1139a271162195048f0",
+      "reviewed_sha256": "67b69635d00196493688ee2eeb11de7c90bb3957f91ee1139a271162195048f0",
+      "matches_reviewed_source": true,
+      "message_id_display": "<cedar-02@cedar-works.example>",
+      "from_display": "Mira Vale <mira@cedar-works.example>",
+      "date_display": "Tue, 29 Sep 2026 10:00:00 +0000",
+      "saved_original": "originals/s002.eml"
+    },
+    {
+      "source": "s003",
+      "supplied_file": "message-003.eml",
+      "bytes": 1210,
+      "sha256": "67b69635d00196493688ee2eeb11de7c90bb3957f91ee1139a271162195048f0",
+      "reviewed_sha256": "67b69635d00196493688ee2eeb11de7c90bb3957f91ee1139a271162195048f0",
+      "matches_reviewed_source": true,
+      "message_id_display": "<cedar-02@cedar-works.example>",
+      "from_display": "Mira Vale <mira@cedar-works.example>",
+      "date_display": "Tue, 29 Sep 2026 10:00:00 +0000",
+      "saved_original": "originals/s003.eml"
+    },
+    {
+      "source": "s004",
+      "supplied_file": "message-004.eml",
+      "bytes": 1548,
+      "sha256": "cf0e3f6fa76d8a0df7e09feedff86a057b37dc4db4834865d6380731abf75651",
+      "reviewed_sha256": "cf0e3f6fa76d8a0df7e09feedff86a057b37dc4db4834865d6380731abf75651",
+      "matches_reviewed_source": true,
+      "message_id_display": "<cedar-04@cedar-works.example>",
+      "from_display": "Mira Vale <mira@cedar-works.example>",
+      "date_display": "Wed, 30 Sep 2026 08:30:00 +0000",
+      "saved_original": "originals/s004.eml"
+    },
+    {
+      "source": "s005",
+      "supplied_file": "message-005.eml",
+      "bytes": 1219,
+      "sha256": "8102731c1ddf4139f3fd0b5a15498f637daa46458c92a94b2a963472edbe2368",
+      "reviewed_sha256": "8102731c1ddf4139f3fd0b5a15498f637daa46458c92a94b2a963472edbe2368",
+      "matches_reviewed_source": true,
+      "message_id_display": "<cedar-05@cedar-works.example>",
+      "from_display": "Mira Vale <mira@cedar-works.example>",
+      "date_display": "Wed, 30 Sep 2026 09:00:00 +0000",
+      "saved_original": "originals/s005.eml"
+    }
+  ],
+  "parts": [
+    {
+      "occurrence": "s001:root",
+      "source": "s001",
+      "part": "root",
+      "content_type": "multipart/mixed",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        0,
+        1221
+      ],
+      "header_range": [
+        0,
+        278
+      ],
+      "payload_range": [
+        282,
+        1221
+      ],
+      "raw_headers_latin1": "From: Mira Vale <mira@cedar-works.example>\r\nTo: Ellis North <ellis@field-notes.example>\r\nDate: Mon, 28 Sep 2026 09:00:00 +0000\r\nMessage-ID: <cedar-01@cedar-works.example>\r\nSubject: Cedar reading-room handoff\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"cedar-01\"",
+      "defects": [],
+      "status": "container",
+      "reason": "Structural MIME container, not an attachment selection."
+    },
+    {
+      "occurrence": "s001:1",
+      "source": "s001",
+      "part": "1",
+      "content_type": "multipart/alternative",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        294,
+        989
+      ],
+      "header_range": [
+        294,
+        349
+      ],
+      "payload_range": [
+        353,
+        989
+      ],
+      "raw_headers_latin1": "Content-Type: multipart/alternative; boundary=cedar-alt",
+      "defects": [],
+      "status": "container",
+      "reason": "Structural MIME container, not an attachment selection."
+    },
+    {
+      "occurrence": "s001:1.1",
+      "source": "s001",
+      "part": "1.1",
+      "content_type": "text/plain",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        366,
+        487
+      ],
+      "header_range": [
+        366,
+        438
+      ],
+      "payload_range": [
+        442,
+        487
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 7bit",
+      "defects": [],
+      "status": "excluded_body",
+      "reason": "Message body or body alternative, not a requested attachment."
+    },
+    {
+      "occurrence": "s001:1.2",
+      "source": "s001",
+      "part": "1.2",
+      "content_type": "multipart/related",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        502,
+        972
+      ],
+      "header_range": [
+        502,
+        583
+      ],
+      "payload_range": [
+        587,
+        972
+      ],
+      "raw_headers_latin1": "Content-Type: multipart/related; boundary=cedar-rel; start=\"<body@cedar.example>\"",
+      "defects": [],
+      "status": "container",
+      "reason": "Structural MIME container, not an attachment selection."
+    },
+    {
+      "occurrence": "s001:1.2.1",
+      "source": "s001",
+      "part": "1.2.1",
+      "content_type": "text/html",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": "<body@cedar.example>",
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        600,
+        756
+      ],
+      "header_range": [
+        600,
+        672
+      ],
+      "payload_range": [
+        676,
+        756
+      ],
+      "raw_headers_latin1": "Content-Type: text/html; charset=utf-8\r\nContent-ID: <body@cedar.example>",
+      "defects": [],
+      "status": "excluded_related",
+      "reason": "Body-associated resource, outside explicit attachment selection."
+    },
+    {
+      "occurrence": "s001:1.2.2",
+      "source": "s001",
+      "part": "1.2.2",
+      "content_type": "text/plain",
+      "disposition": "inline",
+      "filename_display": "legend.txt",
+      "content_id": "<legend@cedar.example>",
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        771,
+        955
+      ],
+      "header_range": [
+        771,
+        896
+      ],
+      "payload_range": [
+        900,
+        955
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: inline; filename=legend.txt\r\nContent-ID: <legend@cedar.example>",
+      "defects": [],
+      "status": "excluded_related",
+      "reason": "Body-associated resource, outside explicit attachment selection."
+    },
+    {
+      "occurrence": "s001:2",
+      "source": "s001",
+      "part": "2",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "route-note.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        1003,
+        1205
+      ],
+      "header_range": [
+        1003,
+        1137
+      ],
+      "payload_range": [
+        1141,
+        1205
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"route-note.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "excluded_not_selected",
+      "decoded_bytes": 47,
+      "decoded_sha256": "77f48c4d3d787fb54f796c02f08bf34b3cbdf1977924236eb762212b31cc3b80",
+      "reason": "Outside the reviewed selection; earlier route note is superseded by s002:1 and s004:1."
+    },
+    {
+      "occurrence": "s002:root",
+      "source": "s002",
+      "part": "root",
+      "content_type": "multipart/mixed",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        0,
+        1210
+      ],
+      "header_range": [
+        0,
+        278
+      ],
+      "payload_range": [
+        282,
+        1210
+      ],
+      "raw_headers_latin1": "From: Mira Vale <mira@cedar-works.example>\r\nTo: Ellis North <ellis@field-notes.example>\r\nDate: Tue, 29 Sep 2026 10:00:00 +0000\r\nMessage-ID: <cedar-02@cedar-works.example>\r\nSubject: Cedar reading-room handoff\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"cedar-02\"",
+      "defects": [],
+      "status": "container",
+      "reason": "Structural MIME container, not an attachment selection."
+    },
+    {
+      "occurrence": "s002:1",
+      "source": "s002",
+      "part": "1",
+      "content_type": "text/plain",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        294,
+        518
+      ],
+      "header_range": [
+        294,
+        366
+      ],
+      "payload_range": [
+        370,
+        518
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 7bit",
+      "defects": [],
+      "status": "excluded_body",
+      "reason": "Message body or body alternative, not a requested attachment."
+    },
+    {
+      "occurrence": "s002:2",
+      "source": "s002",
+      "part": "2",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "route-note.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        532,
+        734
+      ],
+      "header_range": [
+        532,
+        666
+      ],
+      "payload_range": [
+        670,
+        734
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"route-note.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "selected",
+      "decoded_bytes": 47,
+      "decoded_sha256": "2cb756523dd88d96dbb5da875583c2c26f8dc103bb9e1089af40a7542502e8e9",
+      "output": "files/s002-part-2.txt",
+      "role": "route",
+      "selection_reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences.",
+      "decision_evidence": [
+        "s002:1",
+        "s004:1"
+      ]
+    },
+    {
+      "occurrence": "s002:3",
+      "source": "s002",
+      "part": "3",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "packing-list.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        748,
+        944
+      ],
+      "header_range": [
+        748,
+        884
+      ],
+      "payload_range": [
+        888,
+        944
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"packing-list.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "selected",
+      "decoded_bytes": 42,
+      "decoded_sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20",
+      "output": "files/s002-part-3.txt",
+      "role": "packing",
+      "selection_reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences.",
+      "decision_evidence": [
+        "s002:1",
+        "s004:1"
+      ]
+    },
+    {
+      "occurrence": "s002:4",
+      "source": "s002",
+      "part": "4",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "café-floor-plan.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        958,
+        1194
+      ],
+      "header_range": [
+        958,
+        1130
+      ],
+      "payload_range": [
+        1134,
+        1194
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment;\r\n filename*0*=utf-8'en'caf%C3%A9-;\r\n filename*1*=floor-plan.txt\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "selected",
+      "decoded_bytes": 43,
+      "decoded_sha256": "2bd4073f0e94db273a438418fb2449a1ef17715c7b41de30b0ad5dd2afc945e5",
+      "output": "files/s002-part-4.txt",
+      "role": "floor",
+      "selection_reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences.",
+      "decision_evidence": [
+        "s002:1",
+        "s004:1"
+      ]
+    },
+    {
+      "occurrence": "s003:root",
+      "source": "s003",
+      "part": "root",
+      "content_type": "multipart/mixed",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        0,
+        1210
+      ],
+      "header_range": [
+        0,
+        278
+      ],
+      "payload_range": [
+        282,
+        1210
+      ],
+      "raw_headers_latin1": "From: Mira Vale <mira@cedar-works.example>\r\nTo: Ellis North <ellis@field-notes.example>\r\nDate: Tue, 29 Sep 2026 10:00:00 +0000\r\nMessage-ID: <cedar-02@cedar-works.example>\r\nSubject: Cedar reading-room handoff\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"cedar-02\"",
+      "defects": [],
+      "status": "container",
+      "reason": "Structural MIME container, not an attachment selection."
+    },
+    {
+      "occurrence": "s003:1",
+      "source": "s003",
+      "part": "1",
+      "content_type": "text/plain",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        294,
+        518
+      ],
+      "header_range": [
+        294,
+        366
+      ],
+      "payload_range": [
+        370,
+        518
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 7bit",
+      "defects": [],
+      "status": "excluded_body",
+      "reason": "Message body or body alternative, not a requested attachment."
+    },
+    {
+      "occurrence": "s003:2",
+      "source": "s003",
+      "part": "2",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "route-note.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        532,
+        734
+      ],
+      "header_range": [
+        532,
+        666
+      ],
+      "payload_range": [
+        670,
+        734
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"route-note.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "selected",
+      "decoded_bytes": 47,
+      "decoded_sha256": "2cb756523dd88d96dbb5da875583c2c26f8dc103bb9e1089af40a7542502e8e9",
+      "output": "files/s003-part-2.txt",
+      "role": "route",
+      "selection_reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences.",
+      "decision_evidence": [
+        "s002:1",
+        "s004:1"
+      ]
+    },
+    {
+      "occurrence": "s003:3",
+      "source": "s003",
+      "part": "3",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "packing-list.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        748,
+        944
+      ],
+      "header_range": [
+        748,
+        884
+      ],
+      "payload_range": [
+        888,
+        944
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"packing-list.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "selected",
+      "decoded_bytes": 42,
+      "decoded_sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20",
+      "output": "files/s003-part-3.txt",
+      "role": "packing",
+      "selection_reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences.",
+      "decision_evidence": [
+        "s002:1",
+        "s004:1"
+      ]
+    },
+    {
+      "occurrence": "s003:4",
+      "source": "s003",
+      "part": "4",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "café-floor-plan.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        958,
+        1194
+      ],
+      "header_range": [
+        958,
+        1130
+      ],
+      "payload_range": [
+        1134,
+        1194
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment;\r\n filename*0*=utf-8'en'caf%C3%A9-;\r\n filename*1*=floor-plan.txt\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "selected",
+      "decoded_bytes": 43,
+      "decoded_sha256": "2bd4073f0e94db273a438418fb2449a1ef17715c7b41de30b0ad5dd2afc945e5",
+      "output": "files/s003-part-4.txt",
+      "role": "floor",
+      "selection_reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences.",
+      "decision_evidence": [
+        "s002:1",
+        "s004:1"
+      ]
+    },
+    {
+      "occurrence": "s004:root",
+      "source": "s004",
+      "part": "root",
+      "content_type": "multipart/mixed",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        0,
+        1548
+      ],
+      "header_range": [
+        0,
+        278
+      ],
+      "payload_range": [
+        282,
+        1548
+      ],
+      "raw_headers_latin1": "From: Mira Vale <mira@cedar-works.example>\r\nTo: Ellis North <ellis@field-notes.example>\r\nDate: Wed, 30 Sep 2026 08:30:00 +0000\r\nMessage-ID: <cedar-04@cedar-works.example>\r\nSubject: Cedar reading-room handoff\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"cedar-04\"",
+      "defects": [],
+      "status": "container",
+      "reason": "Structural MIME container, not an attachment selection."
+    },
+    {
+      "occurrence": "s004:1",
+      "source": "s004",
+      "part": "1",
+      "content_type": "text/plain",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        294,
+        552
+      ],
+      "header_range": [
+        294,
+        366
+      ],
+      "payload_range": [
+        370,
+        552
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 7bit",
+      "defects": [],
+      "status": "excluded_body",
+      "reason": "Message body or body alternative, not a requested attachment."
+    },
+    {
+      "occurrence": "s004:2",
+      "source": "s004",
+      "part": "2",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "packing-list.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        566,
+        762
+      ],
+      "header_range": [
+        566,
+        702
+      ],
+      "payload_range": [
+        706,
+        762
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"packing-list.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "selected",
+      "decoded_bytes": 42,
+      "decoded_sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20",
+      "output": "files/s004-part-2.txt",
+      "role": "packing",
+      "selection_reason": "Retain every supplied occurrence of the requested packing list.",
+      "decision_evidence": [
+        "s004:1"
+      ]
+    },
+    {
+      "occurrence": "s004:3",
+      "source": "s004",
+      "part": "3",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "../handoff/count-sheet.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        776,
+        974
+      ],
+      "header_range": [
+        776,
+        922
+      ],
+      "payload_range": [
+        926,
+        974
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"../handoff/count-sheet.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "held_unresolved_selection",
+      "decoded_bytes": 34,
+      "decoded_sha256": "619fd9dc0999f47f39611f06e62d4443ac78d039b3b48ae63aff406d394797f5",
+      "reason": "No final revision choice is supported."
+    },
+    {
+      "occurrence": "s004:4",
+      "source": "s004",
+      "part": "4",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "../handoff/count-sheet.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        988,
+        1186
+      ],
+      "header_range": [
+        988,
+        1134
+      ],
+      "payload_range": [
+        1138,
+        1186
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"../handoff/count-sheet.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "held_unresolved_selection",
+      "decoded_bytes": 34,
+      "decoded_sha256": "afb801cb16ea6eb18e89a3e8872edc30bcc3300d87b5d800b790729bf6898479",
+      "reason": "No final revision choice is supported."
+    },
+    {
+      "occurrence": "s004:5",
+      "source": "s004",
+      "part": "5",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "damaged-note.txt",
+      "content_id": null,
+      "transfer_encoding": "base64",
+      "wire_range": [
+        1200,
+        1348
+      ],
+      "header_range": [
+        1200,
+        1336
+      ],
+      "payload_range": [
+        1340,
+        1348
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"damaged-note.txt\"\r\nContent-Transfer-Encoding: base64",
+      "defects": [],
+      "status": "held_malformed",
+      "reason": "Only base64 data is allowed"
+    },
+    {
+      "occurrence": "s004:6",
+      "source": "s004",
+      "part": "6",
+      "content_type": "text/plain",
+      "disposition": "attachment",
+      "filename_display": "legacy-note.txt",
+      "content_id": null,
+      "transfer_encoding": "x-cedar-placeholder",
+      "wire_range": [
+        1362,
+        1532
+      ],
+      "header_range": [
+        1362,
+        1510
+      ],
+      "payload_range": [
+        1514,
+        1532
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Disposition: attachment; filename=\"legacy-note.txt\"\r\nContent-Transfer-Encoding: x-cedar-placeholder",
+      "defects": [],
+      "status": "held_unsupported",
+      "reason": "unsupported transfer encoding: x-cedar-placeholder"
+    },
+    {
+      "occurrence": "s005:root",
+      "source": "s005",
+      "part": "root",
+      "content_type": "multipart/mixed",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        0,
+        1219
+      ],
+      "header_range": [
+        0,
+        278
+      ],
+      "payload_range": [
+        282,
+        1219
+      ],
+      "raw_headers_latin1": "From: Mira Vale <mira@cedar-works.example>\r\nTo: Ellis North <ellis@field-notes.example>\r\nDate: Wed, 30 Sep 2026 09:00:00 +0000\r\nMessage-ID: <cedar-05@cedar-works.example>\r\nSubject: Cedar reading-room handoff\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"cedar-05\"",
+      "defects": [],
+      "status": "container",
+      "reason": "Structural MIME container, not an attachment selection."
+    },
+    {
+      "occurrence": "s005:1",
+      "source": "s005",
+      "part": "1",
+      "content_type": "text/plain",
+      "disposition": null,
+      "filename_display": null,
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        294,
+        453
+      ],
+      "header_range": [
+        294,
+        366
+      ],
+      "payload_range": [
+        370,
+        453
+      ],
+      "raw_headers_latin1": "Content-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 7bit",
+      "defects": [],
+      "status": "excluded_body",
+      "reason": "Message body or body alternative, not a requested attachment."
+    },
+    {
+      "occurrence": "s005:2",
+      "source": "s005",
+      "part": "2",
+      "content_type": "message/rfc822",
+      "disposition": "attachment",
+      "filename_display": "earlier-message.eml",
+      "content_id": null,
+      "transfer_encoding": "7bit",
+      "wire_range": [
+        467,
+        1203
+      ],
+      "header_range": [
+        467,
+        558
+      ],
+      "payload_range": [
+        562,
+        1203
+      ],
+      "raw_headers_latin1": "Content-Type: message/rfc822\r\nContent-Disposition: attachment; filename=earlier-message.eml",
+      "defects": [],
+      "status": "excluded_nested_message",
+      "reason": "Attached-message contents are outside the requested selection."
+    }
+  ],
+  "selected_outputs": [
+    {
+      "occurrence": "s002:2",
+      "output": "files/s002-part-2.txt",
+      "bytes": 47,
+      "sha256": "2cb756523dd88d96dbb5da875583c2c26f8dc103bb9e1089af40a7542502e8e9"
+    },
+    {
+      "occurrence": "s002:3",
+      "output": "files/s002-part-3.txt",
+      "bytes": 42,
+      "sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20"
+    },
+    {
+      "occurrence": "s002:4",
+      "output": "files/s002-part-4.txt",
+      "bytes": 43,
+      "sha256": "2bd4073f0e94db273a438418fb2449a1ef17715c7b41de30b0ad5dd2afc945e5"
+    },
+    {
+      "occurrence": "s003:2",
+      "output": "files/s003-part-2.txt",
+      "bytes": 47,
+      "sha256": "2cb756523dd88d96dbb5da875583c2c26f8dc103bb9e1089af40a7542502e8e9"
+    },
+    {
+      "occurrence": "s003:3",
+      "output": "files/s003-part-3.txt",
+      "bytes": 42,
+      "sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20"
+    },
+    {
+      "occurrence": "s003:4",
+      "output": "files/s003-part-4.txt",
+      "bytes": 43,
+      "sha256": "2bd4073f0e94db273a438418fb2449a1ef17715c7b41de30b0ad5dd2afc945e5"
+    },
+    {
+      "occurrence": "s004:2",
+      "output": "files/s004-part-2.txt",
+      "bytes": 42,
+      "sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20"
+    }
+  ],
+  "unresolved_requests": [
+    {
+      "item": "final count sheet",
+      "candidates": [
+        "s004:3",
+        "s004:4"
+      ],
+      "reason": "Body s004:1 says both are provisional and neither has been chosen.",
+      "needed": "Which count sheet was approved, or a supplied later approval/corrected attachment.",
+      "evidence_sources": [
+        "s004"
+      ],
+      "evidence_fresh": true
+    },
+    {
+      "item": "final door roster",
+      "candidates": [],
+      "reason": "Body s004:1 says it is still to come; no top-level roster is supplied. s005:2 is an out-of-scope attached message, not a final top-level roster.",
+      "needed": "The final roster as an authorized supplied file/message; expanding nested-message scope alone would not establish finality.",
+      "evidence_sources": [
+        "s001",
+        "s002",
+        "s003",
+        "s004",
+        "s005"
+      ],
+      "evidence_fresh": true
+    }
+  ],
+  "readback": {
+    "originals_match_input": true,
+    "selected_decoded_bytes_match": true,
+    "sources_unchanged": true
+  },
+  "limits": [
+    "No nested-message selection",
+    "No decryption or signature validation",
+    "No live mail-client or target-application test"
+  ]
+}

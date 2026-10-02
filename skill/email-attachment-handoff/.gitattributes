@@ -1,0 +1,4 @@
+# MIME evidence and decoded attachment payloads must not be newline-normalized.
+fixtures/messages/*.eml -text whitespace=cr-at-eol
+outputs/packet/originals/*.eml -text whitespace=cr-at-eol
+outputs/packet/files/*.txt -text whitespace=cr-at-eol

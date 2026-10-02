@@ -1,0 +1,36 @@
+From: Mira Vale <mira@cedar-works.example>
+To: Ellis North <ellis@field-notes.example>
+Date: Tue, 29 Sep 2026 10:00:00 +0000
+Message-ID: <cedar-02@cedar-works.example>
+Subject: Cedar reading-room handoff
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="cedar-02"
+
+--cedar-02
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Revision B replaces my 28 September route note. Use the east gate.
+The packing list is unchanged. The cafe floor plan is included for the packet.
+
+--cedar-02
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="route-note.txt"
+Content-Transfer-Encoding: base64
+
+Um91dGUgbm90ZSByZXZpc2lvbiBCDQpNZWV0IGF0IHRoZSBlYXN0IGdhdGUuDQo=
+--cedar-02
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="packing-list.txt"
+Content-Transfer-Encoding: base64
+
+UGFja2luZyBsaXN0CjIgZm9sZGluZyBzaWducwoxIHBlbmNpbCB0aW4K
+--cedar-02
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment;
+ filename*0*=utf-8'en'caf%C3%A9-;
+ filename*1*=floor-plan.txt
+Content-Transfer-Encoding: base64
+
+Q2Fmw6kgZmxvb3IgcGxhbg0KVGFibGUgNCBmYWNlcyB0aGUgd2luZG93Lg==
+--cedar-02--

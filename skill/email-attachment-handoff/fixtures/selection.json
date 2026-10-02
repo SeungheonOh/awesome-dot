@@ -1,0 +1,175 @@
+{
+  "schema": "cedar-attachment-example-v1",
+  "request": "Prepare a local packet of corrected route note, packing list and cafe floor plan, retaining every selected occurrence. Also resolve the final count sheet and final door roster if supported by these supplied top-level messages. Leave attachments inside attached messages outside the selection. Keep originals and report unresolved files.",
+  "sources": [
+    {
+      "id": "s001",
+      "file": "message-001.eml",
+      "sha256": "dae5bdf4b036aa03532bbafd798bd161a0b2a149e4a69f6f1c757f9f953e34a8"
+    },
+    {
+      "id": "s002",
+      "file": "message-002.eml",
+      "sha256": "67b69635d00196493688ee2eeb11de7c90bb3957f91ee1139a271162195048f0"
+    },
+    {
+      "id": "s003",
+      "file": "message-003.eml",
+      "sha256": "67b69635d00196493688ee2eeb11de7c90bb3957f91ee1139a271162195048f0"
+    },
+    {
+      "id": "s004",
+      "file": "message-004.eml",
+      "sha256": "cf0e3f6fa76d8a0df7e09feedff86a057b37dc4db4834865d6380731abf75651"
+    },
+    {
+      "id": "s005",
+      "file": "message-005.eml",
+      "sha256": "8102731c1ddf4139f3fd0b5a15498f637daa46458c92a94b2a963472edbe2368"
+    }
+  ],
+  "selected": [
+    {
+      "source": "s002",
+      "part": "2",
+      "role": "route",
+      "decoded_sha256": "2cb756523dd88d96dbb5da875583c2c26f8dc103bb9e1089af40a7542502e8e9",
+      "evidence": [
+        {
+          "source": "s002",
+          "part": "1"
+        },
+        {
+          "source": "s004",
+          "part": "1"
+        }
+      ],
+      "reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences."
+    },
+    {
+      "source": "s002",
+      "part": "3",
+      "role": "packing",
+      "decoded_sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20",
+      "evidence": [
+        {
+          "source": "s002",
+          "part": "1"
+        },
+        {
+          "source": "s004",
+          "part": "1"
+        }
+      ],
+      "reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences."
+    },
+    {
+      "source": "s002",
+      "part": "4",
+      "role": "floor",
+      "decoded_sha256": "2bd4073f0e94db273a438418fb2449a1ef17715c7b41de30b0ad5dd2afc945e5",
+      "evidence": [
+        {
+          "source": "s002",
+          "part": "1"
+        },
+        {
+          "source": "s004",
+          "part": "1"
+        }
+      ],
+      "reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences."
+    },
+    {
+      "source": "s003",
+      "part": "2",
+      "role": "route",
+      "decoded_sha256": "2cb756523dd88d96dbb5da875583c2c26f8dc103bb9e1089af40a7542502e8e9",
+      "evidence": [
+        {
+          "source": "s002",
+          "part": "1"
+        },
+        {
+          "source": "s004",
+          "part": "1"
+        }
+      ],
+      "reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences."
+    },
+    {
+      "source": "s003",
+      "part": "3",
+      "role": "packing",
+      "decoded_sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20",
+      "evidence": [
+        {
+          "source": "s002",
+          "part": "1"
+        },
+        {
+          "source": "s004",
+          "part": "1"
+        }
+      ],
+      "reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences."
+    },
+    {
+      "source": "s003",
+      "part": "4",
+      "role": "floor",
+      "decoded_sha256": "2bd4073f0e94db273a438418fb2449a1ef17715c7b41de30b0ad5dd2afc945e5",
+      "evidence": [
+        {
+          "source": "s002",
+          "part": "1"
+        },
+        {
+          "source": "s004",
+          "part": "1"
+        }
+      ],
+      "reason": "Revision B is explicitly substituted; packing list and cafe floor plan are requested. Keep both export occurrences."
+    },
+    {
+      "source": "s004",
+      "part": "2",
+      "role": "packing",
+      "decoded_sha256": "6ec198c673061441d8b6dae92c51d91f8f24c445efff9d5ea374fe9c4de85a20",
+      "evidence": [
+        {
+          "source": "s004",
+          "part": "1"
+        }
+      ],
+      "reason": "Retain every supplied occurrence of the requested packing list."
+    }
+  ],
+  "unresolved": [
+    {
+      "item": "final count sheet",
+      "candidates": [
+        "s004:3",
+        "s004:4"
+      ],
+      "reason": "Body s004:1 says both are provisional and neither has been chosen.",
+      "needed": "Which count sheet was approved, or a supplied later approval/corrected attachment.",
+      "evidence_sources": [
+        "s004"
+      ]
+    },
+    {
+      "item": "final door roster",
+      "candidates": [],
+      "reason": "Body s004:1 says it is still to come; no top-level roster is supplied. s005:2 is an out-of-scope attached message, not a final top-level roster.",
+      "needed": "The final roster as an authorized supplied file/message; expanding nested-message scope alone would not establish finality.",
+      "evidence_sources": [
+        "s001",
+        "s002",
+        "s003",
+        "s004",
+        "s005"
+      ]
+    }
+  ]
+}
