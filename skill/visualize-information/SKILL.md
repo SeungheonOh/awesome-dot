@@ -7,7 +7,7 @@ description: Create or improve a chart, process diagram, timeline, or system dia
 
 Deliver a finished visual that helps its reader answer a specific question. Include the requested output format, a readable preview, and the data or relationships needed to understand and revise it. A recommendation for a chart type or unrendered source alone is not a finished visual.
 
-Use this workflow to communicate information whose meaning is already established. Bounded calculations and grouping needed to draw the visual belong here. Discovering why a metric changed, testing an explanation, or deciding what the data supports is the primary work of `analyze-data-question`. A whole presentation belongs to `source-backed-presentation`; a document that happens to contain a diagram belongs to `write-technical-guide`. A visual can support those larger tasks without replacing their deliverable.
+Use this workflow to communicate information whose meaning is already established. Bounded calculations and grouping needed to draw the visual belong here. Discovering why a metric changed, testing an explanation, or deciding what the data supports is the primary work of `analyze-data-question`. A whole presentation belongs to `source-backed-presentation`; technical documentation with a supporting diagram belongs to `write-technical-guide`. For other documents, keep the appropriate writing or editing workflow primary. A visual can support those larger tasks without replacing their deliverable.
 
 ## Start from the reader's question
 
