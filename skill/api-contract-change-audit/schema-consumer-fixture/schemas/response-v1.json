@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:shelf-example:response:1",
+  "type": "object",
+  "required": ["items", "next_cursor"],
+  "properties": {
+    "items": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "id": {"$ref": "urn:shelf-example:common:1#/$defs/record_id"},
+          "status": {"type": "string", "enum": ["ready", "retired"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "next_cursor": {
+      "anyOf": [
+        {"$ref": "urn:shelf-example:common:1#/$defs/cursor"},
+        {"type": "null"}
+      ]
+    }
+  },
+  "additionalProperties": false
+}

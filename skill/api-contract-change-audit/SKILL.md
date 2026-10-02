@@ -89,6 +89,8 @@ Reconcile every in-scope changed operation to a finding or an explicit no-materi
 
 [The repeatable check](verification.md) evaluates those bounded request, response and consumer predicates separately, retaining unknown old-provider query handling. It is not a complete schema validator or a live endpoint test.
 
+[The separate schema-and-consumer supplement](schema-consumer-example.md) adds complete JSON Schema 2020-12 message contracts and executable original local consumers for a different fictional operation. [Its recorded verification](schema-consumer-verification.md) demonstrates schema-valid truncation, a source-authorized adaptation and bounded failure cases using already available local packages. It does not strengthen the older normalized example or establish HTTP/provider integration.
+
 ## Stop and ask
 
 - Ask when field meaning, version overlap, policy authority or contradictory source evidence changes a release recommendation
@@ -104,4 +106,4 @@ dot, compare API contract v1 with proposed v2 for these operations and inspect t
 
 ## Evidence status
 
-This skill completes an audit on the inputs actually available. The included example is fictional; its local consistency checks are not evidence of application compatibility or a deployed endpoint test. Report unknown references, uninspected consumers and unrun checks explicitly.
+This skill completes an audit on the inputs actually available. Both examples are fictional: the normalized example checks its stated predicates, while the complete-schema supplement also executes original local consumers. Neither establishes compatibility with a real application or a deployed endpoint. Report unknown references, uninspected consumers and unrun checks explicitly.

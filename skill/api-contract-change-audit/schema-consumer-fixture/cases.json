@@ -1,0 +1,39 @@
+{
+  "revision": "shelf-cases-r1",
+  "request_cases": [
+    {"id": "Q01", "meaning": "omitted limit and cursor", "value": {}, "v1": "valid", "v2": "valid"},
+    {"id": "Q02", "meaning": "explicit shared limit", "value": {"limit": 4}, "v1": "valid", "v2": "valid"},
+    {"id": "Q03", "meaning": "null limit", "value": {"limit": null}, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q04", "meaning": "empty-string limit", "value": {"limit": ""}, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q05", "meaning": "boolean is not an integer", "value": {"limit": true}, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q06", "meaning": "lower bound", "value": {"limit": 1}, "v1": "valid", "v2": "valid"},
+    {"id": "Q07", "meaning": "below lower bound", "value": {"limit": 0}, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q08", "meaning": "above upper bound", "value": {"limit": 5}, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q09", "meaning": "null cursor", "value": {"cursor": null}, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q10", "meaning": "empty cursor", "value": {"cursor": ""}, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q11", "meaning": "nonempty cursor", "value": {"cursor": "page-2"}, "v1": "valid", "v2": "valid"},
+    {"id": "Q12", "meaning": "unknown query key", "value": {"region": "eu"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q13", "meaning": "wrong root type", "value": null, "v1": "invalid", "v2": "invalid"},
+    {"id": "Q14", "meaning": "JSON Schema integral number", "value": {"limit": 2.0}, "v1": "valid", "v2": "valid"},
+    {"id": "Q15", "meaning": "nonintegral number", "value": {"limit": 2.5}, "v1": "invalid", "v2": "invalid"}
+  ],
+  "response_cases": [
+    {"id": "P01", "meaning": "short nonfinal page", "value": {"items": [{"id": "record-1", "status": "ready"}, {"id": "record-2", "status": "retired"}], "next_cursor": "page-2"}, "v1": "valid", "v2": "valid"},
+    {"id": "P02", "meaning": "old empty final page", "value": {"items": [], "next_cursor": null}, "v1": "valid", "v2": "invalid"},
+    {"id": "P03", "meaning": "new empty final page", "value": {"items": []}, "v1": "invalid", "v2": "valid"},
+    {"id": "P04", "meaning": "empty nonfinal page", "value": {"items": [], "next_cursor": "page-2"}, "v1": "valid", "v2": "valid"},
+    {"id": "P05", "meaning": "present empty cursor", "value": {"items": [], "next_cursor": ""}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P06", "meaning": "added status", "value": {"items": [{"id": "record-7", "status": "held"}], "next_cursor": "page-2"}, "v1": "invalid", "v2": "valid"},
+    {"id": "P07", "meaning": "items missing", "value": {"next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P08", "meaning": "items null", "value": {"items": null, "next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P09", "meaning": "items empty object", "value": {"items": {}, "next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P10", "meaning": "empty item object", "value": {"items": [{}], "next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P11", "meaning": "item status null", "value": {"items": [{"id": "record-1", "status": null}], "next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P12", "meaning": "item status empty", "value": {"items": [{"id": "record-1", "status": ""}], "next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P13", "meaning": "unknown future status", "value": {"items": [{"id": "record-1", "status": "lost"}], "next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P14", "meaning": "unknown response key", "value": {"items": [], "next_cursor": "page-2", "extra": true}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P15", "meaning": "identifier reference applied", "value": {"items": [{"id": "", "status": "ready"}], "next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"},
+    {"id": "P16", "meaning": "wrong root type", "value": [], "v1": "invalid", "v2": "invalid"},
+    {"id": "P17", "meaning": "identifier with trailing newline", "value": {"items": [{"id": "record-1\n", "status": "ready"}], "next_cursor": "page-2"}, "v1": "invalid", "v2": "invalid"}
+  ]
+}

@@ -1,0 +1,1972 @@
+{
+  "fixture_revision": "shelf-cases-r1",
+  "environment": {
+    "python": "3.12.14",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0",
+    "jsonschema-specifications": "2025.9.1"
+  },
+  "dialect": "https://json-schema.org/draft/2020-12/schema",
+  "format_assertions_enabled": false,
+  "scope": "local schema validation and original consumer/model execution; no HTTP or deployed provider",
+  "registered_contract_resources": [
+    "urn:shelf-example:common:1",
+    "urn:shelf-example:request:1",
+    "urn:shelf-example:request:2",
+    "urn:shelf-example:response:1",
+    "urn:shelf-example:response:2"
+  ],
+  "registered_installed_meta_resources": [
+    "https://json-schema.org/draft/2020-12/schema",
+    "https://json-schema.org/draft/2020-12/meta/core",
+    "https://json-schema.org/draft/2020-12/meta/applicator",
+    "https://json-schema.org/draft/2020-12/meta/unevaluated",
+    "https://json-schema.org/draft/2020-12/meta/validation",
+    "https://json-schema.org/draft/2020-12/meta/meta-data",
+    "https://json-schema.org/draft/2020-12/meta/format-annotation",
+    "https://json-schema.org/draft/2020-12/meta/format-assertion",
+    "https://json-schema.org/draft/2020-12/meta/content"
+  ],
+  "source_sha256": {
+    "behavior.json": "98cfdd6048d153c335ee7ec03d7f58474e547b1cdac3c2a2bf57f879d97bba24",
+    "cases.json": "b097983965c9cbbe3af33a38faf6bc48cfe052cfc0635ccfc7679ed072ba4330",
+    "consumers.py": "d4ed37e04a7bd0362786c911ec0bc246c0716b0c038ec6fb32ef8680d6dadd71",
+    "run.py": "e39e994ec2bb07164ad214a18bd011e9977b74492886356b4b2d1aaf12b5ba13",
+    "schemas/common.json": "95af39820ba1092ea56d8a1ea9c4bc3ee882a62d8ec7b087d1d5a4f28a112d61",
+    "schemas/request-v1.json": "f9204af4bde008fab05678d55d5dbb75c26d76a02177304c45b11590bc886034",
+    "schemas/request-v2.json": "478c9e2d5788aeab0cbb3589012da5277aab509c9a4ada94debe801186989642",
+    "schemas/response-v1.json": "2e30e599e34fca2fab68a3ef1c0331384b1dc771cb5d3ffc17b50c8773d046fc",
+    "schemas/response-v2.json": "aa76ae9707ecca27d296196ea53a7705c7e4d55cbeb309c1bfc492f129855249"
+  },
+  "schema_meta_validation": {
+    "common": "valid",
+    "request-v1": "valid",
+    "request-v2": "valid",
+    "response-v1": "valid",
+    "response-v2": "valid"
+  },
+  "request_assertion_sets_identical": true,
+  "fixture_checks": [
+    {
+      "id": "Q01",
+      "meaning": "omitted limit and cursor",
+      "value": {},
+      "v1": {
+        "result": "valid",
+        "errors": []
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "Q02",
+      "meaning": "explicit shared limit",
+      "value": {
+        "limit": 4
+      },
+      "v1": {
+        "result": "valid",
+        "errors": []
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "Q03",
+      "meaning": "null limit",
+      "value": {
+        "limit": null
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q04",
+      "meaning": "empty-string limit",
+      "value": {
+        "limit": ""
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q05",
+      "meaning": "boolean is not an integer",
+      "value": {
+        "limit": true
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q06",
+      "meaning": "lower bound",
+      "value": {
+        "limit": 1
+      },
+      "v1": {
+        "result": "valid",
+        "errors": []
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "Q07",
+      "meaning": "below lower bound",
+      "value": {
+        "limit": 0
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "minimum"
+            ],
+            "keyword": "minimum"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "minimum"
+            ],
+            "keyword": "minimum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q08",
+      "meaning": "above upper bound",
+      "value": {
+        "limit": 5
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "maximum"
+            ],
+            "keyword": "maximum"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "maximum"
+            ],
+            "keyword": "maximum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q09",
+      "meaning": "null cursor",
+      "value": {
+        "cursor": null
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "cursor"
+            ],
+            "schema_path": [
+              "properties",
+              "cursor",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "cursor"
+            ],
+            "schema_path": [
+              "properties",
+              "cursor",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "meaning": "empty cursor",
+      "value": {
+        "cursor": ""
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "cursor"
+            ],
+            "schema_path": [
+              "properties",
+              "cursor",
+              "minLength"
+            ],
+            "keyword": "minLength"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "cursor"
+            ],
+            "schema_path": [
+              "properties",
+              "cursor",
+              "minLength"
+            ],
+            "keyword": "minLength"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q11",
+      "meaning": "nonempty cursor",
+      "value": {
+        "cursor": "page-2"
+      },
+      "v1": {
+        "result": "valid",
+        "errors": []
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "Q12",
+      "meaning": "unknown query key",
+      "value": {
+        "region": "eu"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "additionalProperties"
+            ],
+            "keyword": "additionalProperties"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "additionalProperties"
+            ],
+            "keyword": "additionalProperties"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "meaning": "wrong root type",
+      "value": null,
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "meaning": "JSON Schema integral number",
+      "value": {
+        "limit": 2.0
+      },
+      "v1": {
+        "result": "valid",
+        "errors": []
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "Q15",
+      "meaning": "nonintegral number",
+      "value": {
+        "limit": 2.5
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "limit"
+            ],
+            "schema_path": [
+              "properties",
+              "limit",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P01",
+      "meaning": "short nonfinal page",
+      "value": {
+        "items": [
+          {
+            "id": "record-1",
+            "status": "ready"
+          },
+          {
+            "id": "record-2",
+            "status": "retired"
+          }
+        ],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "valid",
+        "errors": []
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "P02",
+      "meaning": "old empty final page",
+      "value": {
+        "items": [],
+        "next_cursor": null
+      },
+      "v1": {
+        "result": "valid",
+        "errors": []
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "next_cursor"
+            ],
+            "schema_path": [
+              "properties",
+              "next_cursor",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P03",
+      "meaning": "new empty final page",
+      "value": {
+        "items": []
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "required"
+            ],
+            "keyword": "required"
+          }
+        ]
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "P04",
+      "meaning": "empty nonfinal page",
+      "value": {
+        "items": [],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "valid",
+        "errors": []
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "P05",
+      "meaning": "present empty cursor",
+      "value": {
+        "items": [],
+        "next_cursor": ""
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "next_cursor"
+            ],
+            "schema_path": [
+              "properties",
+              "next_cursor",
+              "anyOf"
+            ],
+            "keyword": "anyOf"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "next_cursor"
+            ],
+            "schema_path": [
+              "properties",
+              "next_cursor",
+              "minLength"
+            ],
+            "keyword": "minLength"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P06",
+      "meaning": "added status",
+      "value": {
+        "items": [
+          {
+            "id": "record-7",
+            "status": "held"
+          }
+        ],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "enum"
+            ],
+            "keyword": "enum"
+          }
+        ]
+      },
+      "v2": {
+        "result": "valid",
+        "errors": []
+      }
+    },
+    {
+      "id": "P07",
+      "meaning": "items missing",
+      "value": {
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "required"
+            ],
+            "keyword": "required"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "required"
+            ],
+            "keyword": "required"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P08",
+      "meaning": "items null",
+      "value": {
+        "items": null,
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P09",
+      "meaning": "items empty object",
+      "value": {
+        "items": {},
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P10",
+      "meaning": "empty item object",
+      "value": {
+        "items": [
+          {}
+        ],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "required"
+            ],
+            "keyword": "required"
+          },
+          {
+            "instance_path": [
+              "items",
+              0
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "required"
+            ],
+            "keyword": "required"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "required"
+            ],
+            "keyword": "required"
+          },
+          {
+            "instance_path": [
+              "items",
+              0
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "required"
+            ],
+            "keyword": "required"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P11",
+      "meaning": "item status null",
+      "value": {
+        "items": [
+          {
+            "id": "record-1",
+            "status": null
+          }
+        ],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "type"
+            ],
+            "keyword": "type"
+          },
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "enum"
+            ],
+            "keyword": "enum"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "type"
+            ],
+            "keyword": "type"
+          },
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "enum"
+            ],
+            "keyword": "enum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P12",
+      "meaning": "item status empty",
+      "value": {
+        "items": [
+          {
+            "id": "record-1",
+            "status": ""
+          }
+        ],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "enum"
+            ],
+            "keyword": "enum"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "enum"
+            ],
+            "keyword": "enum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P13",
+      "meaning": "unknown future status",
+      "value": {
+        "items": [
+          {
+            "id": "record-1",
+            "status": "lost"
+          }
+        ],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "enum"
+            ],
+            "keyword": "enum"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "status"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "status",
+              "enum"
+            ],
+            "keyword": "enum"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P14",
+      "meaning": "unknown response key",
+      "value": {
+        "items": [],
+        "next_cursor": "page-2",
+        "extra": true
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "additionalProperties"
+            ],
+            "keyword": "additionalProperties"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "additionalProperties"
+            ],
+            "keyword": "additionalProperties"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P15",
+      "meaning": "identifier reference applied",
+      "value": {
+        "items": [
+          {
+            "id": "",
+            "status": "ready"
+          }
+        ],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "id"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "id",
+              "pattern"
+            ],
+            "keyword": "pattern"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "id"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "id",
+              "pattern"
+            ],
+            "keyword": "pattern"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P16",
+      "meaning": "wrong root type",
+      "value": [],
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [],
+            "schema_path": [
+              "type"
+            ],
+            "keyword": "type"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P17",
+      "meaning": "identifier with trailing newline",
+      "value": {
+        "items": [
+          {
+            "id": "record-1\n",
+            "status": "ready"
+          }
+        ],
+        "next_cursor": "page-2"
+      },
+      "v1": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "id"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "id",
+              "pattern"
+            ],
+            "keyword": "pattern"
+          }
+        ]
+      },
+      "v2": {
+        "result": "invalid",
+        "errors": [
+          {
+            "instance_path": [
+              "items",
+              0,
+              "id"
+            ],
+            "schema_path": [
+              "properties",
+              "items",
+              "items",
+              "properties",
+              "id",
+              "pattern"
+            ],
+            "keyword": "pattern"
+          }
+        ]
+      }
+    }
+  ],
+  "defaults": {
+    "v1": {
+      "instance_after_validation": {},
+      "annotation": 4,
+      "model_effective_limit": 4,
+      "model_first_page_count": 4
+    },
+    "v2": {
+      "instance_after_validation": {},
+      "annotation": 2,
+      "model_effective_limit": 2,
+      "model_first_page_count": 2
+    }
+  },
+  "consumer_runs": {
+    "legacy-v1": {
+      "outcome": "complete",
+      "rows": [
+        {
+          "id": "record-1",
+          "label": "Ready"
+        },
+        {
+          "id": "record-2",
+          "label": "Retired"
+        },
+        {
+          "id": "record-3",
+          "label": "Ready"
+        },
+        {
+          "id": "record-4",
+          "label": "Ready"
+        },
+        {
+          "id": "record-5",
+          "label": "Retired"
+        },
+        {
+          "id": "record-6",
+          "label": "Ready"
+        }
+      ],
+      "missing_ids": [],
+      "calls": [
+        {
+          "request": {},
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              },
+              {
+                "id": "record-2",
+                "status": "retired"
+              },
+              {
+                "id": "record-3",
+                "status": "ready"
+              },
+              {
+                "id": "record-4",
+                "status": "ready"
+              }
+            ],
+            "next_cursor": "offset-4"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "cursor": "offset-4"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-5",
+                "status": "retired"
+              },
+              {
+                "id": "record-6",
+                "status": "ready"
+              }
+            ],
+            "next_cursor": null
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "legacy-v2": {
+      "outcome": "incomplete-success",
+      "rows": [
+        {
+          "id": "record-1",
+          "label": "Ready"
+        },
+        {
+          "id": "record-2",
+          "label": "Retired"
+        }
+      ],
+      "missing_ids": [
+        "record-3",
+        "record-4",
+        "record-5",
+        "record-6"
+      ],
+      "calls": [
+        {
+          "request": {},
+          "effective_limit": 2,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              },
+              {
+                "id": "record-2",
+                "status": "retired"
+              }
+            ],
+            "next_cursor": "offset-2"
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v1": {
+      "outcome": "complete",
+      "rows": [
+        {
+          "id": "record-1",
+          "label": "Ready"
+        },
+        {
+          "id": "record-2",
+          "label": "Retired"
+        },
+        {
+          "id": "record-3",
+          "label": "Ready"
+        },
+        {
+          "id": "record-4",
+          "label": "Ready"
+        },
+        {
+          "id": "record-5",
+          "label": "Retired"
+        },
+        {
+          "id": "record-6",
+          "label": "Ready"
+        }
+      ],
+      "missing_ids": [],
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              },
+              {
+                "id": "record-2",
+                "status": "retired"
+              },
+              {
+                "id": "record-3",
+                "status": "ready"
+              },
+              {
+                "id": "record-4",
+                "status": "ready"
+              }
+            ],
+            "next_cursor": "offset-4"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "offset-4"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-5",
+                "status": "retired"
+              },
+              {
+                "id": "record-6",
+                "status": "ready"
+              }
+            ],
+            "next_cursor": null
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2": {
+      "outcome": "complete",
+      "rows": [
+        {
+          "id": "record-1",
+          "label": "Ready"
+        },
+        {
+          "id": "record-2",
+          "label": "Retired"
+        },
+        {
+          "id": "record-3",
+          "label": "Ready"
+        },
+        {
+          "id": "record-4",
+          "label": "Ready"
+        },
+        {
+          "id": "record-5",
+          "label": "Retired"
+        },
+        {
+          "id": "record-6",
+          "label": "Ready"
+        }
+      ],
+      "missing_ids": [],
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              },
+              {
+                "id": "record-2",
+                "status": "retired"
+              },
+              {
+                "id": "record-3",
+                "status": "ready"
+              },
+              {
+                "id": "record-4",
+                "status": "ready"
+              }
+            ],
+            "next_cursor": "offset-4"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "offset-4"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-5",
+                "status": "retired"
+              },
+              {
+                "id": "record-6",
+                "status": "ready"
+              }
+            ]
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2-sparse": {
+      "outcome": "complete",
+      "rows": [
+        {
+          "id": "record-1",
+          "label": "Ready"
+        },
+        {
+          "id": "record-2",
+          "label": "Retired"
+        },
+        {
+          "id": "record-3",
+          "label": "Ready"
+        },
+        {
+          "id": "record-4",
+          "label": "Ready"
+        },
+        {
+          "id": "record-5",
+          "label": "Retired"
+        },
+        {
+          "id": "record-6",
+          "label": "Ready"
+        }
+      ],
+      "missing_ids": [],
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": "page-2"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "page-2"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              },
+              {
+                "id": "record-2",
+                "status": "retired"
+              },
+              {
+                "id": "record-3",
+                "status": "ready"
+              },
+              {
+                "id": "record-4",
+                "status": "ready"
+              }
+            ],
+            "next_cursor": "page-3"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "page-3"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-5",
+                "status": "retired"
+              },
+              {
+                "id": "record-6",
+                "status": "ready"
+              }
+            ]
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "legacy-explicit-v2-sparse": {
+      "outcome": "incomplete-success",
+      "rows": [],
+      "missing_ids": [
+        "record-1",
+        "record-2",
+        "record-3",
+        "record-4",
+        "record-5",
+        "record-6"
+      ],
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": "page-2"
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2-held": {
+      "outcome": "complete",
+      "rows": [
+        {
+          "id": "record-7",
+          "label": "On hold"
+        }
+      ],
+      "missing_ids": [],
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-7",
+                "status": "held"
+              }
+            ]
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "legacy-explicit-v2-held": {
+      "outcome": "failed",
+      "reason": "unsupported-status",
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-7",
+                "status": "held"
+              }
+            ]
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2-full-final": {
+      "outcome": "complete",
+      "rows": [
+        {
+          "id": "record-1",
+          "label": "Ready"
+        },
+        {
+          "id": "record-2",
+          "label": "Retired"
+        },
+        {
+          "id": "record-3",
+          "label": "Ready"
+        },
+        {
+          "id": "record-4",
+          "label": "Ready"
+        }
+      ],
+      "missing_ids": [],
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              },
+              {
+                "id": "record-2",
+                "status": "retired"
+              },
+              {
+                "id": "record-3",
+                "status": "ready"
+              },
+              {
+                "id": "record-4",
+                "status": "ready"
+              }
+            ]
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "legacy-explicit-v2-full-final": {
+      "outcome": "failed",
+      "reason": "missing-next-cursor",
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              },
+              {
+                "id": "record-2",
+                "status": "retired"
+              },
+              {
+                "id": "record-3",
+                "status": "ready"
+              },
+              {
+                "id": "record-4",
+                "status": "ready"
+              }
+            ]
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2-empty-final": {
+      "outcome": "complete",
+      "rows": [],
+      "missing_ids": [],
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": []
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2-cycle": {
+      "outcome": "failed",
+      "reason": "repeated-cursor",
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": "same"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "same"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": "same"
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2-budget": {
+      "outcome": "failed",
+      "reason": "page-budget-exhausted",
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": "page-2"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "page-2"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": "page-3"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "page-3"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": "page-4"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "page-4"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": "page-5"
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2-duplicate": {
+      "outcome": "failed",
+      "reason": "duplicate-record",
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              }
+            ],
+            "next_cursor": "page-2"
+          },
+          "response_validation": "valid"
+        },
+        {
+          "request": {
+            "limit": 4,
+            "cursor": "page-2"
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [
+              {
+                "id": "record-1",
+                "status": "ready"
+              }
+            ]
+          },
+          "response_validation": "valid"
+        }
+      ]
+    },
+    "adapted-v2-null-final": {
+      "outcome": "failed",
+      "reason": "response-invalid",
+      "calls": [
+        {
+          "request": {
+            "limit": 4
+          },
+          "effective_limit": 4,
+          "request_validation": "valid",
+          "response": {
+            "items": [],
+            "next_cursor": null
+          },
+          "response_validation": "invalid"
+        }
+      ]
+    }
+  },
+  "negative_controls": {
+    "false_schema_conclusion": "rejected",
+    "annotation_behavior_conflict": "rejected",
+    "changed_annotation_still_meta_valid": "valid",
+    "changed_annotation_did_not_change_model_default": 2,
+    "missing_common_resource": {
+      "result": "held",
+      "missing_references": [
+        "urn:shelf-example:common:1#/$defs/cursor",
+        "urn:shelf-example:common:1#/$defs/record_id"
+      ]
+    },
+    "unknown_reference": {
+      "result": "held",
+      "missing_references": [
+        "urn:shelf-example:unavailable:1"
+      ]
+    },
+    "unrelated_response_v1": "valid",
+    "retrieval_callbacks_only_rejected": [
+      "urn:shelf-example:common:1",
+      "urn:shelf-example:common:1",
+      "urn:shelf-example:unavailable:1"
+    ]
+  },
+  "summary": {
+    "schema_documents": 5,
+    "instance_version_checks": 64,
+    "consumer_runs": 15,
+    "required_original_overlap": "fails: legacy-v2 returns incomplete success",
+    "adapted_overlap": "passes executed fixture scenarios; not universal compatibility proof"
+  }
+}

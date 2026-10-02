@@ -1,0 +1,23 @@
+{
+  "revision": "shelf-behavior-r1",
+  "operation": "GET /shelf-records",
+  "versions": {
+    "v1": {"omitted_limit": 4, "full_nonfinal_pages": true, "terminal": "explicit-null"},
+    "v2": {"omitted_limit": 2, "full_nonfinal_pages": false, "terminal": "omitted"}
+  },
+  "consumer_policy": {
+    "revision": "shelf-consumer-policy-r1",
+    "explicit_limit": 4,
+    "maximum_pages": 4,
+    "labels": {"ready": "Ready", "retired": "Retired", "held": "On hold"},
+    "required_overlap": [["legacy", "v1"], ["legacy", "v2"], ["adapted", "v1"], ["adapted", "v2"]]
+  },
+  "records": [
+    {"id": "record-1", "status": "ready"},
+    {"id": "record-2", "status": "retired"},
+    {"id": "record-3", "status": "ready"},
+    {"id": "record-4", "status": "ready"},
+    {"id": "record-5", "status": "retired"},
+    {"id": "record-6", "status": "ready"}
+  ]
+}
