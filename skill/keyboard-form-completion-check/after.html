@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop-kit draft — corrected example</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 1.5rem; font: 1rem/1.5 system-ui, sans-serif; color: #172f38; background: #f1f5f4; }
+    main { max-width: 40rem; margin: auto; background: white; padding: 1.5rem; border: 1px solid #809398; border-radius: .5rem; }
+    h1 { font-size: 1.7rem; margin-top: 0; }
+    h2 { font-size: 1.15rem; margin-top: 0; }
+    label { display: block; font-weight: 700; margin: 1rem 0 .25rem; }
+    input, select { display: block; width: 100%; max-width: 28rem; font: inherit; padding: .6rem; border: 2px solid #687d83; border-radius: .2rem; }
+    :focus-visible, #error-summary:focus { outline: 3px solid #102f9a; outline-offset: 4px; }
+    [aria-invalid="true"] { border-color: #8c2020; }
+    .hint { margin: .25rem 0; }
+    .error { color: #8c2020; font-weight: 700; margin: .3rem 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    button { padding: .7rem 1rem; font: inherit; border: 2px solid #175b4e; border-radius: .2rem; cursor: pointer; background: #175b4e; color: white; }
+    button[type="reset"] { background: white; color: #175b4e; }
+    #error-summary { padding: 1rem; border: 3px solid #8c2020; margin: 1rem 0; }
+    #error-summary a { color: #702020; }
+    #result { font-weight: 700; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Plan a workshop-kit pickup</h1>
+  <p>Fictional practice form. Create a local draft only; nothing is sent or reserved.</p>
+  <p>All three fields are required. Errors appear after you choose Create local draft. Your other answers are kept.</p>
+  <section id="error-summary" tabindex="-1" aria-labelledby="error-title" hidden>
+    <h2 id="error-title"></h2>
+    <ul id="error-list"></ul>
+  </section>
+  <form id="kit-form" novalidate autocomplete="off">
+    <label for="code">Workshop code (required)</label>
+    <p id="code-hint" class="hint">Enter LANTERN- followed by two digits, for example LANTERN-42.</p>
+    <input id="code" name="code" type="text" required aria-describedby="code-hint" spellcheck="false">
+    <p id="code-error" class="error" hidden></p>
+    <label for="kits">Number of kits (required)</label>
+    <p id="kits-hint" class="hint">Enter a whole number from 1 to 4.</p>
+    <input id="kits" name="kits" type="number" min="1" max="4" step="1" value="2" required aria-describedby="kits-hint">
+    <p id="kits-error" class="error" hidden></p>
+    <label for="shelf">Pickup shelf (required)</label>
+    <p id="shelf-hint" class="hint">Choose North shelf or West shelf.</p>
+    <select id="shelf" name="shelf" required aria-describedby="shelf-hint">
+      <option value="">Choose a shelf</option>
+      <option>North shelf</option>
+      <option>West shelf</option>
+    </select>
+    <p id="shelf-error" class="error" hidden></p>
+    <div class="actions">
+      <button id="create-draft" type="submit">Create local draft</button>
+      <button type="reset">Start over</button>
+    </div>
+    <p id="result" role="status" aria-atomic="true"></p>
+  </form>
+</main>
+<script src="draft-rules.js"></script>
+<script>
+  const form = document.getElementById("kit-form");
+  const fields = ["code", "kits", "shelf"];
+  const summary = document.getElementById("error-summary");
+  const errorList = document.getElementById("error-list");
+  const result = document.getElementById("result");
+  const readValues = () => Object.fromEntries(fields.map(id => [id, document.getElementById(id).value]));
+
+  function clearErrors() {
+    summary.hidden = true;
+    errorList.replaceChildren();
+    document.getElementById("error-title").textContent = "";
+    for (const id of fields) {
+      const control = document.getElementById(id);
+      const error = document.getElementById(`${id}-error`);
+      control.removeAttribute("aria-invalid");
+      control.setAttribute("aria-describedby", `${id}-hint`);
+      error.textContent = "";
+      error.hidden = true;
+    }
+  }
+
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    clearErrors();
+    result.textContent = "";
+    const checked = DraftRules.validate(readValues());
+    if (checked.errors.length) {
+      for (const error of checked.errors) {
+        const control = document.getElementById(error.field);
+        const inlineError = document.getElementById(`${error.field}-error`);
+        control.setAttribute("aria-invalid", "true");
+        control.setAttribute("aria-describedby", `${error.field}-hint ${error.field}-error`);
+        inlineError.textContent = error.message;
+        inlineError.hidden = false;
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = `#${error.field}`;
+        link.textContent = error.message;
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          control.focus();
+        });
+        item.append(link);
+        errorList.append(item);
+      }
+      document.getElementById("error-title").textContent = `Correct ${checked.errors.length} ${checked.errors.length === 1 ? "error" : "errors"}`;
+      summary.hidden = false;
+      summary.focus();
+      return;
+    }
+    result.textContent = DraftRules.describe(checked.draft);
+  });
+
+  form.addEventListener("input", () => {
+    if (result.textContent) result.textContent = "Draft changed. Choose Create local draft to update it.";
+  });
+  form.addEventListener("reset", () => {
+    clearErrors();
+    result.textContent = "";
+    document.getElementById("code").focus();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "scope": "Selected source relationships, controller syntax, and shared pure business rules only",
+  "markup_relationships": "pass",
+  "javascript_syntax": "pass",
+  "pure_rule_contract_cases": "pass",
+  "node_version": "v24.19.0",
+  "python_version": "3.12.14",
+  "sha256": {
+    "before.html": "a320181f82e66c1c92597fcc15b035aadd36d0f000b9b68b8d3d8b05aaf3c2e9",
+    "after.html": "c02d06dd8a1f6734bf20e6d032517f879b18905c71619f7e7499603bb9309a84",
+    "draft-rules.js": "d8a66074ef4a84ed7e33892d1e9a46a3bf5e76cf9a6041d15f10fc6b3ed3850f"
+  },
+  "browser_keyboard_cases": "unrun",
+  "computed_accessibility_tree": "unrun",
+  "screen_reader_announcements": "unrun",
+  "visual_focus_and_obscuration": "unrun"
+}

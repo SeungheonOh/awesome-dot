@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop-kit draft — original example</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 1.5rem; font: 1rem/1.5 system-ui, sans-serif; color: #172f38; background: #f1f5f4; }
+    main { max-width: 40rem; margin: auto; background: white; padding: 1.5rem; border: 1px solid #809398; border-radius: .5rem; }
+    h1 { font-size: 1.7rem; margin-top: 0; }
+    label, .field-name { display: block; font-weight: 700; margin: 1rem 0 .25rem; }
+    input, select { display: block; width: 100%; max-width: 28rem; font: inherit; padding: .6rem; border: 2px solid #687d83; border-radius: .2rem; }
+    input:focus, select:focus, button:focus { outline: none; }
+    .actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    .fake-button, button { padding: .7rem 1rem; font: inherit; border: 2px solid #175b4e; border-radius: .2rem; cursor: pointer; }
+    .fake-button { background: #175b4e; color: white; }
+    button { background: white; color: #175b4e; }
+    #errors { color: #8c2020; }
+    #result { font-weight: 700; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Plan a workshop-kit pickup</h1>
+  <p>Fictional practice form. Create a local draft only; nothing is sent or reserved.</p>
+  <p>All three fields are required. Use workshop code LANTERN- followed by two digits, choose 1–4 kits and a pickup shelf.</p>
+  <form id="kit-form" novalidate autocomplete="off">
+    <p class="field-name">Workshop code</p>
+    <input id="code" name="code" placeholder="For example, LANTERN-42">
+    <label for="kits">Number of kits</label>
+    <input id="kits" name="kits" type="number" min="1" max="4" step="1" value="2">
+    <label for="shelf">Pickup shelf</label>
+    <select id="shelf" name="shelf">
+      <option value="">Choose a shelf</option>
+      <option>North shelf</option>
+      <option>West shelf</option>
+    </select>
+    <div class="actions">
+      <div id="create-draft" class="fake-button">Create local draft</div>
+      <button type="reset">Start over</button>
+    </div>
+    <p id="errors"></p>
+    <p id="result"></p>
+  </form>
+</main>
+<script src="draft-rules.js"></script>
+<script>
+  const form = document.getElementById("kit-form");
+  const fields = ["code", "kits", "shelf"];
+  const readValues = () => Object.fromEntries(fields.map(id => [id, document.getElementById(id).value]));
+  form.addEventListener("submit", event => event.preventDefault());
+  document.getElementById("create-draft").addEventListener("click", () => {
+    const checked = DraftRules.validate(readValues());
+    document.getElementById("errors").textContent = checked.errors.map(error => error.message).join(" ");
+    document.getElementById("result").textContent = checked.draft ? DraftRules.describe(checked.draft) : "";
+  });
+  form.addEventListener("reset", () => {
+    document.getElementById("errors").textContent = "";
+    document.getElementById("result").textContent = "";
+  });
+</script>
+</body>
+</html>
