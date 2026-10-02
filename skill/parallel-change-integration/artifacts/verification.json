@@ -1,0 +1,155 @@
+{
+  "accepted": {
+    "count": "95051401442196992e61067cdd905dfdfb495ce2",
+    "minutes": "176122e5beb1a6ba2f1d5efe6074f518fb79caed"
+  },
+  "applied_patch_tree_matches": true,
+  "base": "f20646ab6a56bf20eda49e07f74ebcd297d82aec",
+  "checks": [
+    {
+      "actual_exit": 0,
+      "command": "python -B -m unittest -v",
+      "committed_tree": true,
+      "cwd": "original",
+      "expected_exit": 0,
+      "finished_at": "2026-10-02T02:50:02.607588+00:00",
+      "label": "base",
+      "result": "passed",
+      "revision": "f20646ab6a56bf20eda49e07f74ebcd297d82aec",
+      "tests_run": 3,
+      "tree": "63a3054f14819bab7d2034fd1fdb60a00b19057c"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python -B -m unittest -v",
+      "committed_tree": true,
+      "cwd": "count",
+      "expected_exit": 0,
+      "finished_at": "2026-10-02T02:50:02.705082+00:00",
+      "label": "count",
+      "result": "passed",
+      "revision": "95051401442196992e61067cdd905dfdfb495ce2",
+      "tests_run": 5,
+      "tree": "5becb9d02e62395ad9d00808b74db44be4fadef5"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python -B -m unittest -v",
+      "committed_tree": true,
+      "cwd": "minutes",
+      "expected_exit": 0,
+      "finished_at": "2026-10-02T02:50:02.784858+00:00",
+      "label": "minutes",
+      "result": "passed",
+      "revision": "176122e5beb1a6ba2f1d5efe6074f518fb79caed",
+      "tests_run": 6,
+      "tree": "14514594e36b05ddb75ec2aff3c7f40a568ee6a9"
+    },
+    {
+      "actual_exit": 1,
+      "command": "python -B -m unittest -v",
+      "committed_tree": true,
+      "cwd": "proposed-order",
+      "expected_exit": 1,
+      "finished_at": "2026-10-02T02:50:02.880123+00:00",
+      "label": "proposed-order",
+      "result": "failed as expected",
+      "revision": "e926c3eed439ccdf5f2ac22ae85867b3eb1bcb50",
+      "tests_run": 4,
+      "tree": "cfb45d7b4a40eb64ddbb67760450e105fe1a5922"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python -B -m unittest -v",
+      "committed_tree": true,
+      "cwd": "integration",
+      "expected_exit": 0,
+      "finished_at": "2026-10-02T02:50:03.071656+00:00",
+      "label": "integrated",
+      "result": "passed",
+      "revision": "9e82fb830d86f350a5cd079936e6b968a949e14e",
+      "tests_run": 10,
+      "tree": "f616d5f3bfec66a1d08c950199ad521e3fd7694d"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python -B -m unittest -v",
+      "committed_tree": true,
+      "cwd": "restored",
+      "expected_exit": 0,
+      "finished_at": "2026-10-02T02:50:03.180570+00:00",
+      "label": "restored-bundle",
+      "result": "passed",
+      "revision": "9e82fb830d86f350a5cd079936e6b968a949e14e",
+      "tests_run": 10,
+      "tree": "f616d5f3bfec66a1d08c950199ad521e3fd7694d"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python -B -m unittest -v",
+      "committed_tree": false,
+      "cwd": "patched",
+      "expected_exit": 0,
+      "finished_at": "2026-10-02T02:50:03.266885+00:00",
+      "label": "applied-patch",
+      "result": "passed",
+      "revision": "f20646ab6a56bf20eda49e07f74ebcd297d82aec",
+      "tests_run": 10,
+      "tree": "f616d5f3bfec66a1d08c950199ad521e3fd7694d"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python -B -m unittest -v",
+      "committed_tree": true,
+      "cwd": "local-remote-readback",
+      "expected_exit": 0,
+      "finished_at": "2026-10-02T02:50:03.362668+00:00",
+      "label": "local-remote-readback",
+      "result": "passed",
+      "revision": "9e82fb830d86f350a5cd079936e6b968a949e14e",
+      "tests_run": 10,
+      "tree": "f616d5f3bfec66a1d08c950199ad521e3fd7694d"
+    }
+  ],
+  "contributor_exact_snapshot_unchanged": true,
+  "fixture": "fictional reading queue; no external repository or service",
+  "fixture_sha256": {
+    "base/queue_summary.py": "e475b10d1cbd0aa3d450b4635aee8d26e82d77922070507193169f15bbcbefde",
+    "base/test_queue.py": "e373dd66868de663274f943c4b3b52e7f00014add387df00d8003aacef464091",
+    "count/queue_summary.py": "ba94787e668460d4831d585d7aed7472a534aa32f344436dd785f2e907a8e1a6",
+    "count/test_count.py": "e372e7b76ddf5251f95d56d70d1f1c772fd0b7ace6ac28bfef40a8e7a1d7af81",
+    "decisions.md": "b642493fc772e2f8d6821eeefa065a85c18e1a5cb844e0baf3c01886e99609c6",
+    "integrated/queue_summary.py": "9bf938927502842ea2e3583b9db5cdb0e107478e8a5aaeb646bbe91e39436eb5",
+    "integrated/test_integration.py": "2de9307b2d51863887c1031a4009551ab47a42fb26832ee3392a46caabe05b9c",
+    "minutes/queue_summary.py": "56a246b60db8b80d15cfff9b0a96ee057d0df9c2baaf40c64b4de4088498369e",
+    "minutes/test_minutes.py": "a461a1aa753d86eea948f9312045e970f70212ba98eaf9a95b2d0d0885d771ca",
+    "proposed-order/queue_summary.py": "e60efc458355a1c7cdc040a5e225b86c491914826d651e1f2e73505805085b25",
+    "proposed-order/test_proposed_order.py": "62378fe35a835dfa5a734990552713b35a3663905114de4f0632b1e17b6f1e7a"
+  },
+  "git": "git version 2.52.0",
+  "held": {
+    "proposed-order": "e926c3eed439ccdf5f2ac22ae85867b3eb1bcb50"
+  },
+  "held_proposal_is_ancestor": false,
+  "integration_branch": "integration/accepted",
+  "integration_commit": "9e82fb830d86f350a5cd079936e6b968a949e14e",
+  "integration_tree": "f616d5f3bfec66a1d08c950199ad521e3fd7694d",
+  "local_bare_remote_commit_and_tree_match": true,
+  "local_bare_remote_existing_contributor_ref_preserved": true,
+  "log_paths": "absolute rehearsal roots replaced with <rehearsal>",
+  "mechanical_conflict_stages_sha256": {
+    "1": "e475b10d1cbd0aa3d450b4635aee8d26e82d77922070507193169f15bbcbefde",
+    "2": "ba94787e668460d4831d585d7aed7472a534aa32f344436dd785f2e907a8e1a6",
+    "3": "56a246b60db8b80d15cfff9b0a96ee057d0df9c2baaf40c64b4de4088498369e"
+  },
+  "merge_parents": [
+    "1cc2ceb324cff59aded932ab0b48184afd7980e6",
+    "176122e5beb1a6ba2f1d5efe6074f518fb79caed"
+  ],
+  "newer_count_is_ancestor": false,
+  "observed_unaccepted_successor": "3463535adbd93b9b05f84385f040003074d8aa7f",
+  "original_exact_snapshot_unchanged": true,
+  "platform": "linux",
+  "python": "3.12.14",
+  "restored_bundle_commit_and_tree_match": true
+}

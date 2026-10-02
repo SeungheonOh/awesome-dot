@@ -1,0 +1,24 @@
+test_proposed_default_is_alphabetical (test_proposed_order.ProposedOrderTests.test_proposed_default_is_alphabetical) ... ok
+test_empty_queue_has_empty_titles (test_queue.QueueContractTests.test_empty_queue_has_empty_titles) ... ok
+test_input_is_unchanged (test_queue.QueueContractTests.test_input_is_unchanged) ... ok
+test_input_order_is_preserved (test_queue.QueueContractTests.test_input_order_is_preserved) ... FAIL
+
+======================================================================
+FAIL: test_input_order_is_preserved (test_queue.QueueContractTests.test_input_order_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<rehearsal>/proposed-order/test_queue.py", line 10, in test_input_order_is_preserved
+    self.assertEqual(summarize(entries)["titles"], ["Zebra", "Apple"])
+AssertionError: Lists differ: ['Apple', 'Zebra'] != ['Zebra', 'Apple']
+
+First differing element 0:
+'Apple'
+'Zebra'
+
+- ['Apple', 'Zebra']
++ ['Zebra', 'Apple']
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)

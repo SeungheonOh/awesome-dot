@@ -1,0 +1,8 @@
+test_empty_queue_has_empty_titles (test_queue.QueueContractTests.test_empty_queue_has_empty_titles) ... ok
+test_input_is_unchanged (test_queue.QueueContractTests.test_input_is_unchanged) ... ok
+test_input_order_is_preserved (test_queue.QueueContractTests.test_input_order_is_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

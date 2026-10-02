@@ -1,0 +1,16 @@
+{
+  "advertised_integration": "9e82fb830d86f350a5cd079936e6b968a949e14e\trefs/heads/integration/accepted",
+  "after_refs": [
+    "refs/heads/contribution/count 3463535adbd93b9b05f84385f040003074d8aa7f",
+    "refs/heads/integration/accepted 9e82fb830d86f350a5cd079936e6b968a949e14e"
+  ],
+  "before_refs": [
+    "refs/heads/contribution/count 3463535adbd93b9b05f84385f040003074d8aa7f"
+  ],
+  "cloned_commit": "9e82fb830d86f350a5cd079936e6b968a949e14e",
+  "cloned_tree": "f616d5f3bfec66a1d08c950199ad521e3fd7694d",
+  "destination": "delivery.git (new local bare fixture repository)",
+  "existing_contributor_ref_preserved": true,
+  "network_used": false,
+  "new_target_ref": "refs/heads/integration/accepted"
+}

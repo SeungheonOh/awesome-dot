@@ -1,0 +1,85 @@
+diff --git a/queue_summary.py b/queue_summary.py
+index 39dc26f..75a4004 100644
+--- a/queue_summary.py
++++ b/queue_summary.py
+@@ -2,4 +2,8 @@
+ 
+ 
+ def summarize(entries):
+-    return {"titles": [entry["title"] for entry in entries]}
++    return {
++        "titles": [entry["title"] for entry in entries],
++        "count": len(entries),
++        "total_minutes": sum(entry["minutes"] for entry in entries),
++    }
+diff --git a/test_count.py b/test_count.py
+new file mode 100644
+index 0000000..4fa25b9
+--- /dev/null
++++ b/test_count.py
+@@ -0,0 +1,12 @@
++import unittest
++
++from queue_summary import summarize
++
++
++class CountTests(unittest.TestCase):
++    def test_count_includes_duplicate_titles(self):
++        entries = [{"title": "Same", "minutes": 3}, {"title": "Same", "minutes": 0}]
++        self.assertEqual(summarize(entries)["count"], 2)
++
++    def test_empty_count_is_zero(self):
++        self.assertEqual(summarize([])["count"], 0)
+diff --git a/test_integration.py b/test_integration.py
+new file mode 100644
+index 0000000..a5822f2
+--- /dev/null
++++ b/test_integration.py
+@@ -0,0 +1,26 @@
++from copy import deepcopy
++import unittest
++
++from queue_summary import summarize
++
++
++class CombinedContractTests(unittest.TestCase):
++    def test_fields_agree_and_calls_do_not_share_output(self):
++        entries = [
++            {"title": "Zebra", "minutes": 7},
++            {"title": "Apple", "minutes": 0},
++            {"title": "Zebra", "minutes": 4},
++        ]
++        before = deepcopy(entries)
++        expected = {"titles": ["Zebra", "Apple", "Zebra"], "count": 3, "total_minutes": 11}
++        first, second = summarize(entries), summarize(entries)
++        self.assertEqual(first, expected)
++        self.assertEqual(second, expected)
++        self.assertEqual(first["count"], len(first["titles"]))
++        first["titles"].append("Later")
++        self.assertEqual(second, expected)
++        self.assertEqual(summarize(entries), expected)
++        self.assertEqual(entries, before)
++
++    def test_combined_empty_result(self):
++        self.assertEqual(summarize([]), {"titles": [], "count": 0, "total_minutes": 0})
+diff --git a/test_minutes.py b/test_minutes.py
+new file mode 100644
+index 0000000..1506de6
+--- /dev/null
++++ b/test_minutes.py
+@@ -0,0 +1,15 @@
++import unittest
++
++from queue_summary import summarize
++
++
++class MinutesTests(unittest.TestCase):
++    def test_minutes_are_summed(self):
++        entries = [{"title": "Zebra", "minutes": 7}, {"title": "Apple", "minutes": 4}]
++        self.assertEqual(summarize(entries)["total_minutes"], 11)
++
++    def test_zero_minute_entry_is_valid(self):
++        self.assertEqual(summarize([{"title": "A", "minutes": 0}])["total_minutes"], 0)
++
++    def test_empty_total_is_zero(self):
++        self.assertEqual(summarize([])["total_minutes"], 0)

@@ -1,0 +1,25 @@
+diff --git a/queue_summary.py b/queue_summary.py
+index 39dc26f..2571d99 100644
+--- a/queue_summary.py
++++ b/queue_summary.py
+@@ -2,4 +2,4 @@
+ 
+ 
+ def summarize(entries):
+-    return {"titles": [entry["title"] for entry in entries]}
++    return {"titles": sorted(entry["title"] for entry in entries)}
+diff --git a/test_proposed_order.py b/test_proposed_order.py
+new file mode 100644
+index 0000000..4d9adef
+--- /dev/null
++++ b/test_proposed_order.py
+@@ -0,0 +1,9 @@
++import unittest
++
++from queue_summary import summarize
++
++
++class ProposedOrderTests(unittest.TestCase):
++    def test_proposed_default_is_alphabetical(self):
++        entries = [{"title": "Zebra", "minutes": 7}, {"title": "Apple", "minutes": 4}]
++        self.assertEqual(summarize(entries)["titles"], ["Apple", "Zebra"])

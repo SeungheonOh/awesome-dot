@@ -1,0 +1,13 @@
+* e926c3e (input/proposed-order) proposed-order: independent contribution
+| *   9e82fb8 (HEAD -> integration/accepted) Integrate accepted MINUTES-1; preserve both additive fields
+| |\  
+| | * 176122e (input/minutes) minutes: independent contribution
+| |/  
+|/|   
+| * 1cc2ceb Integrate accepted COUNT-1
+|/| 
+| | * 3463535 (observed/count-successor) count: later documentation contribution
+| |/  
+| * 9505140 (input/count) count: independent contribution
+|/  
+* f20646a (origin/main, origin/HEAD, main, input/base) Base: preserve reading order

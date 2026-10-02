@@ -1,0 +1,10 @@
+test_count_includes_duplicate_titles (test_count.CountTests.test_count_includes_duplicate_titles) ... ok
+test_empty_count_is_zero (test_count.CountTests.test_empty_count_is_zero) ... ok
+test_empty_queue_has_empty_titles (test_queue.QueueContractTests.test_empty_queue_has_empty_titles) ... ok
+test_input_is_unchanged (test_queue.QueueContractTests.test_input_is_unchanged) ... ok
+test_input_order_is_preserved (test_queue.QueueContractTests.test_input_order_is_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

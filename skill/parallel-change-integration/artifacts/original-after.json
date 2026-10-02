@@ -1,0 +1,37 @@
+{
+  "branch": "refs/heads/main",
+  "files": {
+    ".gitignore": {
+      "mode": 420,
+      "sha256": "585f0d16a9485b2960f42301c245f2e48109e64d075b373a96654fc6b9cd7a86"
+    },
+    "ideas.txt": {
+      "mode": 420,
+      "sha256": "574f5a79679152b6b3804f1b76f47fc8f7792849d52b7bc6c1bd1fbfd296558e"
+    },
+    "notes.txt": {
+      "mode": 420,
+      "sha256": "626ba08b7932fa7eea0fdee626e4358d7304c8941e574909b07cd471874c8a30"
+    },
+    "queue_summary.py": {
+      "mode": 420,
+      "sha256": "425214cdaf916d80480e2282b03ed31c5cd637278c12bd334a24e20d11cd9d46"
+    },
+    "scratch.cache": {
+      "mode": 420,
+      "sha256": "060cd6df3924c60e7ba58a0b46bfe83e33cd46a3d8b1cfb4dff7f9b5eb42391a"
+    },
+    "test_queue.py": {
+      "mode": 420,
+      "sha256": "e373dd66868de663274f943c4b3b52e7f00014add387df00d8003aacef464091"
+    }
+  },
+  "head": "f20646ab6a56bf20eda49e07f74ebcd297d82aec",
+  "index_sha256": "1a79cb2f62542e9035e81e0fa4a02bc4c1a890ce1044670150b587c3cc768921",
+  "refs": [
+    "refs/heads/main f20646ab6a56bf20eda49e07f74ebcd297d82aec"
+  ],
+  "staged_diff_sha256": "d528b7b6a1c7479ec256023a1d98c214f9457decd63b3342b180f91d797e0423",
+  "status": "MM notes.txt\u0000 M queue_summary.py\u0000?? ideas.txt\u0000",
+  "unstaged_diff_sha256": "35bd17f3b460a324f64f4253c02a3472d94e58b3f5800285404fa73cf2d283bf"
+}

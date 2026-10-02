@@ -1,0 +1,13 @@
+Auto-merging queue_summary.py
+CONFLICT (content): Merge conflict in queue_summary.py
+Automatic merge failed; fix conflicts and then commit the result.
+
+"""A fictional reading queue; entries have title and non-negative minutes."""
+
+
+def summarize(entries):
+<<<<<<< HEAD
+    return {"titles": [entry["title"] for entry in entries], "count": len(entries)}
+=======
+    return {"titles": [entry["title"] for entry in entries], "total_minutes": sum(entry["minutes"] for entry in entries)}
+>>>>>>> 176122e5beb1a6ba2f1d5efe6074f518fb79caed
