@@ -5,7 +5,7 @@ description: "Turn an authorized voice memo or timestamped transcript into a con
 
 # Turn a Voice Memo into an Evidence Brief
 
-Use this workflow when the reader needs to get from a summary back to the exact spoken passage, or when a clipped recording, uncertain wording or spoken correction could change the apparent commitment. Produce a short brief and an evidence map. For ordinary meeting-note deduplication without these source or speech problems, use [meeting-action-handoff](../meeting-action-handoff/SKILL.md).
+Use this workflow when the reader needs to get from a summary back to the exact spoken passage, or when a clipped recording, uncertain wording or spoken correction could change the apparent commitment. Produce the requested brief with traceable source support. Include a separate evidence map when requested or materially needed for review. For ordinary meeting-note deduplication without these source or speech problems, use [meeting-action-handoff](../meeting-action-handoff/SKILL.md).
 
 ## Inputs and boundaries
 
@@ -80,7 +80,7 @@ Link repeated or revised claims using `supports`, `retracts`, `replaces` or `con
 
 Do not adopt a proposed owner or deadline simply because someone agrees to the underlying work. Resolve a relative date only from known recording context and an unambiguous convention; preserve “next Friday” when either is missing. A timestamp is a location in media, not a due date.
 
-### 6. Write the brief and attach its evidence map
+### 6. Deliver the brief in the requested form
 
 Lead with the smallest useful result:
 
@@ -92,7 +92,7 @@ Lead with the smallest useful result:
 
 Give every consequential statement one or more segment links. Keep a suggestion out of the committed-work list unless a later segment accepts it. When one segment reverses another, cite both. Do not claim an action happened just because someone promised it.
 
-Include an evidence appendix with the source manifest, segment time map, exact excerpts and claim-to-segment links. Include a transcript correction log only for actual edits; “none, transcript only” is a valid result. The [worked brief and evidence ledger](example.md) show how to keep the main summary short while preserving the trail.
+Keep the source manifest, segment time map, exact excerpts and claim-to-segment links recoverable in the working material. Include a compact evidence appendix or separate map when requested or materially needed for review or reuse. For a short response-only request, return the requested brief with the source references and limits needed to interpret it; do not add unrequested files or appendices. Include a transcript correction log only for actual edits; “none, transcript only” is a valid result. The [worked brief and evidence ledger](example.md) show how to keep the main summary short while preserving the trail.
 
 Return the requested artifact through the authorized destination. If asked to update a named document, preserve unrelated material and read back the changed section. Do not turn a response-only request into publication or a task-management workflow.
 
