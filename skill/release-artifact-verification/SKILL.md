@@ -141,3 +141,23 @@ A locally authored app archive included a searchable launcher and a bounded Node
 The actual HTTP tests then requested every declared static app entry route, checked JavaScript content types, rejected unrelated `README.md`, configuration and traversal-like paths, and exercised Host/Origin and method rejection. A separate command invocation, `node app-validation/start.mjs doi-desk`, started the selected local service and served its UI without triggering an upstream data request.
 
 The full archive was extracted into a fresh Linux directory containing spaces. Its 109 test programs passed under Node 24.19 using an existing offline dependency set. This established the exercised package, route and program-test boundaries; it did not establish macOS/Windows behavior, a clean dependency install or real-browser interaction. The useful repair was the mismatch between the public entry route and the actual serving map, which a check of file existence alone would have missed.
+
+## Recover a workspace without regressing the delivered release
+
+When local files may have reverted or an executor has changed, resolve the most recent delivered artifact from its durable destination before treating the local checkout or same-named ZIP as the baseline. A surviving filename, cached version label or earlier green test log does not establish that the local content is current.
+
+1. Record the durable artifact's confirmed identity/version, materialize that exact version into a separate recovery directory and verify its internal membership/hashes. Do not overwrite new local work while downloading a baseline.
+2. Compare its public inventory with the current candidate. For an app collection, compare stable app IDs, not only the count. An equal count can conceal one removed app and one added app. Refuse silent loss of a previously delivered entry unless removal is explicitly part of the requested release change.
+3. Preserve new edits separately, then recover missing release files and merge only the intended changes. Avoid copying private runtime state, credentials or browser profiles into a software archive. Restoring source assets and restoring authenticated sessions are different operations.
+4. Rerun source checks after recovery, package the exact resulting bytes and repeat the extracted-consumer checks. Checks on the reverted candidate cannot validate the recovered release. Keep the prior artifact unchanged until the replacement is verified.
+5. Use the destination's optimistic version check when replacing a shared artifact. On a conflict, resolve the newer durable version and reconcile; do not remove the guard or force an overwrite merely to finish the upload.
+
+A useful packaging guard can accept an explicitly selected prior ZIP, reject duplicate/unsafe members and excessive expansion, verify its complete member-hash inventory, then require that every prior stable app ID remains in the new catalog. This guard catches accidental omissions relative to its supplied baseline. It cannot discover the latest remote release by itself, authenticate the publisher from self-contained hashes, or establish that unchanged IDs still behave correctly. Keep those separate checks.
+
+### Worked recovery example
+
+A collection had 55 apps in its verified delivered archive, but a later working directory contained only a 47-app snapshot. Adding one new app would have produced a superficially successful 48-app release while dropping eight already delivered apps. The current local ZIP was also old, so comparing only against that ZIP would not have detected the regression.
+
+The exact delivered 55-app archive was retrieved separately and its member hashes verified. The new app and local edits were preserved, missing released files were restored, and the intended addition was merged into a 56-app inventory. All 118 test programs then passed both before packaging and in a fresh extracted consumer directory. A later packaging guard rejected a synthetic candidate missing a prior stable app ID, as well as duplicate IDs, altered baseline bytes and an incomplete hash inventory.
+
+This verifies continuity against the selected release and the exercised consumer contract. It does not prove that the underlying workspace will persist through future resets; that needs a separate observation after the relevant reset actually occurs.
