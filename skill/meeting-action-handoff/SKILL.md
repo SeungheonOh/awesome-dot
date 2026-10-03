@@ -74,11 +74,13 @@ After writing, retrieve or inspect the destination and compare action IDs, owner
 
 ## Deliverables
 
-Return a readable summary plus a ledger with these fields:
+Deliver the handoff in the requested format and level of detail. A short response can carry actions, owners, timing, conditions and evidence limits in a few source-linked bullets; do not attach a ledger or appendix when the user requested only that response.
+
+Use a ledger when requested or when its structure materially helps the handoff. Useful fields are:
 
 `action_id`, deliverable, completion condition, owner and owner basis, due wording and resolved date, dependency IDs, reported status, evidence status, source locators and next decision
 
-Include source coverage, candidate-to-action merge map, unresolved conflicts and a short excluded-suggestion note. Keep the full evidence appendix separate from the main handoff when the reader needs a concise update. Do not omit uncertainty merely to meet a word limit.
+Keep source coverage, unresolved conflicts and material excluded suggestions clear. Retain enough working provenance to explain merges and non-merges, but deliver a candidate-to-action merge map or full evidence appendix only when requested or useful to the reader. Preserve uncertainty that changes an action, its timing or its completion claim when shortening the handoff.
 
 ## Verification
 
