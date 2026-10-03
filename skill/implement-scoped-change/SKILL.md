@@ -1,15 +1,17 @@
 ---
 name: implement-scoped-change
-description: "Implement an accepted behavior request in an existing repository, keep the change within scope, and verify and hand off the actual result. Use for ordinary requested implementation, rather than diagnosis alone, repository mapping, or integrating finished changes."
+description: "Implement an accepted behavior request in a chosen software project, including a bounded new component, and verify the actual result. Use for scoped software implementation rather than requirements discovery, interface design, website creation, repository mapping, or integrating finished changes."
 ---
 
 # Implement a Scoped Change
 
-Turn a requested behavior into a working change in the authorized repository. Success is the requested observable result, supported by relevant checks on the final files; a plausible patch or a passing helper test alone is insufficient.
+Turn a requested behavior into working software in the authorized project. Success is the requested observable result, supported by relevant checks on the final files; a plausible patch or a passing helper test alone is insufficient.
 
 ## Establish the behavior and working boundary
 
-Read the request and applicable project instructions. Establish the repository and component, the observable acceptance behavior, any compatibility constraints, and the permitted environment. Use the project's existing tools and conventions rather than introducing a preferred stack or workflow.
+Read the request and applicable project instructions. Establish the chosen project or workspace and component, the observable acceptance behavior, any compatibility constraints, and the permitted environment. Use the project's existing tools and conventions rather than introducing a preferred stack or workflow.
+
+For a bounded new component, the accepted requirements or contract can be the starting point; an existing implementation or Git repository is not required. Inspect the chosen location and preserve anything already there. Create only the structure and tooling needed for the requested result, honoring the selected language and runtime. If the behavior or public interface still needs to be decided, resolve that design work before implementing assumptions as settled requirements.
 
 Make the acceptance behavior concrete enough to distinguish success from a nearby wrong implementation: what input or action triggers the change, what output or state should result, and what existing behavior must still hold. For a small clear task, keep this in a short working note and proceed. Do not require a design document or another approval of the same request.
 
@@ -17,13 +19,13 @@ Make the acceptance behavior concrete enough to distinguish success from a nearb
 - **Conflicting evidence:** Compare the user's requirement, the applicable specification, and current tests. An explicit request to change behavior may intentionally supersede old tests; update those expectations with that reason. If intent remains incompatible or unclear, show a concrete input on which the alternatives differ and ask for that decision. Do not choose intent merely to get a green test.
 - **Unclear scope:** Separate behavior required for acceptance from optional cleanup. Proceed with necessary adjacent edits that fit the request; hold work that introduces a new product decision, external action, or materially broader contract.
 
-Inspect repository status before editing, including staged, unstaged, and untracked work. Read existing changes in files you need to touch so they can survive the implementation. Do not discard or hide them to obtain a convenient baseline. An isolated branch or worktree can help when it preserves the original work and includes the correct inputs; a clean checkout that omits required uncommitted changes is not an equivalent starting point. Unrelated dirty work is not itself a blocker. If edits overlap so closely that ownership or intent cannot be distinguished, pause that edit and describe the conflict. Re-read a file before applying a patch when concurrent changes are possible.
+Inspect the project's current files before editing; in a Git repository, include staged, unstaged, and untracked work. Read existing changes in files you need to touch so they can survive the implementation. Do not discard or hide them to obtain a convenient baseline. An isolated branch or worktree can help when it preserves the original work and includes the correct inputs; a clean checkout that omits required uncommitted changes is not an equivalent starting point. Unrelated dirty work is not itself a blocker. If edits overlap so closely that ownership or intent cannot be distinguished, pause that edit and describe the conflict. Re-read a file before applying a patch when concurrent changes are possible.
 
-Follow the user's and project's established conventions for local commits. Publishing, deployment, and changes to shared systems require the authority appropriate to those actions; reuse existing authorization without adding a redundant confirmation step.
+Follow the user's and project's established conventions for local commits. Publishing, deployment, installation outside the local task environment, and changes to shared systems require the authority appropriate to those actions; reuse existing authorization without adding a redundant confirmation step.
 
 ## Find the smallest complete code path
 
-Start from the actual entry point or consumer for the requested behavior, then follow its relevant calls, state, and output. Inspect nearby tests and one comparable implementation. Read enough to decide where the behavior belongs without turning the task into a full repository survey.
+Start from the actual entry point or consumer for the requested behavior, then follow its relevant calls, state, and output. For a new component, use the accepted caller contract to establish that path. Inspect nearby tests and a comparable implementation when they exist. Read enough to decide where the behavior belongs without turning the task into a full repository survey.
 
 Identify the constraint that most affects the implementation: an existing interface, caller assumption, validation boundary, persistence format, or generation step. Check both producer and consumer when changing a data shape or default. Distinguish editable source from generated output; use the established generator when regeneration is necessary and permitted.
 
@@ -54,7 +56,7 @@ Handle results according to what they establish:
 - **Possibly pre-existing failure:** Compare the diagnostic with a recorded baseline or inspect the affected path. Label it pre-existing only with evidence; otherwise report the cause as unresolved. Avoid reverting user work just to manufacture a clean comparison.
 - **Unavailable check:** Resolve routine setup issues already within scope. If a tool, dependency, service, credential, or permission remains unavailable, record the blocked command and reason. Perform other meaningful checks, and state the behavior they leave unverified. A static inspection or miniature substitute is not a passing run of the real application.
 
-Inspect the final diff and repository status, including files generated by checks. Verify that the feature is connected, required companion changes are present, and unrelated user work remains intact. Results must apply to the final relevant files: after a later edit, rerun the checks it could affect. Distinguish passed, failed, blocked, and not run; timeouts and partial runs are not passes. Stop after acceptance and the justified available checks are complete, or at a concrete blocker, rather than repeatedly running unchanged checks.
+Inspect the final changes and project state, including files generated by checks; use the diff and repository status when available. Verify that the feature is connected, required companion changes are present, and unrelated user work remains intact. Results must apply to the final relevant files: after a later edit, rerun the checks it could affect. Distinguish passed, failed, blocked, and not run; timeouts and partial runs are not passes. Stop after acceptance and the justified available checks are complete, or at a concrete blocker, rather than repeatedly running unchanged checks.
 
 ## Hand off the result
 
