@@ -78,3 +78,21 @@ This workflow was exercised with hand-counted fixtures and 500 small randomized 
 ## Rule boundaries
 
 Official rules can treat skipped ranks, overvotes, exhaustion, multiple eliminations and ties differently. For example, [Maine's official ranked-choice resources](https://www.maine.gov/sos/elections-voting/resources-for-ranked-choice-voting) describe ballot-marking and exhaustion rules that are broader than a normalized strict-list exercise. Obtain the actual governing rule before adapting this workflow to real election administration. Do not infer a universal standard from one example.
+
+## Optional head-to-head diagnostic
+
+When the user wants to understand sensitivity to the decision rule, compare every pair using the original rankings. Keep this separate from the elimination ledger: removing a candidate during elimination does not remove them from a diagnostic over the original profile. Do not silently replace the agreed decision rule with a preferred alternative.
+
+1. Declare how incomplete rankings are interpreted. Two useful exploratory policies are: any listed option is preferred to any omitted option; or a ballot expresses a comparison only when both options are listed. If neither appears, abstain under both policies. Neither policy should be inferred as the group's governing rule.
+2. For each unordered pair, total first-option preference, second-option preference and abstentions using the original integer multiplicities. These three counts must sum to the original population. Show abstentions explicitly: the number expressing a comparison can differ from pair to pair.
+3. Call an option a strict pairwise winner only if it defeats every other option. A tie or a pair with zero expressed comparisons does not qualify as a win. No strict winner can occur because of cycles, ties or incomplete coverage; do not label every absence a cycle without proving the cycle.
+4. Report any disagreement with the elimination result as a difference between rules. Keep the selected omission policy in every exported comparison. Changing a diagnostic policy must invalidate its old results without changing the independently computed elimination count.
+5. Verify pair reversal swaps preference totals but preserves abstentions, row reordering changes nothing, and all pairs conserve population. An independent small reference can expand grouped rows, filter each ranking to the selected pair, and count its first listed option subject to the omission rule. Include all-empty rankings, cycles and policy-sensitive incomplete profiles.
+
+### Worked comparison
+
+Suppose 40 ballots rank A>B>C, 25 rank B>A>C and 35 rank C>B>A. The elimination count removes B first, transfers its 25 to A and elects A with 65 votes. Direct comparisons instead give B a 60–40 win over A and a 65–35 win over C. B is the strict pairwise winner. Both results follow their declared algorithms; the diagnostic alone does not authorize overturning a previously agreed rule.
+
+For an omission-sensitive example, take two A-only ballots, one B>A ballot and one empty ballot. Under listed-over-omitted treatment, A beats B 2–1 with one abstention. Under both-listed treatment, B wins 1–0 with three abstentions. The second result rests on one expressed comparison, not a majority of all four original ballots. Report that coverage rather than hiding it behind a winner label.
+
+The pairwise calculation was checked against 400 small expanded-ballot comparisons across the two omission policies, with row/candidate-order invariance. For background on strict head-to-head winners and majority cycles, see [Stanford's social choice teaching material](https://web.stanford.edu/class/symbsys150/social-choice-theory-5-8.html).
