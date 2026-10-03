@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "max_concurrency": 2,
+  "role_models": {
+    "implementer": "inherit",
+    "reviewer": "inherit"
+  },
+  "artifact_directory": ".dot-stack/artifacts"
+}

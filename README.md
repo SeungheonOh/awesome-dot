@@ -21,6 +21,7 @@ Try: “Use the task router for this task: [describe the result you need]. I hav
 - **Make a bug report testable.** Turn a vague symptom into reproduction steps, expected behavior, and an evidence log. [Use the skill →](skill/bug-reproduction-triage/SKILL.md) · [Prepare the review handoff →](skill/code-review-handoff/SKILL.md)
 - **Plan errands around real constraints.** Account for opening windows, fixed appointments, travel, and buffers; show when the plan is too tight. [Use the skill →](skill/errand-window-plan/SKILL.md)
 - **Build a playable orbital lab.** Follow a method for deterministic physics, solvable missions, and numerical checks. This is a build guide, not a hosted game. [Use the skill →](skill/orbital-game-lab/SKILL.md)
+- **Investigate, build, and verify engineering work.** Use dot-stack to choose a focused workflow, preserve existing work, and report evidence and limits. [Use the skill →](skill/dot-stack/SKILL.md)
 
 [Browse all skill folders →](skill/)
 

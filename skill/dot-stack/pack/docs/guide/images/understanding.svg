@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1020" width="640" height="1020" role="img" aria-labelledby="title desc">
+<title id="title">Four lenses on the evidence</title>
+<desc id="desc">How traces current behavior; why investigates recorded intent; recall reconstructs available prior context; teach connects findings into an explanation. Unknowns remain explicit.</desc>
+<rect width="640" height="1020" rx="24" fill="#f8fafc"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M 0 0 L 9 5 L 0 10 z" fill="#087f8c"/></marker></defs>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="36" y="55" font-size="31" font-weight="700" fill="#172b4d">Four lenses on the evidence</text>
+<rect x="36" y="90" width="568" height="168" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="106" width="6" height="136" rx="3" fill="#087f8c"/>
+<text x="60" y="128" font-size="26" font-weight="700" fill="#172b4d">HOW  ·  What happens now?</text>
+<text x="60" y="160" font-size="24" font-weight="400" fill="#44566c">Request → state → result</text>
+<text x="60" y="188" font-size="24" font-weight="400" fill="#44566c">Trace the actual code path</text>
+<text x="60" y="216" font-size="24" font-weight="400" fill="#44566c">Cite files; distinguish a live test</text>
+<text x="60" y="244" font-size="24" font-weight="400" fill="#44566c">from a path read in source</text>
+<rect x="36" y="280" width="568" height="168" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="296" width="6" height="136" rx="3" fill="#087f8c"/>
+<text x="60" y="318" font-size="26" font-weight="700" fill="#172b4d">WHY  ·  Why this design?</text>
+<text x="60" y="350" font-size="24" font-weight="400" fill="#44566c">History + decisions + measurements</text>
+<text x="60" y="378" font-size="24" font-weight="400" fill="#44566c">Separate recorded intent from inference</text>
+<text x="60" y="406" font-size="24" font-weight="400" fill="#44566c">A missing search result is a gap</text>
+<text x="60" y="434" font-size="24" font-weight="400" fill="#44566c">in the searched record</text>
+<rect x="36" y="470" width="568" height="168" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="486" width="6" height="136" rx="3" fill="#087f8c"/>
+<text x="60" y="508" font-size="26" font-weight="700" fill="#172b4d">RECALL  ·  Where were we?</text>
+<text x="60" y="540" font-size="24" font-weight="400" fill="#44566c">Use authorized history or a handoff</text>
+<text x="60" y="568" font-size="24" font-weight="400" fill="#44566c">Reconcile it with the current revision</text>
+<text x="60" y="596" font-size="24" font-weight="400" fill="#44566c">Recheck inherited claims</text>
+<text x="60" y="624" font-size="24" font-weight="400" fill="#44566c">Keep unfinished work visible</text>
+<rect x="36" y="660" width="568" height="168" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="676" width="6" height="136" rx="3" fill="#087f8c"/>
+<text x="60" y="698" font-size="26" font-weight="700" fill="#172b4d">TEACH  ·  What should I understand?</text>
+<text x="60" y="730" font-size="24" font-weight="400" fill="#44566c">Start with one concrete example</text>
+<text x="60" y="758" font-size="24" font-weight="400" fill="#44566c">Add retries, races, and failure paths</text>
+<text x="60" y="786" font-size="24" font-weight="400" fill="#44566c">Connect mechanics with reasons</text>
+<text x="60" y="814" font-size="24" font-weight="400" fill="#44566c">Challenge it with a counterexample</text>
+<text x="40" y="884" font-size="22" font-weight="400" fill="#44566c">Evidence to carry forward:</text>
+<text x="40" y="915" font-size="22" font-weight="400" fill="#44566c">answer · source · uncertainty · next check</text>
+</g>
+</svg>

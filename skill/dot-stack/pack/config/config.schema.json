@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "dot-stack project preferences",
+  "description": "Instructional preferences, not host permissions, model entitlements, or a running scheduler.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "max_concurrency": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "role_models": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z][a-z0-9-]*$" },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "artifact_directory": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Project-relative forward-slash path. Runtime validator additionally rejects traversal, absolute paths, control characters and drive prefixes. Resolve and verify the real target before writing."
+    }
+  }
+}

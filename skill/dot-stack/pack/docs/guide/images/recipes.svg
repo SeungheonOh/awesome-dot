@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1040" width="640" height="1040" role="img" aria-labelledby="title desc">
+<title id="title">A prompt recipe you can check</title>
+<desc id="desc">Compose a useful prompt with a goal, constraints, evidence and a stop condition. The example fixes a retry duplicate using synthetic input and leaves publication for separate authorization.</desc>
+<rect width="640" height="1040" rx="24" fill="#f8fafc"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M 0 0 L 9 5 L 0 10 z" fill="#087f8c"/></marker></defs>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="36" y="55" font-size="31" font-weight="700" fill="#172b4d">A prompt recipe you can check</text>
+<rect x="36" y="89" width="568" height="120" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="105" width="6" height="88" rx="3" fill="#087f8c"/>
+<text x="60" y="127" font-size="26" font-weight="700" fill="#172b4d">GOAL</text>
+<text x="60" y="161" font-size="24" font-weight="400" fill="#44566c">Fix the duplicate record after retry.</text>
+<text x="60" y="191" font-size="24" font-weight="400" fill="#44566c">Name the observable problem.</text>
+<path d="M320 215 V244" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="256" width="568" height="120" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="272" width="6" height="88" rx="3" fill="#087f8c"/>
+<text x="60" y="294" font-size="26" font-weight="700" fill="#172b4d">CONSTRAINTS</text>
+<text x="60" y="328" font-size="24" font-weight="400" fill="#44566c">Use the synthetic fixture.</text>
+<text x="60" y="358" font-size="24" font-weight="400" fill="#44566c">Preserve existing text output.</text>
+<path d="M320 382 V411" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="423" width="568" height="153" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="439" width="6" height="121" rx="3" fill="#087f8c"/>
+<text x="60" y="461" font-size="26" font-weight="700" fill="#172b4d">EVIDENCE</text>
+<text x="60" y="495" font-size="24" font-weight="400" fill="#44566c">Reproduce before editing.</text>
+<text x="60" y="525" font-size="24" font-weight="400" fill="#44566c">After the fix, retry the same input.</text>
+<text x="60" y="555" font-size="24" font-weight="400" fill="#44566c">Read back exactly one stored record.</text>
+<path d="M320 582 V611" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="623" width="568" height="120" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="639" width="6" height="88" rx="3" fill="#087f8c"/>
+<text x="60" y="661" font-size="26" font-weight="700" fill="#172b4d">STOP CONDITION</text>
+<text x="60" y="695" font-size="24" font-weight="400" fill="#44566c">Stop when those checks pass.</text>
+<text x="60" y="725" font-size="24" font-weight="400" fill="#44566c">Do not push, merge, or deploy.</text>
+<path d="M320 749 V778" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="790" width="568" height="153" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="806" width="6" height="121" rx="3" fill="#087f8c"/>
+<text x="60" y="828" font-size="26" font-weight="700" fill="#172b4d">EXPECTED REPORT</text>
+<text x="60" y="862" font-size="24" font-weight="400" fill="#44566c">What changed and why</text>
+<text x="60" y="892" font-size="24" font-weight="400" fill="#44566c">Candidate, commands, observed results</text>
+<text x="60" y="922" font-size="24" font-weight="400" fill="#44566c">Gaps and the next decision</text>
+<text x="40" y="996" font-size="22" font-weight="400" fill="#44566c">Name a skill only when it helps the route.</text>
+</g>
+</svg>

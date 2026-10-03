@@ -1,0 +1,26 @@
+# Shipping
+
+Use only for an explicit request to land a specified PR or stack. Read the [execution contract](../references/execution-contract.md). Readiness, review proof, and authority are separate gates.
+
+## Inputs
+
+Verified forge/repository, exact PR set and bottom-to-top dependencies, permitted landing method, branch owner, operator-held items, allowed topology changes, and completion predicate. Confirm any required external-action approval before executing it. An instruction to review or get green does not authorize shipping, and a local countersign cannot bypass branch protection.
+
+## Steps
+
+1. Read current remote state and freeze the intended set. Inspect base/head, changes, required checks, reviews, unresolved blockers, and whether anything already merged or closed. Reconcile existing active shipping ownership. Do not act from a stale PR body or local branch alone.
+2. Obtain an independent per-PR verdict against its base and head. A reviewer who did not author the patch examines the actual diff and exercises the risk-appropriate behavior. Record criteria, result, reviewer/context, revisions, artifacts, and limitations. Separate blocked/failed checks from nonblocking notes. CI is supporting evidence, not the entire verdict. If independent execution is unavailable, report the unmet gate; self-review cannot be relabeled independent.
+3. Compute the contiguous verified run from the lowest unmerged PR. Stop the landing ceiling at the first absent, failed, stale, or blocked verdict or operator-held item. An independently verified upper PR cannot leap an unverified dependency. Independent PRs may have separate chains.
+4. Revalidate each receipt on the current candidate. Compare head, base, diff/patch identity, dependencies, environment, and built artifacts. Unchanged patch identity permits only an evidence-specific reuse decision, not a blanket pass after a rebase. Rerun integration-sensitive checks at the current head. If outputs differ, investigate against reproducible builds at the recorded revision before calling it noise. Unbuilt UI or dev-server proof needs fresh execution when its context changes.
+5. Prepare only the current bottom PR. Any rebase, branch update, or base retarget must be within the user's authorization and performed by the designated topology owner. Preserve remote concurrency checks and never overwrite another owner's changes. Refresh checks and evidence after mutation. Do not pre-arm or retarget descendants.
+6. Bind the mutation atomically to the reviewed head with the forge's expected-head guard or equivalent conditional API. Re-read required base/topology context immediately before the request. Where acceptance depends on the current target base, require a protected up-to-date check, merge queue, or equivalent atomic integration gate against that base; a prior read alone cannot close the race. If the forge cannot prevent a different head from landing, candidate-bound landing is an unmet gate; do not treat a read-then-merge sequence as safe. Land this one PR using the approved forge action and method. If merge-when-ready was requested and permitted, arm only this PR when the forge can preserve the reviewed-candidate constraint through the delayed merge, and verify the remote acknowledgement. Do not arm a flow that automatically carries the verdict or approval to a later pushed head. Head/base drift invalidates the affected gate: hold or cancel the pending action within authority, refresh evidence, and obtain a new candidate-bound decision before rearming. Queued, armed, ready, and merged are different states. A child targeting an unmerged parent can land into the wrong branch; do not use automatic merge to collapse the chain.
+7. Observe the actual merge result. Refresh the forge's merged state/time and commit identity, then verify the intended target branch contains the landed change using the repository's merge method. A successful request, queue entry, or watcher event is insufficient. A required failure, closed-unmerged PR, or unsafe drift triggers diagnosis and a hold; pending checks or a valid queue wait alone are not failure.
+8. After each confirmed merge, fetch/read current target state, remove that PR from the remaining chain, and inspect the next base/head. A forge may retarget children automatically, but check rather than assume. Recompute the frontier, verdict validity, and ceiling before the next landing.
+
+## Failure and recovery
+
+Persist the observed action and result before retrying an uncertain mutation. If a merge request times out, read remote state before issuing it again. If ownership conflicts or the remote head changed, hold the mutation and reconcile. Do not “repair” a queue by closing or retargeting unrelated PRs. Supported monitoring continues until the authorized ceiling lands, a failure/gate requires action, or the user stops; if the session cannot persist, provide a truthful resume handoff.
+
+## Evidence and completion
+
+Report the verified run/ceiling, verdict sources and current revisions, what was armed with confirmation, what actually merged, final target state, and the next evidence or operator gate. Stop at the authorized ceiling. Deployment, branch deletion, and worktree cleanup are separate tasks.

@@ -1,0 +1,18 @@
+{
+  "name": "dot-stack",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Portable, evidence-driven engineering workflows for ChatGPT and Claude",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs tools/test/*.test.mjs && python3 -m unittest discover -s tests -p \"*_test.py\"",
+    "test:structure": "node --test tests/*.test.mjs",
+    "test:package": "python3 -m unittest discover -s tests -p \"*_test.py\"",
+    "test:types": "node scripts/test-types.mjs"
+  }
+}

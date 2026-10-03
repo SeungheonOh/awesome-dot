@@ -1,0 +1,9 @@
+node_modules/
+.dot-stack/
+dist/
+__pycache__/
+*.pyc
+*.log
+.env
+.env.*
+.DS_Store
