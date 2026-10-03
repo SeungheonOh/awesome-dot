@@ -67,3 +67,22 @@ A 16-bit or interlaced file can instead receive a structural report with preview
 ## Reference and evidence
 
 The PNG application used a Pillow-generated synthetic fixture with an independently recorded raw-pixel hash, a known CRC vector, 140 filter/color roundtrips and worker-level failure tests. Consult the [W3C PNG specification](https://www.w3.org/TR/png-3/) for exact format rules. Codec roundtrips sharing the same underlying library are not independent codec validation.
+
+## Optional branch: make a metadata-minimized copy
+
+Use this branch only when a local derivative is requested or belongs to an authorized product workflow. Inspection alone does not authorize replacing the source or publishing a derivative.
+
+1. State an explicit retention policy before copying. An allowlist of known necessary record types is easier to audit than trying to enumerate every metadata-bearing type. Define the supported subset and refuse unknown critical semantics, malformed framing, checksum failures and features the transformation cannot preserve.
+2. Keep the original bytes unchanged. For a lossless encoded-data policy, copy each retained complete record byte-for-byte, in its original order, rather than decoding and recompressing it. Preserve the signature and end marker. Record which types were removed and their total framed bytes, without copying private metadata values into the report.
+3. Re-inspect the derivative, verify the retained-type policy, check that its size matches the retained spans, and compare retained records exactly. Where a decoder is available, check reconstructed samples against independent evidence. Do not equate unchanged encoded samples with identical color-managed display or print appearance.
+4. Distinguish ancillary from irrelevant. In PNG, transparency keys and animation controls affect interpretation, while color profiles, gamma and physical resolution affect appearance. Either explicitly preserve and validate their semantics or reject those unsupported cases; do not silently flatten an animation or drop transparency while promising fidelity.
+5. Give the derivative a neutral filename, expose the policy and appearance caveats next to its download, and invalidate it when the source changes. Keep generation cancellable and bounded. Download creation is separate from authorization to send the file elsewhere.
+6. Explain residual information: visible image content, identifying dimensions, compressed samples and hidden data inside those samples can remain. Metadata minimization is not redaction, anonymization, malware removal or a general safety certificate.
+
+### Worked example: critical-chunks-only PNG
+
+A supported static 8-bit RGBA PNG contains IHDR, tEXt, gAMA, IDAT and IEND. Under a disclosed critical-chunks-only policy, produce a separate file with the original signature and exact IHDR, IDAT and IEND records. Report tEXt and gAMA as removed and account for each removed payload plus its 12 framing bytes.
+
+The compressed samples and alpha channel remain unchanged, but removing gAMA may affect display interpretation. Text inside the actual picture is still visible, and hidden information inside the retained compressed data has not been inspected. If the file instead contains tRNS or animation controls that the implementation does not support, withhold this derivative rather than implying faithful preservation.
+
+Test byte-for-byte retained-record equality, original immutability, idempotence, removed-byte accounting, invalid-input rejection and download invalidation. An independent raw-pixel hash supports sample reconstruction; it does not prove color-managed visual equivalence.
