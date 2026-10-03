@@ -122,3 +122,22 @@ or repair a copied fixture and rebuild if the defect is in its packaging.]
 Return the actual checked artifact, preserved failure evidence, installed
 readback and portable reproduction steps. State which targets were not tested.
 ```
+
+## Browser-app archives: verify the launch route
+
+For an authorized software-archive check, exercise the links the recipient will actually use, not just the files those links eventually intend to reach.
+
+1. Identify the root launch command and whether each app is static or needs its own local service. Check documented ports, relative URLs, worker/module resources and runtime requirements from the extracted archive.
+2. Start only the reviewed local code within the existing execution authority. If using a small static server, keep its serving scope explicit; an archive does not need a directory listing or arbitrary access to the surrounding checkout.
+3. Follow each declared entry route through actual HTTP. A successful request for `/tool/dist/index.html` does not prove that the launcher's `/tool/dist/` URL works. Test required directory aliases and content types, and check that unsupported routes fail without exposing unrelated files.
+4. For a server-backed entry, verify that the selected command starts the intended service and that the UI or bounded public workflow is served at its documented loopback address. Static HTML inspection cannot prove its backend started.
+5. Repeat from the extracted consumer directory with representative path spelling, including spaces when relevant. In Node ESM code, convert file URLs through the supported path conversion rather than treating a URL pathname containing percent escapes as a filesystem path.
+6. Keep evidence labels precise. Copying known installed dependencies into a disposable consumer environment tests that dependency set; it is not a fresh registry installation. Simulated DOM checks and direct HTTP checks do not establish real-browser layout or a user's completed download.
+
+### Worked archive route check
+
+A locally authored app archive included a searchable launcher and a bounded Node starter. The first starter draft mapped explicit `index.html` paths, while source inspection of the launcher showed directory-style links ending in `/dist/`. The mapping was repaired before the final consumer check, adding only explicit aliases for catalogued app entry points rather than enabling directory listing.
+
+The actual HTTP tests then requested every declared static app entry route, checked JavaScript content types, rejected unrelated `README.md`, configuration and traversal-like paths, and exercised Host/Origin and method rejection. A separate command invocation, `node app-validation/start.mjs doi-desk`, started the selected local service and served its UI without triggering an upstream data request.
+
+The full archive was extracted into a fresh Linux directory containing spaces. Its 109 test programs passed under Node 24.19 using an existing offline dependency set. This established the exercised package, route and program-test boundaries; it did not establish macOS/Windows behavior, a clean dependency install or real-browser interaction. The useful repair was the mismatch between the public entry route and the actual serving map, which a check of file existence alone would have missed.
