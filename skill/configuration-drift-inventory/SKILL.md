@@ -35,14 +35,20 @@ Create one snapshot record per environment: environment label, capture time with
 
 ### Produce and verify the inventory
 
-Deliver a snapshot manifest, field-difference ledger, normalization rules and decision queue. Each decision row needs evidence on both sides, classification, relevant exception, owner or owner unknown, and the smallest missing input. Check a reordered object, an order-sensitive list, an absent override and an expired exception with synthetic examples. Ensure normalization does not collapse missing into null or convert an unexplained value into an approved one. Reconcile counts of compared, excluded and unresolved fields, and inspect the report for prohibited values. If parsing is unavailable, provide a bounded manual comparison with completeness limits. Stop before synchronization or remediation; a drift inventory establishes differences, not permission to change environments.
+Keep working provenance that connects each compared field to both sources, its classification, relevant exception, supplied owner or owner unknown, and the smallest missing input. Deliver the comparison in the requested form. A full inventory can use a snapshot manifest, field-difference ledger, normalization rules and decision queue; a compact response should carry the relevant values, classifications and consequential uncertainty directly, without automatically adding separate artifacts.
+
+Verify the requested comparisons against the actual sources and reconcile compared, excluded and unresolved fields. Ensure normalization does not collapse missing into null or convert an unexplained value into an approved one, and inspect the result for prohibited values. When implementing or changing reusable comparison logic, exercise its relevant ordering, inheritance, completeness and exception branches with checked cases; use actual inputs when they already cover the boundary and focused synthetic cases when needed. A bounded manual comparison can be checked directly without introducing code or an unrelated fixture run. If parsing is unavailable, retain explicit completeness limits. Stop before synchronization or remediation; a drift inventory establishes differences, not permission to change environments.
 
 ## Deliverables
+
+For a full inventory, include the following as appropriate to the requested format; they may be sections of one response rather than separate files:
 
 - A dated snapshot and baseline provenance record
 - A field-level difference inventory with classification and normalization rules
 - An effective-value uncertainty list covering inheritance and incomplete exports
 - An owner decision queue with stale exceptions and likely behavioral consequences
+
+For a brief answer, retain the source support and material limitations needed to understand the requested field results. Keep the underlying reconciliation even when the detailed working records are not delivered.
 
 ## Verification
 
