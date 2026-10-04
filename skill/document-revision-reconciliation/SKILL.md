@@ -104,4 +104,4 @@ Say what was merged and what still blocks finalization. Do not call the candidat
 
 ## Worked example and local checks
 
-Read [example.md](example.md) for a fictional archive guide with compatible accepted edits and an unresolved cover-color conflict. Run `python3 check_example.py` from this folder to exercise the small synthetic model. Its saved readback and refusal checks demonstrate the invariants; it is not a parser or production merger for real document formats. The checked output is recorded in [example-results.json](example-results.json).
+The optional [worked example](example.md) shows a fictional archive guide with compatible accepted edits and an unresolved cover-color conflict. Read it or run `python3 check_example.py` from this folder only when examining that example is useful to the current request. Its [recorded output](example-results.json) illustrates saved-readback and refusal invariants in a small synthetic model. These example checks do not verify the user's actual documents or replace their required native-source and saved-candidate checks.
