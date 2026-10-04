@@ -41,7 +41,7 @@ Represent a year-only date as a year, and a year/month date without an invented 
 
 ### 4. Handle text and identifiers predictably
 
-Use the target format's encoder, preserving Unicode and punctuation. If the processor recognizes inline formatting tags but the source was treated as literal text, escape the text according to that processor's documented rules; do not unexpectedly turn provider text into formatting instructions.
+Use the target format's encoder, preserving Unicode and punctuation. Decide explicitly whether supported inline formatting should be interpreted or kept literal. Do not apply HTML-entity escaping merely because a JSON string contains ampersands or angle brackets: some citation processors print those entities verbatim. Test the intended processor's documented behavior. If exact literal rendering is unavailable, disclose that limitation rather than inventing an escaping convention.
 
 Use stable unique record IDs and reconstruct trusted resolver links from validated identifiers rather than copying arbitrary imported URLs. Deduplicate only under the agreed identifier normalization policy. Do not merge distinct works based on a matching title alone.
 
@@ -78,3 +78,11 @@ Deliver the reference file, a mapping/omission summary and the checks actually p
 ## Reference
 
 [CSL-JSON field and markup documentation](https://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html). Consult the intended processor's current schema and import documentation before claiming compatibility.
+
+## Interoperability check: source strings and richer snapshots
+
+A synthetic source title is "A <i>literal</i> & B" and an institutional author is "A & B Research". In citeproc-js 2.4.63 text output, supplying the original title string renders "A literal & B": the supported italic tag affects formatting and its markup disappears. Pre-escaping it as "A &lt;i&gt;literal&lt;/i&gt; &amp; B" instead prints entity syntax in that text output. This observed result is specific to the tested processor and minimal style, not a promise about every manager.
+
+Keep source strings in the review and document the export's formatting policy. Test both personal given/family names and institutional literal names through the actual consumer. Preserve source name components when collecting metadata; when upgrading saved-review formats, accept older display-only names as literal fallback and flag their loss of structure. Reconcile optional structured names with their display representation instead of silently accepting contradictory fields.
+
+The implementation check used a minimal custom CSL style with synthetic records in Node. It did not import into a reference-manager account, exercise all citation styles or establish cross-processor equivalence.
