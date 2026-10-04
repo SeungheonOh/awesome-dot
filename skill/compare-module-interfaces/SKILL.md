@@ -67,6 +67,14 @@ Both declare start index 1. Report the index as unchanged, but do not claim the 
 
 A third build can keep exactly the same import/export tuples while changing a function's parameter types. A names-and-kinds-only report correctly says no change in the examined fields and leaves ABI compatibility unresolved.
 
+### Optional: distinguish byte changes from interface changes
+
+When the question includes what changed inside an artifact, hash each complete encoded section after bounding its framing. State whether the hash covers payload only or the ID and encoded length as well. Alternate legal length encodings can change the latter hash without changing payload semantics.
+
+Compare fingerprints as a multiset so duplicate custom sections retain their counts. Check the ordered fingerprint sequence separately: equal multisets with different ordering are a reorder, not identical binaries. Do not pair same-named sections as if their names were unique identities. A changed section can be represented as a removal plus an addition. This byte-level comparison can remain available after runtime rejection, provided independent framing succeeded; it does not make rejected interfaces available.
+
+Worked example: before has custom sections A, B, B; after has B, A. The report records one removed B and a changed sequence. If after instead has B, A, B, the multiset is unchanged but the order differs. Neither outcome establishes behavioral equivalence. Verify complete section hashes against an independent digest implementation and include duplicate, reorder, padded-length and invalid-code fixtures.
+
 ## Verification and stopping conditions
 
 Test known module fixtures, malformed lengths, integer boundaries, padded encodings, invalid UTF-8, duplicate imports, unknown runtime features and changed bytes with unchanged interfaces. Replace instantiation APIs with throwing stubs during inspection tests to catch accidental execution paths. Also test worker deadlines, replacement-file races, cancellation and stale export controls.
