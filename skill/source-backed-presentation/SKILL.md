@@ -1,11 +1,11 @@
 ---
 name: source-backed-presentation
-description: "Turn an approved source packet into an audience-specific editable presentation with complete slide content, traceable evidence and honest slide-by-slide verification."
+description: "Create an editable source-backed presentation or reusable slide template, with traceable content, native reuse requirements and honest saved-file verification."
 ---
 
 # Make a Source-Backed Presentation
 
-Use this when someone needs an actual presentation from approved notes, rather than advice about slide topics. Deliver the editable deck and any requested preview or supporting material. Keep sources traceable through suitable slide references, notes or a source map without requiring every form for every deck. A written script is useful supporting material but does not replace the deck.
+Use this when someone needs an actual presentation from approved notes, or a reusable slide template from approved design and content requirements. Deliver the editable deck or clean reusable template and any requested examples, preview or supporting material. Keep factual content traceable through suitable slide references, notes or a source map without requiring every form for every deck. A written script is useful supporting material but does not replace the requested native file.
 
 This workflow handles the editorial and evidence decisions that connect a packet of notes to a finished presentation. Use the available presentation authoring and inspection capability for the file itself. Do not install software or use a new service merely because an example mentions a format.
 
@@ -18,6 +18,8 @@ Record source identity, version/date and stable section, page, row or record loc
 If the audience or requested decision is missing and materially changes the presentation, ask one focused question. Otherwise state a reasonable design assumption and proceed. Routine authorized creation and saving do not need another approval. A question about an existing deck authorizes inspection, not revision.
 
 ## Build the argument and evidence together
+
+Apply these content steps to finished slides and supplied examples. For a clean template, establish each layout's purpose and editable content roles without inventing claims or example facts.
 
 1. State the specific takeaway the evidence can support. Identify any recommendation separately from observed findings. Do not turn a proposal into an accepted commitment
 2. Assign each slide a purpose and write its complete title and visible copy. Add speaker notes when requested or useful for the intended presentation mode; a self-contained quick reference need not become a talk script. Use a supported factual title for a finding and a direct subject title for background or a proposal. Include the actual decision early when the audience can make it
@@ -45,6 +47,16 @@ Keep caveats that alter interpretation on the slide. When notes are used, put de
 
 Create the native file with the requested or useful supporting material, export it, and retain the authored source specification. If authoring is unavailable, return the complete slide script and the precise file-creation blocker. Label that result a script, not a completed deck. If only export or rendering is blocked, preserve the actual deck and say exactly what remains unchecked.
 
+## Build a reusable template when requested
+
+Establish the intended reuse: duplicating an editable starter slide, inserting a named layout, filling native placeholders, or changing shared design definitions. Use the native masters, layouts, placeholder relationships and theme bindings needed for that contract. Apply the user's specified reuse and design requirements; a simple starter deck does not automatically need custom masters or a catalogue of layouts.
+
+Keep instructional guidance and sample answers distinct. Preserve a clean template, put supplied sample content in separate requested examples, and retain fixed guidance that belongs in the template. Check that every intended replacement remains editable and that longer representative content fits without silently dropping wording.
+
+Reopen the exact saved template and make the smallest filled copy needed to exercise the promised reuse, using requested sample content when available. Confirm the copy actually uses its saved native definitions. Keep a verification copy private unless requested as a deliverable. When shared theme or layout changes are part of the reuse contract, change one relevant definition in a disposable copy and check both its intended effects and protected local content. Record which reuse paths were actually exercised.
+
+Inspect native relationships after any application save or conversion as well as the rendered slides. A consumer can preserve visible text while changing placeholder identities or losing layout definitions. Explain the consequence for later filling or insertion; unchanged appearance alone does not establish that those operations still work. Keep the clean original intact, and distinguish package inspection and programmatic reuse from the target application's menu or keyboard behavior.
+
 ## Verify the exact export
 
 Check content and file behavior separately:
@@ -69,7 +81,7 @@ Stop when the authorized artifact exists, the evidence is reconciled, the releva
 
 ## Worked example
 
-Download the [editable five-slide deck](intake-pilot-example.pptx) and view its [slide preview](preview.png). The preview shows the exact exported file documented below.
+Download the [editable five-slide deck](intake-pilot-example.pptx) and view its [slide preview](preview.png). The preview shows the original October 1 export. See the [repository URL update](verification.md) for the current package and its verification limits.
 
 The [fictional packet](source-packet.md), [complete slide script](slide-script.md) and [portable content specification](deck-spec.json) contain the full five-slide example. The [verification record](verification.md) distinguishes the file checks actually performed from application behavior that remains untested. The example rejects an unsupported causal claim, an unchanged-quality claim and a labor-saving claim while preserving a useful decision request.
 

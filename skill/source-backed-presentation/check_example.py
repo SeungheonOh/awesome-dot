@@ -48,7 +48,7 @@ def check_content(spec):
     require(hashlib.sha256((HERE / 'source-packet.md').read_bytes()).hexdigest() == spec['source_packet']['sha256'],
             'Source packet snapshot hash changed')
     for key, relative in spec['sources'].items():
-        expected_url = 'https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/' + relative
+        expected_url = 'https://github.com/SeungheonOh/dot-skills/blob/main/skill/source-backed-presentation/' + relative
         require(spec['artifact_source_urls'][key] == expected_url, 'Unexpected public source URL')
     require(spec['slide_count'] == len(spec['slides']) == 5, 'Expected exactly five slides')
     require([s['number'] for s in spec['slides']] == list(range(1, 6)), 'Slide order changed')

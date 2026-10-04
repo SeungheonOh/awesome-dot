@@ -177,12 +177,12 @@
     }
   ],
   "artifact_source_urls": {
-    "S0": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s0-brief",
-    "S1": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s1-measurement-notes",
-    "S2": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s2-interpretation-limits",
-    "S3": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s3-extension-proposal",
-    "S4": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s4-proposed-review-rules",
-    "S5": "https://github.com/SeungheonOh/awesome-dot/blob/main/skill/source-backed-presentation/source-packet.md#s5-rejected-draft-claims"
+    "S0": "https://github.com/SeungheonOh/dot-skills/blob/main/skill/source-backed-presentation/source-packet.md#s0-brief",
+    "S1": "https://github.com/SeungheonOh/dot-skills/blob/main/skill/source-backed-presentation/source-packet.md#s1-measurement-notes",
+    "S2": "https://github.com/SeungheonOh/dot-skills/blob/main/skill/source-backed-presentation/source-packet.md#s2-interpretation-limits",
+    "S3": "https://github.com/SeungheonOh/dot-skills/blob/main/skill/source-backed-presentation/source-packet.md#s3-extension-proposal",
+    "S4": "https://github.com/SeungheonOh/dot-skills/blob/main/skill/source-backed-presentation/source-packet.md#s4-proposed-review-rules",
+    "S5": "https://github.com/SeungheonOh/dot-skills/blob/main/skill/source-backed-presentation/source-packet.md#s5-rejected-draft-claims"
   },
   "source_packet": {
     "version": 1,

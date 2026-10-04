@@ -1,5 +1,17 @@
 # Example verification
 
+## Repository URL update — October 4, 2026
+
+The current [editable deck](intake-pilot-example.pptx) uses the renamed repository's public source links. Its current identity is 30,945 bytes, SHA-256 `6cca828d4dc6380eb8d40138510170dc5d88e5a5d8f0cfd24b37e3942b98de11`.
+
+This maintenance change updates ten hyperlink targets and the ten matching source locators in speaker notes, plus the companion specification and checker's expected URL. All five slide XML parts, the chart, embedded workbook, layouts, themes, media and core metadata remain byte-for-byte unchanged. The source-packet version, date and hash are unchanged.
+
+ZIP integrity, the exact changed-member list, source-link agreement with the specification, and preservation of all other package members were checked without running repository scripts. All six source anchors were checked against the canonical public repository's source packet. The renamed package was not rendered, opened in PowerPoint or Google Slides, or checked by executing the bundled checker. The existing preview and rendered-review observations below belong to the original October 1 package; they are retained as historical evidence and are not a new render of this URL-only revision.
+
+## Original October 1 verification record
+
+The remaining record describes the original package and preserves its identity and observed results.
+
 Checked on October 1, 2026. All observations, roles and decisions in this example are fictional. The deck is an authored demonstration, not a proposal for a real organization.
 
 ## Artifact identity
