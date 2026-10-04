@@ -1,6 +1,6 @@
 <picture>
   <source media="(max-width: 600px)" srcset=".github/assets/landing-hero-mobile-v3.svg">
-  <img src=".github/assets/landing-hero-v3.svg" width="1280" alt="awesome-dot: community skills for dot.">
+  <img src=".github/assets/landing-hero-v3.svg" width="1280" alt="dot-skills: community skills for dot.">
 </picture>
 
 <p align="center">

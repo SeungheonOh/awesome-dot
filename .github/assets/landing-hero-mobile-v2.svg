@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="780" viewBox="0 0 640 780" role="img" aria-labelledby="title desc">
-<title id="title">awesome-dot: community skills for dot</title>
+<title id="title">dot-skills: community skills for dot</title>
 <desc id="desc">Reusable workflows for presentations, forms, code, and creative projects. Pick a task, follow the workflow, and check the result. The orbital mark is original decorative artwork.</desc>
 <g font-family="Arial, Helvetica, sans-serif"><rect width="640" height="780" rx="18" fill="#17221D"/>
 <circle cx="40" cy="46" r="8" fill="#CEE96D"/>
 <path d="M32 80H608" stroke="#485449"/>
-<text x="61" y="53" font-size="20" fill="#DDE3D7" font-weight="700" letter-spacing="1.8">COMMUNITY SKILLS FOR DOT</text><text x="29" y="168" font-size="83" fill="#F4F2E9" font-weight="700" letter-spacing="-4">awesome-dot</text><text x="32" y="218" font-size="29" fill="#CEE96D" font-weight="400" >Reusable workflows.</text><text x="32" y="256" font-size="29" fill="#CEE96D" font-weight="400" >Inspectable work.</text><g transform="translate(328 430) scale(0.72)" aria-hidden="true">
+<text x="61" y="53" font-size="20" fill="#DDE3D7" font-weight="700" letter-spacing="1.8">COMMUNITY SKILLS FOR DOT</text><text x="29" y="168" font-size="83" fill="#F4F2E9" font-weight="700" letter-spacing="-4">dot-skills</text><text x="32" y="218" font-size="29" fill="#CEE96D" font-weight="400" >Reusable workflows.</text><text x="32" y="256" font-size="29" fill="#CEE96D" font-weight="400" >Inspectable work.</text><g transform="translate(328 430) scale(0.72)" aria-hidden="true">
       <ellipse rx="214" ry="86" transform="rotate(-37)" fill="none" stroke="#65716A" stroke-width="1.5"/>
       <ellipse rx="192" ry="192" fill="none" stroke="#35433A" stroke-width="1.5" stroke-dasharray="3 12"/>
       <circle r="138" fill="#CEE96D"/>
