@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1100" width="640" height="1100" role="img" aria-labelledby="title desc">
+<title id="title">Proof is not permission</title>
+<desc id="desc">A claim leads to a behavioral check tied to an exact candidate. Readiness and authorization are independent requirements before external mutation; remote read-back establishes the actual outcome.</desc>
+<rect width="640" height="1100" rx="24" fill="#f8fafc"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M 0 0 L 9 5 L 0 10 z" fill="#087f8c"/></marker></defs>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="36" y="55" font-size="31" font-weight="700" fill="#172b4d">Proof is not permission</text>
+<rect x="36" y="88" width="568" height="120" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="104" width="6" height="88" rx="3" fill="#087f8c"/>
+<text x="60" y="126" font-size="26" font-weight="700" fill="#172b4d">1  Define the claim</text>
+<text x="60" y="160" font-size="24" font-weight="400" fill="#44566c">Retry leaves exactly one stored record</text>
+<text x="60" y="190" font-size="24" font-weight="400" fill="#44566c">Protected behavior stays unchanged</text>
+<path d="M320 214 V243" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="255" width="568" height="154" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="271" width="6" height="122" rx="3" fill="#087f8c"/>
+<text x="60" y="293" font-size="26" font-weight="700" fill="#172b4d">2  Exercise the real artifact</text>
+<text x="60" y="327" font-size="24" font-weight="400" fill="#44566c">Run the command or user flow</text>
+<text x="60" y="357" font-size="24" font-weight="400" fill="#44566c">Inspect the result, not only the build</text>
+<text x="60" y="387" font-size="24" font-weight="400" fill="#44566c">Capture expected and observed values</text>
+<path d="M320 415 V444" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="456" width="568" height="154" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="472" width="6" height="122" rx="3" fill="#087f8c"/>
+<text x="60" y="494" font-size="26" font-weight="700" fill="#172b4d">3  Bind the evidence</text>
+<text x="60" y="528" font-size="24" font-weight="400" fill="#44566c">Repository + candidate + environment</text>
+<text x="60" y="558" font-size="24" font-weight="400" fill="#44566c">Command or interaction + result</text>
+<text x="60" y="588" font-size="24" font-weight="400" fill="#44566c">A later edit can invalidate the proof</text>
+<path d="M320 616 V645" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="657" width="568" height="154" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="673" width="6" height="122" rx="3" fill="#087f8c"/>
+<text x="60" y="695" font-size="26" font-weight="700" fill="#172b4d">4  Check both gates</text>
+<text x="60" y="729" font-size="24" font-weight="400" fill="#44566c">READY: required proof and review pass</text>
+<text x="60" y="759" font-size="24" font-weight="400" fill="#44566c">AUTHORIZED: this action, this target</text>
+<text x="60" y="789" font-size="24" font-weight="400" fill="#44566c">Missing either? Pause that action.</text>
+<path d="M320 817 V846" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="858" width="568" height="120" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="874" width="6" height="88" rx="3" fill="#087f8c"/>
+<text x="60" y="896" font-size="26" font-weight="700" fill="#172b4d">5  Confirm the actual outcome</text>
+<text x="60" y="930" font-size="24" font-weight="400" fill="#44566c">Read back the remote state</text>
+<text x="60" y="960" font-size="24" font-weight="400" fill="#44566c">Queued ≠ merged. Merged ≠ deployed.</text>
+<text x="40" y="1026" font-size="22" font-weight="400" fill="#44566c">Never fill an evidence gap with confidence.</text>
+</g>
+</svg>

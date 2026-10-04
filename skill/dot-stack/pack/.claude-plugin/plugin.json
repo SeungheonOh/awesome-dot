@@ -1,0 +1,6 @@
+{
+  "name": "dot-stack",
+  "version": "0.4.0",
+  "description": "Portable engineering workflows with scoped delegation, candidate-bound evidence, and honest execution limits.",
+  "license": "MIT"
+}

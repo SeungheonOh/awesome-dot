@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1000" width="640" height="1000" role="img" aria-labelledby="title desc">
+<title id="title">Route the work, keep the proof</title>
+<desc id="desc">A goal, constraints and finish condition are checked against available capabilities and authority. Choose an investigation, bug fix or feature route. End with evidence and explicit gaps.</desc>
+<rect width="640" height="1000" rx="24" fill="#f8fafc"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M 0 0 L 9 5 L 0 10 z" fill="#087f8c"/></marker></defs>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="36" y="55" font-size="31" font-weight="700" fill="#172b4d">Route the work, keep the proof</text>
+<rect x="36" y="86" width="568" height="148" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="102" width="6" height="116" rx="3" fill="#087f8c"/>
+<text x="60" y="124" font-size="26" font-weight="700" fill="#172b4d">1  State the brief</text>
+<text x="60" y="158" font-size="24" font-weight="400" fill="#44566c">Goal + protected behavior</text>
+<text x="60" y="188" font-size="24" font-weight="400" fill="#44566c">Checkable finish condition</text>
+<text x="60" y="218" font-size="24" font-weight="400" fill="#44566c">Allowed scope and stop conditions</text>
+<path d="M320 240 V269" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="281" width="568" height="148" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="297" width="6" height="116" rx="3" fill="#087f8c"/>
+<text x="60" y="319" font-size="26" font-weight="700" fill="#172b4d">2  Check the real environment</text>
+<text x="60" y="353" font-size="24" font-weight="400" fill="#44566c">Can read? Can edit? Can execute?</text>
+<text x="60" y="383" font-size="24" font-weight="400" fill="#44566c">Independent workers available?</text>
+<text x="60" y="413" font-size="24" font-weight="400" fill="#44566c">Authority for the next action?</text>
+<path d="M320 435 V464" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="476" width="568" height="235" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="492" width="6" height="203" rx="3" fill="#087f8c"/>
+<text x="60" y="514" font-size="26" font-weight="700" fill="#172b4d">3  Choose the smallest route</text>
+<text x="60" y="548" font-size="24" font-weight="400" fill="#44566c">Question → trace and explain</text>
+<text x="60" y="578" font-size="24" font-weight="400" fill="#44566c">Defect → reproduce, then fix</text>
+<text x="60" y="608" font-size="24" font-weight="400" fill="#44566c">New behavior → design, then build</text>
+<text x="60" y="638" font-size="24" font-weight="400" fill="#44566c">Other need → choose a playbook</text>
+<text x="60" y="668" font-size="24" font-weight="400" fill="#44566c">Missing tool → name the limitation</text>
+<path d="M320 717 V746" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="758" width="568" height="150" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="774" width="6" height="118" rx="3" fill="#087f8c"/>
+<text x="60" y="796" font-size="26" font-weight="700" fill="#172b4d">4  Report the evidence</text>
+<text x="60" y="830" font-size="24" font-weight="400" fill="#44566c">Verified / Failed / Unverified / Blocked</text>
+<text x="60" y="860" font-size="24" font-weight="400" fill="#44566c">Name the candidate and check</text>
+<text x="60" y="890" font-size="24" font-weight="400" fill="#44566c">A skipped step needs a reason</text>
+<text x="40" y="952" font-size="22" font-weight="400" fill="#44566c">A workflow supplies a method, not new tools.</text>
+</g>
+</svg>

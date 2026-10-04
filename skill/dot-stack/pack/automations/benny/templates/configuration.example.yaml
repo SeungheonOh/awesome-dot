@@ -1,0 +1,92 @@
+# Inactive worksheet. Placeholder values are not valid live configuration.
+# Flags describe requested behavior; only actual user authorization grants it.
+schema_version: 1
+runner:
+  enabled: false
+  triage_name: benny-triage
+  reproduce_name: benny-reproduce
+  implementation: "REQUIRED_SUPPORTED_HOST_RUNNER"
+  existing_triage_id: ""
+  existing_reproduce_id: ""
+  deployed_pack_revision: "REQUIRED_IMMUTABLE_REVISION"
+  state_directory: .dot-stack/state/benny
+  deduplication: "REQUIRED_ATOMIC_RUN_CLAIM_OR_SINGLE_COORDINATOR"
+  cancel_method: "REQUIRED_ACTUAL_STOP_METHOD"
+execution:
+  mode: report-only
+  authorization_record: ""
+  authorized_actions: []
+  # Enable only individually approved categories, such as source-thread-reply,
+  # tracker-create, tracker-recurrence-update, tracker-close-own-failed-handoff,
+  # operations-thread-post, local-code-edit, branch-push, draft-pr-create.
+source:
+  service: "REQUIRED_SERVICE"
+  channel_id: "REQUIRED_SOURCE_CHANNEL"
+  triage_identity_id: "REQUIRED_VERIFIED_IDENTITY"
+  read_thread_action: "REQUIRED_ACTUAL_READ_ACTION"
+  reply_action: "REQUIRED_ACTUAL_THREAD_REPLY_ACTION"
+  attachment_read_action: "REQUIRED_IF_MEDIA"
+  allow_root_posts: false
+  allow_worker_external_writes: false
+operations:
+  channel_id: ""
+  post_action: ""
+  edit_action: ""
+repository:
+  url: "REQUIRED_REPOSITORY_URL"
+  default_branch: "REQUIRED_BRANCH"
+  allowed_paths: []
+  draft_pr_action: ""
+  draft_only: true
+tracker:
+  adapter: "REQUIRED_ACTUAL_ADAPTER"
+  team: "REQUIRED_TARGET_TEAM"
+  project: "REQUIRED_TARGET_PROJECT"
+  intake_status: "REQUIRED_EXISTING_STATUS"
+  labels:
+    bug: "REQUIRED_EXISTING_LABEL"
+    performance: "REQUIRED_EXISTING_LABEL"
+  compensation_action: ""
+  compensation_policy: close-only-run-owned-ticket-after-confirmed-failed-handoff
+routing:
+  map_path: .dot-stack/benny/routing.md
+  owner_pings_default: false
+  allow_feature_owner_ping: false
+  allow_confirmed_regression_author_ping: false
+control:
+  adapter: "REQUIRED_ACTUAL_CONTROL_ADAPTER"
+  feature_map_path: .dot-stack/benny/feature-map.md
+  environment: "REQUIRED_SAFE_TEST_ENVIRONMENT"
+  artifact_directory: "REQUIRED_RUN_OWNED_TEMP_DIRECTORY"
+  artifact_retention_hours: 24
+  required_evidence: [screenshot, recording, read-only-cross-check]
+  independent_media_review_required: true
+verdict_markers:
+  bug: "[benny:bug]"
+  performance: "[benny:performance]"
+  other: "[benny:other]"
+  tracker_attribute: tracker
+status_labels:
+  reproducing: Reproducing
+  reproduced: Reproduced
+  blocked: Blocked
+  could_not_reproduce: Could not reproduce
+  fixing: Attempting bounded fix
+  fix_failed: Fix not published
+  pull_request_opened: Draft pull request verified
+budgets:
+  # Example limits, not a saved schedule. Respect actual host polling limits.
+  verdict_wait_minutes: 30
+  triage_total_minutes: 30
+  triage_follow_up_minutes: 10
+  repro_minutes: 60
+  rejection_window_minutes: 10
+  fix_minutes: 90
+  operations_follow_up_minutes: 30
+  run_total_minutes: 240
+  maximum_correction_attempts: 1
+models:
+  triage: inherit
+  reproduce: inherit
+  code: inherit
+  media_review: inherit

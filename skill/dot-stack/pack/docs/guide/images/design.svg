@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1040" width="640" height="1040" role="img" aria-labelledby="title desc">
+<title id="title">Compare ideas with a fixed brief</title>
+<desc id="desc">A common acceptance brief leads to distinct candidate designs. A rubric compares them, then the integrated choice is verified. Arena repeats the same brief; swarm partitions different slices.</desc>
+<rect width="640" height="1040" rx="24" fill="#f8fafc"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M 0 0 L 9 5 L 0 10 z" fill="#087f8c"/></marker></defs>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="36" y="55" font-size="31" font-weight="700" fill="#172b4d">Compare ideas with a fixed brief</text>
+<rect x="36" y="87" width="568" height="120" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="103" width="6" height="88" rx="3" fill="#087f8c"/>
+<text x="60" y="125" font-size="26" font-weight="700" fill="#172b4d">1  Shared brief</text>
+<text x="60" y="159" font-size="24" font-weight="400" fill="#44566c">Caller behavior, constraints, acceptance</text>
+<text x="60" y="189" font-size="24" font-weight="400" fill="#44566c">Example: retry without duplicate rows</text>
+<path d="M320 213 V242" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="254" width="568" height="153" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="270" width="6" height="121" rx="3" fill="#087f8c"/>
+<text x="60" y="292" font-size="26" font-weight="700" fill="#172b4d">2  Distinct approaches</text>
+<text x="60" y="326" font-size="24" font-weight="400" fill="#44566c">A: transaction per complete file</text>
+<text x="60" y="356" font-size="24" font-weight="400" fill="#44566c">B: bounded batches + durable identity</text>
+<text x="60" y="386" font-size="24" font-weight="400" fill="#44566c">Independent only if real workers ran</text>
+<path d="M320 413 V442" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="454" width="568" height="153" rx="16" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="470" width="6" height="121" rx="3" fill="#087f8c"/>
+<text x="60" y="492" font-size="26" font-weight="700" fill="#172b4d">3  Compare against the rubric</text>
+<text x="60" y="526" font-size="24" font-weight="400" fill="#44566c">Correctness and failure behavior</text>
+<text x="60" y="556" font-size="24" font-weight="400" fill="#44566c">Migration cost and reader effort</text>
+<text x="60" y="586" font-size="24" font-weight="400" fill="#44566c">Concrete evidence for each tradeoff</text>
+<path d="M320 613 V642" fill="none" stroke="#087f8c" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="36" y="654" width="568" height="153" rx="16" fill="#e9f7f7" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="36" y="670" width="6" height="121" rx="3" fill="#087f8c"/>
+<text x="60" y="692" font-size="26" font-weight="700" fill="#172b4d">4  Integrate, then verify</text>
+<text x="60" y="726" font-size="24" font-weight="400" fill="#44566c">Choose a base and justify changes</text>
+<text x="60" y="756" font-size="24" font-weight="400" fill="#44566c">Recheck the final combined candidate</text>
+<text x="60" y="786" font-size="24" font-weight="400" fill="#44566c">Passing parts do not prove the whole</text>
+<text x="40" y="860" font-size="22" font-weight="400" fill="#44566c">ARENA: same brief, competing solutions</text>
+<text x="40" y="891" font-size="22" font-weight="400" fill="#44566c">SWARM: different slices, combined coverage</text>
+<text x="40" y="922" font-size="22" font-weight="400" fill="#44566c">No delegation? Label sequential comparison.</text>
+</g>
+</svg>

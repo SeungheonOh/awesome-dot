@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="280" viewBox="0 0 1120 280" role="img" aria-labelledby="title description">
+  <title id="title">dot-stack</title>
+  <desc id="description">Three offset teal layers beside the dot-stack wordmark. A coral dot marks the verified result. The tagline reads: reason, build, prove.</desc>
+  <rect width="1120" height="280" rx="24" fill="#f4f7f6"/>
+  <rect x="36" y="36" width="208" height="208" rx="32" fill="#102c35"/>
+  <path d="M76 155 140 119 204 155 140 191Z" fill="#318b85"/>
+  <path d="M76 126 140 90 204 126 140 162Z" fill="#53b8aa"/>
+  <path d="M76 97 140 61 204 97 140 133Z" fill="#a2e5cd"/>
+  <circle cx="188" cy="188" r="16" fill="#ef735e"/>
+  <text x="290" y="145" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="700" letter-spacing="-3" fill="#102c35">dot-stack</text>
+  <text x="295" y="195" font-family="Arial, Helvetica, sans-serif" font-size="25" letter-spacing="5" fill="#42656d">REASON · BUILD · PROVE</text>
+  <path d="M977 60v160M960 60h34M960 220h34" stroke="#bdcfcb" stroke-width="2" fill="none"/>
+  <circle cx="977" cy="92" r="5" fill="#318b85"/>
+  <circle cx="977" cy="140" r="5" fill="#318b85"/>
+  <circle cx="977" cy="188" r="5" fill="#ef735e"/>
+</svg>

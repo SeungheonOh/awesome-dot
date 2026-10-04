@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dot-stack",
+  "version": "0.4.0",
+  "description": "Portable engineering workflows with scoped delegation, candidate-bound evidence, and honest execution limits.",
+  "license": "MIT"
+}
