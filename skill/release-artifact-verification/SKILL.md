@@ -1,6 +1,6 @@
 ---
 name: release-artifact-verification
-description: "Verify the exact built package users receive by inspecting its contents, installing it in an isolated consumer environment, and exercising its public entry point and required resources outside the source checkout."
+description: "Verify the exact built package users receive by inspecting its contents, installing it in an isolated consumer environment, and exercising its public entry point and required resources outside the source checkout. Also use its conditional checks for supplied signatures or byte-reproducible builds when those define the requested acceptance boundary."
 ---
 
 # Verify the Package Users Receive
@@ -37,6 +37,28 @@ Check the properties relevant to the consumer contract:
 Compare intended content with actual members. A file present in Git, a source distribution or a build directory can still be absent from the deliverable. Conversely, an included file can be stale, placed in the wrong directory, or registered under the wrong entry point. Verify the narrow contract, rather than assuming that inclusion alone proves usable behavior.
 
 For Python wheels, read [the packaging notes](references/packaging-notes.md) when deriving checks. Inspect `METADATA`, `WHEEL`, `entry_points.txt` when present and `RECORD`. Record whether you independently verified internal hashes. A content digest identifies bytes; it does not authenticate their publisher. Compatibility tags and `Requires-Python` are declarations to reconcile with the test environment, not empirical proof across all declared targets.
+
+## Check a supplied signature when acceptance requires it
+
+For a signature-only request, establish the exact signed object, the intended artifact and revision, the accepted verification profile, and the source of public-key or certificate authority. Reuse the supplied authority when it settles the task. A nearby key file, embedded name or successful verification under a self-selected key does not establish that the key is accepted for this artifact.
+
+Use an appropriate installed native verifier for the actual format. Keep its version, exact inputs, meaningful output and exit status. Verify the format-defined signed representation; do not parse and reserialize signed bytes merely for convenience. A verifier's mathematical rejection, an unsupported profile and a missing input are different outcomes. For example, [OpenSSL's public-key verification interface](https://docs.openssl.org/3.5/man1/openssl-pkeyutl/#options) distinguishes raw input from digest input and has algorithm-specific requirements; a command suitable for one profile is not a universal signature validator.
+
+Keep signature validity, key authorization and intended-payload acceptance separate. If a signature covers a manifest, bind its relevant entry to the actual payload bytes and requested identity. A valid signature on an older revision or a manifest naming different bytes does not satisfy the requested delivery. Conversely, a changed acceptance policy does not change the mathematical result for an unchanged verification profile, key, signature and signed object. After a signature fails, matching unsigned fields can still explain the discrepancy but cannot authenticate those fields.
+
+Check expiry, revocation, certificate chains or trusted-time evidence only when the format and acceptance contract require them. Missing required evidence leaves that part unverified; an offline check cannot establish unseen current status. Report a supplied trust assumption as such, without inventing a verified publisher behind it.
+
+Return the requested decision with compact native evidence and any unresolved acceptance condition. Signature acceptance does not establish installation, runtime behavior, payload safety or release approval. For an inert verification-only task, finish this check and mark the other stages unrun; do not install or execute the payload to complete this guide.
+
+## Diagnose unequal rebuilds when reproducibility is required
+
+Define the exact outputs and equality target, selected source and dependency identities, toolchain, and relevant build conditions. If the contract concerns the delivered archive, equal extracted content is a narrower result. Keep run receipts distinct from required artifacts; the [reproducibility definition](https://reproducible-builds.org/docs/definition/) ties the claim to specified outputs, inputs and environment.
+
+Generate both sides independently in fresh owned locations or through the build's supported non-reuse route. A copied output, cache hit or no-op second invocation does not demonstrate regeneration. Preserve the original unequal pair. Vary the conditions implicated by the task or observed difference, such as build path or copied-file times, while retaining the comparison inputs and actual build commands.
+
+Localize disagreement before repairing it: compare membership, member payload bytes, then relevant container fields and representation. A path inside generated JSON changes payload; a member timestamp changes archive metadata. Changed payload length can also move later offsets, so do not assign every changed header field an independent cause. Use [format-aware archive inspection](https://reproducible-builds.org/docs/archives/) where supported. Normalized comparisons may explain a difference but cannot replace the agreed final-byte comparison.
+
+Repair the producer only within the accepted contract. Remove incidental run values, choose supported deterministic serialization or record required build conditions without silently discarding meaningful metadata. A fixed source/release timestamp can be appropriate; [SOURCE_DATE_EPOCH](https://reproducible-builds.org/specs/source-date-epoch/) needs a deterministic source-based value and a build tool that consumes it. Rebuild from the corrected source, compare the actual delivered outputs, and check the relevant consumer contract separately. For a reusable producer, a small changed-input control can expose constant output or unintended reuse. Retain the baseline explanation and final scope; equal local builds alone establish neither cross-toolchain reproducibility, complete environmental isolation nor publisher authenticity.
 
 ## Install as a fresh consumer
 
