@@ -20,6 +20,14 @@ Use [the explorer contract](references/explorer-prompt.md) as needed. Find the e
 
 For “where should this live?”, compare the owning invariants and dependencies of candidate modules. Distinguish where the code currently lives from your recommendation. A file map without a data or control flow does not answer how the system works.
 
+## When a general argument is requested
+
+When explicitly asked for a general correctness or termination argument, state the claimed property, actual input domain, and what counts as the same output or item. Trace which premises validation establishes and which depend on callers or the environment. Account for normalization, representation, and equality in the inspected code; do not silently substitute an idealized contract.
+
+Choose an invariant, induction, or case argument suited to that property. Tie each step to source: establish the starting condition, show why every relevant update or branch preserves the needed conditions, and derive the result at exit. Where termination matters, justify progress separately, using a well-founded measure or another appropriate argument, and cover relevant failure or early-exit paths.
+
+Keep this route proportional to the requested argument; ordinary how questions do not require a formal proof framework or execution. Distinguish selected traces or tests from general reasoning, and limit exhaustive enumeration to the domain it actually covers. State unresolved premises or steps, and do not present a source-derived argument as execution evidence or security assurance.
+
 ## Reconcile and explain
 
 Use [the explainer contract](references/explainer-prompt.md). Check conflicting findings against source and preserve unresolved gaps. Do not relay a worker's speculation as verified runtime behavior. Source reading establishes what the inspected code implements; actual execution evidence is a separate claim.
