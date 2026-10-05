@@ -1,6 +1,6 @@
 ---
 name: privacy-checked-document-copy
-description: "Prepare and verify a separate audience-specific document copy with only approved content, a private removal/review record, and format-specific hidden-content checks. Use for minimizing a document before sharing; preserve the original and hold sharing when the exact output cannot be checked."
+description: "Prepare and verify a separate audience-specific document copy with only approved content, a private removal/review record, and format-specific hidden-content checks. Use for minimizing a document or structured table before sharing; preserve the original and hold sharing when the exact output cannot be checked."
 ---
 
 # Prepare a Privacy-Checked Document Copy
@@ -63,6 +63,14 @@ Choose the branch the actual output requires. Check current vendor guidance for 
 
 Rebuild from explicitly allowed content into a fresh file. Inspect the complete saved bytes, encoding, control/invisible characters, filenames and any packaging. If the output is Markdown or HTML, inspect raw markup as well as the rendered view, including comments, frontmatter, link targets and referenced assets. A plain-text file can still contain private strings. File-system or service metadata is a separate check from the text bytes.
 
+**Structured tables with aggregate results**
+
+When the approved copy includes aggregate results, choose the retained record unit, meaningful grouping, time detail and permitted correlation from the audience's question. Define each measure's eligible population: ticket workload counts include records without timing, while medians of measured response times exclude them. Apply task-specific small-group rules to their respective populations; do not invent a universal cutoff or merge unrelated categories merely to pass it.
+
+Review the complete recipient packet with declared audience context for recovery of held detail through totals, denominators, percentages, differences, overlapping groups, prose and actual stored precision. Displaying fewer decimals does not remove underlying precision; [ONS's table guidance](https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/disclosurecontrol/policyonprotectingconfidentialityintablesofbirthanddeathstatistics) explains this and differencing, but its sector-specific rules do not transfer automatically. Omit unnecessary derived statistics, generalize compatible groups or hold affected results, then review the combined packet again. Ask when a consequential disclosure choice remains unresolved.
+
+Reconcile retained results to source populations and confirm the reduced detail still answers the question. Preserve units and distinguish withheld results, genuine zero, unavailable measurements and categories outside scope. Explain coverage without revealing held values. Reopen every saved recipient file, checking underlying values and exact packet membership; keep source mappings and decisions in the private record. Use proportionate checks: a small CSV and explanation can suffice, without requiring custom code, a workbook or exhaustive simulation. Bound conclusions to the checked packet and audience; aggregation is not an anonymity guarantee.
+
 **Word or another editable office document**
 
 Use the application's supported removal and inspection functions on the separate copy. Resolve tracked changes to the intended content before removing revision history; “hide markup” is not removal. Inspect comments, document properties, hidden objects and embedded content. Where appropriate, rebuild an authorized excerpt in a fresh document rather than copying the whole package. Rebuilding still needs output checks, including properties added on save.
@@ -114,6 +122,6 @@ Holds: unresolved issue, affected output and smallest needed decision
 Release: prepared only / held / verified sent; actual destination if sent
 ```
 
-The [fictional example](example.md) includes a real, minimized text output and a private-style review record. Run its [reproducible checker](check_example.py) and read the [observed verification and limits](verification.md). The fixture exercises text minimization and output identity only; it does not test PDF, Office, image or provider-history removal.
+The [fictional example](example.md) includes a real, minimized text output and a private-style review record. When reproducing the example, run its [reproducible checker](check_example.py) and read the [observed verification and limits](verification.md). The fixture exercises text minimization and output identity only; it does not test PDF, Office, image or provider-history removal.
 
 For a selected diagnostic excerpt, the [support-log companion](support-logs/README.md) adds value-level field review, occurrence and alias reconciliation, and an actual two-file recipient packet. Its separate original JSONL fixture includes tied, backwards, missing and null timestamps plus an unresolved outcome. The executed checks cover that explicit source and audience policy; they do not establish general anonymity or inspect a real support channel.
