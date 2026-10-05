@@ -1,0 +1,28 @@
+F2 — Lumen Quay volunteer exhibition action handoff
+
+Prepare actions.json and a plain-text handoff.txt of at most 450 whitespace-delimited words from this complete fictional packet, as of 2026-10-07T16:00:00+01:00. Use local supplied copies only. Do not send, schedule, submit, mutate any external service, install tools or consult outside sources. Preserve every supplied file byte for byte. Do not claim external actions or verification that you did not perform. Python 3 standard library is available, but you may use any local method; no preferred workflow is required.
+
+The task is to represent all agreed actions and their latest evidenced state. Suggestions that were not agreed are not actions. Merge repeated commitments for one deliverable; keep independently usable deliverables distinct even when their wording is similar. Existing EX-xx references identify deliverables, not separate occurrences of a commitment. Use those IDs unchanged. The people directory fixes person IDs and spellings. A proposed owner change takes effect only when the new owner accepts it in the supplied evidence. The latest explicit agreed deadline supersedes earlier dates. Resolve relative dates from the dated source containing them, using the packet's authoritative offsets. Date-only deadlines are valid: keep local_time null and do not invent a time. No additional clock-time clarification is required for them. Missing owners stay null and require a specific clarification question.
+
+Completion rule: a deliverable is verified_complete only when the supplied evidence demonstrates its stated completion condition. A person's completion claim alone can set reported_complete=true but cannot override contrary or incomplete evidence. If the condition requires sending and only a draft is evidenced, status is draft_only, verified_complete=false, and you must ask specifically for actual send confirmation/evidence or whether it still needs sending. Do not send anything yourself. A claim plus a supplied completion log can establish verified completion. Status is open, draft_only or verified_complete. The transcript and messages are not themselves proof of an actual send when they merely assert 'done'.
+
+actions.json has this exact top-level shape (action and source-reference array order is immaterial):
+{
+  "as_of": "2026-10-07T16:00:00+01:00",
+  "actions": [
+    {
+      "action_id": "the source EX-xx identifier",
+      "deliverable": "clear description, including what establishes completion",
+      "owner": {"person_id": "directory ID", "name": "directory spelling"} OR null,
+      "deadline": {"date": "YYYY-MM-DD", "local_time": "HH:MM" OR null, "utc_offset": "+01:00", "zone_label": "Europe/London"},
+      "status": "open, draft_only, or verified_complete",
+      "reported_complete": false OR true,
+      "verified_complete": false OR true,
+      "source_refs": {"commitment": ["locators"], "owner": ["locators"], "deadline": ["locators"], "completion": ["locators"]},
+      "clarifications": [{"question": "specific question", "source_refs": ["locators"]}]
+    }
+  ]
+}
+Use empty arrays for inapplicable source categories or clarifications. Use locators inputs/meeting.txt#Mxx, inputs/followups.txt#Fxx, inputs/arrival-draft.txt#Dxx or inputs/audio-check.txt#Vxx. References must resolve and support the field, including both original commitment and accepted reassignment where needed. Each action must include the actual authority for its current owner/deadline; an absent owner uses the line showing it was left open. You may include additional relevant references. Do not include people-directory references in these arrays; the directory is for exact identity only. Use JSON booleans and null, not quoted substitutes. Do not add other top-level or action fields.
+
+handoff.txt must explain the handoff accurately enough to use without reading the JSON: cover each agreed deliverable, current owner or lack of one, deadline (preserving date-only uncertainty), and current completion state; distinguish the sending claim from draft evidence. Include the two types of specific clarification above when applicable, and use source locators for the accepted reassignment and draft/sending discrepancy. Describe this as a prepared handoff, not messages sent or tasks performed by you. Coherent paraphrases and any readable order are accepted. The two saved files must agree. Everything needed is within this packet; leaving the explicitly missing owner/send verification unresolved is an acceptable and required bounded outcome.

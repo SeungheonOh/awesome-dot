@@ -1,0 +1,19 @@
+Fictional Copperfern policy, revision 1, effective 2026-09-01 through 2026-09-30 inclusive
+
+[P1] Currency and precision
+All source and claim amounts are GBP integer pence. There is no exchange conversion, tax extraction, percentage allocation or rounding in this packet. Preserve signed face amounts. A card payment confirms settlement but is not an additional expense. A confirmed duplicate scan is evidence only and adds zero.
+
+[P2] Purpose and readiness
+A source-backed business-purpose statement is required before a transaction is ready. A missing-purpose expense remains unresolved at its full source face amount and is excluded from the ready subtotal; do not invent purpose, eligibility or a zero claim. Credit T03 inherits the purpose and group of its explicitly linked expense T02 and needs no separate purpose statement.
+
+[P3] Daily meal cap and credit order
+Meal expenses are grouped by claimant, training-event ID and expense local calendar date. Both T01 and T02 concern claimant CF-7, event CF-26, and 2026-09-17. That one group has a 4500-pence cap. First apply explicit business splits. Then include signed linked credits in the original expense's group (even if a credit posts on another date). Then compute group overage = max(0, signed group business amount minus 4500). Keep the credit as its own full negative claim line. Apply any overage to positive meal expenses from latest source transaction timestamp to earliest, without making a positive claim negative. T01 timestamp is 2026-09-17T12:10:00+01:00 and T02 is 2026-09-17T18:05:00+01:00. Do not cap gross purchases before crediting, and do not move the credit to a separate day's cap. Every expense outside this meal group has no monetary cap. Only explicitly identified meal receipts are in the meal group.
+
+[P4] Explicit supply split
+T04 is a single canonical supply transaction. The supplied itemization authorizes exactly 1999 pence for workshop materials and identifies exactly 1200 pence as personal. Keep one claim row with the full face amount and the explicit business amount; do not proportionally split or create a second canonical transaction.
+
+[P5] Local transport
+T05 is fully business-eligible if its supplied purpose statement is present. It is not in the meal group and has no cap.
+
+[P6] Output accounting
+A ready claim line is business_minor + cap_adjustment_minor. A credit has a negative source, business and claim amount and a zero cap adjustment. Source totals count each canonical transaction once. The ready subtotal sums only ready claim lines, including signed credits. Keep an unresolved line outside that subtotal. Output source_refs resolve to evidence source IDs; policy_refs resolve to these section labels. Originals remain unchanged. Outputs are draft calculations only; no submission is authorized.

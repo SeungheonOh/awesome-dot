@@ -1,0 +1,45 @@
+{
+  "case_id": "F6",
+  "sources": [
+    {
+      "path": "inputs/line_items.csv",
+      "sha256": "43bd1504e2dbf30798e49ba85fd8c6413f60c8527eba6f47a1b5232ff7acd1fb",
+      "protected": true
+    },
+    {
+      "path": "inputs/orders.csv",
+      "sha256": "e3ee4870cafb11b5d176c7fdec0ccc55e6b7ed7de0ac4be33f452ad93669a259",
+      "protected": true
+    },
+    {
+      "path": "inputs/orders.sqlite3",
+      "sha256": "ce08308a64ef27619726ece4015d9e2d8409a32168031df32f15b0a8c9100441",
+      "protected": true
+    },
+    {
+      "path": "inputs/parameters.json",
+      "sha256": "98ceaed16b674d53e56ad8c87bdf21f2042267ada9c81a13b36b1f141634a87a",
+      "protected": true
+    },
+    {
+      "path": "inputs/refunds.csv",
+      "sha256": "eda797a722cd3cceffeb5bbfd496f5dc02a5e72131815e1ee2cda84e6459a772",
+      "protected": true
+    },
+    {
+      "path": "inputs/schema.sql",
+      "sha256": "0e7ceb96038beb4f4e0f6d529491a206af7749223b636480df961907d5b242f7",
+      "protected": true
+    }
+  ],
+  "runner_files": {
+    "input-manifest.json": "2467d5796726dd71fe5573a1c38115539bd81ecb3adcead731de5a767b181fcf",
+    "inputs/line_items.csv": "43bd1504e2dbf30798e49ba85fd8c6413f60c8527eba6f47a1b5232ff7acd1fb",
+    "inputs/orders.csv": "e3ee4870cafb11b5d176c7fdec0ccc55e6b7ed7de0ac4be33f452ad93669a259",
+    "inputs/orders.sqlite3": "ce08308a64ef27619726ece4015d9e2d8409a32168031df32f15b0a8c9100441",
+    "inputs/parameters.json": "98ceaed16b674d53e56ad8c87bdf21f2042267ada9c81a13b36b1f141634a87a",
+    "inputs/refunds.csv": "eda797a722cd3cceffeb5bbfd496f5dc02a5e72131815e1ee2cda84e6459a772",
+    "inputs/schema.sql": "0e7ceb96038beb4f4e0f6d529491a206af7749223b636480df961907d5b242f7",
+    "task.txt": "c1073c0cef27cd5095db82df260d2046ee151e249c32d3f7d67db332a8458e96"
+  }
+}

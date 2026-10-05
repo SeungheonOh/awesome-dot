@@ -1,0 +1,61 @@
+[
+  {
+    "op": "replace",
+    "path": "/catalogue/title",
+    "value": "Summer kits"
+  },
+  {
+    "op": "replace",
+    "path": "/catalogue/items/0",
+    "value": {
+      "sku": "K-1",
+      "name": "Signal card",
+      "stock": 9007199254740994,
+      "tags": [
+        "paper",
+        "amber"
+      ]
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/catalogue/items/1",
+    "value": {
+      "sku": "K-2",
+      "name": "Beacon card II",
+      "stock": 8,
+      "tags": [
+        "paper"
+      ],
+      "optional": null
+    }
+  },
+  {
+    "op": "remove",
+    "path": "/catalogue/items/2"
+  },
+  {
+    "op": "replace",
+    "path": "/labels/",
+    "value": "release"
+  },
+  {
+    "op": "replace",
+    "path": "/labels/a~1b",
+    "value": "shelf-east"
+  },
+  {
+    "op": "replace",
+    "path": "/labels/x~0y",
+    "value": "v2"
+  },
+  {
+    "op": "remove",
+    "path": "/labels/drop"
+  },
+  {
+    "op": "add",
+    "path": "/labels/new",
+    "value": null
+  }
+]

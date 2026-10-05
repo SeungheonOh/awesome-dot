@@ -1,0 +1,5 @@
+[L1] Fictional project: Lantern Lane community laboratory handbook, revision 7.
+[L2] baseline.txt is revision 7, frozen 2026-06-02 at 10:00 UTC.
+[L3] edit-a.txt is Mira's proposed child of revision 7, received 2026-06-03 at 09:00 UTC. It does not include edit-b.txt.
+[L4] edit-b.txt is Omar's proposed child of revision 7, received 2026-06-03 at 11:00 UTC. It does not include edit-a.txt.
+[L5] Neither child is an authoritative replacement. Only the acceptance record below authorizes candidate changes. Later arrival has no priority.

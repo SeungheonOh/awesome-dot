@@ -1,0 +1,21 @@
+{
+  "case_id": "F3",
+  "hash_algorithm": "sha256",
+  "sources": [
+    {
+      "path": "inputs/busy.csv",
+      "sha256": "6c248d69db366d3f107fd1c252ef7ba570f6194b1c12b07a7d5d72c1d7c210d1",
+      "bytes": 466
+    },
+    {
+      "path": "inputs/coverage.csv",
+      "sha256": "dc76b39da2857ad53750539b455269fc8887001c21ff2af5b66637bb813ca64b",
+      "bytes": 246
+    },
+    {
+      "path": "inputs/participants.json",
+      "sha256": "937e1239f9f3bfd03c6eab8e922cfe4080ae49e6eaf7d077d9306c747cdd1bfc",
+      "bytes": 3081
+    }
+  ]
+}

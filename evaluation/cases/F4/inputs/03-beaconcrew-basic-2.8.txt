@@ -1,0 +1,12 @@
+BeaconCrew — exact-plan specification and price card
+Published: 2026-03-22 14:00 UTC
+Applies only to: BeaconCrew Basic, version 2.8
+
+[OFFLINE]
+Basic 2.8 can display a previously synchronized roster while offline. Every roster edit requires an internet connection. Assigning volunteers, changing roles, and changing coordinator notes are disabled while disconnected. Offline editing in other BeaconCrew offerings does not change this Basic 2.8 limitation.
+
+[CSV]
+Basic 2.8 includes online CSV generation with shift_date, shift_start_time, volunteer_name, role, and coordinator_notes columns. No paid export module is required. CSV generation is unavailable offline.
+
+[PRICE]
+Basic 2.8 costs USD 6.00 per paid user per month. There are no mandatory paid modules or other recurring fees. The price is constant for the comparison's 12-month term.

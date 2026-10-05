@@ -1,0 +1,39 @@
+{
+  "case_id": "F2",
+  "groups": {
+    "g1": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g1 rubric; for validator wiring only."
+      ]
+    },
+    "g2": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g2 rubric; for validator wiring only."
+      ]
+    },
+    "g3": {
+      "passed": false,
+      "evidence": [
+        "Synthetic adverse annotation: EX-13 retains superseded M04 owner/time rather than accepted F02/F03 Davi/18:00."
+      ]
+    },
+    "g4": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g4 rubric; for validator wiring only."
+      ]
+    },
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g5 rubric; for validator wiring only."
+      ]
+    }
+  },
+  "submission_hashes": {
+    "actions.json": "e59e8f94c91304e8a5bab5d33b2d72e7a20f2e5ff4cad83e1e5df335b0bce72e",
+    "handoff.txt": "8bab8a1789b48745c2374cb22c99149c98cd80e54f6204a0a8f61550d64e66f9"
+  }
+}

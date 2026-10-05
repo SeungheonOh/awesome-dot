@@ -1,0 +1,13 @@
+F1: blinded semantic subcheck for acceptance group g5
+The reviewer sees only the common packet and a neutral submission label. Do not use style, exact wording, preferred workflow, implementation or skill exposure as evidence. Cite submission lines and supplied source/policy locators.
+Pass the explanation subcheck only if its prose coherently establishes all of these, without contradictions elsewhere:
+1. S07/S02 are one T02 charge; duplicate adds zero (P1).
+2. T03's -600 applies to T02's original meal group before capping; net 4705 exceeds 4500 by 205; the reduction goes to latest positive T02 and credit stays -600 (P3).
+3. Explicit T04 split excludes 1200 personal and admits 1999 business (S04/S13, P4).
+4. T06/receipt X-033 needs a business-purpose statement; full 1488 remains unresolved, outside ready 7774; purchase/payment do not resolve purpose (S06/S15, P2/P6).
+5. Output is a draft calculation and makes no unsupported external-submission or verification claim.
+6. Policy locators support the stated treatment, especially meal-credit/cap P3, supply split P4, transport P5 and unresolved purpose P2. Fewer relevant citations than the illustrative reference are accepted; general currency/output sections P1/P6 need not be repeated on every row. Do not require identical citation sets.
+Equivalent clear prose and mathematical exposition are accepted; no literal token or sentence test is authoritative. References may be in neighboring prose or identify an unambiguous source-policy link. The four numeric labels are separately checked by code. Required policy/source fields are checked independently.
+Reviewer JSON: {"case_id":"F1","groups":{"g5":{"passed":true,"evidence":["submission-specific explanation with locators"]}}}. False requires specific source-anchored reasons. A missing review leaves the semantic check pending, not failed or accepted.
+
+Review provenance requirement: add submission_hashes, an object mapping every required output filename to the SHA-256 of the exact bytes reviewed. A review for other artifact bytes remains pending. Every semantic assertion is tagged kind=semantic in the grade report; machine assertions are tagged kind=objective. Keep both visible rather than substituting one for the other.

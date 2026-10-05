@@ -1,0 +1,36 @@
+{
+  "case_id": "F4",
+  "algorithm": "sha256",
+  "inputs": [
+    {
+      "path": "inputs/01-user-requirements.txt",
+      "sha256": "4fa1f7c240138c2e52d7f0777cf5cffc9733957ee1ea7a279fd5453d76d4a320",
+      "bytes": 2973
+    },
+    {
+      "path": "inputs/02-alderroster-community-3.4.txt",
+      "sha256": "dd817edba92820ff692d1cb606337f49ec03ceb2559104461f2f22e78a033695",
+      "bytes": 1093
+    },
+    {
+      "path": "inputs/03-beaconcrew-basic-2.8.txt",
+      "sha256": "bdd15ef18a1cfe4d817074893403ae1abb8eff96d609260b0b83d66f36aa2b59",
+      "bytes": 845
+    },
+    {
+      "path": "inputs/04-beaconcrew-overview.txt",
+      "sha256": "e73dcd53d41925d3aff094f0d8aeee3842b189dd6b7cc146047f0e063e9d8d99",
+      "bytes": 465
+    },
+    {
+      "path": "inputs/05-cedarshift-team-5.1.txt",
+      "sha256": "36d5c2bbbc557d3ef77b228eac76af96c3eef6c6f63c0ad3e8a91e56b509a705",
+      "bytes": 1657
+    },
+    {
+      "path": "inputs/06-cedarshift-update.txt",
+      "sha256": "d7763ad4b9d3a366f4cdac53f02f85fb373ebbc58a23b84715ae80a9d0d5a44a",
+      "bytes": 531
+    }
+  ]
+}

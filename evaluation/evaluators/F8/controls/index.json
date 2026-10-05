@@ -1,0 +1,157 @@
+{
+  "case_id": "F8",
+  "controls": [
+    {
+      "id": "g1_caller_drops_update",
+      "submission": "controls/g1_caller_drops_update",
+      "mutation": {
+        "file": "card_editor.py",
+        "description": "g1 caller drops update"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": true,
+        "failed_groups": [
+          "g1",
+          "g4",
+          "g5"
+        ]
+      }
+    },
+    {
+      "id": "g1_promotes_unresolved",
+      "submission": "controls/g1_promotes_unresolved",
+      "mutation": {
+        "file": "card_editor.py",
+        "description": "promotes unresolved saves to complete and overwrites completed text"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": true,
+        "failed_groups": [
+          "g1",
+          "g4",
+          "g5"
+        ]
+      }
+    },
+    {
+      "id": "g2_automatic_uses_base",
+      "submission": "controls/g2_automatic_uses_base",
+      "mutation": {
+        "file": "merge_session.py",
+        "description": "g2 automatic uses base"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": true,
+        "failed_groups": [
+          "g2",
+          "g3",
+          "g5"
+        ]
+      }
+    },
+    {
+      "id": "g3_false_alternative",
+      "submission": "controls/g3_false_alternative",
+      "mutation": {
+        "file": "merge_session.py",
+        "description": "g3 false alternative"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": true,
+        "failed_groups": [
+          "g3"
+        ]
+      }
+    },
+    {
+      "id": "g4_revision_ignored",
+      "submission": "controls/g4_revision_ignored",
+      "mutation": {
+        "file": "merge_session.py",
+        "description": "g4 revision ignored"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": true,
+        "failed_groups": [
+          "g4"
+        ]
+      }
+    },
+    {
+      "id": "g5_false_test_report",
+      "submission": "controls/g5_false_test_report",
+      "mutation": {
+        "file": "checks.txt",
+        "description": "g5 false test report"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": true,
+        "failed_groups": [
+          "g5"
+        ]
+      }
+    },
+    {
+      "id": "integrity_changed_primitive",
+      "submission": "controls/integrity_changed_primitive",
+      "mutation": {
+        "file": "merge_primitive.py",
+        "description": "integrity changed primitive"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": false,
+        "failed_groups": []
+      }
+    },
+    {
+      "id": "g5_boolean_format",
+      "submission": "controls/g5_boolean_format",
+      "mutation": {
+        "file": "card_editor.py",
+        "description": "uses boolean true for required integer format 1"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": true,
+        "failed_groups": [
+          "g5"
+        ]
+      }
+    },
+    {
+      "id": "accepted_helpers_extensions",
+      "submission": "controls/accepted_helpers_extensions",
+      "mutation": {
+        "file": "merge_session.py, card_editor.py, render_helpers.py",
+        "description": "correct alternative renderer helper and permitted JSON extension fields"
+      },
+      "expected": {
+        "accepted": true,
+        "integrity_passed": true,
+        "failed_groups": []
+      }
+    },
+    {
+      "id": "g5_empty_regression_file",
+      "submission": "controls/g5_empty_regression_file",
+      "mutation": {
+        "file": "tests/test_regressions.py, tests/test_extra.py",
+        "description": "keeps five total passing tests but moves required regression methods out of required file"
+      },
+      "expected": {
+        "accepted": false,
+        "integrity_passed": true,
+        "failed_groups": [
+          "g5"
+        ]
+      }
+    }
+  ]
+}

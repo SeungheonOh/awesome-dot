@@ -1,0 +1,4 @@
+channel,order_count,line_row_count,known_gross_minor,incomplete_order_count,complete_zero_order_count,gross_minor,refund_minor,net_minor,unallocated_refund_count
+desk,6,5,2400,0,0,2400,520,1880,0
+phone,2,1,180,2,0,180,70,110,0
+web,10,10,4750,0,0,4750,950,3800,0

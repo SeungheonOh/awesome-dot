@@ -1,0 +1,17 @@
+{
+  "case_id": "F8",
+  "runner_files": {
+    "input-manifest.json": "bfa0333640ae6d355127920c98bde8dd2d7e03adccf0b6ad11aebf8e5608d14f",
+    "inputs/scaffold/card_editor.py": "2e44e0f8f77d254d4d19fd8fc3fe61a3204814e2e9642c1a18c323c676ce553c",
+    "inputs/scaffold/demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+    "inputs/scaffold/merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+    "inputs/scaffold/merge_session.py": "566e60c6a81eb8540192128aa4fb5a8a99e9338b0e7f51c0ca8a12df186bc2ec",
+    "inputs/scaffold/tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+    "task.txt": "f46857e7d3c1b52e9d71cdf86f962064a23c9e69950093a614e234ce9efb2335"
+  },
+  "protected_submission_files": {
+    "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+    "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+    "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+  }
+}

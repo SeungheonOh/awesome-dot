@@ -1,0 +1,25 @@
+{
+  "valid_pair": {
+    "status": "accepted",
+    "before": "inputs/before.json",
+    "after": "inputs/after.json",
+    "patch": "patch.json",
+    "applied_matches_after": true
+  },
+  "invalid_cases": [
+    {
+      "file": "inputs/invalid-duplicate.json",
+      "status": "accepted",
+      "reason_code": "duplicate_key",
+      "pointer": "/catalogue/items/0/stock",
+      "patch_emitted": false
+    },
+    {
+      "file": "inputs/invalid-number.json",
+      "status": "rejected",
+      "reason_code": "non_integer_number",
+      "pointer": "/labels/count",
+      "patch_emitted": false
+    }
+  ]
+}

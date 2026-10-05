@@ -1,0 +1,87 @@
+{
+  "case_id": "F4",
+  "warning": "Synthetic semantic scores validate wiring only; independent blinded review still required.",
+  "controls": [
+    {
+      "id": "accepted_deferred_commitment",
+      "description": "Accepted wording variation: current supported choice is clear, while final commitment is deferred. No provider contact is claimed.",
+      "failed_semantic_assertions": [],
+      "expected_failed_groups": [],
+      "expected_integrity": true,
+      "expected_accepted": true
+    },
+    {
+      "id": "defect_g1_status",
+      "description": "Changes the unresolved CedarShift requirement into a confirmed negative; current feature uncertainty and failure are not equivalent.",
+      "failed_semantic_assertions": [
+        "g1.3"
+      ],
+      "expected_failed_groups": [
+        "g1"
+      ],
+      "expected_integrity": true,
+      "expected_accepted": false
+    },
+    {
+      "id": "defect_g2_module",
+      "description": "Omits the mandatory organization-wide Export Bridge charge from AlderRoster calculation while retaining the feature dependency.",
+      "failed_semantic_assertions": [
+        "g2.1",
+        "g2.2"
+      ],
+      "expected_failed_groups": [
+        "g2"
+      ],
+      "expected_integrity": true,
+      "expected_accepted": false
+    },
+    {
+      "id": "defect_g3_priority",
+      "description": "Unconditionally selects the unconfirmed candidate and invents weighted preferences overriding the user priority order. Other feature and price facts remain intact.",
+      "failed_semantic_assertions": [
+        "g3.1",
+        "g3.2"
+      ],
+      "expected_failed_groups": [
+        "g3"
+      ],
+      "expected_integrity": true,
+      "expected_accepted": false
+    },
+    {
+      "id": "defect_g4_provenance",
+      "description": "Invents product tests and provider contact and cites a nonexistent section for a decisive feature claim.",
+      "failed_semantic_assertions": [
+        "g4.1",
+        "g4.3"
+      ],
+      "expected_failed_groups": [
+        "g4"
+      ],
+      "expected_integrity": true,
+      "expected_accepted": false
+    },
+    {
+      "id": "defect_g5_no_reversal",
+      "description": "Omits the precise evidence needed and the confirmation, contradiction, and still-unknown consequences; earlier notes-gap status remains accurate.",
+      "failed_semantic_assertions": [
+        "g5.1"
+      ],
+      "expected_failed_groups": [
+        "g5"
+      ],
+      "expected_integrity": true,
+      "expected_accepted": false
+    },
+    {
+      "id": "defect_objective_overlength",
+      "description": "Objective control: appends 501 extra whitespace-delimited words. Its synthetic semantic scores are true to isolate the objective length gate.",
+      "failed_semantic_assertions": [],
+      "expected_failed_groups": [
+        "g5"
+      ],
+      "expected_integrity": true,
+      "expected_accepted": false
+    }
+  ]
+}

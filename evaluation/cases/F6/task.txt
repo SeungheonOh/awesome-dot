@@ -1,0 +1,34 @@
+Prepare a local, reproducible order-cohort report for the fictional Lantern Parcel cooperative. Use only inputs/orders.sqlite3 and its accompanying schema.sql, CSV source exports and parameters.json. The database and exports are identical fixture data. All source files are protected; no production SQL, network, installs or external actions. Use SQLite's standard built-in functionality only.
+
+Save report.sql, result.csv and report-notes.txt at your submission root. report.sql must be one read-only SELECT statement (WITH CTEs allowed), runnable with Python standard-library sqlite3.execute using three named parameters :period_start, :period_end and :as_of. It must implement the metric below for the main parameters and all four additional validation scenarios supplied in parameters.json; do not hardcode main-period answers. No temporary tables, scripts, extensions or custom functions. result.csv is the main-parameter result, sorted by channel using SQLite binary ascending order, with the exact column names/order below, one row per represented channel plus the mandatory __unallocated__ row. Integer fields contain base-10 integer minor units/counts, with literal NULL for the two nullable amount columns. No currency symbols, floats or thousands separators.
+
+Owner's complete metric definition (these are report definitions, not accounting advice):
+- All timestamps are zero-padded UTC strings in the format shown, so chronological and binary lexical order agree. Population is orders with status exactly settled or shipped and ordered_at >= period_start and ordered_at < period_end. Do not otherwise filter order rows by as_of: status/items_complete are the supplied owner-approved snapshot; this task does not reconstruct historical statuses. as_of applies only to refund event_at, inclusively (event_at <= as_of).
+- Grain is channel, based on the cohort's order channel. Include channels represented by at least one qualifying order, even if their amounts are zero or unknown. Never combine equal-valued distinct order, line or refund IDs.
+- line_row_count counts all stored line rows of cohort orders. Line amount is quantity * unit_minor, in integer fictional-currency minor units (100 minor units = 1 major unit). known_gross_minor is the sum of all stored line amounts for cohort orders, including partial captures. Each stored line counts once, irrespective of refund multiplicity.
+- items_complete = 1 certifies the child list is complete; zero child rows then means a true gross of zero. items_complete = 0 means the gross is unknown, even if some lines are present. incomplete_order_count counts these orders; complete_zero_order_count counts complete orders whose stored line sum is exactly zero. gross_minor is NULL for a channel with any incomplete order, otherwise known_gross_minor. Do not substitute zero for unknown gross.
+- Refund extraction is complete through each supplied cutoff. refund_minor is the sum of positive refund amounts whose order belongs to the cohort and event_at <= as_of; absent qualifying refund rows means zero. Count every distinct refund ID once, including equal-valued refunds. Cohort refund amounts do not need to occur inside the order period. net_minor = gross_minor - refund_minor when gross is known, otherwise NULL. A negative net is permitted; do not cap it at zero.
+- Refunds linked to an existing order outside this cohort, including excluded statuses, are excluded from every output amount and count. Only refunds whose order_id has no row anywhere in orders are unallocated. Report qualifying unallocated refunds, through as_of inclusively, in a mandatory special channel row __unallocated__, even if there are none. Its order_count, line_row_count, known_gross_minor, incomplete_order_count, complete_zero_order_count and gross_minor are all zero; refund_minor is the qualifying unmatched amount; net_minor is NULL because no cohort allocation is authorized; unallocated_refund_count counts those qualifying rows. Normal channel rows have unallocated_refund_count zero. This special label cannot occur in source channel values.
+
+Exact CSV/SQL column order:
+channel,order_count,line_row_count,known_gross_minor,incomplete_order_count,complete_zero_order_count,gross_minor,refund_minor,net_minor,unallocated_refund_count
+
+report-notes.txt must have one line each with these exact labels and values, plus an optional free-text explanation after them:
+period_start: <main value>
+period_end: <main value>
+as_of: <main value>
+units: integer minor units; 100 per major unit
+population: settled or shipped; ordered_at in [period_start, period_end)
+refund_cutoff: event_at <= as_of
+unknown_gross: incomplete orders make channel gross and net NULL
+unallocated: unmatched order_id only; mandatory separate row; net NULL
+execution: local SQLite read-only
+State only checks you actually ran; no production or external verification claim. Preserve the original bytes of every file in inputs/. Any correct query is acceptable; no specific join/CTE style is required. Exact expected outputs are intentionally not in the runner packet.
+
+Attempt wall-clock limit: 900 seconds, including instruction reading and self-checks; setup and evaluator grading are excluded.
+
+Each individual report query must finish within 3 CPU seconds and 6 wall-clock seconds using at most 256 MiB address space. SQL text is limited to 100,000 bytes, expressions to depth 200, compound SELECT terms to 50, output to 1,000 rows, any intermediate SQL value to 1,000,000 bytes, columns to 100, bound variables to 100, and VM execution to 1,000,000 instructions. These bounds comfortably exceed this fixture. The evaluator uses a read-only database connection, disables extensions, and blocks writes, ATTACH and file-access functions.
+
+Safe local artifact contract: all supplied input paths and all submitted deliverables must be ordinary regular files, with no symlink in the file path or its directory components. Directory substitutions, unreadable files and changed protected inputs do not satisfy the contract.
+report.sql retains its 100,000-byte limit; result.csv and report-notes.txt are each limited to 1,048,576 UTF-8 bytes. The aggregate serialized SQL result, including column labels and rows, must fit within 1,048,576 bytes.
+The supplied task.txt and input-manifest.json are also protected; their original bytes must remain unchanged.

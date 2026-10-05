@@ -1,0 +1,28 @@
+{
+  "people": [
+    {
+      "person_id": "P1",
+      "name": "Orin Patel"
+    },
+    {
+      "person_id": "P2",
+      "name": "Nel Arcos"
+    },
+    {
+      "person_id": "P3",
+      "name": "Kira Beck"
+    },
+    {
+      "person_id": "P4",
+      "name": "Davi Moss"
+    },
+    {
+      "person_id": "P5",
+      "name": "Tessa Vale"
+    },
+    {
+      "person_id": "P6",
+      "name": "Ivo Chen"
+    }
+  ]
+}

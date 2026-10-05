@@ -1,0 +1,22 @@
+F1 — Copperfern training-event expense reconciliation
+
+Reconcile the complete fictional source packet into local files claim-lines.csv, source-map.csv and exceptions.txt. This is a draft calculation, not tax advice or an actual reimbursement request. Use only the supplied copies. Do not send, submit, purchase, schedule, change any service, install tools or consult outside sources. Preserve every supplied file byte for byte. Do not claim external actions or verification that you did not perform. Python 3 standard library is available; no package installation or native-office tools are needed.
+
+All transactions are in the policy period. The only evidence items requiring source-map rows are S01–S15 in inputs/evidence.csv. The policy is inputs/policy.txt. Use the literal canonical transaction IDs from evidence; do not merge separate IDs. Every source must map once to its canonical transaction, including the duplicate and the transaction with unresolved purpose. Map dispositions are primary (original receipt/credit), duplicate (confirmed rescan) or supporting (payment/purpose evidence). Duplicates and supporting evidence create no extra monetary line. Each canonical transaction gets exactly one claim-lines row, including the signed credit and the unresolved line. CSV row order is immaterial.
+
+claim-lines.csv must have exactly these named columns:
+transaction_id,date,kind,currency,source_minor,business_minor,cap_adjustment_minor,claim_minor,status,source_refs,policy_refs
+Use YYYY-MM-DD dates; kind is expense or credit; currency is GBP; all money fields are signed decimal INTEGER minor units (pence), never floats or currency strings. source_minor is the signed source face amount. business_minor is the signed business-eligible amount before the cap. cap_adjustment_minor is zero or the negative cap reduction. claim_minor equals business_minor plus cap_adjustment_minor. status is ready or unresolved. For a missing-purpose transaction, leave business_minor, cap_adjustment_minor and claim_minor empty; retain source_minor and mark unresolved. source_refs must list all and only mapped source IDs for that transaction, semicolon-separated. policy_refs must contain the relevant section locators as inputs/policy.txt#P1 through #P6, semicolon-separated; extra applicable policy references are permitted.
+
+source-map.csv must have exactly these named columns:
+source_id,transaction_id,disposition,locator
+Each locator is inputs/evidence.csv#Sxx for its exact evidence source row.
+
+exceptions.txt must begin with these four label/value lines, in any order (integer values):
+ready_subtotal_minor: [sum of ready claim lines]
+source_total_minor: [sum of canonical signed source amounts; no duplicate/supporting amounts added]
+personal_excluded_minor: [explicit personal split]
+unresolved_source_minor: [source face amount lacking purpose]
+After those lines, add a concise plain-text explanation, with relevant source IDs and policy section locators, of the confirmed duplicate, the credit-before-cap calculation and where any cap reduction goes, the explicit personal split, and the missing-purpose amount and exact clarification needed. Make clear the unresolved amount is excluded from the ready subtotal and this is a draft only. No word limit applies. Do not convert an unknown purpose to zero or invent a purpose. The missing-purpose amount may remain unresolved; resolving it is not required.
+
+The cap grouping, credit order, exact split and cap allocation rules are entirely specified in inputs/policy.txt. You may use any local method and coherent prose. Deliver actual independently readable files in the submission directory; no particular workflow or template beyond the specified outputs is required.

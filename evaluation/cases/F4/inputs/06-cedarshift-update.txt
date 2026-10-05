@@ -1,0 +1,9 @@
+CedarShift — later clarification
+Published: 2026-04-02 08:00 UTC
+Applies to: CedarShift Team, version 5.1
+
+[UPDATE]
+CedarShift now confirms that Team 5.1 with CSV Pack exports coordinator_notes alongside shift_date, shift_start_time, volunteer_name, and role, both online and offline, with no extra charge. The provider says this behavior existed from the 2026-03-25 release.
+
+[TIMING]
+This clarification was first published on 2026-04-02 at 08:00 UTC. No earlier publication of this clarification exists in the supplied record.

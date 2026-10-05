@@ -1,0 +1,5 @@
+channel,order_count,line_row_count,known_gross_minor,incomplete_order_count,complete_zero_order_count,gross_minor,refund_minor,net_minor,unallocated_refund_count
+__unallocated__,0,0,0,0,0,0,77,NULL,1
+desk,2,3,1600,0,0,1600,300,1300,0
+phone,1,1,180,1,0,NULL,40,NULL,0
+web,2,4,2250,0,0,2250,450,1800,0

@@ -1,0 +1,101 @@
+{
+  "case_id": "F4",
+  "submission_sha256": "REPLACE_WITH_EXACT_REPORT_SHA256",
+  "groups": [
+    {
+      "id": "g1",
+      "assertions": [
+        {
+          "id": "g1.1",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g1.2",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g1.3",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g1.4",
+          "passed": null,
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "assertions": [
+        {
+          "id": "g2.1",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g2.2",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g2.3",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g2.4",
+          "passed": null,
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "assertions": [
+        {
+          "id": "g3.1",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g3.2",
+          "passed": null,
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "assertions": [
+        {
+          "id": "g4.1",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g4.2",
+          "passed": null,
+          "reason": ""
+        },
+        {
+          "id": "g4.3",
+          "passed": null,
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "assertions": [
+        {
+          "id": "g5.1",
+          "passed": null,
+          "reason": ""
+        }
+      ]
+    }
+  ]
+}

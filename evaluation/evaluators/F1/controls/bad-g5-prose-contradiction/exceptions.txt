@@ -1,0 +1,11 @@
+ready_subtotal_minor: 7774
+source_total_minor: 10667
+personal_excluded_minor: 1200
+unresolved_source_minor: 1488
+
+Draft calculation only, not submitted. S07 is a confirmed rescan of S02, so T02 is counted once (inputs/policy.txt#P1).
+The meal business total is 2835 + 2470 - 600 = 4705. Credit T03 (S03, confirmed by S10) belongs to T02's original meal group before the 4500 cap is applied. The 205 overage reduces the latest positive meal T02 to 2265; T03 remains -600. Meals therefore total 4500 (inputs/policy.txt#P3).
+T04's itemization and purpose evidence S04/S13 exclude the personal 1200 and admit the explicit 1999 business amount (inputs/policy.txt#P4).
+T06's 1488 is unresolved and excluded from the 7774 ready subtotal. S06/S15 establish purchase and payment but no business purpose. Please provide a business-purpose statement for T06 / receipt X-033. Eligibility and the claim remain unknown until then (inputs/policy.txt#P2; inputs/policy.txt#P6).
+
+The cap was applied to gross meals first, and the refund was then deducted a second time.

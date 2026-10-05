@@ -1,0 +1,195 @@
+[
+  {
+    "name": "valid_spacing",
+    "submission": "controls/valid_spacing",
+    "must_fail": [],
+    "accepted": true,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "missing_approved_cloths",
+    "submission": "controls/missing_approved_cloths",
+    "must_fail": [
+      "g1"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": true,
+      "g3": true,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "altered_protected_wording",
+    "submission": "controls/altered_protected_wording",
+    "must_fail": [
+      "g2"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "silently_selected_hours",
+    "submission": "controls/silently_selected_hours",
+    "must_fail": [
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "unapproved_cupboard",
+    "submission": "controls/unapproved_cupboard",
+    "must_fail": [
+      "g4"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "stale_candidate_hash",
+    "submission": "controls/stale_candidate_hash",
+    "must_fail": [
+      "g5"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "changed_source",
+    "submission": "reference",
+    "runner_mutation": {
+      "path": "inputs/edit-a.txt",
+      "append": "\nUnauthorized mutation\n"
+    },
+    "must_fail": [
+      "integrity"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true,
+      "integrity": false
+    }
+  },
+  {
+    "name": "valid_alternative_locators",
+    "submission": "controls/valid_alternative_locators",
+    "must_fail": [],
+    "accepted": true,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "stale_cross_reference",
+    "submission": "controls/stale_cross_reference",
+    "must_fail": [
+      "g1",
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": true,
+      "g3": false,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "missing_section",
+    "submission": "controls/missing_section",
+    "must_fail": [
+      "g2"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": true,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "dependency_unblocked",
+    "submission": "controls/dependency_unblocked",
+    "must_fail": [
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "fabricated_locator",
+    "submission": "controls/fabricated_locator",
+    "must_fail": [
+      "g5"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  }
+]

@@ -1,0 +1,16 @@
+locator,disposition,transaction_id,source_id
+inputs/evidence.csv#S15,supporting,T06,S15
+inputs/evidence.csv#S14,supporting,T05,S14
+inputs/evidence.csv#S13,supporting,T04,S13
+inputs/evidence.csv#S12,supporting,T02,S12
+inputs/evidence.csv#S11,supporting,T01,S11
+inputs/evidence.csv#S10,supporting,T03,S10
+inputs/evidence.csv#S09,supporting,T02,S09
+inputs/evidence.csv#S08,supporting,T01,S08
+inputs/evidence.csv#S07,duplicate,T02,S07
+inputs/evidence.csv#S06,primary,T06,S06
+inputs/evidence.csv#S05,primary,T05,S05
+inputs/evidence.csv#S04,primary,T04,S04
+inputs/evidence.csv#S03,primary,T03,S03
+inputs/evidence.csv#S02,primary,T02,S02
+inputs/evidence.csv#S01,primary,T01,S01

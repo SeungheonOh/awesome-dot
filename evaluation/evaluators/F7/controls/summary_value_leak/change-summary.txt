@@ -1,0 +1,17 @@
+Operation count: 13
+Changed paths:
+/catalogue/title
+/catalogue/items/0/stock
+/catalogue/items/0/tags/1
+/catalogue/items/0/tags/2
+/catalogue/items/0/optional
+/catalogue/items/1/name
+/catalogue/items/1/optional
+/catalogue/items/2
+/labels/
+/labels/a~1b
+/labels/x~0y
+/labels/drop
+/labels/new
+Invalid cases: rejected 2
+Internal value: red-leaf-73

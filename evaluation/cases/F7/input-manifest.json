@@ -1,0 +1,25 @@
+{
+  "case_id": "F7",
+  "sources": [
+    {
+      "path": "inputs/after.json",
+      "sha256": "e2b5a657f3d7d292c7efa9359c3b8f0e45585f514440a78d27593c8c68bfcc64",
+      "protected": true
+    },
+    {
+      "path": "inputs/before.json",
+      "sha256": "dba00ff19da1a85c0ebdf3df39b02973dbb613c1e858bdc86b7ff5aa88bfb0ab",
+      "protected": true
+    },
+    {
+      "path": "inputs/invalid-duplicate.json",
+      "sha256": "003242356433fecc7403302b52dfe7f8b6fab21624444d1b998ff50629f927ce",
+      "protected": true
+    },
+    {
+      "path": "inputs/invalid-number.json",
+      "sha256": "1081e9925aa50eb278a70993deda94b299b3cde6c0911709fe5dc122a33bb3c6",
+      "protected": true
+    }
+  ]
+}

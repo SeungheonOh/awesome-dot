@@ -1,0 +1,58 @@
+{
+  "scope": "Fictional fixed-section model only; temporary local Markdown save/readback; no live documents or connector calls",
+  "command": "python3 check_example.py",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "fixture_digest": "6946606b6050cf446c5f92cec516e1e164dcfb8a998db4efd0a8626d3262ecbd",
+  "candidate_digest": "80c51f3a063b882d37c6f66d25c516fa5008689dfb57745e9ac83060cdeae0f9",
+  "checks": {
+    "accepted edits and provenance": "passed",
+    "unresolved alternatives with baseline treatment": "passed",
+    "protected wording and source immutability": "passed",
+    "timestamp does not decide acceptance": "passed",
+    "stale source approval refused": "passed",
+    "ambiguous section identity refused": "passed",
+    "protected target refused": "passed",
+    "changed destination refused without overwrite": "passed",
+    "authorized candidate saved and read back": "passed"
+  },
+  "accepted": [
+    {
+      "change": "E1",
+      "anchor": "EXPORT",
+      "source": "branch-a-r5",
+      "basis": "fictional-user-message-21",
+      "snapshot_digest": "721d88da9b973de0579b910eb185c17e1e73093e18000186191fd093521d8c42",
+      "before": "Use numbered filenames.",
+      "after": "Use the entry identifier as the filename."
+    },
+    {
+      "change": "E2",
+      "anchor": "PURPOSE",
+      "source": "branch-b-r8",
+      "basis": "fictional-user-message-21",
+      "snapshot_digest": "f88b9b685655a7e71a71d5be1caa68ef7a52c144493b1b12acd4b645e6716b18",
+      "before": "Prepare image entries for the archive.",
+      "after": "Prepare image entries and descriptive alt text for the archive."
+    }
+  ],
+  "unresolved": [
+    {
+      "anchor": "COVER",
+      "alternatives": [
+        {
+          "source": "branch-a-r5",
+          "anchor": "COVER",
+          "text": "Use a blue cover."
+        },
+        {
+          "source": "branch-b-r8",
+          "anchor": "COVER",
+          "text": "Use a green cover."
+        }
+      ],
+      "treatment": "Retain baseline in a draft candidate, as explicitly requested",
+      "question": "Should the archive guide use the blue or green cover?"
+    }
+  ]
+}

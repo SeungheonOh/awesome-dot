@@ -1,0 +1,30 @@
+{
+  "case_id": "F5",
+  "sources": [
+    {
+      "path": "inputs/acceptance.txt",
+      "sha256": "29947f4ae01ac80c84522cd0f0ffbe30058f658b5016c10eecdb3bcc126429e8",
+      "protected": true
+    },
+    {
+      "path": "inputs/baseline.txt",
+      "sha256": "537fa78c45c6b6d451aaaa849975136aadac0cfae53017c65c352f61ae5ca916",
+      "protected": true
+    },
+    {
+      "path": "inputs/edit-a.txt",
+      "sha256": "591a0a9822ab27a4bd0d8ec39c6ee4d2a1758395dbdb8bf28588279c67bb85ec",
+      "protected": true
+    },
+    {
+      "path": "inputs/edit-b.txt",
+      "sha256": "b6e47e2257610187d3758ebb4637a75e880778c014114d79cead080554b052cd",
+      "protected": true
+    },
+    {
+      "path": "inputs/lineage.txt",
+      "sha256": "0d291dce482e23dbdc0cc728f21df5833ff006c8d2a40e88b4ca968fa1f58f7f",
+      "protected": true
+    }
+  ]
+}

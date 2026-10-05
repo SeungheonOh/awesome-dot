@@ -1,0 +1,39 @@
+{
+  "case_id": "F2",
+  "groups": {
+    "g1": {
+      "passed": false,
+      "evidence": [
+        "Synthetic adverse annotation: EX-16 agreed in M07 is absent from actions.json."
+      ]
+    },
+    "g2": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g2 rubric; for validator wiring only."
+      ]
+    },
+    "g3": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g3 rubric; for validator wiring only."
+      ]
+    },
+    "g4": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g4 rubric; for validator wiring only."
+      ]
+    },
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g5 rubric; for validator wiring only."
+      ]
+    }
+  },
+  "submission_hashes": {
+    "actions.json": "f987beea75ed4abe6890b883a19b244edae9909557b8a0fc24b2bbd3ab53af3c",
+    "handoff.txt": "8bab8a1789b48745c2374cb22c99149c98cd80e54f6204a0a8f61550d64e66f9"
+  }
+}

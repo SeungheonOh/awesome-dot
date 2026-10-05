@@ -1,0 +1,4 @@
+Command: python -m unittest discover -s tests -v
+Result: PASS
+Tests: 5
+The five local tests passed, including stale-choice invalidation through save/reload and unresolved first-save preservation. No external services were used.

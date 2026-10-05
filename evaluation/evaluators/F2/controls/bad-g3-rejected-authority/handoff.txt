@@ -1,0 +1,13 @@
+Prepared handoff as of 7 October 2026, 16:00 Europe/London (+01:00). No messages have been sent by the preparer.
+
+Open deliverables:
+- EX-11: Orin Patel owns the twelve-table-label print-ready PDF, to be deposited in the shared print folder by 9 October at 17:00. The repeated commitment is one action.
+- EX-12: Nel Arcos owns the separate six-wall-label print-ready PDF, to be deposited by 10 October. No clock time was agreed.
+- EX-13: Davi Moss now owns finalizing and depositing the approved eight-person volunteer rota, due 8 October at 18:00. Davi accepted Kira Beck's proposed reassignment and the revised deadline; the chair confirmed them (inputs/followups.txt#F01; inputs/followups.txt#F02; inputs/followups.txt#F03).
+- EX-14: Confirm the carry-in route with the steward and record it in the setup sheet by 8 October, with no agreed clock time. There is no owner. Who will accept EX-14? (inputs/meeting.txt#M05; inputs/followups.txt#F07)
+
+EX-15: Tessa Vale owns sending the final arrival pack to registered volunteers by 9 October at 12:00. Tessa reported it done, but the supplied artifact is an unsent draft, so completion is unverified and the action remains draft-only (inputs/followups.txt#F04; inputs/followups.txt#F05; inputs/arrival-draft.txt#D06). Can Tessa confirm whether it still needs sending, or supply an actual send record if it has since been sent?
+
+EX-16: Ivo Chen reported and demonstrably completed both display-audio output tests and recorded both passes; the original deadline was 9 October at 16:00 (inputs/followups.txt#F06; inputs/audio-check.txt#V01; inputs/audio-check.txt#V02; inputs/audio-check.txt#V03; inputs/audio-check.txt#V04).
+
+The unagreed sticker-sheet suggestion is excluded.

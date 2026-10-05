@@ -1,0 +1,33 @@
+{
+  "case_id": "F3",
+  "fixture_version": 1,
+  "time_cap_seconds": 900,
+  "time_cap_start": "runner process launch",
+  "time_cap_includes": [
+    "task execution",
+    "skill reading",
+    "self-checks"
+  ],
+  "time_cap_excludes": [
+    "setup",
+    "grading"
+  ],
+  "runtime": "Python 3.10+ standard library",
+  "network": false,
+  "model_execution": false,
+  "external_mutation": false,
+  "semantic_review_required": false,
+  "protected_packet": "../../cases/F3",
+  "required_artifacts": [
+    "options.json",
+    "explanation.txt"
+  ],
+  "groups": [
+    "g1",
+    "g2",
+    "g3",
+    "g4",
+    "g5"
+  ],
+  "integrity_gate": "SHA-256 of all supplied packet files including task and manifest"
+}

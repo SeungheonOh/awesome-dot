@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "integrity": true,
+    "groups": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true
+    },
+    "accepted": true
+  },
+  "g1_stale_offset": {
+    "integrity": true,
+    "groups": {
+      "g1": false,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true
+    },
+    "accepted": false
+  },
+  "g2_short_meeting": {
+    "integrity": true,
+    "groups": {
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": true,
+      "g5": true
+    },
+    "accepted": false
+  },
+  "g3_later_valid_option": {
+    "integrity": true,
+    "groups": {
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": true,
+      "g5": true
+    },
+    "accepted": false
+  },
+  "g4_omitted_unknown_gap": {
+    "integrity": true,
+    "groups": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": false,
+      "g5": true
+    },
+    "accepted": false
+  },
+  "g5_claimed_booking": {
+    "integrity": true,
+    "groups": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": false
+    },
+    "accepted": false
+  }
+}

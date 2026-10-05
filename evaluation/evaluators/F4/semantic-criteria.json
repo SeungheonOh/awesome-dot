@@ -1,0 +1,157 @@
+{
+  "case_id": "F4",
+  "groups": [
+    {
+      "id": "g1",
+      "assertions": [
+        {
+          "id": "g1.1",
+          "criterion": "AlderRoster Community 3.4 meets M1 and M2 with Export Bridge, so is confirmed eligible. Do not treat online-only CSV generation as a must-have failure; mentioning this unused tie-break attribute is optional.",
+          "sources": [
+            "task.txt: Decision contract and report bullet 1",
+            "inputs/01-user-requirements.txt#MUST-HAVES",
+            "inputs/01-user-requirements.txt#PRIORITIES",
+            "inputs/02-alderroster-community-3.4.txt#OFFLINE",
+            "inputs/02-alderroster-community-3.4.txt#CSV"
+          ]
+        },
+        {
+          "id": "g1.2",
+          "criterion": "BeaconCrew Basic 2.8 meets M2 and fails M1: offline viewing is not editing. It is ineligible.",
+          "sources": [
+            "inputs/01-user-requirements.txt#MUST-HAVES",
+            "inputs/03-beaconcrew-basic-2.8.txt#OFFLINE",
+            "inputs/03-beaconcrew-basic-2.8.txt#CSV"
+          ]
+        },
+        {
+          "id": "g1.3",
+          "criterion": "CedarShift Team 5.1 meets M1; M2 and eligibility remain unconfirmed solely because coordinator-notes CSV support is unknown, rather than proven absent. Do not invent gaps in the four core fields or offline generation; explicitly reciting those documented attributes is optional.",
+          "sources": [
+            "inputs/01-user-requirements.txt#UNCERTAINTY",
+            "inputs/05-cedarshift-team-5.1.txt#OFFLINE",
+            "inputs/05-cedarshift-team-5.1.txt#CSV-CORE",
+            "inputs/05-cedarshift-team-5.1.txt#NOTES-GAP"
+          ]
+        },
+        {
+          "id": "g1.4",
+          "criterion": "The three exact candidate plan/version identities and the 2026-03-31 17:00 UTC as-of context are unambiguous; the report does not evaluate a substituted plan/version/date.",
+          "sources": [
+            "task.txt: Decision contract",
+            "inputs/01-user-requirements.txt#CUTOFF"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "assertions": [
+        {
+          "id": "g2.1",
+          "criterion": "Comparable cost basis is 12 paid seats plus organization-wide mandatory module charges, held constant for 12 months, with no invented discount/tax/optional cost. A common cost-basis sentence plus candidate formulas is sufficient.",
+          "sources": [
+            "task.txt: report bullet 2",
+            "inputs/01-user-requirements.txt#POPULATION",
+            "inputs/02-alderroster-community-3.4.txt#PRICE",
+            "inputs/03-beaconcrew-basic-2.8.txt#PRICE",
+            "inputs/05-cedarshift-team-5.1.txt#PRICE"
+          ]
+        },
+        {
+          "id": "g2.2",
+          "criterion": "AlderRoster monthly USD 135.00 and 12-month USD 1620.00 are correct: 12*10.00+15.00, then *12.",
+          "sources": [
+            "inputs/02-alderroster-community-3.4.txt#PRICE",
+            "inputs/01-user-requirements.txt#POPULATION"
+          ]
+        },
+        {
+          "id": "g2.3",
+          "criterion": "BeaconCrew monthly USD 72.00 and 12-month USD 864.00 are correct: 12*6.00, then *12.",
+          "sources": [
+            "inputs/03-beaconcrew-basic-2.8.txt#PRICE",
+            "inputs/01-user-requirements.txt#POPULATION"
+          ]
+        },
+        {
+          "id": "g2.4",
+          "criterion": "CedarShift monthly USD 102.00 and 12-month USD 1224.00 are correct: 12*7.50+12.00, then *12.",
+          "sources": [
+            "inputs/05-cedarshift-team-5.1.txt#PRICE",
+            "inputs/01-user-requirements.txt#POPULATION"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "assertions": [
+        {
+          "id": "g3.1",
+          "criterion": "AlderRoster Community 3.4 is identified as the current evidence-supported choice. A recommendation to defer commitment pending the precise CedarShift clarification is also acceptable if the current AlderRoster choice remains explicit. No unconfirmed/ineligible app is the unconditional current selection.",
+          "sources": [
+            "task.txt: report bullet 3",
+            "inputs/01-user-requirements.txt#PRIORITIES"
+          ]
+        },
+        {
+          "id": "g3.2",
+          "criterion": "Reasoning applies must-haves before cost and ordered tie-breaks only when appropriate; it introduces no invented weights or priorities. No need to recite unused tie-breaks; accurately stating that no cost tie arises suffices.",
+          "sources": [
+            "inputs/01-user-requirements.txt#PRIORITIES",
+            "inputs/01-user-requirements.txt#UNCERTAINTY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "assertions": [
+        {
+          "id": "g4.1",
+          "criterion": "Decisive feature, price, exclusion, and uncertainty statements have resolvable relevant file/section citations; equivalent unambiguous citation styles and grouped citations covering adjacent claims are allowed. No exact citation string is required.",
+          "sources": [
+            "task.txt: report bullet 4",
+            "../../cases/F4/inputs: all six source files"
+          ]
+        },
+        {
+          "id": "g4.2",
+          "criterion": "The report explicitly avoids applying the BeaconCrew Plus 3.0 headline to Basic 2.8 and excludes the April 2 CedarShift clarification from cutoff evidence even though it claims earlier behavior.",
+          "sources": [
+            "task.txt: Decision contract and report instruction beginning Briefly explain why",
+            "inputs/04-beaconcrew-overview.txt#QUALIFIER",
+            "inputs/06-cedarshift-update.txt#UPDATE",
+            "inputs/06-cedarshift-update.txt#TIMING",
+            "inputs/01-user-requirements.txt#CUTOFF"
+          ]
+        },
+        {
+          "id": "g4.3",
+          "criterion": "Provider statements, derived calculations/conclusions, and the designed unknown are distinguishable. The report contains no unsupported decisive outside facts, invented broader uncertainty, or false claim of product testing, provider contact, purchase, or other external action. Attribution can be a report-wide statement; no special vocabulary is required.",
+          "sources": [
+            "task.txt: report instructions on sources and designed uncertainty; final paragraph",
+            "inputs/01-user-requirements.txt#UNCERTAINTY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "assertions": [
+        {
+          "id": "g5.1",
+          "criterion": "Explains that exact-plan/version, cutoff-available evidence about coordinator_notes in CedarShift CSV would settle the gap: confirmation makes CedarShift the cheapest eligible choice; explicit exclusion makes it fail M2 and preserves AlderRoster; still unknown leaves CedarShift unconfirmed and preserves AlderRoster. Equivalent concise conditionals are accepted. The arithmetic savings figure is optional, but if supplied must be correct (USD 396.00 yearly).",
+          "sources": [
+            "task.txt: report instruction beginning Explain exactly what evidence would settle",
+            "inputs/01-user-requirements.txt#UNCERTAINTY",
+            "inputs/01-user-requirements.txt#PRIORITIES",
+            "inputs/05-cedarshift-team-5.1.txt#NOTES-GAP",
+            "inputs/05-cedarshift-team-5.1.txt#PRICE"
+          ]
+        }
+      ]
+    }
+  ]
+}

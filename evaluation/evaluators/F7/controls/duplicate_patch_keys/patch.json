@@ -1,0 +1,63 @@
+[
+  {
+    "op": "add", "op": "replace",
+    "path": "/catalogue/title",
+    "value": "Summer kits"
+  },
+  {
+    "op": "replace",
+    "path": "/catalogue/items/0/stock",
+    "value": 9007199254740994
+  },
+  {
+    "op": "replace",
+    "path": "/catalogue/items/0/tags/1",
+    "value": "amber"
+  },
+  {
+    "op": "remove",
+    "path": "/catalogue/items/0/tags/2"
+  },
+  {
+    "op": "remove",
+    "path": "/catalogue/items/0/optional"
+  },
+  {
+    "op": "replace",
+    "path": "/catalogue/items/1/name",
+    "value": "Beacon card II"
+  },
+  {
+    "op": "replace",
+    "path": "/catalogue/items/1/optional",
+    "value": null
+  },
+  {
+    "op": "remove",
+    "path": "/catalogue/items/2"
+  },
+  {
+    "op": "replace",
+    "path": "/labels/",
+    "value": "release"
+  },
+  {
+    "op": "replace",
+    "path": "/labels/a~1b",
+    "value": "shelf-east"
+  },
+  {
+    "op": "replace",
+    "path": "/labels/x~0y",
+    "value": "v2"
+  },
+  {
+    "op": "remove",
+    "path": "/labels/drop"
+  },
+  {
+    "op": "add",
+    "path": "/labels/new",
+    "value": null
+  }
+]

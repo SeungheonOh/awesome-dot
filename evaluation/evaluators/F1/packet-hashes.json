@@ -1,0 +1,10 @@
+{
+  "case_id": "F1",
+  "algorithm": "sha256",
+  "files": {
+    "inputs/evidence.csv": "340ff7835e3c22a3b7e18d811c4280d32807ce2e6d63c066fa2dfb64a20661c4",
+    "inputs/policy.txt": "ad3d13ebe1d0013b9b5353331180c118b79e19b15b9cd1352917ae58d24226ba",
+    "task.txt": "32ba7c1d1cd401e1c4e7b6474faa83b6701981b09fe0c9722044271a752aaa62",
+    "input-manifest.json": "de8d176c38e149666e46d242cdc8e34872643b7575e8d2283867a72df3ad4843"
+  }
+}

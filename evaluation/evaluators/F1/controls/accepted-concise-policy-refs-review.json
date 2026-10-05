@@ -1,0 +1,16 @@
+{
+  "case_id": "F1",
+  "groups": {
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "Synthetic accepted-variation annotation: decisive treatment sections and explanatory notes provide adequate policy support; an identical citation set is not required."
+      ]
+    }
+  },
+  "submission_hashes": {
+    "claim-lines.csv": "3fb31307e1a546518882f93d73bb9ca0c82c072edd9cfad65a5f540044573097",
+    "source-map.csv": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+    "exceptions.txt": "394b93d2ff107eb4c2d2b2108ee7b20c5738f090e293c7983a901edbedd82450"
+  }
+}

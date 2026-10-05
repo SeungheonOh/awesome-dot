@@ -1,0 +1,313 @@
+{
+  "record_kind": "eight_pretrial_authored_A_cases",
+  "packets": [
+    {
+      "case_id": "F1",
+      "root": "cases/F1",
+      "files": [
+        {
+          "path": "input-manifest.json",
+          "sha256": "de8d176c38e149666e46d242cdc8e34872643b7575e8d2283867a72df3ad4843",
+          "bytes": 336
+        },
+        {
+          "path": "inputs/evidence.csv",
+          "sha256": "340ff7835e3c22a3b7e18d811c4280d32807ce2e6d63c066fa2dfb64a20661c4",
+          "bytes": 1659
+        },
+        {
+          "path": "inputs/policy.txt",
+          "sha256": "ad3d13ebe1d0013b9b5353331180c118b79e19b15b9cd1352917ae58d24226ba",
+          "bytes": 2810
+        },
+        {
+          "path": "task.txt",
+          "sha256": "32ba7c1d1cd401e1c4e7b6474faa83b6701981b09fe0c9722044271a752aaa62",
+          "bytes": 3733
+        }
+      ]
+    },
+    {
+      "case_id": "F2",
+      "root": "cases/F2",
+      "files": [
+        {
+          "path": "input-manifest.json",
+          "sha256": "ba1e35ae7fb7b316dd0ad79faaf81c92d93d573efe2e2d546eedd51d3f626250",
+          "bytes": 630
+        },
+        {
+          "path": "inputs/arrival-draft.txt",
+          "sha256": "8c2ce18a3236a675deacac6453c7ff6d93a2722f434c19e5481ed8fe6ab30812",
+          "bytes": 443
+        },
+        {
+          "path": "inputs/audio-check.txt",
+          "sha256": "1a2ff6f231e7d4974cc4c1baca892d2dff3ee649296684d4cf2ff0a0b1bd1e61",
+          "bytes": 390
+        },
+        {
+          "path": "inputs/followups.txt",
+          "sha256": "663f55dc8e434b278ec598495490fccda093ed2d8fb15d6eab07cf55b5b43af7",
+          "bytes": 1268
+        },
+        {
+          "path": "inputs/meeting.txt",
+          "sha256": "fda24e7023ad6ba85dcd4e6aaa997db849efbbf46aef22a43df6e8ab2d50e834",
+          "bytes": 1996
+        },
+        {
+          "path": "inputs/people.json",
+          "sha256": "9816157a7608139f73d84a483f3b5d2d4c9a767637b9dd28f33747bccf09ff4c",
+          "bytes": 406
+        },
+        {
+          "path": "task.txt",
+          "sha256": "2e792764dbfdb9c20d062d2c62a1137d672282c046d521fa76a3ef9e65e0b636",
+          "bytes": 4536
+        }
+      ]
+    },
+    {
+      "case_id": "F3",
+      "root": "cases/F3",
+      "files": [
+        {
+          "path": "input-manifest.json",
+          "sha256": "f0b1d908113fcb451cbad28551b047df6dab76a697de1f6def798e259544a47f",
+          "bytes": 532
+        },
+        {
+          "path": "inputs/busy.csv",
+          "sha256": "6c248d69db366d3f107fd1c252ef7ba570f6194b1c12b07a7d5d72c1d7c210d1",
+          "bytes": 466
+        },
+        {
+          "path": "inputs/coverage.csv",
+          "sha256": "dc76b39da2857ad53750539b455269fc8887001c21ff2af5b66637bb813ca64b",
+          "bytes": 246
+        },
+        {
+          "path": "inputs/participants.json",
+          "sha256": "937e1239f9f3bfd03c6eab8e922cfe4080ae49e6eaf7d077d9306c747cdd1bfc",
+          "bytes": 3081
+        },
+        {
+          "path": "task.txt",
+          "sha256": "0ed74d1c2044020997cb4b4c58398066190367d5d6cae6a280a92e423b53ae99",
+          "bytes": 6509
+        }
+      ]
+    },
+    {
+      "case_id": "F4",
+      "root": "cases/F4",
+      "files": [
+        {
+          "path": "input-manifest.json",
+          "sha256": "4abffb0b8229ec6d01384c5eb4182bf8319b9636342f97fe992358f583c6382b",
+          "bytes": 1073
+        },
+        {
+          "path": "inputs/01-user-requirements.txt",
+          "sha256": "4fa1f7c240138c2e52d7f0777cf5cffc9733957ee1ea7a279fd5453d76d4a320",
+          "bytes": 2973
+        },
+        {
+          "path": "inputs/02-alderroster-community-3.4.txt",
+          "sha256": "dd817edba92820ff692d1cb606337f49ec03ceb2559104461f2f22e78a033695",
+          "bytes": 1093
+        },
+        {
+          "path": "inputs/03-beaconcrew-basic-2.8.txt",
+          "sha256": "bdd15ef18a1cfe4d817074893403ae1abb8eff96d609260b0b83d66f36aa2b59",
+          "bytes": 845
+        },
+        {
+          "path": "inputs/04-beaconcrew-overview.txt",
+          "sha256": "e73dcd53d41925d3aff094f0d8aeee3842b189dd6b7cc146047f0e063e9d8d99",
+          "bytes": 465
+        },
+        {
+          "path": "inputs/05-cedarshift-team-5.1.txt",
+          "sha256": "36d5c2bbbc557d3ef77b228eac76af96c3eef6c6f63c0ad3e8a91e56b509a705",
+          "bytes": 1657
+        },
+        {
+          "path": "inputs/06-cedarshift-update.txt",
+          "sha256": "d7763ad4b9d3a366f4cdac53f02f85fb373ebbc58a23b84715ae80a9d0d5a44a",
+          "bytes": 531
+        },
+        {
+          "path": "task.txt",
+          "sha256": "1e08d67a65562061323f3b7f0ded81a215556ca452f544a817e1673d2b7a4ded",
+          "bytes": 3628
+        }
+      ]
+    },
+    {
+      "case_id": "F5",
+      "root": "cases/F5",
+      "files": [
+        {
+          "path": "input-manifest.json",
+          "sha256": "583a214437d9d0cbbd6915e0776357517031a769744d5ca10f744782cc30ca40",
+          "bytes": 828
+        },
+        {
+          "path": "inputs/acceptance.txt",
+          "sha256": "29947f4ae01ac80c84522cd0f0ffbe30058f658b5016c10eecdb3bcc126429e8",
+          "bytes": 1297
+        },
+        {
+          "path": "inputs/baseline.txt",
+          "sha256": "537fa78c45c6b6d451aaaa849975136aadac0cfae53017c65c352f61ae5ca916",
+          "bytes": 641
+        },
+        {
+          "path": "inputs/edit-a.txt",
+          "sha256": "591a0a9822ab27a4bd0d8ec39c6ee4d2a1758395dbdb8bf28588279c67bb85ec",
+          "bytes": 661
+        },
+        {
+          "path": "inputs/edit-b.txt",
+          "sha256": "b6e47e2257610187d3758ebb4637a75e880778c014114d79cead080554b052cd",
+          "bytes": 642
+        },
+        {
+          "path": "inputs/lineage.txt",
+          "sha256": "0d291dce482e23dbdc0cc728f21df5833ff006c8d2a40e88b4ca968fa1f58f7f",
+          "bytes": 535
+        },
+        {
+          "path": "task.txt",
+          "sha256": "498976982e2215783c18ed6139bc9618735f6dde16e0fc7696c0f647836f1ed7",
+          "bytes": 4562
+        }
+      ]
+    },
+    {
+      "case_id": "F6",
+      "root": "cases/F6",
+      "files": [
+        {
+          "path": "input-manifest.json",
+          "sha256": "2467d5796726dd71fe5573a1c38115539bd81ecb3adcead731de5a767b181fcf",
+          "bytes": 991
+        },
+        {
+          "path": "inputs/line_items.csv",
+          "sha256": "43bd1504e2dbf30798e49ba85fd8c6413f60c8527eba6f47a1b5232ff7acd1fb",
+          "bytes": 209
+        },
+        {
+          "path": "inputs/orders.csv",
+          "sha256": "e3ee4870cafb11b5d176c7fdec0ccc55e6b7ed7de0ac4be33f452ad93669a259",
+          "bytes": 500
+        },
+        {
+          "path": "inputs/orders.sqlite3",
+          "sha256": "ce08308a64ef27619726ece4015d9e2d8409a32168031df32f15b0a8c9100441",
+          "bytes": 28672
+        },
+        {
+          "path": "inputs/parameters.json",
+          "sha256": "98ceaed16b674d53e56ad8c87bdf21f2042267ada9c81a13b36b1f141634a87a",
+          "bytes": 749
+        },
+        {
+          "path": "inputs/refunds.csv",
+          "sha256": "eda797a722cd3cceffeb5bbfd496f5dc02a5e72131815e1ee2cda84e6459a772",
+          "bytes": 586
+        },
+        {
+          "path": "inputs/schema.sql",
+          "sha256": "0e7ceb96038beb4f4e0f6d529491a206af7749223b636480df961907d5b242f7",
+          "bytes": 447
+        },
+        {
+          "path": "task.txt",
+          "sha256": "c1073c0cef27cd5095db82df260d2046ee151e249c32d3f7d67db332a8458e96",
+          "bytes": 6372
+        }
+      ]
+    },
+    {
+      "case_id": "F7",
+      "root": "cases/F7",
+      "files": [
+        {
+          "path": "input-manifest.json",
+          "sha256": "c01c0f15184b15a45d9d61c6ab7bd280624c26d6aa56c80f1dc9f148fa4f41f0",
+          "bytes": 687
+        },
+        {
+          "path": "inputs/after.json",
+          "sha256": "e2b5a657f3d7d292c7efa9359c3b8f0e45585f514440a78d27593c8c68bfcc64",
+          "bytes": 668
+        },
+        {
+          "path": "inputs/before.json",
+          "sha256": "dba00ff19da1a85c0ebdf3df39b02973dbb613c1e858bdc86b7ff5aa88bfb0ab",
+          "bytes": 820
+        },
+        {
+          "path": "inputs/invalid-duplicate.json",
+          "sha256": "003242356433fecc7403302b52dfe7f8b6fab21624444d1b998ff50629f927ce",
+          "bytes": 70
+        },
+        {
+          "path": "inputs/invalid-number.json",
+          "sha256": "1081e9925aa50eb278a70993deda94b299b3cde6c0911709fe5dc122a33bb3c6",
+          "bytes": 50
+        },
+        {
+          "path": "task.txt",
+          "sha256": "abe019c8f4f3b0e3159ea310c1227d6c757a5a7e1088cee7ca8ad2c4e318aa0e",
+          "bytes": 5496
+        }
+      ]
+    },
+    {
+      "case_id": "F8",
+      "root": "cases/F8",
+      "files": [
+        {
+          "path": "input-manifest.json",
+          "sha256": "bfa0333640ae6d355127920c98bde8dd2d7e03adccf0b6ad11aebf8e5608d14f",
+          "bytes": 1277
+        },
+        {
+          "path": "inputs/scaffold/card_editor.py",
+          "sha256": "2e44e0f8f77d254d4d19fd8fc3fe61a3204814e2e9642c1a18c323c676ce553c",
+          "bytes": 1253
+        },
+        {
+          "path": "inputs/scaffold/demo_cards.json",
+          "sha256": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+          "bytes": 419
+        },
+        {
+          "path": "inputs/scaffold/merge_primitive.py",
+          "sha256": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+          "bytes": 944
+        },
+        {
+          "path": "inputs/scaffold/merge_session.py",
+          "sha256": "566e60c6a81eb8540192128aa4fb5a8a99e9338b0e7f51c0ca8a12df186bc2ec",
+          "bytes": 3429
+        },
+        {
+          "path": "inputs/scaffold/tests/test_smoke.py",
+          "sha256": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+          "bytes": 992
+        },
+        {
+          "path": "task.txt",
+          "sha256": "f46857e7d3c1b52e9d71cdf86f962064a23c9e69950093a614e234ce9efb2335",
+          "bytes": 10808
+        }
+      ]
+    }
+  ]
+}

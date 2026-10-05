@@ -1,0 +1,245 @@
+{
+  "case_id": "F1",
+  "claim_headers": [
+    "transaction_id",
+    "date",
+    "kind",
+    "currency",
+    "source_minor",
+    "business_minor",
+    "cap_adjustment_minor",
+    "claim_minor",
+    "status",
+    "source_refs",
+    "policy_refs"
+  ],
+  "claim_rows": [
+    {
+      "transaction_id": "T01",
+      "date": "2026-09-17",
+      "kind": "expense",
+      "currency": "GBP",
+      "source_minor": "2835",
+      "business_minor": "2835",
+      "cap_adjustment_minor": "0",
+      "claim_minor": "2835",
+      "status": "ready",
+      "source_refs": "S01;S08;S11",
+      "policy_refs": "inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P3;inputs/policy.txt#P6"
+    },
+    {
+      "transaction_id": "T02",
+      "date": "2026-09-17",
+      "kind": "expense",
+      "currency": "GBP",
+      "source_minor": "2470",
+      "business_minor": "2470",
+      "cap_adjustment_minor": "-205",
+      "claim_minor": "2265",
+      "status": "ready",
+      "source_refs": "S02;S07;S09;S12",
+      "policy_refs": "inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P3;inputs/policy.txt#P6"
+    },
+    {
+      "transaction_id": "T03",
+      "date": "2026-09-19",
+      "kind": "credit",
+      "currency": "GBP",
+      "source_minor": "-600",
+      "business_minor": "-600",
+      "cap_adjustment_minor": "0",
+      "claim_minor": "-600",
+      "status": "ready",
+      "source_refs": "S03;S10",
+      "policy_refs": "inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P3;inputs/policy.txt#P6"
+    },
+    {
+      "transaction_id": "T04",
+      "date": "2026-09-17",
+      "kind": "expense",
+      "currency": "GBP",
+      "source_minor": "3199",
+      "business_minor": "1999",
+      "cap_adjustment_minor": "0",
+      "claim_minor": "1999",
+      "status": "ready",
+      "source_refs": "S04;S13",
+      "policy_refs": "inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P4;inputs/policy.txt#P6"
+    },
+    {
+      "transaction_id": "T05",
+      "date": "2026-09-17",
+      "kind": "expense",
+      "currency": "GBP",
+      "source_minor": "1275",
+      "business_minor": "1275",
+      "cap_adjustment_minor": "0",
+      "claim_minor": "1275",
+      "status": "ready",
+      "source_refs": "S05;S14",
+      "policy_refs": "inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P5;inputs/policy.txt#P6"
+    },
+    {
+      "transaction_id": "T06",
+      "date": "2026-09-17",
+      "kind": "expense",
+      "currency": "GBP",
+      "source_minor": "1488",
+      "business_minor": "",
+      "cap_adjustment_minor": "",
+      "claim_minor": "",
+      "status": "unresolved",
+      "source_refs": "S06;S15",
+      "policy_refs": "inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P6"
+    }
+  ],
+  "map_headers": [
+    "source_id",
+    "transaction_id",
+    "disposition",
+    "locator"
+  ],
+  "map_rows": [
+    {
+      "source_id": "S01",
+      "transaction_id": "T01",
+      "disposition": "primary",
+      "locator": "inputs/evidence.csv#S01"
+    },
+    {
+      "source_id": "S02",
+      "transaction_id": "T02",
+      "disposition": "primary",
+      "locator": "inputs/evidence.csv#S02"
+    },
+    {
+      "source_id": "S03",
+      "transaction_id": "T03",
+      "disposition": "primary",
+      "locator": "inputs/evidence.csv#S03"
+    },
+    {
+      "source_id": "S04",
+      "transaction_id": "T04",
+      "disposition": "primary",
+      "locator": "inputs/evidence.csv#S04"
+    },
+    {
+      "source_id": "S05",
+      "transaction_id": "T05",
+      "disposition": "primary",
+      "locator": "inputs/evidence.csv#S05"
+    },
+    {
+      "source_id": "S06",
+      "transaction_id": "T06",
+      "disposition": "primary",
+      "locator": "inputs/evidence.csv#S06"
+    },
+    {
+      "source_id": "S07",
+      "transaction_id": "T02",
+      "disposition": "duplicate",
+      "locator": "inputs/evidence.csv#S07"
+    },
+    {
+      "source_id": "S08",
+      "transaction_id": "T01",
+      "disposition": "supporting",
+      "locator": "inputs/evidence.csv#S08"
+    },
+    {
+      "source_id": "S09",
+      "transaction_id": "T02",
+      "disposition": "supporting",
+      "locator": "inputs/evidence.csv#S09"
+    },
+    {
+      "source_id": "S10",
+      "transaction_id": "T03",
+      "disposition": "supporting",
+      "locator": "inputs/evidence.csv#S10"
+    },
+    {
+      "source_id": "S11",
+      "transaction_id": "T01",
+      "disposition": "supporting",
+      "locator": "inputs/evidence.csv#S11"
+    },
+    {
+      "source_id": "S12",
+      "transaction_id": "T02",
+      "disposition": "supporting",
+      "locator": "inputs/evidence.csv#S12"
+    },
+    {
+      "source_id": "S13",
+      "transaction_id": "T04",
+      "disposition": "supporting",
+      "locator": "inputs/evidence.csv#S13"
+    },
+    {
+      "source_id": "S14",
+      "transaction_id": "T05",
+      "disposition": "supporting",
+      "locator": "inputs/evidence.csv#S14"
+    },
+    {
+      "source_id": "S15",
+      "transaction_id": "T06",
+      "disposition": "supporting",
+      "locator": "inputs/evidence.csv#S15"
+    }
+  ],
+  "totals": {
+    "ready_subtotal_minor": 7774,
+    "source_total_minor": 10667,
+    "personal_excluded_minor": 1200,
+    "unresolved_source_minor": 1488
+  },
+  "independent_arithmetic": {
+    "gross_meals_minor": 5305,
+    "signed_group_after_credit_minor": 4705,
+    "meal_cap_minor": 4500,
+    "overage_minor": 205,
+    "known_business_total_minor": 7979,
+    "claim_subtotal_minor": 7774
+  },
+  "illustrative_policy_sections": {
+    "T01": [
+      "inputs/policy.txt#P1",
+      "inputs/policy.txt#P2",
+      "inputs/policy.txt#P3",
+      "inputs/policy.txt#P6"
+    ],
+    "T02": [
+      "inputs/policy.txt#P1",
+      "inputs/policy.txt#P2",
+      "inputs/policy.txt#P3",
+      "inputs/policy.txt#P6"
+    ],
+    "T03": [
+      "inputs/policy.txt#P1",
+      "inputs/policy.txt#P2",
+      "inputs/policy.txt#P3",
+      "inputs/policy.txt#P6"
+    ],
+    "T04": [
+      "inputs/policy.txt#P1",
+      "inputs/policy.txt#P2",
+      "inputs/policy.txt#P4",
+      "inputs/policy.txt#P6"
+    ],
+    "T05": [
+      "inputs/policy.txt#P1",
+      "inputs/policy.txt#P2",
+      "inputs/policy.txt#P5",
+      "inputs/policy.txt#P6"
+    ],
+    "T06": [
+      "inputs/policy.txt#P1",
+      "inputs/policy.txt#P2",
+      "inputs/policy.txt#P6"
+    ]
+  }
+}

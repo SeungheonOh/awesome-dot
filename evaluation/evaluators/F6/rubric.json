@@ -1,0 +1,101 @@
+{
+  "case_id": "F6",
+  "version": 2,
+  "groups": [
+    {
+      "id": "g1",
+      "basis": [
+        "task.txt: population/grain/timestamps",
+        "inputs/parameters.json",
+        "inputs/orders.csv"
+      ],
+      "criteria": [
+        "Channels and counts match settled/shipped orders in the half-open ordered_at period",
+        "as_of filters only refund events, inclusively",
+        "Integer counts and minor-unit amounts under all five public parameter scenarios"
+      ],
+      "allowed_equivalence": [
+        "Any safe standard SQLite SELECT/CTE implementation meeting the explicit resource limits"
+      ]
+    },
+    {
+      "id": "g2",
+      "basis": [
+        "task.txt: entity counts and sums",
+        "inputs/orders.csv",
+        "inputs/line_items.csv",
+        "inputs/refunds.csv"
+      ],
+      "criteria": [
+        "Every distinct order/line/refund ID contributes exactly once",
+        "Equal-valued distinct rows remain distinct",
+        "No join fan-out or deduplication by amount"
+      ],
+      "allowed_equivalence": [
+        "Preaggregation, correlated subqueries, filtered scalar sums and other equivalent algorithms"
+      ]
+    },
+    {
+      "id": "g3",
+      "basis": [
+        "task.txt: complete/unknown/unallocated metric rules"
+      ],
+      "criteria": [
+        "Complete zero-child orders counted as known zero",
+        "Partial or missing child capture yields unknown gross/net while retaining known subtotal",
+        "Mandatory separate unmatched-order refund row; out-of-cohort existing orders excluded",
+        "Unallocated net remains NULL; negative known net allowed"
+      ],
+      "allowed_equivalence": [
+        "Alternative correct null-preserving SQL expressions"
+      ]
+    },
+    {
+      "id": "g4",
+      "basis": [
+        "task.txt: parameterized report.sql",
+        "oracle.py",
+        "oracle-inputs.json"
+      ],
+      "criteria": [
+        "Read-only saved SQL runs under restricted SQLite worker",
+        "Exact ordered columns and per-channel values match independent direct record calculation for all five visible parameter scenarios"
+      ],
+      "allowed_equivalence": [
+        "SQL source text/structure/aliases inside the query may vary; final required column names remain exact"
+      ]
+    },
+    {
+      "id": "g5",
+      "basis": [
+        "task.txt: CSV/notes declarations and agreement"
+      ],
+      "criteria": [
+        "Saved CSV contains exact main-scenario values and canonical integer/NULL representations",
+        "Saved CSV agrees with executed saved SQL",
+        "Required notes declarations appear once with exact main parameters and metric meanings"
+      ],
+      "allowed_equivalence": [
+        "Optional additional truthful plain-language explanations require source-grounded review if consequential claims appear"
+      ]
+    }
+  ],
+  "integrity": {
+    "basis": "All original runner files, including task and input manifest, bound by evaluator-owned hashes; common safe regular-file contract",
+    "checks": [
+      "No symlink in any path component; bounded regular-file reads",
+      "Hash every original runner file against the independent evaluator-owned runner_files manifest"
+    ],
+    "note": "These local file checks do not establish absence of external actions. The parent harness must independently review execution trace/policy integrity, including any claimed actions, before final trial acceptance."
+  },
+  "acceptance": "All five binary groups and source integrity true; full trial acceptance additionally requires harness process-integrity gate. Unknown evidence is not imputed as a pass.",
+  "quality": "Number of passing behavioral groups / 5",
+  "blinding": "Do not stage any evaluator, rubric, expected output, reference, control or result file into runner workspaces.",
+  "safe_artifact_limits": {
+    "sql_bytes": 100000,
+    "csv_bytes": 1048576,
+    "notes_bytes": 1048576,
+    "aggregate_query_json_bytes": 1048576
+  },
+  "infrastructure_gate": "Trusted worker launch/setup failures produce pending/null, never behavioral failure; query contract/resource violations are ordinary task failures"
+}

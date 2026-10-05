@@ -1,0 +1,18 @@
+Willowbank Volunteer Circle — approved comparison instructions
+Published: 2026-03-30 10:00 UTC
+
+[POPULATION]
+We need 12 coordinator accounts for the entire next 12-month term. Every coordinator requires a paid user seat. Volunteers do not need accounts and create no extra fees. Use the stated current monthly prices for all 12 months, without prorating. Currency is USD. Ignore tax, exchange rates, discounts, setup, migration, and optional modules: each is zero or excluded for this comparison. Multiply the total monthly recurring charge by 12; do not assume an annual-plan discount.
+
+[MUST-HAVES]
+M1: On a desktop browser, after initial online sign-in and roster synchronization, coordinators must be able to edit the existing roster while disconnected and save changes locally until reconnection. The edits must include assigning an existing volunteer, changing a role, and editing coordinator notes. Offline viewing alone does not satisfy M1. First-time offline sign-in, creating new volunteers offline, and concurrent-offline conflict behavior are outside scope.
+M2: An ordinary CSV export of the roster must include shift date, shift start time, assigned volunteer name, role, and coordinator notes. The CSV may be generated while online. A PDF, screenshot, non-CSV download, or CSV lacking any required field does not satisfy M2. A paid module may satisfy a must-have if its required cost is included.
+
+[PRIORITIES]
+A candidate is eligible for a definite recommendation only when evidence available by the cutoff explicitly supports both M1 and M2 for that exact plan/version. An unresolved must-have is unconfirmed, not proof of non-support, but prevents definite eligibility. Among eligible candidates, choose the lowest 12-month recurring total. If those totals tie, prefer generating the complete CSV offline; if still tied, prefer fewer required paid modules. These are ordered tie-breaks, not weighted scores. No other priorities apply.
+
+[UNCERTAINTY]
+The only designed gap is whether CedarShift Team 5.1's CSV Pack includes the coordinator-notes field in CSV. Its offline editing, four core CSV fields, offline availability of CSV generation, and prices are documented. A specific plan/version CSV field list or provider clarification available by the cutoff confirming inclusion would settle the gap positively; such evidence explicitly excluding the field would settle it negatively. If the field remains unknown, treat CedarShift as unconfirmed. Do not assume that a generic download claim includes CSV. Explain how each of these three evidence outcomes changes or preserves the recommendation. Do not invent any additional reliability, support, compatibility, security, or migration uncertainty in this bounded comparison.
+
+[CUTOFF]
+Use only claims published at or before 2026-03-31 17:00 UTC as decision evidence. The presence of a later update in this packet does not override this rule. Report the choice as of that cutoff, not as of today's date.

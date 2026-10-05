@@ -1,0 +1,6 @@
+[D01] Deliverable: EX-15
+[D02] Artifact type: outgoing-message draft; state: DRAFT; last edited 2026-10-07T10:00:00+01:00
+[D03] To: registered exhibition volunteers (prefilled recipient group only)
+[D04] Subject: Lumen Quay arrival pack
+[D05] Body: Please use the attached exhibition arrival plan. The setup team will meet at the entrance shown in the plan.
+[D06] Transport record: none. Sent timestamp: none. This artifact has not been sent.

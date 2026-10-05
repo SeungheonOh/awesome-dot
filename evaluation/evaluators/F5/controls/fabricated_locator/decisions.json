@@ -1,0 +1,166 @@
+{
+  "candidate_file": "candidate.txt",
+  "candidate_sha256": "6141bf7d6d8c3e073d9a31560e6e1e4d86ef544dab1b34b4fcad6846e661910e",
+  "source_sha256": {
+    "inputs/acceptance.txt": "29947f4ae01ac80c84522cd0f0ffbe30058f658b5016c10eecdb3bcc126429e8",
+    "inputs/baseline.txt": "537fa78c45c6b6d451aaaa849975136aadac0cfae53017c65c352f61ae5ca916",
+    "inputs/edit-a.txt": "591a0a9822ab27a4bd0d8ec39c6ee4d2a1758395dbdb8bf28588279c67bb85ec",
+    "inputs/edit-b.txt": "b6e47e2257610187d3758ebb4637a75e880778c014114d79cead080554b052cd",
+    "inputs/lineage.txt": "0d291dce482e23dbdc0cc728f21df5833ff006c8d2a40e88b4ca968fa1f58f7f"
+  },
+  "records": [
+    {
+      "id": "C-CLOTHS",
+      "status": "applied",
+      "anchors": [
+        "BENCH"
+      ],
+      "source_refs": [
+        "acceptance.txt#A1",
+        "baseline.txt#BENCH",
+        "edit-a.txt#BENCH",
+        "acceptance.txt#A99"
+      ],
+      "details": {
+        "before": "Each bench receives two blue cloths.",
+        "after": "Each bench receives three blue cloths."
+      }
+    },
+    {
+      "id": "C-MOVE",
+      "status": "applied",
+      "anchors": [
+        "CLOSE",
+        "SHARED"
+      ],
+      "source_refs": [
+        "acceptance.txt#A2",
+        "baseline.txt#CLOSE",
+        "edit-b.txt#CLOSE"
+      ],
+      "details": {
+        "before_order": [
+          "WELCOME",
+          "HOURS",
+          "BENCH",
+          "SHARED",
+          "CLOSE",
+          "CONTACT"
+        ],
+        "after_order": [
+          "WELCOME",
+          "HOURS",
+          "BENCH",
+          "CLOSE",
+          "SHARED",
+          "CONTACT"
+        ]
+      }
+    },
+    {
+      "id": "C-REFERENCE",
+      "status": "applied",
+      "anchors": [
+        "HOURS"
+      ],
+      "source_refs": [
+        "acceptance.txt#A2",
+        "baseline.txt#HOURS",
+        "edit-b.txt#HOURS"
+      ],
+      "details": {
+        "before": "For the host checklist, see section 5, Closing.",
+        "after": "For the host checklist, see section 4, Closing."
+      }
+    },
+    {
+      "id": "C-BADGES",
+      "status": "applied",
+      "anchors": [
+        "WELCOME"
+      ],
+      "source_refs": [
+        "acceptance.txt#A3",
+        "baseline.txt#WELCOME",
+        "edit-b.txt#WELCOME"
+      ],
+      "details": {
+        "before": "Place visitor badges in the green tray.",
+        "after": "Place visitor badges in the amber tray."
+      }
+    },
+    {
+      "id": "U-HOURS",
+      "status": "unresolved",
+      "anchors": [
+        "HOURS"
+      ],
+      "source_refs": [
+        "acceptance.txt#A4",
+        "baseline.txt#HOURS",
+        "edit-a.txt#HOURS",
+        "edit-b.txt#HOURS"
+      ],
+      "details": {
+        "retained": "Open Tuesday and Thursday, 17:00–20:00.",
+        "alternatives": [
+          {
+            "source": "edit-a.txt#HOURS",
+            "text": "Open Tuesday and Thursday, 16:00–20:00."
+          },
+          {
+            "source": "edit-b.txt#HOURS",
+            "text": "Open Wednesday and Thursday, 17:00–21:00."
+          }
+        ]
+      }
+    },
+    {
+      "id": "D-HOURS-CARD",
+      "status": "blocked",
+      "anchors": [
+        "HOURS"
+      ],
+      "source_refs": [
+        "acceptance.txt#A5",
+        "baseline.txt#HOURS"
+      ],
+      "details": {
+        "blocked_by": "U-HOURS",
+        "action": "Do not create or update the public hours card"
+      }
+    },
+    {
+      "id": "N-EMAIL",
+      "status": "not_applied",
+      "anchors": [
+        "CONTACT"
+      ],
+      "source_refs": [
+        "acceptance.txt#A6",
+        "baseline.txt#CONTACT",
+        "edit-a.txt#CONTACT"
+      ],
+      "details": {
+        "retained": "Write questions on the noticeboard.",
+        "excluded": "Write questions on the noticeboard or email the host."
+      }
+    },
+    {
+      "id": "N-CUPBOARD",
+      "status": "not_applied",
+      "anchors": [
+        "SHARED"
+      ],
+      "source_refs": [
+        "acceptance.txt#A6",
+        "baseline.txt#SHARED",
+        "edit-b.txt#SHARED"
+      ],
+      "details": {
+        "retained": "Shared tape lives in the north cupboard.",
+        "excluded": "Shared tape lives in the east cupboard."
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "case_id": "F8",
+  "schema": 1,
+  "runtime": "POSIX Python 3.11+ standard library with descriptor-based no-follow reads",
+  "time_limit_seconds": 1500,
+  "files": [
+    {
+      "path": "inputs/scaffold/card_editor.py",
+      "sha256": "2e44e0f8f77d254d4d19fd8fc3fe61a3204814e2e9642c1a18c323c676ce553c",
+      "role": "protected_input"
+    },
+    {
+      "path": "inputs/scaffold/demo_cards.json",
+      "sha256": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+      "role": "protected_input"
+    },
+    {
+      "path": "inputs/scaffold/merge_primitive.py",
+      "sha256": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+      "role": "protected_input"
+    },
+    {
+      "path": "inputs/scaffold/merge_session.py",
+      "sha256": "566e60c6a81eb8540192128aa4fb5a8a99e9338b0e7f51c0ca8a12df186bc2ec",
+      "role": "protected_input"
+    },
+    {
+      "path": "inputs/scaffold/tests/test_smoke.py",
+      "sha256": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+      "role": "protected_input"
+    }
+  ],
+  "artifact_limits": {
+    "per_file_bytes": 8388608,
+    "per_tree_bytes": 67108864,
+    "tree_entries": 1024,
+    "directory_depth": 16,
+    "regular_files_only": true,
+    "symlinks_allowed": false
+  }
+}

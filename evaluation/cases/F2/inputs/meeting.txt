@@ -1,0 +1,12 @@
+Lumen Quay exhibition planning meeting
+Meeting date: Tuesday, 2026-10-06, 15:00–15:40, Europe/London.
+Authoritative local UTC offset for every timestamp and deadline in this packet is +01:00. This packet never crosses an offset change. Treat Thursday this week as 2026-10-08, Friday as 2026-10-09, and Saturday as 2026-10-10.
+
+[M01] Chair: We agree EX-11: create a print-ready PDF of the twelve table labels. Completion means the final PDF has been deposited in the shared print folder; it is separate from the wall labels. Orin Patel: I own EX-11 and will deposit it by Friday at 17:00.
+[M02] Chair: We also agree EX-12: create a print-ready PDF of the six wall labels, a separately usable deliverable. Nel Arcos: I own EX-12 and will deposit that PDF in the print folder by Saturday. No clock time was agreed.
+[M03] Orin Patel: Repeating my EX-11 commitment so it is on the record: the table-label PDF will be in the print folder on Friday by 17:00. Chair: Yes, that is the same EX-11 commitment, not another set of labels.
+[M04] Chair: We agree EX-13: finalize the 8-person volunteer rota and deposit the approved roster in the shared folder. Kira Beck accepts ownership, with Thursday at 12:00 as the deadline.
+[M05] Chair: We agree EX-14: verify the exhibit carry-in route with the building steward and record the confirmed route in our setup sheet by Thursday. Ownership remains unassigned. No one accepted it in this meeting, and no clock time was agreed.
+[M06] Chair: We agree EX-15: send the final arrival pack to the registered exhibition volunteers. Completion requires actual sending, not just drafting. Tessa Vale: I accept; I will send it by Friday at 12:00.
+[M07] Chair: We agree EX-16: test both display-audio cable outputs and record pass/fail results in the equipment log by Friday at 16:00. Ivo Chen: I accept EX-16.
+[M08] Nel Arcos: Maybe we could make a souvenir sticker sheet as well. Chair: That's only a suggestion; we have not agreed to do it and are not assigning it.

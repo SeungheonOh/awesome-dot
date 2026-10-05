@@ -1,0 +1,101 @@
+{
+  "case_id": "F4",
+  "submission_sha256": "6449aab430bd98f3e74cf0066df5b0cf591e4be08d213c0369ca07fb99c89925",
+  "groups": [
+    {
+      "id": "g1",
+      "assertions": [
+        {
+          "id": "g1.1",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g1.2",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g1.3",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g1.4",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "assertions": [
+        {
+          "id": "g2.1",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g2.2",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g2.3",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g2.4",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "assertions": [
+        {
+          "id": "g3.1",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g3.2",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "assertions": [
+        {
+          "id": "g4.1",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g4.2",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        },
+        {
+          "id": "g4.3",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "assertions": [
+        {
+          "id": "g5.1",
+          "passed": true,
+          "reason": "Synthetic control expectation: the report satisfies this assertion; compare the complete report with the frozen source anchors in semantic-criteria.json."
+        }
+      ]
+    }
+  ]
+}

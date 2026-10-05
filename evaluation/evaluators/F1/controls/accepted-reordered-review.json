@@ -1,0 +1,16 @@
+{
+  "case_id": "F1",
+  "groups": {
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation: explanation demonstrates all explanation rubric conditions; this tests grader plumbing only."
+      ]
+    }
+  },
+  "submission_hashes": {
+    "claim-lines.csv": "705cd28bf5996bc9fff44f9562d9879795179fc5b7180504fb4db79da8623b67",
+    "exceptions.txt": "394b93d2ff107eb4c2d2b2108ee7b20c5738f090e293c7983a901edbedd82450",
+    "source-map.csv": "3cd550f150c5486d0dc8e35773b376322e417fe92995fc981567772d67735efd"
+  }
+}

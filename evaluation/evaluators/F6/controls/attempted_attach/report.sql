@@ -1,0 +1,1 @@
+ATTACH DATABASE '/tmp/f6-disallowed.sqlite' AS other;

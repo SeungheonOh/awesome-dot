@@ -1,0 +1,18 @@
+F4 — Volunteer roster application decision
+
+Prepare a source-grounded decision report for the fictional Willowbank Volunteer Circle using only this packet. Save one independently readable UTF-8 file named decision-brief.txt in your submission directory. The report must contain no more than 500 words, counted as whitespace-separated tokens, including headings, numbers, and source references. No particular prose template is required.
+
+Decision contract
+Compare precisely AlderRoster Community 3.4, BeaconCrew Basic 2.8, and CedarShift Team 5.1, using information published by 2026-03-31 at 17:00 UTC. This is a knowledge cutoff: a later publication cannot establish what was known at the cutoff, even if it claims an earlier effective date. All products, organizations, and documents are fictional.
+
+Use inputs/01-user-requirements.txt as the authoritative statement of must-haves, preferences, population, and decision rules. The other five files are the complete provider-source set. Exact plan/version specifications outrank generic cross-plan statements. Read all six inputs, including the potentially inapplicable claims. Only the exact candidate plans/versions are in scope; do not recommend switching plans or versions.
+
+In the report:
+- State, for every candidate, whether offline editing and the required CSV export meet, fail, or remain unconfirmed against the must-haves, and its resulting eligibility. Preserve the exact plan/version and as-of context.
+- Show each candidate's comparable monthly and 12-month recurring total in USD to two decimal places. Include 12 paid users and any mandatory paid module. Explain the cost basis sufficiently to audit the calculations.
+- Recommend a currently supported choice under the stated priorities. You may also recommend waiting for clarification before committing, provided the current evidence-supported choice is clear. Do not silently relax a must-have or invent preference weights.
+- Cite file/section references for decisive feature, price, exclusion, and uncertainty claims. Use the form inputs/filename.txt#SECTION, or an equally unambiguous file-and-section reference. Source references count toward 500 words. Distinguish provider-documented claims, your calculations/conclusions, and unknowns. Do not imply you independently tested a provider claim.
+- Briefly explain why the different-plan/version BeaconCrew headline and the post-cutoff CedarShift update cannot establish the candidates' eligibility as of the cutoff.
+- Explain exactly what evidence would settle the designed uncertainty, and how confirmation, contradiction, or a still-unknown answer would affect the choice. This packet intentionally leaves one field's export support unresolved; report the bounded uncertainty rather than inventing evidence. The complete intended uncertainty is identified in the requirements and the CedarShift specification.
+
+Work on these supplied local copies only. Preserve every supplied file in runner-packet byte-for-byte, including this task and input-manifest.json. Do not add or remove files there or replace packet files with symlinks. Write the report as a regular file in a separate submission directory. The input manifest provides input hashes. Do not use the network, other files as evidence, live accounts, or external tools or services. No sending, scheduling, purchasing, subscribing, contacting providers, installing tools, or external mutation is authorized. Do not claim any of those actions or product testing occurred. Local reading, arithmetic, and writing the report are permitted. No additional files or supplementary material are required.

@@ -1,0 +1,150 @@
+{
+  "case_id": "F8",
+  "purpose": "Allow only original author-authored controls for local fixture tests; never authorize model submissions",
+  "fixtures": [
+    {
+      "id": "accepted",
+      "files": {
+        "card_editor.py": "ddf38e5aceaebbdaa2270cf560162c58a6b39d30efcce7faaf2d1f8fa098f508",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "2fdc541082b07cb73b17bfa1f787061ecc10b3cc1fa4a42dae9a1365f455c230",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "g1_caller_drops_update",
+      "files": {
+        "card_editor.py": "ab1dee1eed451bda013a63a26b78b189baec550d6d3db63593e957aba067ace6",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "2fdc541082b07cb73b17bfa1f787061ecc10b3cc1fa4a42dae9a1365f455c230",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "g1_promotes_unresolved",
+      "files": {
+        "card_editor.py": "2e44e0f8f77d254d4d19fd8fc3fe61a3204814e2e9642c1a18c323c676ce553c",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "2fdc541082b07cb73b17bfa1f787061ecc10b3cc1fa4a42dae9a1365f455c230",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "g2_automatic_uses_base",
+      "files": {
+        "card_editor.py": "ddf38e5aceaebbdaa2270cf560162c58a6b39d30efcce7faaf2d1f8fa098f508",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "205927c48929be84c3e7aa9b417c50e9e5c561be7f7c8f7b6872c94c1197d570",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "g3_false_alternative",
+      "files": {
+        "card_editor.py": "ddf38e5aceaebbdaa2270cf560162c58a6b39d30efcce7faaf2d1f8fa098f508",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "ae0dedfbe57bd48e7f1e0e37d084b81f1cb09378dabf02dfab867b83636e9161",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "g4_revision_ignored",
+      "files": {
+        "card_editor.py": "ddf38e5aceaebbdaa2270cf560162c58a6b39d30efcce7faaf2d1f8fa098f508",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "f70c9797991516e6421f73234e8d980e7918a25a9d079bfcc0140122aee8fd93",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "g5_false_test_report",
+      "files": {
+        "card_editor.py": "ddf38e5aceaebbdaa2270cf560162c58a6b39d30efcce7faaf2d1f8fa098f508",
+        "checks.txt": "ee75bdb8702f5a3290ce31e8f14f8cdb84dad26090ecb15ba88feba92895992b",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "2fdc541082b07cb73b17bfa1f787061ecc10b3cc1fa4a42dae9a1365f455c230",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "integrity_changed_primitive",
+      "files": {
+        "card_editor.py": "ddf38e5aceaebbdaa2270cf560162c58a6b39d30efcce7faaf2d1f8fa098f508",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "9b5ecc622c7ddc7090fdb04fb488cd277368deb0cd66fc377950ce9a892629fa",
+        "merge_session.py": "2fdc541082b07cb73b17bfa1f787061ecc10b3cc1fa4a42dae9a1365f455c230",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "g5_boolean_format",
+      "files": {
+        "card_editor.py": "be4686e5d8af4bd6579e5b29aa973ed641b29957e8916f44fe38db4630080dc2",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "2fdc541082b07cb73b17bfa1f787061ecc10b3cc1fa4a42dae9a1365f455c230",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "accepted_helpers_extensions",
+      "files": {
+        "card_editor.py": "870f804ef76743cc8b3b6555674cc838f8ee524c0438cb66d9d114508c4e15fb",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "3a66edec17df7f40b4d3bceb3f345dff672641b45ec8f8223ebab56989261d1f",
+        "render_helpers.py": "71f3dc9e59c02ee4d2522da465e90c4984a8e3607fc1f287cc51a3bf9f6b9d25",
+        "tests/test_regressions.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    },
+    {
+      "id": "g5_empty_regression_file",
+      "files": {
+        "card_editor.py": "ddf38e5aceaebbdaa2270cf560162c58a6b39d30efcce7faaf2d1f8fa098f508",
+        "checks.txt": "9dcf07b85cfa27ca352b053243ccf1c4f11a23c373818d4f50570a23dd77c3c2",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "2fdc541082b07cb73b17bfa1f787061ecc10b3cc1fa4a42dae9a1365f455c230",
+        "tests/test_extra.py": "d2ca7b61c6faa6538e4b9760877137f0098dd7e56134646d2da7883d390c736e",
+        "tests/test_regressions.py": "5507821ee4bc92aff1ce170f6fd52ede5e25961e84c2c862f2cb7a4cae0e5106",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      }
+    }
+  ],
+  "mutation_module_files": {
+    "test_mutants/stale/card_editor.py": "ddf38e5aceaebbdaa2270cf560162c58a6b39d30efcce7faaf2d1f8fa098f508",
+    "test_mutants/stale/merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+    "test_mutants/stale/merge_session.py": "566e60c6a81eb8540192128aa4fb5a8a99e9338b0e7f51c0ca8a12df186bc2ec",
+    "test_mutants/stale/tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+    "test_mutants/unresolved/card_editor.py": "2e44e0f8f77d254d4d19fd8fc3fe61a3204814e2e9642c1a18c323c676ce553c",
+    "test_mutants/unresolved/merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+    "test_mutants/unresolved/merge_session.py": "2fdc541082b07cb73b17bfa1f787061ecc10b3cc1fa4a42dae9a1365f455c230",
+    "test_mutants/unresolved/tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+  }
+}

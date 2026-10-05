@@ -1,0 +1,39 @@
+{
+  "case_id": "F2",
+  "groups": {
+    "g1": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g1 rubric; for validator wiring only."
+      ]
+    },
+    "g2": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g2 rubric; for validator wiring only."
+      ]
+    },
+    "g3": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g3 rubric; for validator wiring only."
+      ]
+    },
+    "g4": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g4 rubric; for validator wiring only."
+      ]
+    },
+    "g5": {
+      "passed": false,
+      "evidence": [
+        "Synthetic adverse annotation: Handoff exceeds the explicit 450-word limit."
+      ]
+    }
+  },
+  "submission_hashes": {
+    "actions.json": "8f7246d49049101b53dc6cbe462715941b4fe30521cfa2e916d7d9a8b13b3a3c",
+    "handoff.txt": "705d1147ada76c56ff4acc2bd2e5465f3c3fc63593f8d7b6cf565dc4033273e8"
+  }
+}

@@ -1,0 +1,9 @@
+period_start: 2026-04-01T00:00:00Z
+period_end: 2026-05-01T00:00:00Z
+as_of: 2026-05-03T12:00:00Z
+units: integer minor units; 100 per major unit
+population: settled or shipped; ordered_at in [period_start, period_end)
+refund_cutoff: event_at <= as_of
+unknown_gross: incomplete orders make channel gross and net NULL
+unallocated: unmatched order_id only; mandatory separate row; net NULL
+execution: local SQLite read-only

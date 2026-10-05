@@ -1,0 +1,7 @@
+[A1] 2026-06-04 08:00 UTC, coordinator Inez: Approve edit-a.txt's change at BENCH from two to three blue cloths. Change ID C-CLOTHS.
+[A2] 2026-06-04 08:01 UTC, Inez: Approve edit-b.txt's move of CLOSE before SHARED. Renumber CLOSE to 4 and SHARED to 5, and update HOURS's host-checklist cross-reference from section 5 to section 4. Change IDs C-MOVE and C-REFERENCE.
+[A3] 2026-06-04 08:02 UTC, Inez: Approve edit-b.txt's badge-tray color change from green to amber at WELCOME. Change ID C-BADGES.
+[A4] 2026-06-04 08:03 UTC, Inez: I have not approved either edited opening-hours proposal. Keep baseline hours in this draft until I choose. Record both exact proposals as alternatives. Issue ID U-HOURS.
+[A5] 2026-06-04 08:04 UTC, Inez: The public hours card depends on the hours decision. Do not create or update it; record this dependency as blocked by U-HOURS. Dependency ID D-HOURS-CARD.
+[A6] 2026-06-04 08:05 UTC, Inez: The email addition at CONTACT and the cupboard change at SHARED are not approved. Keep the baseline wording for both. Disposition IDs N-EMAIL and N-CUPBOARD.
+[A7] 2026-06-04 08:06 UTC, Inez: Use the draft version note stated in the user task. The sentence "Keep the archive ledger inside the laboratory." is protected and must remain exact. Do not rewrite any other content.

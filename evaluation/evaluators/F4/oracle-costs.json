@@ -1,0 +1,40 @@
+{
+  "case_id": "F4",
+  "currency": "USD",
+  "users": 12,
+  "months": 12,
+  "candidates": [
+    {
+      "application": "AlderRoster",
+      "plan": "Community",
+      "version": "3.4",
+      "seat_cents_per_month": 1000,
+      "organization_module_cents_per_month": 1500,
+      "monthly_cents": 13500,
+      "annual_cents": 162000,
+      "source": "inputs/02-alderroster-community-3.4.txt#PRICE"
+    },
+    {
+      "application": "BeaconCrew",
+      "plan": "Basic",
+      "version": "2.8",
+      "seat_cents_per_month": 600,
+      "organization_module_cents_per_month": 0,
+      "monthly_cents": 7200,
+      "annual_cents": 86400,
+      "source": "inputs/03-beaconcrew-basic-2.8.txt#PRICE"
+    },
+    {
+      "application": "CedarShift",
+      "plan": "Team",
+      "version": "5.1",
+      "seat_cents_per_month": 750,
+      "organization_module_cents_per_month": 1200,
+      "monthly_cents": 10200,
+      "annual_cents": 122400,
+      "source": "inputs/05-cedarshift-team-5.1.txt#PRICE"
+    }
+  ],
+  "conditional_annual_savings_cents": 39600,
+  "population_source": "inputs/01-user-requirements.txt#POPULATION"
+}

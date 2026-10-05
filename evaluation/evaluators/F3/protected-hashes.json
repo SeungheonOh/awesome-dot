@@ -1,0 +1,7 @@
+{
+  "input-manifest.json": "f0b1d908113fcb451cbad28551b047df6dab76a697de1f6def798e259544a47f",
+  "inputs/busy.csv": "6c248d69db366d3f107fd1c252ef7ba570f6194b1c12b07a7d5d72c1d7c210d1",
+  "inputs/coverage.csv": "dc76b39da2857ad53750539b455269fc8887001c21ff2af5b66637bb813ca64b",
+  "inputs/participants.json": "937e1239f9f3bfd03c6eab8e922cfe4080ae49e6eaf7d077d9306c747cdd1bfc",
+  "task.txt": "0ed74d1c2044020997cb4b4c58398066190367d5d6cae6a280a92e423b53ae99"
+}

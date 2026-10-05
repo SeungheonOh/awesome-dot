@@ -1,0 +1,8 @@
+{
+  "case_id": "F2",
+  "time_cap_seconds": 900,
+  "time_cap_basis": "Predeclared common F1\u2013F7 attempt limit; process launch through completion including skill reading/self-checks; excludes setup/grading",
+  "runtime": "Python 3.10+ standard library",
+  "fixture_status": "original local authored; no model trials",
+  "oracle_status": "frozen before trials"
+}

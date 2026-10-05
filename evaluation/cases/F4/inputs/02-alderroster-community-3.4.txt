@@ -1,0 +1,12 @@
+AlderRoster — exact-plan specification and price card
+Published: 2026-03-20 09:00 UTC
+Applies only to: AlderRoster Community, version 3.4
+
+[OFFLINE]
+After online sign-in and synchronization in a desktop browser, Community 3.4 allows local edits to a previously synchronized roster while disconnected. Supported edits are assigning an existing volunteer, changing a role, and editing coordinator notes. Changes remain saved locally and synchronize when the browser reconnects.
+
+[CSV]
+Community 3.4 requires the Export Bridge module to generate CSV. Its roster CSV has these columns: shift_date, shift_start_time, volunteer_name, role, coordinator_notes. CSV generation requires an internet connection. The module is organization-wide, not per seat.
+
+[PRICE]
+Community 3.4 costs USD 10.00 per paid user per month. Export Bridge costs USD 15.00 per organization per month, in addition to seat charges. Export Bridge is the only mandatory paid module for the stated feature set. There are no other recurring fees in this price card. Both charges are constant for the comparison's 12-month term.

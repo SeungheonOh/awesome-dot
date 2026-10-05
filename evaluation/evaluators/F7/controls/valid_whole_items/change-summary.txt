@@ -1,0 +1,12 @@
+Operation count: 9
+Changed paths:
+/catalogue/title
+/catalogue/items/0
+/catalogue/items/1
+/catalogue/items/2
+/labels/
+/labels/a~1b
+/labels/x~0y
+/labels/drop
+/labels/new
+Invalid cases: rejected 2

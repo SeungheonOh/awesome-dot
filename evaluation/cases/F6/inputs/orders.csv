@@ -1,0 +1,12 @@
+order_id,channel,status,ordered_at,items_complete
+O101,web,settled,2026-04-01T00:00:00Z,1
+O102,web,shipped,2026-04-30T23:59:59Z,1
+O103,desk,settled,2026-04-12T09:00:00Z,1
+O104,phone,settled,2026-04-15T12:00:00Z,0
+O105,phone,shipped,2026-04-16T12:00:00Z,0
+O106,desk,pending,2026-04-10T12:00:00Z,1
+O107,web,cancelled,2026-04-11T12:00:00Z,1
+O108,web,settled,2026-03-31T23:59:59Z,1
+O109,web,settled,2026-05-01T00:00:00Z,1
+O110,desk,shipped,2026-04-20T12:00:00Z,1
+O111,desk,settled,2026-04-21T12:00:00Z,1

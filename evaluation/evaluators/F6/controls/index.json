@@ -1,0 +1,263 @@
+[
+  {
+    "name": "valid_alternative_query",
+    "submission": "controls/valid_alternative_query",
+    "must_fail": [],
+    "accepted": true,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "inclusive_period_end",
+    "submission": "controls/inclusive_period_end",
+    "must_fail": [
+      "g1"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "equal_value_loss",
+    "submission": "controls/equal_value_loss",
+    "must_fail": [
+      "g2"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "unknown_as_zero",
+    "submission": "controls/unknown_as_zero",
+    "must_fail": [
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "wrong_cutoff",
+    "submission": "controls/wrong_cutoff",
+    "must_fail": [
+      "g4"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "stale_saved_csv",
+    "submission": "controls/stale_saved_csv",
+    "must_fail": [
+      "g5"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "attempted_write",
+    "submission": "controls/attempted_write",
+    "must_fail": [
+      "g4"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "attempted_attach",
+    "submission": "controls/attempted_attach",
+    "must_fail": [
+      "g4"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "attempted_extension",
+    "submission": "controls/attempted_extension",
+    "must_fail": [
+      "g4"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "changed_source",
+    "submission": "reference",
+    "runner_mutation": {
+      "path": "inputs/orders.csv",
+      "append": "\n"
+    },
+    "must_fail": [
+      "integrity"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": false
+    }
+  },
+  {
+    "name": "drops_zero_child_orders",
+    "submission": "controls/drops_zero_child_orders",
+    "must_fail": [
+      "g1",
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "omits_unallocated_row",
+    "submission": "controls/omits_unallocated_row",
+    "must_fail": [
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "wrong_order_asof_filter",
+    "submission": "controls/wrong_order_asof_filter",
+    "must_fail": [
+      "g1"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "absent_refunds_unknown",
+    "submission": "controls/absent_refunds_unknown",
+    "must_fail": [
+      "g2",
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "fanout_before_aggregation",
+    "submission": "controls/fanout_before_aggregation",
+    "must_fail": [
+      "g2"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "clamped_negative_net",
+    "submission": "controls/clamped_negative_net",
+    "must_fail": [
+      "g3",
+      "g4"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": false,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  }
+]

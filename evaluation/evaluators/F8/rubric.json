@@ -1,0 +1,75 @@
+{
+  "case_id": "F8",
+  "version": 2,
+  "oracle": "probe.py (literal expected values and public API checks; no reference import)",
+  "integrity": {
+    "basis": "../../cases/F8/task.txt: Source scope and deliverables; Acceptance",
+    "checks": [
+      "Hash each original runner file against trusted_manifest.json",
+      "Require all output deliverables",
+      "Hash protected output copies against evaluator-trusted originals",
+      "Safely ingest bounded regular-file trees; reject all path-component symlinks, special files and malformed/unreadable/oversized/excess-depth/excess-entry paths"
+    ],
+    "runner_manifest_can_authorize_changes": false
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "basis": "Reported failures; source identity/revisions; CardEditor save/load",
+      "checks": [
+        "Complete choice saves and reloads",
+        "Actual consumer source update reopens a conflict",
+        "Old choice token is rejected",
+        "Draft file status/text/previous completion agree",
+        "A fresh unresolved save remains draft on reload"
+      ]
+    },
+    {
+      "id": "g2",
+      "basis": "Text model and merge rule",
+      "checks": [
+        "Literal unchanged/left-only/right-only/identical/independent cases",
+        "Whitespace, Unicode, empty lines, 12-line boundary and final LF preserved"
+      ]
+    },
+    {
+      "id": "g3",
+      "basis": "Positional conflict units; MergeSession view and choose",
+      "checks": [
+        "Exact current source alternatives",
+        "Index order and resolved conflict retention",
+        "Partial and complete choices produce exact current-side text",
+        "Replacement refreshes alternatives and choice labels"
+      ]
+    },
+    {
+      "id": "g4",
+      "basis": "Source identity/revisions; stale and invalid choices; non-destructive draft save",
+      "checks": [
+        "Identical replacement is a no-op",
+        "Revision-only/text-only/base/line-count changes invalidate",
+        "Invalid/stale choices are atomic",
+        "Identity and invalid-source rejection is atomic",
+        "Partial and repeated drafts preserve completed text and pending choices"
+      ]
+    },
+    {
+      "id": "g5",
+      "basis": "Supported public API; JSON state/save contract; Required verification",
+      "checks": [
+        "Keyword API and exported types",
+        "Detached input/view/state/save return ownership",
+        "JSON round trips preserve text/status/generation/choices",
+        "Actual unittest pass and at least five total tests",
+        "Checks command, result and test count match",
+        "Submitted tests detect both isolated advertised failure shapes",
+        "Exact view key sets and recursively type-aware expected values; booleans do not equal integers",
+        "Required tests/test_regressions.py independently runs at least two tests and detects both failure shapes"
+      ]
+    }
+  ],
+  "quality": "passed behavioral groups / 5, only after approved behavioral execution; null when blocked",
+  "acceptance": "all five groups and integrity true; null when behavior is blocked and integrity passes; false on known integrity failure",
+  "equivalence": "Behavioral contract only. Additional local helper modules and JSON state/save extension fields allowed. No implementation or naming style preference beyond the specified public API and required deliverable paths.",
+  "execution": "Production grade performs static checks only and returns pending. Author-only execution requires exact tree hash allowlisting. Future model trials require a separately reviewed isolation adapter."
+}

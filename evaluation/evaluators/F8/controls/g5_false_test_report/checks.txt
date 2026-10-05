@@ -1,0 +1,8 @@
+DELIBERATELY INVALID SYNTHETIC NEGATIVE CONTROL
+Expected outcome: rejection of the falsified test count below.
+The report below is intentionally invalid fixture data, not a real test result.
+
+Command: python -m unittest discover -s tests -v
+Result: PASS
+Tests: 500
+The five local tests passed, including stale-choice invalidation through save/reload and unresolved first-save preservation. No external services were used.

@@ -1,0 +1,9 @@
+Follow-up messages, all Europe/London, authoritative offset +01:00
+
+[F01] 2026-10-07 09:10 — Kira Beck: I cannot finish EX-13 tomorrow. Davi, could you take over the volunteer rota? This is a proposed reassignment until you accept.
+[F02] 2026-10-07 09:24 — Davi Moss: I accept ownership of EX-13 from Kira. I will finalize and deposit the approved roster tomorrow, Thursday 2026-10-08, at 18:00. Please replace the earlier noon deadline.
+[F03] 2026-10-07 09:30 — Chair: Agreed: Davi owns EX-13; its deadline is Thursday at 18:00. Kira is no longer the owner.
+[F04] 2026-10-07 10:05 — Tessa Vale: EX-15 done. The arrival message is ready. The supplied artifact is inputs/arrival-draft.txt.
+[F05] 2026-10-07 10:12 — Packet custodian: I checked the arrival artifact supplied for EX-15. Its state is DRAFT. It has not been sent; this packet contains no send record. The prefilled recipient field is not sending evidence.
+[F06] 2026-10-07 11:20 — Ivo Chen: EX-16 done: both outputs were tested and the recorded results are in inputs/audio-check.txt.
+[F07] 2026-10-07 15:45 — Chair: No additional owner has accepted EX-14. EX-11, EX-12, EX-13 and EX-14 have no completion claim or completion artifact in this packet. There have been no other deadline changes.

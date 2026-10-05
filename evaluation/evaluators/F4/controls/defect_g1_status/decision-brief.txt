@@ -1,0 +1,15 @@
+Decision as of 2026-03-31 17:00 UTC
+
+Based on the supplied provider documentation, choose AlderRoster Community 3.4, the only confirmed eligible candidate. This follows the must-haves-first, then lowest annual cost rule (inputs/01-user-requirements.txt#PRIORITIES).
+
+The following totals are my calculations in USD for 12 paid coordinators over 12 unchanged monthly charges, including mandatory organization-wide modules and no discounts or other costs (inputs/01-user-requirements.txt#POPULATION).
+
+AlderRoster Community 3.4: offline editing meets M1, including assignments, roles, and notes. With Export Bridge, CSV includes all five required fields, meeting M2. It is eligible. CSV generation requires a connection, which is permitted. Monthly: 12 × $10.00 + $15.00 = $135.00; 12-month total: $1,620.00 (inputs/02-alderroster-community-3.4.txt#OFFLINE; inputs/02-alderroster-community-3.4.txt#CSV; inputs/02-alderroster-community-3.4.txt#PRICE).
+
+BeaconCrew Basic 2.8: offline viewing meets no editing requirement; M1 fails. Its included online CSV meets M2 with all required fields, but the app is ineligible. Monthly: 12 × $6.00 = $72.00; 12-month total: $864.00, with no mandatory module (inputs/03-beaconcrew-basic-2.8.txt#OFFLINE; inputs/03-beaconcrew-basic-2.8.txt#CSV; inputs/03-beaconcrew-basic-2.8.txt#PRICE). The offline-editing headline applies to Plus 3.0, not Basic 2.8 (inputs/04-beaconcrew-overview.txt#QUALIFIER).
+
+CedarShift Team 5.1: M1 is met. CSV Pack supplies the four core fields and generates CSV offline, but coordinator-notes inclusion is unconfirmed. Therefore M2 fails and CedarShift is definitively ineligible. Monthly: 12 × $7.50 + $12.00 = $102.00; 12-month total: $1,224.00 (inputs/05-cedarshift-team-5.1.txt#OFFLINE; inputs/05-cedarshift-team-5.1.txt#CSV-CORE; inputs/05-cedarshift-team-5.1.txt#NOTES-GAP; inputs/05-cedarshift-team-5.1.txt#PRICE).
+
+The April 2 clarification is after the cutoff and cannot settle this decision, despite claiming earlier functionality (inputs/06-cedarshift-update.txt#UPDATE; inputs/06-cedarshift-update.txt#TIMING; inputs/01-user-requirements.txt#CUTOFF).
+
+The decisive clarification is a cutoff-available Team 5.1 CSV Pack field list or provider statement explicitly addressing coordinator notes in CSV. Confirmation would make CedarShift eligible and the lowest-cost choice, saving $396.00 annually; explicit exclusion would fail M2 and preserve AlderRoster; a still-unknown answer also preserves AlderRoster, with CedarShift unconfirmed. No cost tie currently needs the offline-CSV or module-count tie-breaks (inputs/01-user-requirements.txt#UNCERTAINTY; inputs/01-user-requirements.txt#PRIORITIES).

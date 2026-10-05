@@ -1,0 +1,15 @@
+CedarShift — exact-plan specification, price card, and open clarification
+Published: 2026-03-31 17:00 UTC
+Applies only to: CedarShift Team, version 5.1
+
+[OFFLINE]
+After online sign-in and synchronization in a desktop browser, Team 5.1 allows local edits to a previously synchronized roster while disconnected. Supported edits are assigning an existing volunteer, changing a role, and editing coordinator notes. Changes remain saved locally and synchronize when the browser reconnects.
+
+[CSV-CORE]
+The organization-wide CSV Pack is required for CSV export. It generates CSV both online and offline. The confirmed columns are shift_date, shift_start_time, volunteer_name, and role. If additional supported CSV columns are enabled, online and offline exports contain the same fields.
+
+[NOTES-GAP]
+A general description says “coordinator notes are included in roster downloads.” Download formats include PDF and CSV. This statement does not identify which formats include notes. The exact Team 5.1 CSV Pack coordinator-notes support had not been confirmed or denied by this document's publication. No field list or clarification resolving it was available by 2026-03-31 17:00 UTC. Do not infer a CSV notes column from the general download wording.
+
+[PRICE]
+Team 5.1 costs USD 7.50 per paid user per month. CSV Pack costs USD 12.00 per organization per month, in addition to seat charges. CSV Pack is the only mandatory paid module for the stated feature set. If coordinator notes are supported in CSV, their inclusion has no extra charge. There are no other recurring fees in this price card. Both charges are constant for the comparison's 12-month term.

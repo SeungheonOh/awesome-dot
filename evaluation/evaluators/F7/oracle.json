@@ -1,0 +1,115 @@
+{
+  "before": {
+    "catalogue": {
+      "title": "Spring kits",
+      "items": [
+        {
+          "sku": "K-1",
+          "name": "Signal card",
+          "stock": 9007199254740993,
+          "tags": [
+            "paper",
+            "blue",
+            "folded"
+          ],
+          "optional": null
+        },
+        {
+          "sku": "K-2",
+          "name": "Beacon card",
+          "stock": 8,
+          "tags": [
+            "paper"
+          ],
+          "optional": "keep"
+        },
+        {
+          "sku": "K-3",
+          "name": "Spare clip",
+          "stock": 0,
+          "tags": []
+        }
+      ],
+      "last_review": "2026-01-01"
+    },
+    "labels": {
+      "": "draft",
+      "a/b": "shelf-west",
+      "x~y": "v1",
+      "nullable": null,
+      "drop": "old"
+    },
+    "internal": {
+      "access_note": "Fictional private routing text",
+      "export_marker": "red-leaf-73"
+    }
+  },
+  "after": {
+    "catalogue": {
+      "title": "Summer kits",
+      "items": [
+        {
+          "sku": "K-1",
+          "name": "Signal card",
+          "stock": 9007199254740994,
+          "tags": [
+            "paper",
+            "amber"
+          ]
+        },
+        {
+          "sku": "K-2",
+          "name": "Beacon card II",
+          "stock": 8,
+          "tags": [
+            "paper"
+          ],
+          "optional": null
+        }
+      ],
+      "last_review": "2026-01-01"
+    },
+    "labels": {
+      "": "release",
+      "a/b": "shelf-east",
+      "x~y": "v2",
+      "nullable": null,
+      "new": null
+    },
+    "internal": {
+      "access_note": "Fictional private routing text",
+      "export_marker": "red-leaf-73"
+    }
+  },
+  "status": {
+    "valid_pair": {
+      "status": "accepted",
+      "before": "inputs/before.json",
+      "after": "inputs/after.json",
+      "patch": "patch.json",
+      "applied_matches_after": true
+    },
+    "invalid_cases": [
+      {
+        "file": "inputs/invalid-duplicate.json",
+        "status": "rejected",
+        "reason_code": "duplicate_key",
+        "pointer": "/catalogue/items/0/stock",
+        "patch_emitted": false
+      },
+      {
+        "file": "inputs/invalid-number.json",
+        "status": "rejected",
+        "reason_code": "non_integer_number",
+        "pointer": "/labels/count",
+        "patch_emitted": false
+      }
+    ]
+  },
+  "source_hashes": {
+    "inputs/after.json": "e2b5a657f3d7d292c7efa9359c3b8f0e45585f514440a78d27593c8c68bfcc64",
+    "inputs/before.json": "dba00ff19da1a85c0ebdf3df39b02973dbb613c1e858bdc86b7ff5aa88bfb0ab",
+    "inputs/invalid-duplicate.json": "003242356433fecc7403302b52dfe7f8b6fab21624444d1b998ff50629f927ce",
+    "inputs/invalid-number.json": "1081e9925aa50eb278a70993deda94b299b3cde6c0911709fe5dc122a33bb3c6"
+  }
+}

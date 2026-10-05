@@ -1,0 +1,7 @@
+transaction_id,date,kind,currency,source_minor,business_minor,cap_adjustment_minor,claim_minor,status,source_refs,policy_refs
+T01,2026-09-17,expense,GBP,2835,2835,0,2835,ready,S01;S08;S11,inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P3;inputs/policy.txt#P6
+T02,2026-09-17,expense,GBP,2470,2470,-205,2265,ready,S02;S07;S09;S12,inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P3;inputs/policy.txt#P6
+T03,2026-09-19,credit,GBP,-600,-600,0,-600,ready,S03;S10,inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P3;inputs/policy.txt#P6
+T04,2026-09-17,expense,GBP,3199,1999,0,1999,ready,S04;S13,inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P4;inputs/policy.txt#P6
+T05,2026-09-17,expense,GBP,1275,1275,0,1275,ready,S05;S14,inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P5;inputs/policy.txt#P6
+T06,2026-09-17,expense,GBP,1488,0,0,0,ready,S06;S15,inputs/policy.txt#P1;inputs/policy.txt#P2;inputs/policy.txt#P6

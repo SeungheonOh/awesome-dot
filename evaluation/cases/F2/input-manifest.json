@@ -1,0 +1,12 @@
+{
+  "case_id": "F2",
+  "algorithm": "sha256",
+  "files": {
+    "inputs/arrival-draft.txt": "8c2ce18a3236a675deacac6453c7ff6d93a2722f434c19e5481ed8fe6ab30812",
+    "inputs/audio-check.txt": "1a2ff6f231e7d4974cc4c1baca892d2dff3ee649296684d4cf2ff0a0b1bd1e61",
+    "inputs/followups.txt": "663f55dc8e434b278ec598495490fccda093ed2d8fb15d6eab07cf55b5b43af7",
+    "inputs/meeting.txt": "fda24e7023ad6ba85dcd4e6aaa997db849efbbf46aef22a43df6e8ab2d50e834",
+    "inputs/people.json": "9816157a7608139f73d84a483f3b5d2d4c9a767637b9dd28f33747bccf09ff4c",
+    "task.txt": "2e792764dbfdb9c20d062d2c62a1137d672282c046d521fa76a3ef9e65e0b636"
+  }
+}

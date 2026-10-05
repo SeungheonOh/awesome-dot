@@ -1,0 +1,211 @@
+[
+  {
+    "name": "valid_nonminimal",
+    "submission": "controls/valid_nonminimal",
+    "must_fail": [],
+    "accepted": true,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "valid_whole_items",
+    "submission": "controls/valid_whole_items",
+    "must_fail": [],
+    "accepted": true,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "duplicate_patch_keys",
+    "submission": "controls/duplicate_patch_keys",
+    "must_fail": [
+      "g1"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "rounded_large_integer",
+    "submission": "controls/rounded_large_integer",
+    "must_fail": [
+      "g2"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "null_instead_absent",
+    "submission": "controls/null_instead_absent",
+    "must_fail": [
+      "g2"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": false,
+      "g3": true,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "wrong_order_shrink",
+    "submission": "controls/wrong_order_shrink",
+    "must_fail": [
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "bad_pointer_escape",
+    "submission": "controls/bad_pointer_escape",
+    "must_fail": [
+      "g3"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": false,
+      "g3": false,
+      "g4": false,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "excluded_transient_edit",
+    "submission": "controls/excluded_transient_edit",
+    "must_fail": [
+      "g4"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "summary_value_leak",
+    "submission": "controls/summary_value_leak",
+    "must_fail": [
+      "g4"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": false,
+      "g5": true,
+      "integrity": true
+    }
+  },
+  {
+    "name": "invalid_document_accepted",
+    "submission": "controls/invalid_document_accepted",
+    "must_fail": [
+      "g5"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "changed_source",
+    "submission": "reference",
+    "runner_mutation": {
+      "path": "inputs/before.json",
+      "append": "\n"
+    },
+    "must_fail": [
+      "integrity"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": true,
+      "integrity": false
+    }
+  },
+  {
+    "name": "invalid_repair_emitted",
+    "submission": "controls/invalid_repair_emitted",
+    "must_fail": [
+      "g5"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": true,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  },
+  {
+    "name": "numeric_boolean_status",
+    "submission": "controls/numeric_boolean_status",
+    "must_fail": [
+      "g1",
+      "g5"
+    ],
+    "accepted": false,
+    "expected_matrix": {
+      "g1": false,
+      "g2": true,
+      "g3": true,
+      "g4": true,
+      "g5": false,
+      "integrity": true
+    }
+  }
+]

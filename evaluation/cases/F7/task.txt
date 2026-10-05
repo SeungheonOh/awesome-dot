@@ -1,0 +1,33 @@
+Create a structural JSON patch for the fictional Lantern Kit catalogue, using only this closed local packet. Save patch.json, change-summary.txt and validation-status.json at your submission root. Keep that directory limited to these three deliverables; temporary calculation files may live elsewhere in the local workspace. Do not modify any input, call any external service, install software or apply anything to a live catalogue.
+
+The valid ordered pair is inputs/before.json -> inputs/after.json. Parse the complete documents and any saved JSON strictly: every object key is unique within that object (duplicate keys are invalid), and JSON numeric tokens must be base-10 integers with no fraction or exponent. Preserve arbitrary-size integers exactly, including values above 2^53. Reject NaN/Infinity and other non-JSON constants. Booleans, null, strings and integers are different types; an absent member differs from a member holding null. Object-member order is not part of structural equality; array order and positions are part of it. Preserve all string characters exactly; do not normalize Unicode.
+
+patch.json is a JSON array with at most 32 operations, no more than 16,384 UTF-8 bytes. Permitted operations are add, remove and replace. Each remove operation has exactly op and path; add and replace have exactly op, path and value. Apply operations in listed order using standard JSON Patch semantics: add replaces an existing object member or creates an absent one; for arrays it inserts at the specified position (length is allowed), and '-' appends. remove and replace require an existing target. Array indexes use canonical nonnegative decimal integers with no leading zeros (except 0). '-' is valid only as the final token of an array add. Pointers use the leading '/' form and JSON Pointer ~0 for '~', ~1 for '/'; empty-string keys are allowed. Reject malformed '~' escapes. Replacing/removing the document root is outside scope.
+
+Allowed change scope (checked for every operation, including transient changes):
+- /catalogue/title itself
+- Strict descendants of /catalogue/items, with the first token after items denoting an array index or permitted append. An existing whole item or its child field/array may be changed. Do not replace, add or remove the /catalogue/items container itself
+- Direct members of /labels, including its empty-string, slash and tilde keys. Do not replace, add or remove the /labels container itself or write a descendant of a label value
+Everything else, including catalogue.last_review and the complete internal subtree, is excluded. Array matching is positional, not by sku or value; operations must remain valid as earlier operations shift indexes. Nonminimal patches are allowed if every operation is in scope and valid and the limits hold. The final exact structure must equal after.json. No particular algorithm, operation count below the cap or grouping of changes is preferred.
+
+The two additional files are invalid standalone candidate documents, not alternative endpoints for the valid pair. Assess and reject each; do not repair them or produce a patch for them:
+- inputs/invalid-duplicate.json must be rejected for a duplicate object key
+- inputs/invalid-number.json must be rejected for a non-integer numeric token
+Report the offending value/key location as a JSON Pointer. No input is to be silently normalized or overwritten.
+
+validation-status.json must have exactly these fields:
+{"valid_pair":{"status":"accepted","before":"inputs/before.json","after":"inputs/after.json","patch":"patch.json","applied_matches_after":true},"invalid_cases":[{"file":"inputs/invalid-duplicate.json","status":"rejected","reason_code":"duplicate_key","pointer":"<offending key pointer>","patch_emitted":false},{"file":"inputs/invalid-number.json","status":"rejected","reason_code":"non_integer_number","pointer":"<offending value pointer>","patch_emitted":false}]}
+The invalid_cases order may vary. State accepted/applied_matches_after only after checking the exact saved patch bytes by applying them to the valid before structure. A rejected invalid document is the correct bounded outcome, not a failed task.
+
+change-summary.txt has this exact plain-text format (LF; one terminal newline):
+Operation count: <number of saved operations>
+Changed paths:
+<one unique operation path per line, in any order; list every path used and no other paths>
+Invalid cases: rejected 2
+Keep it to at most 100 whitespace-delimited words. Include only these labels, count and operation pointers: do not disclose before/after values or excluded subtree content. This disclosure limit applies only to the summary, not operation values required by the patch. Leave all four source-file bytes unchanged. Outputs must be actual independently readable local files; no live action or external verification claim is authorized.
+
+Attempt wall-clock limit: 900 seconds, including instruction reading and self-checks; setup and evaluator grading are excluded.
+
+Safe local artifact contract: all supplied input paths and all submitted deliverables must be ordinary regular files, with no symlink in the file path or its directory components. Directory substitutions, unreadable files and changed protected inputs do not satisfy the contract.
+patch.json retains its 16,384-byte limit; change-summary.txt and validation-status.json are each limited to 65,536 UTF-8 bytes.
+The supplied task.txt and input-manifest.json are also protected; their original bytes must remain unchanged.

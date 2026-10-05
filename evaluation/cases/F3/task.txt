@@ -1,0 +1,63 @@
+F3 — Options for a fictional three-person planning meeting
+
+Find the earliest five verified options for Ari Vale (P1), Bea Moss (P2), and Cleo Neri (P3). All three are required. This is a closed, fictional local-file exercise. Produce options.json and explanation.txt in the designated submission directory. Do not schedule, send invitations, call a calendar, use external data, install software, or alter the supplied packet. Do not claim that anything was booked or externally verified. The runner time cap is 900 seconds.
+
+Authoritative source scope
+- inputs/participants.json supplies each participant's display-zone label, authoritative UTC offset periods, and explicit local working windows
+- inputs/busy.csv supplies raw, unbuffered busy intervals; touching rows are separate evidence but may be unioned
+- inputs/coverage.csv supplies intervals in which the busy listing is complete for the identified participant. Within coverage, a time not listed busy is free. Outside coverage, availability is unknown
+- input-manifest.json identifies the protected sources and their SHA-256 hashes
+Everything needed is supplied. Do not consult installed timezone databases: the explicit offsets and offset periods govern this exercise. All dates in the supplied working-window list are intentional working dates, including the weekend. No extra holiday, travel, lunch, or overnight availability may be inferred.
+
+Exact search and interval contract
+1. Search the UTC horizon [2026-10-30T00:00:00Z, 2026-11-03T00:00:00Z). Only the explicitly listed working windows are available
+2. The meeting lasts exactly 45 elapsed minutes. Each required attendee needs exactly 15 elapsed minutes before and 15 elapsed minutes after it
+3. For a meeting [s,e), assess its single guarded interval [s-15 minutes,e+15 minutes). That whole interval must lie within one listed working window for each attendee, within the search horizon, and wholly within that attendee's known coverage. It must not overlap any raw busy interval for that attendee. Apply the buffers once, not twice; do not first buffer the raw busy intervals and then test the guarded interval against them
+4. All intervals are half-open [start,end). Touching endpoints do not overlap. Equality at a working-window or coverage boundary is allowed. In particular, a guarded interval may start exactly when a busy interval ends, or end exactly when a busy interval starts
+5. Candidate starts must lie on a 15-minute UTC grid anchored at 00:00 UTC every day, with seconds 00. Do not round a non-grid time to create availability
+6. Consider every valid grid start, even if options overlap each other. Sort by start instant, remove duplicate starts, and return the earliest five. Return fewer only if fewer than five are certifiably feasible over the entire horizon. An empty list is an acceptable result only if the supplied evidence leaves no certifiably feasible starts. Unknown availability is never proof of either free or busy time
+7. Never relax duration, attendee requirements, grid, working windows, buffers, or coverage to fill the requested count
+8. Report every maximal uncovered interval within each participant's listed working windows, even when the earliest five options do not use that day. Clip gaps to those working windows, coalesce touching uncovered pieces for the same participant, and sort by participant ID then UTC start. Do not report uncovered time outside listed working windows
+
+Time representation
+UTC timestamps must use exactly YYYY-MM-DDTHH:MM:SSZ. Display every option's start and end in all three participants' local display zones as YYYY-MM-DDTHH:MM:SS+HH:MM or YYYY-MM-DDTHH:MM:SS-HH:MM, including +00:00 for London. Use the authoritative offset at each endpoint's UTC instant, even if it differs from another date. End timestamps denote the exclusive meeting endpoint, not the end of the post-buffer. The supplied P1 offset changes at 2026-11-01T06:00:00Z from -04:00 to -05:00.
+
+options.json contract
+Use one JSON object with exactly these keys (no duplicate or additional keys):
+- case_id: "F3"
+- status: "options_only"
+- meeting_duration_minutes: 45
+- pre_buffer_minutes: 15
+- post_buffer_minutes: 15
+- grid_minutes: 15
+- all_participants_required: true
+- buffers_within_working_hours: true
+- coverage_policy: "verified_only"
+- uncovered_time_means: "unknown"
+- constraints_relaxed: false
+- coverage_gaps: array of objects with exactly participant_id, start_utc, end_utc. Use the complete maximal-gap list from rule 8, or [] if there are no gaps
+- options: array in earliest-start order. Each option has exactly rank (integer 1 through count), start_utc, end_utc, local_times. local_times has exactly P1, P2, P3; each value has exactly start and end, using the local timestamp format above
+All numbers above and all ranks are JSON integers, not strings, booleans, or fractional values. Produce independently readable UTF-8 files.
+
+explanation.txt contract
+This compact plain-text receipt is consumed by a local checker. Use the following exact labeled lines, in this order, substituting saved values. Use lowercase true and false for boolean placeholders; do not include angle brackets. No extra lines other than an optional final newline. The receipt must agree with options.json; do not substitute a different option list in prose.
+
+Status: options only; no calendar changes made
+Returned options: <count>
+Meeting: <meeting_duration_minutes> minutes; pre-buffer: <pre_buffer_minutes> minutes; post-buffer: <post_buffer_minutes> minutes
+Requirements: all attendees=<all_participants_required>; buffers inside working hours=<buffers_within_working_hours>; grid=<grid_minutes> minutes UTC
+Coverage: <coverage_policy>; uncovered time=<uncovered_time_means>; constraints relaxed=<constraints_relaxed>
+
+Then one line for each reported gap, in JSON order:
+Coverage gap: <participant_id> | <start_utc> | <end_utc>
+If there are no reported gaps, instead use exactly:
+Coverage gaps: none
+
+Then these two exact explanatory lines:
+Offset change: P1 | 2026-11-01T06:00:00Z | -04:00 to -05:00
+Touching endpoints are allowed; buffers are applied once.
+
+Finally, one line for each option, in JSON order:
+Option <rank>: <start_utc> to <end_utc>
+
+The blank lines used to separate instructions above are not receipt lines. If the option array is empty, there are no Option lines. Other working files may be used in your own workspace, but the two requested deliverables must be saved, and all supplied files must remain byte-for-byte unchanged.

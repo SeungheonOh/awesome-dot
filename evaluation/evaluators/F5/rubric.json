@@ -1,0 +1,100 @@
+{
+  "case_id": "F5",
+  "version": 2,
+  "groups": [
+    {
+      "id": "g1",
+      "basis": [
+        "task.txt: accepted changes and anchor order",
+        "inputs/acceptance.txt#A1",
+        "#A2",
+        "#A3"
+      ],
+      "criteria": [
+        "Three accepted sentence replacements are at BENCH, HOURS and WELCOME",
+        "CLOSE precedes SHARED in the required section order"
+      ],
+      "allowed_equivalence": [
+        "Blank-line spacing",
+        "Correct source-located implementations independent of edit algorithm"
+      ]
+    },
+    {
+      "id": "g2",
+      "basis": [
+        "task.txt: structure/protected wording",
+        "inputs/acceptance.txt#A7"
+      ],
+      "criteria": [
+        "Six exact anchor/title headings numbered in order, each once",
+        "Title and protected CLOSE sentence remain exact"
+      ],
+      "allowed_equivalence": [
+        "Blank lines containing whitespace are ignored"
+      ]
+    },
+    {
+      "id": "g3",
+      "basis": [
+        "inputs/acceptance.txt#A4",
+        "#A5",
+        "task.txt: U-HOURS/D-HOURS-CARD"
+      ],
+      "criteria": [
+        "Exact draft version label",
+        "Baseline hours retained with moved-section reference corrected independently",
+        "Both exact hours alternatives remain unresolved",
+        "Public hours card remains blocked"
+      ],
+      "allowed_equivalence": [
+        "Alternative entries can appear in either order"
+      ]
+    },
+    {
+      "id": "g4",
+      "basis": [
+        "inputs/baseline.txt",
+        "inputs/acceptance.txt#A1 through #A7",
+        "task.txt: no other rewrites"
+      ],
+      "criteria": [
+        "Every nonblank candidate line matches the authorized source-derived line sequence",
+        "Unapproved email and cupboard changes explicitly excluded"
+      ],
+      "allowed_equivalence": [
+        "No preferred whitespace layout beyond LF/terminal-newline contract"
+      ]
+    },
+    {
+      "id": "g5",
+      "basis": [
+        "task.txt: ledger schema/source locators/hash agreement"
+      ],
+      "criteria": [
+        "All eight dispositions with correct status, anchors, before/after/details",
+        "Valid acceptance and source locators",
+        "Candidate and source SHA-256 values agree with actual preserved bytes",
+        "Required files and UTF-8/LF format"
+      ],
+      "allowed_equivalence": [
+        "Record ordering unrestricted",
+        "Extra valid supporting locators",
+        "Move may cite either CLOSE or SHARED for baseline/proposal evidence"
+      ]
+    }
+  ],
+  "integrity": {
+    "basis": "All original runner files, including task and input manifest, bound by evaluator-owned hashes; common safe regular-file contract",
+    "checks": [
+      "No symlink in any path component; bounded regular-file reads",
+      "Hash every original runner file against the independent evaluator-owned runner_files manifest"
+    ],
+    "note": "These local file checks do not establish absence of external actions. The parent harness must independently review execution trace/policy integrity, including any claimed actions, before final trial acceptance."
+  },
+  "acceptance": "All five binary groups and source integrity true; full trial acceptance additionally requires harness process-integrity gate. Unknown evidence is not imputed as a pass.",
+  "quality": "Number of passing behavioral groups / 5",
+  "blinding": "Do not stage any evaluator, rubric, expected output, reference, control or result file into runner workspaces.",
+  "safe_artifact_limits": {
+    "each_output_bytes": 1048576
+  }
+}

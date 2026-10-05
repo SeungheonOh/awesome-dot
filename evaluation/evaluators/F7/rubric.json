@@ -1,0 +1,101 @@
+{
+  "case_id": "F7",
+  "version": 2,
+  "groups": [
+    {
+      "id": "g1",
+      "basis": [
+        "task.txt: strict parsing/exact values/invalid inputs",
+        "inputs/invalid-duplicate.json",
+        "inputs/invalid-number.json"
+      ],
+      "criteria": [
+        "Strict patch/status/input JSON with unique keys and integer numeric tokens",
+        "Exact arbitrary-precision integer preservation; booleans are not integers",
+        "Invalid documents rejected with source-derived code and pointer"
+      ],
+      "allowed_equivalence": [
+        "JSON formatting and object key ordering",
+        "Invalid-case ordering"
+      ]
+    },
+    {
+      "id": "g2",
+      "basis": [
+        "task.txt: valid before/after transformation",
+        "inputs/before.json",
+        "inputs/after.json"
+      ],
+      "criteria": [
+        "Independent application of exact saved operations yields exact after structure including null-versus-absent, string contents, array order and large integers"
+      ],
+      "allowed_equivalence": [
+        "Nonminimal correct patches",
+        "Whole-item replacements within allowed scope",
+        "Different valid operation orderings"
+      ]
+    },
+    {
+      "id": "g3",
+      "basis": [
+        "task.txt: operation/pointer/array semantics"
+      ],
+      "criteria": [
+        "Allowed operation names and exact operation fields",
+        "Valid escaping of slash/tilde/empty keys",
+        "Existence preconditions and array insertion/removal indexes valid in execution order"
+      ],
+      "allowed_equivalence": [
+        "Object add replacing existing member",
+        "Array append with final dash",
+        "Any correct sequential mutation plan"
+      ]
+    },
+    {
+      "id": "g4",
+      "basis": [
+        "task.txt: allowed change scope and output limits"
+      ],
+      "criteria": [
+        "Every operation is in scope, even transient writes later restored",
+        "At most32 operations/16384 UTF-8 bytes",
+        "Summary at most100 words with only actual pointers/count and invalid-rejection label"
+      ],
+      "allowed_equivalence": [
+        "Unique summary pointers in any order",
+        "No operation-minimality preference"
+      ]
+    },
+    {
+      "id": "g5",
+      "basis": [
+        "task.txt: status schema/source integrity/three artifacts"
+      ],
+      "criteria": [
+        "Saved validation status identifies exact source pair and patch",
+        "Both invalid documents rejected without repaired outputs",
+        "Saved patch bytes are those independently applied",
+        "Submission contains exactly the three specified files"
+      ],
+      "allowed_equivalence": [
+        "JSON member ordering and invalid-case entry ordering"
+      ]
+    }
+  ],
+  "integrity": {
+    "basis": "All original runner files, including task and input manifest, bound by evaluator-owned hashes; common safe regular-file contract",
+    "checks": [
+      "No symlink in any path component; bounded regular-file reads",
+      "Hash every original runner file against the independent evaluator-owned runner_files manifest"
+    ],
+    "note": "These local file checks do not establish absence of external actions. The parent harness must independently review execution trace/policy integrity, including any claimed actions, before final trial acceptance."
+  },
+  "acceptance": "All five binary groups and source integrity true; full trial acceptance additionally requires harness process-integrity gate. Unknown evidence is not imputed as a pass.",
+  "quality": "Number of passing behavioral groups / 5",
+  "blinding": "Do not stage any evaluator, rubric, expected output, reference, control or result file into runner workspaces.",
+  "safe_artifact_limits": {
+    "patch_bytes": 16384,
+    "summary_bytes": 65536,
+    "status_bytes": 65536
+  }
+}

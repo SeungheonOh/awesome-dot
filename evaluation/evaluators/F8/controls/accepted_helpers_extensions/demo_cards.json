@@ -1,0 +1,17 @@
+{
+  "base": {
+    "document_id": "pump-card",
+    "revision": 0,
+    "text": "Inspect collar\nSet dial to amber\nStore card flat\n"
+  },
+  "left": {
+    "document_id": "pump-card",
+    "revision": 1,
+    "text": "Inspect collar twice\nSet dial to green\nStore card flat\n"
+  },
+  "right": {
+    "document_id": "pump-card",
+    "revision": 2,
+    "text": "Inspect collar\nSet dial to blue\nStore card in sleeve\n"
+  }
+}

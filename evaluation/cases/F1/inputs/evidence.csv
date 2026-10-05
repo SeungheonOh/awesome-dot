@@ -1,0 +1,16 @@
+source_id,evidence_type,transaction_id,date,amount_minor,description
+S01,receipt,T01,2026-09-17,2835,Receipt M-811: trainer lunch; meal group CF-7/CF-26/2026-09-17.
+S02,receipt,T02,2026-09-17,2470,Receipt M-826: trainer evening meal; meal group CF-7/CF-26/2026-09-17.
+S03,credit,T03,2026-09-19,-600,"Credit CN-42 explicitly refunds 600 pence of T02, receipt M-826; settled back to original card."
+S04,receipt,T04,2026-09-17,3199,Receipt K-915: 1999 pence workshop materials and 1200 pence personal stationery.
+S05,receipt,T05,2026-09-17,1275,Ticket L-56: local shuttle journey.
+S06,receipt,T06,2026-09-17,1488,Receipt X-033: miscellaneous purchase; no business-purpose statement is supplied.
+S07,confirmed_duplicate,T02,2026-09-17,2470,"Confirmed rescan of S02 (same receipt M-826), not a second purchase."
+S08,payment,T01,2026-09-18,2835,Card settlement explicitly matches receipt M-811 / T01.
+S09,payment,T02,2026-09-18,2470,Card settlement explicitly matches receipt M-826 / T02.
+S10,payment,T03,2026-09-19,-600,Card refund settlement explicitly matches credit CN-42 / T03.
+S11,purpose,T01,2026-09-17,,"Claimant CF-7: T01 was lunch while delivering Copperfern induction training, event CF-26."
+S12,purpose,T02,2026-09-17,,"Claimant CF-7: T02 was dinner during the same training assignment, event CF-26."
+S13,purpose,T04,2026-09-17,,"Claimant CF-7 confirms the receipt itemization: 1999 pence used in CF-26 workshop, 1200 pence personal."
+S14,purpose,T05,2026-09-17,,Claimant CF-7: shuttle T05 carried workshop supplies to the training room for CF-26.
+S15,payment,T06,2026-09-18,1488,Card settlement matches X-033 / T06; it contains no purpose information.

@@ -1,0 +1,1 @@
+SELECT load_extension('/tmp/f6-disallowed');

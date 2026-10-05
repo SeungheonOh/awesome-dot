@@ -1,0 +1,291 @@
+{
+  "orders": [
+    {
+      "order_id": "O101",
+      "channel": "web",
+      "status": "settled",
+      "ordered_at": "2026-04-01T00:00:00Z",
+      "items_complete": 1
+    },
+    {
+      "order_id": "O102",
+      "channel": "web",
+      "status": "shipped",
+      "ordered_at": "2026-04-30T23:59:59Z",
+      "items_complete": 1
+    },
+    {
+      "order_id": "O103",
+      "channel": "desk",
+      "status": "settled",
+      "ordered_at": "2026-04-12T09:00:00Z",
+      "items_complete": 1
+    },
+    {
+      "order_id": "O104",
+      "channel": "phone",
+      "status": "settled",
+      "ordered_at": "2026-04-15T12:00:00Z",
+      "items_complete": 0
+    },
+    {
+      "order_id": "O105",
+      "channel": "phone",
+      "status": "shipped",
+      "ordered_at": "2026-04-16T12:00:00Z",
+      "items_complete": 0
+    },
+    {
+      "order_id": "O106",
+      "channel": "desk",
+      "status": "pending",
+      "ordered_at": "2026-04-10T12:00:00Z",
+      "items_complete": 1
+    },
+    {
+      "order_id": "O107",
+      "channel": "web",
+      "status": "cancelled",
+      "ordered_at": "2026-04-11T12:00:00Z",
+      "items_complete": 1
+    },
+    {
+      "order_id": "O108",
+      "channel": "web",
+      "status": "settled",
+      "ordered_at": "2026-03-31T23:59:59Z",
+      "items_complete": 1
+    },
+    {
+      "order_id": "O109",
+      "channel": "web",
+      "status": "settled",
+      "ordered_at": "2026-05-01T00:00:00Z",
+      "items_complete": 1
+    },
+    {
+      "order_id": "O110",
+      "channel": "desk",
+      "status": "shipped",
+      "ordered_at": "2026-04-20T12:00:00Z",
+      "items_complete": 1
+    },
+    {
+      "order_id": "O111",
+      "channel": "desk",
+      "status": "settled",
+      "ordered_at": "2026-04-21T12:00:00Z",
+      "items_complete": 1
+    }
+  ],
+  "line_items": [
+    {
+      "line_id": "L1",
+      "order_id": "O101",
+      "quantity": 1,
+      "unit_minor": 500
+    },
+    {
+      "line_id": "L2",
+      "order_id": "O101",
+      "quantity": 1,
+      "unit_minor": 500
+    },
+    {
+      "line_id": "L3",
+      "order_id": "O101",
+      "quantity": 2,
+      "unit_minor": 125
+    },
+    {
+      "line_id": "L4",
+      "order_id": "O102",
+      "quantity": 1,
+      "unit_minor": 1000
+    },
+    {
+      "line_id": "L5",
+      "order_id": "O105",
+      "quantity": 2,
+      "unit_minor": 90
+    },
+    {
+      "line_id": "L6",
+      "order_id": "O106",
+      "quantity": 1,
+      "unit_minor": 700
+    },
+    {
+      "line_id": "L7",
+      "order_id": "O107",
+      "quantity": 1,
+      "unit_minor": 800
+    },
+    {
+      "line_id": "L8",
+      "order_id": "O108",
+      "quantity": 1,
+      "unit_minor": 900
+    },
+    {
+      "line_id": "L9",
+      "order_id": "O109",
+      "quantity": 1,
+      "unit_minor": 1100
+    },
+    {
+      "line_id": "L10",
+      "order_id": "O110",
+      "quantity": 1,
+      "unit_minor": 400
+    },
+    {
+      "line_id": "L11",
+      "order_id": "O110",
+      "quantity": 1,
+      "unit_minor": 400
+    },
+    {
+      "line_id": "L12",
+      "order_id": "O111",
+      "quantity": 1,
+      "unit_minor": 800
+    }
+  ],
+  "refunds": [
+    {
+      "refund_id": "R1",
+      "order_id": "O101",
+      "event_at": "2026-04-20T10:00:00Z",
+      "amount_minor": 100
+    },
+    {
+      "refund_id": "R2",
+      "order_id": "O101",
+      "event_at": "2026-04-21T10:00:00Z",
+      "amount_minor": 100
+    },
+    {
+      "refund_id": "R3",
+      "order_id": "O101",
+      "event_at": "2026-05-03T12:00:00Z",
+      "amount_minor": 50
+    },
+    {
+      "refund_id": "R4",
+      "order_id": "O101",
+      "event_at": "2026-05-03T12:00:01Z",
+      "amount_minor": 900
+    },
+    {
+      "refund_id": "R5",
+      "order_id": "O102",
+      "event_at": "2026-05-02T10:00:00Z",
+      "amount_minor": 200
+    },
+    {
+      "refund_id": "R6",
+      "order_id": "O103",
+      "event_at": "2026-04-25T10:00:00Z",
+      "amount_minor": 20
+    },
+    {
+      "refund_id": "R7",
+      "order_id": "O104",
+      "event_at": "2026-05-01T10:00:00Z",
+      "amount_minor": 30
+    },
+    {
+      "refund_id": "R8",
+      "order_id": "O105",
+      "event_at": "2026-05-01T11:00:00Z",
+      "amount_minor": 40
+    },
+    {
+      "refund_id": "R9",
+      "order_id": "O106",
+      "event_at": "2026-04-25T10:00:00Z",
+      "amount_minor": 70
+    },
+    {
+      "refund_id": "R10",
+      "order_id": "O108",
+      "event_at": "2026-04-25T10:00:00Z",
+      "amount_minor": 90
+    },
+    {
+      "refund_id": "R11",
+      "order_id": "O109",
+      "event_at": "2026-05-02T10:00:00Z",
+      "amount_minor": 110
+    },
+    {
+      "refund_id": "R12",
+      "order_id": "O110",
+      "event_at": "2026-04-27T10:00:00Z",
+      "amount_minor": 100
+    },
+    {
+      "refund_id": "R13",
+      "order_id": "O110",
+      "event_at": "2026-04-28T10:00:00Z",
+      "amount_minor": 100
+    },
+    {
+      "refund_id": "R14",
+      "order_id": "MISSING-ORDER",
+      "event_at": "2026-05-03T12:00:00Z",
+      "amount_minor": 77
+    },
+    {
+      "refund_id": "R15",
+      "order_id": "MISSING-ORDER",
+      "event_at": "2026-05-03T12:00:01Z",
+      "amount_minor": 88
+    },
+    {
+      "refund_id": "R16",
+      "order_id": "O111",
+      "event_at": "2026-04-29T10:00:00Z",
+      "amount_minor": 100
+    }
+  ],
+  "scenarios": [
+    {
+      "period_start": "2026-04-01T00:00:00Z",
+      "period_end": "2026-05-01T00:00:00Z",
+      "as_of": "2026-05-03T12:00:00Z"
+    },
+    {
+      "period_start": "2026-04-15T00:00:00Z",
+      "period_end": "2026-05-02T00:00:00Z",
+      "as_of": "2026-05-02T23:59:59Z"
+    },
+    {
+      "period_start": "2026-06-01T00:00:00Z",
+      "period_end": "2026-07-01T00:00:00Z",
+      "as_of": "2026-04-28T10:00:00Z"
+    },
+    {
+      "period_start": "2026-04-29T00:00:00Z",
+      "period_end": "2026-05-02T00:00:00Z",
+      "as_of": "2026-04-28T10:00:00Z"
+    },
+    {
+      "period_start": "2026-04-12T00:00:00Z",
+      "period_end": "2026-04-13T00:00:00Z",
+      "as_of": "2026-04-28T10:00:00Z"
+    }
+  ],
+  "notes": [
+    "period_start: 2026-04-01T00:00:00Z",
+    "period_end: 2026-05-01T00:00:00Z",
+    "as_of: 2026-05-03T12:00:00Z",
+    "units: integer minor units; 100 per major unit",
+    "population: settled or shipped; ordered_at in [period_start, period_end)",
+    "refund_cutoff: event_at <= as_of",
+    "unknown_gross: incomplete orders make channel gross and net NULL",
+    "unallocated: unmatched order_id only; mandatory separate row; net NULL",
+    "execution: local SQLite read-only"
+  ]
+}

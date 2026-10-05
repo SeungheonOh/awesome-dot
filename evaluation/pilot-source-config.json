@@ -1,0 +1,1086 @@
+{
+  "schema_version": "dot-eval-config-1",
+  "record_kind": "portable_source_configuration_not_execution_freeze_not_run",
+  "study_id": "dot-skills-codex-cli-exploratory-A",
+  "stage": "exploratory_pilot",
+  "treatment": "designated_skill_package_supplied",
+  "arms": [
+    "C",
+    "S"
+  ],
+  "repetitions": 1,
+  "common_instruction": "Complete the task from the supplied authorized inputs and save the requested local outputs. Follow the task's requirements and source limits. Check the result against those requirements, preserve uncertainty where evidence is missing, and verify the saved output before handing it back. Preserve protected inputs. Do not contact people or external services, change anything outside the assigned scratch workspace, or use prior solutions, answer keys or other attempts. Report what is complete and any unresolved limitation.",
+  "common_support_files": [],
+  "review_gates": {
+    "task_authoring_complete": true,
+    "independent_oracles_checked": true,
+    "grader_controls_passed": true,
+    "overlap_review_complete": true
+  },
+  "runner": {
+    "kind": "codex_cli",
+    "binary_path": null,
+    "cli_version": null,
+    "requested_model": null,
+    "reasoning_setting": null,
+    "sandbox_mode": "workspace-write",
+    "exact_model_build": null,
+    "tool_inventory_sha256": null,
+    "instruction_inventory_sha256": null,
+    "catalog_inventory_sha256": null,
+    "containment_evidence_sha256": null,
+    "live_startup_verified": false,
+    "timezone_requirements": {
+      "F3": [
+        "Europe/London",
+        "America/New_York",
+        "Asia/Singapore"
+      ]
+    },
+    "timezone_requirements_verified": false
+  },
+  "analysis": {
+    "primary": "observed_equal_case_paired_acceptance_difference_on_these_eight_cases",
+    "bootstrap_enabled": false,
+    "report": [
+      "raw_pairs",
+      "absolute_rates",
+      "wins_ties_losses",
+      "quality",
+      "leave_one_case_out"
+    ],
+    "population_claim_permitted": false,
+    "exclusion_policy": "No silent exclusions, retries or best-repeat selection"
+  },
+  "clarification_policy": {
+    "additional_facts_allowed": false,
+    "fixed_reply": "No further evidence is available. Use the supplied packet and provide the best bounded deliverable.",
+    "delivery_adapter_verified": false
+  },
+  "runtime_gate": "No trial is authorized or runnable from this source configuration; live dispatch remains hard-disabled",
+  "tasks": [
+    {
+      "family_id": "F1",
+      "task_id": "F1-A",
+      "prompt": "cases/F1/task.txt",
+      "inputs": [
+        {
+          "source": "cases/F1/inputs/evidence.csv",
+          "target": "evidence.csv",
+          "protected": true
+        },
+        {
+          "source": "cases/F1/inputs/policy.txt",
+          "target": "policy.txt",
+          "protected": true
+        }
+      ],
+      "packet_files": [
+        {
+          "source": "cases/F1/input-manifest.json",
+          "target": "input-manifest.json"
+        }
+      ],
+      "skill": "packages/skill/expense-report-reconciliation/SKILL.md",
+      "skill_provenance": {
+        "commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+        "sha256": "7c43b2643bb6b1864fb4f1bf1226e594d56f1b24a13303e7caebc9a75e584565"
+      },
+      "skill_package": {
+        "guide_target": "skill/expense-report-reconciliation/SKILL.md",
+        "files": [
+          {
+            "source": "packages/skill/expense-report-reconciliation/SKILL.md",
+            "target": "skill/expense-report-reconciliation/SKILL.md",
+            "sha256": "7c43b2643bb6b1864fb4f1bf1226e594d56f1b24a13303e7caebc9a75e584565"
+          },
+          {
+            "source": "packages/skill/expense-report-reconciliation/example.md",
+            "target": "skill/expense-report-reconciliation/example.md",
+            "sha256": "0788b89ae3dad911d43ea1aa539d95f0fb61af42ff2e473674f980630528f884"
+          }
+        ]
+      },
+      "grader": "evaluators/F1/grade.py",
+      "rubric": "evaluators/F1/semantic-rubric.txt",
+      "oracle": "evaluators/F1/oracle.json",
+      "evaluator_files": [
+        "evaluators/F1/case-metadata.json",
+        "evaluators/F1/controls/accepted-concise-policy-refs/claim-lines.csv",
+        "evaluators/F1/controls/accepted-concise-policy-refs/exceptions.txt",
+        "evaluators/F1/controls/accepted-concise-policy-refs/source-map.csv",
+        "evaluators/F1/controls/accepted-concise-policy-refs-review.json",
+        "evaluators/F1/controls/accepted-reordered/claim-lines.csv",
+        "evaluators/F1/controls/accepted-reordered/exceptions.txt",
+        "evaluators/F1/controls/accepted-reordered/source-map.csv",
+        "evaluators/F1/controls/accepted-reordered-review.json",
+        "evaluators/F1/controls/bad-g1-duplicate-count/claim-lines.csv",
+        "evaluators/F1/controls/bad-g1-duplicate-count/exceptions.txt",
+        "evaluators/F1/controls/bad-g1-duplicate-count/source-map.csv",
+        "evaluators/F1/controls/bad-g2-source-amount/claim-lines.csv",
+        "evaluators/F1/controls/bad-g2-source-amount/exceptions.txt",
+        "evaluators/F1/controls/bad-g2-source-amount/source-map.csv",
+        "evaluators/F1/controls/bad-g3-cap-before-credit/claim-lines.csv",
+        "evaluators/F1/controls/bad-g3-cap-before-credit/exceptions.txt",
+        "evaluators/F1/controls/bad-g3-cap-before-credit/source-map.csv",
+        "evaluators/F1/controls/bad-g4-unknown-as-zero/claim-lines.csv",
+        "evaluators/F1/controls/bad-g4-unknown-as-zero/exceptions.txt",
+        "evaluators/F1/controls/bad-g4-unknown-as-zero/source-map.csv",
+        "evaluators/F1/controls/bad-g5-dangling-locator/claim-lines.csv",
+        "evaluators/F1/controls/bad-g5-dangling-locator/exceptions.txt",
+        "evaluators/F1/controls/bad-g5-dangling-locator/source-map.csv",
+        "evaluators/F1/controls/bad-g5-prose-contradiction/claim-lines.csv",
+        "evaluators/F1/controls/bad-g5-prose-contradiction/exceptions.txt",
+        "evaluators/F1/controls/bad-g5-prose-contradiction/source-map.csv",
+        "evaluators/F1/packet-hashes.json",
+        "evaluators/F1/reference/claim-lines.csv",
+        "evaluators/F1/reference/exceptions.txt",
+        "evaluators/F1/reference/source-map.csv",
+        "evaluators/F1/reference-review.json",
+        "evaluators/F1/reject-prose-review.json",
+        "evaluators/F1/test_grader.py"
+      ],
+      "criteria": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "required_outputs": [
+        "claim-lines.csv",
+        "source-map.csv",
+        "exceptions.txt"
+      ],
+      "timeout_s": 900,
+      "min_raters": 1,
+      "group_min_raters": {
+        "g5": 2
+      },
+      "required_review_domains": [
+        "process_integrity",
+        "free_text_and_verification_claims"
+      ],
+      "review_min_raters": 2,
+      "grading_limitations": [
+        "Actual independent artifact/trace-bound reviews remain pending"
+      ]
+    },
+    {
+      "family_id": "F2",
+      "task_id": "F2-A",
+      "prompt": "cases/F2/task.txt",
+      "inputs": [
+        {
+          "source": "cases/F2/inputs/arrival-draft.txt",
+          "target": "arrival-draft.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F2/inputs/audio-check.txt",
+          "target": "audio-check.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F2/inputs/followups.txt",
+          "target": "followups.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F2/inputs/meeting.txt",
+          "target": "meeting.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F2/inputs/people.json",
+          "target": "people.json",
+          "protected": true
+        }
+      ],
+      "packet_files": [
+        {
+          "source": "cases/F2/input-manifest.json",
+          "target": "input-manifest.json"
+        }
+      ],
+      "skill": "packages/skill/meeting-action-handoff/SKILL.md",
+      "skill_provenance": {
+        "commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+        "sha256": "f6e36e12666ab844609344a9b5cabe92dfc6e84cd12c0455ce64e74c6b98d2ee"
+      },
+      "skill_package": {
+        "guide_target": "skill/meeting-action-handoff/SKILL.md",
+        "files": [
+          {
+            "source": "packages/skill/meeting-action-handoff/SKILL.md",
+            "target": "skill/meeting-action-handoff/SKILL.md",
+            "sha256": "f6e36e12666ab844609344a9b5cabe92dfc6e84cd12c0455ce64e74c6b98d2ee"
+          },
+          {
+            "source": "packages/skill/meeting-action-handoff/example.md",
+            "target": "skill/meeting-action-handoff/example.md",
+            "sha256": "b0fcc1e08b4d0c4ad8d3354ff8131972b9e3dccd6f4b03a3a8a022a4f8e511e7"
+          }
+        ]
+      },
+      "grader": "evaluators/F2/grade.py",
+      "rubric": "evaluators/F2/semantic-rubric.txt",
+      "oracle": "evaluators/F2/oracle.json",
+      "evaluator_files": [
+        "evaluators/F2/case-metadata.json",
+        "evaluators/F2/controls/accepted-paraphrase/actions.json",
+        "evaluators/F2/controls/accepted-paraphrase/handoff.txt",
+        "evaluators/F2/controls/accepted-paraphrase-review.json",
+        "evaluators/F2/controls/bad-g1-missing-agreement/actions.json",
+        "evaluators/F2/controls/bad-g1-missing-agreement/handoff.txt",
+        "evaluators/F2/controls/bad-g1-missing-agreement-review.json",
+        "evaluators/F2/controls/bad-g2-collapsed-labels/actions.json",
+        "evaluators/F2/controls/bad-g2-collapsed-labels/handoff.txt",
+        "evaluators/F2/controls/bad-g2-collapsed-labels-review.json",
+        "evaluators/F2/controls/bad-g3-rejected-authority/actions.json",
+        "evaluators/F2/controls/bad-g3-rejected-authority/handoff.txt",
+        "evaluators/F2/controls/bad-g3-rejected-authority-review.json",
+        "evaluators/F2/controls/bad-g4-draft-is-sent/actions.json",
+        "evaluators/F2/controls/bad-g4-draft-is-sent/handoff.txt",
+        "evaluators/F2/controls/bad-g4-draft-is-sent-review.json",
+        "evaluators/F2/controls/bad-g5-dangling-reference/actions.json",
+        "evaluators/F2/controls/bad-g5-dangling-reference/handoff.txt",
+        "evaluators/F2/controls/bad-g5-dangling-reference-review.json",
+        "evaluators/F2/controls/bad-g5-vague-question/actions.json",
+        "evaluators/F2/controls/bad-g5-vague-question/handoff.txt",
+        "evaluators/F2/controls/bad-g5-vague-question-review.json",
+        "evaluators/F2/controls/bad-g5-word-limit/actions.json",
+        "evaluators/F2/controls/bad-g5-word-limit/handoff.txt",
+        "evaluators/F2/controls/bad-g5-word-limit-review.json",
+        "evaluators/F2/packet-hashes.json",
+        "evaluators/F2/reference/actions.json",
+        "evaluators/F2/reference/handoff.txt",
+        "evaluators/F2/reference-review.json",
+        "evaluators/F2/test_grader.py"
+      ],
+      "criteria": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "required_outputs": [
+        "actions.json",
+        "handoff.txt"
+      ],
+      "timeout_s": 900,
+      "min_raters": 1,
+      "group_min_raters": {
+        "g1": 2,
+        "g2": 2,
+        "g3": 2,
+        "g4": 2,
+        "g5": 2
+      },
+      "required_review_domains": [
+        "process_integrity",
+        "free_text_and_verification_claims"
+      ],
+      "review_min_raters": 2,
+      "grading_limitations": [
+        "Actual independent artifact/trace-bound reviews remain pending"
+      ]
+    },
+    {
+      "family_id": "F3",
+      "task_id": "F3-A",
+      "prompt": "cases/F3/task.txt",
+      "inputs": [
+        {
+          "source": "cases/F3/inputs/busy.csv",
+          "target": "busy.csv",
+          "protected": true
+        },
+        {
+          "source": "cases/F3/inputs/coverage.csv",
+          "target": "coverage.csv",
+          "protected": true
+        },
+        {
+          "source": "cases/F3/inputs/participants.json",
+          "target": "participants.json",
+          "protected": true
+        }
+      ],
+      "packet_files": [
+        {
+          "source": "cases/F3/input-manifest.json",
+          "target": "input-manifest.json"
+        }
+      ],
+      "skill": "packages/skill/meeting-window-coordination/SKILL.md",
+      "skill_provenance": {
+        "commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+        "sha256": "70dd691ca3921b58b35e547eeefeb452d6377c31259fcc51a865deea7f5a4f20"
+      },
+      "skill_package": {
+        "guide_target": "skill/meeting-window-coordination/SKILL.md",
+        "files": [
+          {
+            "source": "packages/skill/meeting-window-coordination/SKILL.md",
+            "target": "skill/meeting-window-coordination/SKILL.md",
+            "sha256": "70dd691ca3921b58b35e547eeefeb452d6377c31259fcc51a865deea7f5a4f20"
+          },
+          {
+            "source": "packages/skill/meeting-window-coordination/check_example.py",
+            "target": "skill/meeting-window-coordination/check_example.py",
+            "sha256": "214d45a1af60cd219fff00047847376e4a8cdbce8b45eb85fe81a80b8f2fb22d"
+          },
+          {
+            "source": "packages/skill/meeting-window-coordination/example.md",
+            "target": "skill/meeting-window-coordination/example.md",
+            "sha256": "be075a5dd411d2ffe351284bf59416ccabd008606e1e5c0f84b3aa30af11c4cf"
+          },
+          {
+            "source": "packages/skill/meeting-window-coordination/second-case.md",
+            "target": "skill/meeting-window-coordination/second-case.md",
+            "sha256": "89b5e4ff09f7939d1562cb05998394a54d95ae150e8d3745adfefc124a62f8a1"
+          }
+        ]
+      },
+      "grader": "evaluators/F3/grade.py",
+      "rubric": "cases/F3/task.txt",
+      "oracle": "evaluators/F3/oracle.json",
+      "evaluator_files": [
+        "evaluators/F3/author_controls.py",
+        "evaluators/F3/build_fixture.py",
+        "evaluators/F3/case-metadata.json",
+        "evaluators/F3/controls/expected-results.json",
+        "evaluators/F3/controls/g1_stale_offset/explanation.txt",
+        "evaluators/F3/controls/g1_stale_offset/options.json",
+        "evaluators/F3/controls/g2_short_meeting/explanation.txt",
+        "evaluators/F3/controls/g2_short_meeting/options.json",
+        "evaluators/F3/controls/g3_later_valid_option/explanation.txt",
+        "evaluators/F3/controls/g3_later_valid_option/options.json",
+        "evaluators/F3/controls/g4_omitted_unknown_gap/explanation.txt",
+        "evaluators/F3/controls/g4_omitted_unknown_gap/options.json",
+        "evaluators/F3/controls/g5_claimed_booking/explanation.txt",
+        "evaluators/F3/controls/g5_claimed_booking/options.json",
+        "evaluators/F3/protected-hashes.json",
+        "evaluators/F3/reference/explanation.txt",
+        "evaluators/F3/reference/options.json",
+        "evaluators/F3/test_grade.py"
+      ],
+      "criteria": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "required_outputs": [
+        "options.json",
+        "explanation.txt"
+      ],
+      "timeout_s": 900,
+      "min_raters": 1,
+      "group_min_raters": {},
+      "required_review_domains": [
+        "process_integrity",
+        "free_text_and_verification_claims"
+      ],
+      "review_min_raters": 2,
+      "grading_limitations": [
+        "Actual independent artifact/trace-bound reviews remain pending"
+      ]
+    },
+    {
+      "family_id": "F4",
+      "task_id": "F4-A",
+      "prompt": "cases/F4/task.txt",
+      "inputs": [
+        {
+          "source": "cases/F4/inputs/01-user-requirements.txt",
+          "target": "01-user-requirements.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F4/inputs/02-alderroster-community-3.4.txt",
+          "target": "02-alderroster-community-3.4.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F4/inputs/03-beaconcrew-basic-2.8.txt",
+          "target": "03-beaconcrew-basic-2.8.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F4/inputs/04-beaconcrew-overview.txt",
+          "target": "04-beaconcrew-overview.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F4/inputs/05-cedarshift-team-5.1.txt",
+          "target": "05-cedarshift-team-5.1.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F4/inputs/06-cedarshift-update.txt",
+          "target": "06-cedarshift-update.txt",
+          "protected": true
+        }
+      ],
+      "packet_files": [
+        {
+          "source": "cases/F4/input-manifest.json",
+          "target": "input-manifest.json"
+        }
+      ],
+      "skill": "packages/skill/decision-source-brief/SKILL.md",
+      "skill_provenance": {
+        "commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+        "sha256": "94d0bb40cf971819f1d295198de39e1df5c172d06f14eea6950f2332f744dd60"
+      },
+      "skill_package": {
+        "guide_target": "skill/decision-source-brief/SKILL.md",
+        "files": [
+          {
+            "source": "packages/skill/decision-source-brief/SKILL.md",
+            "target": "skill/decision-source-brief/SKILL.md",
+            "sha256": "94d0bb40cf971819f1d295198de39e1df5c172d06f14eea6950f2332f744dd60"
+          },
+          {
+            "source": "packages/skill/decision-source-brief/examples/fictional-venue-decision.md",
+            "target": "skill/decision-source-brief/examples/fictional-venue-decision.md",
+            "sha256": "e07e0835fcfc8faf9596b558cb1504fcc627cc50d65af912955f3bd93dea19ab"
+          }
+        ]
+      },
+      "grader": "evaluators/F4/grade.py",
+      "rubric": "evaluators/F4/rubric.md",
+      "oracle": "evaluators/F4/oracle-costs.json",
+      "evaluator_files": [
+        "evaluators/F4/case-metadata.json",
+        "evaluators/F4/checks.py",
+        "evaluators/F4/controls/accepted_deferred_commitment/decision-brief.txt",
+        "evaluators/F4/controls/accepted_deferred_commitment/semantic.json",
+        "evaluators/F4/controls/control-index.json",
+        "evaluators/F4/controls/defect_g1_status/decision-brief.txt",
+        "evaluators/F4/controls/defect_g1_status/semantic.json",
+        "evaluators/F4/controls/defect_g2_module/decision-brief.txt",
+        "evaluators/F4/controls/defect_g2_module/semantic.json",
+        "evaluators/F4/controls/defect_g3_priority/decision-brief.txt",
+        "evaluators/F4/controls/defect_g3_priority/semantic.json",
+        "evaluators/F4/controls/defect_g4_provenance/decision-brief.txt",
+        "evaluators/F4/controls/defect_g4_provenance/semantic.json",
+        "evaluators/F4/controls/defect_g5_no_reversal/decision-brief.txt",
+        "evaluators/F4/controls/defect_g5_no_reversal/semantic.json",
+        "evaluators/F4/controls/defect_objective_overlength/decision-brief.txt",
+        "evaluators/F4/controls/defect_objective_overlength/semantic.json",
+        "evaluators/F4/frozen-packet-manifest.json",
+        "evaluators/F4/reference/decision-brief.txt",
+        "evaluators/F4/reference/semantic.json",
+        "evaluators/F4/semantic-criteria.json",
+        "evaluators/F4/semantic-template.json"
+      ],
+      "criteria": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "required_outputs": [
+        "decision-brief.txt"
+      ],
+      "timeout_s": 900,
+      "min_raters": 1,
+      "group_min_raters": {
+        "g1": 2,
+        "g2": 2,
+        "g3": 2,
+        "g4": 2,
+        "g5": 2
+      },
+      "required_review_domains": [
+        "process_integrity",
+        "free_text_and_verification_claims"
+      ],
+      "review_min_raters": 2,
+      "grading_limitations": [
+        "Actual independent artifact/trace-bound reviews remain pending"
+      ]
+    },
+    {
+      "family_id": "F5",
+      "task_id": "F5-A",
+      "prompt": "cases/F5/task.txt",
+      "inputs": [
+        {
+          "source": "cases/F5/inputs/acceptance.txt",
+          "target": "acceptance.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F5/inputs/baseline.txt",
+          "target": "baseline.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F5/inputs/edit-a.txt",
+          "target": "edit-a.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F5/inputs/edit-b.txt",
+          "target": "edit-b.txt",
+          "protected": true
+        },
+        {
+          "source": "cases/F5/inputs/lineage.txt",
+          "target": "lineage.txt",
+          "protected": true
+        }
+      ],
+      "packet_files": [
+        {
+          "source": "cases/F5/input-manifest.json",
+          "target": "input-manifest.json"
+        }
+      ],
+      "skill": "packages/skill/document-revision-reconciliation/SKILL.md",
+      "skill_provenance": {
+        "commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+        "sha256": "4c110c999915c804d6965d4e1da5be411d186743defd2b3ab802b642e3126e19"
+      },
+      "skill_package": {
+        "guide_target": "skill/document-revision-reconciliation/SKILL.md",
+        "files": [
+          {
+            "source": "packages/skill/document-revision-reconciliation/SKILL.md",
+            "target": "skill/document-revision-reconciliation/SKILL.md",
+            "sha256": "4c110c999915c804d6965d4e1da5be411d186743defd2b3ab802b642e3126e19"
+          },
+          {
+            "source": "packages/skill/document-revision-reconciliation/check_example.py",
+            "target": "skill/document-revision-reconciliation/check_example.py",
+            "sha256": "48690a9513d403022495ad207478598c4a342c52aa71e508e46e58bd912c41fd"
+          },
+          {
+            "source": "packages/skill/document-revision-reconciliation/example-results.json",
+            "target": "skill/document-revision-reconciliation/example-results.json",
+            "sha256": "47512df10fa90b581b26db5eddd0e96e80259e57df4e6bbccebd2b79f24cdbd0"
+          },
+          {
+            "source": "packages/skill/document-revision-reconciliation/example.md",
+            "target": "skill/document-revision-reconciliation/example.md",
+            "sha256": "4d2f1a8ea7ef7001736abf37cf0eaa2dd8e2f88d8e9797474103215fe7a1079d"
+          }
+        ]
+      },
+      "grader": "evaluators/F5/grader.py",
+      "rubric": "evaluators/F5/rubric.json",
+      "oracle": "evaluators/F5/oracle.json",
+      "evaluator_files": [
+        "evaluators/F5/controls/altered_protected_wording/candidate.txt",
+        "evaluators/F5/controls/altered_protected_wording/decisions.json",
+        "evaluators/F5/controls/dependency_unblocked/candidate.txt",
+        "evaluators/F5/controls/dependency_unblocked/decisions.json",
+        "evaluators/F5/controls/fabricated_locator/candidate.txt",
+        "evaluators/F5/controls/fabricated_locator/decisions.json",
+        "evaluators/F5/controls/index.json",
+        "evaluators/F5/controls/missing_approved_cloths/candidate.txt",
+        "evaluators/F5/controls/missing_approved_cloths/decisions.json",
+        "evaluators/F5/controls/missing_section/candidate.txt",
+        "evaluators/F5/controls/missing_section/decisions.json",
+        "evaluators/F5/controls/silently_selected_hours/candidate.txt",
+        "evaluators/F5/controls/silently_selected_hours/decisions.json",
+        "evaluators/F5/controls/stale_candidate_hash/candidate.txt",
+        "evaluators/F5/controls/stale_candidate_hash/decisions.json",
+        "evaluators/F5/controls/stale_cross_reference/candidate.txt",
+        "evaluators/F5/controls/stale_cross_reference/decisions.json",
+        "evaluators/F5/controls/unapproved_cupboard/candidate.txt",
+        "evaluators/F5/controls/unapproved_cupboard/decisions.json",
+        "evaluators/F5/controls/valid_alternative_locators/candidate.txt",
+        "evaluators/F5/controls/valid_alternative_locators/decisions.json",
+        "evaluators/F5/controls/valid_spacing/candidate.txt",
+        "evaluators/F5/controls/valid_spacing/decisions.json",
+        "evaluators/F5/reference/candidate.txt",
+        "evaluators/F5/reference/decisions.json",
+        "evaluators/F5/safe_io.py",
+        "evaluators/F5/test_grader.py",
+        "evaluators/F5/trusted-input-manifest.json"
+      ],
+      "criteria": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "required_outputs": [
+        "candidate.txt",
+        "decisions.json"
+      ],
+      "timeout_s": 900,
+      "min_raters": 1,
+      "group_min_raters": {},
+      "required_review_domains": [
+        "process_integrity",
+        "free_text_and_verification_claims"
+      ],
+      "review_min_raters": 2,
+      "grading_limitations": [
+        "Actual independent artifact/trace-bound reviews remain pending"
+      ]
+    },
+    {
+      "family_id": "F6",
+      "task_id": "F6-A",
+      "prompt": "cases/F6/task.txt",
+      "inputs": [
+        {
+          "source": "cases/F6/inputs/line_items.csv",
+          "target": "line_items.csv",
+          "protected": true
+        },
+        {
+          "source": "cases/F6/inputs/orders.csv",
+          "target": "orders.csv",
+          "protected": true
+        },
+        {
+          "source": "cases/F6/inputs/orders.sqlite3",
+          "target": "orders.sqlite3",
+          "protected": true
+        },
+        {
+          "source": "cases/F6/inputs/parameters.json",
+          "target": "parameters.json",
+          "protected": true
+        },
+        {
+          "source": "cases/F6/inputs/refunds.csv",
+          "target": "refunds.csv",
+          "protected": true
+        },
+        {
+          "source": "cases/F6/inputs/schema.sql",
+          "target": "schema.sql",
+          "protected": true
+        }
+      ],
+      "packet_files": [
+        {
+          "source": "cases/F6/input-manifest.json",
+          "target": "input-manifest.json"
+        }
+      ],
+      "skill": "packages/skill/sql-report-reconciliation/SKILL.md",
+      "skill_provenance": {
+        "commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+        "sha256": "0bbd6f501ee28738fea6326fe8759a2383047b034ad6888378dc00ca92204c59"
+      },
+      "skill_package": {
+        "guide_target": "skill/sql-report-reconciliation/SKILL.md",
+        "files": [
+          {
+            "source": "packages/skill/sql-report-reconciliation/SKILL.md",
+            "target": "skill/sql-report-reconciliation/SKILL.md",
+            "sha256": "0bbd6f501ee28738fea6326fe8759a2383047b034ad6888378dc00ca92204c59"
+          },
+          {
+            "source": "packages/skill/sql-report-reconciliation/references/fictional-example.md",
+            "target": "skill/sql-report-reconciliation/references/fictional-example.md",
+            "sha256": "9193c975032ac7880a0901480840c950aba154635bc644b5ac1f22931074afc8"
+          },
+          {
+            "source": "packages/skill/sql-report-reconciliation/references/verified-run.md",
+            "target": "skill/sql-report-reconciliation/references/verified-run.md",
+            "sha256": "cbcc0f25d9f348efad324d22e6bd61b1fffc076e25d5cb41583c057795812934"
+          }
+        ]
+      },
+      "grader": "evaluators/F6/grader.py",
+      "rubric": "evaluators/F6/rubric.json",
+      "oracle": "evaluators/F6/expected-results.json",
+      "evaluator_files": [
+        "evaluators/F6/controls/absent_refunds_unknown/report-notes.txt",
+        "evaluators/F6/controls/absent_refunds_unknown/report.sql",
+        "evaluators/F6/controls/absent_refunds_unknown/result.csv",
+        "evaluators/F6/controls/attempted_attach/report-notes.txt",
+        "evaluators/F6/controls/attempted_attach/report.sql",
+        "evaluators/F6/controls/attempted_attach/result.csv",
+        "evaluators/F6/controls/attempted_extension/report-notes.txt",
+        "evaluators/F6/controls/attempted_extension/report.sql",
+        "evaluators/F6/controls/attempted_extension/result.csv",
+        "evaluators/F6/controls/attempted_write/report-notes.txt",
+        "evaluators/F6/controls/attempted_write/report.sql",
+        "evaluators/F6/controls/attempted_write/result.csv",
+        "evaluators/F6/controls/clamped_negative_net/report-notes.txt",
+        "evaluators/F6/controls/clamped_negative_net/report.sql",
+        "evaluators/F6/controls/clamped_negative_net/result.csv",
+        "evaluators/F6/controls/drops_zero_child_orders/report-notes.txt",
+        "evaluators/F6/controls/drops_zero_child_orders/report.sql",
+        "evaluators/F6/controls/drops_zero_child_orders/result.csv",
+        "evaluators/F6/controls/equal_value_loss/report-notes.txt",
+        "evaluators/F6/controls/equal_value_loss/report.sql",
+        "evaluators/F6/controls/equal_value_loss/result.csv",
+        "evaluators/F6/controls/fanout_before_aggregation/report-notes.txt",
+        "evaluators/F6/controls/fanout_before_aggregation/report.sql",
+        "evaluators/F6/controls/fanout_before_aggregation/result.csv",
+        "evaluators/F6/controls/inclusive_period_end/report-notes.txt",
+        "evaluators/F6/controls/inclusive_period_end/report.sql",
+        "evaluators/F6/controls/inclusive_period_end/result.csv",
+        "evaluators/F6/controls/index.json",
+        "evaluators/F6/controls/omits_unallocated_row/report-notes.txt",
+        "evaluators/F6/controls/omits_unallocated_row/report.sql",
+        "evaluators/F6/controls/omits_unallocated_row/result.csv",
+        "evaluators/F6/controls/stale_saved_csv/report-notes.txt",
+        "evaluators/F6/controls/stale_saved_csv/report.sql",
+        "evaluators/F6/controls/stale_saved_csv/result.csv",
+        "evaluators/F6/controls/unknown_as_zero/report-notes.txt",
+        "evaluators/F6/controls/unknown_as_zero/report.sql",
+        "evaluators/F6/controls/unknown_as_zero/result.csv",
+        "evaluators/F6/controls/valid_alternative_query/report-notes.txt",
+        "evaluators/F6/controls/valid_alternative_query/report.sql",
+        "evaluators/F6/controls/valid_alternative_query/result.csv",
+        "evaluators/F6/controls/wrong_cutoff/report-notes.txt",
+        "evaluators/F6/controls/wrong_cutoff/report.sql",
+        "evaluators/F6/controls/wrong_cutoff/result.csv",
+        "evaluators/F6/controls/wrong_order_asof_filter/report-notes.txt",
+        "evaluators/F6/controls/wrong_order_asof_filter/report.sql",
+        "evaluators/F6/controls/wrong_order_asof_filter/result.csv",
+        "evaluators/F6/oracle-inputs.json",
+        "evaluators/F6/oracle.py",
+        "evaluators/F6/reference/report-notes.txt",
+        "evaluators/F6/reference/report.sql",
+        "evaluators/F6/reference/result.csv",
+        "evaluators/F6/safe_io.py",
+        "evaluators/F6/sql_worker.py",
+        "evaluators/F6/test_grader.py",
+        "evaluators/F6/trusted-input-manifest.json"
+      ],
+      "criteria": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "required_outputs": [
+        "report.sql",
+        "result.csv",
+        "report-notes.txt"
+      ],
+      "timeout_s": 900,
+      "min_raters": 1,
+      "group_min_raters": {},
+      "required_review_domains": [
+        "process_integrity",
+        "free_text_and_verification_claims"
+      ],
+      "review_min_raters": 2,
+      "grading_limitations": [
+        "Actual independent artifact/trace-bound reviews remain pending"
+      ]
+    },
+    {
+      "family_id": "F7",
+      "task_id": "F7-A",
+      "prompt": "cases/F7/task.txt",
+      "inputs": [
+        {
+          "source": "cases/F7/inputs/after.json",
+          "target": "after.json",
+          "protected": true
+        },
+        {
+          "source": "cases/F7/inputs/before.json",
+          "target": "before.json",
+          "protected": true
+        },
+        {
+          "source": "cases/F7/inputs/invalid-duplicate.json",
+          "target": "invalid-duplicate.json",
+          "protected": true
+        },
+        {
+          "source": "cases/F7/inputs/invalid-number.json",
+          "target": "invalid-number.json",
+          "protected": true
+        }
+      ],
+      "packet_files": [
+        {
+          "source": "cases/F7/input-manifest.json",
+          "target": "input-manifest.json"
+        }
+      ],
+      "skill": "packages/skill/compare-json-and-verify-patch/SKILL.md",
+      "skill_provenance": {
+        "commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+        "sha256": "67d2d04ce21ebc613f2b7350fd3d76a219f8524de30f251d4c7f6e50385e3014"
+      },
+      "skill_package": {
+        "guide_target": "skill/compare-json-and-verify-patch/SKILL.md",
+        "files": [
+          {
+            "source": "packages/skill/compare-json-and-verify-patch/SKILL.md",
+            "target": "skill/compare-json-and-verify-patch/SKILL.md",
+            "sha256": "67d2d04ce21ebc613f2b7350fd3d76a219f8524de30f251d4c7f6e50385e3014"
+          }
+        ]
+      },
+      "grader": "evaluators/F7/grader.py",
+      "rubric": "evaluators/F7/rubric.json",
+      "oracle": "evaluators/F7/oracle.json",
+      "evaluator_files": [
+        "evaluators/F7/controls/bad_pointer_escape/change-summary.txt",
+        "evaluators/F7/controls/bad_pointer_escape/patch.json",
+        "evaluators/F7/controls/bad_pointer_escape/validation-status.json",
+        "evaluators/F7/controls/duplicate_patch_keys/change-summary.txt",
+        "evaluators/F7/controls/duplicate_patch_keys/patch.json",
+        "evaluators/F7/controls/duplicate_patch_keys/validation-status.json",
+        "evaluators/F7/controls/excluded_transient_edit/change-summary.txt",
+        "evaluators/F7/controls/excluded_transient_edit/patch.json",
+        "evaluators/F7/controls/excluded_transient_edit/validation-status.json",
+        "evaluators/F7/controls/index.json",
+        "evaluators/F7/controls/invalid_document_accepted/change-summary.txt",
+        "evaluators/F7/controls/invalid_document_accepted/patch.json",
+        "evaluators/F7/controls/invalid_document_accepted/validation-status.json",
+        "evaluators/F7/controls/invalid_repair_emitted/change-summary.txt",
+        "evaluators/F7/controls/invalid_repair_emitted/invalid-repair-patch.json",
+        "evaluators/F7/controls/invalid_repair_emitted/patch.json",
+        "evaluators/F7/controls/invalid_repair_emitted/validation-status.json",
+        "evaluators/F7/controls/null_instead_absent/change-summary.txt",
+        "evaluators/F7/controls/null_instead_absent/patch.json",
+        "evaluators/F7/controls/null_instead_absent/validation-status.json",
+        "evaluators/F7/controls/numeric_boolean_status/change-summary.txt",
+        "evaluators/F7/controls/numeric_boolean_status/patch.json",
+        "evaluators/F7/controls/numeric_boolean_status/validation-status.json",
+        "evaluators/F7/controls/rounded_large_integer/change-summary.txt",
+        "evaluators/F7/controls/rounded_large_integer/patch.json",
+        "evaluators/F7/controls/rounded_large_integer/validation-status.json",
+        "evaluators/F7/controls/summary_value_leak/change-summary.txt",
+        "evaluators/F7/controls/summary_value_leak/patch.json",
+        "evaluators/F7/controls/summary_value_leak/validation-status.json",
+        "evaluators/F7/controls/valid_nonminimal/change-summary.txt",
+        "evaluators/F7/controls/valid_nonminimal/patch.json",
+        "evaluators/F7/controls/valid_nonminimal/validation-status.json",
+        "evaluators/F7/controls/valid_whole_items/change-summary.txt",
+        "evaluators/F7/controls/valid_whole_items/patch.json",
+        "evaluators/F7/controls/valid_whole_items/validation-status.json",
+        "evaluators/F7/controls/wrong_order_shrink/change-summary.txt",
+        "evaluators/F7/controls/wrong_order_shrink/patch.json",
+        "evaluators/F7/controls/wrong_order_shrink/validation-status.json",
+        "evaluators/F7/reference/change-summary.txt",
+        "evaluators/F7/reference/patch.json",
+        "evaluators/F7/reference/validation-status.json",
+        "evaluators/F7/safe_io.py",
+        "evaluators/F7/test_grader.py",
+        "evaluators/F7/trusted-input-manifest.json"
+      ],
+      "criteria": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "required_outputs": [
+        "patch.json",
+        "change-summary.txt",
+        "validation-status.json"
+      ],
+      "timeout_s": 900,
+      "min_raters": 1,
+      "group_min_raters": {},
+      "required_review_domains": [
+        "process_integrity",
+        "free_text_and_verification_claims"
+      ],
+      "review_min_raters": 2,
+      "grading_limitations": [
+        "Actual independent artifact/trace-bound reviews remain pending"
+      ]
+    },
+    {
+      "family_id": "F8",
+      "task_id": "F8-A",
+      "prompt": "cases/F8/task.txt",
+      "inputs": [
+        {
+          "source": "cases/F8/inputs/scaffold/card_editor.py",
+          "target": "scaffold/card_editor.py",
+          "protected": true
+        },
+        {
+          "source": "cases/F8/inputs/scaffold/demo_cards.json",
+          "target": "scaffold/demo_cards.json",
+          "protected": true
+        },
+        {
+          "source": "cases/F8/inputs/scaffold/merge_primitive.py",
+          "target": "scaffold/merge_primitive.py",
+          "protected": true
+        },
+        {
+          "source": "cases/F8/inputs/scaffold/merge_session.py",
+          "target": "scaffold/merge_session.py",
+          "protected": true
+        },
+        {
+          "source": "cases/F8/inputs/scaffold/tests/test_smoke.py",
+          "target": "scaffold/tests/test_smoke.py",
+          "protected": true
+        }
+      ],
+      "packet_files": [
+        {
+          "source": "cases/F8/input-manifest.json",
+          "target": "input-manifest.json"
+        }
+      ],
+      "skill": "packages/skill/build-text-merge-component/SKILL.md",
+      "skill_provenance": {
+        "commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+        "sha256": "e1edb81fd65830e73dd0015672c5cc962fae2118957121236439e810858c1975"
+      },
+      "skill_package": {
+        "guide_target": "skill/build-text-merge-component/SKILL.md",
+        "files": [
+          {
+            "source": "packages/skill/build-text-merge-component/SKILL.md",
+            "target": "skill/build-text-merge-component/SKILL.md",
+            "sha256": "e1edb81fd65830e73dd0015672c5cc962fae2118957121236439e810858c1975"
+          }
+        ]
+      },
+      "grader": "evaluators/F8/grade.py",
+      "rubric": "evaluators/F8/rubric.json",
+      "oracle": "evaluators/F8/probe.py",
+      "evaluator_files": [
+        "evaluators/F8/author_check.py",
+        "evaluators/F8/author_fixture_allowlist.json",
+        "evaluators/F8/controls/accepted_helpers_extensions/card_editor.py",
+        "evaluators/F8/controls/accepted_helpers_extensions/checks.txt",
+        "evaluators/F8/controls/accepted_helpers_extensions/demo_cards.json",
+        "evaluators/F8/controls/accepted_helpers_extensions/merge_primitive.py",
+        "evaluators/F8/controls/accepted_helpers_extensions/merge_session.py",
+        "evaluators/F8/controls/accepted_helpers_extensions/render_helpers.py",
+        "evaluators/F8/controls/accepted_helpers_extensions/tests/test_regressions.py",
+        "evaluators/F8/controls/accepted_helpers_extensions/tests/test_smoke.py",
+        "evaluators/F8/controls/g1_caller_drops_update/card_editor.py",
+        "evaluators/F8/controls/g1_caller_drops_update/checks.txt",
+        "evaluators/F8/controls/g1_caller_drops_update/demo_cards.json",
+        "evaluators/F8/controls/g1_caller_drops_update/merge_primitive.py",
+        "evaluators/F8/controls/g1_caller_drops_update/merge_session.py",
+        "evaluators/F8/controls/g1_caller_drops_update/tests/test_regressions.py",
+        "evaluators/F8/controls/g1_caller_drops_update/tests/test_smoke.py",
+        "evaluators/F8/controls/g1_promotes_unresolved/card_editor.py",
+        "evaluators/F8/controls/g1_promotes_unresolved/checks.txt",
+        "evaluators/F8/controls/g1_promotes_unresolved/demo_cards.json",
+        "evaluators/F8/controls/g1_promotes_unresolved/merge_primitive.py",
+        "evaluators/F8/controls/g1_promotes_unresolved/merge_session.py",
+        "evaluators/F8/controls/g1_promotes_unresolved/tests/test_regressions.py",
+        "evaluators/F8/controls/g1_promotes_unresolved/tests/test_smoke.py",
+        "evaluators/F8/controls/g2_automatic_uses_base/card_editor.py",
+        "evaluators/F8/controls/g2_automatic_uses_base/checks.txt",
+        "evaluators/F8/controls/g2_automatic_uses_base/demo_cards.json",
+        "evaluators/F8/controls/g2_automatic_uses_base/merge_primitive.py",
+        "evaluators/F8/controls/g2_automatic_uses_base/merge_session.py",
+        "evaluators/F8/controls/g2_automatic_uses_base/tests/test_regressions.py",
+        "evaluators/F8/controls/g2_automatic_uses_base/tests/test_smoke.py",
+        "evaluators/F8/controls/g3_false_alternative/card_editor.py",
+        "evaluators/F8/controls/g3_false_alternative/checks.txt",
+        "evaluators/F8/controls/g3_false_alternative/demo_cards.json",
+        "evaluators/F8/controls/g3_false_alternative/merge_primitive.py",
+        "evaluators/F8/controls/g3_false_alternative/merge_session.py",
+        "evaluators/F8/controls/g3_false_alternative/tests/test_regressions.py",
+        "evaluators/F8/controls/g3_false_alternative/tests/test_smoke.py",
+        "evaluators/F8/controls/g4_revision_ignored/card_editor.py",
+        "evaluators/F8/controls/g4_revision_ignored/checks.txt",
+        "evaluators/F8/controls/g4_revision_ignored/demo_cards.json",
+        "evaluators/F8/controls/g4_revision_ignored/merge_primitive.py",
+        "evaluators/F8/controls/g4_revision_ignored/merge_session.py",
+        "evaluators/F8/controls/g4_revision_ignored/tests/test_regressions.py",
+        "evaluators/F8/controls/g4_revision_ignored/tests/test_smoke.py",
+        "evaluators/F8/controls/g5_boolean_format/card_editor.py",
+        "evaluators/F8/controls/g5_boolean_format/checks.txt",
+        "evaluators/F8/controls/g5_boolean_format/demo_cards.json",
+        "evaluators/F8/controls/g5_boolean_format/merge_primitive.py",
+        "evaluators/F8/controls/g5_boolean_format/merge_session.py",
+        "evaluators/F8/controls/g5_boolean_format/tests/test_regressions.py",
+        "evaluators/F8/controls/g5_boolean_format/tests/test_smoke.py",
+        "evaluators/F8/controls/g5_empty_regression_file/card_editor.py",
+        "evaluators/F8/controls/g5_empty_regression_file/checks.txt",
+        "evaluators/F8/controls/g5_empty_regression_file/demo_cards.json",
+        "evaluators/F8/controls/g5_empty_regression_file/merge_primitive.py",
+        "evaluators/F8/controls/g5_empty_regression_file/merge_session.py",
+        "evaluators/F8/controls/g5_empty_regression_file/tests/test_extra.py",
+        "evaluators/F8/controls/g5_empty_regression_file/tests/test_regressions.py",
+        "evaluators/F8/controls/g5_empty_regression_file/tests/test_smoke.py",
+        "evaluators/F8/controls/g5_false_test_report/card_editor.py",
+        "evaluators/F8/controls/g5_false_test_report/checks.txt",
+        "evaluators/F8/controls/g5_false_test_report/demo_cards.json",
+        "evaluators/F8/controls/g5_false_test_report/merge_primitive.py",
+        "evaluators/F8/controls/g5_false_test_report/merge_session.py",
+        "evaluators/F8/controls/g5_false_test_report/tests/test_regressions.py",
+        "evaluators/F8/controls/g5_false_test_report/tests/test_smoke.py",
+        "evaluators/F8/controls/index.json",
+        "evaluators/F8/controls/integrity_changed_primitive/card_editor.py",
+        "evaluators/F8/controls/integrity_changed_primitive/checks.txt",
+        "evaluators/F8/controls/integrity_changed_primitive/demo_cards.json",
+        "evaluators/F8/controls/integrity_changed_primitive/merge_primitive.py",
+        "evaluators/F8/controls/integrity_changed_primitive/merge_session.py",
+        "evaluators/F8/controls/integrity_changed_primitive/tests/test_regressions.py",
+        "evaluators/F8/controls/integrity_changed_primitive/tests/test_smoke.py",
+        "evaluators/F8/reference/accepted/card_editor.py",
+        "evaluators/F8/reference/accepted/checks.txt",
+        "evaluators/F8/reference/accepted/demo_cards.json",
+        "evaluators/F8/reference/accepted/merge_primitive.py",
+        "evaluators/F8/reference/accepted/merge_session.py",
+        "evaluators/F8/reference/accepted/tests/test_regressions.py",
+        "evaluators/F8/reference/accepted/tests/test_smoke.py",
+        "evaluators/F8/safe_io.py",
+        "evaluators/F8/test_grader.py",
+        "evaluators/F8/test_mutants/stale/card_editor.py",
+        "evaluators/F8/test_mutants/stale/demo_cards.json",
+        "evaluators/F8/test_mutants/stale/merge_primitive.py",
+        "evaluators/F8/test_mutants/stale/merge_session.py",
+        "evaluators/F8/test_mutants/stale/tests/test_smoke.py",
+        "evaluators/F8/test_mutants/unresolved/card_editor.py",
+        "evaluators/F8/test_mutants/unresolved/demo_cards.json",
+        "evaluators/F8/test_mutants/unresolved/merge_primitive.py",
+        "evaluators/F8/test_mutants/unresolved/merge_session.py",
+        "evaluators/F8/test_mutants/unresolved/tests/test_smoke.py",
+        "evaluators/F8/trusted_manifest.json"
+      ],
+      "criteria": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "required_outputs": [
+        "merge_session.py",
+        "card_editor.py",
+        "merge_primitive.py",
+        "demo_cards.json",
+        "tests/test_smoke.py",
+        "tests/test_regressions.py",
+        "checks.txt"
+      ],
+      "timeout_s": 1500,
+      "min_raters": 1,
+      "group_min_raters": {},
+      "required_review_domains": [
+        "process_integrity",
+        "free_text_and_verification_claims"
+      ],
+      "review_min_raters": 2,
+      "grading_limitations": [
+        "Actual independent artifact/trace-bound reviews remain pending",
+        "Generated Python behavior is pending separately verified isolation"
+      ]
+    }
+  ]
+}

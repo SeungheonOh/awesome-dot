@@ -1,0 +1,45 @@
+{
+  "catalogue": {
+    "title": "Spring kits",
+    "items": [
+      {
+        "sku": "K-1",
+        "name": "Signal card",
+        "stock": 9007199254740993,
+        "tags": [
+          "paper",
+          "blue",
+          "folded"
+        ],
+        "optional": null
+      },
+      {
+        "sku": "K-2",
+        "name": "Beacon card",
+        "stock": 8,
+        "tags": [
+          "paper"
+        ],
+        "optional": "keep"
+      },
+      {
+        "sku": "K-3",
+        "name": "Spare clip",
+        "stock": 0,
+        "tags": []
+      }
+    ],
+    "last_review": "2026-01-01"
+  },
+  "labels": {
+    "": "draft",
+    "a/b": "shelf-west",
+    "x~y": "v1",
+    "nullable": null,
+    "drop": "old"
+  },
+  "internal": {
+    "access_note": "Fictional private routing text",
+    "export_marker": "red-leaf-73"
+  }
+}

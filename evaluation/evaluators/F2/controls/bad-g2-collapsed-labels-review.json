@@ -1,0 +1,39 @@
+{
+  "case_id": "F2",
+  "groups": {
+    "g1": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g1 rubric; for validator wiring only."
+      ]
+    },
+    "g2": {
+      "passed": false,
+      "evidence": [
+        "Synthetic adverse annotation: EX-11 description collapses independently deliverable M01 and M02 PDFs, although it retains two IDs."
+      ]
+    },
+    "g3": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g3 rubric; for validator wiring only."
+      ]
+    },
+    "g4": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g4 rubric; for validator wiring only."
+      ]
+    },
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "Synthetic reference annotation confirms the source-grounded g5 rubric; for validator wiring only."
+      ]
+    }
+  },
+  "submission_hashes": {
+    "actions.json": "489306f2c2ec0a70e9d7ac156602d933a869c2c4e380575037402fdcaf54fba6",
+    "handoff.txt": "8bab8a1789b48745c2374cb22c99149c98cd80e54f6204a0a8f61550d64e66f9"
+  }
+}

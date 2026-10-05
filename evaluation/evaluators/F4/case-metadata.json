@@ -1,0 +1,14 @@
+{
+  "case_id": "F4",
+  "case_title": "Volunteer roster application decision",
+  "version": "1.0",
+  "frozen_time_limit_seconds": 900,
+  "runtime": "Python 3.10+ standard library; no installation, network, live accounts, or model execution required for local checks",
+  "candidate_output": "decision-brief.txt",
+  "maximum_words": 500,
+  "word_count_rule": "len(decoded_utf8_text.split()); includes headings, numbers, and references",
+  "source_scope": "../../cases/F4/task.txt, ../../cases/F4/input-manifest.json, and exactly six ../../cases/F4/inputs text files",
+  "semantic_review": "Independent blinded source-grounded review required. Synthetic review controls test scoring wiring, not semantic evaluator validity.",
+  "blinding": "Provide the ../../cases/F4 packet only to task runners; reviewers receive rubric and an anonymized submission with random submission label, not treatment identity, reference/control identity, or synthetic review.",
+  "time_limit_clock": "Starts at runner process launch, includes skill reading and self-checks, excludes setup and grading. Predeclared in the pilot protocol."
+}

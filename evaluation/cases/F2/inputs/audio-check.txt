@@ -1,0 +1,4 @@
+[V01] Deliverable: EX-16; equipment test completed 2026-10-07T11:10:00+01:00 by Ivo Chen.
+[V02] Left output: signal sent through the display-audio cable and received at the speaker; PASS.
+[V03] Right output: signal sent through the display-audio cable and received at the speaker; PASS.
+[V04] Log saved at 2026-10-07T11:12:00+01:00. Both required outputs are covered; no result is pending.
