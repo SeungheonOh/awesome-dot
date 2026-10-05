@@ -43,11 +43,17 @@ Write numbered setup steps: restore the fixture, establish the initial saved sta
 
 Define a reset that restores all state relevant to the hypothesis, including saved data, draft state, caches, pending work and counters where applicable. A visual refresh alone may not reset persisted state. If a reset would affect real records, replace it with a disposable fixture or stop for a safe scope decision.
 
-### 4. Specify the shortest triggering sequence
+### 4. Specify and reduce the triggering sequence
 
 For each action, record the exact input, observable completion condition and evidence to capture. Keep expected and actual values in separate fields. Verify the expected result from the contract or independent calculation rather than copying the possibly incorrect screen.
 
 Preserve the important order. A defect that appears only after canceling twice needs that sequence; a defect after changing a filter needs both the old and new selection. Remove unrelated actions one at a time and retain the last sequence that still shows the mismatch. Record a failed reproduction as a tested set of conditions, not proof that the original report is false.
+
+When the task is to shrink an established failing input or replay, define what counts as the **same** failure and which simplifications are allowed. A different wrong record, an exception or an invalid replay does not automatically preserve the reported defect. Keep prerequisites and reference relationships in mind: deleting a setup action may make later actions impossible. A coherent group deletion or coordinated edit can be useful when permitted. Do not invent replacement actions or change identities outside the permitted transformations; keep repairing the target separate from reducing its failing input.
+
+Evaluate candidates from a fresh relevant state through the actual target. Distinguish a successful reproduction, valid non-reproduction and an invalid or unrun candidate; never attribute an earlier output to a rejected replay. Count attempted candidates, including rejected ones, against any declared observation or time budget. Use direct reasoning or a small fixed-task helper as appropriate; automation is not required for a short sequence.
+
+State what the search established. Checking every single-command deletion can establish that none of those deletions preserves the failure; it does not prove a globally smallest case or exclude useful combined changes. Name the checked simplifications and any limit that stopped the search. Confirm the final saved candidate with the same reset and failure check before reporting it as a working reproducer.
 
 ### 5. Choose relevant neighboring cases
 
