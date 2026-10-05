@@ -42,6 +42,18 @@ Establish transaction behavior for the engine and driver actually used. Do not i
 
 Enable and read back SQLite foreign-key enforcement on each relevant connection before beginning a transaction. Changing it inside a transaction has no effect. Check relationships explicitly after transformation; `integrity_check` does not include foreign-key checks. For other engines, establish the equivalent documented controls. [SQLite foreign-key enforcement](https://www.sqlite.org/foreignkeys.html#fk_enable), [integrity checks](https://www.sqlite.org/pragma.html#pragma_integrity_check)
 
+## When old and new callers must coexist
+
+Use a staged transition when the accepted task requires continued writes or overlapping application versions. If the controlled callers can move together, a simpler one-step transition may suffice. For each required intermediate state, establish which representations govern reads, which callers may write, and which values are permitted. Adding a column or completing a backfill does not by itself change that authority.
+
+Keep conversion work distinct from an ordinary accepted edit. A captured value can become stale before a backfill write, and an already converted row can receive a later edit. Choose an engine-appropriate synchronization or conditional-write mechanism that preserves newer committed values and the caller compatibility contract. Re-reading current authoritative values, detecting a changed revision, or maintaining representations together may be suitable; no particular trigger, marker or dual-write design is mandatory.
+
+Exercise a consequential interleaving through the actual callers: capture conversion work, accept a relevant edit, then attempt that delayed work. Check both readers and persisted values. Also check an accepted edit after conversion, and newly created records when those are allowed. Visiting every initial row is not enough to demonstrate catch-up with a changing population. Repeated or resumed conversion must preserve accepted edits and avoid duplicate relationships or accidental reactivation of a retired path.
+
+Make the switch or retirement condition explicit. Reconcile current values and outstanding work before claiming the phase is ready, and use the authority specified by the task to change the supported reader/writer contract. Verify the actual old write entry point's intended compatibility or refusal after reopening the saved state. A recorded phase label alone does not enforce that behavior.
+
+Reassess rollback at each boundary. Data may remain representable for old code during overlap while a later new-only value closes that option. Restoring archived application code can also bypass a newly required retirement rule. State those limits separately from snapshot recovery, and preserve later-write evidence. Local controlled interleavings do not establish production concurrency, deployment coordination or zero downtime.
+
 ## Execute, reconcile, and challenge the result
 
 Run the migration only on its intended copy. Save the exact statements/code and parameters, source/decision identities, relevant errors, runtime versions and resulting migration version. If the version or source state differs from the plan, stop and replan; do not force a replay or erase intervening changes.
