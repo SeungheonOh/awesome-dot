@@ -1,0 +1,1 @@
+SYNTHETIC CONTROLS ONLY. g1-g5 are parser/grade-interface flags, not real task quality.

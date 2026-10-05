@@ -1,0 +1,17 @@
+{
+  "schema_version": "dot-eval-config-1",
+  "study_id": "synthetic-process-plumbing-only",
+  "stage": "harness_test",
+  "arms": ["C", "S"],
+  "repetitions": 1,
+  "common_instruction": "Run only the authored process fixture. This is not a model trial.",
+  "runner": {"kind": "synthetic_fixture_only", "binary_path": null, "cli_version": null, "requested_model": null, "reasoning_setting": null, "sandbox_mode": null},
+  "analysis": {"bootstrap_seed": 741, "bootstrap_draws": 10000},
+  "tasks": [{
+    "task_id": "synthetic-plumbing-A", "family_id": "synthetic",
+    "prompt": "task.txt", "inputs": [{"source": "source.txt", "target": "source.txt", "protected": true}],
+    "skill": "guide.md", "grader": "grader.py", "rubric": "rubric.txt", "oracle": "oracle.json",
+    "criteria": ["g1", "g2", "g3", "g4", "g5"], "required_outputs": ["result.txt"],
+    "timeout_s": 2, "min_raters": 1
+  }]
+}

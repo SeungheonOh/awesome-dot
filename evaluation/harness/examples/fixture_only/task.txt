@@ -1,0 +1,2 @@
+This is an authored process-plumbing test, not a model task or benchmark.
+The synthetic fixture process should put its fixed marker in output/result.txt.
