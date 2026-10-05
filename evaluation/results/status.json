@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-10-05",
+  "study_status": "prepared_not_run",
+  "model_attempts": 0,
+  "planned_model_attempts": 16,
+  "live_dispatch": "disabled",
+  "skill_effect_estimate": null,
+  "local_validation": {
+    "harness_test_methods": 61,
+    "case_grader_test_methods": 119,
+    "case_counts": {
+      "F1": 10,
+      "F2": 9,
+      "F3": 22,
+      "F4": 24,
+      "F5": 9,
+      "F6": 13,
+      "F7": 18,
+      "F8": 14
+    },
+    "task_input_files": 52,
+    "package_files": 19,
+    "package_bytes": 171703,
+    "status": "passed"
+  },
+  "interpretation": "Local authored fixture tests are not model benchmark outcomes."
+}

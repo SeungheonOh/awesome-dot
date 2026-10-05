@@ -41,6 +41,8 @@ Benefits are not universal: an [early-2025 study of experienced developers](http
 
 This repository has no measured time-saving or productivity benchmark. To evaluate a workflow yourself, compare similar tasks and record total time, corrections, and final quality, including review effort.
 
+[Evaluation protocol, cases, and local checks →](evaluation/README.md) · Prepared fixtures; no model trials or measured skill-effect results yet.
+
 ## Use it with dot
 
 1. **Choose a skill.** Open its guide and give dot the link or paste its contents.
