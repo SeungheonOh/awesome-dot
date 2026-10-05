@@ -44,6 +44,12 @@ For each comparison-only state, require unchanged records and the expected count
 
 Counters must be labeled as the chosen implementation's operations. They are not runtime benchmarks. Playback timing is a presentation choice, not execution time. Test step, back, seek, restart, end-of-playback and late callbacks after input replacement through the real caller or a clearly labeled simulated consumer.
 
+### Check adaptive stopping separately
+
+An early-exit optimization has its own observable contract. Use already ordered inputs to prove a swap-free pass terminates, and reverse inputs to exercise the full pass schedule. For shrinking left-to-right bubble passes on n records, sorted input uses max(0, n−1) comparisons and zero swaps; reverse distinct input uses n(n−1)/2 comparisons and swaps. Check each supported size, including one record. These counts depend on this exact implementation and must not be generalized to other variants.
+
+For strict adjacent swaps, count input inversions independently: every pair i < j whose key at i is greater than the key at j. Each such swap removes one inversion, so the final swap total should match the initial inversion count. Equal-key pairs are not inversions. This cross-check connects operation accounting to ordering without reusing the production loop.
+
 ## Worked example
 
 Input records are 2A, 2B, 1C. A minimum-swap selection pass exchanges 2A with 1C, producing 1C, 2B, 2A. The values are correctly sorted, every identity survived, but equal-key order was reversed. The stability check must fail even though a value-only test passes.
