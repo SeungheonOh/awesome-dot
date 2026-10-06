@@ -5,6 +5,7 @@
 
 <p align="center">
   <a href="#use-it-with-dot"><strong>Use a skill</strong></a> ·
+  <a href="#what-this-repository-measured">See the evaluation</a> ·
   <a href="#what-ai-research-has-measured">Read the research</a> ·
   <a href="CONTRIBUTING.md">Contribute</a>
 </p>
@@ -25,6 +26,21 @@ Try: “Use the task router for this task: [describe the result you need]. I hav
 
 [Browse all skill folders →](skill/)
 
+## What this repository measured
+
+<picture>
+  <source media="(max-width: 600px)" srcset=".github/assets/native-results-mobile.svg">
+  <img src=".github/assets/native-results.svg" width="1280" alt="Native-cloud study, 6 October 2026: 16 actual attempts across eight paired fictional tasks. No designated package (C) and designated package supplied (S) each passed 40/40 primary artifact-criterion groups and met primary checks on 8/8 artifacts: a ceiling tie, with a 0 percentage-point pass-rate difference. Process integrity is unverified. A separate post-hoc Unicode save check passed in C and failed in S; it does not change primary scores.">
+</picture>
+
+**No measured uplift:** both arms reached the primary-score ceiling on this small suite.
+
+**[Post-hoc Unicode check →](evaluation/results/native-cloud-2026-10-06/f8/README.md)** C preserved lone-surrogate text through save/reload; S failed with UnicodeEncodeError. This separate diagnostic does not change primary scores.
+
+Exploratory native-agent study with a shared runtime and instruction-only separation; C was not skill-free. No time, cost, or productivity gain established.
+
+[Read the study and exact artifacts →](evaluation/results/native-cloud-2026-10-06/README.md) · [Paired data](evaluation/results/native-cloud-2026-10-06/paired-summary.json) · [Reproduce the graphic](evaluation/visualization/render_native_results.py) · [Evaluation protocol](evaluation/README.md)
+
 ## What AI research has measured
 
 **Independent studies of other AI tools, not benchmarks of dot or these skills.** Results depend on the task, tool, and user.
@@ -40,8 +56,6 @@ Try: “Use the task router for this task: [describe the result you need]. I hav
 Benefits are not universal: an [early-2025 study of experienced developers](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) found longer task times with AI. [METR’s 2026 follow-up](https://metr.org/blog/2026-02-24-uplift-update/) highlights selection and measurement problems with current estimates.
 
 This repository has no measured time-saving or productivity benchmark. To evaluate a workflow yourself, compare similar tasks and record total time, corrections, and final quality, including review effort.
-
-[Evaluation protocol and local checks →](evaluation/README.md) · [Native-cloud study: 16 actual attempts on eight fictional cases →](evaluation/results/native-cloud-2026-10-06/README.md). The original sealed CodexCLI pilot remains unrun.
 
 ## Use it with dot
 
