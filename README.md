@@ -41,7 +41,7 @@ Benefits are not universal: an [early-2025 study of experienced developers](http
 
 This repository has no measured time-saving or productivity benchmark. To evaluate a workflow yourself, compare similar tasks and record total time, corrections, and final quality, including review effort.
 
-[Evaluation protocol, cases, and local checks →](evaluation/README.md) · Prepared fixtures; no model trials or measured skill-effect results yet.
+[Evaluation protocol and local checks →](evaluation/README.md) · [Native-cloud study: 16 actual attempts on eight fictional cases →](evaluation/results/native-cloud-2026-10-06/README.md). The original sealed CodexCLI pilot remains unrun.
 
 ## Use it with dot
 

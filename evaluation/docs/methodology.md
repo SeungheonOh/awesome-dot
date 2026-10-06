@@ -1,5 +1,7 @@
 # Methodology
 
+This document describes the original sealed-pilot design, which remains unrun. A [separate native-cloud artifact study](../results/native-cloud-2026-10-06/README.md) reports its own observed results and weaker execution boundaries.
+
 ## Research question
 
 On these eight task cases, does supplying a designated skill package change acceptable first-submission completion, artifact quality, elapsed time, or provider-reported usage?
@@ -43,4 +45,4 @@ Keep provider input, cached-input, cache-write, output, and reasoning-output cou
 
 ## Limits
 
-Local artifact tasks do not measure delivered emails, completed bookings, live calendar changes, account access, native document fidelity, or full dot product performance. No measured skill effect exists yet. Passing fixture tests establishes properties of the harness and graders only.
+Local artifact tasks do not measure delivered emails, completed bookings, live calendar changes, account access, native document fidelity, or full dot product performance. The original sealed pilot has no measured outcomes. Passing fixture tests establishes properties of the harness and graders only.

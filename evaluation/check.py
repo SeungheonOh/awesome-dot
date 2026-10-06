@@ -119,7 +119,7 @@ def main():
         pattern = "checks.py" if number == 4 else "test*.py"
         run(["-m", "unittest", "discover", "-s", ".", "-p", pattern, "-v"],
             ROOT / "evaluators" / f"F{number}", env)
-    print("\nLocal checks passed. No model trials ran; live dispatch remains disabled.", flush=True)
+    print("\nLocal checks passed. This check made no model calls; sealed-pilot live dispatch remains disabled.", flush=True)
     return 0
 
 

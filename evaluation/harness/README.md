@@ -1,6 +1,6 @@
 # Local evaluation harness
 
-A Python-standard-library scaffold for source identity, paired scheduling, attempt accounting, blind export, and reporting. **No model trials have run. Live dispatch is disabled.** Its test processes and usage counters are authored test doubles.
+A Python-standard-library scaffold for source identity, paired scheduling, attempt accounting, blind export, and reporting. **This harness has not run a model trial. Its live dispatch is disabled.** A [separate native-cloud study](../results/native-cloud-2026-10-06/README.md) records actual attempts outside this sealed-pilot harness. Its test processes and usage counters are authored test doubles.
 
 The pilot uses `designated_skill_package_supplied`: S gets an exact per-task package allowlist, including the guide and designated examples/helpers; C gets none. The small `examples/fixture_only` demonstration instead uses a synthetic standalone guide to test plumbing. It is not the pilot treatment or benchmark data.
 

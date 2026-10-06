@@ -1,10 +1,5 @@
 {
-  "as_of": "2026-10-05",
-  "study_status": "prepared_not_run",
-  "model_attempts": 0,
-  "planned_model_attempts": 16,
-  "live_dispatch": "disabled",
-  "skill_effect_estimate": null,
+  "as_of": "2026-10-06",
   "local_validation": {
     "harness_test_methods": 61,
     "case_grader_test_methods": 119,
@@ -23,5 +18,47 @@
     "package_bytes": 171703,
     "status": "passed"
   },
-  "interpretation": "Local authored fixture tests are not model benchmark outcomes."
+  "native_cloud_study": {
+    "study_id": "dot-skills-native-artifact-exploratory-20261006",
+    "status": "complete_artifact_scoring_process_integrity_unknown",
+    "scheduled_cases": 8,
+    "scheduled_attempts": 16,
+    "first_submissions": 16,
+    "C": {
+      "cases_all_primary_artifact_groups_passed": 8,
+      "cases": 8,
+      "criterion_groups_passed": 40,
+      "criterion_groups": 40
+    },
+    "S": {
+      "cases_all_primary_artifact_groups_passed": 8,
+      "cases": 8,
+      "criterion_groups_passed": 40,
+      "criterion_groups": 40
+    },
+    "paired_wins": 0,
+    "paired_ties": 8,
+    "paired_losses": 0,
+    "primary_artifact_group_pass_rate_difference_percentage_points": 0.0,
+    "overall_acceptance": null,
+    "process_integrity": null,
+    "exact_serving_model": null,
+    "tokens": null,
+    "cost": null,
+    "human_productivity": null,
+    "posthoc_F8_surrogate_diagnostic": {
+      "C": "passed",
+      "S": "UnicodeEncodeError on save",
+      "affects_primary_score": false
+    },
+    "report": "native-cloud-2026-10-06/README.md"
+  },
+  "sealed_codex_cli_pilot": {
+    "status": "prepared_not_run",
+    "model_attempts": 0,
+    "planned_model_attempts": 16,
+    "live_dispatch": "disabled",
+    "skill_effect_estimate": null
+  },
+  "interpretation": "180 authored fixture tests are not model trials. Native artifact criteria show a ceiling tie, not measured uplift. Overall process acceptance and productivity remain unknown."
 }
