@@ -28,16 +28,25 @@ Try: “Use the task router for this task: [describe the result you need]. I hav
 
 ## What this repository measured
 
+**Follow the work, from source packet to reviewable output.** We ran four synthetic workflows three times per condition: reconcile expenses, untangle dated action items, check a SQL report, and maintain a merge/persistence component.
+
 <picture>
-  <source media="(max-width: 600px)" srcset=".github/assets/native-results-mobile.svg">
-  <img src=".github/assets/native-results.svg" width="1280" alt="Saved-file excerpts, not screenshots: F6 baseline C and package-supplied S saved identical SQL-report CSVs with phone gross and net left NULL. A separate post-hoc F8 Unicode save/reload check passed in C and failed with UnicodeEncodeError in S. Across 16 actual native-agent runs on eight paired fictional tasks, C and S each passed 40/40 primary artifact-criterion groups and 8/8 artifacts: a ceiling tie, with a 0 percentage-point difference. The post-hoc finding does not change primary scores. Process integrity is unverified.">
+  <source media="(max-width: 600px)" srcset=".github/assets/repeated-stress-evidence-mobile.svg">
+  <img src=".github/assets/repeated-stress-evidence.svg" width="1280" alt="Selected saved JSON fields from synthetic workflows. R1 source T07-R1-r3-C shows USD 2,142.65 payable, USD 252.90 held and a separate unvalued EUR 24.00 hold; C007 is a duplicate of C001 with zero reimbursement, and C026 has null USD values. R2 source T05-R2-r3-C shows 18 active actions, 4 of them overdue, 12 done and 4 cancelled; A21 is unresolved and A30 has a null due date. Both displayed sources are C, no designated package. Shown fields and summary values match all three C and three S artifacts within each case. Reformatted excerpts, not screenshots.">
 </picture>
 
-**Inspect the saved evidence:** F6 CSVs [C](evaluation/results/native-cloud-2026-10-06/artifacts/N09-F6-C/result.csv) / [S](evaluation/results/native-cloud-2026-10-06/artifacts/N10-F6-S/result.csv) · SQL [C](evaluation/results/native-cloud-2026-10-06/artifacts/N09-F6-C/report.sql) / [S](evaluation/results/native-cloud-2026-10-06/artifacts/N10-F6-S/report.sql) · [F8 diagnostic record](evaluation/results/native-cloud-2026-10-06/f8/execution-results.json) and [scope](evaluation/results/native-cloud-2026-10-06/f8/README.md)
+Inspect the fields: expense [totals](evaluation/studies/repeated-stress-2026-10-06/artifacts/T07-R1-r3-C/reconciliation.json#L590-L604) / [duplicate](evaluation/studies/repeated-stress-2026-10-06/artifacts/T07-R1-r3-C/reconciliation.json#L117-L134) / [unvalued hold](evaluation/studies/repeated-stress-2026-10-06/artifacts/T07-R1-r3-C/reconciliation.json#L493-L510) / [paired S](evaluation/studies/repeated-stress-2026-10-06/artifacts/T08-R1-r3-S/reconciliation.json) · action [totals](evaluation/studies/repeated-stress-2026-10-06/artifacts/T05-R2-r3-C/action_register.json#L419-L429) / [unresolved](evaluation/studies/repeated-stress-2026-10-06/artifacts/T05-R2-r3-C/action_register.json#L246-L256) / [missing due date](evaluation/studies/repeated-stress-2026-10-06/artifacts/T05-R2-r3-C/action_register.json#L354-L364) / [paired S](evaluation/studies/repeated-stress-2026-10-06/artifacts/T06-R2-r3-S/action_register.json)
 
-**No measured primary-score uplift.** C received no designated package; S received the designated package. These actual runs used authored fictional tasks, a shared runtime, and instruction-only separation. C was not skill-free; process integrity is unverified. No time, cost, or productivity gain established.
+<picture>
+  <source media="(max-width: 600px)" srcset=".github/assets/repeated-stress-runs-mobile.svg">
+  <img src=".github/assets/repeated-stress-runs.svg" width="1280" alt="All 24 native-agent attempts across four synthetic workflows, three repeats per condition. C received no designated package; S received its designated package. Every R1 and R2 attempt passed 14 scheduled requirements, every R3 attempt passed 12, and every R4 attempt passed 13. All 12 pairs tie, with zero failed or not-assessed requirements. Four authored cases, not 12 independent task samples. Shared runtime; C was not skill-free; process integrity unknown.">
+</picture>
 
-[Read the study →](evaluation/results/native-cloud-2026-10-06/README.md) · [All 16 attempts](evaluation/results/native-cloud-2026-10-06/attempts.json) · [Exact artifacts](evaluation/results/native-cloud-2026-10-06/artifacts/) · [Paired data](evaluation/results/native-cloud-2026-10-06/paired-summary.json) · [Reproduce the graphic](evaluation/visualization/render_native_results.py) · [Evaluation protocol](evaluation/README.md)
+**No observed difference on the primary checks.** Every submission met the frozen artifact requirements. C received no designated package; S received the pinned package. Ambient skills may exist in both, and shared-filesystem boundaries and masking were procedural. These are four authored cases, not 12 independent tasks; no time, cost or full-dot efficacy claim follows.
+
+[Read the repeated study →](evaluation/studies/repeated-stress-2026-10-06/README.md) · [Every attempt](evaluation/studies/repeated-stress-2026-10-06/results/README.md) · [Evidence coverage](evaluation/studies/repeated-stress-2026-10-06/README.md#what-the-evidence-covers) · [Methods and caveats](evaluation/studies/repeated-stress-2026-10-06/methods/README.md) · [Reproduce saved results](evaluation/studies/repeated-stress-2026-10-06/reproduce_saved_evidence.py)
+
+The [earlier eight-case study](evaluation/results/native-cloud-2026-10-06/README.md), its scores and its separate post-hoc finding remain unchanged. The two studies are not pooled.
 
 ## What AI research has measured
 
