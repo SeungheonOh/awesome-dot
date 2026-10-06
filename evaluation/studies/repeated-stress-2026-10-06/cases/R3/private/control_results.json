@@ -1,0 +1,79 @@
+[
+  {
+    "control": "starter_fanout",
+    "expected_detected_check": "gross_cents",
+    "source_sha256": "30afe5180137513f2ea4831156d68abef7f1d02b82eee91ad9b78646bf753425",
+    "totals": {
+      "pass": 3,
+      "fail": 9,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "count_lines_as_invoices",
+    "expected_detected_check": "invoice_count",
+    "source_sha256": "4ead1b53d5a767be109f145d8e6a855bf0b151a6f04877be87aec7ddcdb855da",
+    "totals": {
+      "pass": 11,
+      "fail": 1,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "drop_unpaid_lines",
+    "expected_detected_check": "line_count",
+    "source_sha256": "133029d7be2df8fcfe6a120e9e8edd1404d670282c83cfdc4f0bb99337823268",
+    "totals": {
+      "pass": 4,
+      "fail": 8,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "ignore_event_posting_cutoff",
+    "expected_detected_check": "adjustment_cents",
+    "source_sha256": "b8c16458d835330095a75bca513662dd82d6788be4aa9f22d7f6702414af555b",
+    "totals": {
+      "pass": 7,
+      "fail": 5,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "erase_signed_adjustments",
+    "expected_detected_check": "adjustment_cents",
+    "source_sha256": "ecbc7cc68ebf20e4786394af995200e276de41ca50111755dab69a0d8ddd5dac",
+    "totals": {
+      "pass": 9,
+      "fail": 3,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "omit_invoice_status",
+    "expected_detected_check": "line_count",
+    "source_sha256": "f82af7cde85f6b8915c8bb7ae0244fb3158197454795ced861b1a8ea24ef30d7",
+    "totals": {
+      "pass": 3,
+      "fail": 9,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "write_attempt",
+    "expected_detected_check": "execution",
+    "source_sha256": "7ada14557e0c9e9eb31eecf7f7ce8c456d7e7647f20db1fe64cae746b149fd16",
+    "totals": {
+      "pass": 0,
+      "fail": 1,
+      "unknown": 11
+    },
+    "validated": true
+  }
+]

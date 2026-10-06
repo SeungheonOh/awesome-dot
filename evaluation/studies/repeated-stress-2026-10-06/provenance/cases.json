@@ -1,0 +1,693 @@
+{
+  "source_manifest_sha256": "0d9bfd9954f54eccfc97432613dafc2825155c417078a61da6a89a1ae1a5bc07",
+  "cases": {
+    "R1": {
+      "case_id": "R1",
+      "label": "Expense reconciliation",
+      "requirements": [
+        {
+          "requirement_id": "R1-01",
+          "label": "Canonical coverage",
+          "mode": "objective",
+          "acceptance": "Exactly one row for every C001–C030, no omitted, duplicate, or invented claims"
+        },
+        {
+          "requirement_id": "R1-02",
+          "label": "Monetary artifact structure",
+          "mode": "objective",
+          "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist"
+        },
+        {
+          "requirement_id": "R1-03",
+          "label": "Disposition resolution",
+          "mode": "objective",
+          "acceptance": "Every claim has its supported final disposition at the cutoff"
+        },
+        {
+          "requirement_id": "R1-04",
+          "label": "Meal amount decisions",
+          "mode": "objective",
+          "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts"
+        },
+        {
+          "requirement_id": "R1-05",
+          "label": "Transportation and FX decisions",
+          "mode": "objective",
+          "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge"
+        },
+        {
+          "requirement_id": "R1-06",
+          "label": "Hotel and deposit decisions",
+          "mode": "objective",
+          "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts"
+        },
+        {
+          "requirement_id": "R1-07",
+          "label": "Refund decisions",
+          "mode": "objective",
+          "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts"
+        },
+        {
+          "requirement_id": "R1-08",
+          "label": "Other payment decisions",
+          "mode": "objective",
+          "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct"
+        },
+        {
+          "requirement_id": "R1-09",
+          "label": "Uncertainty holds",
+          "mode": "objective",
+          "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement"
+        },
+        {
+          "requirement_id": "R1-10",
+          "label": "Finance totals",
+          "mode": "objective",
+          "acceptance": "All stated totals and the original-currency hold reconcile exactly"
+        },
+        {
+          "requirement_id": "R1-11",
+          "label": "Decision provenance",
+          "mode": "objective",
+          "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim"
+        },
+        {
+          "requirement_id": "R1-12",
+          "label": "Usable finance handoff",
+          "mode": "semantic",
+          "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim"
+        },
+        {
+          "requirement_id": "R1-13",
+          "label": "Unresolved next steps",
+          "mode": "semantic",
+          "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence"
+        },
+        {
+          "requirement_id": "R1-14",
+          "label": "Material adjustment explanation",
+          "mode": "semantic",
+          "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements"
+        }
+      ],
+      "rubric_path": "authoring/R1/private/rubric.json",
+      "candidate_files": [
+        {
+          "path": "TASK.md",
+          "bytes": 4448,
+          "sha256": "3f05cfdfb82bdb61b31ca577ff66215d8e552075d499fc5d32cb5cad1f40ac37"
+        },
+        {
+          "path": "inputs/00_README.txt",
+          "bytes": 1121,
+          "sha256": "5e0c37d86e3687e6401a339201503c25bf7baad54935b1673d875d142f8198cb"
+        },
+        {
+          "path": "inputs/claims.csv",
+          "bytes": 2408,
+          "sha256": "cbef6152761c2224a949d7aaa3241a14c3f43998875f2c0622cf88a77ddd486b"
+        },
+        {
+          "path": "inputs/correspondence.txt",
+          "bytes": 1670,
+          "sha256": "f1a6d70569ba48e091a02a4972d50faa8df9ee4fafb9ce85d0110ea7d2b59af2"
+        },
+        {
+          "path": "inputs/policies.txt",
+          "bytes": 2855,
+          "sha256": "0d1d2d62ef7e6388ebaa1b806c9987b95775c5a53e82fc4cd083a52ead63d303"
+        },
+        {
+          "path": "inputs/receipts.csv",
+          "bytes": 2177,
+          "sha256": "86a4eee621415aa2fc32245f759b3012419f76eb580653b9e637fa884002d85f"
+        },
+        {
+          "path": "inputs/statement.csv",
+          "bytes": 3081,
+          "sha256": "589b3e5898b63d76260593c889aa46edf0fa1d254c1bba42f9c672616450b6a8"
+        },
+        {
+          "path": "inputs/trip_calendar.txt",
+          "bytes": 486,
+          "sha256": "dca337fe7939092f97171ba3b362e8b7a71ca14a80ad7a06a590eac25f1c4f5c"
+        }
+      ],
+      "evaluator_files": [
+        {
+          "path": "README.txt",
+          "bytes": 1895,
+          "sha256": "7ed334056e4f09a6bdb176bd2f6eeb04c2fe8ad4ef6bbcddf773dad16894bf8f"
+        },
+        {
+          "path": "author_test.py",
+          "bytes": 7521,
+          "sha256": "bea2907f4033927ffdde8c7d97256eaae786a9e6de3c1625e6d63ba42a7146f8"
+        },
+        {
+          "path": "author_test_results.json",
+          "bytes": 5619,
+          "sha256": "63d9c2fded6eed999b54a5a06a0c0ae98d3b2b62f1e6f81c6962f277258d30d0"
+        },
+        {
+          "path": "controls/mutations.json",
+          "bytes": 4253,
+          "sha256": "552a7c213f7a5681c979f378f43cf03153a322dbf06acd8cdf6c53de897d23cf"
+        },
+        {
+          "path": "expected.json",
+          "bytes": 12699,
+          "sha256": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3"
+        },
+        {
+          "path": "grade.py",
+          "bytes": 11248,
+          "sha256": "775146d6fb20f33a8de550b68e36839150aac8782e35fed06de158a2792e9c56"
+        },
+        {
+          "path": "oracle.py",
+          "bytes": 4402,
+          "sha256": "abd957d5476dda1c8eb97e585b6a3754e07935ad17485396852415cd24f5124c"
+        },
+        {
+          "path": "reference/reconciliation.json",
+          "bytes": 12699,
+          "sha256": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3"
+        },
+        {
+          "path": "reference/review_notes.txt",
+          "bytes": 2639,
+          "sha256": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300"
+        },
+        {
+          "path": "reference_notes.txt",
+          "bytes": 2639,
+          "sha256": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300"
+        },
+        {
+          "path": "rubric.json",
+          "bytes": 4513,
+          "sha256": "f8446a2f3a2b760f3d34f569109b96f0e9e291f853a775de6322648d31f958e5"
+        },
+        {
+          "path": "semantic_review_instructions.txt",
+          "bytes": 1448,
+          "sha256": "701a8cdfe7b34da66efc21e52402cbf1039d295c37ac48d95de6c5d7f5745229"
+        }
+      ]
+    },
+    "R2": {
+      "case_id": "R2",
+      "label": "Dated action handoff",
+      "requirements": [
+        {
+          "requirement_id": "R2-01",
+          "label": "Canonical coverage",
+          "mode": "objective",
+          "acceptance": "Exactly one row for every A01–A34, with no duplicate or invented action"
+        },
+        {
+          "requirement_id": "R2-02",
+          "label": "Ordinary final statuses",
+          "mode": "objective",
+          "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases"
+        },
+        {
+          "requirement_id": "R2-03",
+          "label": "Evidence-sensitive statuses",
+          "mode": "objective",
+          "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33"
+        },
+        {
+          "requirement_id": "R2-04",
+          "label": "Accepted owner transfers",
+          "mode": "objective",
+          "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers"
+        },
+        {
+          "requirement_id": "R2-05",
+          "label": "Retained or unfilled ownership",
+          "mode": "objective",
+          "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person"
+        },
+        {
+          "requirement_id": "R2-06",
+          "label": "Changed or removed deadlines",
+          "mode": "objective",
+          "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline"
+        },
+        {
+          "requirement_id": "R2-07",
+          "label": "Unchanged deadlines",
+          "mode": "objective",
+          "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work"
+        },
+        {
+          "requirement_id": "R2-08",
+          "label": "Duplicate aliases",
+          "mode": "objective",
+          "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions"
+        },
+        {
+          "requirement_id": "R2-09",
+          "label": "Immediate prerequisites",
+          "mode": "objective",
+          "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25"
+        },
+        {
+          "requirement_id": "R2-10",
+          "label": "Overdue flags and counts",
+          "mode": "objective",
+          "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct"
+        },
+        {
+          "requirement_id": "R2-11",
+          "label": "Evidence and minimal structure",
+          "mode": "objective",
+          "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present"
+        },
+        {
+          "requirement_id": "R2-12",
+          "label": "Final scope and chronology",
+          "mode": "semantic",
+          "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations"
+        },
+        {
+          "requirement_id": "R2-13",
+          "label": "Actionable complete handoff",
+          "mode": "semantic",
+          "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed"
+        },
+        {
+          "requirement_id": "R2-14",
+          "label": "Calibrated uncertainty",
+          "mode": "semantic",
+          "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach"
+        }
+      ],
+      "rubric_path": "authoring/R2/private/rubric.json",
+      "candidate_files": [
+        {
+          "path": "TASK.md",
+          "bytes": 4321,
+          "sha256": "953c6ca48d23fc4ec9342a4c08583036a60e0fbd7300fea9da0d5d7f01dd0161"
+        },
+        {
+          "path": "inputs/00_README.txt",
+          "bytes": 765,
+          "sha256": "c58cc949e43dc8ea2ca0c405eddaa06ba8b221022aac62ad239550d2818421d3"
+        },
+        {
+          "path": "inputs/baseline.csv",
+          "bytes": 2082,
+          "sha256": "9ab3d968997e48f003172eea9969b158345436e4e5ef628d06d7e91cdca2433e"
+        },
+        {
+          "path": "inputs/followups.txt",
+          "bytes": 2550,
+          "sha256": "ee15e1cbb59dd224abbdecbcbe6e083663a8509584321c35e3b75a62074a600f"
+        },
+        {
+          "path": "inputs/meeting_notes.txt",
+          "bytes": 5607,
+          "sha256": "e8ae91d5daa592263f668a7009d0fae162db74efbea77f54e754c8b076496fd1"
+        }
+      ],
+      "evaluator_files": [
+        {
+          "path": "README.txt",
+          "bytes": 1895,
+          "sha256": "5b44911ca499de4649e258e1201a1211be05ef10de8d5fc8b7836a177af3d115"
+        },
+        {
+          "path": "author_test.py",
+          "bytes": 7521,
+          "sha256": "bea2907f4033927ffdde8c7d97256eaae786a9e6de3c1625e6d63ba42a7146f8"
+        },
+        {
+          "path": "author_test_results.json",
+          "bytes": 5680,
+          "sha256": "07d9670f7cad26b3f304462d6fbc406bf1e10a9205dcff4e15ae2ba85de5b875"
+        },
+        {
+          "path": "controls/mutations.json",
+          "bytes": 4054,
+          "sha256": "5db99e05d4d6387e456717349a6d05c982b629a1fe994347002a2337d8fb759b"
+        },
+        {
+          "path": "expected.json",
+          "bytes": 12864,
+          "sha256": "1f6dba6db0dfbf9e03b4834470bc9812051f5d9fcc0a36d634be0c1e419ff0f0"
+        },
+        {
+          "path": "grade.py",
+          "bytes": 10635,
+          "sha256": "0baee7525fbd3be7e23d796abaed638634a1022319a2b668c415cd49d49adc49"
+        },
+        {
+          "path": "oracle_audit.py",
+          "bytes": 1203,
+          "sha256": "4e730a4bca3afd9d83d5a4d7b5b8f46ccc2e2a4465a0b957aab547d79140454d"
+        },
+        {
+          "path": "reference/action_register.json",
+          "bytes": 12864,
+          "sha256": "1f6dba6db0dfbf9e03b4834470bc9812051f5d9fcc0a36d634be0c1e419ff0f0"
+        },
+        {
+          "path": "reference/handoff.txt",
+          "bytes": 3323,
+          "sha256": "a5d997c8eb4654c8c036aeb1ebb3d8b467b275bb8be68d2a9ce6d9556e568e4f"
+        },
+        {
+          "path": "reference_handoff.txt",
+          "bytes": 3323,
+          "sha256": "a5d997c8eb4654c8c036aeb1ebb3d8b467b275bb8be68d2a9ce6d9556e568e4f"
+        },
+        {
+          "path": "rubric.json",
+          "bytes": 4711,
+          "sha256": "80725bd643923dd1a7e9444f317abfe027b2da0cc6c83e3b497f5939faa17c57"
+        },
+        {
+          "path": "semantic_review_instructions.txt",
+          "bytes": 1448,
+          "sha256": "e68daeff0b3ab076e3d3915adfea53c0655d5ee8cf760030933b59b4bc51ae8f"
+        }
+      ]
+    },
+    "R3": {
+      "case_id": "R3",
+      "label": "SQL report reconciliation",
+      "requirements": [
+        {
+          "requirement_id": "execution",
+          "label": "Read-only bounded query completes for all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Read-only bounded query completes for all three public scenarios"
+        },
+        {
+          "requirement_id": "schema_types",
+          "label": "Exact required columns; text dimensions and non-null integer measures",
+          "mode": "objective",
+          "acceptance": "Exact required columns; text dimensions and non-null integer measures"
+        },
+        {
+          "requirement_id": "grouping_cohort",
+          "label": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+          "mode": "objective",
+          "acceptance": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort"
+        },
+        {
+          "requirement_id": "line_count",
+          "label": "Exact line_count per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact line_count per bucket in all three public scenarios"
+        },
+        {
+          "requirement_id": "invoice_count",
+          "label": "Exact invoice_count per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact invoice_count per bucket in all three public scenarios"
+        },
+        {
+          "requirement_id": "billed_units",
+          "label": "Exact billed_units per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact billed_units per bucket in all three public scenarios"
+        },
+        {
+          "requirement_id": "gross_cents",
+          "label": "Exact gross_cents per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact gross_cents per bucket in all three public scenarios"
+        },
+        {
+          "requirement_id": "adjustment_cents",
+          "label": "Exact adjustment_cents per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact adjustment_cents per bucket in all three public scenarios"
+        },
+        {
+          "requirement_id": "net_cents",
+          "label": "Exact net_cents per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact net_cents per bucket in all three public scenarios"
+        },
+        {
+          "requirement_id": "received_cents",
+          "label": "Exact received_cents per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact received_cents per bucket in all three public scenarios"
+        },
+        {
+          "requirement_id": "balance_cents",
+          "label": "Exact balance_cents per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact balance_cents per bucket in all three public scenarios"
+        },
+        {
+          "requirement_id": "fulfilled_units",
+          "label": "Exact fulfilled_units per bucket in all three public scenarios",
+          "mode": "objective",
+          "acceptance": "Exact fulfilled_units per bucket in all three public scenarios"
+        }
+      ],
+      "rubric_path": "authoring/R3/private/manifest.json",
+      "candidate_files": [
+        {
+          "path": "TASK.md",
+          "bytes": 4896,
+          "sha256": "e2db15285d8bf66e8c34ad81e1d04b9738eb7af238ba851a0a459eaedeb633cf"
+        },
+        {
+          "path": "inputs/billing.sqlite",
+          "bytes": 249856,
+          "sha256": "bb8bedc6ce954da3ffa0b3024e49d357bcefcf44e0aef95520a26049375a35f7"
+        },
+        {
+          "path": "inputs/ledger.json",
+          "bytes": 457049,
+          "sha256": "37e37ff12ba9a02890e3e768371b0bda995f8d80cda3b4a1eaae195fc55c1563"
+        },
+        {
+          "path": "inputs/scenarios.json",
+          "bytes": 415,
+          "sha256": "705ab65a32ff4ee39c8c0cef2db1a0381958125e4fd85ca5288bb011a11df41f"
+        },
+        {
+          "path": "inputs/schema.sql",
+          "bytes": 1095,
+          "sha256": "fc53e63ad54168ed61c8602cf3c22ac8efd41b079167f9d97d7aa470cf464529"
+        },
+        {
+          "path": "output/report.sql",
+          "bytes": 997,
+          "sha256": "30afe5180137513f2ea4831156d68abef7f1d02b82eee91ad9b78646bf753425"
+        }
+      ],
+      "evaluator_files": [
+        {
+          "path": "README.md",
+          "bytes": 2523,
+          "sha256": "f04ac8389ae915b48c7036f635075648366454de5aa66f0861155aa72a57eab4"
+        },
+        {
+          "path": "build_fixture.py",
+          "bytes": 6698,
+          "sha256": "15b4bcd66cd27524fcf03a9f4da27f7cc1319def59488a187d46f69fe68c2a63"
+        },
+        {
+          "path": "control_results.json",
+          "bytes": 1977,
+          "sha256": "005dffee6a731c49ff138c58524f46c084ecc1a6ab4b7207e798f021e5feacf4"
+        },
+        {
+          "path": "expected.json",
+          "bytes": 33799,
+          "sha256": "f5b69bf0c7b32ff9373ab5d5e3c17164c594b7c4c2c139946c66b1a9f0f2c5f4"
+        },
+        {
+          "path": "grade.py",
+          "bytes": 6082,
+          "sha256": "c69fc18607f620581118a2ddfe779f00a2b66b31547b73e2edaa01b08714e6c1"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4809,
+          "sha256": "1b60b465f55b8acc2e7b34a12f525f9d8daa0900508860f1cf13da9947e8366b"
+        },
+        {
+          "path": "reference.sql",
+          "bytes": 1568,
+          "sha256": "9b7ea77fa0233cd439d60b455bb8bfeb3680db5731471748d4c723618dc79081"
+        },
+        {
+          "path": "reference_result.json",
+          "bytes": 1505,
+          "sha256": "a9252a627c6f2fbc0662e31cdf87e440ecda895aae4e2a6ec32ab3a6d50614d7"
+        },
+        {
+          "path": "validate_controls.py",
+          "bytes": 1691,
+          "sha256": "7de73ba9993108d4b718101ae84c2055208a6164cdbcbb22d5f993857e64786a"
+        }
+      ]
+    },
+    "R4": {
+      "case_id": "R4",
+      "label": "Merge consumer maintenance",
+      "requirements": [
+        {
+          "requirement_id": "views_and_edits",
+          "label": "Detached nested views; dirty reflects working text versus base",
+          "mode": "behavioral",
+          "acceptance": "Detached nested views; dirty reflects working text versus base"
+        },
+        {
+          "requirement_id": "fast_forward_base",
+          "label": "Clean fast-forward and repeated upstream/base tracking",
+          "mode": "behavioral",
+          "acceptance": "Clean fast-forward and repeated upstream/base tracking"
+        },
+        {
+          "requirement_id": "disjoint_modifications",
+          "label": "Independent same-length edits merge without loss",
+          "mode": "behavioral",
+          "acceptance": "Independent same-length edits merge without loss"
+        },
+        {
+          "requirement_id": "insert_delete_endings",
+          "label": "Disjoint insertion/deletion edits preserve exact line endings",
+          "mode": "behavioral",
+          "acceptance": "Disjoint insertion/deletion edits preserve exact line endings"
+        },
+        {
+          "requirement_id": "identical_adjacent_hunks",
+          "label": "Identical hunks applied once; adjacent nonempty hunks merge",
+          "mode": "behavioral",
+          "acceptance": "Identical hunks applied once; adjacent nonempty hunks merge"
+        },
+        {
+          "requirement_id": "conflict_retention",
+          "label": "Conflicting ranges/insertions preserve base/local/incoming",
+          "mode": "behavioral",
+          "acceptance": "Conflicting ranges/insertions preserve base/local/incoming"
+        },
+        {
+          "requirement_id": "pending_blocks_mutation",
+          "label": "Editing or receiving during unresolved review cannot overwrite it",
+          "mode": "behavioral",
+          "acceptance": "Editing or receiving during unresolved review cannot overwrite it"
+        },
+        {
+          "requirement_id": "resolution_choices",
+          "label": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+          "mode": "behavioral",
+          "acceptance": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity"
+        },
+        {
+          "requirement_id": "rename_remove",
+          "label": "Complete document state survives rename; collisions/removals are correct",
+          "mode": "behavioral",
+          "acceptance": "Complete document state survives rename; collisions/removals are correct"
+        },
+        {
+          "requirement_id": "save_reload",
+          "label": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+          "mode": "behavioral",
+          "acceptance": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior"
+        },
+        {
+          "requirement_id": "failed_save_atomicity",
+          "label": "Failed observed atomic replacement preserves prior disk and live state",
+          "mode": "behavioral",
+          "acceptance": "Failed observed atomic replacement preserves prior disk and live state"
+        },
+        {
+          "requirement_id": "corrupt_snapshots",
+          "label": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+          "mode": "behavioral",
+          "acceptance": "Malformed/schema/duplicate/inconsistent snapshots reject without writes"
+        },
+        {
+          "requirement_id": "bounds_nofollow",
+          "label": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+          "mode": "behavioral",
+          "acceptance": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection"
+        }
+      ],
+      "rubric_path": "authoring/R4/private/manifest.json",
+      "candidate_files": [
+        {
+          "path": "TASK.md",
+          "bytes": 7313,
+          "sha256": "f1e1392c338aab6c800fb5388d9bf02a860c8d2087d639ed2c67363b52368784"
+        },
+        {
+          "path": "inputs/smoke_test.py",
+          "bytes": 832,
+          "sha256": "87cd2cf83b0ce33cae4774aa0f193e538aba6adc9d500ff13c6c3a2e414730b7"
+        },
+        {
+          "path": "output/merge_workspace.py",
+          "bytes": 6549,
+          "sha256": "93fbfcffad4c4c9227643c6758b8072ad1ae2b911031e1077a53feb1c86dad85"
+        }
+      ],
+      "evaluator_files": [
+        {
+          "path": "README.md",
+          "bytes": 4046,
+          "sha256": "c444c4f110fd7c4ffd75f4bcebe950bb1071c7090afda0128f461d49a77f7137"
+        },
+        {
+          "path": "control_results.json",
+          "bytes": 2735,
+          "sha256": "754e59ca3254f9c9d363e0e6676e00ae1c3b60c22a7fe17b988afa708ed700f5"
+        },
+        {
+          "path": "evaluate.py",
+          "bytes": 8149,
+          "sha256": "1c2e7feeffb23c9153310b040e8316a8e5fc33f5a2be0c2734cc088b179bda6a"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4977,
+          "sha256": "1fd0425d799fcbd4ced6f909dfe7608fdbb0e562343a6c53110a6719f0a102e1"
+        },
+        {
+          "path": "positive_controls.json",
+          "bytes": 640,
+          "sha256": "6fa8061a89d1b42c73d8a584cc47c8577d1848a87e144e6607e3412f591f96bc"
+        },
+        {
+          "path": "probe.py",
+          "bytes": 13107,
+          "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed"
+        },
+        {
+          "path": "reference.py",
+          "bytes": 6876,
+          "sha256": "c59cbcae36d9fcdd7394a744d9848668763321cc2b8e8907ab115c713c1e30ad"
+        },
+        {
+          "path": "reference_result.json",
+          "bytes": 1015,
+          "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df"
+        },
+        {
+          "path": "static_gate_validation.json",
+          "bytes": 362,
+          "sha256": "f65931d29c36fd994a2fb03acd2abd7166a17e18c0445f0cd7e837ff862cd612"
+        },
+        {
+          "path": "validate_controls.py",
+          "bytes": 2610,
+          "sha256": "4e92a7fb3321a177cd5f2c0b1f6b39c641bc85f16b2c3a9f13cb7ef9c2c486f5"
+        }
+      ]
+    }
+  },
+  "path_mapping": "authoring/<case>/ becomes cases/<case>/"
+}

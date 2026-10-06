@@ -1,0 +1,25 @@
+Fictional offline task: reconcile a September travel expense packet
+
+This entire packet describes invented people, vendors, and transactions. It is a synthetic work sample, not customer data. You are preparing Maya Chen's reimbursement handoff for Northstar Learning Lab as of 2026-09-30 17:00 UTC. Nothing may be sent, paid, or edited outside this assigned packet.
+
+Reconcile all 30 submitted claims using the claims, itemized receipts, settled/pending statement entries, policies, and approval correspondence in inputs/. Use the policy in force on the service date, and honor specific written exceptions. Link deposit/final bill pairs and refunds, avoid duplicate reimbursement, separate company-paid costs, and leave genuinely unsupported cases unresolved. Do not invent rates, approvals, attendees, or replacement receipts. Later information is outside the cutoff.
+
+Create output/reconciliation.json and output/review_notes.txt. You may inspect the supplied files and write/run your own bounded local code in tmp/; use integer cents or Decimal arithmetic for money, never binary floating point. No network, credentials, package installation, or external writes are needed or authorized.
+
+The JSON has two top-level keys: claims (one row per C001–C030, any order) and totals. Each claim row must include:
+- claim_id; disposition (reimbursable, partial, hold, duplicate, corporate_paid, refunded, or ineligible)
+- approved_usd_cents: supported business cost after credits, before deducting company payment; 0 for a known-USD hold, duplicate, or ineligible claim; null only when a foreign-currency hold cannot be valued in USD
+- reimbursement_usd_cents: amount payable to Maya now; holds, company-paid expenses, duplicates, refunded claims and ineligible claims pay 0
+- excluded_usd_cents: portion of the claimed/settled gross cost disallowed by policy, personal use, or an overstated estimate; do not count a refund, duplicate, company payment, or unresolved hold as an exclusion; null only for the unvalued foreign hold
+- held_usd_cents: claimed USD amount requiring more evidence, or null when the hold cannot be valued in USD; 0 for resolved claims
+- credit_usd_cents: settled credit offset against this claim, always a nonnegative integer
+- duplicate_of: canonical claim ID or null
+- evidence_ids: source record IDs that support the decision; note: a concise explanation
+
+For a charge with credits, reimbursement cannot be negative. Allocate an applied hotel deposit to its separately submitted deposit claim, and allocate only the remaining final bill to the final-bill claim. Use the net-of-deposit amount for all final-bill monetary fields. For a stale estimate with a supported lower final amount, exclude the overstatement rather than placing it on hold. Duplicate claim C007 is a duplicate of the earlier submitted C001, regardless of the file order. A fully refunded claim has disposition refunded; a partially refunded claim with a remaining payable amount is partial. A corporate-paid claim keeps its supported approved business cost but pays Maya zero. A known-USD hold has approved amount zero and the original claimed USD amount held. Do not invent a USD amount for the EUR cash taxi.
+
+Totals must contain reimbursement_usd_cents, approved_usd_cents, excluded_usd_cents, held_usd_cents, credit_usd_cents, corporate_paid_usd_cents, and unvalued_holds. Sum the first five numeric fields across claim rows, ignoring nulls only where explicitly allowed. Corporate-paid total is approved cost on company-paid claims. unvalued_holds is a list of objects with claim_id, currency, and original_amount (a decimal string).
+
+The handoff notes should be concise but usable by finance: state the cutoff and payable/held position, explain the material policy/FX/deposit/refund/duplicate/company-card adjustments, and list each unresolved issue with the missing evidence and a practical next step or responsible party. Distinguish confirmed findings from unknowns. No exact wording or ordering is required, and additional useful fields are allowed.
+
+Acceptance covers complete claim coverage and integer-cent structure; correct dispositions; meal, transport/FX, hotel/deposit, refund, duplicate/company-paid/other-cost calculations; properly held uncertainties; totals; source-grounded provenance; and the accuracy, completeness, and usefulness of the written handoff. All acceptance requirements are stated here and in the governing sources.

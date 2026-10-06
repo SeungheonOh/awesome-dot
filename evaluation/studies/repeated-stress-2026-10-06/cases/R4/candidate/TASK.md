@@ -1,0 +1,47 @@
+# Repair a local text review workspace
+
+This is an explicitly fictional offline benchmark. A small release-notes consumer, MergeWorkspace, keeps local edits while upstream text arrives. Users report that saving marks unfinished work clean, renaming loses pending reviews, inserted lines cause unnecessary conflicts, and a second incoming update can overwrite the first unresolved review. Repair `output/merge_workspace.py` within 1500 seconds.
+
+Use Python 3.11+ standard library only. The module must import without doing work outside its definitions. It runs locally with owned disposable workspace roots, no network, credentials, subprocesses, or production. Keep other packet files unchanged. Put disposable test work under this packet's `tmp/`, not system temp by default. Inspect code/effects before running local tests. Only `output/merge_workspace.py` is graded. An optional `output/notes.md` is unscored. Internal architecture and algorithms may change; behavior is the contract, and no skill phrase or coding style is required.
+
+## Stable public API
+
+Keep `ConflictPending(ValueError)` and `MergeWorkspace(root)`. Each mutation returns `get(name)` except `remove` and `save`, which return None. Missing existing names raise KeyError. Invalid values, collisions, invalid resolutions, unsupported/corrupt snapshots, and size limits raise ValueError. Filesystem failures may raise OSError. Rejected operations must leave all live documents unchanged.
+
+- `names()` returns lexicographically sorted document names
+- `get(name)` returns a detached dict with exactly base, text, dirty, conflict. base/text are strings; dirty is always `text != base`; conflict is None or a detached dict with base, local, incoming strings. Mutating returned objects must never change workspace state
+- `add(name, text)` creates a clean document whose base and text are text; duplicate names fail
+- `edit(name, text)` changes only working text. Editing back to base clears dirty. Editing while conflict is pending raises ConflictPending
+- `receive(name, incoming)` merges incoming with local text using the current base as described below. While a conflict is already pending it raises ConflictPending, even for an identical incoming text
+- `resolve(name, choice, text=None)` requires a pending conflict. choice is local, incoming, or manual. manual requires a string text; other choices reject any non-None text. The chosen text becomes working text, the conflict's incoming becomes the new base, the conflict clears, and dirty is recomputed. Invalid choices or missing manual text must not mutate state
+- `rename(name, new_name)` preserves the entire document, including its base, local edits, and conflict. Same-name rename is a no-op; collisions fail before mutation
+- `remove(name)` removes the named document, including any pending conflict
+- `save()` writes a complete checkpoint to root/workspace.json without changing any live document or dirty/conflict state
+
+Names match `[A-Za-z0-9][A-Za-z0-9_.-]{0,63}`. Text strings have at most 100,000 characters. A workspace has at most 100 documents. Root's parent already exists; creating root itself is permitted. Workspaces are single-process; simultaneous writers and adversarial directory replacement races are out of scope.
+
+## Exact merge semantics
+
+Text is split into logical lines using `str.splitlines(keepends=True)`. Preserve content and line endings exactly, including a missing final newline. The base-to-local and base-to-incoming hunks are the non-equal opcodes from `difflib.SequenceMatcher(..., autojunk=False)` on those line lists. Each hunk is `(start, end, replacement_lines)` in base coordinates.
+
+- If local equals base, fast-forward to incoming; if incoming equals base, keep local; if local equals incoming, accept that common text
+- Identical hunks on both sides are applied once
+- Different nonempty ranges conflict only if their interiors overlap: max(start1,start2) < min(end1,end2). Adjacent nonempty edits may merge
+- Two different insertions at the same base position conflict
+- An insertion conflicts with a replacement/deletion when its position is anywhere from that range's start through end, including both boundaries. This conservative boundary rule is intentional
+- If any pair conflicts, preserve current base/text exactly and store all three original versions in conflict; never inject conflict markers or discard an independent edit
+- Otherwise apply all distinct hunks in base order. The new base becomes incoming, and working text becomes the merge. Recompute dirty
+
+## Persistence contract
+
+A missing workspace.json starts empty. The on-disk JSON object has exactly schema_version (integer 1) and documents (list). Each document has exactly name, base, text, conflict. dirty is derived and not stored. A conflict, when present, has exactly base/local/incoming and must match the enclosing document's base/text. Reject malformed JSON, wrong schema/types/fields, duplicate names, inconsistent conflicts, excess document/text limits, and invalid names. Never silently drop or repair malformed entries. Loading must never write the file.
+
+Read workspace.json as a bounded regular file, without following a final symlink. Maximum snapshot size is 2,097,152 bytes, both when loading and when saving. Root itself must not be a symlink. Reject nonregular snapshot destinations on save. Snapshot writes must replace atomically from a temporary file in the same owned root. If replacement fails, the prior checkpoint and all live state remain unchanged; temporary files should be removed. No stronger crash/power-loss guarantees or locking are required. Save then reload must preserve multiple documents, dirty text, merge bases, pending conflicts, renames, removals, and subsequent merge behavior.
+
+## Local check and acceptance
+
+After reviewing the module and the supplied test, you can run `python inputs/smoke_test.py` from the packet root. It creates and removes its own fixture beneath tmp/. This public smoke check is intentionally small and does not cover the entire contract.
+
+Thirteen predeclared outcome checks cover: detached views/basic editing; fast-forward/base tracking; disjoint modifications; insertion/deletion/line-end preservation; identical and adjacent hunks; conflict retention; blocked mutation during pending review; all resolution choices and invalid resolution atomicity; rename/remove/collision behavior; full multi-document save/reload; failed-save atomicity; corrupt-snapshot rejection; bounded/no-follow persistence and documented validation limits. All requirements used by those checks are visible above. The evaluator uses manually specified expected texts plus independent constructed edit scenarios. Ungraded behavior remains unknown.
+
+Evaluation first reads the exact source for an integrity report without importing it. A reviewer then inspects the submitted source and behavioral harness and must approve the bounded evaluator-owned-copy execution plan before the separate probe runs. This is an execution safety boundary, not OS/process isolation. The probe permits only this standard-library consumer operating on owned disposable fixtures and uses a 30-second process timeout and result/output bounds. Unsafe or unreviewed code is not executed, and behavioral results remain ungraded until approved.

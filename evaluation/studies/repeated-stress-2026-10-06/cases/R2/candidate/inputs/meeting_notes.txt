@@ -1,0 +1,53 @@
+M1 | 2026-09-23 15:00 UTC | Final Atlas working group minutes
+A01: schema review continues; acceptance, not merely draft delivery, closes this action.
+A02: Ben proposes Carla take routing rules. Carla is not present; request a reply before transferring ownership. Ben asks whether September 29 works, but there is no date agreement yet.
+A06: Faye requests Gia take the banner. Gia accepts in this meeting; final due date October 1.
+A14 is blocked until A15 restores environment quota. A15 remains Owen's job.
+A29 is also called DOC-9 in the design tracker. It is the same data dictionary, not a new action.
+A33 stays Hana's task for now.
+
+M2 | 2026-09-25 16:00 UTC | Final Atlas working group minutes
+A01: Ava's schema is accepted by the working group. Done.
+A03: Dev has sent a draft, but counsel approval is the required result. Counsel is still reviewing; action blocked.
+A05: email announcement is cancelled; use the A06 banner instead. This decision is final.
+A08: drop French from launch scope; Spanish remains Iris's action. Revised due date September 30.
+A11: Kian reports the pilot ID script ran, but the reconciliation must show zero duplicated IDs to be complete.
+A13: vendor support ticket 714 was closed September 24 with Mira's confirmation. A status copy calls it OPS-17; that is an alias of A13.
+A22: cancel the sandbox purge because the sample records must be preserved under the internal review hold. This is not permission to delete later.
+A30: remove the September 29 deadline. Counsel's retention decision is pending; no replacement date was agreed. The Q&A drafting can continue, so leave it open rather than blocked.
+
+M3 | 2026-09-27 14:00 UTC | Final Atlas working group minutes
+A07: Hana's FAQ migration is accepted and complete. The support board's ALT-FAQ is the same A07 commitment.
+A09: Jae is arranging a training room; booking is not yet confirmed. This action is only scheduling; A10 is delivery.
+A11: reconciliation review found 18 duplicate pilot IDs remaining. The exported mapping from the pilot team is missing; Kian cannot finish until it arrives. No new deadline was agreed.
+A12: Lena is on leave and the consent workspace is inaccessible. Mira has been suggested as a replacement but has neither accepted nor been assigned by final decision. The audit remains blocked; no new date.
+A16: fallback plan remains in draft pending the scope decision.
+A19: Sara's full onboarding checklist is accepted as complete.
+A20: Talia has checked 21 of 24 runbook links. Three are broken; do not mark complete. Agreed deadline October 1.
+A23: Wen asks Xena to take the dashboard transfer; awaiting Xena's reply.
+A26: cancel the live demo and use A27's recorded walkthrough instead.
+
+M4 | 2026-09-29 16:00 UTC | Final Atlas working group minutes
+A02: Carla's routing-rules ownership is now confirmed by her acceptance (F1). Final revised deadline Friday, October 2. Schema is already accepted, so there is no remaining schema blocker; rules are open work.
+A04: Eli's funnel instrumentation passed QA and is accepted, completing A04.
+A09: room and attendance slot for training on October 5 are confirmed. Scheduling is complete. Do not mark A10 delivered.
+A10: Kian accepts responsibility for delivering training from Jae. The October 5 delivery date remains for now.
+A17: Quin's complete support rota was accepted today; done.
+A18: Ravi cannot run the pager drill during the compliance blackout. No clearance has been issued and the October 2 deadline remains.
+A24: Xena's full budget readout was delivered and approved; done.
+A25: deadline moves to October 2. Blocked on A03's privacy approval and A21's reconciled CRM export verification, both required before the signoff packet can be accepted.
+A28: Ben's go/no-go publication is blocked on acceptance of A25; deadline October 2 unchanged. Do not list transitive dependencies as immediate dependencies.
+A29: Carla's data dictionary is accepted as complete, including definitions omitted from the first draft.
+A31: Eli proposes Gia take the accessibility sweep, but Gia has not responded. Do not transfer yet.
+A33: Final decision releases Hana from the triage mailbox test and assigns accountability to the incoming support lead role. No person has been selected for that role. Keep the accountable person unassigned; revised due date October 1.
+A34: Iris has a draft launch note, but the partner has not confirmed its launch date. Blocked; October 1 deadline unchanged.
+
+M5 | 2026-09-30 16:45 UTC | Final cutoff-day checkpoint
+A03: counsel has returned comments but explicitly has not approved the privacy text. Dev is waiting for the final approved text. Original deadline remains.
+A08: Spanish FAQ was accepted at 15:00 today. French is still out of scope. A08 is done.
+A13: ticket 714 has reopened after the same vendor issue recurred. Continue A13, owned by Mira; agreed new deadline October 2. Work is actionable, not waiting on a separate prerequisite.
+A14/A15: Owen's quota fix was independently verified at 14:00; A15 is done. Noor is no longer blocked and will rerun the load test by October 1. The load test itself has not been run.
+A16: cancel the alternate-routing fallback plan; steering decided not to pursue that option.
+A21: the two CRM test reports in F5 cannot yet be reconciled. Neither establishes a trustworthy final completion state. Uma must identify the tested snapshot and rerun or reconcile the reports; keep unresolved, original deadline unchanged.
+A27: Ava's recorded walkthrough was accepted at 16:30. Done.
+All other prior decisions stand. No new blocker or deadline should be inferred from silence.

@@ -1,0 +1,24 @@
+[
+  {
+    "name": "os_rename",
+    "source_sha256": "4f04051c1f36bdd7014667a86d06679fd84df6101364735e7cc0c2f55ddf0090",
+    "harness_sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+    "totals": {
+      "pass": 13,
+      "fail": 0,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "name": "imported_replace_alias",
+    "source_sha256": "7eea87e547bd55ef11e2a1ab10e03e586299458b7aaee95c23f94571053ab0bc",
+    "harness_sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+    "totals": {
+      "pass": 13,
+      "fail": 0,
+      "unknown": 0
+    },
+    "validated": true
+  }
+]

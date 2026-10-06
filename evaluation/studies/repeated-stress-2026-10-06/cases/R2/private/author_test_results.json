@@ -1,0 +1,272 @@
+{
+  "case_id": "R2",
+  "test_type": "author-owned unit and deliberately defective-control calibration; not model trials",
+  "tests_passed": 32,
+  "tests": [
+    {
+      "test": "reference_objective_only",
+      "passed": true
+    },
+    {
+      "test": "omit_commitment",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-01"
+        ]
+      }
+    },
+    {
+      "test": "revive_cancelled_email",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-02"
+        ]
+      }
+    },
+    {
+      "test": "confuse_training_booking_delivery",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-03"
+        ]
+      }
+    },
+    {
+      "test": "ignore_accepted_transfer",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-04"
+        ]
+      }
+    },
+    {
+      "test": "accept_unconfirmed_replacement",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-05"
+        ]
+      }
+    },
+    {
+      "test": "invent_unset_deadline",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-06"
+        ]
+      }
+    },
+    {
+      "test": "silently_extend_overdue_work",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-07"
+        ]
+      }
+    },
+    {
+      "test": "wrong_alias",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-08"
+        ]
+      }
+    },
+    {
+      "test": "replace_immediate_with_transitive",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-09"
+        ]
+      }
+    },
+    {
+      "test": "miss_overdue_item",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-10"
+        ]
+      }
+    },
+    {
+      "test": "use_post_cutoff_evidence",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R2-11"
+        ]
+      }
+    },
+    {
+      "test": "equivalent_order_and_additional_fields",
+      "passed": true
+    },
+    {
+      "test": "false_prose_semantics_remain_unknown",
+      "passed": true
+    },
+    {
+      "test": "missing_artifacts",
+      "passed": true
+    },
+    {
+      "test": "duplicate_json_keys",
+      "passed": true
+    },
+    {
+      "test": "oversized_json",
+      "passed": true
+    },
+    {
+      "test": "oversized_prose",
+      "passed": true
+    },
+    {
+      "test": "artifact_symlink",
+      "passed": true
+    },
+    {
+      "test": "directory_symlink",
+      "passed": true
+    },
+    {
+      "test": "artifact_hardlink",
+      "passed": true
+    },
+    {
+      "test": "fifo_rejected_without_blocking",
+      "passed": true
+    },
+    {
+      "test": "nonfinite_json",
+      "passed": true
+    },
+    {
+      "test": "submitted_code_never_executed",
+      "passed": true
+    },
+    {
+      "test": "one_review_remains_unknown",
+      "passed": true
+    },
+    {
+      "test": "same_reviewer_rejected",
+      "passed": true
+    },
+    {
+      "test": "review_hash_mismatch_rejected",
+      "passed": true
+    },
+    {
+      "test": "review_disagreement_stays_unknown",
+      "passed": true
+    },
+    {
+      "test": "two_matching_reviews_plumbing",
+      "passed": true
+    },
+    {
+      "test": "post_review_mutation_invalidates_review",
+      "passed": true
+    },
+    {
+      "test": "independent_overdue_arithmetic",
+      "passed": true
+    },
+    {
+      "test": "independent_action_counts",
+      "passed": true
+    }
+  ],
+  "semantic_content_validation": "NOT PERFORMED: genuine semantic judgments remain unknown until two independent masked AI reviews",
+  "objective_controls": 11,
+  "semantic_controls_authored": 1,
+  "reference_objective_result": {
+    "case_id": "R2",
+    "synthetic": true,
+    "objective": {
+      "passed": 11,
+      "failed": 0,
+      "total": 11
+    },
+    "semantic": {
+      "passed": 0,
+      "failed": 0,
+      "unknown": 3,
+      "total": 3
+    },
+    "checks": {
+      "R2-01": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-02": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-03": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-04": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-05": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-06": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-07": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-08": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-09": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-10": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-11": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R2-12": {
+        "status": "unknown",
+        "reason": "Two independent masked reviews have not been supplied"
+      },
+      "R2-13": {
+        "status": "unknown",
+        "reason": "Two independent masked reviews have not been supplied"
+      },
+      "R2-14": {
+        "status": "unknown",
+        "reason": "Two independent masked reviews have not been supplied"
+      }
+    },
+    "artifact_errors": [],
+    "artifact_sha256": {
+      "action_register.json": "1f6dba6db0dfbf9e03b4834470bc9812051f5d9fcc0a36d634be0c1e419ff0f0",
+      "handoff.txt": "a5d997c8eb4654c8c036aeb1ebb3d8b467b275bb8be68d2a9ce6d9556e568e4f"
+    },
+    "not_candidate_execution": true
+  }
+}

@@ -1,0 +1,64 @@
+Attempt T02-R3-r1-C
+Packet root: <assigned-packet-root>
+Time cap: 900 seconds from controller dispatch intent.
+
+You are completing one offline work task. Produce the requested deliverables accurately, preserve the supplied evidence and supported behavior, and make uncertainty and verification limits clear. Work independently using the task and files supplied to this attempt. You may inspect, calculate, implement, and self-check your work before your first final submission. Use the time available for the actual task, not for reporting progress.
+
+This is an openly synthetic task. All names, organizations, records, and systems are fictional. Do not use live accounts or retrieve real user data. No external messages, network access, package installations, new permissions, or changes to settings are authorized.
+
+The exact attempt prompt is outside your packet. Reading that one named prompt file at startup is an explicit initial-read exception. After reading it, use only your assigned packet root for task content and task artifacts. Do not read parent or sibling directories, other attempts, rubrics, graders, author references, outcome ledgers, prior study outputs, repository copies, memory, or other task sources. Do not delegate, ask another agent for task help, or discover connector/web data. Normal runtime binaries and standard-library modules may be used to perform local work; this does not authorize inspecting unrelated filesystem content. These are instruction-level boundaries, not a claim of operating-system isolation.
+
+Leave TASK.md, inputs/, LICENSE, and any supplied skill/ files unchanged. Put only final deliverables under output/. Put scratch files, copied fixtures, generated caches, and temporary test outputs under tmp/. Set TMPDIR to your packet's tmp/ and PYTHONDONTWRITEBYTECODE=1 for Python commands. Do not leave symlinks or hardlinks in deliverables. Use only files within this packet as application data. Do not create or remove files elsewhere.
+
+You may run bounded local checks using available tools and the standard library. Before executing supplied or generated code, inspect its exact source and dependencies and verify that it stays within this packet, uses no network or credentials, invokes no uninspected code, and makes only task-authorized writes under output/ or tmp/. Work on copies under tmp/ when a check could modify inputs. Do not execute code whose effects you cannot establish; report that limit. This permission does not bypass any higher-priority safety requirement or tool denial. Distinguish checks actually run from checks merely proposed.
+
+No further task facts, grader feedback, or correctness hints will be supplied. If an ambiguity remains, preserve the uncertainty and complete unaffected work. If a permission or tool restriction blocks a dependent step, report the exact action and blocker without seeking an alternate route around it. A fixed reply to any clarification request will be: "No additional task facts are available. Use the supplied evidence, preserve material uncertainty, and complete the unaffected work within the stated authority."
+
+Return a concise final submission identifying the files saved under output/, the checks you actually ran, and any unresolved material limitation. That first final response is your submitted attempt. Do not continue editing after final submission.
+
+Complete task (identical bytes also available in TASK.md):
+
+# Repair the monthly billing reconciliation report
+
+This is an explicitly fictional, offline benchmark. You are maintaining a reporting query for Larch Harbor Services. Finance found inflated invoice revenue, missing unpaid lines, and inconsistent credits after the settlement feed changed to multiple events per invoice line. Repair `output/report.sql` within 900 seconds. Use Python's standard library and SQLite only. There is no network or production system.
+
+## Deliverable and working boundary
+
+Only `output/report.sql` is graded. Return one read-only SQLite query that accepts named parameters `:report_start`, `:report_end`, and `:as_of`. CTEs and subqueries are fine; do not create views or temporary tables. Keep input fixtures unchanged. Put any disposable local test files under your packet's `tmp/`; inspect any code and its effects before running your own bounded local checks. Do not read outside this packet. You may add an optional explanation in `output/notes.md`; it is not scored. No skill-specific phrase, particular query structure, formatting, or row ordering is required.
+
+## Inputs
+
+- `inputs/billing.sqlite`: the complete, fixed SQLite fixture
+- `inputs/schema.sql`: schema reference
+- `inputs/ledger.json`: the same source rows as arrays in schema column order, for independent reconciliation
+- `inputs/scenarios.json`: all three evaluated parameter scenarios
+- The existing query in `output/report.sql` is representative defective starting code
+
+The fixture contains 244 invoices, 689 lines, 1,009 adjustments, 1,381 receipt allocations, and 1,060 fulfillment events, plus customer/product dimensions. It was authored with Python Random seed 810327, then explicit boundary and multi-event rows were appended. No randomness occurs during evaluation. The fixture deliberately includes lines without events, multiple events in every child table, multiple lines in the same invoice/family, negative corrections/refunds/returns, draft/void invoices, pending events, late postings, and date-boundary rows. All currencies are integer cents and must remain separate. There are no orphan foreign keys.
+
+## Reporting contract
+
+Select invoice lines whose invoice has status `issued`, invoice_date >= report_start and < report_end, and posted_at <= as_of. The report is an invoice cohort: its events are not restricted to the invoice month or report_end. An event is eligible only when its effective_date <= the date portion of as_of AND its posted_at <= as_of. Adjustments also require `approved`, receipts `settled`, and fulfillments `posted`. Dates use ISO YYYY-MM-DD; timestamps use fixed-width UTC YYYY-MM-DDTHH:MM:SSZ, so lexical comparison is valid. Equality at the as_of boundary is included.
+
+Return one row for each nonempty `(report_month, region, family, currency)` bucket of eligible lines. report_month is the invoice_date's YYYY-MM. Region/family come from customer/product tables. No empty buckets. Every eligible line contributes exactly once irrespective of its event coverage or fanout. Amounts and quantities in event tables are already signed; retain their signs. There are no caps or floors on overpayment, negative balances, or fulfilled quantities.
+
+Required columns (column order and row order do not matter):
+
+- report_month, region, family, currency: the grouping key
+- line_count: number of eligible lines
+- invoice_count: distinct invoices represented within that particular bucket; an invoice may count in multiple family buckets
+- billed_units: sum of invoice-line quantity
+- gross_cents: sum of quantity * unit_price_cents
+- adjustment_cents: sum of all eligible signed adjustments allocated to these lines, zero when absent
+- net_cents: gross_cents + adjustment_cents
+- received_cents: sum of all eligible signed receipt allocations, zero when absent
+- balance_cents: net_cents - received_cents
+- fulfilled_units: sum of eligible signed fulfillment quantities, zero when absent
+
+All measure values must be non-null integers. Output exactly these columns with the stated names.
+
+## Acceptance
+
+Twelve predeclared outcome checks cover: bounded read-only execution in all three public scenarios; output schema/types; exact and unique grouping keys/cohort; each of the nine measure columns above. The expected values are independently calculated from source rows, not from a reference SQL query. There is no style score.
+
+Evaluation permits SELECT/CTEs over the seven supplied tables and common deterministic SQLite scalar/aggregate functions (including sum, count, coalesce, substr, strftime, date, datetime, min, max, abs, round, cast syntax, nullif, ifnull, printf, lower, upper, length). It forbids writes, ATTACH, PRAGMA, extension loading, schema reads, and external files. The query is limited to 64 KiB, 50,000,000 VM progress instructions (approximately), 5 seconds per scenario, and 10,000 returned rows. Ordinary solutions fit comfortably.

@@ -1,0 +1,9 @@
+R1 evaluator-only package. Never stage this directory for a candidate.
+
+This is synthetic authoring material, not a customer packet. The reference artifacts and expected.json are the gold state. grade.py reads only the named JSON/text artifacts, rejects symlinks/hardlinks/non-regular files, bounds JSON to 512 KiB and prose to 128 KiB, rejects duplicate keys/non-finite JSON, and never imports or executes candidate code or follows URLs. Invoke Python isolated mode: python3 -I private/grade.py --submission-dir <output-dir> --result <result.json>. The process exit status denotes successful evaluator execution; use the result's per-check statuses to determine acceptance.
+
+Acceptance has 14 checks: 11 objective and 3 semantic. Optional --semantic-review-dir accepts review_1.json and review_2.json, each at most 64 KiB, with distinct reviewer IDs, independent/masked attestations, matching exact two-artifact SHA-256 hashes and per-check rationales. Disagreement, missing/invalid reviews, wrong hashes, or mutation after review leave semantic judgments unknown. See semantic_review_instructions.txt. Candidate condition labels must never be shown to semantic reviewers.
+
+Run author-owned validation with python3 -I private/author_test.py. Compact controls in controls/mutations.json are independently applied to the reference in temporary directories, then removed. They are grader calibration fixtures, not baseline model submissions. Safety/format-equivalence tests and simulated review-plumbing tests are also included; a simulated plumbing vote is never evidence of semantic correctness. The deliberately bad prose still needs actual independent masked reviews. Reference prose also needs those reviews before claiming 14/14 success.
+
+Three exact-input repeats per condition are planned only after inputs and scoring are frozen. No model trials or publication occurred during authoring.

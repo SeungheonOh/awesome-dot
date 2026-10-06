@@ -1,0 +1,79 @@
+{
+  "repository": "SeungheonOh/dot-skills",
+  "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+  "closure": "designated package internal references only; excludes neighboring packages and external URLs",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1080,
+      "sha256": "e51a2584353241d389b62a1c829115eee3196a41255e8b7d82f2691024b3ad10",
+      "git_blob_sha": "e81c6ec78916a9a652add5a0c356fc568e856601",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/LICENSE"
+    },
+    {
+      "path": "skill/build-text-merge-component/SKILL.md",
+      "bytes": 10423,
+      "sha256": "e1edb81fd65830e73dd0015672c5cc962fae2118957121236439e810858c1975",
+      "git_blob_sha": "73e070ddb93f1a3640813cad908f20dde250ba12",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/skill/build-text-merge-component/SKILL.md"
+    },
+    {
+      "path": "skill/expense-report-reconciliation/SKILL.md",
+      "bytes": 13490,
+      "sha256": "7c43b2643bb6b1864fb4f1bf1226e594d56f1b24a13303e7caebc9a75e584565",
+      "git_blob_sha": "a574a6307941cec706a288aad4627ecb7d4c3e69",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/skill/expense-report-reconciliation/SKILL.md"
+    },
+    {
+      "path": "skill/expense-report-reconciliation/example.md",
+      "bytes": 22885,
+      "sha256": "0788b89ae3dad911d43ea1aa539d95f0fb61af42ff2e473674f980630528f884",
+      "git_blob_sha": "1c2bb15e7ba57201e828357c14088da7d6dba893",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/skill/expense-report-reconciliation/example.md"
+    },
+    {
+      "path": "skill/meeting-action-handoff/SKILL.md",
+      "bytes": 10774,
+      "sha256": "f6e36e12666ab844609344a9b5cabe92dfc6e84cd12c0455ce64e74c6b98d2ee",
+      "git_blob_sha": "7c437508da6042eb04b5f81e58b4b06db19740ee",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/skill/meeting-action-handoff/SKILL.md"
+    },
+    {
+      "path": "skill/meeting-action-handoff/example.md",
+      "bytes": 3716,
+      "sha256": "b0fcc1e08b4d0c4ad8d3354ff8131972b9e3dccd6f4b03a3a8a022a4f8e511e7",
+      "git_blob_sha": "2ce4c091595230c9d7432a103e5765e0a26f5953",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/skill/meeting-action-handoff/example.md"
+    },
+    {
+      "path": "skill/sql-report-reconciliation/SKILL.md",
+      "bytes": 8367,
+      "sha256": "0bbd6f501ee28738fea6326fe8759a2383047b034ad6888378dc00ca92204c59",
+      "git_blob_sha": "b8b8dd3aeb405a4c8411bc0a612beb56804293e8",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/skill/sql-report-reconciliation/SKILL.md"
+    },
+    {
+      "path": "skill/sql-report-reconciliation/references/fictional-example.md",
+      "bytes": 17142,
+      "sha256": "9193c975032ac7880a0901480840c950aba154635bc644b5ac1f22931074afc8",
+      "git_blob_sha": "f0df9e2760b89a64f729dbcf34656ad3d25fec0f",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/skill/sql-report-reconciliation/references/fictional-example.md"
+    },
+    {
+      "path": "skill/sql-report-reconciliation/references/verified-run.md",
+      "bytes": 3987,
+      "sha256": "cbcc0f25d9f348efad324d22e6bd61b1fffc076e25d5cb41583c057795812934",
+      "git_blob_sha": "d8a4cc23adc733ad860d4c3b7ff403f833b4c68c",
+      "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56/skill/sql-report-reconciliation/references/verified-run.md"
+    }
+  ]
+}

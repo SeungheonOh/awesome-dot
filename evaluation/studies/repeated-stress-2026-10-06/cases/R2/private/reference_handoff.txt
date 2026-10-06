@@ -1,0 +1,27 @@
+Atlas Intake handoff as of 2026-09-30 17:00 UTC
+
+There are 18 active commitments: 9 open, 7 blocked, and 2 unresolved. Twelve are done and four cancelled. Four active items are overdue: A03 (due September 26), A11 (September 26), A12 (September 28), and A21 (September 29). Due dates mean end of day UTC, so a September 30 deadline is not yet late. This view excludes the October 1 F8/F9 updates.
+
+Launch-critical chain: Dev must obtain explicit counsel approval for A03; a submitted draft and returned comments do not close it. Uma must reconcile A21's contradictory export reports by identifying the snapshots and rerunning or reconciling the tests. Until both are resolved, Yara's A25 signoff packet is blocked, due October 2. Ben's A28 go/no-go publication is blocked immediately on A25, also due October 2. This is a prerequisite chain, not an assertion that the launch is already cancelled.
+
+Other overdue work: Kian's A11 still has 18 duplicate pilot IDs and needs the pilot team's mapping file before reconciliation can finish. Lena remains accountable for blocked A12 because Mira's suggested takeover was never accepted; the coordinator should restore consent-workspace access and settle coverage with Lena or an explicitly accepted replacement. Neither action received a new deadline.
+
+Upcoming actionable work:
+- A02: Carla owns routing rules following acceptance; finish by October 2. Schema acceptance removed the old dependency
+- A06: Gia should finish the launch banner by October 1
+- A10: Kian should deliver training October 6. A09 scheduling is already complete, including the moved booking
+- A13: Mira should resolve and close reopened vendor ticket 714 by October 2; OPS-17 is the same action
+- A14: Noor should now run the load test by October 1. Owen's A15 quota fix is verified complete
+- A20: Talia should repair and verify the last 3 of 24 runbook links by October 1
+- A23: Xena accepted the dashboard transfer and should finish it by October 2
+- A30: Dev can continue retention Q&A drafting, but the deadline is intentionally unset; obtain a new date after counsel's retention decision
+- A31: Gia accepted the accessibility sweep and should complete it by October 2
+
+Other blocked or unassigned work:
+- A18: Ravi needs compliance clearance before the pager drill; October 2 remains the due date
+- A33: appoint a named incoming support lead to own and complete the triage mailbox test by October 1. Hana was explicitly released; there is no confirmed person or completion at the cutoff
+- A34: Iris needs the partner's confirmed launch date before finishing the launch note, due October 1
+
+Important closures and scope decisions: A01 schema, A04 funnel QA, A07 FAQ migration, A08 Spanish-only FAQ, A09 scheduling, A15 quota fix, A17 rota, A19 onboarding, A24 budget readout, A27 recording, A29 dictionary, and A32 screenshots are complete. French translation was dropped from A08. A05 announcement email, A16 fallback plan, A22 sandbox purge, and A26 live demo are cancelled; preserve the sample records and use the banner/recording decisions rather than reviving cancelled work. ALT-FAQ is A07, DOC-9 is A29, and OPS-17 is A13.
+
+No person has been contacted and no system has been changed. The register contains the per-action evidence, final owners/dates, immediate dependencies, and next steps.

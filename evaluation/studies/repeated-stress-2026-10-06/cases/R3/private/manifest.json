@@ -1,0 +1,117 @@
+{
+  "allowed_optional_output": "output/notes.md",
+  "candidate_root": "candidate",
+  "candidate_sha256": {
+    "candidate/TASK.md": "e2db15285d8bf66e8c34ad81e1d04b9738eb7af238ba851a0a459eaedeb633cf",
+    "candidate/inputs/billing.sqlite": "bb8bedc6ce954da3ffa0b3024e49d357bcefcf44e0aef95520a26049375a35f7",
+    "candidate/inputs/ledger.json": "37e37ff12ba9a02890e3e768371b0bda995f8d80cda3b4a1eaae195fc55c1563",
+    "candidate/inputs/scenarios.json": "705ab65a32ff4ee39c8c0cef2db1a0381958125e4fd85ca5288bb011a11df41f",
+    "candidate/inputs/schema.sql": "fc53e63ad54168ed61c8602cf3c22ac8efd41b079167f9d97d7aa470cf464529",
+    "candidate/output/report.sql": "30afe5180137513f2ea4831156d68abef7f1d02b82eee91ad9b78646bf753425"
+  },
+  "candidate_temporary_root": "tmp/",
+  "candidate_time_limit_seconds": 900,
+  "candidate_trials_run_by_author": false,
+  "case_id": "R3",
+  "checks": [
+    {
+      "description": "Read-only bounded query completes for all three public scenarios",
+      "id": "execution",
+      "weight": 1
+    },
+    {
+      "description": "Exact required columns; text dimensions and non-null integer measures",
+      "id": "schema_types",
+      "weight": 1
+    },
+    {
+      "description": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+      "id": "grouping_cohort",
+      "weight": 1
+    },
+    {
+      "description": "Exact line_count per bucket in all three public scenarios",
+      "id": "line_count",
+      "weight": 1
+    },
+    {
+      "description": "Exact invoice_count per bucket in all three public scenarios",
+      "id": "invoice_count",
+      "weight": 1
+    },
+    {
+      "description": "Exact billed_units per bucket in all three public scenarios",
+      "id": "billed_units",
+      "weight": 1
+    },
+    {
+      "description": "Exact gross_cents per bucket in all three public scenarios",
+      "id": "gross_cents",
+      "weight": 1
+    },
+    {
+      "description": "Exact adjustment_cents per bucket in all three public scenarios",
+      "id": "adjustment_cents",
+      "weight": 1
+    },
+    {
+      "description": "Exact net_cents per bucket in all three public scenarios",
+      "id": "net_cents",
+      "weight": 1
+    },
+    {
+      "description": "Exact received_cents per bucket in all three public scenarios",
+      "id": "received_cents",
+      "weight": 1
+    },
+    {
+      "description": "Exact balance_cents per bucket in all three public scenarios",
+      "id": "balance_cents",
+      "weight": 1
+    },
+    {
+      "description": "Exact fulfilled_units per bucket in all three public scenarios",
+      "id": "fulfilled_units",
+      "weight": 1
+    }
+  ],
+  "control_results": "private/control_results.json",
+  "created_utc_date": "2026-10-06",
+  "entrypoints": {
+    "grade": "python private/grade.py --sql SUBMISSION"
+  },
+  "fictional": true,
+  "oracle": "Non-SQL Python source-row calculation in private/build_fixture.py and frozen expected.json",
+  "private_root": "private",
+  "private_sha256": {
+    "private/README.md": "f04ac8389ae915b48c7036f635075648366454de5aa66f0861155aa72a57eab4",
+    "private/build_fixture.py": "15b4bcd66cd27524fcf03a9f4da27f7cc1319def59488a187d46f69fe68c2a63",
+    "private/control_results.json": "005dffee6a731c49ff138c58524f46c084ecc1a6ab4b7207e798f021e5feacf4",
+    "private/expected.json": "f5b69bf0c7b32ff9373ab5d5e3c17164c594b7c4c2c139946c66b1a9f0f2c5f4",
+    "private/grade.py": "c69fc18607f620581118a2ddfe779f00a2b66b31547b73e2edaa01b08714e6c1",
+    "private/reference.sql": "9b7ea77fa0233cd439d60b455bb8bfeb3680db5731471748d4c723618dc79081",
+    "private/reference_result.json": "a9252a627c6f2fbc0662e31cdf87e440ecda895aae4e2a6ec32ab3a6d50614d7",
+    "private/validate_controls.py": "7de73ba9993108d4b718101ae84c2055208a6164cdbcbb22d5f993857e64786a"
+  },
+  "protected_sha256": {
+    "TASK.md": "e2db15285d8bf66e8c34ad81e1d04b9738eb7af238ba851a0a459eaedeb633cf",
+    "inputs/billing.sqlite": "bb8bedc6ce954da3ffa0b3024e49d357bcefcf44e0aef95520a26049375a35f7",
+    "inputs/ledger.json": "37e37ff12ba9a02890e3e768371b0bda995f8d80cda3b4a1eaae195fc55c1563",
+    "inputs/scenarios.json": "705ab65a32ff4ee39c8c0cef2db1a0381958125e4fd85ca5288bb011a11df41f",
+    "inputs/schema.sql": "fc53e63ad54168ed61c8602cf3c22ac8efd41b079167f9d97d7aa470cf464529"
+  },
+  "published_by_author": false,
+  "reference": "private/reference.sql",
+  "reference_result": "private/reference_result.json",
+  "safety": {
+    "sql_connection": "read-only immutable approved-table/function authorizer; 50M VM steps; five-second progress deadline; 64KiB SQL; 10K rows"
+  },
+  "status_values": [
+    "pass",
+    "fail",
+    "unknown"
+  ],
+  "submission": "output/report.sql",
+  "unknown_policy": "Keep unknown separate; never coerce an unobserved or unexecuted outcome into pass/fail",
+  "version": "1.0"
+}

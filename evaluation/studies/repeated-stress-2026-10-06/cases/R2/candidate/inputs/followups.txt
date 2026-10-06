@@ -1,0 +1,26 @@
+F1 | Received 2026-09-24 10:00 UTC | Carla to working group
+I accept the routing rules handoff (A02) from Ben. September 29 is my current target; we can revise the date in the next agreed checkpoint.
+
+F2 | Received 2026-09-28 09:30 UTC | Xena to Wen and working group
+I accept A23, the dashboard ownership transfer. Agreed with Wen: I will finish by October 2. This is separate from my A24 budget readout.
+
+F3 | Received 2026-09-28 17:00 UTC | Design QA to working group
+Faye's product screenshots for A32 have passed the complete checklist and are accepted. No further screenshot work is required as of this message.
+
+F4 | Received 2026-09-30 12:00 UTC | Gia to Eli and working group
+I accept A31, the accessibility sweep, from Eli. October 2 is the agreed due date. I have not completed the sweep yet. Banner A06 is also still in progress.
+
+F5 | Received 2026-09-30 13:00 UTC | Uma to working group
+CRM export A21 has conflicting reports: QA's 09:00 report says every row passed; operations' 11:00 report says 42 rows are missing. Neither report records the export snapshot/hash, and we cannot tell whether they tested the same export. Do not infer that the later report settles the issue. We need to reconcile the tested inputs. I am still the owner.
+
+F6 | Received 2026-09-30 14:30 UTC | Jae and Kian to working group
+The confirmed training session is moved from October 5 to October 6. Kian accepts the new delivery date for A10. The room and participant booking were also successfully updated. A09 scheduling remains completed; A10 delivery remains future work.
+
+F7 | Received 2026-09-30 16:50 UTC | Coordinator to working group
+Cross-check of unresolved gaps: no pilot ID mapping file has arrived for A11; consent workspace access and ownership proposal for A12 are unresolved; no pager clearance for A18; no named incoming lead for A33; no partner launch date for A34. This does not revise any owners or due dates. Final M5 accurately records today's decisions.
+
+F8 | Received 2026-10-01 08:00 UTC | Support manager to working group | AFTER CUTOFF
+The triage test A33 was reportedly completed yesterday afternoon, and Rowan is now the incoming support lead. Please reopen A17 to change the rota. None of this information was received before the requested cutoff.
+
+F9 | Received 2026-10-01 09:00 UTC | Design lead to working group | AFTER CUTOFF
+Screenshots A32 are now obsolete because of a new design change; please redo them. Gia also says accessibility testing A31 finished late last night. These updates were not available at the cutoff.

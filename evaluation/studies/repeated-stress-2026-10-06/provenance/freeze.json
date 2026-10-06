@@ -1,0 +1,23 @@
+{
+  "study_id": "native-cloud-repeated-stress-2026-10-06",
+  "frozen_at_utc": "2026-10-06T06:01:34.526594+00:00",
+  "outcomes_observed": false,
+  "original_freeze_sha256": "7d6082b24dc7af106d6922800f7a52a73b8733e18209932de871d4e8f4833c2e",
+  "runtime_requested": {
+    "kind": "native_cloud_agent",
+    "fork_turns": "none",
+    "reasoning_effort": "xhigh",
+    "model_override": null,
+    "exact_serving_model_build": null,
+    "tokens": null,
+    "cost": null
+  },
+  "observed_local_runtime": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "original_protocol_sha256": "75471e2b99b15700fd7b7d3f463117451f33b6ae606fd67852888634f8f02b7b",
+  "original_common_instruction_sha256": "24cbf6213ef1e7bdc91bfbca39271d6dbaf6ee068d672172f7ddf9f9c675edfe",
+  "note": "Public projections omit private dispatch text and machine paths. Original hashes identify retained records; private record preimages are not part of this public bundle."
+}

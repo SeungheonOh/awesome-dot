@@ -1,0 +1,123 @@
+{
+  "allowed_optional_output": "output/notes.md",
+  "candidate_root": "candidate",
+  "candidate_sha256": {
+    "candidate/TASK.md": "f1e1392c338aab6c800fb5388d9bf02a860c8d2087d639ed2c67363b52368784",
+    "candidate/inputs/smoke_test.py": "87cd2cf83b0ce33cae4774aa0f193e538aba6adc9d500ff13c6c3a2e414730b7",
+    "candidate/output/merge_workspace.py": "93fbfcffad4c4c9227643c6758b8072ad1ae2b911031e1077a53feb1c86dad85"
+  },
+  "candidate_temporary_root": "tmp/",
+  "candidate_time_limit_seconds": 1500,
+  "candidate_trials_run_by_author": false,
+  "case_id": "R4",
+  "checks": [
+    {
+      "description": "Detached nested views; dirty reflects working text versus base",
+      "id": "views_and_edits",
+      "weight": 1
+    },
+    {
+      "description": "Clean fast-forward and repeated upstream/base tracking",
+      "id": "fast_forward_base",
+      "weight": 1
+    },
+    {
+      "description": "Independent same-length edits merge without loss",
+      "id": "disjoint_modifications",
+      "weight": 1
+    },
+    {
+      "description": "Disjoint insertion/deletion edits preserve exact line endings",
+      "id": "insert_delete_endings",
+      "weight": 1
+    },
+    {
+      "description": "Identical hunks applied once; adjacent nonempty hunks merge",
+      "id": "identical_adjacent_hunks",
+      "weight": 1
+    },
+    {
+      "description": "Conflicting ranges/insertions preserve base/local/incoming",
+      "id": "conflict_retention",
+      "weight": 1
+    },
+    {
+      "description": "Editing or receiving during unresolved review cannot overwrite it",
+      "id": "pending_blocks_mutation",
+      "weight": 1
+    },
+    {
+      "description": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+      "id": "resolution_choices",
+      "weight": 1
+    },
+    {
+      "description": "Complete document state survives rename; collisions/removals are correct",
+      "id": "rename_remove",
+      "weight": 1
+    },
+    {
+      "description": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+      "id": "save_reload",
+      "weight": 1
+    },
+    {
+      "description": "Failed observed atomic replacement preserves prior disk and live state",
+      "id": "failed_save_atomicity",
+      "weight": 1
+    },
+    {
+      "description": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+      "id": "corrupt_snapshots",
+      "weight": 1
+    },
+    {
+      "description": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+      "id": "bounds_nofollow",
+      "weight": 1
+    }
+  ],
+  "control_results": "private/control_results.json",
+  "created_utc_date": "2026-10-06",
+  "entrypoints": {
+    "behavioral_after_root_approval": "python private/evaluate.py run --plan WORK_ROOT/plan.json --approval-file ROOT_APPROVAL_FILE",
+    "static": "python private/evaluate.py static --submission SUBMISSION --work-root NEW_EVALUATOR_OWNED_DIRECTORY"
+  },
+  "fictional": true,
+  "oracle": "Literal expected states/texts and independent constructed edits in private/probe.py; never imports reference.py",
+  "private_root": "private",
+  "private_sha256": {
+    "private/README.md": "c444c4f110fd7c4ffd75f4bcebe950bb1071c7090afda0128f461d49a77f7137",
+    "private/control_results.json": "754e59ca3254f9c9d363e0e6676e00ae1c3b60c22a7fe17b988afa708ed700f5",
+    "private/evaluate.py": "1c2e7feeffb23c9153310b040e8316a8e5fc33f5a2be0c2734cc088b179bda6a",
+    "private/positive_controls.json": "6fa8061a89d1b42c73d8a584cc47c8577d1848a87e144e6607e3412f591f96bc",
+    "private/probe.py": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+    "private/reference.py": "c59cbcae36d9fcdd7394a744d9848668763321cc2b8e8907ab115c713c1e30ad",
+    "private/reference_result.json": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+    "private/static_gate_validation.json": "f65931d29c36fd994a2fb03acd2abd7166a17e18c0445f0cd7e837ff862cd612",
+    "private/validate_controls.py": "4e92a7fb3321a177cd5f2c0b1f6b39c641bc85f16b2c3a9f13cb7ef9c2c486f5"
+  },
+  "protected_sha256": {
+    "TASK.md": "f1e1392c338aab6c800fb5388d9bf02a860c8d2087d639ed2c67363b52368784",
+    "inputs/smoke_test.py": "87cd2cf83b0ce33cae4774aa0f193e538aba6adc9d500ff13c6c3a2e414730b7"
+  },
+  "published_by_author": false,
+  "reference": "private/reference.py",
+  "reference_result": "private/reference_result.json",
+  "safety": {
+    "address_space_bytes": 536870912,
+    "cpu_seconds": 20,
+    "execution_gate": "Exact submitted source plus harness and runner reviewed; explicit root approval of exact plan hash; bounded evaluator-owned copies only",
+    "max_file_bytes": 8388608,
+    "not_a_sandbox": true,
+    "wall_seconds": 30
+  },
+  "status_values": [
+    "pass",
+    "fail",
+    "unknown"
+  ],
+  "submission": "output/merge_workspace.py",
+  "unknown_policy": "Keep unknown separate; never coerce an unobserved or unexecuted outcome into pass/fail",
+  "version": "1.0"
+}

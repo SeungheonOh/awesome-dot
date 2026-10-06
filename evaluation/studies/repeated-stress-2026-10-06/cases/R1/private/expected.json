@@ -1,0 +1,511 @@
+{
+  "claims": [
+    {
+      "claim_id": "C001",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 4850,
+      "reimbursement_usd_cents": 4850,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R001",
+        "S001",
+        "P1"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C002",
+      "disposition": "partial",
+      "approved_usd_cents": 6000,
+      "reimbursement_usd_cents": 6000,
+      "excluded_usd_cents": 200,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R002",
+        "S002",
+        "P1"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C003",
+      "disposition": "partial",
+      "approved_usd_cents": 2500,
+      "reimbursement_usd_cents": 2500,
+      "excluded_usd_cents": 140,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R003",
+        "S003",
+        "P1"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C004",
+      "disposition": "partial",
+      "approved_usd_cents": 5720,
+      "reimbursement_usd_cents": 5720,
+      "excluded_usd_cents": 1760,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R004",
+        "S004",
+        "P1"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C005",
+      "disposition": "partial",
+      "approved_usd_cents": 40680,
+      "reimbursement_usd_cents": 40680,
+      "excluded_usd_cents": 3000,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R005",
+        "S005",
+        "P1"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C006",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 5800,
+      "reimbursement_usd_cents": 5800,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R006",
+        "S006",
+        "P1"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C007",
+      "disposition": "duplicate",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": "C001",
+      "evidence_ids": [
+        "R001",
+        "P1",
+        "E05"
+      ],
+      "note": "R001 already reimbursed only through canonical C001"
+    },
+    {
+      "claim_id": "C008",
+      "disposition": "partial",
+      "approved_usd_cents": 8000,
+      "reimbursement_usd_cents": 8000,
+      "excluded_usd_cents": 800,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R008",
+        "S008",
+        "P2"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C009",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 7200,
+      "reimbursement_usd_cents": 7200,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R009",
+        "S009",
+        "P2"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C010",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 39520,
+      "reimbursement_usd_cents": 39520,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R010",
+        "S010",
+        "P2",
+        "R021",
+        "E01"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C011",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 1875,
+      "reimbursement_usd_cents": 1875,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R011",
+        "S011",
+        "P2"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C012",
+      "disposition": "partial",
+      "approved_usd_cents": 3000,
+      "reimbursement_usd_cents": 3000,
+      "excluded_usd_cents": 300,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R012",
+        "S012",
+        "P2"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C013",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 9100,
+      "reimbursement_usd_cents": 9100,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R013",
+        "S013",
+        "P2",
+        "E02"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C014",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 4318,
+      "reimbursement_usd_cents": 4318,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R014",
+        "S014",
+        "P2"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C015",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 6882,
+      "reimbursement_usd_cents": 6882,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R015",
+        "S015",
+        "P2"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C016",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 840,
+      "reimbursement_usd_cents": 840,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "S016",
+        "P2"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C017",
+      "disposition": "hold",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 4790,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "S017",
+        "P2",
+        "E05"
+      ],
+      "note": "Required itemized receipt missing"
+    },
+    {
+      "claim_id": "C018",
+      "disposition": "hold",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 12600,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R018",
+        "S018",
+        "P2",
+        "E05"
+      ],
+      "note": "Attendees/count missing; do not guess a per-person allowance"
+    },
+    {
+      "claim_id": "C019",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 4900,
+      "reimbursement_usd_cents": 4900,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R019",
+        "S019",
+        "P2",
+        "E03"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C020",
+      "disposition": "corporate_paid",
+      "approved_usd_cents": 4900,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R020",
+        "S020",
+        "P2",
+        "E03"
+      ],
+      "note": "Company settled directly; no employee payment"
+    },
+    {
+      "claim_id": "C021",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 12000,
+      "reimbursement_usd_cents": 12000,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R021",
+        "S021",
+        "P1",
+        "R010",
+        "E01"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C022",
+      "disposition": "refunded",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 3600,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R022",
+        "S022",
+        "S122",
+        "P2"
+      ],
+      "note": "Settled credit fully offsets original charge"
+    },
+    {
+      "claim_id": "C023",
+      "disposition": "partial",
+      "approved_usd_cents": 6300,
+      "reimbursement_usd_cents": 6300,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 2700,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R023",
+        "S023",
+        "S123",
+        "P2"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C024",
+      "disposition": "partial",
+      "approved_usd_cents": 2500,
+      "reimbursement_usd_cents": 2500,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 12500,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R024",
+        "S024",
+        "S124",
+        "P2",
+        "E04"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C025",
+      "disposition": "ineligible",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 1200,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R025",
+        "S025",
+        "P2"
+      ],
+      "note": "Explicitly personal"
+    },
+    {
+      "claim_id": "C026",
+      "disposition": "hold",
+      "approved_usd_cents": null,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": null,
+      "held_usd_cents": null,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R026",
+        "P2",
+        "E05"
+      ],
+      "note": "Approved cash FX rate missing; EUR 24.00 unvalued"
+    },
+    {
+      "claim_id": "C027",
+      "disposition": "partial",
+      "approved_usd_cents": 19800,
+      "reimbursement_usd_cents": 19800,
+      "excluded_usd_cents": 1320,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R027",
+        "S027",
+        "P2"
+      ],
+      "note": "Cap, supported final adjustment, or settled partial credit reduces payable amount"
+    },
+    {
+      "claim_id": "C028",
+      "disposition": "hold",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 7900,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R028",
+        "S028",
+        "P2",
+        "E05"
+      ],
+      "note": "Receipt 79.00 versus settled charge 89.00 unexplained"
+    },
+    {
+      "claim_id": "C029",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 22480,
+      "reimbursement_usd_cents": 22480,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R029",
+        "S029",
+        "P2"
+      ],
+      "note": "Supported business expense"
+    },
+    {
+      "claim_id": "C030",
+      "disposition": "corporate_paid",
+      "approved_usd_cents": 3000,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "R030",
+        "S030",
+        "P2"
+      ],
+      "note": "Company settled directly; no employee payment"
+    }
+  ],
+  "totals": {
+    "reimbursement_usd_cents": 214265,
+    "approved_usd_cents": 222165,
+    "excluded_usd_cents": 8720,
+    "held_usd_cents": 25290,
+    "credit_usd_cents": 18800,
+    "corporate_paid_usd_cents": 7900,
+    "unvalued_holds": [
+      {
+        "claim_id": "C026",
+        "currency": "EUR",
+        "original_amount": "24.00"
+      }
+    ]
+  }
+}

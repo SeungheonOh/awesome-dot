@@ -1,0 +1,49 @@
+Attempt T13-R2-r1-S
+Packet root: <assigned-packet-root>
+Time cap: 900 seconds from controller dispatch intent.
+
+You are completing one offline work task. Produce the requested deliverables accurately, preserve the supplied evidence and supported behavior, and make uncertainty and verification limits clear. Work independently using the task and files supplied to this attempt. You may inspect, calculate, implement, and self-check your work before your first final submission. Use the time available for the actual task, not for reporting progress.
+
+This is an openly synthetic task. All names, organizations, records, and systems are fictional. Do not use live accounts or retrieve real user data. No external messages, network access, package installations, new permissions, or changes to settings are authorized.
+
+The exact attempt prompt is outside your packet. Reading that one named prompt file at startup is an explicit initial-read exception. After reading it, use only your assigned packet root for task content and task artifacts. Do not read parent or sibling directories, other attempts, rubrics, graders, author references, outcome ledgers, prior study outputs, repository copies, memory, or other task sources. Do not delegate, ask another agent for task help, or discover connector/web data. Normal runtime binaries and standard-library modules may be used to perform local work; this does not authorize inspecting unrelated filesystem content. These are instruction-level boundaries, not a claim of operating-system isolation.
+
+Leave TASK.md, inputs/, LICENSE, and any supplied skill/ files unchanged. Put only final deliverables under output/. Put scratch files, copied fixtures, generated caches, and temporary test outputs under tmp/. Set TMPDIR to your packet's tmp/ and PYTHONDONTWRITEBYTECODE=1 for Python commands. Do not leave symlinks or hardlinks in deliverables. Use only files within this packet as application data. Do not create or remove files elsewhere.
+
+You may run bounded local checks using available tools and the standard library. Before executing supplied or generated code, inspect its exact source and dependencies and verify that it stays within this packet, uses no network or credentials, invokes no uninspected code, and makes only task-authorized writes under output/ or tmp/. Work on copies under tmp/ when a check could modify inputs. Do not execute code whose effects you cannot establish; report that limit. This permission does not bypass any higher-priority safety requirement or tool denial. Distinguish checks actually run from checks merely proposed.
+
+No further task facts, grader feedback, or correctness hints will be supplied. If an ambiguity remains, preserve the uncertainty and complete unaffected work. If a permission or tool restriction blocks a dependent step, report the exact action and blocker without seeking an alternate route around it. A fixed reply to any clarification request will be: "No additional task facts are available. Use the supplied evidence, preserve material uncertainty, and complete the unaffected work within the stated authority."
+
+Return a concise final submission identifying the files saved under output/, the checks you actually ran, and any unresolved material limitation. That first final response is your submitted attempt. Do not continue editing after final submission.
+
+Additional supplied guidance: Before solving the task, read skill/meeting-action-handoff/SKILL.md and use the supplied in-package references when relevant. Cross-package links and external URLs do not expand your allowed sources. The task requirements take precedence over generic examples.
+
+Complete task (identical bytes also available in TASK.md):
+
+Fictional offline task: produce a launch action handoff
+
+This packet is wholly synthetic: invented project, people, meetings, and events. Prepare the Atlas Intake launch action handoff as it was knowable at 2026-09-30 17:00 UTC. Read the baseline and all dated meeting notes/follow-ups, including their explicit corrections and limits. Do not send messages, edit external records, or perform any actions in the notes.
+
+Reconcile the 34 commitments A01–A34 into output/action_register.json and output/handoff.txt. Preserve canonical IDs even when scope, owner, or dates change. Merge the three explicit alternate IDs into their canonical actions; do not create duplicate commitments. Use only information received by the cutoff, even if a later message describes something that allegedly occurred earlier. The baseline is a starting point, not the answer. All times and dates are UTC. A due date means end of that UTC day; an incomplete item due September 30 is not yet overdue at the cutoff.
+
+Rules for resolving evidence:
+- An explicit final meeting decision or the named new owner's acceptance transfers ownership. A proposed transfer, a request, silence, or work done informally does not. An explicit release to an unnamed role can leave owner unknown
+- An explicit completion/acceptance that meets the stated action is enough; a draft, partial checklist, or unaccepted submission is not. Scheduling a training session and delivering that training are separate commitments
+- Corrections supersede what they explicitly correct. Conflicting technical results without a reconciled source remain unresolved; do not select a result solely because it is later
+- An explicit cancellation stays cancelled unless explicitly reopened. Reopening a ticket continues the original action
+- Do not invent deadlines or owners when they are deliberately unset or unsupported
+
+The register JSON has actions, aliases, and totals. actions contains one row per A01–A34 in any order, with these fields:
+- action_id; title: final meaningful scope in your own words
+- owner: named accountable owner or null if no person is assigned
+- due_date: YYYY-MM-DD or null if explicitly unset
+- status: open (incomplete and currently actionable), blocked (known external/dependency obstacle), done (completion confirmed), cancelled (explicitly abandoned), or unresolved (conflicting completion evidence or an explicitly unfilled accountable-owner assignment)
+- dependencies: canonical IDs of unresolved internal action prerequisites, otherwise an empty list. Include only explicit immediate prerequisites, not inferred transitive dependencies or resolved prerequisites. External obstacles belong in blocker instead
+- overdue: boolean, using the cutoff and end-of-day rule
+- evidence_ids: source record IDs supporting the final state; blocker: concise text or null; next_step: a practical next step for every open, blocked, or unresolved item, otherwise null
+
+aliases is an object mapping the three explicitly identified alternate IDs to canonical IDs. totals includes by_status (counts for all five statuses), active_count (open + blocked + unresolved), and overdue_count. Treat the scoped-down Spanish FAQ as A08; do not retain the removed French work as an open obligation.
+
+The handoff should identify the most consequential remaining launch blockers, overdue work, owner/deadline gaps, concrete next steps, and the important completed/cancelled decisions. Cover every active item at a level sufficient for its owner to act; grouping is fine. Keep confirmed facts separate from uncertainty. Include the as-of cutoff and make clear that post-cutoff messages were not used. Do not imply you contacted anyone or changed a system. Equivalent correct ordering and wording are accepted, and extra useful fields are allowed.
+
+All acceptance requirements are visible here and in the input sources: complete canonical coverage, supported status and ownership, normalized dates, duplicate merging, immediate dependencies, overdue flags and totals, provenance, final scope and chronology, actionable handoff, and explicit treatment of uncertainty. You have 900 seconds. You may inspect input files and write/run your own bounded local code in tmp/. No network, credentials, installs, external writes, or execution of supplied code is needed or authorized.

@@ -1,0 +1,28 @@
+receipt_id,service_date,currency,total,food_pre_tax,alcohol_pre_tax,tax,room_per_night,nights,deposit_applied,document_kind,details
+R001,2026-09-11,USD,48.50,,,,,,,final,Train to symposium
+R002,2026-09-12,USD,62.00,,,,,,,final,Station to venue
+R003,2026-09-12,USD,26.40,24.00,0.00,2.40,,,,final,Individual travel lunch
+R004,2026-09-12,USD,74.80,52.00,16.00,6.80,,,,final,Individual travel dinner
+R005,2026-09-12,USD,436.80,,,46.80,195.00,2,,final,September 12–14 lodging
+R006,2026-09-14,USD,58.00,,,,,,,final,Venue transfer
+R008,2026-09-15,USD,88.00,80.00,0.00,8.00,,,,final,Individual travel dinner
+R009,2026-09-15,USD,72.00,,,,,,,final,Station to workshop
+R010,2026-09-15,USD,515.20,,,55.20,230.00,2,120.00,final,Two-night invoice; deposit R021 applied; balance due and paid USD 395.20
+R011,2026-09-16,USD,18.75,18.75,0.00,0.00,,,,final,Individual travel breakfast
+R012,2026-09-16,USD,33.00,33.00,0.00,0.00,,,,final,Individual travel lunch
+R013,2026-09-17,USD,91.00,,,,,,,final,Early airport trip
+R014,2026-09-17,EUR,38.90,,,,,,,final,Regional partner visit
+R015,2026-09-17,EUR,62.00,62.00,0.00,0.00,,,,final,Individual travel dinner
+R018,2026-09-19,USD,126.00,114.00,0.00,12.00,,,,final,Attendee field blank; no count on receipt
+R019,2026-09-19,USD,49.00,,,,,,,final,One-month transcription plan
+R020,2026-09-20,USD,49.00,,,,,,,final,One-month diagram plan; card choice misremembered
+R021,2026-09-01,USD,120.00,,,,,,,final,Deposit transaction DEP-714 applied to final invoice R010
+R022,2026-09-20,USD,36.00,,,,,,,final,Returned travel adapter
+R023,2026-09-21,USD,90.00,,,,,,,final,Rail ticket changed; partial refund expected
+R024,2026-09-21,USD,150.00,,,,,,,final,Cancelled partner seminar
+R025,2026-09-21,USD,12.00,,,,,,,final,Personal snack gift for home
+R026,2026-09-22,EUR,24.00,,,,,,,final,Cash paid EUR 24.00; exchange-rate approval absent
+R027,2026-09-23,USD,198.00,,,18.00,180.00,1,,final,Final invoice; supersedes estimate EST-27 of USD 211.20
+R028,2026-09-23,USD,79.00,,,,,,,final,Business mobile hotspot day pass
+R029,2026-09-24,USD,224.80,,,,,,,final,Return flight
+R030,2026-09-24,USD,30.00,,,,,,,final,Return-flight equipment bag

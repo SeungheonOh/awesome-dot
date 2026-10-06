@@ -1,0 +1,8 @@
+{
+  "static_phase": "passed_without_execution",
+  "source_sha256": "93fbfcffad4c4c9227643c6758b8072ad1ae2b911031e1077a53feb1c86dad85",
+  "harness_sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+  "missing_approval": "denied_before_execution",
+  "returncode": 1,
+  "successful_gate_run": "not self-approved; root approval required"
+}

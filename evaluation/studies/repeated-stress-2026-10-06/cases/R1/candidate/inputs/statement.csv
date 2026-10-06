@@ -1,0 +1,33 @@
+statement_id,posted_date,account,direction,state,amount,currency,claim_link,transaction_reference,memo
+S001,2026-09-11,employee,charge,settled,48.50,USD,C001,TX-001,Train to symposium
+S002,2026-09-16,employee,charge,settled,62.00,USD,C002,TX-002,Station to venue
+S003,2026-09-16,employee,charge,settled,26.40,USD,C003,TX-003,Individual travel lunch
+S004,2026-09-16,employee,charge,settled,74.80,USD,C004,TX-004,Individual travel dinner
+S005,2026-09-12,employee,charge,settled,436.80,USD,C005,TX-005,September 12–14 lodging
+S006,2026-09-14,employee,charge,settled,58.00,USD,C006,TX-006,Venue transfer
+S008,2026-09-15,employee,charge,settled,88.00,USD,C008,TX-008,Individual travel dinner
+S009,2026-09-15,employee,charge,settled,72.00,USD,C009,TX-009,Station to workshop
+S010,2026-09-15,employee,charge,settled,395.20,USD,C010,TX-010,"Final balance September 15–17, deposit separate"
+S011,2026-09-16,employee,charge,settled,18.75,USD,C011,TX-011,Individual travel breakfast
+S012,2026-09-16,employee,charge,settled,33.00,USD,C012,TX-012,Individual travel lunch
+S013,2026-09-17,employee,charge,settled,91.00,USD,C013,TX-013,Early airport trip
+S014,2026-09-17,employee,charge,settled,43.18,USD,C014,TX-014,Regional partner visit
+S015,2026-09-17,employee,charge,settled,68.82,USD,C015,TX-015,Individual travel dinner
+S016,2026-09-18,employee,charge,settled,8.40,USD,C016,TX-016,Coffee and breakfast during partner visit
+S017,2026-09-18,employee,charge,settled,47.90,USD,C017,TX-017,Workshop stationery; receipt lost
+S018,2026-09-19,employee,charge,settled,126.00,USD,C018,TX-018,Partner workshop lunch; attendees pending
+S019,2026-09-19,employee,charge,settled,49.00,USD,C019,TX-019,One-month transcription plan
+S020,2026-09-20,company,charge,settled,49.00,USD,C020,TX-020,One-month diagram plan; card choice misremembered
+S021,2026-09-02,employee,charge,settled,120.00,USD,C021,TX-021,Deposit for September 15–17 stay
+S022,2026-09-20,employee,charge,settled,36.00,USD,C022,TX-022,Returned travel adapter
+S023,2026-09-21,employee,charge,settled,90.00,USD,C023,TX-023,Rail ticket changed; partial refund expected
+S024,2026-09-21,employee,charge,settled,150.00,USD,C024,TX-024,Cancelled partner seminar
+S025,2026-09-21,employee,charge,settled,12.00,USD,C025,TX-025,Personal snack gift for home
+S027,2026-09-23,employee,charge,settled,198.00,USD,C027,TX-027,One night; claimed using booking estimate
+S028,2026-09-23,employee,charge,settled,89.00,USD,C028,TX-028,Business mobile hotspot day pass
+S029,2026-09-24,employee,charge,settled,224.80,USD,C029,TX-029,Return flight
+S030,2026-09-24,company,charge,settled,30.00,USD,C030,TX-030,Return-flight equipment bag
+S122,2026-09-25,employee,credit,settled,36.00,USD,C022,TX-022,Full adapter return
+S123,2026-09-24,employee,credit,settled,27.00,USD,C023,TX-023,Fare difference refund
+S124,2026-09-29,employee,credit,settled,125.00,USD,C024,TX-024,Cancellation refund; retained fee 25.00
+S229,2026-09-24,employee,charge,pending,224.80,USD,C029,AUTH-029,Temporary authorization for same return flight as S029

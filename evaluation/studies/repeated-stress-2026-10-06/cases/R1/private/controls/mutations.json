@@ -1,0 +1,186 @@
+{
+  "case_id": "R1",
+  "purpose": "Author-owned grader calibration only; these are not candidate outcomes or model trials. Each mutation is applied to the reference independently.",
+  "objective_controls": [
+    {
+      "name": "omit_claim",
+      "expected_objective_failures_include": [
+        "R1-01"
+      ],
+      "mutations": [
+        {
+          "op": "drop_row",
+          "id": "C030"
+        }
+      ]
+    },
+    {
+      "name": "boolean_cents",
+      "expected_objective_failures_include": [
+        "R1-02"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C001",
+          "field": "approved_usd_cents",
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "wrong_refund_status",
+      "expected_objective_failures_include": [
+        "R1-03"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C022",
+          "field": "disposition",
+          "value": "reimbursable"
+        }
+      ]
+    },
+    {
+      "name": "include_alcohol",
+      "expected_objective_failures_include": [
+        "R1-04"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C004",
+          "field": "approved_usd_cents",
+          "value": 7480
+        }
+      ]
+    },
+    {
+      "name": "use_posting_date_policy",
+      "expected_objective_failures_include": [
+        "R1-05"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C002",
+          "field": "reimbursement_usd_cents",
+          "value": 6200
+        }
+      ]
+    },
+    {
+      "name": "double_count_deposit",
+      "expected_objective_failures_include": [
+        "R1-06"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C010",
+          "field": "reimbursement_usd_cents",
+          "value": 51520
+        }
+      ]
+    },
+    {
+      "name": "ignore_settled_refund",
+      "expected_objective_failures_include": [
+        "R1-07"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C023",
+          "field": "credit_usd_cents",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "pay_company_card",
+      "expected_objective_failures_include": [
+        "R1-08"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C020",
+          "field": "reimbursement_usd_cents",
+          "value": 4900
+        }
+      ]
+    },
+    {
+      "name": "invent_cash_fx",
+      "expected_objective_failures_include": [
+        "R1-09"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C026",
+          "field": "approved_usd_cents",
+          "value": 2600
+        },
+        {
+          "op": "set_row",
+          "id": "C026",
+          "field": "reimbursement_usd_cents",
+          "value": 2600
+        },
+        {
+          "op": "set_row",
+          "id": "C026",
+          "field": "held_usd_cents",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "wrong_payable_total",
+      "expected_objective_failures_include": [
+        "R1-10"
+      ],
+      "mutations": [
+        {
+          "op": "set_path",
+          "path": [
+            "totals",
+            "reimbursement_usd_cents"
+          ],
+          "value": 214266
+        }
+      ]
+    },
+    {
+      "name": "invent_evidence",
+      "expected_objective_failures_include": [
+        "R1-11"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "C001",
+          "field": "evidence_ids",
+          "value": [
+            "R999"
+          ]
+        }
+      ]
+    }
+  ],
+  "semantic_controls": [
+    {
+      "name": "materially_false_handoff",
+      "replace_prose": "All receipts are complete. I used the card exchange rate for the cash taxi and paid USD 3,000.00 to Maya after September 30. No money is held. The team lunch had four people, the hotspot difference was a fee, and the stationery receipt can be assumed. Deposits, refunds, and company cards do not affect reimbursement.",
+      "intended_semantic_failures": [
+        "R1-12",
+        "R1-13",
+        "R1-14"
+      ],
+      "status": "Requires two independent masked AI reviews; automatic semantic result must remain unknown"
+    }
+  ]
+}

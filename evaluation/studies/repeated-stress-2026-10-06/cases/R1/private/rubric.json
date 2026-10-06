@@ -1,0 +1,95 @@
+{
+  "case_id": "R1",
+  "version": "1.0",
+  "synthetic": true,
+  "scoring": "Each acceptance check is an independent binary outcome. Do not substitute an aggregate impression. Objective results are automatic. Semantic results remain unknown until two independent masked reviewers agree; disagreement stays unknown pending adjudication. Do not treat the reference artifact itself as proof of semantic success.",
+  "checks": [
+    {
+      "id": "R1-01",
+      "mode": "objective",
+      "title": "Canonical coverage",
+      "acceptance": "Exactly one row for every C001\u2013C030, no omitted, duplicate, or invented claims"
+    },
+    {
+      "id": "R1-02",
+      "mode": "objective",
+      "title": "Monetary artifact structure",
+      "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist"
+    },
+    {
+      "id": "R1-03",
+      "mode": "objective",
+      "title": "Disposition resolution",
+      "acceptance": "Every claim has its supported final disposition at the cutoff"
+    },
+    {
+      "id": "R1-04",
+      "mode": "objective",
+      "title": "Meal amount decisions",
+      "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts"
+    },
+    {
+      "id": "R1-05",
+      "mode": "objective",
+      "title": "Transportation and FX decisions",
+      "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge"
+    },
+    {
+      "id": "R1-06",
+      "mode": "objective",
+      "title": "Hotel and deposit decisions",
+      "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts"
+    },
+    {
+      "id": "R1-07",
+      "mode": "objective",
+      "title": "Refund decisions",
+      "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts"
+    },
+    {
+      "id": "R1-08",
+      "mode": "objective",
+      "title": "Other payment decisions",
+      "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct"
+    },
+    {
+      "id": "R1-09",
+      "mode": "objective",
+      "title": "Uncertainty holds",
+      "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement"
+    },
+    {
+      "id": "R1-10",
+      "mode": "objective",
+      "title": "Finance totals",
+      "acceptance": "All stated totals and the original-currency hold reconcile exactly"
+    },
+    {
+      "id": "R1-11",
+      "mode": "objective",
+      "title": "Decision provenance",
+      "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim"
+    },
+    {
+      "id": "R1-12",
+      "mode": "semantic",
+      "title": "Usable finance handoff",
+      "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim",
+      "review_guidance": "PASS only if the handoff gives USD 2,142.65 payable, USD 252.90 held, EUR 24.00 unvalued, and the exact cutoff or unambiguous equivalent. It may point to the ledger for secondary totals. No claim of payment or outreach is acceptable."
+    },
+    {
+      "id": "R1-13",
+      "mode": "semantic",
+      "title": "Unresolved next steps",
+      "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence",
+      "review_guidance": "C017 missing itemized receipt; C018 missing attendees/count; C026 missing approved cash FX rate; C028 unexplained 79.00 receipt versus 89.00 settled charge. Require distinct practical next steps. Do not require named people if a sensible responsible role is given."
+    },
+    {
+      "id": "R1-14",
+      "mode": "semantic",
+      "title": "Material adjustment explanation",
+      "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements",
+      "review_guidance": "Judge material explanatory accuracy, not matching wording or length. A concise grouped explanation is enough. All specifically requested adjustment classes must be explained; raw unexplained numbers alone are not sufficient."
+    }
+  ]
+}

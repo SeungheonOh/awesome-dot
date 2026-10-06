@@ -1,0 +1,177 @@
+{
+  "case_id": "R2",
+  "purpose": "Author-owned grader calibration only; these are not candidate outcomes or model trials. Each mutation is applied to the reference independently.",
+  "objective_controls": [
+    {
+      "name": "omit_commitment",
+      "expected_objective_failures_include": [
+        "R2-01"
+      ],
+      "mutations": [
+        {
+          "op": "drop_row",
+          "id": "A34"
+        }
+      ]
+    },
+    {
+      "name": "revive_cancelled_email",
+      "expected_objective_failures_include": [
+        "R2-02"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A05",
+          "field": "status",
+          "value": "open"
+        }
+      ]
+    },
+    {
+      "name": "confuse_training_booking_delivery",
+      "expected_objective_failures_include": [
+        "R2-03"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A10",
+          "field": "status",
+          "value": "done"
+        }
+      ]
+    },
+    {
+      "name": "ignore_accepted_transfer",
+      "expected_objective_failures_include": [
+        "R2-04"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A10",
+          "field": "owner",
+          "value": "Jae"
+        }
+      ]
+    },
+    {
+      "name": "accept_unconfirmed_replacement",
+      "expected_objective_failures_include": [
+        "R2-05"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A12",
+          "field": "owner",
+          "value": "Mira"
+        }
+      ]
+    },
+    {
+      "name": "invent_unset_deadline",
+      "expected_objective_failures_include": [
+        "R2-06"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A30",
+          "field": "due_date",
+          "value": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "name": "silently_extend_overdue_work",
+      "expected_objective_failures_include": [
+        "R2-07"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A11",
+          "field": "due_date",
+          "value": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "name": "wrong_alias",
+      "expected_objective_failures_include": [
+        "R2-08"
+      ],
+      "mutations": [
+        {
+          "op": "set_path",
+          "path": [
+            "aliases",
+            "OPS-17"
+          ],
+          "value": "A17"
+        }
+      ]
+    },
+    {
+      "name": "replace_immediate_with_transitive",
+      "expected_objective_failures_include": [
+        "R2-09"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A28",
+          "field": "dependencies",
+          "value": [
+            "A03",
+            "A21"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "miss_overdue_item",
+      "expected_objective_failures_include": [
+        "R2-10"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A11",
+          "field": "overdue",
+          "value": false
+        }
+      ]
+    },
+    {
+      "name": "use_post_cutoff_evidence",
+      "expected_objective_failures_include": [
+        "R2-11"
+      ],
+      "mutations": [
+        {
+          "op": "set_row",
+          "id": "A33",
+          "field": "evidence_ids",
+          "value": [
+            "F8"
+          ]
+        }
+      ]
+    }
+  ],
+  "semantic_controls": [
+    {
+      "name": "materially_false_handoff",
+      "replace_prose": "Everything is ready and nothing is overdue. Mira now owns the consent audit, Rowan completed the triage test, and all CRM reports passed. Dev must deliver retention Q&A tomorrow. Kian already delivered training on October 5. French FAQ translation, the email announcement, purge, and live demo should proceed. I sent everyone a confirmation. The October 1 updates are included.",
+      "intended_semantic_failures": [
+        "R2-12",
+        "R2-13",
+        "R2-14"
+      ],
+      "status": "Requires two independent masked AI reviews; automatic semantic result must remain unknown"
+    }
+  ]
+}

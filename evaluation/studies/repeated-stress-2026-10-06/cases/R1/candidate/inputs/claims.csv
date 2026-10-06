@@ -1,0 +1,31 @@
+claim_id,service_date,category,claimed_amount,currency,paid_by,receipt_id,purpose
+C001,2026-09-11,rail,48.50,USD,employee,R001,Train to symposium
+C002,2026-09-12,taxi,62.00,USD,employee,R002,Station to venue
+C003,2026-09-12,lunch,26.40,USD,employee,R003,Individual travel lunch
+C004,2026-09-12,dinner,74.80,USD,employee,R004,Individual travel dinner
+C005,2026-09-12,hotel,436.80,USD,employee,R005,September 12–14 lodging
+C006,2026-09-14,taxi,58.00,USD,employee,R006,Venue transfer
+C007,2026-09-11,rail,48.50,USD,employee,R001,"Train to symposium, uploaded again"
+C008,2026-09-15,dinner,88.00,USD,employee,R008,Individual travel dinner
+C009,2026-09-15,taxi,72.00,USD,employee,R009,Station to workshop
+C010,2026-09-15,hotel,395.20,USD,employee,R010,"Final balance September 15–17, deposit separate"
+C011,2026-09-16,breakfast,18.75,USD,employee,R011,Individual travel breakfast
+C012,2026-09-16,lunch,33.00,USD,employee,R012,Individual travel lunch
+C013,2026-09-17,taxi,91.00,USD,employee,R013,Early airport trip
+C014,2026-09-17,rail,38.90,EUR,employee,R014,Regional partner visit
+C015,2026-09-17,dinner,62.00,EUR,employee,R015,Individual travel dinner
+C016,2026-09-18,breakfast,8.40,USD,employee,,Coffee and breakfast during partner visit
+C017,2026-09-18,supplies,47.90,USD,employee,,Workshop stationery; receipt lost
+C018,2026-09-19,team_lunch,126.00,USD,employee,R018,Partner workshop lunch; attendees pending
+C019,2026-09-19,software,49.00,USD,employee,R019,One-month transcription plan
+C020,2026-09-20,software,49.00,USD,company,R020,One-month diagram plan; card choice misremembered
+C021,2026-09-01,hotel_deposit,120.00,USD,employee,R021,Deposit for September 15–17 stay
+C022,2026-09-20,supplies,36.00,USD,employee,R022,Returned travel adapter
+C023,2026-09-21,rail,90.00,USD,employee,R023,Rail ticket changed; partial refund expected
+C024,2026-09-21,seminar,150.00,USD,employee,R024,Cancelled partner seminar
+C025,2026-09-21,personal,12.00,USD,employee,R025,Personal snack gift for home
+C026,2026-09-22,taxi,24.00,EUR,cash,R026,Cash taxi to partner office
+C027,2026-09-23,hotel,211.20,USD,employee,R027,One night; claimed using booking estimate
+C028,2026-09-23,connectivity,79.00,USD,employee,R028,Business mobile hotspot day pass
+C029,2026-09-24,airfare,224.80,USD,employee,R029,Return flight
+C030,2026-09-24,baggage,30.00,USD,company,R030,Return-flight equipment bag

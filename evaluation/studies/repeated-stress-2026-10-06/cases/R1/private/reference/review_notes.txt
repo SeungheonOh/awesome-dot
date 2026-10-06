@@ -1,0 +1,15 @@
+Finance handoff for Maya Chen, as of 2026-09-30 17:00 UTC
+
+The supported payable reimbursement is USD 2,142.65. Approved business cost including company-paid expenses is USD 2,221.65; disallowed portions total USD 87.20; settled credits applied total USD 188.00. Known USD holds total USD 252.90, plus an unvalued EUR 24.00 cash taxi. These holds are excluded from the payable amount, not rejected. No payment or external message has been made.
+
+Apply P1 by service date to the September 12 costs even though several card entries posted September 16. P2 raises taxi and meal caps from September 15. C004 removes alcohol and its proportional tax, leaving USD 57.20. C005 is capped to USD 180 per night plus its full lodging taxes, yielding USD 406.80. C010's written USD 230/night exception permits the two-night USD 515.20 invoice; USD 120.00 belongs to deposit C021 and only USD 395.20 to C010. The airport taxi exception permits all USD 91.00 on C013. Foreign employee-card rail and dinner use settled USD 43.18 and USD 68.82, respectively.
+
+C007 repeats R001 and pays nothing; C001 is retained. C020 and C030 are company-paid, totaling USD 79.00 approved business cost and zero employee reimbursement. C022's USD 36.00 return credit fully offsets its purchase. C023's settled USD 27.00 rail refund leaves USD 63.00. C024's settled USD 125.00 refund leaves the explicitly approved USD 25.00 cancellation fee. C027 uses the final USD 198.00 invoice rather than its USD 211.20 estimate. The pending S229 airfare authorization adds no second charge. C025 is personal. The small C016 breakfast is supported by its settled statement under the receipt threshold.
+
+Before releasing held money:
+- C017: Maya should obtain the USD 47.90 itemized stationery receipt or finance's explicit evidence exception; a statement alone does not satisfy the over-USD-25 rule
+- C018: Maya should supply attendees/count and business purpose detail so finance can calculate the per-person lunch allowance; no headcount can be assumed from the USD 126.00 total
+- C026: Finance should provide the organization's approved cash FX record for EUR 24.00, after which the USD cap and valuation can be checked; another card transaction's rate is not a substitute
+- C028: Maya should ask the hotspot vendor/card provider to reconcile the USD 79.00 receipt with the USD 89.00 settled charge, supplying a corrected receipt or documented adjustment; hold the USD 79.00 claim meanwhile
+
+The October 1 note is after the cutoff and resolves none of these evidence gaps. The machine-readable ledger provides the exact payable amount, per-claim values, credits, and source IDs.

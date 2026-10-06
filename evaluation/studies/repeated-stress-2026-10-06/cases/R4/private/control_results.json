@@ -1,0 +1,106 @@
+[
+  {
+    "control": "original_scaffold",
+    "source_sha256": "93fbfcffad4c4c9227643c6758b8072ad1ae2b911031e1077a53feb1c86dad85",
+    "expected_detected_check": "save_reload",
+    "totals": {
+      "pass": 4,
+      "fail": 8,
+      "unknown": 1
+    },
+    "validated": true
+  },
+  {
+    "control": "shallow_views",
+    "source_sha256": "1277335165882d68020d3f16174dc21ef8bcae805f2bc273d341e9daab1ce462",
+    "expected_detected_check": "views_and_edits",
+    "totals": {
+      "pass": 12,
+      "fail": 1,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "overwrite_pending",
+    "source_sha256": "0e17bf7e1cefe84493acfdc63d83db12f6f78ad5958458766acaa08b679cce41",
+    "expected_detected_check": "pending_blocks_mutation",
+    "totals": {
+      "pass": 12,
+      "fail": 1,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "forget_remote_base",
+    "source_sha256": "a78ab699ae992d5c623cacbe2197299a6fae8ac06946825ec87b986d4db8a11e",
+    "expected_detected_check": "fast_forward_base",
+    "totals": {
+      "pass": 9,
+      "fail": 4,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "resolution_marks_clean",
+    "source_sha256": "ed072cf0bbb45c30b434fc80cf6a321ac79e7978a5a03e83f841d73f0bc500ba",
+    "expected_detected_check": "resolution_choices",
+    "totals": {
+      "pass": 12,
+      "fail": 1,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "duplicate_shared_hunks",
+    "source_sha256": "2b4551134ef890a1532d24d38a72441fe2ca5c65a03a2e0281d35dedadf1b71d",
+    "expected_detected_check": "identical_adjacent_hunks",
+    "totals": {
+      "pass": 12,
+      "fail": 1,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "blocking_fifo_open",
+    "source_sha256": "fafceeb5526a71205ac0fe53043accce0ccb3edaa98e204b8e5ffef75d306d99",
+    "expected_detected_check": "bounds_nofollow",
+    "totals": {
+      "pass": 12,
+      "fail": 1,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "unbounded_merge",
+    "source_sha256": "b1ae81741b392cb2a2bf835fa64179ac0158d79dab7934dd0824d3525a7f8e2e",
+    "expected_detected_check": "bounds_nofollow",
+    "totals": {
+      "pass": 12,
+      "fail": 1,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "truncate_final_newline",
+    "source_sha256": "042a94f383687bbca4f328f7a8a5d1d1d56828e3203dda7c1333bed2eebe560d",
+    "expected_detected_check": "insert_delete_endings",
+    "totals": {
+      "pass": 9,
+      "fail": 4,
+      "unknown": 0
+    },
+    "validated": true
+  },
+  {
+    "control": "reference_fifo_regression",
+    "validated": true,
+    "expected": "reject nonregular snapshot without opening a blocking read"
+  }
+]

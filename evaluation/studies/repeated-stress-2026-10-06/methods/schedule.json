@@ -1,0 +1,353 @@
+{
+  "study_id": "native-cloud-repeated-stress-2026-10-06",
+  "created_at_utc": "2026-10-06T05:41:38.508063+00:00",
+  "outcomes_observed": false,
+  "seed_hex": "abd01967d4c92b294151151db62f6f69c50b6f71e425161b0f47b1154f628521",
+  "prng": "Python random.Random; seed str version=2",
+  "python_version": "3.12.14",
+  "algorithm": "Sample two cases to receive two C-first pairs; remaining two receive one C-first pair. Shuffle each case's three order assignments, then shuffle all twelve case/repeat pairs. Dispatch pair members in their assigned order.",
+  "pair_counts": {
+    "CS": 6,
+    "SC": 6
+  },
+  "pairs": [
+    {
+      "case_id": "R3",
+      "repeat": 1,
+      "pair_order": "SC",
+      "pair_index": 1
+    },
+    {
+      "case_id": "R4",
+      "repeat": 2,
+      "pair_order": "SC",
+      "pair_index": 2
+    },
+    {
+      "case_id": "R2",
+      "repeat": 3,
+      "pair_order": "CS",
+      "pair_index": 3
+    },
+    {
+      "case_id": "R1",
+      "repeat": 3,
+      "pair_order": "CS",
+      "pair_index": 4
+    },
+    {
+      "case_id": "R1",
+      "repeat": 1,
+      "pair_order": "CS",
+      "pair_index": 5
+    },
+    {
+      "case_id": "R4",
+      "repeat": 3,
+      "pair_order": "CS",
+      "pair_index": 6
+    },
+    {
+      "case_id": "R2",
+      "repeat": 1,
+      "pair_order": "SC",
+      "pair_index": 7
+    },
+    {
+      "case_id": "R3",
+      "repeat": 2,
+      "pair_order": "CS",
+      "pair_index": 8
+    },
+    {
+      "case_id": "R2",
+      "repeat": 2,
+      "pair_order": "SC",
+      "pair_index": 9
+    },
+    {
+      "case_id": "R1",
+      "repeat": 2,
+      "pair_order": "SC",
+      "pair_index": 10
+    },
+    {
+      "case_id": "R4",
+      "repeat": 1,
+      "pair_order": "SC",
+      "pair_index": 11
+    },
+    {
+      "case_id": "R3",
+      "repeat": 3,
+      "pair_order": "CS",
+      "pair_index": 12
+    }
+  ],
+  "attempts": [
+    {
+      "dispatch_index": 1,
+      "attempt_id": "T01-R3-r1-S",
+      "case_id": "R3",
+      "repeat": 1,
+      "arm": "S",
+      "pair_index": 1,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 2,
+      "attempt_id": "T02-R3-r1-C",
+      "case_id": "R3",
+      "repeat": 1,
+      "arm": "C",
+      "pair_index": 1,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 3,
+      "attempt_id": "T03-R4-r2-S",
+      "case_id": "R4",
+      "repeat": 2,
+      "arm": "S",
+      "pair_index": 2,
+      "within_pair": 1,
+      "cap_seconds": 1500,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 4,
+      "attempt_id": "T04-R4-r2-C",
+      "case_id": "R4",
+      "repeat": 2,
+      "arm": "C",
+      "pair_index": 2,
+      "within_pair": 2,
+      "cap_seconds": 1500,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 5,
+      "attempt_id": "T05-R2-r3-C",
+      "case_id": "R2",
+      "repeat": 3,
+      "arm": "C",
+      "pair_index": 3,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 6,
+      "attempt_id": "T06-R2-r3-S",
+      "case_id": "R2",
+      "repeat": 3,
+      "arm": "S",
+      "pair_index": 3,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 7,
+      "attempt_id": "T07-R1-r3-C",
+      "case_id": "R1",
+      "repeat": 3,
+      "arm": "C",
+      "pair_index": 4,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 8,
+      "attempt_id": "T08-R1-r3-S",
+      "case_id": "R1",
+      "repeat": 3,
+      "arm": "S",
+      "pair_index": 4,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 9,
+      "attempt_id": "T09-R1-r1-C",
+      "case_id": "R1",
+      "repeat": 1,
+      "arm": "C",
+      "pair_index": 5,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 10,
+      "attempt_id": "T10-R1-r1-S",
+      "case_id": "R1",
+      "repeat": 1,
+      "arm": "S",
+      "pair_index": 5,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 11,
+      "attempt_id": "T11-R4-r3-C",
+      "case_id": "R4",
+      "repeat": 3,
+      "arm": "C",
+      "pair_index": 6,
+      "within_pair": 1,
+      "cap_seconds": 1500,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 12,
+      "attempt_id": "T12-R4-r3-S",
+      "case_id": "R4",
+      "repeat": 3,
+      "arm": "S",
+      "pair_index": 6,
+      "within_pair": 2,
+      "cap_seconds": 1500,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 13,
+      "attempt_id": "T13-R2-r1-S",
+      "case_id": "R2",
+      "repeat": 1,
+      "arm": "S",
+      "pair_index": 7,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 14,
+      "attempt_id": "T14-R2-r1-C",
+      "case_id": "R2",
+      "repeat": 1,
+      "arm": "C",
+      "pair_index": 7,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 15,
+      "attempt_id": "T15-R3-r2-C",
+      "case_id": "R3",
+      "repeat": 2,
+      "arm": "C",
+      "pair_index": 8,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 16,
+      "attempt_id": "T16-R3-r2-S",
+      "case_id": "R3",
+      "repeat": 2,
+      "arm": "S",
+      "pair_index": 8,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 17,
+      "attempt_id": "T17-R2-r2-S",
+      "case_id": "R2",
+      "repeat": 2,
+      "arm": "S",
+      "pair_index": 9,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 18,
+      "attempt_id": "T18-R2-r2-C",
+      "case_id": "R2",
+      "repeat": 2,
+      "arm": "C",
+      "pair_index": 9,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 19,
+      "attempt_id": "T19-R1-r2-S",
+      "case_id": "R1",
+      "repeat": 2,
+      "arm": "S",
+      "pair_index": 10,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 20,
+      "attempt_id": "T20-R1-r2-C",
+      "case_id": "R1",
+      "repeat": 2,
+      "arm": "C",
+      "pair_index": 10,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 21,
+      "attempt_id": "T21-R4-r1-S",
+      "case_id": "R4",
+      "repeat": 1,
+      "arm": "S",
+      "pair_index": 11,
+      "within_pair": 1,
+      "cap_seconds": 1500,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 22,
+      "attempt_id": "T22-R4-r1-C",
+      "case_id": "R4",
+      "repeat": 1,
+      "arm": "C",
+      "pair_index": 11,
+      "within_pair": 2,
+      "cap_seconds": 1500,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 23,
+      "attempt_id": "T23-R3-r3-C",
+      "case_id": "R3",
+      "repeat": 3,
+      "arm": "C",
+      "pair_index": 12,
+      "within_pair": 1,
+      "cap_seconds": 900,
+      "status": "planned"
+    },
+    {
+      "dispatch_index": 24,
+      "attempt_id": "T24-R3-r3-S",
+      "case_id": "R3",
+      "repeat": 3,
+      "arm": "S",
+      "pair_index": 12,
+      "within_pair": 2,
+      "cap_seconds": 900,
+      "status": "planned"
+    }
+  ]
+}

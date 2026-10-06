@@ -1,0 +1,272 @@
+{
+  "case_id": "R1",
+  "test_type": "author-owned unit and deliberately defective-control calibration; not model trials",
+  "tests_passed": 32,
+  "tests": [
+    {
+      "test": "reference_objective_only",
+      "passed": true
+    },
+    {
+      "test": "omit_claim",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-01"
+        ]
+      }
+    },
+    {
+      "test": "boolean_cents",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-02"
+        ]
+      }
+    },
+    {
+      "test": "wrong_refund_status",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-03"
+        ]
+      }
+    },
+    {
+      "test": "include_alcohol",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-04"
+        ]
+      }
+    },
+    {
+      "test": "use_posting_date_policy",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-05"
+        ]
+      }
+    },
+    {
+      "test": "double_count_deposit",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-06"
+        ]
+      }
+    },
+    {
+      "test": "ignore_settled_refund",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-07"
+        ]
+      }
+    },
+    {
+      "test": "pay_company_card",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-08"
+        ]
+      }
+    },
+    {
+      "test": "invent_cash_fx",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-09"
+        ]
+      }
+    },
+    {
+      "test": "wrong_payable_total",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-10"
+        ]
+      }
+    },
+    {
+      "test": "invent_evidence",
+      "passed": true,
+      "details": {
+        "detected": [
+          "R1-11"
+        ]
+      }
+    },
+    {
+      "test": "equivalent_order_and_additional_fields",
+      "passed": true
+    },
+    {
+      "test": "false_prose_semantics_remain_unknown",
+      "passed": true
+    },
+    {
+      "test": "missing_artifacts",
+      "passed": true
+    },
+    {
+      "test": "duplicate_json_keys",
+      "passed": true
+    },
+    {
+      "test": "oversized_json",
+      "passed": true
+    },
+    {
+      "test": "oversized_prose",
+      "passed": true
+    },
+    {
+      "test": "artifact_symlink",
+      "passed": true
+    },
+    {
+      "test": "directory_symlink",
+      "passed": true
+    },
+    {
+      "test": "artifact_hardlink",
+      "passed": true
+    },
+    {
+      "test": "fifo_rejected_without_blocking",
+      "passed": true
+    },
+    {
+      "test": "nonfinite_json",
+      "passed": true
+    },
+    {
+      "test": "submitted_code_never_executed",
+      "passed": true
+    },
+    {
+      "test": "one_review_remains_unknown",
+      "passed": true
+    },
+    {
+      "test": "same_reviewer_rejected",
+      "passed": true
+    },
+    {
+      "test": "review_hash_mismatch_rejected",
+      "passed": true
+    },
+    {
+      "test": "review_disagreement_stays_unknown",
+      "passed": true
+    },
+    {
+      "test": "two_matching_reviews_plumbing",
+      "passed": true
+    },
+    {
+      "test": "post_review_mutation_invalidates_review",
+      "passed": true
+    },
+    {
+      "test": "independent_30_line_reimbursement_vector",
+      "passed": true
+    },
+    {
+      "test": "independent_money_total",
+      "passed": true
+    }
+  ],
+  "semantic_content_validation": "NOT PERFORMED: genuine semantic judgments remain unknown until two independent masked AI reviews",
+  "objective_controls": 11,
+  "semantic_controls_authored": 1,
+  "reference_objective_result": {
+    "case_id": "R1",
+    "synthetic": true,
+    "objective": {
+      "passed": 11,
+      "failed": 0,
+      "total": 11
+    },
+    "semantic": {
+      "passed": 0,
+      "failed": 0,
+      "unknown": 3,
+      "total": 3
+    },
+    "checks": {
+      "R1-01": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-02": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-03": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-04": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-05": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-06": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-07": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-08": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-09": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-10": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-11": {
+        "status": "pass",
+        "reason": "All required facts agree"
+      },
+      "R1-12": {
+        "status": "unknown",
+        "reason": "Two independent masked reviews have not been supplied"
+      },
+      "R1-13": {
+        "status": "unknown",
+        "reason": "Two independent masked reviews have not been supplied"
+      },
+      "R1-14": {
+        "status": "unknown",
+        "reason": "Two independent masked reviews have not been supplied"
+      }
+    },
+    "artifact_errors": [],
+    "artifact_sha256": {
+      "reconciliation.json": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3",
+      "review_notes.txt": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300"
+    },
+    "not_candidate_execution": true
+  }
+}

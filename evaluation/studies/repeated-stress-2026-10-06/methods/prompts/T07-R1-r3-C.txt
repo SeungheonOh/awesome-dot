@@ -1,0 +1,45 @@
+Attempt T07-R1-r3-C
+Packet root: <assigned-packet-root>
+Time cap: 900 seconds from controller dispatch intent.
+
+You are completing one offline work task. Produce the requested deliverables accurately, preserve the supplied evidence and supported behavior, and make uncertainty and verification limits clear. Work independently using the task and files supplied to this attempt. You may inspect, calculate, implement, and self-check your work before your first final submission. Use the time available for the actual task, not for reporting progress.
+
+This is an openly synthetic task. All names, organizations, records, and systems are fictional. Do not use live accounts or retrieve real user data. No external messages, network access, package installations, new permissions, or changes to settings are authorized.
+
+The exact attempt prompt is outside your packet. Reading that one named prompt file at startup is an explicit initial-read exception. After reading it, use only your assigned packet root for task content and task artifacts. Do not read parent or sibling directories, other attempts, rubrics, graders, author references, outcome ledgers, prior study outputs, repository copies, memory, or other task sources. Do not delegate, ask another agent for task help, or discover connector/web data. Normal runtime binaries and standard-library modules may be used to perform local work; this does not authorize inspecting unrelated filesystem content. These are instruction-level boundaries, not a claim of operating-system isolation.
+
+Leave TASK.md, inputs/, LICENSE, and any supplied skill/ files unchanged. Put only final deliverables under output/. Put scratch files, copied fixtures, generated caches, and temporary test outputs under tmp/. Set TMPDIR to your packet's tmp/ and PYTHONDONTWRITEBYTECODE=1 for Python commands. Do not leave symlinks or hardlinks in deliverables. Use only files within this packet as application data. Do not create or remove files elsewhere.
+
+You may run bounded local checks using available tools and the standard library. Before executing supplied or generated code, inspect its exact source and dependencies and verify that it stays within this packet, uses no network or credentials, invokes no uninspected code, and makes only task-authorized writes under output/ or tmp/. Work on copies under tmp/ when a check could modify inputs. Do not execute code whose effects you cannot establish; report that limit. This permission does not bypass any higher-priority safety requirement or tool denial. Distinguish checks actually run from checks merely proposed.
+
+No further task facts, grader feedback, or correctness hints will be supplied. If an ambiguity remains, preserve the uncertainty and complete unaffected work. If a permission or tool restriction blocks a dependent step, report the exact action and blocker without seeking an alternate route around it. A fixed reply to any clarification request will be: "No additional task facts are available. Use the supplied evidence, preserve material uncertainty, and complete the unaffected work within the stated authority."
+
+Return a concise final submission identifying the files saved under output/, the checks you actually ran, and any unresolved material limitation. That first final response is your submitted attempt. Do not continue editing after final submission.
+
+Complete task (identical bytes also available in TASK.md):
+
+Fictional offline task: reconcile a September travel expense packet
+
+This entire packet describes invented people, vendors, and transactions. It is a synthetic work sample, not customer data. You are preparing Maya Chen's reimbursement handoff for Northstar Learning Lab as of 2026-09-30 17:00 UTC. Nothing may be sent, paid, or edited outside this assigned packet.
+
+Reconcile all 30 submitted claims using the claims, itemized receipts, settled/pending statement entries, policies, and approval correspondence in inputs/. Use the policy in force on the service date, and honor specific written exceptions. Link deposit/final bill pairs and refunds, avoid duplicate reimbursement, separate company-paid costs, and leave genuinely unsupported cases unresolved. Do not invent rates, approvals, attendees, or replacement receipts. Later information is outside the cutoff.
+
+Create output/reconciliation.json and output/review_notes.txt. You may inspect the supplied files and write/run your own bounded local code in tmp/; use integer cents or Decimal arithmetic for money, never binary floating point. No network, credentials, package installation, or external writes are needed or authorized.
+
+The JSON has two top-level keys: claims (one row per C001–C030, any order) and totals. Each claim row must include:
+- claim_id; disposition (reimbursable, partial, hold, duplicate, corporate_paid, refunded, or ineligible)
+- approved_usd_cents: supported business cost after credits, before deducting company payment; 0 for a known-USD hold, duplicate, or ineligible claim; null only when a foreign-currency hold cannot be valued in USD
+- reimbursement_usd_cents: amount payable to Maya now; holds, company-paid expenses, duplicates, refunded claims and ineligible claims pay 0
+- excluded_usd_cents: portion of the claimed/settled gross cost disallowed by policy, personal use, or an overstated estimate; do not count a refund, duplicate, company payment, or unresolved hold as an exclusion; null only for the unvalued foreign hold
+- held_usd_cents: claimed USD amount requiring more evidence, or null when the hold cannot be valued in USD; 0 for resolved claims
+- credit_usd_cents: settled credit offset against this claim, always a nonnegative integer
+- duplicate_of: canonical claim ID or null
+- evidence_ids: source record IDs that support the decision; note: a concise explanation
+
+For a charge with credits, reimbursement cannot be negative. Allocate an applied hotel deposit to its separately submitted deposit claim, and allocate only the remaining final bill to the final-bill claim. Use the net-of-deposit amount for all final-bill monetary fields. For a stale estimate with a supported lower final amount, exclude the overstatement rather than placing it on hold. Duplicate claim C007 is a duplicate of the earlier submitted C001, regardless of the file order. A fully refunded claim has disposition refunded; a partially refunded claim with a remaining payable amount is partial. A corporate-paid claim keeps its supported approved business cost but pays Maya zero. A known-USD hold has approved amount zero and the original claimed USD amount held. Do not invent a USD amount for the EUR cash taxi.
+
+Totals must contain reimbursement_usd_cents, approved_usd_cents, excluded_usd_cents, held_usd_cents, credit_usd_cents, corporate_paid_usd_cents, and unvalued_holds. Sum the first five numeric fields across claim rows, ignoring nulls only where explicitly allowed. Corporate-paid total is approved cost on company-paid claims. unvalued_holds is a list of objects with claim_id, currency, and original_amount (a decimal string).
+
+The handoff notes should be concise but usable by finance: state the cutoff and payable/held position, explain the material policy/FX/deposit/refund/duplicate/company-card adjustments, and list each unresolved issue with the missing evidence and a practical next step or responsible party. Distinguish confirmed findings from unknowns. No exact wording or ordering is required, and additional useful fields are allowed.
+
+Acceptance covers complete claim coverage and integer-cent structure; correct dispositions; meal, transport/FX, hotel/deposit, refund, duplicate/company-paid/other-cost calculations; properly held uncertainties; totals; source-grounded provenance; and the accuracy, completeness, and usefulness of the written handoff. All acceptance requirements are stated here and in the governing sources.
