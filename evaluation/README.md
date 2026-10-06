@@ -1,29 +1,61 @@
 # Evaluation
 
-**Two distinct records:** 180 authored fixture tests check the evaluation machinery, and a [separate native-cloud study](results/native-cloud-2026-10-06/README.md) records 16 actual attempts on eight fictional cases. The originally planned sealed CodexCLI pilot has not run. The native study does not establish human time savings or productivity.
+Saved task outputs, requirement-level evidence, and local checks for this repository. The two completed studies found no difference on their predeclared primary artifact checks. They do not establish general equivalence or productivity gains.
 
-- [Methodology](docs/methodology.md): question, comparison, measures, and limits
-- [Protocol](docs/protocol.md): fixed task setup, timing, grading, and prerequisites
-- [Cases](cases/README.md): eight fictional tasks and their inputs
-- [Pinned packages](packages/README.md): exact treatment files and provenance
-- [Harness](harness/README.md): no-install commands and implementation
-- [Evaluator fixtures](evaluators/README.md): answer keys, controls, and tests
-- [Results and status](results/README.md): what has and has not been measured
+## Latest result
 
-## Check it locally
+- Date: 2026-10-06
+- Runtime: native cloud agents; exact serving model/build not exposed
+- Cases: 4 authored synthetic workflows
+- Runs: 24 first submissions, with 3 repeats per case and condition
 
-From the repository root, with POSIX Python 3.12:
+With skill (S) received the task packet plus its pinned designated package. Baseline (C) received the same task packet without that package. Ambient instructions or skills could be present in both; baseline does not mean skill-free.
+
+| Metric | With skill | Baseline | Delta (S − C) |
+| --- | ---: | ---: | ---: |
+| Requirements passed / scheduled | 159/159 | 159/159 | 0 |
+| Submissions meeting all requirements | 12/12 | 12/12 | 0 |
+| Equal-case mean verified fraction | 100% | 100% | 0 pp |
+
+All 12 case/repeat pairs tied. The 53 distinct requirements produced 318 scheduled instances across both conditions, with no failed or unassessed instances. These are artifact checks on four cases, not 12 independently sampled tasks. Always-pass requirements did not distinguish the conditions in this study.
+
+[Full report](studies/repeated-stress-2026-10-06/README.md) · [Tasks and assertions](studies/repeated-stress-2026-10-06/cases/README.md) · [Every submission](studies/repeated-stress-2026-10-06/results/README.md) · [Saved grading evidence](studies/repeated-stress-2026-10-06/evidence/README.md)
+
+## What these results support
+
+They describe the saved artifacts against the declared requirements. Both studies used shared filesystems with procedural boundaries; isolation and complete process integrity were not verified. Semantic ratings are AI-assisted, not human evaluation. Exact model identity, token use, provider cost, and comparable compute time remain unknown. Recorded observation intervals cannot establish speedups.
+
+The [earlier eight-case study](results/native-cloud-2026-10-06/README.md) contains 16 submissions and 40/40 primary criterion groups per condition. Its separate post-hoc save failure remains documented. Its scores are not pooled with the latest study. See the [complete results index](results/README.md).
+
+## Reproduce the saved accounting
+
+From the repository root, using POSIX Python 3.12:
 
 ```sh
+python -I -B evaluation/studies/repeated-stress-2026-10-06/reproduce_saved_evidence.py
+python -B evaluation/results/native-cloud-2026-10-06/score.py
 python -B evaluation/check.py
 ```
 
-This runs source-integrity checks, documentation-link checks, 61 harness tests, and 119 case/grader tests. It uses only the standard library and local authored fixtures. It makes no model calls, installs nothing, and does not execute bundled skill helpers. [More targeted commands](harness/README.md#commands) are available.
+- The first command verifies the repeated study's published hashes, saved requirement outcomes, review agreements, and pair/summary arithmetic.
+- The second verifies the earlier study's evidence bindings and recomputes its saved-rating counts.
+- The third runs source/link checks and 180 authored fixture tests: 61 harness and 119 case/grader tests. It does not invoke either study verifier.
+
+The native result tables are derived from the saved JSON with a separate read-only [report tool](report.py). Check that the tables, condition labels, and required caveats have not drifted, then run its regression tests:
+
+```sh
+python -I -B evaluation/report.py --check
+python -B -m unittest discover -s evaluation -p test_report.py -v
+```
+
+Running `python -I -B evaluation/report.py` without `--check` prints the current tables; it does not rewrite reports or evidence.
+
+These commands make no model calls. The saved-evidence commands do not execute submitted code or perform a fresh semantic review. Fixture checks test evaluation machinery; their passes are not agent outcomes.
 
 ## Original sealed-pilot scope
 
-The planned pilot has eight cases and one matched control/skill pair per case: 16 attempts. Both arms receive the same competent instruction, inputs, tools, and time cap. The skill arm additionally receives its exact designated package, pinned to [commit 67bb5a82](https://github.com/SeungheonOh/dot-skills/tree/67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56). The 19 pinned files include guides, examples, and helpers; this is a package-supplied comparison.
+The [original sealed protocol](docs/protocol.md) is a separate, unrun design. Its [harness](harness/README.md) has no live launcher; live dispatch remains disabled. The [runtime and review gates](docs/protocol.md#before-model-trials) still need to be met before any sealed model trial.
 
-These are public, inspectable benchmark fixtures, including public answers. They are not a permanently held-out dataset. A valid attempt must still have a fresh context and verified access boundaries. New generalization claims require independently authored cases and a new protocol version.
+Do not mount this repository as an evaluated agent's workspace: it contains public answers and scoring sources. Fresh contexts and verified access boundaries are required; directory separation is not a sandbox.
 
-**Do not mount this repository as an evaluated agent's workspace.** The agent must receive only its case allowlist and, for the skill arm, the designated package files. Directory separation is not a sandbox. Live dispatch is disabled, and the remaining [runtime and review gates](docs/protocol.md#before-model-trials) must be resolved before that sealed pilot. The separate native-cloud study reports its weaker instruction-only boundaries explicitly.
+[Methodology](docs/methodology.md) · [Original cases](cases/README.md) · [Pinned packages](packages/README.md) · [Evaluator fixtures](evaluators/README.md)

@@ -1,57 +1,66 @@
-# Four workflows. Twenty-four first submissions.
+# Repeated stress evaluation
 
-A repeated offline stress study of task-specific Markdown guides, run on 2026-10-06.
+- Date: 2026-10-06
+- Runtime: native cloud agents; exact serving model/build not exposed
+- Cases: 4 authored synthetic workflows
+- Runs: 24 first submissions, with 3 repeats per case and condition
 
-[See every attempt](results/README.md) · [Inspect the tasks](cases/README.md) · [Read the methods](methods/README.md) · [Verify the saved evidence](reproduce_saved_evidence.py)
+With skill (S) received the task packet plus its pinned designated package. Baseline (C) received the same task packet without that package. Baseline was not skill-free: ambient instructions or skills could be present in both. Filesystem boundaries and review masking were procedural.
 
 ## What happened
 
-Both conditions met every predeclared artifact requirement on all three repeats of all four synthetic cases. We did not observe a difference on the primary checks. The repeated workload still reached the scoring ceiling; that is a limitation of this comparison, not evidence of general equivalence.
+Both conditions passed every predeclared artifact requirement. All 12 case/repeat pairs tied; no primary-check benefit was observed. The scoring ceiling limits this comparison and does not establish general equivalence.
 
-<picture>
-  <source media="(max-width: 600px)" srcset="../../../.github/assets/repeated-stress-runs-mobile.svg">
-  <img src="../../../.github/assets/repeated-stress-runs.svg" width="1280" alt="All 24 native-agent attempts across four synthetic workflows, three repeats per condition. C received no designated package; S received its designated package. Every R1 and R2 attempt passed 14 scheduled requirements, every R3 attempt passed 12, and every R4 attempt passed 13. All 12 pairs tie, with zero failed or not-assessed requirements. Four authored cases, not 12 independent task samples. Shared runtime; C was not skill-free; process integrity unknown.">
-</picture>
+| Case | With skill | Baseline | Delta (S − C) |
+| --- | ---: | ---: | ---: |
+| [R1 · Expense reconciliation](cases/R1/candidate/TASK.md) | 42/42 | 42/42 | 0 |
+| [R2 · Dated action handoff](cases/R2/candidate/TASK.md) | 42/42 | 42/42 | 0 |
+| [R3 · SQL report reconciliation](cases/R3/candidate/TASK.md) | 36/36 | 36/36 | 0 |
+| [R4 · Merge consumer maintenance](cases/R4/candidate/TASK.md) | 39/39 | 39/39 | 0 |
+| Total scheduled requirement instances | 159/159 | 159/159 | 0 |
 
-C received the task packet without the designated package. S received the same packet plus the pinned package. C was not a skill-free baseline. All boundaries were procedural in a shared cloud filesystem.
+Counts sum all three repeats per condition. Each R1/R2 submission passed 14/14 requirements, R3 passed 12/12, and R4 passed 13/13. There were 53 distinct requirements and 318 scheduled instances overall, with zero failed or not assessed. Each condition had 12/12 submissions meeting all criteria and a predeclared equal-case mean verified fraction of 100%.
 
-| Workflow | Requirements per attempt | C repeats 1 / 2 / 3 | S repeats 1 / 2 / 3 | All criteria met, C / S |
-|---|---:|---|---|---|
-| Expense reconciliation | 14 | 14/14 · 14/14 · 14/14 | 14/14 · 14/14 · 14/14 | 3/3 · 3/3 |
-| Dated action handoff | 14 | 14/14 · 14/14 · 14/14 | 14/14 · 14/14 · 14/14 | 3/3 · 3/3 |
-| SQL report reconciliation | 12 | 12/12 · 12/12 · 12/12 | 12/12 · 12/12 · 12/12 | 3/3 · 3/3 |
-| Merge and persistence maintenance | 13 | 13/13 · 13/13 · 13/13 | 13/13 · 13/13 · 13/13 | 3/3 · 3/3 |
-
-The raw totals are 159 of 159 scheduled requirement instances per condition, with zero failed or not assessed. There are 53 distinct requirements and 318 scheduled instances overall. All 12 paired pass-count differences are zero; each case's three-repeat difference is also zero. The predeclared equal-case mean verified fraction is 1.0 in each condition. These are descriptive artifact counts on four authored cases, not interchangeable measures of general quality or 12 independently sampled tasks.
+These are four authored cases, not 12 independently sampled tasks. Requirements are not interchangeable units of general quality. Always-pass requirements did not distinguish the conditions in this study. [Every repeat](results/README.md) and [all paired differences](results/pairs.json) are retained.
 
 ## What the evidence covers
 
-<picture>
-  <source media="(max-width: 600px)" srcset="../../../.github/assets/repeated-stress-coverage-mobile.svg">
-  <img src="../../../.github/assets/repeated-stress-coverage.svg" width="1280" alt="Distinct requirements by synthetic workflow: R1 expense reconciliation and R2 dated action handoff each have 11 mechanical and 3 AI-semantic requirements; R3 SQL report reconciliation has 12 mechanical requirements; R4 merge consumer maintenance has 13 behavioral requirements. Each requirement was assessed on three repetitions in each condition. Semantic judgments are AI ratings, not human evaluation.">
-</picture>
+| Evidence type | Passed / scheduled, both conditions | Basis |
+| --- | ---: | --- |
+| Mechanical | 204/204 | Frozen R1/R2 data checks and R3 SQL checks |
+| AI-assisted semantic | 36/36 | Two masked reviews per R1/R2 submission |
+| Behavioral | 78/78 | Reviewed, approved R4 probe executions |
 
-The 36 semantic instances received two distinct AI-assisted masked reviews each: 24 reviews and 72 initial votes, with no disagreement. R4's 78 behavioral instances came from reviewed and approved bounded executions of the unchanged frozen probe. Candidate notes do not independently verify their own test claims. [Inspect saved reports and reviews](evidence/README.md).
+The 36 semantic instances received 24 reviews and 72 initial votes, with no disagreement. These are AI ratings, not human evaluation; masking and independence were procedural. R4 used the unchanged frozen probe in bounded executions. Candidate notes do not independently verify their own test claims. [Inspect the reports and review rationales](evidence/README.md).
 
-Artifact coverage does not verify process acceptance. Exact serving model/build, tokens, provider cost, comparable compute time, isolation and complete access histories remain unknown. No population effect, significance, time saving, cost saving or full-dot efficacy claim follows from this study.
+Artifact coverage does not verify process acceptance. Shared-filesystem isolation, complete access histories, and process integrity remain unknown. Exact serving model/build, tokens, provider cost, and comparable compute time were not exposed. No population effect, significance, time saving, cost saving, productivity gain, or full-dot efficacy claim follows.
 
 ## Example artifacts
 
-<picture>
-  <source media="(max-width: 600px)" srcset="../../../.github/assets/repeated-stress-evidence-mobile.svg">
-  <img src="../../../.github/assets/repeated-stress-evidence.svg" width="1280" alt="Selected saved JSON fields from synthetic workflows. R1 source T07-R1-r3-C shows USD 2,142.65 payable, USD 252.90 held and a separate unvalued EUR 24.00 hold; C007 is a duplicate of C001 with zero reimbursement, and C026 has null USD values. R2 source T05-R2-r3-C shows 18 active actions, 4 of them overdue, 12 done and 4 cancelled; A21 is unresolved and A30 has a null due date. Both displayed sources are C, no designated package. Shown fields and summary values match all three C and three S artifacts within each case. Reformatted excerpts, not screenshots.">
-</picture>
+No failing criterion was observed. The predeclared fallback selected representative verified outputs by case and dispatch order. Both examples are baseline submissions because that selection rule reaches them first; they are not examples of skill uplift.
 
-No failing criterion was observed. The predeclared fallback uses representative verified outputs, selected by case and dispatch order: [T07 expense reconciliation](artifacts/T07-R1-r3-C/reconciliation.json) and [T05 action register](artifacts/T05-R2-r3-C/action_register.json). Both are C submissions because the fixed selection rule reaches them first. They are saved-file excerpts, not screenshots or guide-benefit examples. The saved [expense totals](artifacts/T07-R1-r3-C/reconciliation.json#L590-L604) and [action totals](artifacts/T05-R2-r3-C/action_register.json#L419-L429) ground the summaries. Inspect the paired S outputs for [R1](artifacts/T08-R1-r3-S/reconciliation.json) and [R2](artifacts/T06-R2-r3-S/action_register.json); the displayed business fields match all six attempts within each case, without claiming whole-file identity. [All 45 original files remain available](artifacts/).
+- R1: [baseline reconciliation](artifacts/T07-R1-r3-C/reconciliation.json) and [paired skill reconciliation](artifacts/T08-R1-r3-S/reconciliation.json). The baseline's [totals](artifacts/T07-R1-r3-C/reconciliation.json#L590-L604) show USD 2,142.65 payable, USD 252.90 held, and a separate unvalued EUR 24.00 hold. Inspect the [duplicate claim](artifacts/T07-R1-r3-C/reconciliation.json#L117-L134) and [unvalued hold](artifacts/T07-R1-r3-C/reconciliation.json#L493-L510).
+- R2: [baseline action register](artifacts/T05-R2-r3-C/action_register.json) and [paired skill register](artifacts/T06-R2-r3-S/action_register.json). The baseline's [totals](artifacts/T05-R2-r3-C/action_register.json#L419-L429) show 18 active actions, including 4 overdue, plus 12 done and 4 cancelled. Inspect the [unresolved action](artifacts/T05-R2-r3-C/action_register.json#L246-L256) and [missing due date](artifacts/T05-R2-r3-C/action_register.json#L354-L364).
+
+The cited business fields match all six outputs within each case; this does not claim whole-file identity. [All 45 original artifact files](artifacts/) remain available.
 
 ## Inspect or reproduce
 
-- [24-row readable ledger](results/README.md), [per-requirement JSON](results/attempts.json), [all raw pairs](results/pairs.json), [summary](results/summary.json)
-- [Frozen tasks, inputs, rubrics and scoring sources](cases/README.md), [pinned guides](guides/README.md), [source provenance](provenance/source-bindings.json)
-- [Methods and operational caveats](methods/README.md): post-start bootstrap change, approximate controller timing, T24 logging disconnect and R4 flattened-input lookup
-- [Deterministic graphic renderer](../../visualization/render_repeated_stress.py) and [exact visual provenance](results/visual-provenance.json); from the repository root run `python -B evaluation/visualization/render_repeated_stress.py --check`
-- [Safe saved-evidence reproducer](reproduce_saved_evidence.py): run `python -I -B reproduce_saved_evidence.py` from this directory; reads and hashes only, with no candidate or model execution
+- [Tasks, inputs, assertions, and scoring sources](cases/README.md)
+- [Pinned guides](guides/README.md) and [source provenance](provenance/source-bindings.json)
+- [24-row results ledger](results/README.md), [per-requirement outcomes](results/attempts.json), and [machine-readable summary](results/summary.json)
+- [Methods and operational caveats](methods/README.md), including the bootstrap change, approximate controller timing, T24 logging disconnect, and R4 flattened-input lookup
+
+From the repository root, using Python 3.12:
+
+```sh
+python -I -B evaluation/studies/repeated-stress-2026-10-06/reproduce_saved_evidence.py
+```
+
+The [saved-evidence verifier](reproduce_saved_evidence.py) reads JSON and hashes, checks evidence bindings, and recomputes the counts. It makes no model calls, executes no submitted code or SQL, writes nothing, and performs no fresh semantic review. This reproduces saved accounting, not the original agent runs.
 
 ## Historical context
 
-The [earlier eight-case native-cloud study](../../results/native-cloud-2026-10-06/README.md) is preserved unchanged, including its two 40/40 primary scores and separately labeled post-hoc finding. Its files and denominators are not pooled with this study. The [original evaluation protocol](../../README.md) remains a distinct, unrun sealed design.
+The [earlier eight-case study](../../results/native-cloud-2026-10-06/README.md) retains its separate 40/40 primary scores per condition and post-hoc finding. Its denominators are not pooled here. The [original sealed protocol](../../docs/protocol.md) remains unrun.
+
+Prior [visual provenance](results/visual-provenance.json), [graphic renderer](../../visualization/render_repeated_stress.py), and asset files are retained for the publication record. The [evaluation index](../../README.md) lists current reports and checks.
