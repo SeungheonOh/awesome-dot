@@ -30,16 +30,14 @@ Try: “Use the task router for this task: [describe the result you need]. I hav
 
 <picture>
   <source media="(max-width: 600px)" srcset=".github/assets/native-results-mobile.svg">
-  <img src=".github/assets/native-results.svg" width="1280" alt="Native-cloud study, 6 October 2026: 16 actual attempts across eight paired fictional tasks. No designated package (C) and designated package supplied (S) each passed 40/40 primary artifact-criterion groups and met primary checks on 8/8 artifacts: a ceiling tie, with a 0 percentage-point pass-rate difference. Process integrity is unverified. A separate post-hoc Unicode save check passed in C and failed in S; it does not change primary scores.">
+  <img src=".github/assets/native-results.svg" width="1280" alt="Saved-file excerpts, not screenshots: F6 baseline C and package-supplied S saved identical SQL-report CSVs with phone gross and net left NULL. A separate post-hoc F8 Unicode save/reload check passed in C and failed with UnicodeEncodeError in S. Across 16 actual native-agent runs on eight paired fictional tasks, C and S each passed 40/40 primary artifact-criterion groups and 8/8 artifacts: a ceiling tie, with a 0 percentage-point difference. The post-hoc finding does not change primary scores. Process integrity is unverified.">
 </picture>
 
-**No measured uplift:** both arms reached the primary-score ceiling on this small suite.
+**Inspect the saved evidence:** F6 CSVs [C](evaluation/results/native-cloud-2026-10-06/artifacts/N09-F6-C/result.csv) / [S](evaluation/results/native-cloud-2026-10-06/artifacts/N10-F6-S/result.csv) · SQL [C](evaluation/results/native-cloud-2026-10-06/artifacts/N09-F6-C/report.sql) / [S](evaluation/results/native-cloud-2026-10-06/artifacts/N10-F6-S/report.sql) · [F8 diagnostic record](evaluation/results/native-cloud-2026-10-06/f8/execution-results.json) and [scope](evaluation/results/native-cloud-2026-10-06/f8/README.md)
 
-**[Post-hoc Unicode check →](evaluation/results/native-cloud-2026-10-06/f8/README.md)** C preserved lone-surrogate text through save/reload; S failed with UnicodeEncodeError. This separate diagnostic does not change primary scores.
+**No measured primary-score uplift.** C received no designated package; S received the designated package. These actual runs used authored fictional tasks, a shared runtime, and instruction-only separation. C was not skill-free; process integrity is unverified. No time, cost, or productivity gain established.
 
-Exploratory native-agent study with a shared runtime and instruction-only separation; C was not skill-free. No time, cost, or productivity gain established.
-
-[Read the study and exact artifacts →](evaluation/results/native-cloud-2026-10-06/README.md) · [Paired data](evaluation/results/native-cloud-2026-10-06/paired-summary.json) · [Reproduce the graphic](evaluation/visualization/render_native_results.py) · [Evaluation protocol](evaluation/README.md)
+[Read the study →](evaluation/results/native-cloud-2026-10-06/README.md) · [All 16 attempts](evaluation/results/native-cloud-2026-10-06/attempts.json) · [Exact artifacts](evaluation/results/native-cloud-2026-10-06/artifacts/) · [Paired data](evaluation/results/native-cloud-2026-10-06/paired-summary.json) · [Reproduce the graphic](evaluation/visualization/render_native_results.py) · [Evaluation protocol](evaluation/README.md)
 
 ## What AI research has measured
 
