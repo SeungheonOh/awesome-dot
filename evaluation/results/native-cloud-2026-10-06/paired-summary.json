@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "outcome_scope": "artifact criterion groups only",
+  "scheduled_cases": 8,
+  "scheduled_attempts": 16,
+  "first_submissions": 16,
+  "rows": [
+    {
+      "case_id": "F1",
+      "C": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S_minus_C_passed_groups": 0,
+      "paired_outcome": "tie"
+    },
+    {
+      "case_id": "F2",
+      "C": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S_minus_C_passed_groups": 0,
+      "paired_outcome": "tie"
+    },
+    {
+      "case_id": "F3",
+      "C": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S_minus_C_passed_groups": 0,
+      "paired_outcome": "tie"
+    },
+    {
+      "case_id": "F4",
+      "C": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S_minus_C_passed_groups": 0,
+      "paired_outcome": "tie"
+    },
+    {
+      "case_id": "F5",
+      "C": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S_minus_C_passed_groups": 0,
+      "paired_outcome": "tie"
+    },
+    {
+      "case_id": "F6",
+      "C": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S_minus_C_passed_groups": 0,
+      "paired_outcome": "tie"
+    },
+    {
+      "case_id": "F7",
+      "C": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S_minus_C_passed_groups": 0,
+      "paired_outcome": "tie"
+    },
+    {
+      "case_id": "F8",
+      "C": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S": {
+        "passed": 5,
+        "failed": 0,
+        "unknown": 0,
+        "total": 5
+      },
+      "S_minus_C_passed_groups": 0,
+      "paired_outcome": "tie"
+    }
+  ],
+  "C": {
+    "passed": 40,
+    "failed": 0,
+    "unknown": 0,
+    "total": 40
+  },
+  "S": {
+    "passed": 40,
+    "failed": 0,
+    "unknown": 0,
+    "total": 40
+  },
+  "paired_outcomes": {
+    "S_win": 0,
+    "tie": 8,
+    "S_loss": 0,
+    "unresolved": 0
+  },
+  "overall_acceptance": null,
+  "process_integrity": null,
+  "interpretation": "Descriptive results on eight authored cases. No population inference, human-productivity estimate, or speed-saving claim."
+}
