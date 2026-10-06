@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="832" viewBox="0 0 600 832" role="img" aria-labelledby="title desc">
+<title id="title">Native-cloud study: no measured primary-criterion uplift</title>
+<desc id="desc">16 actual native-agent first submissions on 8 paired fictional cases. C received no designated package; S received the designated package. Both passed 40/40 primary artifact-criterion groups and 8/8 artifacts. 0 percentage-point pass-rate difference. Ceiling tie; no demonstrated uplift. Shared ambient runtime; C was not skill-free. Process integrity unverified. A separate post-hoc F8 Unicode save/reload check passed in C and failed with UnicodeEncodeError in S; it does not alter primary scores. No productivity claim.</desc>
+<metadata>{&quot;renderer&quot;: &quot;evaluation/visualization/render_native_results.py&quot;, &quot;source_sha256&quot;: {&quot;evaluation/results/native-cloud-2026-10-06/f8/execution-results.json&quot;: &quot;b748b863a51544906e1400a7f28d50ede35fc47eb520c5acf843e89e5544bbad&quot;, &quot;evaluation/results/native-cloud-2026-10-06/paired-summary.json&quot;: &quot;2a8d6c2279cdc53dec769fd2085e2b72e7f07e5319e8f063c61e86156150de11&quot;, &quot;evaluation/results/status.json&quot;: &quot;176724896a111c36a37550eed656f68d93628942d3b7e567d18326e6268108fd&quot;}}</metadata>
+<rect x="0.5" y="0.5" width="599" height="831" rx="18" fill="#F5F3EC" stroke="#D3D8CE"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<circle cx="37" cy="40" r="5" fill="#DB532C"/>
+<text x="53" y="47" font-size="20" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="1">DOT-SKILLS / EVALUATION</text>
+<text x="32" y="116" font-size="48" fill="#1B2820" font-weight="700" text-anchor="start" letter-spacing="-1.5">Same tasks.</text>
+<text x="32" y="172" font-size="48" fill="#1B2820" font-weight="700" text-anchor="start" letter-spacing="-1.5">Same primary score.</text>
+<text x="32" y="220" font-size="26" fill="#566159" font-weight="400" text-anchor="start">16 actual native-agent attempts</text>
+<text x="32" y="256" font-size="26" fill="#566159" font-weight="400" text-anchor="start">8 paired fictional tasks · 06 Oct 2026</text>
+<path d="M32 287H568" stroke="#D3D8CE"/>
+<text x="32" y="328" font-size="20" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="0.4">PRIMARY ARTIFACT CRITERION GROUPS</text>
+<text x="32" y="376" font-size="25" fill="#1B2820" font-weight="700" text-anchor="start">C · No designated package</text>
+<text x="568" y="376" font-size="30" fill="#1B2820" font-weight="700" text-anchor="end">40/40</text>
+<rect x="32.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="45.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="59.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="72.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="86.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="99.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="113.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="126.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="140.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="153.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="167.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="180.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="194.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="207.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="221.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="234.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="248.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="261.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="275.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="288.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="302.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="315.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="329.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="342.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="356.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="369.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="383.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="396.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="410.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="423.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="437.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="450.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="464.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="477.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="491.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="504.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="518.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="531.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="545.00" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<rect x="558.50" y="398" width="9.50" height="22" rx="2" fill="#1B2820"/>
+<text x="32" y="474" font-size="25" fill="#57735F" font-weight="700" text-anchor="start">S · Designated package supplied</text>
+<text x="568" y="474" font-size="30" fill="#57735F" font-weight="700" text-anchor="end">40/40</text>
+<rect x="32.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="45.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="59.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="72.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="86.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="99.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="113.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="126.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="140.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="153.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="167.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="180.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="194.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="207.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="221.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="234.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="248.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="261.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="275.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="288.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="302.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="315.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="329.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="342.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="356.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="369.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="383.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="396.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="410.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="423.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="437.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="450.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="464.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="477.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="491.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="504.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="518.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="531.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="545.00" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<rect x="558.50" y="496" width="9.50" height="22" rx="2" fill="#57735F"/>
+<path d="M32 552H568" stroke="#D3D8CE"/>
+<text x="32" y="654" font-size="100" fill="#1B2820" font-weight="700" text-anchor="start" letter-spacing="-5">0</text>
+<text x="96" y="650" font-size="38" fill="#566159" font-weight="700" text-anchor="start">pp</text>
+<text x="202" y="611" font-size="28" fill="#1B2820" font-weight="700" text-anchor="start">Primary pass-rate</text>
+<text x="202" y="648" font-size="28" fill="#1B2820" font-weight="700" text-anchor="start">difference</text>
+<text x="32" y="704" font-size="27" fill="#566159" font-weight="400" text-anchor="start">8/8 met primary checks in each arm</text>
+<path d="M32 742H568" stroke="#D3D8CE"/>
+<text x="32" y="778" font-size="24" fill="#566159" font-weight="400" text-anchor="start">Exploratory study · Process unverified</text>
+<text x="32" y="810" font-size="23" fill="#566159" font-weight="400" text-anchor="start">Read the limits + post-hoc finding below</text>
+</g>
+</svg>
