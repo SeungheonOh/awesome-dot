@@ -1,0 +1,657 @@
+{
+  "study_id": "native-cloud-repeated-stress-2026-10-06",
+  "status": "final saved-evidence accounting",
+  "authored_cases": 4,
+  "case_repeat_pairs": 12,
+  "scheduled_attempts": 24,
+  "distinct_requirements": 53,
+  "scheduled_requirement_instances": 318,
+  "artifact_files": 45,
+  "conditions": {
+    "C": {
+      "counts": {
+        "pass": 159,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements": 159,
+      "complete_attempts": 12,
+      "attempts": 12,
+      "equal_case_mean_verified_fraction": 1.0
+    },
+    "S": {
+      "counts": {
+        "pass": 159,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements": 159,
+      "complete_attempts": 12,
+      "attempts": 12,
+      "equal_case_mean_verified_fraction": 1.0
+    }
+  },
+  "cases": [
+    {
+      "case_id": "R1",
+      "label": "Expense reconciliation",
+      "requirements_per_attempt": 14,
+      "conditions": {
+        "C": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "attempt_id": "T09-R1-r1-C",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 2,
+              "attempt_id": "T20-R1-r2-C",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 3,
+              "attempt_id": "T07-R1-r3-C",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            }
+          ],
+          "counts": {
+            "pass": 42,
+            "fail": 0,
+            "not_assessed": 0
+          },
+          "scheduled_requirements": 42,
+          "complete_attempts": 3,
+          "failed_requirements": [],
+          "not_assessed_requirements": []
+        },
+        "S": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "attempt_id": "T10-R1-r1-S",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 2,
+              "attempt_id": "T19-R1-r2-S",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 3,
+              "attempt_id": "T08-R1-r3-S",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            }
+          ],
+          "counts": {
+            "pass": 42,
+            "fail": 0,
+            "not_assessed": 0
+          },
+          "scheduled_requirements": 42,
+          "complete_attempts": 3,
+          "failed_requirements": [],
+          "not_assessed_requirements": []
+        }
+      },
+      "three_repeat_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R2",
+      "label": "Dated action handoff",
+      "requirements_per_attempt": 14,
+      "conditions": {
+        "C": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "attempt_id": "T14-R2-r1-C",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 2,
+              "attempt_id": "T18-R2-r2-C",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 3,
+              "attempt_id": "T05-R2-r3-C",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            }
+          ],
+          "counts": {
+            "pass": 42,
+            "fail": 0,
+            "not_assessed": 0
+          },
+          "scheduled_requirements": 42,
+          "complete_attempts": 3,
+          "failed_requirements": [],
+          "not_assessed_requirements": []
+        },
+        "S": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "attempt_id": "T13-R2-r1-S",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 2,
+              "attempt_id": "T17-R2-r2-S",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 3,
+              "attempt_id": "T06-R2-r3-S",
+              "counts": {
+                "pass": 14,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            }
+          ],
+          "counts": {
+            "pass": 42,
+            "fail": 0,
+            "not_assessed": 0
+          },
+          "scheduled_requirements": 42,
+          "complete_attempts": 3,
+          "failed_requirements": [],
+          "not_assessed_requirements": []
+        }
+      },
+      "three_repeat_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R3",
+      "label": "SQL report reconciliation",
+      "requirements_per_attempt": 12,
+      "conditions": {
+        "C": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "attempt_id": "T02-R3-r1-C",
+              "counts": {
+                "pass": 12,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 2,
+              "attempt_id": "T15-R3-r2-C",
+              "counts": {
+                "pass": 12,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 3,
+              "attempt_id": "T23-R3-r3-C",
+              "counts": {
+                "pass": 12,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            }
+          ],
+          "counts": {
+            "pass": 36,
+            "fail": 0,
+            "not_assessed": 0
+          },
+          "scheduled_requirements": 36,
+          "complete_attempts": 3,
+          "failed_requirements": [],
+          "not_assessed_requirements": []
+        },
+        "S": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "attempt_id": "T01-R3-r1-S",
+              "counts": {
+                "pass": 12,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 2,
+              "attempt_id": "T16-R3-r2-S",
+              "counts": {
+                "pass": 12,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 3,
+              "attempt_id": "T24-R3-r3-S",
+              "counts": {
+                "pass": 12,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            }
+          ],
+          "counts": {
+            "pass": 36,
+            "fail": 0,
+            "not_assessed": 0
+          },
+          "scheduled_requirements": 36,
+          "complete_attempts": 3,
+          "failed_requirements": [],
+          "not_assessed_requirements": []
+        }
+      },
+      "three_repeat_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R4",
+      "label": "Merge consumer maintenance",
+      "requirements_per_attempt": 13,
+      "conditions": {
+        "C": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "attempt_id": "T22-R4-r1-C",
+              "counts": {
+                "pass": 13,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 2,
+              "attempt_id": "T04-R4-r2-C",
+              "counts": {
+                "pass": 13,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 3,
+              "attempt_id": "T11-R4-r3-C",
+              "counts": {
+                "pass": 13,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            }
+          ],
+          "counts": {
+            "pass": 39,
+            "fail": 0,
+            "not_assessed": 0
+          },
+          "scheduled_requirements": 39,
+          "complete_attempts": 3,
+          "failed_requirements": [],
+          "not_assessed_requirements": []
+        },
+        "S": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "attempt_id": "T21-R4-r1-S",
+              "counts": {
+                "pass": 13,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 2,
+              "attempt_id": "T03-R4-r2-S",
+              "counts": {
+                "pass": 13,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            },
+            {
+              "repeat": 3,
+              "attempt_id": "T12-R4-r3-S",
+              "counts": {
+                "pass": 13,
+                "fail": 0,
+                "not_assessed": 0
+              },
+              "completed_criteria": true
+            }
+          ],
+          "counts": {
+            "pass": 39,
+            "fail": 0,
+            "not_assessed": 0
+          },
+          "scheduled_requirements": 39,
+          "complete_attempts": 3,
+          "failed_requirements": [],
+          "not_assessed_requirements": []
+        }
+      },
+      "three_repeat_pass_difference_S_minus_C": 0
+    }
+  ],
+  "pairs": [
+    {
+      "case_id": "R1",
+      "repeat": 1,
+      "C": {
+        "attempt_id": "T09-R1-r1-C",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T10-R1-r1-S",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 14,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R1",
+      "repeat": 2,
+      "C": {
+        "attempt_id": "T20-R1-r2-C",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T19-R1-r2-S",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 14,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R1",
+      "repeat": 3,
+      "C": {
+        "attempt_id": "T07-R1-r3-C",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T08-R1-r3-S",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 14,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R2",
+      "repeat": 1,
+      "C": {
+        "attempt_id": "T14-R2-r1-C",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T13-R2-r1-S",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 14,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R2",
+      "repeat": 2,
+      "C": {
+        "attempt_id": "T18-R2-r2-C",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T17-R2-r2-S",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 14,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R2",
+      "repeat": 3,
+      "C": {
+        "attempt_id": "T05-R2-r3-C",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T06-R2-r3-S",
+        "pass": 14,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 14,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R3",
+      "repeat": 1,
+      "C": {
+        "attempt_id": "T02-R3-r1-C",
+        "pass": 12,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T01-R3-r1-S",
+        "pass": 12,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 12,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R3",
+      "repeat": 2,
+      "C": {
+        "attempt_id": "T15-R3-r2-C",
+        "pass": 12,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T16-R3-r2-S",
+        "pass": 12,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 12,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R3",
+      "repeat": 3,
+      "C": {
+        "attempt_id": "T23-R3-r3-C",
+        "pass": 12,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T24-R3-r3-S",
+        "pass": 12,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 12,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R4",
+      "repeat": 1,
+      "C": {
+        "attempt_id": "T22-R4-r1-C",
+        "pass": 13,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T21-R4-r1-S",
+        "pass": 13,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 13,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R4",
+      "repeat": 2,
+      "C": {
+        "attempt_id": "T04-R4-r2-C",
+        "pass": 13,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T03-R4-r2-S",
+        "pass": 13,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 13,
+      "verified_pass_difference_S_minus_C": 0
+    },
+    {
+      "case_id": "R4",
+      "repeat": 3,
+      "C": {
+        "attempt_id": "T11-R4-r3-C",
+        "pass": 13,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "S": {
+        "attempt_id": "T12-R4-r3-S",
+        "pass": 13,
+        "fail": 0,
+        "not_assessed": 0
+      },
+      "scheduled_requirements_per_condition": 13,
+      "verified_pass_difference_S_minus_C": 0
+    }
+  ],
+  "evidence_coverage": {
+    "objective": {
+      "pass": 204,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "semantic": {
+      "pass": 36,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "behavioral": {
+      "pass": 78,
+      "fail": 0,
+      "not_assessed": 0
+    }
+  },
+  "aggregate_definition": "Equal-case mean of verified scheduled-requirement fractions, with not-assessed retained in denominators; raw counts are not interchangeable units of general quality.",
+  "limits": [
+    "Four authored synthetic cases, not 12 independent tasks",
+    "C has no designated package, not no ambient skills",
+    "Shared filesystem and condition masking were procedural",
+    "Process integrity unknown for all attempts",
+    "Exact serving model/build, tokens, cost and comparable compute time unknown",
+    "No population, significance, human-time savings or full-dot efficacy claim"
+  ],
+  "history": "Historical eight-case native-cloud results remain unchanged and are not pooled"
+}

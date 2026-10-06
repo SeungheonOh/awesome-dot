@@ -1,0 +1,673 @@
+{
+  "created_at_utc": "2026-10-06T06:38:49.405416+00:00",
+  "masking": "Procedural, not OS-enforced",
+  "requested_runtime": {
+    "fork_turns": "none",
+    "reasoning_effort": "xhigh",
+    "model_override": null,
+    "exact_serving_model_build": null,
+    "provider_tokens": null,
+    "provider_cost": null
+  },
+  "separation": "One opaque artifact packet per fresh reviewer; no peer-result access requested; procedural rather than OS-enforced",
+  "completed_at_utc": "2026-10-06T06:54:05.700707+00:00",
+  "initial_reviews": [
+    {
+      "packet_id": "sample-08171b7c1edcb783",
+      "review_number": 1,
+      "reviewer_id": "rev-4c36b9ac",
+      "state": "review_received",
+      "review_sha256": "5f1970390c30e76c5497cc05c6bcb062c6d264a2cb2c18c307cc5de3d97815bd",
+      "observed_at_utc": "2026-10-06T06:38:58.434430+00:00"
+    },
+    {
+      "packet_id": "sample-08171b7c1edcb783",
+      "review_number": 2,
+      "reviewer_id": "rev-908bf625",
+      "state": "review_received",
+      "review_sha256": "326359c8013de363cd07b9fdf5f743e61bd538c659fb4b6ba59e5ea9bb3d6908",
+      "observed_at_utc": "2026-10-06T06:39:28.497190+00:00"
+    },
+    {
+      "packet_id": "sample-09ebf3c7a0ea9251",
+      "review_number": 1,
+      "reviewer_id": "rev-eece75df",
+      "state": "review_received",
+      "review_sha256": "8600157f9021623d14bb710fc75c3ed6c9d648306029ac58ccb533c43ed0fe57",
+      "observed_at_utc": "2026-10-06T06:41:06.602159+00:00"
+    },
+    {
+      "packet_id": "sample-09ebf3c7a0ea9251",
+      "review_number": 2,
+      "reviewer_id": "rev-818ce78b",
+      "state": "review_received",
+      "review_sha256": "05ad9a07fed9eb2a8938b212e0611c1104235b45f7fb126fbdc46bd3836820de",
+      "observed_at_utc": "2026-10-06T06:41:06.602194+00:00"
+    },
+    {
+      "packet_id": "sample-36ed8acd140858e3",
+      "review_number": 1,
+      "reviewer_id": "rev-81a75173",
+      "state": "review_received",
+      "review_sha256": "4299e19206ff362de8b922bc114f007d4152246c82f7fbabae93dcd7a7083b88",
+      "observed_at_utc": "2026-10-06T06:42:36.662245+00:00"
+    },
+    {
+      "packet_id": "sample-36ed8acd140858e3",
+      "review_number": 2,
+      "reviewer_id": "rev-cbf3e068",
+      "state": "review_received",
+      "review_sha256": "cbdf7b17fd19ab0243494256eb0cec6af2fdaa9c2f4b6409b60c8bb961bcaf37",
+      "observed_at_utc": "2026-10-06T06:42:36.662274+00:00"
+    },
+    {
+      "packet_id": "sample-4e74d135117e1157",
+      "review_number": 1,
+      "reviewer_id": "rev-6bb59339",
+      "state": "review_received",
+      "review_sha256": "de0969106948f911e2b55650a916885cc8b90e9e6c4b674530f1f2f73c4d3dd7",
+      "observed_at_utc": "2026-10-06T06:44:36.229207+00:00"
+    },
+    {
+      "packet_id": "sample-4e74d135117e1157",
+      "review_number": 2,
+      "reviewer_id": "rev-5371dadc",
+      "state": "review_received",
+      "review_sha256": "4b366d5002aad8f967c0acb7404f3e3eaa3995ccb58b45edea2800eb59ecb886",
+      "observed_at_utc": "2026-10-06T06:44:36.229244+00:00"
+    },
+    {
+      "packet_id": "sample-5d25c431e6046f84",
+      "review_number": 1,
+      "reviewer_id": "rev-9eb49b1f",
+      "state": "review_received",
+      "review_sha256": "9c31cb4bc3b696a86dc7e92401c6356fe3057ed1641333cad1b8f6169bd85db0",
+      "observed_at_utc": "2026-10-06T06:45:37.670217+00:00"
+    },
+    {
+      "packet_id": "sample-5d25c431e6046f84",
+      "review_number": 2,
+      "reviewer_id": "rev-182bd037",
+      "state": "review_received",
+      "review_sha256": "09e7e716518918f5504e96362f0b78bc7446f4283ed11cec8b4251b2701fb0bf",
+      "observed_at_utc": "2026-10-06T06:45:37.670250+00:00"
+    },
+    {
+      "packet_id": "sample-6e3b0ca59a4b7798",
+      "review_number": 1,
+      "reviewer_id": "rev-f3eb0e56",
+      "state": "review_received",
+      "review_sha256": "a1ad4142f8be9f1d16465579cf44f4ce3ce1d31d52b080ecb155b920b40172c8",
+      "observed_at_utc": "2026-10-06T06:47:41.362044+00:00"
+    },
+    {
+      "packet_id": "sample-6e3b0ca59a4b7798",
+      "review_number": 2,
+      "reviewer_id": "rev-fa350723",
+      "state": "review_received",
+      "review_sha256": "1460333bf2c0de4789c7536f92f19af572d617424410ec6f2af4efd701da90f8",
+      "observed_at_utc": "2026-10-06T06:47:41.362077+00:00"
+    },
+    {
+      "packet_id": "sample-7e26fa8b452e751f",
+      "review_number": 1,
+      "reviewer_id": "rev-55c294be",
+      "state": "review_received",
+      "review_sha256": "e1a7efcca97a178241badba82f99d84779cc3f70bb51fac03728e0b6959c10ed",
+      "observed_at_utc": "2026-10-06T06:47:41.362100+00:00"
+    },
+    {
+      "packet_id": "sample-7e26fa8b452e751f",
+      "review_number": 2,
+      "reviewer_id": "rev-a679d273",
+      "state": "review_received",
+      "review_sha256": "ffd061b13ae04d85e148b19cf5f8a3089f283473e6925713daacba1198afd55c",
+      "observed_at_utc": "2026-10-06T06:49:14.993189+00:00"
+    },
+    {
+      "packet_id": "sample-8fe05749f5bc8dc7",
+      "review_number": 1,
+      "reviewer_id": "rev-c58a1831",
+      "state": "review_received",
+      "review_sha256": "7a1c6e1e77c14666bb36d9702a3f6dbf354676218518d9c67a083b62ef64dc17",
+      "observed_at_utc": "2026-10-06T06:49:14.993226+00:00"
+    },
+    {
+      "packet_id": "sample-8fe05749f5bc8dc7",
+      "review_number": 2,
+      "reviewer_id": "rev-ec9c8ebf",
+      "state": "review_received",
+      "review_sha256": "e4f27bae65540250a30fa8c321fc2e0db9491463eef74b2bf4a98466d4b976f6",
+      "observed_at_utc": "2026-10-06T06:49:14.993248+00:00"
+    },
+    {
+      "packet_id": "sample-be0c24c8fb08d3f5",
+      "review_number": 1,
+      "reviewer_id": "rev-9533f68a",
+      "state": "review_received",
+      "review_sha256": "8603081dd11d115a32a75fac49223f5f6945610c69935c94499568f1671e388e",
+      "observed_at_utc": "2026-10-06T06:51:01.537625+00:00"
+    },
+    {
+      "packet_id": "sample-be0c24c8fb08d3f5",
+      "review_number": 2,
+      "reviewer_id": "rev-ee8aa42e",
+      "state": "review_received",
+      "review_sha256": "bd89bf15fc9d3b66600fa4b8292159068abafeb5015a6a56029ebb996e39d60f",
+      "observed_at_utc": "2026-10-06T06:51:01.537686+00:00"
+    },
+    {
+      "packet_id": "sample-dfefe713919e0085",
+      "review_number": 1,
+      "reviewer_id": "rev-96e43b86",
+      "state": "review_received",
+      "review_sha256": "2c3fc471a09b986829c047112b96c07e2b050e5ddb3d183ebe3612ff26d2a00e",
+      "observed_at_utc": "2026-10-06T06:51:01.537713+00:00"
+    },
+    {
+      "packet_id": "sample-dfefe713919e0085",
+      "review_number": 2,
+      "reviewer_id": "rev-1de28ea3",
+      "state": "review_received",
+      "review_sha256": "726a4d9de30539740e6b1900683fdeff5dd4f898e4ad2982333d2cbbf67e81d3",
+      "observed_at_utc": "2026-10-06T06:52:13.942884+00:00"
+    },
+    {
+      "packet_id": "sample-e21b56d7def1e640",
+      "review_number": 1,
+      "reviewer_id": "rev-b9f2052c",
+      "state": "review_received",
+      "review_sha256": "0973e79fa9e1d46e10dc1d7cd58a03112dd624e98f452200023771ec9c1cb227",
+      "observed_at_utc": "2026-10-06T06:52:13.942923+00:00"
+    },
+    {
+      "packet_id": "sample-e21b56d7def1e640",
+      "review_number": 2,
+      "reviewer_id": "rev-fcd7063b",
+      "state": "review_received",
+      "review_sha256": "9f34e638cdd320bb56088f8c00036bf0c79d8c350396866c45ff9cf50b74136e",
+      "observed_at_utc": "2026-10-06T06:52:13.942945+00:00"
+    },
+    {
+      "packet_id": "sample-f6cf390d66a5ea25",
+      "review_number": 1,
+      "reviewer_id": "rev-eb8e91be",
+      "state": "review_received",
+      "review_sha256": "15d4ef92b42000a200c37f1102d303c62b21263e8bd2368b53d3fd130a410024",
+      "observed_at_utc": "2026-10-06T06:52:13.942967+00:00"
+    },
+    {
+      "packet_id": "sample-f6cf390d66a5ea25",
+      "review_number": 2,
+      "reviewer_id": "rev-5834c772",
+      "state": "review_received",
+      "review_sha256": "0ecc2a024ab3ab9bd521ff5d73da305af8f2ad9474d6eed5ffe429ed4f95e2db",
+      "observed_at_utc": "2026-10-06T06:54:05.700692+00:00"
+    }
+  ],
+  "review_bindings": [
+    {
+      "attempt_id": "T05-R2-r3-C",
+      "opaque_packet_id": "sample-8fe05749f5bc8dc7",
+      "case_id": "R2",
+      "packet_manifest_path": "evidence/semantic/T05-R2-r3-C/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R2/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R2/candidate/inputs/00_README.txt",
+        "common/inputs/baseline.csv": "cases/R2/candidate/inputs/baseline.csv",
+        "common/inputs/followups.txt": "cases/R2/candidate/inputs/followups.txt",
+        "common/inputs/meeting_notes.txt": "cases/R2/candidate/inputs/meeting_notes.txt",
+        "common/rubric.json": "cases/R2/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R2/private/semantic_review_instructions.txt",
+        "artifacts/action_register.json": "artifacts/T05-R2-r3-C/action_register.json",
+        "artifacts/handoff.txt": "artifacts/T05-R2-r3-C/handoff.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-c58a1831",
+          "path": "evidence/semantic/T05-R2-r3-C/review_1.json",
+          "sha256": "7a1c6e1e77c14666bb36d9702a3f6dbf354676218518d9c67a083b62ef64dc17"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-ec9c8ebf",
+          "path": "evidence/semantic/T05-R2-r3-C/review_2.json",
+          "sha256": "e4f27bae65540250a30fa8c321fc2e0db9491463eef74b2bf4a98466d4b976f6"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "b8b043af8052be370cdb3feac9c56285462d8e8ccd370d05d57feb0c8c169a97",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T06-R2-r3-S",
+      "opaque_packet_id": "sample-5d25c431e6046f84",
+      "case_id": "R2",
+      "packet_manifest_path": "evidence/semantic/T06-R2-r3-S/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R2/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R2/candidate/inputs/00_README.txt",
+        "common/inputs/baseline.csv": "cases/R2/candidate/inputs/baseline.csv",
+        "common/inputs/followups.txt": "cases/R2/candidate/inputs/followups.txt",
+        "common/inputs/meeting_notes.txt": "cases/R2/candidate/inputs/meeting_notes.txt",
+        "common/rubric.json": "cases/R2/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R2/private/semantic_review_instructions.txt",
+        "artifacts/action_register.json": "artifacts/T06-R2-r3-S/action_register.json",
+        "artifacts/handoff.txt": "artifacts/T06-R2-r3-S/handoff.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-9eb49b1f",
+          "path": "evidence/semantic/T06-R2-r3-S/review_1.json",
+          "sha256": "9c31cb4bc3b696a86dc7e92401c6356fe3057ed1641333cad1b8f6169bd85db0"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-182bd037",
+          "path": "evidence/semantic/T06-R2-r3-S/review_2.json",
+          "sha256": "09e7e716518918f5504e96362f0b78bc7446f4283ed11cec8b4251b2701fb0bf"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "c4adc81281f68ad1f3329c2a3ba41a6ccc564b38ce87fb5b63eef34da9ef78ee",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T07-R1-r3-C",
+      "opaque_packet_id": "sample-09ebf3c7a0ea9251",
+      "case_id": "R1",
+      "packet_manifest_path": "evidence/semantic/T07-R1-r3-C/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R1/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R1/candidate/inputs/00_README.txt",
+        "common/inputs/claims.csv": "cases/R1/candidate/inputs/claims.csv",
+        "common/inputs/correspondence.txt": "cases/R1/candidate/inputs/correspondence.txt",
+        "common/inputs/policies.txt": "cases/R1/candidate/inputs/policies.txt",
+        "common/inputs/receipts.csv": "cases/R1/candidate/inputs/receipts.csv",
+        "common/inputs/statement.csv": "cases/R1/candidate/inputs/statement.csv",
+        "common/inputs/trip_calendar.txt": "cases/R1/candidate/inputs/trip_calendar.txt",
+        "common/rubric.json": "cases/R1/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R1/private/semantic_review_instructions.txt",
+        "artifacts/reconciliation.json": "artifacts/T07-R1-r3-C/reconciliation.json",
+        "artifacts/review_notes.txt": "artifacts/T07-R1-r3-C/review_notes.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-eece75df",
+          "path": "evidence/semantic/T07-R1-r3-C/review_1.json",
+          "sha256": "8600157f9021623d14bb710fc75c3ed6c9d648306029ac58ccb533c43ed0fe57"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-818ce78b",
+          "path": "evidence/semantic/T07-R1-r3-C/review_2.json",
+          "sha256": "05ad9a07fed9eb2a8938b212e0611c1104235b45f7fb126fbdc46bd3836820de"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "c3a97eaad140c9550522980f060bee0b513a4d1cf51075500d4d8e5036b4b658",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T08-R1-r3-S",
+      "opaque_packet_id": "sample-7e26fa8b452e751f",
+      "case_id": "R1",
+      "packet_manifest_path": "evidence/semantic/T08-R1-r3-S/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R1/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R1/candidate/inputs/00_README.txt",
+        "common/inputs/claims.csv": "cases/R1/candidate/inputs/claims.csv",
+        "common/inputs/correspondence.txt": "cases/R1/candidate/inputs/correspondence.txt",
+        "common/inputs/policies.txt": "cases/R1/candidate/inputs/policies.txt",
+        "common/inputs/receipts.csv": "cases/R1/candidate/inputs/receipts.csv",
+        "common/inputs/statement.csv": "cases/R1/candidate/inputs/statement.csv",
+        "common/inputs/trip_calendar.txt": "cases/R1/candidate/inputs/trip_calendar.txt",
+        "common/rubric.json": "cases/R1/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R1/private/semantic_review_instructions.txt",
+        "artifacts/reconciliation.json": "artifacts/T08-R1-r3-S/reconciliation.json",
+        "artifacts/review_notes.txt": "artifacts/T08-R1-r3-S/review_notes.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-55c294be",
+          "path": "evidence/semantic/T08-R1-r3-S/review_1.json",
+          "sha256": "e1a7efcca97a178241badba82f99d84779cc3f70bb51fac03728e0b6959c10ed"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-a679d273",
+          "path": "evidence/semantic/T08-R1-r3-S/review_2.json",
+          "sha256": "ffd061b13ae04d85e148b19cf5f8a3089f283473e6925713daacba1198afd55c"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "79d0c7c4650740fa88354d1a4db1cc49381694e3250720f21571ece846c133aa",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T09-R1-r1-C",
+      "opaque_packet_id": "sample-be0c24c8fb08d3f5",
+      "case_id": "R1",
+      "packet_manifest_path": "evidence/semantic/T09-R1-r1-C/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R1/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R1/candidate/inputs/00_README.txt",
+        "common/inputs/claims.csv": "cases/R1/candidate/inputs/claims.csv",
+        "common/inputs/correspondence.txt": "cases/R1/candidate/inputs/correspondence.txt",
+        "common/inputs/policies.txt": "cases/R1/candidate/inputs/policies.txt",
+        "common/inputs/receipts.csv": "cases/R1/candidate/inputs/receipts.csv",
+        "common/inputs/statement.csv": "cases/R1/candidate/inputs/statement.csv",
+        "common/inputs/trip_calendar.txt": "cases/R1/candidate/inputs/trip_calendar.txt",
+        "common/rubric.json": "cases/R1/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R1/private/semantic_review_instructions.txt",
+        "artifacts/reconciliation.json": "artifacts/T09-R1-r1-C/reconciliation.json",
+        "artifacts/review_notes.txt": "artifacts/T09-R1-r1-C/review_notes.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-9533f68a",
+          "path": "evidence/semantic/T09-R1-r1-C/review_1.json",
+          "sha256": "8603081dd11d115a32a75fac49223f5f6945610c69935c94499568f1671e388e"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-ee8aa42e",
+          "path": "evidence/semantic/T09-R1-r1-C/review_2.json",
+          "sha256": "bd89bf15fc9d3b66600fa4b8292159068abafeb5015a6a56029ebb996e39d60f"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "76d2e45aeda196db32d7606218781baada5085548dabb420ea9639174b8ede6a",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T10-R1-r1-S",
+      "opaque_packet_id": "sample-6e3b0ca59a4b7798",
+      "case_id": "R1",
+      "packet_manifest_path": "evidence/semantic/T10-R1-r1-S/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R1/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R1/candidate/inputs/00_README.txt",
+        "common/inputs/claims.csv": "cases/R1/candidate/inputs/claims.csv",
+        "common/inputs/correspondence.txt": "cases/R1/candidate/inputs/correspondence.txt",
+        "common/inputs/policies.txt": "cases/R1/candidate/inputs/policies.txt",
+        "common/inputs/receipts.csv": "cases/R1/candidate/inputs/receipts.csv",
+        "common/inputs/statement.csv": "cases/R1/candidate/inputs/statement.csv",
+        "common/inputs/trip_calendar.txt": "cases/R1/candidate/inputs/trip_calendar.txt",
+        "common/rubric.json": "cases/R1/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R1/private/semantic_review_instructions.txt",
+        "artifacts/reconciliation.json": "artifacts/T10-R1-r1-S/reconciliation.json",
+        "artifacts/review_notes.txt": "artifacts/T10-R1-r1-S/review_notes.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-f3eb0e56",
+          "path": "evidence/semantic/T10-R1-r1-S/review_1.json",
+          "sha256": "a1ad4142f8be9f1d16465579cf44f4ce3ce1d31d52b080ecb155b920b40172c8"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-fa350723",
+          "path": "evidence/semantic/T10-R1-r1-S/review_2.json",
+          "sha256": "1460333bf2c0de4789c7536f92f19af572d617424410ec6f2af4efd701da90f8"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "da693e23e8a01e359a7bf69238b5ac30b2be57aa9f44d8ff5acc1a6eadd44586",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T13-R2-r1-S",
+      "opaque_packet_id": "sample-e21b56d7def1e640",
+      "case_id": "R2",
+      "packet_manifest_path": "evidence/semantic/T13-R2-r1-S/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R2/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R2/candidate/inputs/00_README.txt",
+        "common/inputs/baseline.csv": "cases/R2/candidate/inputs/baseline.csv",
+        "common/inputs/followups.txt": "cases/R2/candidate/inputs/followups.txt",
+        "common/inputs/meeting_notes.txt": "cases/R2/candidate/inputs/meeting_notes.txt",
+        "common/rubric.json": "cases/R2/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R2/private/semantic_review_instructions.txt",
+        "artifacts/action_register.json": "artifacts/T13-R2-r1-S/action_register.json",
+        "artifacts/handoff.txt": "artifacts/T13-R2-r1-S/handoff.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-b9f2052c",
+          "path": "evidence/semantic/T13-R2-r1-S/review_1.json",
+          "sha256": "0973e79fa9e1d46e10dc1d7cd58a03112dd624e98f452200023771ec9c1cb227"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-fcd7063b",
+          "path": "evidence/semantic/T13-R2-r1-S/review_2.json",
+          "sha256": "9f34e638cdd320bb56088f8c00036bf0c79d8c350396866c45ff9cf50b74136e"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "163815b886e545c6fbf293c78acc1b349860384ad4e1d781c0a2c0f66077b3a6",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T14-R2-r1-C",
+      "opaque_packet_id": "sample-08171b7c1edcb783",
+      "case_id": "R2",
+      "packet_manifest_path": "evidence/semantic/T14-R2-r1-C/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R2/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R2/candidate/inputs/00_README.txt",
+        "common/inputs/baseline.csv": "cases/R2/candidate/inputs/baseline.csv",
+        "common/inputs/followups.txt": "cases/R2/candidate/inputs/followups.txt",
+        "common/inputs/meeting_notes.txt": "cases/R2/candidate/inputs/meeting_notes.txt",
+        "common/rubric.json": "cases/R2/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R2/private/semantic_review_instructions.txt",
+        "artifacts/action_register.json": "artifacts/T14-R2-r1-C/action_register.json",
+        "artifacts/handoff.txt": "artifacts/T14-R2-r1-C/handoff.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-4c36b9ac",
+          "path": "evidence/semantic/T14-R2-r1-C/review_1.json",
+          "sha256": "5f1970390c30e76c5497cc05c6bcb062c6d264a2cb2c18c307cc5de3d97815bd"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-908bf625",
+          "path": "evidence/semantic/T14-R2-r1-C/review_2.json",
+          "sha256": "326359c8013de363cd07b9fdf5f743e61bd538c659fb4b6ba59e5ea9bb3d6908"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "41e55d8df4d7909ebaa39b99730539c78f5e04256f8bb7791b0b7a62fb904f2c",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T17-R2-r2-S",
+      "opaque_packet_id": "sample-4e74d135117e1157",
+      "case_id": "R2",
+      "packet_manifest_path": "evidence/semantic/T17-R2-r2-S/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R2/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R2/candidate/inputs/00_README.txt",
+        "common/inputs/baseline.csv": "cases/R2/candidate/inputs/baseline.csv",
+        "common/inputs/followups.txt": "cases/R2/candidate/inputs/followups.txt",
+        "common/inputs/meeting_notes.txt": "cases/R2/candidate/inputs/meeting_notes.txt",
+        "common/rubric.json": "cases/R2/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R2/private/semantic_review_instructions.txt",
+        "artifacts/action_register.json": "artifacts/T17-R2-r2-S/action_register.json",
+        "artifacts/handoff.txt": "artifacts/T17-R2-r2-S/handoff.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-6bb59339",
+          "path": "evidence/semantic/T17-R2-r2-S/review_1.json",
+          "sha256": "de0969106948f911e2b55650a916885cc8b90e9e6c4b674530f1f2f73c4d3dd7"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-5371dadc",
+          "path": "evidence/semantic/T17-R2-r2-S/review_2.json",
+          "sha256": "4b366d5002aad8f967c0acb7404f3e3eaa3995ccb58b45edea2800eb59ecb886"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "40eb25e9ff3d0fba1636f551041547706ce6e4aed0ae62757fa48f3f80e09c92",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T18-R2-r2-C",
+      "opaque_packet_id": "sample-dfefe713919e0085",
+      "case_id": "R2",
+      "packet_manifest_path": "evidence/semantic/T18-R2-r2-C/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R2/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R2/candidate/inputs/00_README.txt",
+        "common/inputs/baseline.csv": "cases/R2/candidate/inputs/baseline.csv",
+        "common/inputs/followups.txt": "cases/R2/candidate/inputs/followups.txt",
+        "common/inputs/meeting_notes.txt": "cases/R2/candidate/inputs/meeting_notes.txt",
+        "common/rubric.json": "cases/R2/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R2/private/semantic_review_instructions.txt",
+        "artifacts/action_register.json": "artifacts/T18-R2-r2-C/action_register.json",
+        "artifacts/handoff.txt": "artifacts/T18-R2-r2-C/handoff.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-96e43b86",
+          "path": "evidence/semantic/T18-R2-r2-C/review_1.json",
+          "sha256": "2c3fc471a09b986829c047112b96c07e2b050e5ddb3d183ebe3612ff26d2a00e"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-1de28ea3",
+          "path": "evidence/semantic/T18-R2-r2-C/review_2.json",
+          "sha256": "726a4d9de30539740e6b1900683fdeff5dd4f898e4ad2982333d2cbbf67e81d3"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "b156f2cd61c1225759f189e40e553293856dbdbfe5f6541a0fdc59a40d35bff7",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T19-R1-r2-S",
+      "opaque_packet_id": "sample-f6cf390d66a5ea25",
+      "case_id": "R1",
+      "packet_manifest_path": "evidence/semantic/T19-R1-r2-S/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R1/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R1/candidate/inputs/00_README.txt",
+        "common/inputs/claims.csv": "cases/R1/candidate/inputs/claims.csv",
+        "common/inputs/correspondence.txt": "cases/R1/candidate/inputs/correspondence.txt",
+        "common/inputs/policies.txt": "cases/R1/candidate/inputs/policies.txt",
+        "common/inputs/receipts.csv": "cases/R1/candidate/inputs/receipts.csv",
+        "common/inputs/statement.csv": "cases/R1/candidate/inputs/statement.csv",
+        "common/inputs/trip_calendar.txt": "cases/R1/candidate/inputs/trip_calendar.txt",
+        "common/rubric.json": "cases/R1/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R1/private/semantic_review_instructions.txt",
+        "artifacts/reconciliation.json": "artifacts/T19-R1-r2-S/reconciliation.json",
+        "artifacts/review_notes.txt": "artifacts/T19-R1-r2-S/review_notes.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-eb8e91be",
+          "path": "evidence/semantic/T19-R1-r2-S/review_1.json",
+          "sha256": "15d4ef92b42000a200c37f1102d303c62b21263e8bd2368b53d3fd130a410024"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-5834c772",
+          "path": "evidence/semantic/T19-R1-r2-S/review_2.json",
+          "sha256": "0ecc2a024ab3ab9bd521ff5d73da305af8f2ad9474d6eed5ffe429ed4f95e2db"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "3134b6d12447159c9cac2b01874414d9d77a97c6064f56d5a5af4ccb1aa87714",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    },
+    {
+      "attempt_id": "T20-R1-r2-C",
+      "opaque_packet_id": "sample-36ed8acd140858e3",
+      "case_id": "R1",
+      "packet_manifest_path": "evidence/semantic/T20-R1-r2-C/packet-manifest.json",
+      "packet_file_mapping": {
+        "common/TASK.md": "cases/R1/candidate/TASK.md",
+        "common/inputs/00_README.txt": "cases/R1/candidate/inputs/00_README.txt",
+        "common/inputs/claims.csv": "cases/R1/candidate/inputs/claims.csv",
+        "common/inputs/correspondence.txt": "cases/R1/candidate/inputs/correspondence.txt",
+        "common/inputs/policies.txt": "cases/R1/candidate/inputs/policies.txt",
+        "common/inputs/receipts.csv": "cases/R1/candidate/inputs/receipts.csv",
+        "common/inputs/statement.csv": "cases/R1/candidate/inputs/statement.csv",
+        "common/inputs/trip_calendar.txt": "cases/R1/candidate/inputs/trip_calendar.txt",
+        "common/rubric.json": "cases/R1/private/rubric.json",
+        "common/semantic_review_instructions.txt": "cases/R1/private/semantic_review_instructions.txt",
+        "artifacts/reconciliation.json": "artifacts/T20-R1-r2-C/reconciliation.json",
+        "artifacts/review_notes.txt": "artifacts/T20-R1-r2-C/review_notes.txt"
+      },
+      "reviews": [
+        {
+          "review_number": 1,
+          "reviewer_id": "rev-81a75173",
+          "path": "evidence/semantic/T20-R1-r2-C/review_1.json",
+          "sha256": "4299e19206ff362de8b922bc114f007d4152246c82f7fbabae93dcd7a7083b88"
+        },
+        {
+          "review_number": 2,
+          "reviewer_id": "rev-cbf3e068",
+          "path": "evidence/semantic/T20-R1-r2-C/review_2.json",
+          "sha256": "cbdf7b17fd19ab0243494256eb0cec6af2fdaa9c2f4b6409b60c8bb961bcaf37"
+        }
+      ],
+      "omitted_packet_handoffs": {
+        "README.txt": {
+          "sha256": "4525dd05d18f08ed886828d9afa8dd262ac75a487470669f89d30878dde1a117",
+          "reason": "Internal review handoff text omitted; methodology is summarized publicly and frozen case review instructions remain available"
+        }
+      }
+    }
+  ],
+  "masking_limitation": "Procedural and self-attested, not OS-enforced; AI-assisted ratings, not human review. Condition mapping disclosed only after reviews were returned."
+}

@@ -1,0 +1,24 @@
+{
+  "packet_id": "sample-be0c24c8fb08d3f5",
+  "case_id": "R1",
+  "artifact_sha256": {
+    "reconciliation.json": "4a2297d24889fafd4f269751993787728f028f1a6db80db4b2f740bde7f39a1f",
+    "review_notes.txt": "9217be136f60b0e328304060d0a85c5d39e8adcf5dac702375c9fe145c4b0173"
+  },
+  "packet_sha256": {
+    "common/TASK.md": "3f05cfdfb82bdb61b31ca577ff66215d8e552075d499fc5d32cb5cad1f40ac37",
+    "common/inputs/00_README.txt": "5e0c37d86e3687e6401a339201503c25bf7baad54935b1673d875d142f8198cb",
+    "common/inputs/claims.csv": "cbef6152761c2224a949d7aaa3241a14c3f43998875f2c0622cf88a77ddd486b",
+    "common/inputs/correspondence.txt": "f1a6d70569ba48e091a02a4972d50faa8df9ee4fafb9ce85d0110ea7d2b59af2",
+    "common/inputs/policies.txt": "0d1d2d62ef7e6388ebaa1b806c9987b95775c5a53e82fc4cd083a52ead63d303",
+    "common/inputs/receipts.csv": "86a4eee621415aa2fc32245f759b3012419f76eb580653b9e637fa884002d85f",
+    "common/inputs/statement.csv": "589b3e5898b63d76260593c889aa46edf0fa1d254c1bba42f9c672616450b6a8",
+    "common/inputs/trip_calendar.txt": "dca337fe7939092f97171ba3b362e8b7a71ca14a80ad7a06a590eac25f1c4f5c",
+    "common/rubric.json": "f8446a2f3a2b760f3d34f569109b96f0e9e291f853a775de6322648d31f958e5",
+    "common/semantic_review_instructions.txt": "701a8cdfe7b34da66efc21e52402cbf1039d295c37ac48d95de6c5d7f5745229",
+    "artifacts/reconciliation.json": "4a2297d24889fafd4f269751993787728f028f1a6db80db4b2f740bde7f39a1f",
+    "artifacts/review_notes.txt": "9217be136f60b0e328304060d0a85c5d39e8adcf5dac702375c9fe145c4b0173",
+    "README.txt": "76d2e45aeda196db32d7606218781baada5085548dabb420ea9639174b8ede6a"
+  },
+  "masking": "Procedural label masking, not OS isolation"
+}

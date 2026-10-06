@@ -1,0 +1,55 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "rev-eece75df",
+  "independent": true,
+  "condition_masked": true,
+  "artifact_sha256": {
+    "reconciliation.json": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061",
+    "review_notes.txt": "746577ecd71f6ca85b3c5c97c805f7f1f3235ad1a61b6eee0ef1cc609f183f23"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "review_notes.txt explicitly states \"Cutoff: 2026-09-30 17:00 UTC\" and, in POSITION AT CUTOFF, $2,142.65 payable, $252.90 in known-USD holds, and a separate EUR 24.00 hold with no USD valuation. These are the required handoff amounts in rubric R1-12 and agree with reconciliation.json totals (214265 reimbursement cents, 25290 held cents, C026 EUR 24.00 unvalued). The known holds are C017 $47.90, C018 $126.00, and C028 original claimed $79.00, consistent with claims.csv, E05, and TASK.md; C026 remains unvalued under the cash-FX policy. \"Pay Maya now\" is a handoff recommendation, not an assertion that payment occurred. The notes expressly say nothing has been submitted, paid, or changed outside the packet and do not claim outreach or evidence recovery."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "UNRESOLVED ITEMS AND NEXT STEPS gives distinct evidence requests and responsible roles for all four source-supported uncertainties. C017: missing itemized stationery receipt (claims.csv has no receipt, E05 confirms absence, and the unchanged policy requires one above $25); Maya is to obtain a supplier duplicate for finance to match to S017. C018: absent attendee list/count (R018 and E05); Maya is to provide actual attendees/count tied to the workshop purpose so finance can apply the P2 $30-per-person lunch cap. C026: EUR 24.00 cash taxi lacks an organization-approved FX record (R026 and E05); Maya/finance should obtain that record before USD valuation and cap review, without borrowing a card or internet rate. C028: R028/claim $79 versus S028 settled $89 remains an unexplained $10 mismatch, above the policy $1 tolerance; Maya should obtain an itemized correction or vendor explanation for finance reconciliation. The original $79 is held, as TASK.md requires. The JSON preserves all four holds, and neither artifact invents the missing receipt, attendees, FX approval, or mismatch explanation."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "CONFIRMED ADJUSTMENTS AND BASIS accurately explains every requested adjustment class with traceable examples. Service-date policy: P1 through September 14 and P2 from September 15; S002-S004 September 16 postings do not replace the September 12 service policy. Alcohol/tax: R004 has $52 food, $16 alcohol, and $6.80 tax; the stated $52 + $6.80*52/68 = $57.20 once-rounded eligible amount and $17.60 exclusion implement P1. Hotels: C005 retains all $46.80 mandatory tax while capping two $195 room bases at $180; E01 applies only to the later two-night $230 stay. R010/R021 and S010/S021 support $515.20 total split into the $120 C021 deposit and already-net $395.20 C010 balance without duplication. FX: S014 $43.18 and S015 $68.82 are used for foreign employee-card costs, while C026 cash remains unvalued. Credits: S122 $36, S123 $27, and S124 $125 are settled, leaving C022 $0, C023 $63, and E04-approved C024 $25, with $188 credits distinguished from exclusions. Duplicate/company card: E05 retains C001 as canonical over C007; S020 and S030 support $79 business cost with no payment to Maya. Estimate/pending: R027 and S027 supersede the $211.20 estimate with $198, excluding the $13.20 overstatement, and S229 is correctly excluded as only the pending authorization for S029's one $224.80 flight. Notes and corresponding JSON explanations are materially consistent with these governing sources."
+    }
+  },
+  "unsupported_claims": [],
+  "limitations": [
+    "Review is limited to the supplied opaque packet and the three semantic checks; it does not independently score objective checks or verify activity outside the offline artifacts.",
+    "Hash verification establishes that all 13 files listed in manifest.packet_sha256 and both entries in manifest.artifact_sha256 match the supplied manifest; the manifest itself has no external expected digest supplied in this packet.",
+    "Condition masking and review independence are procedural, not OS-enforced. No sibling packets, condition labels, candidate code, peer reviews, or external reference artifacts were consulted."
+  ],
+  "hash_verification": {
+    "status": "pass",
+    "packet_files_verified": 13,
+    "artifact_files_verified": 2,
+    "packet_sha256_actual": {
+      "common/TASK.md": "3f05cfdfb82bdb61b31ca577ff66215d8e552075d499fc5d32cb5cad1f40ac37",
+      "common/inputs/00_README.txt": "5e0c37d86e3687e6401a339201503c25bf7baad54935b1673d875d142f8198cb",
+      "common/inputs/claims.csv": "cbef6152761c2224a949d7aaa3241a14c3f43998875f2c0622cf88a77ddd486b",
+      "common/inputs/correspondence.txt": "f1a6d70569ba48e091a02a4972d50faa8df9ee4fafb9ce85d0110ea7d2b59af2",
+      "common/inputs/policies.txt": "0d1d2d62ef7e6388ebaa1b806c9987b95775c5a53e82fc4cd083a52ead63d303",
+      "common/inputs/receipts.csv": "86a4eee621415aa2fc32245f759b3012419f76eb580653b9e637fa884002d85f",
+      "common/inputs/statement.csv": "589b3e5898b63d76260593c889aa46edf0fa1d254c1bba42f9c672616450b6a8",
+      "common/inputs/trip_calendar.txt": "dca337fe7939092f97171ba3b362e8b7a71ca14a80ad7a06a590eac25f1c4f5c",
+      "common/rubric.json": "f8446a2f3a2b760f3d34f569109b96f0e9e291f853a775de6322648d31f958e5",
+      "common/semantic_review_instructions.txt": "701a8cdfe7b34da66efc21e52402cbf1039d295c37ac48d95de6c5d7f5745229",
+      "artifacts/reconciliation.json": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061",
+      "artifacts/review_notes.txt": "746577ecd71f6ca85b3c5c97c805f7f1f3235ad1a61b6eee0ef1cc609f183f23",
+      "README.txt": "c3a97eaad140c9550522980f060bee0b513a4d1cf51075500d4d8e5036b4b658"
+    },
+    "artifact_sha256_actual": {
+      "reconciliation.json": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061",
+      "review_notes.txt": "746577ecd71f6ca85b3c5c97c805f7f1f3235ad1a61b6eee0ef1cc609f183f23"
+    },
+    "mismatches": []
+  }
+}

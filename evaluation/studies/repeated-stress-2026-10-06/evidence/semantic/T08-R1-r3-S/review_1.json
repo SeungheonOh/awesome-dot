@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "rev-55c294be",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "695c0d1e0900723c781bf36f72501ed4678edcd7067d6b4d4e3828362136bcf9",
+    "review_notes.txt": "8d2c20a9b51ae91d0f2e1502e4368b489ed335cd7cf8731140469e1eaf36ce95"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt opens with the exact task cutoff, '2026-09-30 17:00 UTC', and says 'prepared for finance review, not submitted or paid'. Its POSITION section explicitly reports '$2,142.65' payable, '$252.90' in known-USD holds across C017/C018/C028, and C026 held at 'EUR 24.00 with no supported USD valuation'. These agree with common/TASK.md, the stated acceptance in common/rubric.json R1-12, and artifacts/reconciliation.json totals reimbursement_usd_cents=214265, held_usd_cents=25290 and unvalued_holds={C026, EUR, 24.00}. The missing-evidence amounts are supported by claims.csv C017=47.90, C018=126.00, C028=79.00 and C026=EUR 24.00, with E05 confirming unresolved evidence. The notes distinguish future requests from performed actions and make no unsupported payment or outreach claim."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "The UNRESOLVED ISSUES / NEXT STEPS section in artifacts/review_notes.txt gives four distinct, practical actions. For C017 ($47.90), it identifies the missing itemized stationery receipt and asks Maya to obtain a vendor duplicate for finance, matching the empty receipt field in claims.csv, S017, E05 and the policies.txt over-$25 receipt rule. For C018 ($126.00), it identifies the absent attendee list/count and asks Maya or the workshop organizer for actual attendees/count so finance can apply P2's $30 per-person lunch cap; R018 and E05 expressly show the missing count, and the policy forbids inferring attendees. For C026 (EUR 24.00, USD unknown), it identifies the absent organization-approved cash exchange-rate record and asks Maya to obtain it from finance, consistent with R026, E05 and the cash-FX rule. For C028 ($79.00 held), it correctly contrasts R028's $79.00 receipt with settled S028's $89.00 and asks Maya to obtain a corrected itemized invoice or documented explanation/adjustment for finance reconciliation, consistent with E05 and the more-than-$1 mismatch rule. The notes explicitly exclude October 1 E06 from resolution and do not invent replacement evidence."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt CONFIRMED ADJUSTMENTS explains every required adjustment class accurately. Policy and meals uses service-date P1 through September 14 and P2 from September 15, specifically retaining P1 for September 12 C002/C003/C004 despite September 16 postings, as policies.txt and S002/S003/S004 require. It explains C004's food/tax calculation 52.00 + 6.80 x 52/68 = $57.20, one HALF_UP rounding, and exclusion of $16 alcohol plus $1.60 associated tax, grounded in R004/P1. Hotels and deposit distinguishes C005's $180 x 2 base cap plus full $46.80 tax from E01's later-stay $230 x 2 exception plus $55.20 tax; it allocates the applied $120 deposit to C021 and only $395.20 to C010, matching R010/R021 and S010/S021 and preventing duplicate reimbursement. Transport and FX uses actual S014/S015 USD settlements of $43.18/$68.82 for the EUR card purchases and leaves the C026 cash rate unknown, as the policy requires; E02's C013-specific $95 taxi exception is also explained. Refunds applies settled S122=$36, S123=$27 and S124=$125 to C022/C023/C024, retaining respectively $0/$63/$25 and grounding the approved cancellation fee in E04, without calling credits exclusions. Duplicates and payment source retains C001 as canonical and gives C007 zero incremental reimbursement per E05, while retaining C020/C030 business costs totaling $79 but paying Maya zero per S020/S030. The notes explain R027/S027's $198 final invoice replacing the $211.20 estimate with $13.20 excluded, and count C029's settled S029 flight once while excluding pending S229 from expense. These explanations agree with the corresponding reconciliation.json rows. No materially misleading or unsupported additional statement was found."
+    }
+  },
+  "hash_verification": {
+    "status": "pass",
+    "detail": "All 13 packet_sha256 entries and both artifact_sha256 entries matched the supplied manifest; review was limited to this packet."
+  },
+  "materially_unsupported_statements": []
+}

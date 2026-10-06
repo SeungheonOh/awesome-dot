@@ -1,0 +1,49 @@
+{
+  "attempt_id": "T23-R3-r3-C",
+  "status": "completed",
+  "first_terminal_observed_at_utc": "2026-10-06T06:36:06.147385+00:00",
+  "dispatch_intent_at_utc": "2026-10-06T06:32:58.386322+00:00",
+  "controller_elapsed_seconds": 187.761063,
+  "cap_seconds": 900,
+  "observed_after_cap": false,
+  "artifacts": [
+    {
+      "path": "artifacts/T23-R3-r3-C/report.sql",
+      "bytes": 2212,
+      "sha256": "87983feda55504bf5512fa8c737e32419a7dfb2b1b5b4623fd43917e8fa473b6"
+    }
+  ],
+  "collection_errors": [],
+  "protected_files": [
+    {
+      "path": "LICENSE",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "TASK.md",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/billing.sqlite",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/ledger.json",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/scenarios.json",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/schema.sql",
+      "unchanged_at_collection": true
+    }
+  ],
+  "limits": [
+    "Non-atomic shared-filesystem observation",
+    "No OS/process/network isolation proved",
+    "Descendant quiescence unverified",
+    "No provider token/cost/model-build telemetry"
+  ]
+}

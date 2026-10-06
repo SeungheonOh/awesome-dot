@@ -1,0 +1,109 @@
+{
+  "case_id": "R2",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 3,
+    "failed": 0,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R2-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-12": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The final scope and chronology are supported in both artifacts. In common/inputs/meeting_notes.txt, M2 removes French and M5 confirms Spanish FAQ acceptance; action_register.json actions[A08].title is 'Deliver the accepted Spanish FAQ translation', with status done, and handoff.txt lines 122-123 explicitly says French is not an outstanding obligation. M4 confirms A09 scheduling and transfers future A10 delivery to Kian; common/inputs/followups.txt F6 moves delivery to October 6 while confirming the updated booking. Register A09 is done with a booking title, while A10 is open with due_date 2026-10-06; handoff lines 112-115 and 124-126 preserve that distinction. Register A05/A16/A22/A26 are cancelled with null next_step, and handoff lines 139-149 gives the supported cancellations from M2/M3/M5 without assigning live work to the abandoned actions. Preserving sandbox records reflects M2's hold rather than reviving the purge. M5's reopened A13 is continued under its original ID in handoff lines 100-103; the resolved A15 obstacle and still-unrun A14 test are distinguished at lines 87-90. The artifact cutoff is September 30 17:00 UTC, and handoff lines 5-7 and 169-170 explicitly excludes F8/F9 even for alleged earlier events; the register evidence_limits does likewise. Consistently, A17 remains done, A33 has no named owner and is unresolved, A31 remains open, and A32 remains done, so the post-cutoff reopening, named-lead/completion claims and screenshot redo are not incorporated."
+        },
+        {
+          "status": "pass",
+          "rationale": "The register A08 title is 'Deliver the accepted Spanish FAQ translation', and the handoff's completed A08 entry explicitly says French was removed and is not outstanding, matching M2's scope reduction and M5's Spanish acceptance. Register A09 is the completed room/participant booking, while A10 is 'Deliver the staff training session', open under Kian with due_date 2026-10-06. The handoff says 'Scheduling A09 remains done; booking a session is not delivering it', matching M4 and F6. A05/A16/A22/A26 all have cancelled status and null next_step in the register; the handoff puts them under CONFIRMED CANCELLATIONS, matching M2/M3/M5 without reviving email, fallback, purge, or live-demo work. Preserving the A22 records respects M2's hold rather than reactivating the purge. A13 is correctly reopened as the original ticket under M5, A14 is actionable after M5's verified A15 repair, and A27 is accepted. The header gives the exact September 30 17:00 UTC cutoff; both the scope paragraph and evidence_limits exclude F8/F9, including retrospective claims. This exclusion is applied substantively: A33 stays unnamed/unresolved, A17 stays done, A32 stays done, and A31 stays open, rather than incorporating the October 1 messages. These scopes and chronology are supported by the sources, not merely asserted by the artifacts."
+        }
+      ]
+    },
+    "R2-13": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "Handoff.txt covers every active item with an actionable step and the supported owner/date or explicit gap. Lines 20-42 foreground the M4 launch chain A03/A21 -> A25 -> A28: Dev/September 26 obtains counsel approval, Uma/September 29 reconciles export snapshots or reruns verification, Yara/October 2 incorporates both and secures packet acceptance, and Ben/October 2 publishes after A25 acceptance. It expressly distinguishes immediate from transitive prerequisites. Lines 13, 20, 25, 46 and 51 highlight all four overdue actions A03/A11/A12/A21, consistent with B00 deadlines, unchanged dates in M3/M5 and the TASK.md end-of-day cutoff. Lines 46-79 covers Kian/A11/September 26 obtaining the missing mapping and verifying zero duplicates (M2/M3/F7); Lena/A12/September 28 restoring access and arranging execution or valid reassignment (M3/F7); Ravi/A18/October 2 obtaining blackout clearance and running the drill (M4/F7); Iris/A34/October 1 obtaining a partner date and finalizing the note (M4/F7); A33/unassigned/October 1 assigning a lead and completing the test (M4/F7); and Dev/A30/unset continuing the Q&A draft (M2). Lines 83-115 then covers Gia/A06/October 1 finishing the banner (M1/F4), Noor/A14/October 1 running the uncompleted test after verified quota repair (M5), Talia/A20/October 1 fixing three links and checking all 24 (M3), Carla/A02/October 2 finishing routing (F1/M4), Mira/A13/October 2 resolving and reclosing the recurring ticket (M5), Xena/A23/October 2 completing dashboard transfer (F2), Gia/A31/October 2 completing accessibility testing (F4), and Kian/A10/October 6 delivering training (M4/F6). These four launch-gate entries, six blocked/gap entries and eight ready-to-progress entries account for all 18 active items. The register's corresponding descriptions and next steps are consistent with this handoff."
+        },
+        {
+          "status": "pass",
+          "rationale": "Every one of the 18 active actions has a distinct actionable handoff entry with the correct accountable owner or explicit gap and current deadline or explicit unset date. MOST CONSEQUENTIAL EXPLICIT LAUNCH GATE foregrounds A03 (Dev, Sep 26: obtain counsel approval), A21 (Uma, Sep 29: identify tested inputs and reconcile or rerun), A25 (Yara, Oct 2: incorporate both and obtain signoff acceptance), and A28 (Ben, Oct 2: publish after A25 acceptance). It accurately distinguishes A25's immediate A03/A21 prerequisites from A28's sole immediate A25 prerequisite, as M4 requires. OTHER BLOCKED WORK AND GAPS covers A11 (Kian, Sep 26: obtain missing mapping and verify zero duplicates), A12 (Lena, Sep 28: restore workspace and arrange execution or valid reassignment), A18 (Ravi, Oct 2: obtain blackout clearance and drill), A34 (Iris, Oct 1: obtain partner date and finalize note), A33 (unassigned, Oct 1: name lead and complete test), and A30 (Dev, deadline unset: continue Q&A and incorporate counsel decision). Those entries match B00, M2-M4, and F7. READY-TO-PROGRESS WORK covers A06/Gia/Oct 1/finish banner (M1,F4); A14/Noor/Oct 1/run load test (M5); A20/Talia/Oct 1/fix three links and verify all 24 (M3); A02/Carla/Oct 2/finish routing rules (F1,M4); A13/Mira/Oct 2/reclose recurring ticket (M5); A23/Xena/Oct 2/complete dashboard transfer (F2); A31/Gia/Oct 2/complete sweep (F4); and A10/Kian/Oct 6/deliver training (M4,F6). The opening snapshot explicitly lists all four overdue actions A03/A11/A12/A21, and each relevant entry repeats OVERDUE. The end-of-day explanation agrees with TASK.md. No active action is omitted or left with only a vague status."
+        }
+      ]
+    },
+    "R2-14": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "All four named evidence/authority gaps are accurately explained rather than filled by assumption. F5 in common/inputs/followups.txt reports QA passing every row versus operations finding 42 missing, with neither identifying a snapshot/hash; M5 in common/inputs/meeting_notes.txt says neither establishes trustworthy completion. Register A21 is unresolved and its blocker describes those conflicting results, while handoff lines 25-30 states 'The later result does not settle the conflict' and proposes identifying inputs and reconciliation or rerunning. M3 says Mira was merely suggested for A12 and has neither accepted nor been finally assigned, and F7 says that proposal remains unresolved. Register A12 retains Lena and explains the proposal, and handoff lines 51-57 explicitly retains her accountability while proposing restored access or a valid reassignment. M4 releases Hana from A33 to an unnamed incoming-support-lead role, with F7 confirming no named lead. Register A33 owner is null, status unresolved, and handoff lines 68-73 explicitly disallows assuming either Hana's accountability or test completion. M2 removes A30's deadline without replacement while allowing drafting; register A30 has due_date null and status open, and handoff lines 74-79 calls this a deliberate deadline gap rather than a blocker or overdue work. I found no materially unsupported assertions elsewhere in the descriptive fields or handoff: accepted work is grounded in explicit source acceptance, A11/A20 partial progress remains incomplete, A03 comments remain unapproved, and the A31 ownership acceptance is not treated as completion. Handoff lines 8-10 disclaims outreach, external changes and independent inspection, and lines 172-174 distinguishes proposed next steps from actions taken; the register verification_limit similarly bounds its claims to supplied fictional records."
+        },
+        {
+          "status": "pass",
+          "rationale": "The handoff and descriptive register fields preserve each required uncertainty. For A21, F5 reports QA passing all rows versus operations missing 42, without snapshot/hash identification, and M5 says neither establishes trustworthy completion. The handoff explicitly states 'The later result does not settle the conflict' and proposes identifying inputs and reconciling/rerunning; the register remains unresolved. For A12, M3 states Mira was suggested but neither accepted nor assigned, reinforced by F7. Both artifacts retain Lena and explain that accountability must not transfer without acceptance or a final assignment. For A33, M4 explicitly releases Hana to an unnamed incoming-lead role, and F7 confirms no named lead; register owner is null and handoff says 'accountable person UNASSIGNED', with naming a lead as future work. For A30, M2 deliberately removes the deadline while permitting drafting; register due_date is null and status open, while handoff says 'deadline UNSET' and makes agreeing a date a prospective step. The artifacts do not supply a partner launch date for A34 or claim approval from A03's returned comments, completion of A11's partially successful script, A20's partial link check, A10's booking, or A14's repaired environment. They also distinguish accepted Xena ownership of A23 from completed A24. Scope/evidence text states 'No one was contacted and no external record or system was changed' and limits verification to supplied notes; the conclusion identifies next steps as proposed actions, not actions taken. I found no materially unsupported factual assertion elsewhere in the handoff or descriptive register fields after comparison with B00, M1-M5, and F1-F9 under the required cutoff. All ten manifest-listed file hashes, including both exact artifact hashes copied above, were verified."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "action_register.json": "af8a7679ebb8ab00ea32f664a8cfa2391a3f361efe5fd62c983865b06589a0a7",
+    "handoff.txt": "3c6bce7064d07d33eb3778564bc0d942c5eab6d2c8e213cc9615c7731acb1d40"
+  },
+  "not_candidate_execution": true
+}

@@ -1,0 +1,55 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "rev-818ce78b",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061",
+    "review_notes.txt": "746577ecd71f6ca85b3c5c97c805f7f1f3235ad1a61b6eee0ef1cc609f183f23"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "review_notes.txt line 3 states the exact cutoff, 2026-09-30 17:00 UTC, matching common/TASK.md. Lines 7 and 9 clearly state USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 held without USD valuation. The reconciliation.json totals agree: reimbursement_usd_cents=214265, held_usd_cents=25290, and the C026 unvalued_holds entry is EUR 24.00. The USD hold is supported by C017/S017 USD 47.90, C018/R018/S018 USD 126.00, and C028 claimed USD 79.00, whose unresolved status is confirmed by E05. The cash hold follows C026/R026 and the approved-rate requirement in policies.txt. Payment language describes amounts payable, not a completed payment or outreach. Line 34 explicitly distinguishes this offline reconciliation from vendor/bank confirmation and excludes E06 after the cutoff. No unsupported affirmative payment or action claim appears."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "review_notes.txt lines 28-31 give separate, practical steps for all four unresolved claims, consistent with reconciliation.json hold rows. For C017, line 28 identifies the absent itemized receipt for USD 47.90 and asks Maya to obtain a supplier duplicate for finance to match to S017; claims.csv has no receipt, E05 confirms absence, and policies.txt requires one above USD 25. For C018, line 29 requests actual attendees/count tied to the workshop purpose, then finance assessment under the P2 USD 30 per-person lunch cap; R018 and E05 confirm the missing list/count. For C026, line 30 asks Maya/finance to obtain the organization-approved rate record and then value/check the EUR 24.00 cash taxi; R026, E05, and the foreign-cash policy support the missing evidence and unknown USD value. For C028, line 31 requests a corrected itemized record or vendor explanation and finance reconciliation of R028 USD 79 versus S028 USD 89, the unexplained difference confirmed by E05 and exceeding the USD 1 policy tolerance. These are prospective requests, not invented recovered evidence, approvals, attendees, rates, or resolved outcomes."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "review_notes.txt lines 15-25 explain every required adjustment class and agree with the source records and corresponding reconciliation.json notes. Line 15 correctly applies P1 through September 14 and P2 from September 15 by service date, including C002-C004 despite S002-S004 posting September 16. Line 16 removes R004 alcohol USD 16 plus proportional tax USD 1.60 and explains USD 52 + (6.80 x 52/68) = USD 57.20 with the single rounding required by P1. Lines 17-18 preserve mandatory hotel tax, distinguish the capped C005 stay from E01, and allocate R010 USD 515.20 as C021 USD 120 deposit plus C010 USD 395.20 already-net final balance, supported by R021/S021/S010. Line 20 uses S014 USD 43.18 and S015 USD 68.82 for employee-card FX while leaving cash C026 unvalued under the cash-rate rule. Line 23 nets settled S122 USD 36, S123 USD 27, and S124 USD 125 against their charges, retaining only the E04-approved USD 25 cancellation fee for C024; these credits total USD 188 and are not exclusions. Line 24 identifies C007 as the E05-confirmed duplicate of C001 and separates S020/S030 company-paid USD 79 from employee reimbursement. Line 25 explains R027/S027 final USD 198 superseding the USD 211.20 estimate, excluding USD 13.20, and counts S029 airfare USD 224.80 once while excluding S229 pending authorization as another expense. Lines 19, 21, and 22 also correctly explain E02 taxi approval, the C016 receipt threshold, and E03 one-month software approvals. No materially misleading adjustment explanation was found."
+    }
+  },
+  "unsupported_claims": [],
+  "limitations": [
+    "Review is limited to the supplied opaque packet and the three semantic checks; no objective checks were graded.",
+    "The packet contains no execution history to independently verify the artifact statement that nothing was submitted, paid, or changed outside the packet. This is a scope limitation, not evidence that an external action occurred; no affirmative completed-action claim appears.",
+    "Masking and independence were procedural, not OS-enforced. No outside references, condition mappings, peer reviews, or candidate code were consulted or executed."
+  ],
+  "hash_verification": {
+    "status": "pass",
+    "packet_files_verified": 13,
+    "artifact_files_verified": 2,
+    "packet_sha256_matches": {
+      "common/TASK.md": true,
+      "common/inputs/00_README.txt": true,
+      "common/inputs/claims.csv": true,
+      "common/inputs/correspondence.txt": true,
+      "common/inputs/policies.txt": true,
+      "common/inputs/receipts.csv": true,
+      "common/inputs/statement.csv": true,
+      "common/inputs/trip_calendar.txt": true,
+      "common/rubric.json": true,
+      "common/semantic_review_instructions.txt": true,
+      "artifacts/reconciliation.json": true,
+      "artifacts/review_notes.txt": true,
+      "README.txt": true
+    },
+    "artifact_sha256_matches": {
+      "reconciliation.json": true,
+      "review_notes.txt": true
+    },
+    "limitation": "All 13 packet_sha256 entries and both artifact_sha256 entries match manifest.json. The manifest itself has no supplied expected hash, so no independent manifest authenticity claim is made."
+  }
+}

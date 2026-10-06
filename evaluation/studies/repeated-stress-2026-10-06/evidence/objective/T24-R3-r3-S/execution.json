@@ -1,0 +1,58 @@
+{
+  "started_at_utc": "2026-10-06T06:37:41.811403+00:00",
+  "finished_at_utc": "2026-10-06T06:37:41.853146+00:00",
+  "exit_status": 0,
+  "infrastructure_error": null,
+  "supervisor_timeout_seconds": 60,
+  "supervisor_timeout_is_not_scoring_threshold": true,
+  "receipt_sha256": "b3afd0bf0ca2a4cc55e2fd93b9d94351d80cc86a70429da0ad7cca35365dd954",
+  "artifact_sha256": {
+    "notes.md": "a8d950df96034ee0f92cee31e66410dbac9e1589c0f5124d44ee07eb428a5032",
+    "report.sql": "4ade31ebe86e3a80ceb7f6e9d1e8531ed28e639cb15ab5bc1f43dc30db60d1f5"
+  },
+  "frozen_source_sha256_before": {
+    "authoring/R3/candidate/TASK.md": "e2db15285d8bf66e8c34ad81e1d04b9738eb7af238ba851a0a459eaedeb633cf",
+    "authoring/R3/candidate/inputs/billing.sqlite": "bb8bedc6ce954da3ffa0b3024e49d357bcefcf44e0aef95520a26049375a35f7",
+    "authoring/R3/candidate/inputs/ledger.json": "37e37ff12ba9a02890e3e768371b0bda995f8d80cda3b4a1eaae195fc55c1563",
+    "authoring/R3/candidate/inputs/scenarios.json": "705ab65a32ff4ee39c8c0cef2db1a0381958125e4fd85ca5288bb011a11df41f",
+    "authoring/R3/candidate/inputs/schema.sql": "fc53e63ad54168ed61c8602cf3c22ac8efd41b079167f9d97d7aa470cf464529",
+    "authoring/R3/candidate/output/report.sql": "30afe5180137513f2ea4831156d68abef7f1d02b82eee91ad9b78646bf753425",
+    "authoring/R3/private/README.md": "f04ac8389ae915b48c7036f635075648366454de5aa66f0861155aa72a57eab4",
+    "authoring/R3/private/build_fixture.py": "15b4bcd66cd27524fcf03a9f4da27f7cc1319def59488a187d46f69fe68c2a63",
+    "authoring/R3/private/control_results.json": "005dffee6a731c49ff138c58524f46c084ecc1a6ab4b7207e798f021e5feacf4",
+    "authoring/R3/private/expected.json": "f5b69bf0c7b32ff9373ab5d5e3c17164c594b7c4c2c139946c66b1a9f0f2c5f4",
+    "authoring/R3/private/grade.py": "c69fc18607f620581118a2ddfe779f00a2b66b31547b73e2edaa01b08714e6c1",
+    "authoring/R3/private/manifest.json": "1b60b465f55b8acc2e7b34a12f525f9d8daa0900508860f1cf13da9947e8366b",
+    "authoring/R3/private/reference.sql": "9b7ea77fa0233cd439d60b455bb8bfeb3680db5731471748d4c723618dc79081",
+    "authoring/R3/private/reference_result.json": "a9252a627c6f2fbc0662e31cdf87e440ecda895aae4e2a6ec32ab3a6d50614d7",
+    "authoring/R3/private/validate_controls.py": "7de73ba9993108d4b718101ae84c2055208a6164cdbcbb22d5f993857e64786a"
+  },
+  "frozen_source_sha256_after": {
+    "authoring/R3/candidate/TASK.md": "e2db15285d8bf66e8c34ad81e1d04b9738eb7af238ba851a0a459eaedeb633cf",
+    "authoring/R3/candidate/inputs/billing.sqlite": "bb8bedc6ce954da3ffa0b3024e49d357bcefcf44e0aef95520a26049375a35f7",
+    "authoring/R3/candidate/inputs/ledger.json": "37e37ff12ba9a02890e3e768371b0bda995f8d80cda3b4a1eaae195fc55c1563",
+    "authoring/R3/candidate/inputs/scenarios.json": "705ab65a32ff4ee39c8c0cef2db1a0381958125e4fd85ca5288bb011a11df41f",
+    "authoring/R3/candidate/inputs/schema.sql": "fc53e63ad54168ed61c8602cf3c22ac8efd41b079167f9d97d7aa470cf464529",
+    "authoring/R3/candidate/output/report.sql": "30afe5180137513f2ea4831156d68abef7f1d02b82eee91ad9b78646bf753425",
+    "authoring/R3/private/README.md": "f04ac8389ae915b48c7036f635075648366454de5aa66f0861155aa72a57eab4",
+    "authoring/R3/private/build_fixture.py": "15b4bcd66cd27524fcf03a9f4da27f7cc1319def59488a187d46f69fe68c2a63",
+    "authoring/R3/private/control_results.json": "005dffee6a731c49ff138c58524f46c084ecc1a6ab4b7207e798f021e5feacf4",
+    "authoring/R3/private/expected.json": "f5b69bf0c7b32ff9373ab5d5e3c17164c594b7c4c2c139946c66b1a9f0f2c5f4",
+    "authoring/R3/private/grade.py": "c69fc18607f620581118a2ddfe779f00a2b66b31547b73e2edaa01b08714e6c1",
+    "authoring/R3/private/manifest.json": "1b60b465f55b8acc2e7b34a12f525f9d8daa0900508860f1cf13da9947e8366b",
+    "authoring/R3/private/reference.sql": "9b7ea77fa0233cd439d60b455bb8bfeb3680db5731471748d4c723618dc79081",
+    "authoring/R3/private/reference_result.json": "a9252a627c6f2fbc0662e31cdf87e440ecda895aae4e2a6ec32ab3a6d50614d7",
+    "authoring/R3/private/validate_controls.py": "7de73ba9993108d4b718101ae84c2055208a6164cdbcbb22d5f993857e64786a"
+  },
+  "stdout_sha256": "3a3fa7576f00c33c24cf8849cd1f33cf6a2a9c8424043af62693c680f13484d3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sql_inspection": {
+    "source_sha256": "4ade31ebe86e3a80ceb7f6e9d1e8531ed28e639cb15ab5bc1f43dc30db60d1f5",
+    "inspected_at_utc": "2026-10-06T06:37:41.706168+00:00",
+    "exact_source_read": true,
+    "inspection": "Single WITH/SELECT statement over the seven allowed tables, event aggregation CTEs and joined line facts; only SUM/COUNT/COALESCE/substr functions with named scenario parameters. No writes, ATTACH, schema access, PRAGMA, extension, external function or Python. Eligible for unchanged frozen read-only bounded SQLite grader; not a correctness assessment."
+  },
+  "candidate_python_executed": false,
+  "semantic_reviews_supplied": false,
+  "command_role": "Frozen grader applied to exact saved artifact; no candidate Python executed"
+}

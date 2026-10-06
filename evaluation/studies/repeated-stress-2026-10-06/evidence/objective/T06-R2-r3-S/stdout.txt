@@ -1,0 +1,79 @@
+{
+  "case_id": "R2",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 0,
+    "failed": 0,
+    "unknown": 3,
+    "total": 3
+  },
+  "checks": {
+    "R2-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-12": {
+      "status": "unknown",
+      "reason": "Two independent masked reviews have not been supplied"
+    },
+    "R2-13": {
+      "status": "unknown",
+      "reason": "Two independent masked reviews have not been supplied"
+    },
+    "R2-14": {
+      "status": "unknown",
+      "reason": "Two independent masked reviews have not been supplied"
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "action_register.json": "af4c03f5ce42a2ec8bbfa708a7195247c73773c127d3a06c9caf72ccad547c8c",
+    "handoff.txt": "fea4c9b5e1b8db40f4a60fd458fb211108fe0f30b01ec899ea4476eef8634fba"
+  },
+  "not_candidate_execution": true
+}

@@ -1,0 +1,165 @@
+ATLAS INTAKE LAUNCH ACTION HANDOFF
+As known at September 30, 2026, 17:00 UTC
+
+Evidence and scope
+This is an offline reconciliation of the 34 canonical commitments. B00, final
+minutes M1-M5, and follow-ups F1-F7 support this handoff. F8 and F9 were received
+on October 1 and were not used, even where they describe events allegedly before
+the cutoff. No messages were sent, systems changed, or actions in the notes
+performed. Proposed next steps below have not been carried out.
+
+All due dates are UTC end-of-day. An incomplete September 30 item would not be
+overdue at this cutoff. Completed and cancelled actions are not counted overdue.
+There are 18 active actions: 9 open, 7 blocked, and 2 unresolved. Another 12 are
+done and 4 are cancelled. Four active actions are overdue: A03, A11, A12, A21.
+The JSON register contains the canonical fields and source references for each.
+
+MOST CONSEQUENTIAL REMAINING LAUNCH DEPENDENCIES
+
+The explicit acceptance chain is A03 and A21 -> A25 -> A28. A03 and A21 are
+already overdue, while both A25 and A28 are due October 2. This leaves the
+signoff and publication sequence exposed. These are immediate dependencies:
+A25 depends on A03 and A21; A28 depends only on A25, not its transitive inputs.
+
+- A03 | Dev | BLOCKED, OVERDUE | Due September 26
+  Counsel returned comments but explicitly did not approve the privacy text.
+  Obtain the final approved text and give the approval to Yara for A25. A draft
+  or returned comments cannot close this action. [B00, M2, M5]
+
+- A21 | Uma | UNRESOLVED, OVERDUE | Due September 29
+  QA's 09:00 report says all rows passed; operations' 11:00 report says 42 rows
+  are missing. Neither records the export snapshot/hash. Neither establishes
+  trustworthy completion, and the later report does not settle the conflict.
+  Identify the tested inputs; reconcile the reports or rerun on an identified
+  snapshot. Provide the trustworthy result to Yara. [B00, F5, M5]
+
+- A25 | Yara | BLOCKED | Due October 2
+  Obtain both A03 privacy approval and A21 reconciled export verification, then
+  complete the launch signoff packet and secure acceptance. [B00, M4]
+
+- A28 | Ben | BLOCKED | Due October 2
+  Confirm acceptance of A25, then publish the launch go/no-go decision. Merely
+  assembling or submitting the packet is insufficient. [B00, M4]
+
+OTHER OVERDUE WORK
+
+- A11 | Kian | BLOCKED, OVERDUE | Due September 26
+  The script ran, but 18 duplicate pilot IDs remain. The pilot team's exported
+  mapping is still missing. Obtain it, reconcile the duplicates, and verify
+  zero remaining duplicates. No replacement deadline was agreed. [B00, M2, M3, F7]
+
+- A12 | Lena | BLOCKED, OVERDUE | Due September 28
+  The consent workspace remains inaccessible and Lena is on leave. Restore
+  access and arrange audit coverage. Mira was only suggested and has neither
+  accepted nor been assigned by final decision; Lena remains the accountable
+  owner until a valid transfer. The original due date remains. [B00, M3, F7]
+
+OWNER AND DEADLINE GAPS
+
+- A33 | No named owner | UNRESOLVED | Due October 1
+  Final M4 released Hana and assigned accountability to the incoming support
+  lead role, which remains unfilled. Name that person and complete and verify
+  the triage mailbox test. Do not assign Hana or infer completion. The later
+  receipt of F8 cannot fill this cutoff-time gap. [B00, M4, F7]
+
+- A30 | Dev | OPEN | No agreed due date
+  September 29 was explicitly removed and no replacement was agreed. Counsel's
+  retention decision is pending, but Q&A drafting can continue. Progress the
+  draft, incorporate the decision when available, and seek an agreed deadline.
+  This is not a blocked or overdue action. [B00, M2]
+
+REMAINING ACTIVE WORK DUE OCTOBER 1
+
+- A06 | Gia | OPEN
+  Finish the in-progress launch banner, the selected replacement for A05's
+  cancelled email. Gia accepted the handoff from Faye in M1. [B00, M1, F4]
+
+- A14 | Noor | OPEN
+  Run the full load test and record the results. Owen's quota fix A15 was
+  independently verified at 14:00 September 30, so the test is no longer
+  blocked and A15 is not an unresolved dependency. The load test itself has
+  not run; M5 sets its October 1 deadline. [B00, M1, M5]
+
+- A20 | Talia | OPEN
+  Only 21 of 24 runbook links have been checked; three are broken. Repair or
+  coordinate repair of those links and verify the complete set by the revised
+  October 1 deadline. Partial checking is not completion. [B00, M3]
+
+- A34 | Iris | BLOCKED
+  Obtain the partner's confirmed launch date, then finalize the launch note.
+  The existing draft does not meet the commitment; no date confirmation had
+  arrived by the cutoff. [B00, M4, F7]
+
+REMAINING ACTIVE WORK DUE OCTOBER 2 OR LATER
+
+- A02 | Carla | OPEN | Due October 2
+  Finish the routing rules. Carla accepted in F1 and M4 sets the final revised
+  deadline, superseding the September 29 target. Accepted schema A01 is no
+  longer a prerequisite to resolve. [B00, F1, M4]
+
+- A13 | Mira | OPEN | Due October 2
+  Resolve the recurring vendor issue and close ticket 714 again. The ticket
+  was previously closed, but M5 explicitly reopens the original A13 with this
+  new deadline. Work is actionable, without a separate prerequisite. [B00, M2, M5]
+
+- A18 | Ravi | BLOCKED | Due October 2
+  Obtain compliance clearance before running the weekend pager drill. The
+  blackout remains in effect and no clearance has arrived. Escalate the date
+  risk if it remains unavailable; no revised deadline is authorized. [B00, M4, F7]
+
+- A23 | Xena | OPEN | Due October 2
+  Complete the dashboard ownership transfer. F2 accepts the handoff and date;
+  this is separate from Xena's already-approved A24 budget readout. [B00, M3, F2]
+
+- A31 | Gia | OPEN | Due October 2
+  Complete the accessibility sweep. M4's proposal alone did not transfer it;
+  Gia's F4 acceptance did, with the revised deadline. Completion is not
+  established by evidence received at the cutoff. [B00, M4, F4]
+
+- A10 | Kian | OPEN | Due October 6
+  Prepare and deliver staff training on October 6. Kian accepted delivery
+  responsibility in M4 and the new date in F6. A09 scheduling, still owned by
+  Jae, is complete and its room/participant bookings were successfully updated.
+  A completed booking is not delivered training. [B00, M4, F6]
+
+IMPORTANT COMPLETIONS AND CANCELLATIONS
+
+The 12 confirmed completed commitments are:
+- A01: Ava's intake schema accepted. [M2]
+- A04: Eli's funnel instrumentation passed QA and was accepted. [M4]
+- A07: Hana's FAQ migration accepted. [M3]
+- A08: Iris's Spanish FAQ accepted September 30 at 15:00; French was removed
+  from scope and is not an open obligation. [M2, M5]
+- A09: Jae's scheduling completed, with booking updated to October 6. [M4, F6]
+- A15: Owen's quota repair independently verified September 30 at 14:00. [M5]
+- A17: Quin's complete support rota accepted; no usable reopening exists. [M4]
+- A19: Sara's full onboarding checklist accepted. [M3]
+- A24: Xena's full budget readout delivered and approved. [M4]
+- A27: Ava's recorded walkthrough accepted September 30 at 16:30. [M5]
+- A29: Carla's data dictionary accepted, including previously omitted
+  definitions. [M4]
+- A32: Faye's screenshots passed the complete checklist and were accepted;
+  no redo obligation was known at the cutoff. [F3]
+
+The four cancellations remain final absent an explicit usable reopening:
+- A05: Email announcement abandoned in favor of A06's banner. [M2]
+- A16: Alternate-routing fallback plan abandoned by steering. [M5]
+- A22: Sandbox purge cancelled; sample records must be preserved under the
+  internal review hold. This is not permission to delete them later. [M2]
+- A26: Live demo cancelled in favor of A27's accepted recording. [M3, M5]
+
+IDENTITY, UNCERTAINTY, AND VERIFICATION LIMITS
+DOC-9 is A29, OPS-17 is A13, and ALT-FAQ is A07. They are aliases, not additional
+commitments. A13's reopening continues the original action.
+
+The unresolved CRM test conflict and the unfilled A33 owner assignment are
+explicit uncertainties, not inferred completions. A12's proposed replacement
+does not remove Lena's accountability. A30's deadline is deliberately unset.
+Other external obstacles remain as stated; silence adds no new blocker or date.
+F8's retrospective test claim, named support lead and rota request, and F9's
+screenshot redo and accessibility completion claims are all excluded.
+
+Verification is limited to reconciling and locally checking the supplied
+synthetic records; underlying test reports, systems and external approvals were
+not independently inspected. The completed states above are the confirmations
+provided in the packet, not claims of new verification performed for this handoff.

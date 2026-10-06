@@ -1,0 +1,36 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "rev-908bf625",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354",
+    "handoff.txt": "c53e32c49297c24a7f2f6e5cbd906a007ef1184c77b895c7c005c3dd264d4c6c"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve the final scope and receipt-time boundary. The register titles A08 as the Spanish FAQ translation and marks it done; the handoff explicitly says French was removed and is not an open obligation, matching M2 and M5. A09 is completed room/participant booking, while A10 is Kian's still-open delivery due October 6; the handoff states that completed booking is not delivered training, consistent with M4 and F6. A05/A16/A22/A26 are cancelled with null register next_step fields, and the handoff describes their cancellations and the record-preservation hold without reviving any work (M2, M3, M5). Both artifacts state the September 30 17:00 UTC cutoff and exclude F8/F9, including retrospective claims. The resulting A17 done, A32 done, A31 open, and A33 unassigned/unresolved states demonstrate that the post-cutoff rota request, screenshot redo, accessibility completion and triage claim were not incorporated. A13 is correctly reopened under its original identity and A14 becomes actionable after verified A15 completion, as M5 requires."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff has substantive action lines for all 18 active items, not merely a register reference. It leads with the M4 chain A03/A21 -> A25 -> A28 and correctly names immediate versus transitive prerequisites. It foregrounds all four overdue actions with baseline dates: A03 Dev September 26 (obtain counsel approval), A11 Kian September 26 (obtain mapping and eliminate 18 duplicates), A12 Lena September 28 (restore workspace access and arrange coverage), and A21 Uma September 29 (identify snapshots and reconcile/rerun). A25 Yara and A28 Ben are each due October 2 with acceptance then publication steps. The explicit gaps are A33 no named person, due October 1, requiring appointment and test completion; and A30 Dev, no agreed deadline, with drafting and deadline-agreement steps. Under the unambiguous October 1 section are A06 Gia (finish banner), A14 Noor (run restored-environment load test), A20 Talia (repair/verify links) and A34 Iris (obtain partner date and finalize note). The remaining section gives A02 Carla, A13 Mira, A18 Ravi, A23 Xena and A31 Gia all due October 2, with concrete completion/clearance steps, and A10 Kian due October 6 for training delivery. These owners and dates follow M1-M5 and F1/F2/F4/F6/F7. Useful completed and cancelled decisions are also separately summarized."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "The register A21 blocker and handoff explicitly retain both the all-rows-pass and 42-missing-row reports, explain the absent export snapshot/hash, and refuse to let the later report resolve the conflict; identifying inputs and reconciling/rerunning is proposed rather than claimed complete (F5, M5). A12 remains Lena's blocked action and the handoff says Mira was only suggested, without acceptance or final assignment (M3, F7). A33 has owner null and unresolved status, with prose explaining Hana's release and the unfilled incoming-support-lead role instead of assigning Rowan from F8 (M4, F7). A30 has due_date null, open status, and clear prose that September 29 was removed and drafting may continue (M2). Additional incomplete work is accurately distinguished from completion: counsel comments are not approval, the ID script is not successful reconciliation, partial link checking is not completion, and scheduling is not training delivery. Next steps are explicitly proposed and unperformed; no outreach, system change, newly obtained approval, or invented deadline is claimed. The final verification paragraph limits completed-state assertions to confirmations in the synthetic packet rather than new independent operational verification. No materially unsupported substantive statement was found in the prose or descriptive register fields."
+    }
+  },
+  "unsupported_claims": [],
+  "limitations": [
+    "Review is limited to the supplied synthetic packet and the two artifacts; underlying external reports, systems and approvals were not independently available or inspected.",
+    "No execution trace was supplied, so process-level claims about local checking or absence of external actions cannot be independently audited; the artifacts themselves make no claim of performed outreach or external verification.",
+    "Only the three semantic checks were evaluated; this review does not substitute for objective-check grading. Condition masking and independence were procedural."
+  ],
+  "hash_verification": {
+    "packet_sha256_verified": true,
+    "packet_files_verified": 10,
+    "artifact_sha256_verified": true,
+    "mismatches": []
+  }
+}

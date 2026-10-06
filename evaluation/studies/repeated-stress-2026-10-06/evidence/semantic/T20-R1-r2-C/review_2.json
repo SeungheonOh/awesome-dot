@@ -1,0 +1,24 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "rev-cbf3e068",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "8df0a5092f6158e7d276c9fbeb9bc93ad5da40ec8ea52850148f960ebbdbd7f7",
+    "review_notes.txt": "28b725538317870f7d910209609d874c98968c1258c156eebf02fbbf398a8b8a"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "review_notes.txt opens with the exact cutoff \"2026-09-30 17:00 UTC\" required by TASK.md, and POSITION states \"Pay Maya now: $2,142.65\" and \"Known-USD holds: $252.90, plus one unvalued hold of EUR 24.00.\" These match reconciliation.json totals.reimbursement_usd_cents=214265, totals.held_usd_cents=25290, and totals.unvalued_holds=[C026, EUR, \"24.00\"], as well as the rubric's required position. The known holds correspond to claims C017 $47.90, C018 $126.00, and C028 $79.00; policies.txt and E05 require them held, while C026/R026 lack an approved cash FX record. The opening explicitly says \"no payment or external action has been taken\"; payment language describes the payable handoff, and next steps are proposals rather than claims of completed outreach. No unsupported completed payment or external action is claimed."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "review_notes.txt OPEN ISSUES / NEXT STEPS separately covers all four issues and supplies practical owners/actions. C017: \"$47.90 held\" because the itemized stationery receipt is absent, with Maya asked to obtain a duplicate itemized supplier receipt for finance; claims.csv has no receipt, S017 is $47.90, E05 confirms absence, and P1/P2 require an itemized receipt above $25. C018: \"$126.00 held\" for missing attendee list/count, with Maya or the organizer to supply actual attendees and finance to test the P2 $30-per-person cap; R018 has a blank attendee field, E05 confirms no count, and policies prohibit inferring attendees. C026: \"EUR 24.00 held with no USD valuation,\" with finance to provide or approve the applicable rate record; R026 and E05 establish that cash payment is documented but the organization-approved exchange-rate record is missing. C028: \"$79.00 held\" with the exact $79 receipt/claim versus $89 S028 settlement and $10 unexplained difference, requesting a corrected itemized vendor receipt or written explanation for finance reconciliation; E05 confirms no explanation and policies set the $1 discrepancy tolerance. No missing evidence is asserted to have been supplied, and the October 1 E06 is explicitly excluded from resolution."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "review_notes.txt CONFIRMED ADJUSTMENTS explains every required class and agrees with the supplied evidence. It uses P1 through September 14 and P2 from September 15, explicitly keeping C002-C004 on P1 despite September 16 postings (claims.csv, S002-S004), and correctly describes E02's C013-only $95 taxi limit. It explains C004 alcohol/tax removal as $52 + $6.80 x 52/68 = $57.20, with one final HALF_UP cent rounding before the $65 cap and $17.60 excluded, matching R004 and P1; it also explains relevant meal caps and C016's receipt exception. It retains all $46.80 lodging tax on C005 while capping two room nights at $180 ($406.80 total), limits E01's $230/night exception to September 15-17, and allocates R010's $515.20 total as $120 deposit C021 plus $395.20 final balance C010, matching R010/R021/S010/S021 without double counting. It uses settled USD $43.18/$68.82 for foreign-card claims C014/C015 (S014/S015) and refuses to derive C026 cash FX from them, as P1/P2 require. It identifies actual settled credits S122 $36, S123 $27, and S124 $125, producing $0/$63/$25 payable and ties the retained seminar fee to E04. It identifies C007 as a duplicate of canonical C001 using E05, records C020 $49 and C030 $30 as company-card costs with no employee reimbursement (S020/S030), and accurately limits E03 software authorization to one month each. Finally, it explains the C027 $198 final invoice/settlement replacing the $211.20 estimate and excluding $13.20 (R027/S027), and counts only settled S029 airfare $224.80 while excluding pending S229 from additional expense. The ledger notes are consistent with these explanations; no materially misleading adjustment statement was found."
+    }
+  }
+}

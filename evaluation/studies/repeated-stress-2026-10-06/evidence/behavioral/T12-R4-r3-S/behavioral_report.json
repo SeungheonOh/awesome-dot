@@ -1,0 +1,72 @@
+{
+  "behavior": {
+    "case": "R4",
+    "checks": [
+      {
+        "id": "views_and_edits",
+        "status": "pass"
+      },
+      {
+        "id": "fast_forward_base",
+        "status": "pass"
+      },
+      {
+        "id": "disjoint_modifications",
+        "status": "pass"
+      },
+      {
+        "id": "insert_delete_endings",
+        "status": "pass"
+      },
+      {
+        "id": "identical_adjacent_hunks",
+        "status": "pass"
+      },
+      {
+        "id": "conflict_retention",
+        "status": "pass"
+      },
+      {
+        "id": "pending_blocks_mutation",
+        "status": "pass"
+      },
+      {
+        "id": "resolution_choices",
+        "status": "pass"
+      },
+      {
+        "id": "rename_remove",
+        "status": "pass"
+      },
+      {
+        "id": "save_reload",
+        "status": "pass"
+      },
+      {
+        "id": "failed_save_atomicity",
+        "status": "pass"
+      },
+      {
+        "id": "corrupt_snapshots",
+        "status": "pass"
+      },
+      {
+        "id": "bounds_nofollow",
+        "status": "pass"
+      }
+    ],
+    "totals": {
+      "fail": 0,
+      "pass": 13,
+      "unknown": 0
+    }
+  },
+  "case": "R4",
+  "execution_status": "finished",
+  "phase": "behavioral",
+  "plan_sha256": "b45ad74dc0d4728689f8183bcd29b625f110c9812b1a8d5a1dc67d54146e5a74",
+  "returncode": 0,
+  "source_sha256": "448fdead08c7e82cd39771331041743ed344ccd8b547e68dc72d6d8129ac1753",
+  "stderr.log": "",
+  "stdout.log": "{\"pass\": 13, \"fail\": 0, \"unknown\": 0}\n"
+}

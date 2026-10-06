@@ -1,0 +1,690 @@
+{
+  "as_of": "2026-09-30T17:00:00Z",
+  "timezone": "UTC",
+  "scope": "Atlas Intake launch commitments as knowable at the cutoff; fictional offline evidence only.",
+  "date_rule": "Due dates mean the end of that UTC day. Overdue means an active commitment whose due date ended before the cutoff; done and cancelled actions are not currently overdue. For unresolved A21, the flag indicates a passed deadline with completion still unestablished, not a conclusion that either conflicting report is correct.",
+  "actions": [
+    {
+      "action_id": "A01",
+      "title": "Finalize the intake schema and obtain acceptance",
+      "owner": "Ava",
+      "due_date": "2026-09-25",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M1",
+        "M2"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The working group accepted the schema; the acceptance condition is met."
+    },
+    {
+      "action_id": "A02",
+      "title": "Complete the intake routing rules",
+      "owner": "Carla",
+      "due_date": "2026-10-02",
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M1",
+        "F1",
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": "Carla to finish the routing rules by October 2.",
+      "resolution_note": "Carla explicitly accepted ownership in F1. M4 sets the final October 2 deadline. Accepted A01 is no longer an unresolved prerequisite."
+    },
+    {
+      "action_id": "A03",
+      "title": "Obtain counsel approval of the privacy text",
+      "owner": "Dev",
+      "due_date": "2026-09-26",
+      "status": "blocked",
+      "dependencies": [],
+      "overdue": true,
+      "evidence_ids": [
+        "B00",
+        "M2",
+        "M5"
+      ],
+      "blocker": "Counsel has returned comments but explicitly has not approved the privacy text.",
+      "next_step": "Dev to resolve counsel comments and obtain the final approved privacy text, then provide it for A25.",
+      "resolution_note": "A draft and counsel comments do not satisfy approval. The original deadline remains."
+    },
+    {
+      "action_id": "A04",
+      "title": "Instrument the intake funnel and complete accepted QA",
+      "owner": "Eli",
+      "due_date": "2026-09-28",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "Funnel instrumentation passed QA and was accepted."
+    },
+    {
+      "action_id": "A05",
+      "title": "Prepare the launch announcement email",
+      "owner": "Faye",
+      "due_date": "2026-09-29",
+      "status": "cancelled",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M2"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The final decision cancelled the email and chose A06 banner instead; no reopening is recorded."
+    },
+    {
+      "action_id": "A06",
+      "title": "Complete the launch banner design",
+      "owner": "Gia",
+      "due_date": "2026-10-01",
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M1",
+        "F4"
+      ],
+      "blocker": null,
+      "next_step": "Gia to complete the launch banner by October 1.",
+      "resolution_note": "Gia accepted the transfer from Faye in M1. F4 confirms the banner is still in progress."
+    },
+    {
+      "action_id": "A07",
+      "title": "Complete the help FAQ migration",
+      "owner": "Hana",
+      "due_date": "2026-09-26",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M3"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The migration was accepted as complete. ALT-FAQ is an alias of A07."
+    },
+    {
+      "action_id": "A08",
+      "title": "Translate the launch FAQ into Spanish and obtain acceptance",
+      "owner": "Iris",
+      "due_date": "2026-09-30",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M2",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "M2 removed French from launch scope and moved the due date to September 30. The Spanish FAQ was accepted at 15:00 on September 30."
+    },
+    {
+      "action_id": "A09",
+      "title": "Confirm the staff-training room and participant booking",
+      "owner": "Jae",
+      "due_date": "2026-09-30",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M3",
+        "M4",
+        "F6"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "Scheduling was confirmed in M4 and successfully updated in F6 for the October 6 session. This does not complete A10 delivery or change the A09 due date."
+    },
+    {
+      "action_id": "A10",
+      "title": "Deliver staff training on October 6",
+      "owner": "Kian",
+      "due_date": "2026-10-06",
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4",
+        "F6"
+      ],
+      "blocker": null,
+      "next_step": "Kian to prepare for and deliver the confirmed October 6 staff-training session.",
+      "resolution_note": "Kian accepted delivery responsibility from Jae in M4 and the October 6 date in F6. The training has not been delivered; A09 scheduling is complete."
+    },
+    {
+      "action_id": "A11",
+      "title": "Reconcile pilot IDs to zero duplicates",
+      "owner": "Kian",
+      "due_date": "2026-09-26",
+      "status": "blocked",
+      "dependencies": [],
+      "overdue": true,
+      "evidence_ids": [
+        "B00",
+        "M2",
+        "M3",
+        "F7"
+      ],
+      "blocker": "The pilot team mapping export is missing; 18 duplicated pilot IDs remain.",
+      "next_step": "Kian to obtain the pilot team mapping export, reconcile the remaining 18 duplicated IDs, and verify zero duplicates.",
+      "resolution_note": "Running the script did not complete reconciliation. F7 confirms the file has not arrived. No revised deadline was agreed."
+    },
+    {
+      "action_id": "A12",
+      "title": "Complete the pilot consent audit",
+      "owner": "Lena",
+      "due_date": "2026-09-28",
+      "status": "blocked",
+      "dependencies": [],
+      "overdue": true,
+      "evidence_ids": [
+        "B00",
+        "M3",
+        "F7"
+      ],
+      "blocker": "Lena is on leave and the consent workspace is inaccessible; replacement ownership has not been accepted or assigned.",
+      "next_step": "Restore consent-workspace access and resolve coverage during Lena's leave; obtain an explicit assignment or acceptance if ownership is to change, then complete the audit.",
+      "resolution_note": "Mira is only a proposed replacement. Lena remains accountable; no revised deadline was agreed."
+    },
+    {
+      "action_id": "A13",
+      "title": "Resolve the recurring vendor issue and close ticket 714",
+      "owner": "Mira",
+      "due_date": "2026-10-02",
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M2",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": "Mira to address the recurring vendor issue and close ticket 714 by October 2.",
+      "resolution_note": "The ticket was previously closed, then explicitly reopened in M5 as the same A13 commitment. Work is actionable. OPS-17 is an alias, not a second action."
+    },
+    {
+      "action_id": "A14",
+      "title": "Run the full load test after quota restoration",
+      "owner": "Noor",
+      "due_date": "2026-10-01",
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M1",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": "Noor to rerun the full load test and record its result by October 1.",
+      "resolution_note": "A15 was independently verified complete, so it is no longer an unresolved dependency. The load test itself has not been run."
+    },
+    {
+      "action_id": "A15",
+      "title": "Restore the load-test environment quota",
+      "owner": "Owen",
+      "due_date": "2026-09-28",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M1",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The quota fix was independently verified at 14:00 on September 30, releasing A14."
+    },
+    {
+      "action_id": "A16",
+      "title": "Produce the alternate-routing fallback plan",
+      "owner": "Pia",
+      "due_date": "2026-09-28",
+      "status": "cancelled",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M3",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The draft was superseded by an explicit steering decision not to pursue the alternate-routing option."
+    },
+    {
+      "action_id": "A17",
+      "title": "Obtain acceptance of the complete support rota",
+      "owner": "Quin",
+      "due_date": "2026-09-30",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The complete support rota was accepted on September 29. No pre-cutoff reopening is recorded."
+    },
+    {
+      "action_id": "A18",
+      "title": "Run the weekend pager drill",
+      "owner": "Ravi",
+      "due_date": "2026-10-02",
+      "status": "blocked",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4",
+        "F7"
+      ],
+      "blocker": "The compliance blackout prevents the drill; no clearance has been issued.",
+      "next_step": "Ravi to obtain compliance clearance before running the pager drill; confirm whether the October 2 deadline can be met.",
+      "resolution_note": "F7 confirms the clearance remains absent; the October 2 deadline is unchanged."
+    },
+    {
+      "action_id": "A19",
+      "title": "Complete the full onboarding checklist",
+      "owner": "Sara",
+      "due_date": "2026-09-27",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M3"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The full checklist was accepted as complete."
+    },
+    {
+      "action_id": "A20",
+      "title": "Verify all 24 runbook links",
+      "owner": "Talia",
+      "due_date": "2026-10-01",
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M3"
+      ],
+      "blocker": null,
+      "next_step": "Talia to repair or coordinate repair of the three broken links and verify all 24 links by October 1.",
+      "resolution_note": "Talia has checked 21 of 24 runbook links and reports three broken links; full verification is incomplete. M3 sets the October 1 deadline."
+    },
+    {
+      "action_id": "A21",
+      "title": "Establish trustworthy CRM export integrity verification",
+      "owner": "Uma",
+      "due_date": "2026-09-29",
+      "status": "unresolved",
+      "dependencies": [],
+      "overdue": true,
+      "evidence_ids": [
+        "B00",
+        "F5",
+        "M5"
+      ],
+      "blocker": "QA reports every row passed while operations reports 42 missing rows; neither report identifies its export snapshot/hash.",
+      "next_step": "Uma to identify the snapshot/hash tested by each report and reconcile the reports or rerun verification on a known export, then provide a trustworthy result for A25.",
+      "resolution_note": "M5 explicitly leaves completion unresolved. The later technical report does not settle the conflict. The original deadline is unchanged."
+    },
+    {
+      "action_id": "A22",
+      "title": "Purge sandbox sample records",
+      "owner": "Vic",
+      "due_date": "2026-09-28",
+      "status": "cancelled",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M2"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The purge was explicitly cancelled because the records must be preserved under the internal review hold. No later deletion is authorized."
+    },
+    {
+      "action_id": "A23",
+      "title": "Complete the dashboard ownership transfer",
+      "owner": "Xena",
+      "due_date": "2026-10-02",
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M3",
+        "F2"
+      ],
+      "blocker": null,
+      "next_step": "Xena to finish and confirm the dashboard ownership transfer by October 2.",
+      "resolution_note": "F2 explicitly accepts ownership from Wen and agrees October 2. This is separate from completed A24."
+    },
+    {
+      "action_id": "A24",
+      "title": "Deliver the full budget readout and obtain approval",
+      "owner": "Xena",
+      "due_date": "2026-09-29",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The full budget readout was delivered and approved."
+    },
+    {
+      "action_id": "A25",
+      "title": "Compile the launch signoff packet and obtain acceptance",
+      "owner": "Yara",
+      "due_date": "2026-10-02",
+      "status": "blocked",
+      "dependencies": [
+        "A03",
+        "A21"
+      ],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4"
+      ],
+      "blocker": "Packet acceptance requires outstanding privacy approval (A03) and reconciled CRM export verification (A21).",
+      "next_step": "Yara to obtain A03 privacy approval and A21 reconciled CRM verification, incorporate both into the signoff packet, and secure acceptance by October 2.",
+      "resolution_note": "M4 moves the deadline to October 2 and explicitly names the two immediate prerequisites."
+    },
+    {
+      "action_id": "A26",
+      "title": "Conduct the live stakeholder demo",
+      "owner": "Zane",
+      "due_date": "2026-10-01",
+      "status": "cancelled",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M3"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The live demo was cancelled in favor of the separate A27 recorded walkthrough."
+    },
+    {
+      "action_id": "A27",
+      "title": "Create the recorded walkthrough and obtain acceptance",
+      "owner": "Ava",
+      "due_date": "2026-10-01",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The recorded walkthrough was accepted at 16:30 on September 30."
+    },
+    {
+      "action_id": "A28",
+      "title": "Publish the launch go/no-go decision",
+      "owner": "Ben",
+      "due_date": "2026-10-02",
+      "status": "blocked",
+      "dependencies": [
+        "A25"
+      ],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4"
+      ],
+      "blocker": "The launch signoff packet (A25) has not been accepted.",
+      "next_step": "Ben to obtain accepted A25 signoff packet, then publish the launch go/no-go decision by October 2.",
+      "resolution_note": "Only A25 is the immediate prerequisite; A03 and A21 are transitive and are not listed as A28 dependencies."
+    },
+    {
+      "action_id": "A29",
+      "title": "Complete and obtain acceptance of the full data dictionary",
+      "owner": "Carla",
+      "due_date": "2026-09-27",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M1",
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "The accepted dictionary includes definitions missing from the initial draft. DOC-9 is an alias of A29."
+    },
+    {
+      "action_id": "A30",
+      "title": "Prepare the retention questions and answers",
+      "owner": "Dev",
+      "due_date": null,
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M2"
+      ],
+      "blocker": null,
+      "next_step": "Dev to continue drafting the retention Q&A, obtain counsel's retention decision for final content, and seek agreement on a replacement deadline when appropriate.",
+      "resolution_note": "M2 explicitly removed the September 29 deadline without replacement. Counsel's retention decision is pending, but drafting can proceed and the action remains open, not blocked."
+    },
+    {
+      "action_id": "A31",
+      "title": "Complete the accessibility sweep",
+      "owner": "Gia",
+      "due_date": "2026-10-02",
+      "status": "open",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4",
+        "F4"
+      ],
+      "blocker": null,
+      "next_step": "Gia to complete the accessibility sweep and record the results by October 2.",
+      "resolution_note": "The M4 proposal alone did not transfer ownership; Gia explicitly accepted it in F4, with the agreed October 2 deadline. F4 says the sweep is not yet complete."
+    },
+    {
+      "action_id": "A32",
+      "title": "Deliver the approved product screenshots",
+      "owner": "Faye",
+      "due_date": "2026-09-28",
+      "status": "done",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "F3"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "resolution_note": "Design QA confirms the complete checklist passed and the screenshots were accepted; no additional work was required as of the cutoff."
+    },
+    {
+      "action_id": "A33",
+      "title": "Complete the triage mailbox test under a named support lead",
+      "owner": null,
+      "due_date": "2026-10-01",
+      "status": "unresolved",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M1",
+        "M4",
+        "F7"
+      ],
+      "blocker": "The incoming support lead role has accountability, but no person has been selected.",
+      "next_step": "Select a named accountable incoming support lead, record the assignment or acceptance, and have that person complete the triage mailbox test by October 1.",
+      "resolution_note": "M4 explicitly releases Hana and assigns the role. F7 confirms that there is still no named owner; the person must remain null."
+    },
+    {
+      "action_id": "A34",
+      "title": "Prepare the partner launch note with a confirmed launch date",
+      "owner": "Iris",
+      "due_date": "2026-10-01",
+      "status": "blocked",
+      "dependencies": [],
+      "overdue": false,
+      "evidence_ids": [
+        "B00",
+        "M4",
+        "F7"
+      ],
+      "blocker": "The partner has not confirmed its launch date.",
+      "next_step": "Iris to obtain the partner's confirmed launch date and finish the launch note by October 1.",
+      "resolution_note": "A draft does not satisfy the confirmed-date requirement. F7 confirms that the date is still missing."
+    }
+  ],
+  "aliases": {
+    "DOC-9": "A29",
+    "OPS-17": "A13",
+    "ALT-FAQ": "A07"
+  },
+  "totals": {
+    "by_status": {
+      "open": 9,
+      "blocked": 7,
+      "done": 12,
+      "cancelled": 4,
+      "unresolved": 2
+    },
+    "active_count": 18,
+    "overdue_count": 4
+  },
+  "source_inventory": [
+    {
+      "source_id": "B00",
+      "locator": "inputs/baseline.csv",
+      "record_time": null,
+      "type": "Baseline; initial owners, dates and commitments, superseded where explicitly revised"
+    },
+    {
+      "source_id": "M1",
+      "locator": "inputs/meeting_notes.txt: M1",
+      "record_time": "2026-09-23T15:00:00Z",
+      "type": "Final meeting decisions"
+    },
+    {
+      "source_id": "M2",
+      "locator": "inputs/meeting_notes.txt: M2",
+      "record_time": "2026-09-25T16:00:00Z",
+      "type": "Final meeting decisions"
+    },
+    {
+      "source_id": "M3",
+      "locator": "inputs/meeting_notes.txt: M3",
+      "record_time": "2026-09-27T14:00:00Z",
+      "type": "Final meeting decisions"
+    },
+    {
+      "source_id": "M4",
+      "locator": "inputs/meeting_notes.txt: M4",
+      "record_time": "2026-09-29T16:00:00Z",
+      "type": "Final meeting decisions"
+    },
+    {
+      "source_id": "M5",
+      "locator": "inputs/meeting_notes.txt: M5",
+      "record_time": "2026-09-30T16:45:00Z",
+      "type": "Final cutoff-day checkpoint"
+    },
+    {
+      "source_id": "F1",
+      "locator": "inputs/followups.txt: F1",
+      "record_time": "2026-09-24T10:00:00Z",
+      "type": "Received owner acceptance"
+    },
+    {
+      "source_id": "F2",
+      "locator": "inputs/followups.txt: F2",
+      "record_time": "2026-09-28T09:30:00Z",
+      "type": "Received owner acceptance"
+    },
+    {
+      "source_id": "F3",
+      "locator": "inputs/followups.txt: F3",
+      "record_time": "2026-09-28T17:00:00Z",
+      "type": "Received Design QA acceptance"
+    },
+    {
+      "source_id": "F4",
+      "locator": "inputs/followups.txt: F4",
+      "record_time": "2026-09-30T12:00:00Z",
+      "type": "Received owner acceptance and progress"
+    },
+    {
+      "source_id": "F5",
+      "locator": "inputs/followups.txt: F5",
+      "record_time": "2026-09-30T13:00:00Z",
+      "type": "Received conflicting CRM test reports"
+    },
+    {
+      "source_id": "F6",
+      "locator": "inputs/followups.txt: F6",
+      "record_time": "2026-09-30T14:30:00Z",
+      "type": "Received accepted training reschedule"
+    },
+    {
+      "source_id": "F7",
+      "locator": "inputs/followups.txt: F7",
+      "record_time": "2026-09-30T16:50:00Z",
+      "type": "Received unresolved-gap cross-check"
+    }
+  ],
+  "excluded_sources": [
+    {
+      "source_id": "F8",
+      "received_at": "2026-10-01T08:00:00Z",
+      "reason": "Received after cutoff; excluded even where it describes alleged earlier events."
+    },
+    {
+      "source_id": "F9",
+      "received_at": "2026-10-01T09:00:00Z",
+      "reason": "Received after cutoff; excluded from all state, owner and completion decisions."
+    }
+  ],
+  "verification_limit": "The supplied notes and acceptance statements are the evidence. No external report, system, artifact, person, or actual completion was independently checked, and no operational action was taken."
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "rev-4c36b9ac",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354",
+    "handoff.txt": "c53e32c49297c24a7f2f6e5cbd906a007ef1184c77b895c7c005c3dd264d4c6c"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "The register's A08 title is Spanish-only, and the handoff's completed-actions section states that Spanish was accepted September 30 at 15:00 and French is no longer an obligation, matching M2/M5. A09's booking is done while A10 remains Kian's future delivery due October 6, explicitly distinguished in both artifacts and supported by M4/F6. A05/A16/A22/A26 remain cancelled with null register next steps; the handoff explains their cancellations and preserves the A22 review hold (M2/M3/M5). A13 correctly continues the reopened original ticket and A14 is actionable after verified A15 completion (M5). Both artifacts explicitly use the September 30 17:00 UTC receipt cutoff and exclude F8/F9, including retrospective claims. Consequently A17 stays done, A33 remains unnamed and unresolved, A31 remains open, and A32 remains accepted rather than being reopened by October 1 updates. No obsolete obligation is revived."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff foregrounds A03/A21 -> A25 -> A28 and correctly distinguishes immediate from transitive prerequisites (M4), with useful approval, export-reconciliation, signoff-acceptance, and publication steps. Its dependency and overdue sections cover Dev/A03 due September 26, Uma/A21 September 29, Yara/A25 and Ben/A28 October 2, plus Kian/A11 September 26 and Lena/A12 September 28; all four genuinely overdue actions are prominently marked. Gap sections cover unnamed A33 due October 1 and Dev/A30 with no due date. The October 1 grouping unambiguously dates Gia/A06, Noor/A14, Talia/A20, and Iris/A34; the later-work section covers Carla/A02, Mira/A13, Ravi/A18, Xena/A23, Gia/A31 due October 2, and Kian/A10 October 6. These are all 18 active commitments. Owners and dates follow B00 and the explicit M1-M5/F1-F7 revisions. Each has a practical next step, including obtaining the missing A11 mapping, restoring A12 access, filling the A33 role, repairing A20's three broken links, obtaining pager clearance and the partner date, rerunning the load test, and delivering training. Completed/cancelled decisions are also clearly separated."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "A21's register blocker and handoff explain the conflicting all-rows-passed versus 42-missing reports, absence of snapshot/hash identifiers, and need to reconcile or rerun; neither later timestamp nor either report is treated as trustworthy completion (F5/M5). A12 remains Lena's responsibility and Mira is explicitly only a suggested, unaccepted replacement (M3/F7). A33 has owner null and a handoff owner gap because final M4 released Hana to an unfilled incoming-lead role; F8 cannot supply a cutoff-time owner or completion. A30 has due_date null and remains draftable open work, with the handoff explaining M2's removal of September 29 and absence of a replacement. No materially unsupported confirmation, deadline, completion, or outreach claim was found in either artifact. Proposed steps are identified as unperformed. Limitation: this is a source-grounded review of the synthetic packet, not independent inspection of underlying reports or external systems; the handoff accurately discloses that same boundary. All 10 manifest-listed packet file hashes, including both separately listed artifact hashes, were verified and matched."
+    }
+  }
+}

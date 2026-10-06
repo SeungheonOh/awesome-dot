@@ -1,0 +1,62 @@
+{
+  "attempt_id": "T17-R2-r2-S",
+  "status": "completed",
+  "first_terminal_observed_at_utc": "2026-10-06T06:30:57.100813+00:00",
+  "dispatch_intent_at_utc": "2026-10-06T06:25:38.439819+00:00",
+  "controller_elapsed_seconds": 318.660994,
+  "cap_seconds": 900,
+  "observed_after_cap": false,
+  "artifacts": [
+    {
+      "path": "artifacts/T17-R2-r2-S/action_register.json",
+      "bytes": 19984,
+      "sha256": "e51a01f93043968afaf1e033fcf3bfaeadf8d73a7fa7d12b2dba209657401d39"
+    },
+    {
+      "path": "artifacts/T17-R2-r2-S/handoff.txt",
+      "bytes": 8864,
+      "sha256": "dc79f8cb453ede5bac8b92273a7cba4a7bbbc6047e2752379845fa8d9b45e2f6"
+    }
+  ],
+  "collection_errors": [],
+  "protected_files": [
+    {
+      "path": "LICENSE",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "TASK.md",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/00_README.txt",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/baseline.csv",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/followups.txt",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/meeting_notes.txt",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "skill/meeting-action-handoff/SKILL.md",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "skill/meeting-action-handoff/example.md",
+      "unchanged_at_collection": true
+    }
+  ],
+  "limits": [
+    "Non-atomic shared-filesystem observation",
+    "No OS/process/network isolation proved",
+    "Descendant quiescence unverified",
+    "No provider token/cost/model-build telemetry"
+  ]
+}

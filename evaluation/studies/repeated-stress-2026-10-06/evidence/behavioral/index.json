@@ -1,0 +1,1296 @@
+{
+  "case": "R4",
+  "status": "completed",
+  "completed_at_utc": "2026-10-06T06:47:36.113368+00:00",
+  "scope": "All six frozen submissions, 13 predeclared equally weighted checks each",
+  "method": "Exact source and frozen probe reviewed before approval of each hash-bound plan; unchanged deterministic probe applied to every saved submission. No candidate self-test credit or post-hoc tests.",
+  "condition_handling": "Condition IDs visible to reviewer. No condition-dependent judgment; each primary result is the unchanged deterministic frozen probe outcome.",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "checks": [
+    {
+      "description": "Detached nested views; dirty reflects working text versus base",
+      "id": "views_and_edits",
+      "weight": 1
+    },
+    {
+      "description": "Clean fast-forward and repeated upstream/base tracking",
+      "id": "fast_forward_base",
+      "weight": 1
+    },
+    {
+      "description": "Independent same-length edits merge without loss",
+      "id": "disjoint_modifications",
+      "weight": 1
+    },
+    {
+      "description": "Disjoint insertion/deletion edits preserve exact line endings",
+      "id": "insert_delete_endings",
+      "weight": 1
+    },
+    {
+      "description": "Identical hunks applied once; adjacent nonempty hunks merge",
+      "id": "identical_adjacent_hunks",
+      "weight": 1
+    },
+    {
+      "description": "Conflicting ranges/insertions preserve base/local/incoming",
+      "id": "conflict_retention",
+      "weight": 1
+    },
+    {
+      "description": "Editing or receiving during unresolved review cannot overwrite it",
+      "id": "pending_blocks_mutation",
+      "weight": 1
+    },
+    {
+      "description": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+      "id": "resolution_choices",
+      "weight": 1
+    },
+    {
+      "description": "Complete document state survives rename; collisions/removals are correct",
+      "id": "rename_remove",
+      "weight": 1
+    },
+    {
+      "description": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+      "id": "save_reload",
+      "weight": 1
+    },
+    {
+      "description": "Failed observed atomic replacement preserves prior disk and live state",
+      "id": "failed_save_atomicity",
+      "weight": 1
+    },
+    {
+      "description": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+      "id": "corrupt_snapshots",
+      "weight": 1
+    },
+    {
+      "description": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+      "id": "bounds_nofollow",
+      "weight": 1
+    }
+  ],
+  "totals": {
+    "pass": 78,
+    "fail": 0,
+    "unknown": 0
+  },
+  "conclusion": "All six submissions pass all 13 frozen checks. Primary R4 outcome is tied; no improvement or equivalence outside these observed checks is established.",
+  "source_review_records": [
+    "evidence/behavioral/static-review-first-five.json",
+    "evidence/behavioral/static-review-t22.json"
+  ],
+  "limits": {
+    "wall_seconds": 30,
+    "cpu_seconds": 20,
+    "address_space_bytes": 536870912,
+    "per_file_bytes": 8388608,
+    "open_files": 64,
+    "core_bytes": 0,
+    "source_bytes": 131072,
+    "report_log_excerpt_bytes": 65536
+  },
+  "limitations": [
+    "Source-reviewed bounded local execution, not OS/process/network isolation. No stronger containment or descendant-quiescence claim.",
+    "Existing Python standard library and runtime were trusted; no installation was needed.",
+    "Static protected-input lookups are unreadable because frozen artifacts are flattened; collection receipts are separate evidence, not a fabricated static pass.",
+    "Passing these 13 groups does not prove full correctness, Unicode interoperability, or worst-case performance outside the frozen probes.",
+    "Candidate self-reported tests and large test counts were not independently verified and contribute no score.",
+    "No infrastructure exceptions, denials, timeouts or unknown outcomes occurred. Had they occurred, they would remain not assessed."
+  ],
+  "trials": [
+    {
+      "attempt_id": "T03-R4-r2-S",
+      "case_id": "R4",
+      "primary_outcomes": [
+        {
+          "id": "views_and_edits",
+          "status": "pass"
+        },
+        {
+          "id": "fast_forward_base",
+          "status": "pass"
+        },
+        {
+          "id": "disjoint_modifications",
+          "status": "pass"
+        },
+        {
+          "id": "insert_delete_endings",
+          "status": "pass"
+        },
+        {
+          "id": "identical_adjacent_hunks",
+          "status": "pass"
+        },
+        {
+          "id": "conflict_retention",
+          "status": "pass"
+        },
+        {
+          "id": "pending_blocks_mutation",
+          "status": "pass"
+        },
+        {
+          "id": "resolution_choices",
+          "status": "pass"
+        },
+        {
+          "id": "rename_remove",
+          "status": "pass"
+        },
+        {
+          "id": "save_reload",
+          "status": "pass"
+        },
+        {
+          "id": "failed_save_atomicity",
+          "status": "pass"
+        },
+        {
+          "id": "corrupt_snapshots",
+          "status": "pass"
+        },
+        {
+          "id": "bounds_nofollow",
+          "status": "pass"
+        }
+      ],
+      "totals": {
+        "fail": 0,
+        "pass": 13,
+        "unknown": 0
+      },
+      "score": 13,
+      "max_score": 13,
+      "normalized_score": 1.0,
+      "process_status": "finished",
+      "probe_exit_code": 0,
+      "runner_exit_code": 0,
+      "started_at_utc": "2026-10-06T06:44:44.146747377Z",
+      "finished_at_utc": "2026-10-06T06:44:44.356131132Z",
+      "elapsed_seconds": 0.209384,
+      "source_sha256": "4de5787d1b7b74e462e02d4a843dac80222487944822644f63044b78b163c3e7",
+      "plan_sha256": "607cd0d631cb3af0d9fbad6dd5559d9c8e4337949eb5ba454c2a9f15f0bc0823",
+      "source_matches_receipt_and_reviewed_copy": true,
+      "post_run_immutable_hashes_verified": true,
+      "probe_stderr_empty": true,
+      "runner_stderr_empty": true,
+      "fixtures_remaining": [],
+      "protected_input_evidence": {
+        "static_report_status": "unreadable due to flattened artifact layout; not converted to pass/fail",
+        "separate_collection_receipt": [
+          {
+            "path": "LICENSE",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "TASK.md",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "inputs/smoke_test.py",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "skill/build-text-merge-component/SKILL.md",
+            "unchanged_at_collection": true
+          }
+        ]
+      },
+      "receipt_path": "receipts/T03-R4-r2-S.json",
+      "original_receipt_sha256": "7beeb706dfbce375fcaefd87473a3d68ae3c5dd89880ed955d6b69ae66407838",
+      "evidence_directory": "evidence/behavioral/T03-R4-r2-S",
+      "original_execution_inventory_with_public_mapping": [
+        {
+          "original_inventory_name": "reviewed/source.py",
+          "public_path": "artifacts/T03-R4-r2-S/merge_workspace.py",
+          "sha256": "4de5787d1b7b74e462e02d4a843dac80222487944822644f63044b78b163c3e7",
+          "bytes": 11667
+        },
+        {
+          "original_inventory_name": "reviewed/probe.py",
+          "public_path": "cases/R4/private/probe.py",
+          "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+          "bytes": 13107
+        },
+        {
+          "original_inventory_name": "plan.json",
+          "sha256": "607cd0d631cb3af0d9fbad6dd5559d9c8e4337949eb5ba454c2a9f15f0bc0823",
+          "bytes": 1957,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T03-R4-r2-S/plan-public.json"
+        },
+        {
+          "original_inventory_name": "static_report.json",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/static_report.json",
+          "sha256": "3eee93d2a5a34f1b98fd0897eaf25624be4035f66ed9d0c0a692d9232279defe",
+          "bytes": 1048
+        },
+        {
+          "original_inventory_name": "approval.json",
+          "sha256": "74c139c76bddf5db6a81d61f95645422822e23ddbc4096a0a1ac03733c5613d4",
+          "bytes": 1201,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T03-R4-r2-S/plan-public.json"
+        },
+        {
+          "original_inventory_name": "probe_result.json",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+          "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+          "bytes": 1015
+        },
+        {
+          "original_inventory_name": "behavioral_report.json",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/behavioral_report.json",
+          "sha256": "68f417f2a64a02f7017dea71d054c06e6f939b9d5c6cfca5676897e2ddf89336",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "stdout.log",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/stdout.log",
+          "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+          "bytes": 38
+        },
+        {
+          "original_inventory_name": "stderr.log",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.stdout.log",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/runner.stdout.log",
+          "sha256": "0f44d16616769a27dff1d59d4f859b38efd38b5effbab4f69f630323282a2e26",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "runner.stderr.log",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/runner.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.exit-code.txt",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/runner.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "bytes": 2
+        },
+        {
+          "original_inventory_name": "run-started-utc.txt",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/run-started-utc.txt",
+          "sha256": "cc24ebaae26dddef8b0ea229344d2bc2674ecba3ef0d8eb95a197a26b609dcea",
+          "bytes": 31
+        },
+        {
+          "original_inventory_name": "run-finished-utc.txt",
+          "public_path": "evidence/behavioral/T03-R4-r2-S/run-finished-utc.txt",
+          "sha256": "50272be6793864c41e2266f528969b3ba33e3cca5acec451cc39ae19b596f7e2",
+          "bytes": 31
+        }
+      ]
+    },
+    {
+      "attempt_id": "T04-R4-r2-C",
+      "case_id": "R4",
+      "primary_outcomes": [
+        {
+          "id": "views_and_edits",
+          "status": "pass"
+        },
+        {
+          "id": "fast_forward_base",
+          "status": "pass"
+        },
+        {
+          "id": "disjoint_modifications",
+          "status": "pass"
+        },
+        {
+          "id": "insert_delete_endings",
+          "status": "pass"
+        },
+        {
+          "id": "identical_adjacent_hunks",
+          "status": "pass"
+        },
+        {
+          "id": "conflict_retention",
+          "status": "pass"
+        },
+        {
+          "id": "pending_blocks_mutation",
+          "status": "pass"
+        },
+        {
+          "id": "resolution_choices",
+          "status": "pass"
+        },
+        {
+          "id": "rename_remove",
+          "status": "pass"
+        },
+        {
+          "id": "save_reload",
+          "status": "pass"
+        },
+        {
+          "id": "failed_save_atomicity",
+          "status": "pass"
+        },
+        {
+          "id": "corrupt_snapshots",
+          "status": "pass"
+        },
+        {
+          "id": "bounds_nofollow",
+          "status": "pass"
+        }
+      ],
+      "totals": {
+        "fail": 0,
+        "pass": 13,
+        "unknown": 0
+      },
+      "score": 13,
+      "max_score": 13,
+      "normalized_score": 1.0,
+      "process_status": "finished",
+      "probe_exit_code": 0,
+      "runner_exit_code": 0,
+      "started_at_utc": "2026-10-06T06:44:44.358536035Z",
+      "finished_at_utc": "2026-10-06T06:44:44.562473031Z",
+      "elapsed_seconds": 0.203937,
+      "source_sha256": "d745bd7e72004e9ef7f315b8a1b4e9d38aef42f01f06c46cd4987e4e0035e034",
+      "plan_sha256": "4481a388667fa20675b887fedc183dddba34bc362f55248fd699b4250a054162",
+      "source_matches_receipt_and_reviewed_copy": true,
+      "post_run_immutable_hashes_verified": true,
+      "probe_stderr_empty": true,
+      "runner_stderr_empty": true,
+      "fixtures_remaining": [],
+      "protected_input_evidence": {
+        "static_report_status": "unreadable due to flattened artifact layout; not converted to pass/fail",
+        "separate_collection_receipt": [
+          {
+            "path": "LICENSE",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "TASK.md",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "inputs/smoke_test.py",
+            "unchanged_at_collection": true
+          }
+        ]
+      },
+      "receipt_path": "receipts/T04-R4-r2-C.json",
+      "original_receipt_sha256": "e59d8c88049a6e0682d5ea87ac562b487d319358ce8bdcbe73065761571b06c6",
+      "evidence_directory": "evidence/behavioral/T04-R4-r2-C",
+      "original_execution_inventory_with_public_mapping": [
+        {
+          "original_inventory_name": "reviewed/source.py",
+          "public_path": "artifacts/T04-R4-r2-C/merge_workspace.py",
+          "sha256": "d745bd7e72004e9ef7f315b8a1b4e9d38aef42f01f06c46cd4987e4e0035e034",
+          "bytes": 12146
+        },
+        {
+          "original_inventory_name": "reviewed/probe.py",
+          "public_path": "cases/R4/private/probe.py",
+          "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+          "bytes": 13107
+        },
+        {
+          "original_inventory_name": "plan.json",
+          "sha256": "4481a388667fa20675b887fedc183dddba34bc362f55248fd699b4250a054162",
+          "bytes": 1957,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T04-R4-r2-C/plan-public.json"
+        },
+        {
+          "original_inventory_name": "static_report.json",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/static_report.json",
+          "sha256": "578714945ca586d33c4b0c6dbe674ef38e9e3761aff5815cce540721ee94d6be",
+          "bytes": 1105
+        },
+        {
+          "original_inventory_name": "approval.json",
+          "sha256": "553091b89e9ad8bbd98078f4e5e5a157a35e0c3b4a5e3e9fdef94a31f12a4294",
+          "bytes": 1201,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T04-R4-r2-C/plan-public.json"
+        },
+        {
+          "original_inventory_name": "probe_result.json",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+          "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+          "bytes": 1015
+        },
+        {
+          "original_inventory_name": "behavioral_report.json",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/behavioral_report.json",
+          "sha256": "ed5240b5a8282943b9f0eb548b4a92daba8e8721a83d69d87ad15dce8856eab0",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "stdout.log",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/stdout.log",
+          "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+          "bytes": 38
+        },
+        {
+          "original_inventory_name": "stderr.log",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.stdout.log",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/runner.stdout.log",
+          "sha256": "99ddd8d57e059d9fcab2b2dabe3a6c81bdaf022fee852d5a51cf854a8a5af86c",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "runner.stderr.log",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/runner.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.exit-code.txt",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/runner.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "bytes": 2
+        },
+        {
+          "original_inventory_name": "run-started-utc.txt",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/run-started-utc.txt",
+          "sha256": "d47fb5d6b692336100c414f9a8c37763b41a396116dc71eafe658cf9210b53e8",
+          "bytes": 31
+        },
+        {
+          "original_inventory_name": "run-finished-utc.txt",
+          "public_path": "evidence/behavioral/T04-R4-r2-C/run-finished-utc.txt",
+          "sha256": "cd64af979f3a6f99212c92f77eeb26dbf444cf940cf344ca4b5e17b2bde1294a",
+          "bytes": 31
+        }
+      ]
+    },
+    {
+      "attempt_id": "T11-R4-r3-C",
+      "case_id": "R4",
+      "primary_outcomes": [
+        {
+          "id": "views_and_edits",
+          "status": "pass"
+        },
+        {
+          "id": "fast_forward_base",
+          "status": "pass"
+        },
+        {
+          "id": "disjoint_modifications",
+          "status": "pass"
+        },
+        {
+          "id": "insert_delete_endings",
+          "status": "pass"
+        },
+        {
+          "id": "identical_adjacent_hunks",
+          "status": "pass"
+        },
+        {
+          "id": "conflict_retention",
+          "status": "pass"
+        },
+        {
+          "id": "pending_blocks_mutation",
+          "status": "pass"
+        },
+        {
+          "id": "resolution_choices",
+          "status": "pass"
+        },
+        {
+          "id": "rename_remove",
+          "status": "pass"
+        },
+        {
+          "id": "save_reload",
+          "status": "pass"
+        },
+        {
+          "id": "failed_save_atomicity",
+          "status": "pass"
+        },
+        {
+          "id": "corrupt_snapshots",
+          "status": "pass"
+        },
+        {
+          "id": "bounds_nofollow",
+          "status": "pass"
+        }
+      ],
+      "totals": {
+        "fail": 0,
+        "pass": 13,
+        "unknown": 0
+      },
+      "score": 13,
+      "max_score": 13,
+      "normalized_score": 1.0,
+      "process_status": "finished",
+      "probe_exit_code": 0,
+      "runner_exit_code": 0,
+      "started_at_utc": "2026-10-06T06:44:44.564585738Z",
+      "finished_at_utc": "2026-10-06T06:44:44.774271042Z",
+      "elapsed_seconds": 0.209686,
+      "source_sha256": "735afb2ea90f43cc21b5e16ada5511f3ce6e49f548e4bf1414f0efe5972346a8",
+      "plan_sha256": "31ab5fad03680f5a791fdd7be0693df80724c19d7509bf50a7978ce0afbda41b",
+      "source_matches_receipt_and_reviewed_copy": true,
+      "post_run_immutable_hashes_verified": true,
+      "probe_stderr_empty": true,
+      "runner_stderr_empty": true,
+      "fixtures_remaining": [],
+      "protected_input_evidence": {
+        "static_report_status": "unreadable due to flattened artifact layout; not converted to pass/fail",
+        "separate_collection_receipt": [
+          {
+            "path": "LICENSE",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "TASK.md",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "inputs/smoke_test.py",
+            "unchanged_at_collection": true
+          }
+        ]
+      },
+      "receipt_path": "receipts/T11-R4-r3-C.json",
+      "original_receipt_sha256": "3927d350ff459681e5f5ab4e1970627a0d928f1479a18a1578e192517b139f25",
+      "evidence_directory": "evidence/behavioral/T11-R4-r3-C",
+      "original_execution_inventory_with_public_mapping": [
+        {
+          "original_inventory_name": "reviewed/source.py",
+          "public_path": "artifacts/T11-R4-r3-C/merge_workspace.py",
+          "sha256": "735afb2ea90f43cc21b5e16ada5511f3ce6e49f548e4bf1414f0efe5972346a8",
+          "bytes": 11504
+        },
+        {
+          "original_inventory_name": "reviewed/probe.py",
+          "public_path": "cases/R4/private/probe.py",
+          "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+          "bytes": 13107
+        },
+        {
+          "original_inventory_name": "plan.json",
+          "sha256": "31ab5fad03680f5a791fdd7be0693df80724c19d7509bf50a7978ce0afbda41b",
+          "bytes": 1957,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T11-R4-r3-C/plan-public.json"
+        },
+        {
+          "original_inventory_name": "static_report.json",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/static_report.json",
+          "sha256": "77c7004adf8f156362feb911513f8e9a061195dc4636ed7948417b27fcf4e8fa",
+          "bytes": 1124
+        },
+        {
+          "original_inventory_name": "approval.json",
+          "sha256": "fdc7b3aa060943860f8743f0a6126b047b21eef28bb17a8b9023ce017e894bd1",
+          "bytes": 1201,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T11-R4-r3-C/plan-public.json"
+        },
+        {
+          "original_inventory_name": "probe_result.json",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+          "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+          "bytes": 1015
+        },
+        {
+          "original_inventory_name": "behavioral_report.json",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/behavioral_report.json",
+          "sha256": "c8a2d7daebb78db5af2e468976de39f2fe6fc97a873690dbf70be76d18677fbc",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "stdout.log",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/stdout.log",
+          "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+          "bytes": 38
+        },
+        {
+          "original_inventory_name": "stderr.log",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.stdout.log",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/runner.stdout.log",
+          "sha256": "d1616e74755d6f9a7c3f062d89ceee848ef5e215878f1dffe2f72e100a2b9dce",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "runner.stderr.log",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/runner.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.exit-code.txt",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/runner.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "bytes": 2
+        },
+        {
+          "original_inventory_name": "run-started-utc.txt",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/run-started-utc.txt",
+          "sha256": "82d05065376ea9de50fc5a3fcd7fcdd755343cc78ecc2a7e42040424042fe9f9",
+          "bytes": 31
+        },
+        {
+          "original_inventory_name": "run-finished-utc.txt",
+          "public_path": "evidence/behavioral/T11-R4-r3-C/run-finished-utc.txt",
+          "sha256": "d5a6d506682688511dd7f877f4853384d3e4d21757254c111ef3d5ed5271c954",
+          "bytes": 31
+        }
+      ]
+    },
+    {
+      "attempt_id": "T12-R4-r3-S",
+      "case_id": "R4",
+      "primary_outcomes": [
+        {
+          "id": "views_and_edits",
+          "status": "pass"
+        },
+        {
+          "id": "fast_forward_base",
+          "status": "pass"
+        },
+        {
+          "id": "disjoint_modifications",
+          "status": "pass"
+        },
+        {
+          "id": "insert_delete_endings",
+          "status": "pass"
+        },
+        {
+          "id": "identical_adjacent_hunks",
+          "status": "pass"
+        },
+        {
+          "id": "conflict_retention",
+          "status": "pass"
+        },
+        {
+          "id": "pending_blocks_mutation",
+          "status": "pass"
+        },
+        {
+          "id": "resolution_choices",
+          "status": "pass"
+        },
+        {
+          "id": "rename_remove",
+          "status": "pass"
+        },
+        {
+          "id": "save_reload",
+          "status": "pass"
+        },
+        {
+          "id": "failed_save_atomicity",
+          "status": "pass"
+        },
+        {
+          "id": "corrupt_snapshots",
+          "status": "pass"
+        },
+        {
+          "id": "bounds_nofollow",
+          "status": "pass"
+        }
+      ],
+      "totals": {
+        "fail": 0,
+        "pass": 13,
+        "unknown": 0
+      },
+      "score": 13,
+      "max_score": 13,
+      "normalized_score": 1.0,
+      "process_status": "finished",
+      "probe_exit_code": 0,
+      "runner_exit_code": 0,
+      "started_at_utc": "2026-10-06T06:44:44.776450232Z",
+      "finished_at_utc": "2026-10-06T06:44:44.987216854Z",
+      "elapsed_seconds": 0.210766,
+      "source_sha256": "448fdead08c7e82cd39771331041743ed344ccd8b547e68dc72d6d8129ac1753",
+      "plan_sha256": "b45ad74dc0d4728689f8183bcd29b625f110c9812b1a8d5a1dc67d54146e5a74",
+      "source_matches_receipt_and_reviewed_copy": true,
+      "post_run_immutable_hashes_verified": true,
+      "probe_stderr_empty": true,
+      "runner_stderr_empty": true,
+      "fixtures_remaining": [],
+      "protected_input_evidence": {
+        "static_report_status": "unreadable due to flattened artifact layout; not converted to pass/fail",
+        "separate_collection_receipt": [
+          {
+            "path": "LICENSE",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "TASK.md",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "inputs/smoke_test.py",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "skill/build-text-merge-component/SKILL.md",
+            "unchanged_at_collection": true
+          }
+        ]
+      },
+      "receipt_path": "receipts/T12-R4-r3-S.json",
+      "original_receipt_sha256": "61c4bde61c0298f97c986e0c8fa21aa545493a6c872cdccebe01c4392aeb7ddd",
+      "evidence_directory": "evidence/behavioral/T12-R4-r3-S",
+      "original_execution_inventory_with_public_mapping": [
+        {
+          "original_inventory_name": "reviewed/source.py",
+          "public_path": "artifacts/T12-R4-r3-S/merge_workspace.py",
+          "sha256": "448fdead08c7e82cd39771331041743ed344ccd8b547e68dc72d6d8129ac1753",
+          "bytes": 12723
+        },
+        {
+          "original_inventory_name": "reviewed/probe.py",
+          "public_path": "cases/R4/private/probe.py",
+          "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+          "bytes": 13107
+        },
+        {
+          "original_inventory_name": "plan.json",
+          "sha256": "b45ad74dc0d4728689f8183bcd29b625f110c9812b1a8d5a1dc67d54146e5a74",
+          "bytes": 1957,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T12-R4-r3-S/plan-public.json"
+        },
+        {
+          "original_inventory_name": "static_report.json",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/static_report.json",
+          "sha256": "b8b80148b8297418555414d45292be43cfec598e13f6750204b9af1e5f2b35db",
+          "bytes": 1067
+        },
+        {
+          "original_inventory_name": "approval.json",
+          "sha256": "5f6b3d51ebc487d72f9b5d810f6b8ba3ecb18c64c5124bd4adbee821f3bd6612",
+          "bytes": 1201,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T12-R4-r3-S/plan-public.json"
+        },
+        {
+          "original_inventory_name": "probe_result.json",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+          "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+          "bytes": 1015
+        },
+        {
+          "original_inventory_name": "behavioral_report.json",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/behavioral_report.json",
+          "sha256": "93fd8933ff3e6d4146f93c1e7dde2b634d1fb84ac485b4a0c577247921ffef1d",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "stdout.log",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/stdout.log",
+          "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+          "bytes": 38
+        },
+        {
+          "original_inventory_name": "stderr.log",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.stdout.log",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/runner.stdout.log",
+          "sha256": "09508aa145a92fca9b7b99f74ba038cc6eb6a23291a1b309cf94a0761d40e24a",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "runner.stderr.log",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/runner.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.exit-code.txt",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/runner.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "bytes": 2
+        },
+        {
+          "original_inventory_name": "run-started-utc.txt",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/run-started-utc.txt",
+          "sha256": "29207b17fb1d234f420bb1ae85891caed442f90bb0e99de553f806467f165293",
+          "bytes": 31
+        },
+        {
+          "original_inventory_name": "run-finished-utc.txt",
+          "public_path": "evidence/behavioral/T12-R4-r3-S/run-finished-utc.txt",
+          "sha256": "5c4add20ecf26cf3133489115eb173e6822a01b75ce0da225c13dbf45a5274b9",
+          "bytes": 31
+        }
+      ]
+    },
+    {
+      "attempt_id": "T21-R4-r1-S",
+      "case_id": "R4",
+      "primary_outcomes": [
+        {
+          "id": "views_and_edits",
+          "status": "pass"
+        },
+        {
+          "id": "fast_forward_base",
+          "status": "pass"
+        },
+        {
+          "id": "disjoint_modifications",
+          "status": "pass"
+        },
+        {
+          "id": "insert_delete_endings",
+          "status": "pass"
+        },
+        {
+          "id": "identical_adjacent_hunks",
+          "status": "pass"
+        },
+        {
+          "id": "conflict_retention",
+          "status": "pass"
+        },
+        {
+          "id": "pending_blocks_mutation",
+          "status": "pass"
+        },
+        {
+          "id": "resolution_choices",
+          "status": "pass"
+        },
+        {
+          "id": "rename_remove",
+          "status": "pass"
+        },
+        {
+          "id": "save_reload",
+          "status": "pass"
+        },
+        {
+          "id": "failed_save_atomicity",
+          "status": "pass"
+        },
+        {
+          "id": "corrupt_snapshots",
+          "status": "pass"
+        },
+        {
+          "id": "bounds_nofollow",
+          "status": "pass"
+        }
+      ],
+      "totals": {
+        "fail": 0,
+        "pass": 13,
+        "unknown": 0
+      },
+      "score": 13,
+      "max_score": 13,
+      "normalized_score": 1.0,
+      "process_status": "finished",
+      "probe_exit_code": 0,
+      "runner_exit_code": 0,
+      "started_at_utc": "2026-10-06T06:44:44.989801100Z",
+      "finished_at_utc": "2026-10-06T06:44:45.197861190Z",
+      "elapsed_seconds": 0.20806,
+      "source_sha256": "536a6f9b9a632c29f9186f8e7d8cabe39313fe6f891daa4e611a3e0dac08d3be",
+      "plan_sha256": "726a042d5cb9b1de3a663537b23b55ecdb4f2d898617bccf804a139246ee495b",
+      "source_matches_receipt_and_reviewed_copy": true,
+      "post_run_immutable_hashes_verified": true,
+      "probe_stderr_empty": true,
+      "runner_stderr_empty": true,
+      "fixtures_remaining": [],
+      "protected_input_evidence": {
+        "static_report_status": "unreadable due to flattened artifact layout; not converted to pass/fail",
+        "separate_collection_receipt": [
+          {
+            "path": "LICENSE",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "TASK.md",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "inputs/smoke_test.py",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "skill/build-text-merge-component/SKILL.md",
+            "unchanged_at_collection": true
+          }
+        ]
+      },
+      "receipt_path": "receipts/T21-R4-r1-S.json",
+      "original_receipt_sha256": "91511b38f908d10559e0a3cf7b7db8ee27b0bc9d4aafe4d8c360d5dbac3a23c5",
+      "evidence_directory": "evidence/behavioral/T21-R4-r1-S",
+      "original_execution_inventory_with_public_mapping": [
+        {
+          "original_inventory_name": "reviewed/source.py",
+          "public_path": "artifacts/T21-R4-r1-S/merge_workspace.py",
+          "sha256": "536a6f9b9a632c29f9186f8e7d8cabe39313fe6f891daa4e611a3e0dac08d3be",
+          "bytes": 12558
+        },
+        {
+          "original_inventory_name": "reviewed/probe.py",
+          "public_path": "cases/R4/private/probe.py",
+          "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+          "bytes": 13107
+        },
+        {
+          "original_inventory_name": "plan.json",
+          "sha256": "726a042d5cb9b1de3a663537b23b55ecdb4f2d898617bccf804a139246ee495b",
+          "bytes": 1957,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T21-R4-r1-S/plan-public.json"
+        },
+        {
+          "original_inventory_name": "static_report.json",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/static_report.json",
+          "sha256": "43c083a2464799422511c37d3e3bcac46263a4c8c08b2f29391858f7d354fde7",
+          "bytes": 1067
+        },
+        {
+          "original_inventory_name": "approval.json",
+          "sha256": "72e075fb319b8ea6a64264f8402ab9389a530edeb15938b2c3684b3fd6e9fc08",
+          "bytes": 1201,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T21-R4-r1-S/plan-public.json"
+        },
+        {
+          "original_inventory_name": "probe_result.json",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+          "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+          "bytes": 1015
+        },
+        {
+          "original_inventory_name": "behavioral_report.json",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/behavioral_report.json",
+          "sha256": "d0e3555cc28f2192f05bb983d459dbec91dfdf57febd1b08bba4a5731f816511",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "stdout.log",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/stdout.log",
+          "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+          "bytes": 38
+        },
+        {
+          "original_inventory_name": "stderr.log",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.stdout.log",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/runner.stdout.log",
+          "sha256": "3d578d5f5da04b3062b86dc72286f2e28d77dd28b1ca31382c82811be1e3eedb",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "runner.stderr.log",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/runner.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.exit-code.txt",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/runner.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "bytes": 2
+        },
+        {
+          "original_inventory_name": "run-started-utc.txt",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/run-started-utc.txt",
+          "sha256": "cf1a5d929c4f3e8ad127f2edb4b0596fcffb191f626351f04a53d52957785a6a",
+          "bytes": 31
+        },
+        {
+          "original_inventory_name": "run-finished-utc.txt",
+          "public_path": "evidence/behavioral/T21-R4-r1-S/run-finished-utc.txt",
+          "sha256": "a7e1ce8aa42aed7f7a80f18ae2d06498d4b1dbff9c3d2cad6d8823efdf3e9168",
+          "bytes": 31
+        }
+      ]
+    },
+    {
+      "attempt_id": "T22-R4-r1-C",
+      "case_id": "R4",
+      "primary_outcomes": [
+        {
+          "id": "views_and_edits",
+          "status": "pass"
+        },
+        {
+          "id": "fast_forward_base",
+          "status": "pass"
+        },
+        {
+          "id": "disjoint_modifications",
+          "status": "pass"
+        },
+        {
+          "id": "insert_delete_endings",
+          "status": "pass"
+        },
+        {
+          "id": "identical_adjacent_hunks",
+          "status": "pass"
+        },
+        {
+          "id": "conflict_retention",
+          "status": "pass"
+        },
+        {
+          "id": "pending_blocks_mutation",
+          "status": "pass"
+        },
+        {
+          "id": "resolution_choices",
+          "status": "pass"
+        },
+        {
+          "id": "rename_remove",
+          "status": "pass"
+        },
+        {
+          "id": "save_reload",
+          "status": "pass"
+        },
+        {
+          "id": "failed_save_atomicity",
+          "status": "pass"
+        },
+        {
+          "id": "corrupt_snapshots",
+          "status": "pass"
+        },
+        {
+          "id": "bounds_nofollow",
+          "status": "pass"
+        }
+      ],
+      "totals": {
+        "fail": 0,
+        "pass": 13,
+        "unknown": 0
+      },
+      "score": 13,
+      "max_score": 13,
+      "normalized_score": 1.0,
+      "process_status": "finished",
+      "probe_exit_code": 0,
+      "runner_exit_code": 0,
+      "started_at_utc": "2026-10-06T06:46:21.346182172Z",
+      "finished_at_utc": "2026-10-06T06:46:21.555567388Z",
+      "elapsed_seconds": 0.209385,
+      "source_sha256": "d9a6c5ea6e4c09d8e04ebed3f57f679303cc86c802dc1cd7d1558a87e1df6f12",
+      "plan_sha256": "2b12b154c6c4377311510e95e19ff7f05512e4b18eb630ea4577e99827d6fff2",
+      "source_matches_receipt_and_reviewed_copy": true,
+      "post_run_immutable_hashes_verified": true,
+      "probe_stderr_empty": true,
+      "runner_stderr_empty": true,
+      "fixtures_remaining": [],
+      "protected_input_evidence": {
+        "static_report_status": "unreadable due to flattened artifact layout; not converted to pass/fail",
+        "separate_collection_receipt": [
+          {
+            "path": "LICENSE",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "TASK.md",
+            "unchanged_at_collection": true
+          },
+          {
+            "path": "inputs/smoke_test.py",
+            "unchanged_at_collection": true
+          }
+        ]
+      },
+      "receipt_path": "receipts/T22-R4-r1-C.json",
+      "original_receipt_sha256": "f4ba9cca515682a585a292846bdd4ed54767bf9185ffcbda65e4fcf54c5c150e",
+      "evidence_directory": "evidence/behavioral/T22-R4-r1-C",
+      "original_execution_inventory_with_public_mapping": [
+        {
+          "original_inventory_name": "reviewed/source.py",
+          "public_path": "artifacts/T22-R4-r1-C/merge_workspace.py",
+          "sha256": "d9a6c5ea6e4c09d8e04ebed3f57f679303cc86c802dc1cd7d1558a87e1df6f12",
+          "bytes": 12217
+        },
+        {
+          "original_inventory_name": "reviewed/probe.py",
+          "public_path": "cases/R4/private/probe.py",
+          "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+          "bytes": 13107
+        },
+        {
+          "original_inventory_name": "plan.json",
+          "sha256": "2b12b154c6c4377311510e95e19ff7f05512e4b18eb630ea4577e99827d6fff2",
+          "bytes": 1957,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T22-R4-r1-C/plan-public.json"
+        },
+        {
+          "original_inventory_name": "static_report.json",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/static_report.json",
+          "sha256": "214a26354a54149eb7ae851452c3b0e10cf9671141788bc926011dfee8c736a4",
+          "bytes": 1086
+        },
+        {
+          "original_inventory_name": "approval.json",
+          "sha256": "acd3436ac0b480f9cccdcd7d3293064beed7c530e4bf65688919741fd122deb1",
+          "bytes": 801,
+          "public_path": null,
+          "omitted_original": true,
+          "reason": "Original contains machine paths or private authorization messages; exact hash retained, public summary provided",
+          "public_summary_path": "evidence/behavioral/T22-R4-r1-C/plan-public.json"
+        },
+        {
+          "original_inventory_name": "probe_result.json",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+          "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+          "bytes": 1015
+        },
+        {
+          "original_inventory_name": "behavioral_report.json",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/behavioral_report.json",
+          "sha256": "6b94bcc79a93e81a1114533995a223a75c385bd4e2644e3c89c20ce52bea0192",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "stdout.log",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/stdout.log",
+          "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+          "bytes": 38
+        },
+        {
+          "original_inventory_name": "stderr.log",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.stdout.log",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/runner.stdout.log",
+          "sha256": "5183e2db1a582613e65f07b524af3468d7785874f9fe549e85516d2ee0168af9",
+          "bytes": 1506
+        },
+        {
+          "original_inventory_name": "runner.stderr.log",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/runner.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "original_inventory_name": "runner.exit-code.txt",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/runner.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+          "bytes": 2
+        },
+        {
+          "original_inventory_name": "run-started-utc.txt",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/run-started-utc.txt",
+          "sha256": "cf0755f31c4771395ddec6ee3cfbd90f05fc3093f343d4bf83dc780787864405",
+          "bytes": 31
+        },
+        {
+          "original_inventory_name": "run-finished-utc.txt",
+          "public_path": "evidence/behavioral/T22-R4-r1-C/run-finished-utc.txt",
+          "sha256": "6ed54836ac6e14cc8a447b30e8273b3e41c758dcdac65da7d0034603de9389d8",
+          "bytes": 31
+        }
+      ]
+    }
+  ],
+  "frozen_evaluator_bindings": [
+    {
+      "original_inventory_name": "frozen-evaluator/README.md",
+      "public_path": "cases/R4/private/README.md",
+      "sha256": "c444c4f110fd7c4ffd75f4bcebe950bb1071c7090afda0128f461d49a77f7137",
+      "bytes": 4046
+    },
+    {
+      "original_inventory_name": "frozen-evaluator/TASK.md",
+      "public_path": "cases/R4/candidate/TASK.md",
+      "sha256": "f1e1392c338aab6c800fb5388d9bf02a860c8d2087d639ed2c67363b52368784",
+      "bytes": 7313
+    },
+    {
+      "original_inventory_name": "frozen-evaluator/evaluate.py",
+      "public_path": "cases/R4/private/evaluate.py",
+      "sha256": "1c2e7feeffb23c9153310b040e8316a8e5fc33f5a2be0c2734cc088b179bda6a",
+      "bytes": 8149
+    },
+    {
+      "original_inventory_name": "frozen-evaluator/manifest.json",
+      "public_path": "cases/R4/private/manifest.json",
+      "sha256": "1fd0425d799fcbd4ced6f909dfe7608fdbb0e562343a6c53110a6719f0a102e1",
+      "bytes": 4977
+    },
+    {
+      "original_inventory_name": "frozen-evaluator/probe.py",
+      "public_path": "cases/R4/private/probe.py",
+      "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+      "bytes": 13107
+    }
+  ]
+}

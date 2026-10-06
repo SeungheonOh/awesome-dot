@@ -1,0 +1,62 @@
+{
+  "started_at_utc": "2026-10-06T06:42:36.718485+00:00",
+  "finished_at_utc": "2026-10-06T06:42:36.754876+00:00",
+  "exit_status": 0,
+  "frozen_source_sha256_before": {
+    "authoring/R1/candidate/TASK.md": "3f05cfdfb82bdb61b31ca577ff66215d8e552075d499fc5d32cb5cad1f40ac37",
+    "authoring/R1/candidate/inputs/00_README.txt": "5e0c37d86e3687e6401a339201503c25bf7baad54935b1673d875d142f8198cb",
+    "authoring/R1/candidate/inputs/claims.csv": "cbef6152761c2224a949d7aaa3241a14c3f43998875f2c0622cf88a77ddd486b",
+    "authoring/R1/candidate/inputs/correspondence.txt": "f1a6d70569ba48e091a02a4972d50faa8df9ee4fafb9ce85d0110ea7d2b59af2",
+    "authoring/R1/candidate/inputs/policies.txt": "0d1d2d62ef7e6388ebaa1b806c9987b95775c5a53e82fc4cd083a52ead63d303",
+    "authoring/R1/candidate/inputs/receipts.csv": "86a4eee621415aa2fc32245f759b3012419f76eb580653b9e637fa884002d85f",
+    "authoring/R1/candidate/inputs/statement.csv": "589b3e5898b63d76260593c889aa46edf0fa1d254c1bba42f9c672616450b6a8",
+    "authoring/R1/candidate/inputs/trip_calendar.txt": "dca337fe7939092f97171ba3b362e8b7a71ca14a80ad7a06a590eac25f1c4f5c",
+    "authoring/R1/private/README.txt": "7ed334056e4f09a6bdb176bd2f6eeb04c2fe8ad4ef6bbcddf773dad16894bf8f",
+    "authoring/R1/private/author_test.py": "bea2907f4033927ffdde8c7d97256eaae786a9e6de3c1625e6d63ba42a7146f8",
+    "authoring/R1/private/author_test_results.json": "63d9c2fded6eed999b54a5a06a0c0ae98d3b2b62f1e6f81c6962f277258d30d0",
+    "authoring/R1/private/controls/mutations.json": "552a7c213f7a5681c979f378f43cf03153a322dbf06acd8cdf6c53de897d23cf",
+    "authoring/R1/private/expected.json": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3",
+    "authoring/R1/private/grade.py": "775146d6fb20f33a8de550b68e36839150aac8782e35fed06de158a2792e9c56",
+    "authoring/R1/private/oracle.py": "abd957d5476dda1c8eb97e585b6a3754e07935ad17485396852415cd24f5124c",
+    "authoring/R1/private/reference/reconciliation.json": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3",
+    "authoring/R1/private/reference/review_notes.txt": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300",
+    "authoring/R1/private/reference_notes.txt": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300",
+    "authoring/R1/private/rubric.json": "f8446a2f3a2b760f3d34f569109b96f0e9e291f853a775de6322648d31f958e5",
+    "authoring/R1/private/semantic_review_instructions.txt": "701a8cdfe7b34da66efc21e52402cbf1039d295c37ac48d95de6c5d7f5745229"
+  },
+  "frozen_source_sha256_after": {
+    "authoring/R1/candidate/TASK.md": "3f05cfdfb82bdb61b31ca577ff66215d8e552075d499fc5d32cb5cad1f40ac37",
+    "authoring/R1/candidate/inputs/00_README.txt": "5e0c37d86e3687e6401a339201503c25bf7baad54935b1673d875d142f8198cb",
+    "authoring/R1/candidate/inputs/claims.csv": "cbef6152761c2224a949d7aaa3241a14c3f43998875f2c0622cf88a77ddd486b",
+    "authoring/R1/candidate/inputs/correspondence.txt": "f1a6d70569ba48e091a02a4972d50faa8df9ee4fafb9ce85d0110ea7d2b59af2",
+    "authoring/R1/candidate/inputs/policies.txt": "0d1d2d62ef7e6388ebaa1b806c9987b95775c5a53e82fc4cd083a52ead63d303",
+    "authoring/R1/candidate/inputs/receipts.csv": "86a4eee621415aa2fc32245f759b3012419f76eb580653b9e637fa884002d85f",
+    "authoring/R1/candidate/inputs/statement.csv": "589b3e5898b63d76260593c889aa46edf0fa1d254c1bba42f9c672616450b6a8",
+    "authoring/R1/candidate/inputs/trip_calendar.txt": "dca337fe7939092f97171ba3b362e8b7a71ca14a80ad7a06a590eac25f1c4f5c",
+    "authoring/R1/private/README.txt": "7ed334056e4f09a6bdb176bd2f6eeb04c2fe8ad4ef6bbcddf773dad16894bf8f",
+    "authoring/R1/private/author_test.py": "bea2907f4033927ffdde8c7d97256eaae786a9e6de3c1625e6d63ba42a7146f8",
+    "authoring/R1/private/author_test_results.json": "63d9c2fded6eed999b54a5a06a0c0ae98d3b2b62f1e6f81c6962f277258d30d0",
+    "authoring/R1/private/controls/mutations.json": "552a7c213f7a5681c979f378f43cf03153a322dbf06acd8cdf6c53de897d23cf",
+    "authoring/R1/private/expected.json": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3",
+    "authoring/R1/private/grade.py": "775146d6fb20f33a8de550b68e36839150aac8782e35fed06de158a2792e9c56",
+    "authoring/R1/private/oracle.py": "abd957d5476dda1c8eb97e585b6a3754e07935ad17485396852415cd24f5124c",
+    "authoring/R1/private/reference/reconciliation.json": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3",
+    "authoring/R1/private/reference/review_notes.txt": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300",
+    "authoring/R1/private/reference_notes.txt": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300",
+    "authoring/R1/private/rubric.json": "f8446a2f3a2b760f3d34f569109b96f0e9e291f853a775de6322648d31f958e5",
+    "authoring/R1/private/semantic_review_instructions.txt": "701a8cdfe7b34da66efc21e52402cbf1039d295c37ac48d95de6c5d7f5745229"
+  },
+  "review_sha256": {
+    "review_1.json": "4299e19206ff362de8b922bc114f007d4152246c82f7fbabae93dcd7a7083b88",
+    "review_2.json": "cbdf7b17fd19ab0243494256eb0cec6af2fdaa9c2f4b6409b60c8bb961bcaf37"
+  },
+  "artifact_sha256": {
+    "reconciliation.json": "8df0a5092f6158e7d276c9fbeb9bc93ad5da40ec8ea52850148f960ebbdbd7f7",
+    "review_notes.txt": "28b725538317870f7d910209609d874c98968c1258c156eebf02fbbf398a8b8a"
+  },
+  "packet_manifest_sha256": "f8dc83b5bc4f0b7e5392d1e3a92bf43d567b4fca0173bc3d1faeba0bf2b3d0f8",
+  "stdout_sha256": "0680eeeb8249810f46d2c9147e91ef2299e5bd907f5ec7fbbf3d9f312ddf3d75",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "candidate_python_executed": false,
+  "merge_rule": "Unmodified frozen two-review interface"
+}

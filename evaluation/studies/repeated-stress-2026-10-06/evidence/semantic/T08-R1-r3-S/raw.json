@@ -1,0 +1,109 @@
+{
+  "case_id": "R1",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 3,
+    "failed": 0,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R1-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-12": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "artifacts/review_notes.txt opens with the exact task cutoff, '2026-09-30 17:00 UTC', and says 'prepared for finance review, not submitted or paid'. Its POSITION section explicitly reports '$2,142.65' payable, '$252.90' in known-USD holds across C017/C018/C028, and C026 held at 'EUR 24.00 with no supported USD valuation'. These agree with common/TASK.md, the stated acceptance in common/rubric.json R1-12, and artifacts/reconciliation.json totals reimbursement_usd_cents=214265, held_usd_cents=25290 and unvalued_holds={C026, EUR, 24.00}. The missing-evidence amounts are supported by claims.csv C017=47.90, C018=126.00, C028=79.00 and C026=EUR 24.00, with E05 confirming unresolved evidence. The notes distinguish future requests from performed actions and make no unsupported payment or outreach claim."
+        },
+        {
+          "status": "pass",
+          "rationale": "artifacts/review_notes.txt line 2 states the exact TASK.md cutoff, '2026-09-30 17:00 UTC', and says 'prepared for finance review, not submitted or paid'. Lines 5 and 8 state $2,142.65 payable, $252.90 known-USD held across C017/C018/C028, and EUR 24.00 held for C026 with no supported USD valuation. These match reconciliation.json totals (214265 reimbursement cents, 25290 held cents, C026 EUR '24.00' unvalued hold) and the rubric's required position. The USD holds are the claims.csv amounts 47.90 + 126.00 + 79.00, and R026/E05 support the unvalued cash hold. Line 30 excludes E06's post-cutoff note. The artifacts make no unsupported claim that payment or outreach occurred; next steps are prospective."
+        }
+      ]
+    },
+    "R1-13": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The UNRESOLVED ISSUES / NEXT STEPS section in artifacts/review_notes.txt gives four distinct, practical actions. For C017 ($47.90), it identifies the missing itemized stationery receipt and asks Maya to obtain a vendor duplicate for finance, matching the empty receipt field in claims.csv, S017, E05 and the policies.txt over-$25 receipt rule. For C018 ($126.00), it identifies the absent attendee list/count and asks Maya or the workshop organizer for actual attendees/count so finance can apply P2's $30 per-person lunch cap; R018 and E05 expressly show the missing count, and the policy forbids inferring attendees. For C026 (EUR 24.00, USD unknown), it identifies the absent organization-approved cash exchange-rate record and asks Maya to obtain it from finance, consistent with R026, E05 and the cash-FX rule. For C028 ($79.00 held), it correctly contrasts R028's $79.00 receipt with settled S028's $89.00 and asks Maya to obtain a corrected itemized invoice or documented explanation/adjustment for finance reconciliation, consistent with E05 and the more-than-$1 mismatch rule. The notes explicitly exclude October 1 E06 from resolution and do not invent replacement evidence."
+        },
+        {
+          "status": "pass",
+          "rationale": "review_notes.txt lines 24-27 distinguish all four unresolved issues and give individual, practical next steps. C017: missing itemized stationery receipt, $47.90 held, with Maya to obtain the vendor's itemized duplicate for finance; claims.csv has no receipt and E05 confirms absence, while P1/P2 require itemization above $25. C018: absent attendee list/count, $126.00 held, with Maya or the workshop organizer to supply actual attendees/count so finance can apply P2's $30 per-person lunch cap; R018 and E05 confirm no count. C026: EUR 24.00 cash receipt exists but the approved rate record is absent, with Maya to request that record from finance for service-date valuation and cap review; R026, E05 and the foreign-cash policy support this distinction. C028: R028's $79 receipt versus S028's $89 settlement is an unexplained $10 discrepancy above the policy's $1 threshold; Maya is to obtain a corrected itemized invoice or documented explanation/adjustment for finance to reconcile. E05 confirms the discrepancy remains unresolved. The ledger holds all four and invents no supporting evidence, attendees or FX rate; line 30 explicitly does not use E06 to resolve them."
+        }
+      ]
+    },
+    "R1-14": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "artifacts/review_notes.txt CONFIRMED ADJUSTMENTS explains every required adjustment class accurately. Policy and meals uses service-date P1 through September 14 and P2 from September 15, specifically retaining P1 for September 12 C002/C003/C004 despite September 16 postings, as policies.txt and S002/S003/S004 require. It explains C004's food/tax calculation 52.00 + 6.80 x 52/68 = $57.20, one HALF_UP rounding, and exclusion of $16 alcohol plus $1.60 associated tax, grounded in R004/P1. Hotels and deposit distinguishes C005's $180 x 2 base cap plus full $46.80 tax from E01's later-stay $230 x 2 exception plus $55.20 tax; it allocates the applied $120 deposit to C021 and only $395.20 to C010, matching R010/R021 and S010/S021 and preventing duplicate reimbursement. Transport and FX uses actual S014/S015 USD settlements of $43.18/$68.82 for the EUR card purchases and leaves the C026 cash rate unknown, as the policy requires; E02's C013-specific $95 taxi exception is also explained. Refunds applies settled S122=$36, S123=$27 and S124=$125 to C022/C023/C024, retaining respectively $0/$63/$25 and grounding the approved cancellation fee in E04, without calling credits exclusions. Duplicates and payment source retains C001 as canonical and gives C007 zero incremental reimbursement per E05, while retaining C020/C030 business costs totaling $79 but paying Maya zero per S020/S030. The notes explain R027/S027's $198 final invoice replacing the $211.20 estimate with $13.20 excluded, and count C029's settled S029 flight once while excluding pending S229 from expense. These explanations agree with the corresponding reconciliation.json rows. No materially misleading or unsupported additional statement was found."
+        },
+        {
+          "status": "pass",
+          "rationale": "review_notes.txt explains every required adjustment class with accurate sources and amounts. Line 13 uses P1 through September 14 and P2 from September 15 by service date, despite S002-S004 posting September 16; it derives C004's $57.20 food plus allocated tax from R004 (52 + 6.80 x 52/68), excluding $16 alcohol and $1.60 tax under P1. Line 17 applies C005's $180 x 2 base cap plus all $46.80 tax; limits E01's $230-per-night exception to the later stay; and allocates its $120 applied deposit to C021 and only $395.20 final balance to C010, matching R010/R021/S010/S021. Line 15 explains actual settled USD FX for C014 ($43.18, S014) and C015 ($68.82, S015), with cash C026 still unvalued under policy, and accurately applies E02's C013 taxi exception. Line 19 nets settled S122/S123/S124 credits of $36/$27/$125, yielding $0/$63/$25 payable, with E04 approving C024's cancellation fee. Line 21 identifies C007 as an R001 duplicate of canonical C001 per E05; retains C020/C030's $79 supported company-paid cost with no employee payment, consistent with S020/S030 and E03; and counts C029's settled S029 once, excluding pending S229. Line 17 explains that R027/S027's $198 final amount supersedes the $211.20 estimate, excluding $13.20 rather than holding it, as TASK.md directs. The matching claim notes and monetary fields corroborate these explanations. The additional line-32 bridge is supported by $2,746.55 unique settled charges plus $13.20 estimate overstatement minus $10 unclaimed mismatch = $2,749.75; the source counts in line 34 are also accurate. No materially unsupported statement was found."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "reconciliation.json": "695c0d1e0900723c781bf36f72501ed4678edcd7067d6b4d4e3828362136bcf9",
+    "review_notes.txt": "8d2c20a9b51ae91d0f2e1502e4368b489ed335cd7cf8731140469e1eaf36ce95"
+  },
+  "not_candidate_execution": true
+}

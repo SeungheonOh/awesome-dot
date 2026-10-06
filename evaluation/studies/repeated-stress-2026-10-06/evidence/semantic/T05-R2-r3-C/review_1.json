@@ -1,0 +1,24 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "rev-c58a1831",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "edf35c5181e3da5d42cecf4d4025c59e86daacafacd57ef319e1919614362111",
+    "handoff.txt": "f8103e15ce2428c83cf89105bc91e15f88a8e06891d7a2b065b3b970d2d49231"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "The register A08 title is \"Translate the launch FAQ into Spanish only\" and the handoff completion entry says French \"is not an outstanding obligation\", matching M2 removal of French and M5 acceptance of Spanish at 15:00. The register and handoff distinguish A09 completed room/participant booking from open A10 delivery by Kian on October 6, matching M4 and F6, including the successful booking update. A05/A16/A22/A26 have cancelled status and null next_step; the handoff explicitly groups them under \"Explicitly cancelled; no pre-cutoff reopening\", correctly reflecting M2, M5, M2 and M3 respectively. A13 is the reopened original ticket/action under Mira due October 2 per M5. The register states as_of_utc=2026-09-30T17:00:00Z and excluded_post_cutoff_evidence_ids=[F8,F9]; the handoff opening explicitly excludes F8/F9 even when they allege earlier events. Consistent with that exclusion, A33 remains unassigned/unresolved, A17 and A32 remain done, and A31 remains open; none of the later owner, completion, reopening or rework claims are incorporated. No obsolete French, fallback, purge, email or live-demo obligation is revived."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff covers all 18 active actions with unambiguous owners/dates or explicit gaps and actionable next steps. Its first substantive section foregrounds A03 (Dev, September 26, obtain counsel approval), A21 (Uma, September 29, reconcile identified exports), A25 (Yara, October 2, assemble materials and obtain packet acceptance), and A28 (Ben, October 2, publish after A25 acceptance), accurately preserving M4/M5/F5 immediate chain A03+A21 -> A25 -> A28. It explicitly identifies the four overdue items A03/A11/A12/A21 in the summary and their individual entries. The other blocked/gap entries cover A11 (Kian, September 26, obtain mapping and verify zero duplicates), A12 (Lena, September 28, restore access and arrange an authorized handoff), A18 (Ravi, October 2, obtain compliance clearance), A33 (no named person, October 1, appoint lead and complete test), and A34 (Iris, October 1, confirm partner date), as supported by B00, M2-M4 and F7. Grouped date headings clearly cover A06/Gia, A14/Noor and A20/Talia due October 1; A02/Carla, A13/Mira, A23/Xena and A31/Gia due October 2; and A10/Kian due October 6, with useful instructions to finish the banner, run the load test, repair and verify links, finish routing rules, resolve the reopened ticket, complete the dashboard transfer, perform accessibility testing, and deliver training. These reflect M1-M5 and F1/F2/F4/F6. A30/Dev is separately headed \"Deadline deliberately unset\" and instructed to continue drafting and seek agreement on a replacement date, matching M2. Completed and cancelled decisions are also explicitly summarized."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve all four required uncertainty/authority gaps. For A21, the handoff and register blocker report QA all-pass versus operations 42 missing rows and absent snapshot/hash identification; the handoff explicitly says \"The later report does not settle the conflict\" and that neither establishes trustworthy completion, exactly matching F5 and M5. For A12, the register owner is Lena and its blocker says Mira has not accepted or been assigned by final decision; the handoff says \"Lena remains accountable\", matching M3/F7 rather than treating a proposal as a transfer. For A33, owner is null and the handoff says \"no named accountable person\", acknowledging M4 release of Hana to an unfilled role and F7 lack of a named lead. For A30, due_date is null, status is open, and the handoff explains that M2 removed September 29 without replacing it and drafting can continue. Proposed next steps are presented as future work, not confirmations. In particular, A03 approval, A14 testing, A20 full link verification, A31 completion and A34 partner date are not invented; M5, M3, F4 and F7 support their stated incompleteness. The handoff final paragraph expressly says \"No messages were sent, external records changed, or note instructions carried out\" and clarifies that the next steps are proposed actions. No materially unsupported factual claim, deadline, owner, completion or claimed outreach was found in the prose or descriptive register fields."
+    }
+  }
+}

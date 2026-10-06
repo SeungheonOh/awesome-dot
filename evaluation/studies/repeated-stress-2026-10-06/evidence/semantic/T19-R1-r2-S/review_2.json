@@ -1,0 +1,31 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "rev-5834c772",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "d145c84951bcfa701c361a85589918937f06973021ca52122b3ff67261cc38b9",
+    "review_notes.txt": "e32b67800541a4059684690ddb4b1857ffb502970da5028a60273d96b842b68a"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt opening states 'As of 2026-09-30 17:00 UTC', matching common/TASK.md. POSITION explicitly gives 'Payable to Maya now: USD 2,142.65' and 'Known-USD claims held: USD 252.90, plus one separately unvalued hold of EUR 24.00 (C026)', and says a complete USD value of all holds cannot be stated. These match reconciliation.json totals reimbursement_usd_cents=214265, held_usd_cents=25290 and unvalued_holds C026/EUR/24.00. E05 and claims C017/C018/C028 support the three known-dollar holds of 47.90+126.00+79.00=252.90; R026 and policy require the separately unvalued EUR cash hold. The opening says 'prepared for finance review only; nothing submitted, paid, or sent'; future-oriented next steps do not assert payment or outreach. The notes therefore communicate the required cutoff and payable/held position without an unsupported external-action claim."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "OPEN ISSUES AND NEXT STEPS in artifacts/review_notes.txt distinctly covers all four issues confirmed by correspondence E05. For C017 it identifies the absent itemized stationery receipt and asks Maya to obtain the original or merchant duplicate for finance, consistent with the above-USD-25 receipt rule and S017 USD 47.90. For C018 it identifies the missing attendee list/count and asks Maya or the workshop organizer for actual attendees and count so finance can apply P2's USD 30 per-person cap; R018 has a blank attendee field and no count. For C026 it states EUR 24.00/USD unknown and asks finance for the organization-approved exchange-rate record applicable to the expense before valuation and the taxi-cap test, matching R026 and the foreign-cash rule. For C028 it explicitly contrasts R028/claim USD 79.00 with settled S028 USD 89.00, asks Maya to obtain corrected vendor itemization or an explanation, and asks finance to reconcile before reimbursement. It correctly holds the claimed USD 79.00 rather than inventing an explanation for the USD 10.00 difference. These are practical, distinct evidence requests with responsible parties, and the notes do not treat outside-cutoff E06 as resolving any hold."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "CONFIRMED ADJUSTMENTS in artifacts/review_notes.txt explains every requested class accurately. Item 1 applies P1 through September 14 and P2 from September 15 by service date, retaining P1 for C002-C004 despite S002-S004 September 16 posting; it also accurately cites E02's C013 USD 95 taxi exception. Item 2 shows C004 food USD 52.00 plus proportional tax 6.80*52/68=57.20, rounded once, excluding alcohol USD 16.00 plus USD 1.60 tax, consistent with R004/P1. Item 3 explains C005's two USD 180 room caps plus full USD 46.80 tax and E01's inapplicability; then E01/R010/R021/S010/S021 support the named USD 515.20 stay split into C021 USD 120.00 and C010 USD 395.20 without double payment or subtraction. The same item explains R027/S027's supported USD 198.00 final overriding the USD 211.20 estimate and excludes USD 13.20 without a hold. Item 4 uses actual S014/S015 USD 43.18/68.82 for foreign-card expenses and leaves cash C026 unvalued pending an approved rate, as policy requires. Item 5 identifies settled S122/S123/S124 credits of USD 36/27/125, giving C022 zero, C023 USD 63 and C024 USD 25; E04 supports the retained cancellation fee. Item 6 retains C001 as canonical over duplicate C007 per E05 and counts S029 USD 224.80 once while excluding pending S229. Item 7 retains C020/C030's USD 79.00 supported company-card cost while paying Maya zero, matching S020/S030 and policy; it accurately distinguishes E03's one-month approval from ongoing authorization. These explanations match the corresponding reconciliation.json rows and sources; no materially misleading adjustment statement was found."
+    }
+  },
+  "hash_verification": {
+    "status": "pass",
+    "scope": "All 13 packet_sha256 entries in manifest.json, including both artifact hashes, independently matched."
+  },
+  "review_limitations": [
+    "The final review_notes.txt paragraph asserts prior local reopening, checks and unchanged original source hashes. This packet supplies no execution log establishing that history; those process assertions were not used as evidence of semantic success. No materially unsupported substantive finance statement was identified."
+  ]
+}

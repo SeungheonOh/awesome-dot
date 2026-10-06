@@ -1,0 +1,2805 @@
+{
+  "note": "Exact copied bytes or explicitly labeled public projections. Hashes of omitted private originals do not make those originals reproducible.",
+  "files": [
+    {
+      "path": "cases/R1/candidate/TASK.md",
+      "source_relative_path": "authoring/R1/candidate/TASK.md",
+      "bytes": 4448,
+      "sha256": "3f05cfdfb82bdb61b31ca577ff66215d8e552075d499fc5d32cb5cad1f40ac37",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/candidate/inputs/00_README.txt",
+      "source_relative_path": "authoring/R1/candidate/inputs/00_README.txt",
+      "bytes": 1121,
+      "sha256": "5e0c37d86e3687e6401a339201503c25bf7baad54935b1673d875d142f8198cb",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/candidate/inputs/claims.csv",
+      "source_relative_path": "authoring/R1/candidate/inputs/claims.csv",
+      "bytes": 2408,
+      "sha256": "cbef6152761c2224a949d7aaa3241a14c3f43998875f2c0622cf88a77ddd486b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/candidate/inputs/correspondence.txt",
+      "source_relative_path": "authoring/R1/candidate/inputs/correspondence.txt",
+      "bytes": 1670,
+      "sha256": "f1a6d70569ba48e091a02a4972d50faa8df9ee4fafb9ce85d0110ea7d2b59af2",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/candidate/inputs/policies.txt",
+      "source_relative_path": "authoring/R1/candidate/inputs/policies.txt",
+      "bytes": 2855,
+      "sha256": "0d1d2d62ef7e6388ebaa1b806c9987b95775c5a53e82fc4cd083a52ead63d303",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/candidate/inputs/receipts.csv",
+      "source_relative_path": "authoring/R1/candidate/inputs/receipts.csv",
+      "bytes": 2177,
+      "sha256": "86a4eee621415aa2fc32245f759b3012419f76eb580653b9e637fa884002d85f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/candidate/inputs/statement.csv",
+      "source_relative_path": "authoring/R1/candidate/inputs/statement.csv",
+      "bytes": 3081,
+      "sha256": "589b3e5898b63d76260593c889aa46edf0fa1d254c1bba42f9c672616450b6a8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/candidate/inputs/trip_calendar.txt",
+      "source_relative_path": "authoring/R1/candidate/inputs/trip_calendar.txt",
+      "bytes": 486,
+      "sha256": "dca337fe7939092f97171ba3b362e8b7a71ca14a80ad7a06a590eac25f1c4f5c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/README.txt",
+      "source_relative_path": "authoring/R1/private/README.txt",
+      "bytes": 1895,
+      "sha256": "7ed334056e4f09a6bdb176bd2f6eeb04c2fe8ad4ef6bbcddf773dad16894bf8f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/author_test.py",
+      "source_relative_path": "authoring/R1/private/author_test.py",
+      "bytes": 7521,
+      "sha256": "bea2907f4033927ffdde8c7d97256eaae786a9e6de3c1625e6d63ba42a7146f8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/author_test_results.json",
+      "source_relative_path": "authoring/R1/private/author_test_results.json",
+      "bytes": 5619,
+      "sha256": "63d9c2fded6eed999b54a5a06a0c0ae98d3b2b62f1e6f81c6962f277258d30d0",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/controls/mutations.json",
+      "source_relative_path": "authoring/R1/private/controls/mutations.json",
+      "bytes": 4253,
+      "sha256": "552a7c213f7a5681c979f378f43cf03153a322dbf06acd8cdf6c53de897d23cf",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/expected.json",
+      "source_relative_path": "authoring/R1/private/expected.json",
+      "bytes": 12699,
+      "sha256": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/grade.py",
+      "source_relative_path": "authoring/R1/private/grade.py",
+      "bytes": 11248,
+      "sha256": "775146d6fb20f33a8de550b68e36839150aac8782e35fed06de158a2792e9c56",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/oracle.py",
+      "source_relative_path": "authoring/R1/private/oracle.py",
+      "bytes": 4402,
+      "sha256": "abd957d5476dda1c8eb97e585b6a3754e07935ad17485396852415cd24f5124c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/reference/reconciliation.json",
+      "source_relative_path": "authoring/R1/private/reference/reconciliation.json",
+      "bytes": 12699,
+      "sha256": "6ab6f046c77b6448fdbb5d35c94da5eb179d7199a3d2c60817471207cc388ec3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/reference/review_notes.txt",
+      "source_relative_path": "authoring/R1/private/reference/review_notes.txt",
+      "bytes": 2639,
+      "sha256": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/reference_notes.txt",
+      "source_relative_path": "authoring/R1/private/reference_notes.txt",
+      "bytes": 2639,
+      "sha256": "4b3d2d655e6bfc69838a718b31de691f2511e62d521d3cf405a6af9cb35bf300",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/rubric.json",
+      "source_relative_path": "authoring/R1/private/rubric.json",
+      "bytes": 4513,
+      "sha256": "f8446a2f3a2b760f3d34f569109b96f0e9e291f853a775de6322648d31f958e5",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R1/private/semantic_review_instructions.txt",
+      "source_relative_path": "authoring/R1/private/semantic_review_instructions.txt",
+      "bytes": 1448,
+      "sha256": "701a8cdfe7b34da66efc21e52402cbf1039d295c37ac48d95de6c5d7f5745229",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/candidate/TASK.md",
+      "source_relative_path": "authoring/R2/candidate/TASK.md",
+      "bytes": 4321,
+      "sha256": "953c6ca48d23fc4ec9342a4c08583036a60e0fbd7300fea9da0d5d7f01dd0161",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/candidate/inputs/00_README.txt",
+      "source_relative_path": "authoring/R2/candidate/inputs/00_README.txt",
+      "bytes": 765,
+      "sha256": "c58cc949e43dc8ea2ca0c405eddaa06ba8b221022aac62ad239550d2818421d3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/candidate/inputs/baseline.csv",
+      "source_relative_path": "authoring/R2/candidate/inputs/baseline.csv",
+      "bytes": 2082,
+      "sha256": "9ab3d968997e48f003172eea9969b158345436e4e5ef628d06d7e91cdca2433e",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/candidate/inputs/followups.txt",
+      "source_relative_path": "authoring/R2/candidate/inputs/followups.txt",
+      "bytes": 2550,
+      "sha256": "ee15e1cbb59dd224abbdecbcbe6e083663a8509584321c35e3b75a62074a600f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/candidate/inputs/meeting_notes.txt",
+      "source_relative_path": "authoring/R2/candidate/inputs/meeting_notes.txt",
+      "bytes": 5607,
+      "sha256": "e8ae91d5daa592263f668a7009d0fae162db74efbea77f54e754c8b076496fd1",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/README.txt",
+      "source_relative_path": "authoring/R2/private/README.txt",
+      "bytes": 1895,
+      "sha256": "5b44911ca499de4649e258e1201a1211be05ef10de8d5fc8b7836a177af3d115",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/author_test.py",
+      "source_relative_path": "authoring/R2/private/author_test.py",
+      "bytes": 7521,
+      "sha256": "bea2907f4033927ffdde8c7d97256eaae786a9e6de3c1625e6d63ba42a7146f8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/author_test_results.json",
+      "source_relative_path": "authoring/R2/private/author_test_results.json",
+      "bytes": 5680,
+      "sha256": "07d9670f7cad26b3f304462d6fbc406bf1e10a9205dcff4e15ae2ba85de5b875",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/controls/mutations.json",
+      "source_relative_path": "authoring/R2/private/controls/mutations.json",
+      "bytes": 4054,
+      "sha256": "5db99e05d4d6387e456717349a6d05c982b629a1fe994347002a2337d8fb759b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/expected.json",
+      "source_relative_path": "authoring/R2/private/expected.json",
+      "bytes": 12864,
+      "sha256": "1f6dba6db0dfbf9e03b4834470bc9812051f5d9fcc0a36d634be0c1e419ff0f0",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/grade.py",
+      "source_relative_path": "authoring/R2/private/grade.py",
+      "bytes": 10635,
+      "sha256": "0baee7525fbd3be7e23d796abaed638634a1022319a2b668c415cd49d49adc49",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/oracle_audit.py",
+      "source_relative_path": "authoring/R2/private/oracle_audit.py",
+      "bytes": 1203,
+      "sha256": "4e730a4bca3afd9d83d5a4d7b5b8f46ccc2e2a4465a0b957aab547d79140454d",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/reference/action_register.json",
+      "source_relative_path": "authoring/R2/private/reference/action_register.json",
+      "bytes": 12864,
+      "sha256": "1f6dba6db0dfbf9e03b4834470bc9812051f5d9fcc0a36d634be0c1e419ff0f0",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/reference/handoff.txt",
+      "source_relative_path": "authoring/R2/private/reference/handoff.txt",
+      "bytes": 3323,
+      "sha256": "a5d997c8eb4654c8c036aeb1ebb3d8b467b275bb8be68d2a9ce6d9556e568e4f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/reference_handoff.txt",
+      "source_relative_path": "authoring/R2/private/reference_handoff.txt",
+      "bytes": 3323,
+      "sha256": "a5d997c8eb4654c8c036aeb1ebb3d8b467b275bb8be68d2a9ce6d9556e568e4f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/rubric.json",
+      "source_relative_path": "authoring/R2/private/rubric.json",
+      "bytes": 4711,
+      "sha256": "80725bd643923dd1a7e9444f317abfe027b2da0cc6c83e3b497f5939faa17c57",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R2/private/semantic_review_instructions.txt",
+      "source_relative_path": "authoring/R2/private/semantic_review_instructions.txt",
+      "bytes": 1448,
+      "sha256": "e68daeff0b3ab076e3d3915adfea53c0655d5ee8cf760030933b59b4bc51ae8f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/candidate/TASK.md",
+      "source_relative_path": "authoring/R3/candidate/TASK.md",
+      "bytes": 4896,
+      "sha256": "e2db15285d8bf66e8c34ad81e1d04b9738eb7af238ba851a0a459eaedeb633cf",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/candidate/inputs/billing.sqlite",
+      "source_relative_path": "authoring/R3/candidate/inputs/billing.sqlite",
+      "bytes": 249856,
+      "sha256": "bb8bedc6ce954da3ffa0b3024e49d357bcefcf44e0aef95520a26049375a35f7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/candidate/inputs/ledger.json",
+      "source_relative_path": "authoring/R3/candidate/inputs/ledger.json",
+      "bytes": 457049,
+      "sha256": "37e37ff12ba9a02890e3e768371b0bda995f8d80cda3b4a1eaae195fc55c1563",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/candidate/inputs/scenarios.json",
+      "source_relative_path": "authoring/R3/candidate/inputs/scenarios.json",
+      "bytes": 415,
+      "sha256": "705ab65a32ff4ee39c8c0cef2db1a0381958125e4fd85ca5288bb011a11df41f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/candidate/inputs/schema.sql",
+      "source_relative_path": "authoring/R3/candidate/inputs/schema.sql",
+      "bytes": 1095,
+      "sha256": "fc53e63ad54168ed61c8602cf3c22ac8efd41b079167f9d97d7aa470cf464529",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/candidate/output/report.sql",
+      "source_relative_path": "authoring/R3/candidate/output/report.sql",
+      "bytes": 997,
+      "sha256": "30afe5180137513f2ea4831156d68abef7f1d02b82eee91ad9b78646bf753425",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/README.md",
+      "source_relative_path": "authoring/R3/private/README.md",
+      "bytes": 2523,
+      "sha256": "f04ac8389ae915b48c7036f635075648366454de5aa66f0861155aa72a57eab4",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/build_fixture.py",
+      "source_relative_path": "authoring/R3/private/build_fixture.py",
+      "bytes": 6698,
+      "sha256": "15b4bcd66cd27524fcf03a9f4da27f7cc1319def59488a187d46f69fe68c2a63",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/control_results.json",
+      "source_relative_path": "authoring/R3/private/control_results.json",
+      "bytes": 1977,
+      "sha256": "005dffee6a731c49ff138c58524f46c084ecc1a6ab4b7207e798f021e5feacf4",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/expected.json",
+      "source_relative_path": "authoring/R3/private/expected.json",
+      "bytes": 33799,
+      "sha256": "f5b69bf0c7b32ff9373ab5d5e3c17164c594b7c4c2c139946c66b1a9f0f2c5f4",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/grade.py",
+      "source_relative_path": "authoring/R3/private/grade.py",
+      "bytes": 6082,
+      "sha256": "c69fc18607f620581118a2ddfe779f00a2b66b31547b73e2edaa01b08714e6c1",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/manifest.json",
+      "source_relative_path": "authoring/R3/private/manifest.json",
+      "bytes": 4809,
+      "sha256": "1b60b465f55b8acc2e7b34a12f525f9d8daa0900508860f1cf13da9947e8366b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/reference.sql",
+      "source_relative_path": "authoring/R3/private/reference.sql",
+      "bytes": 1568,
+      "sha256": "9b7ea77fa0233cd439d60b455bb8bfeb3680db5731471748d4c723618dc79081",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/reference_result.json",
+      "source_relative_path": "authoring/R3/private/reference_result.json",
+      "bytes": 1505,
+      "sha256": "a9252a627c6f2fbc0662e31cdf87e440ecda895aae4e2a6ec32ab3a6d50614d7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R3/private/validate_controls.py",
+      "source_relative_path": "authoring/R3/private/validate_controls.py",
+      "bytes": 1691,
+      "sha256": "7de73ba9993108d4b718101ae84c2055208a6164cdbcbb22d5f993857e64786a",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/candidate/TASK.md",
+      "source_relative_path": "authoring/R4/candidate/TASK.md",
+      "bytes": 7313,
+      "sha256": "f1e1392c338aab6c800fb5388d9bf02a860c8d2087d639ed2c67363b52368784",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/candidate/inputs/smoke_test.py",
+      "source_relative_path": "authoring/R4/candidate/inputs/smoke_test.py",
+      "bytes": 832,
+      "sha256": "87cd2cf83b0ce33cae4774aa0f193e538aba6adc9d500ff13c6c3a2e414730b7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/candidate/output/merge_workspace.py",
+      "source_relative_path": "authoring/R4/candidate/output/merge_workspace.py",
+      "bytes": 6549,
+      "sha256": "93fbfcffad4c4c9227643c6758b8072ad1ae2b911031e1077a53feb1c86dad85",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/README.md",
+      "source_relative_path": "authoring/R4/private/README.md",
+      "bytes": 4046,
+      "sha256": "c444c4f110fd7c4ffd75f4bcebe950bb1071c7090afda0128f461d49a77f7137",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/control_results.json",
+      "source_relative_path": "authoring/R4/private/control_results.json",
+      "bytes": 2735,
+      "sha256": "754e59ca3254f9c9d363e0e6676e00ae1c3b60c22a7fe17b988afa708ed700f5",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/evaluate.py",
+      "source_relative_path": "authoring/R4/private/evaluate.py",
+      "bytes": 8149,
+      "sha256": "1c2e7feeffb23c9153310b040e8316a8e5fc33f5a2be0c2734cc088b179bda6a",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/manifest.json",
+      "source_relative_path": "authoring/R4/private/manifest.json",
+      "bytes": 4977,
+      "sha256": "1fd0425d799fcbd4ced6f909dfe7608fdbb0e562343a6c53110a6719f0a102e1",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/positive_controls.json",
+      "source_relative_path": "authoring/R4/private/positive_controls.json",
+      "bytes": 640,
+      "sha256": "6fa8061a89d1b42c73d8a584cc47c8577d1848a87e144e6607e3412f591f96bc",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/probe.py",
+      "source_relative_path": "authoring/R4/private/probe.py",
+      "bytes": 13107,
+      "sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/reference.py",
+      "source_relative_path": "authoring/R4/private/reference.py",
+      "bytes": 6876,
+      "sha256": "c59cbcae36d9fcdd7394a744d9848668763321cc2b8e8907ab115c713c1e30ad",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/reference_result.json",
+      "source_relative_path": "authoring/R4/private/reference_result.json",
+      "bytes": 1015,
+      "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/static_gate_validation.json",
+      "source_relative_path": "authoring/R4/private/static_gate_validation.json",
+      "bytes": 362,
+      "sha256": "f65931d29c36fd994a2fb03acd2abd7166a17e18c0445f0cd7e837ff862cd612",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "cases/R4/private/validate_controls.py",
+      "source_relative_path": "authoring/R4/private/validate_controls.py",
+      "bytes": 2610,
+      "sha256": "4e92a7fb3321a177cd5f2c0b1f6b39c641bc85f16b2c3a9f13cb7ef9c2c486f5",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "methods/COMMON_INSTRUCTION.txt",
+      "source_relative_path": "coordinator/COMMON_INSTRUCTION.txt",
+      "bytes": 3259,
+      "sha256": "24cbf6213ef1e7bdc91bfbca39271d6dbaf6ee068d672172f7ddf9f9c675edfe",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/LICENSE",
+      "source_relative_path": "coordinator/sources/upstream/LICENSE",
+      "bytes": 1080,
+      "sha256": "e51a2584353241d389b62a1c829115eee3196a41255e8b7d82f2691024b3ad10",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/skill/build-text-merge-component/SKILL.md",
+      "source_relative_path": "coordinator/sources/upstream/skill/build-text-merge-component/SKILL.md",
+      "bytes": 10423,
+      "sha256": "e1edb81fd65830e73dd0015672c5cc962fae2118957121236439e810858c1975",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/skill/expense-report-reconciliation/SKILL.md",
+      "source_relative_path": "coordinator/sources/upstream/skill/expense-report-reconciliation/SKILL.md",
+      "bytes": 13490,
+      "sha256": "7c43b2643bb6b1864fb4f1bf1226e594d56f1b24a13303e7caebc9a75e584565",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/skill/expense-report-reconciliation/example.md",
+      "source_relative_path": "coordinator/sources/upstream/skill/expense-report-reconciliation/example.md",
+      "bytes": 22885,
+      "sha256": "0788b89ae3dad911d43ea1aa539d95f0fb61af42ff2e473674f980630528f884",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/skill/meeting-action-handoff/SKILL.md",
+      "source_relative_path": "coordinator/sources/upstream/skill/meeting-action-handoff/SKILL.md",
+      "bytes": 10774,
+      "sha256": "f6e36e12666ab844609344a9b5cabe92dfc6e84cd12c0455ce64e74c6b98d2ee",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/skill/meeting-action-handoff/example.md",
+      "source_relative_path": "coordinator/sources/upstream/skill/meeting-action-handoff/example.md",
+      "bytes": 3716,
+      "sha256": "b0fcc1e08b4d0c4ad8d3354ff8131972b9e3dccd6f4b03a3a8a022a4f8e511e7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/skill/sql-report-reconciliation/SKILL.md",
+      "source_relative_path": "coordinator/sources/upstream/skill/sql-report-reconciliation/SKILL.md",
+      "bytes": 8367,
+      "sha256": "0bbd6f501ee28738fea6326fe8759a2383047b034ad6888378dc00ca92204c59",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/skill/sql-report-reconciliation/references/fictional-example.md",
+      "source_relative_path": "coordinator/sources/upstream/skill/sql-report-reconciliation/references/fictional-example.md",
+      "bytes": 17142,
+      "sha256": "9193c975032ac7880a0901480840c950aba154635bc644b5ac1f22931074afc8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "guides/skill/sql-report-reconciliation/references/verified-run.md",
+      "source_relative_path": "coordinator/sources/upstream/skill/sql-report-reconciliation/references/verified-run.md",
+      "bytes": 3987,
+      "sha256": "cbcc0f25d9f348efad324d22e6bd61b1fffc076e25d5cb41583c057795812934",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "provenance/packages.json",
+      "source_relative_path": "coordinator/manifests/packages.json",
+      "bytes": 4409,
+      "sha256": "9205369fbf56996e58f155d085905349f241b5f75e969e9a85b78ec87aa24e99",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "methods/schedule.json",
+      "source_relative_path": "coordinator/schedule.json",
+      "original_sha256": "263efb5c93968eec58bb8a8b6ca4c1def6fb5742fd65501d1110faadee69b6a4",
+      "treatment": "public projection",
+      "changes": "Removed machine paths; schedule and originally planned statuses are unchanged"
+    },
+    {
+      "path": "methods/bootstrap-variants.json",
+      "source_relative_path": "results/bootstrap-variants-public.json",
+      "bytes": 20486,
+      "sha256": "e479c043110611f3264825d2b3f9981d70510049529b6e7071a3cb2c24c7fd28",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "methods/operational-addendum.md",
+      "source_relative_path": "results/methodology-operational-addendum.md",
+      "bytes": 2911,
+      "sha256": "e7f05f29e6c0501593d631af8a0f022fabea2e3befd17e1c93ed37ae13b86587",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "provenance/collection-verification.json",
+      "source_relative_path": "results/checkpoints/final-binding-verification.json",
+      "bytes": 9435,
+      "sha256": "c9389ac366b4524bdb07c1515037a6c54bb7c2fd75656137b41150562db616b3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T01-R3-r1-S/notes.md",
+      "source_relative_path": "results/artifacts/T01-R3-r1-S/notes.md",
+      "bytes": 3010,
+      "sha256": "2f462877da9be81f6fcecd42b74f0dff9fd4bb8af9101b61e9bb5f699317cef9",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T01-R3-r1-S/report.sql",
+      "source_relative_path": "results/artifacts/T01-R3-r1-S/report.sql",
+      "bytes": 2358,
+      "sha256": "f1db17c308435d7023a4865d0c8c1caab8aef146923f7adb506f5749e1972a6a",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T01-R3-r1-S.json",
+      "source_relative_path": "results/receipts/T01-R3-r1-S.json",
+      "original_sha256": "f748642dc29143122a4c137869879bd37cb3461794c5a1549c82c34d96fb5d90",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T02-R3-r1-C/report.sql",
+      "source_relative_path": "results/artifacts/T02-R3-r1-C/report.sql",
+      "bytes": 2273,
+      "sha256": "828b93b57f6184d79e24361c99e8114eed47a6452d9dbc02066f6bbd9aea981f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T02-R3-r1-C.json",
+      "source_relative_path": "results/receipts/T02-R3-r1-C.json",
+      "original_sha256": "894525b04e248df6bcccb3228e2d412dab082c7f81544414b9a6cdb2d787775d",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T03-R4-r2-S/merge_workspace.py",
+      "source_relative_path": "results/artifacts/T03-R4-r2-S/merge_workspace.py",
+      "bytes": 11667,
+      "sha256": "4de5787d1b7b74e462e02d4a843dac80222487944822644f63044b78b163c3e7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T03-R4-r2-S/notes.md",
+      "source_relative_path": "results/artifacts/T03-R4-r2-S/notes.md",
+      "bytes": 2126,
+      "sha256": "b32ffb52ad6f68c448b9c7ba13a658bec780b2ea13e647cbe17e7e295d19d9b8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T03-R4-r2-S.json",
+      "source_relative_path": "results/receipts/T03-R4-r2-S.json",
+      "original_sha256": "7beeb706dfbce375fcaefd87473a3d68ae3c5dd89880ed955d6b69ae66407838",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T04-R4-r2-C/merge_workspace.py",
+      "source_relative_path": "results/artifacts/T04-R4-r2-C/merge_workspace.py",
+      "bytes": 12146,
+      "sha256": "d745bd7e72004e9ef7f315b8a1b4e9d38aef42f01f06c46cd4987e4e0035e034",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T04-R4-r2-C/notes.md",
+      "source_relative_path": "results/artifacts/T04-R4-r2-C/notes.md",
+      "bytes": 1996,
+      "sha256": "138251a18762631b2f391e1a1d8377cf3d9e984665bce649315ed4cec6c47548",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T04-R4-r2-C.json",
+      "source_relative_path": "results/receipts/T04-R4-r2-C.json",
+      "original_sha256": "e59d8c88049a6e0682d5ea87ac562b487d319358ce8bdcbe73065761571b06c6",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T05-R2-r3-C/action_register.json",
+      "source_relative_path": "results/artifacts/T05-R2-r3-C/action_register.json",
+      "bytes": 14779,
+      "sha256": "edf35c5181e3da5d42cecf4d4025c59e86daacafacd57ef319e1919614362111",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T05-R2-r3-C/handoff.txt",
+      "source_relative_path": "results/artifacts/T05-R2-r3-C/handoff.txt",
+      "bytes": 8978,
+      "sha256": "f8103e15ce2428c83cf89105bc91e15f88a8e06891d7a2b065b3b970d2d49231",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T05-R2-r3-C.json",
+      "source_relative_path": "results/receipts/T05-R2-r3-C.json",
+      "original_sha256": "ee9877644942b8022a2b5ae87cf6503fc4c184168e6c91963a2782b9209ccfbf",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T06-R2-r3-S/action_register.json",
+      "source_relative_path": "results/artifacts/T06-R2-r3-S/action_register.json",
+      "bytes": 22832,
+      "sha256": "af4c03f5ce42a2ec8bbfa708a7195247c73773c127d3a06c9caf72ccad547c8c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T06-R2-r3-S/handoff.txt",
+      "source_relative_path": "results/artifacts/T06-R2-r3-S/handoff.txt",
+      "bytes": 8461,
+      "sha256": "fea4c9b5e1b8db40f4a60fd458fb211108fe0f30b01ec899ea4476eef8634fba",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T06-R2-r3-S.json",
+      "source_relative_path": "results/receipts/T06-R2-r3-S.json",
+      "original_sha256": "ed7b5a0c2630c0e7df525e99391595e0444810b9272ce39141166bee6360cdd6",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T07-R1-r3-C/reconciliation.json",
+      "source_relative_path": "results/artifacts/T07-R1-r3-C/reconciliation.json",
+      "bytes": 16769,
+      "sha256": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T07-R1-r3-C/review_notes.txt",
+      "source_relative_path": "results/artifacts/T07-R1-r3-C/review_notes.txt",
+      "bytes": 5632,
+      "sha256": "746577ecd71f6ca85b3c5c97c805f7f1f3235ad1a61b6eee0ef1cc609f183f23",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T07-R1-r3-C.json",
+      "source_relative_path": "results/receipts/T07-R1-r3-C.json",
+      "original_sha256": "867cb71150a02019af0a2e9473bc2dc68d038815869f80c3023604a32b66165c",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T08-R1-r3-S/reconciliation.json",
+      "source_relative_path": "results/artifacts/T08-R1-r3-S/reconciliation.json",
+      "bytes": 21675,
+      "sha256": "695c0d1e0900723c781bf36f72501ed4678edcd7067d6b4d4e3828362136bcf9",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T08-R1-r3-S/review_notes.txt",
+      "source_relative_path": "results/artifacts/T08-R1-r3-S/review_notes.txt",
+      "bytes": 6535,
+      "sha256": "8d2c20a9b51ae91d0f2e1502e4368b489ed335cd7cf8731140469e1eaf36ce95",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T08-R1-r3-S.json",
+      "source_relative_path": "results/receipts/T08-R1-r3-S.json",
+      "original_sha256": "7bd994fe9deded2566ffb51d9be95fccd73807a6dbab8d92e42b0e13f978561e",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T09-R1-r1-C/reconciliation.json",
+      "source_relative_path": "results/artifacts/T09-R1-r1-C/reconciliation.json",
+      "bytes": 16350,
+      "sha256": "4a2297d24889fafd4f269751993787728f028f1a6db80db4b2f740bde7f39a1f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T09-R1-r1-C/review_notes.txt",
+      "source_relative_path": "results/artifacts/T09-R1-r1-C/review_notes.txt",
+      "bytes": 5129,
+      "sha256": "9217be136f60b0e328304060d0a85c5d39e8adcf5dac702375c9fe145c4b0173",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T09-R1-r1-C.json",
+      "source_relative_path": "results/receipts/T09-R1-r1-C.json",
+      "original_sha256": "1ba1df63d7829b30361b0eb83e2caf888f59e549176144552664f9642ffb2f11",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T10-R1-r1-S/reconciliation.json",
+      "source_relative_path": "results/artifacts/T10-R1-r1-S/reconciliation.json",
+      "bytes": 16743,
+      "sha256": "781acee801d66445be696733d235ee75007c7ef81e9ccd3a8a0a722ea5bda678",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T10-R1-r1-S/review_notes.txt",
+      "source_relative_path": "results/artifacts/T10-R1-r1-S/review_notes.txt",
+      "bytes": 6602,
+      "sha256": "1aa9d78f6703d8313f64b1b9331d54f6a5e3c5cb296dcac2e0fe6262d5d50d5c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T10-R1-r1-S.json",
+      "source_relative_path": "results/receipts/T10-R1-r1-S.json",
+      "original_sha256": "a1d0389d64f351947e614cff6553b6bdbff511f11102f6f9dd6e952a1e5018a8",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T11-R4-r3-C/merge_workspace.py",
+      "source_relative_path": "results/artifacts/T11-R4-r3-C/merge_workspace.py",
+      "bytes": 11504,
+      "sha256": "735afb2ea90f43cc21b5e16ada5511f3ce6e49f548e4bf1414f0efe5972346a8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T11-R4-r3-C/notes.md",
+      "source_relative_path": "results/artifacts/T11-R4-r3-C/notes.md",
+      "bytes": 1818,
+      "sha256": "435d0ed20695229b1f8bb9e7fb7b4baef950c221ec8774367144747214800a0c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T11-R4-r3-C.json",
+      "source_relative_path": "results/receipts/T11-R4-r3-C.json",
+      "original_sha256": "3927d350ff459681e5f5ab4e1970627a0d928f1479a18a1578e192517b139f25",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T12-R4-r3-S/merge_workspace.py",
+      "source_relative_path": "results/artifacts/T12-R4-r3-S/merge_workspace.py",
+      "bytes": 12723,
+      "sha256": "448fdead08c7e82cd39771331041743ed344ccd8b547e68dc72d6d8129ac1753",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T12-R4-r3-S/notes.md",
+      "source_relative_path": "results/artifacts/T12-R4-r3-S/notes.md",
+      "bytes": 2002,
+      "sha256": "71b21229ae4e26556e1c7f85d5e5f8f8a6716c37b82192de569ebc7dbb65e1d1",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T12-R4-r3-S.json",
+      "source_relative_path": "results/receipts/T12-R4-r3-S.json",
+      "original_sha256": "61c4bde61c0298f97c986e0c8fa21aa545493a6c872cdccebe01c4392aeb7ddd",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T13-R2-r1-S/action_register.json",
+      "source_relative_path": "results/artifacts/T13-R2-r1-S/action_register.json",
+      "bytes": 16412,
+      "sha256": "af8a7679ebb8ab00ea32f664a8cfa2391a3f361efe5fd62c983865b06589a0a7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T13-R2-r1-S/handoff.txt",
+      "source_relative_path": "results/artifacts/T13-R2-r1-S/handoff.txt",
+      "bytes": 9757,
+      "sha256": "3c6bce7064d07d33eb3778564bc0d942c5eab6d2c8e213cc9615c7731acb1d40",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T13-R2-r1-S.json",
+      "source_relative_path": "results/receipts/T13-R2-r1-S.json",
+      "original_sha256": "c828dec3e22632ad7258172439bb755d50716d92d0f43058cd7cf1be8debf669",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T14-R2-r1-C/action_register.json",
+      "source_relative_path": "results/artifacts/T14-R2-r1-C/action_register.json",
+      "bytes": 15593,
+      "sha256": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T14-R2-r1-C/handoff.txt",
+      "source_relative_path": "results/artifacts/T14-R2-r1-C/handoff.txt",
+      "bytes": 8671,
+      "sha256": "c53e32c49297c24a7f2f6e5cbd906a007ef1184c77b895c7c005c3dd264d4c6c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T14-R2-r1-C.json",
+      "source_relative_path": "results/receipts/T14-R2-r1-C.json",
+      "original_sha256": "d52fa71c2c8760c7e9cbf9fb646aa50f1f5d7f899b1de4de60130a3ee432c5ff",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T15-R3-r2-C/report.sql",
+      "source_relative_path": "results/artifacts/T15-R3-r2-C/report.sql",
+      "bytes": 2151,
+      "sha256": "cb941276aea81cf1b1f1bb9d9e129dda0704ec2761eb0744d713b768765ccaa5",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T15-R3-r2-C.json",
+      "source_relative_path": "results/receipts/T15-R3-r2-C.json",
+      "original_sha256": "29350a1af0eb4821ab6e5de6a0077e23591ac708a888b56e6fd52cb9d9fa9963",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T16-R3-r2-S/notes.md",
+      "source_relative_path": "results/artifacts/T16-R3-r2-S/notes.md",
+      "bytes": 3821,
+      "sha256": "12459dfb575d9a61d4b776dfeb6e743b7c5e3659254b800e34faf843cea121c0",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T16-R3-r2-S/report.sql",
+      "source_relative_path": "results/artifacts/T16-R3-r2-S/report.sql",
+      "bytes": 2333,
+      "sha256": "b13fbc6e1931d8ed3e336f9b6593a5ed93ce8282a7df3340464e781c64ce7842",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T16-R3-r2-S.json",
+      "source_relative_path": "results/receipts/T16-R3-r2-S.json",
+      "original_sha256": "49bcd007148c20d9eb38b2fbf702baf18654bf4ceeb41fd80ec710b0c958e0b9",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T17-R2-r2-S/action_register.json",
+      "source_relative_path": "results/artifacts/T17-R2-r2-S/action_register.json",
+      "bytes": 19984,
+      "sha256": "e51a01f93043968afaf1e033fcf3bfaeadf8d73a7fa7d12b2dba209657401d39",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T17-R2-r2-S/handoff.txt",
+      "source_relative_path": "results/artifacts/T17-R2-r2-S/handoff.txt",
+      "bytes": 8864,
+      "sha256": "dc79f8cb453ede5bac8b92273a7cba4a7bbbc6047e2752379845fa8d9b45e2f6",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T17-R2-r2-S.json",
+      "source_relative_path": "results/receipts/T17-R2-r2-S.json",
+      "original_sha256": "ede91c75488b0e5e600cb8407d1242c784391236064dc54a18e4f1a7bd90defc",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T18-R2-r2-C/action_register.json",
+      "source_relative_path": "results/artifacts/T18-R2-r2-C/action_register.json",
+      "bytes": 14942,
+      "sha256": "93eb4799c584a4d832f2c9120d3936bfe242e68c8aab58a8c47930da18b7e847",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T18-R2-r2-C/handoff.txt",
+      "source_relative_path": "results/artifacts/T18-R2-r2-C/handoff.txt",
+      "bytes": 8725,
+      "sha256": "73fe08ba4c280dfccad26794795073458a8830bd0763a67857c75af967e525a5",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T18-R2-r2-C.json",
+      "source_relative_path": "results/receipts/T18-R2-r2-C.json",
+      "original_sha256": "e49e95106ea15b339d98c2dccfc9c1dd3f795d158507ff731afbfae4231305a0",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T19-R1-r2-S/reconciliation.json",
+      "source_relative_path": "results/artifacts/T19-R1-r2-S/reconciliation.json",
+      "bytes": 16913,
+      "sha256": "d145c84951bcfa701c361a85589918937f06973021ca52122b3ff67261cc38b9",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T19-R1-r2-S/review_notes.txt",
+      "source_relative_path": "results/artifacts/T19-R1-r2-S/review_notes.txt",
+      "bytes": 6059,
+      "sha256": "e32b67800541a4059684690ddb4b1857ffb502970da5028a60273d96b842b68a",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T19-R1-r2-S.json",
+      "source_relative_path": "results/receipts/T19-R1-r2-S.json",
+      "original_sha256": "bd9063e179008b01ee5f56ebbe784f18eaed5618878eb9a5c1fff1b4bfcaa8fa",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T20-R1-r2-C/reconciliation.json",
+      "source_relative_path": "results/artifacts/T20-R1-r2-C/reconciliation.json",
+      "bytes": 16127,
+      "sha256": "8df0a5092f6158e7d276c9fbeb9bc93ad5da40ec8ea52850148f960ebbdbd7f7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T20-R1-r2-C/review_notes.txt",
+      "source_relative_path": "results/artifacts/T20-R1-r2-C/review_notes.txt",
+      "bytes": 4821,
+      "sha256": "28b725538317870f7d910209609d874c98968c1258c156eebf02fbbf398a8b8a",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T20-R1-r2-C.json",
+      "source_relative_path": "results/receipts/T20-R1-r2-C.json",
+      "original_sha256": "61c497577f8167e494bc8b7c47ee9dfb8871c60a5734073961cd7eee6a5a17ce",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T21-R4-r1-S/merge_workspace.py",
+      "source_relative_path": "results/artifacts/T21-R4-r1-S/merge_workspace.py",
+      "bytes": 12558,
+      "sha256": "536a6f9b9a632c29f9186f8e7d8cabe39313fe6f891daa4e611a3e0dac08d3be",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T21-R4-r1-S/notes.md",
+      "source_relative_path": "results/artifacts/T21-R4-r1-S/notes.md",
+      "bytes": 2291,
+      "sha256": "b21f04b839cf8ea3fcfce8056c6d8dd5dc3aebe65bf05bf57378aeb7dada1b64",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T21-R4-r1-S.json",
+      "source_relative_path": "results/receipts/T21-R4-r1-S.json",
+      "original_sha256": "91511b38f908d10559e0a3cf7b7db8ee27b0bc9d4aafe4d8c360d5dbac3a23c5",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T22-R4-r1-C/merge_workspace.py",
+      "source_relative_path": "results/artifacts/T22-R4-r1-C/merge_workspace.py",
+      "bytes": 12217,
+      "sha256": "d9a6c5ea6e4c09d8e04ebed3f57f679303cc86c802dc1cd7d1558a87e1df6f12",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T22-R4-r1-C/notes.md",
+      "source_relative_path": "results/artifacts/T22-R4-r1-C/notes.md",
+      "bytes": 2533,
+      "sha256": "6fcd80655a0a5c285ab72e353a0ec5a75d5660f0ad92dce017cf4e63c216fdb4",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T22-R4-r1-C.json",
+      "source_relative_path": "results/receipts/T22-R4-r1-C.json",
+      "original_sha256": "f4ba9cca515682a585a292846bdd4ed54767bf9185ffcbda65e4fcf54c5c150e",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T23-R3-r3-C/report.sql",
+      "source_relative_path": "results/artifacts/T23-R3-r3-C/report.sql",
+      "bytes": 2212,
+      "sha256": "87983feda55504bf5512fa8c737e32419a7dfb2b1b5b4623fd43917e8fa473b6",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T23-R3-r3-C.json",
+      "source_relative_path": "results/receipts/T23-R3-r3-C.json",
+      "original_sha256": "606c1ed7289eba5bddc9a11e6da7d5809b07499729f1aeb340ed11dafb8624db",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "artifacts/T24-R3-r3-S/notes.md",
+      "source_relative_path": "results/artifacts/T24-R3-r3-S/notes.md",
+      "bytes": 3801,
+      "sha256": "a8d950df96034ee0f92cee31e66410dbac9e1589c0f5124d44ee07eb428a5032",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "artifacts/T24-R3-r3-S/report.sql",
+      "source_relative_path": "results/artifacts/T24-R3-r3-S/report.sql",
+      "bytes": 2385,
+      "sha256": "4ade31ebe86e3a80ceb7f6e9d1e8531ed28e639cb15ab5bc1f43dc30db60d1f5",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "receipts/T24-R3-r3-S.json",
+      "source_relative_path": "results/receipts/T24-R3-r3-S.json",
+      "original_sha256": "b3afd0bf0ca2a4cc55e2fd93b9d94351d80cc86a70429da0ad7cca35365dd954",
+      "treatment": "public projection",
+      "changes": "Removed internal identity and final coordination message; mapped artifact paths. Artifact bytes and all collection observations are unchanged"
+    },
+    {
+      "path": "evidence/objective/T01-R3-r1-S/raw.json",
+      "source_relative_path": "results/objective-grades/T01-R3-r1-S/raw.json",
+      "bytes": 1505,
+      "sha256": "a8cd9094f916c9f32ddfcb92d6384dab71bdad0246fbcc4fcf86bcd5463f8c7f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T01-R3-r1-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T01-R3-r1-S/stdout.txt",
+      "bytes": 1505,
+      "sha256": "a8cd9094f916c9f32ddfcb92d6384dab71bdad0246fbcc4fcf86bcd5463f8c7f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T01-R3-r1-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T01-R3-r1-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T01-R3-r1-S/execution.json",
+      "source_relative_path": "results/objective-grades/T01-R3-r1-S/execution.json",
+      "original_sha256": "ed1628765fd5165b7ed0e3211f743319752f16d06632d6d206f6db5a7d84ad90",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T02-R3-r1-C/raw.json",
+      "source_relative_path": "results/objective-grades/T02-R3-r1-C/raw.json",
+      "bytes": 1505,
+      "sha256": "3fbe516fe90ef6e7d5785e2457cdc3979bda8c7ebe8b9fc24b80e748e91b17c3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T02-R3-r1-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T02-R3-r1-C/stdout.txt",
+      "bytes": 1505,
+      "sha256": "3fbe516fe90ef6e7d5785e2457cdc3979bda8c7ebe8b9fc24b80e748e91b17c3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T02-R3-r1-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T02-R3-r1-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T02-R3-r1-C/execution.json",
+      "source_relative_path": "results/objective-grades/T02-R3-r1-C/execution.json",
+      "original_sha256": "22067f5893d5ae46f88530353c7982ffb3f0c07969ac2fbba2bafc07522f729e",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T05-R2-r3-C/raw.json",
+      "source_relative_path": "results/objective-grades/T05-R2-r3-C/raw.json",
+      "bytes": 1834,
+      "sha256": "718ce1c465ee76846b01734044117523c8197ee115ba7dd2d423d5b72074cb7c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T05-R2-r3-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T05-R2-r3-C/stdout.txt",
+      "bytes": 1834,
+      "sha256": "718ce1c465ee76846b01734044117523c8197ee115ba7dd2d423d5b72074cb7c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T05-R2-r3-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T05-R2-r3-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T05-R2-r3-C/execution.json",
+      "source_relative_path": "results/objective-grades/T05-R2-r3-C/execution.json",
+      "original_sha256": "298755457cf019a968f10876370224fc0a516d52a1d6d5adc4f883758a5bf2cb",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T06-R2-r3-S/raw.json",
+      "source_relative_path": "results/objective-grades/T06-R2-r3-S/raw.json",
+      "bytes": 1834,
+      "sha256": "e09ccf73c6d7a92176b9561efab63fc53680e95ae58869d33bd72aae8ceb6269",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T06-R2-r3-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T06-R2-r3-S/stdout.txt",
+      "bytes": 1834,
+      "sha256": "e09ccf73c6d7a92176b9561efab63fc53680e95ae58869d33bd72aae8ceb6269",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T06-R2-r3-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T06-R2-r3-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T06-R2-r3-S/execution.json",
+      "source_relative_path": "results/objective-grades/T06-R2-r3-S/execution.json",
+      "original_sha256": "89c524c78bb7dc5ab7250f669208f77ce535824bf240a9b31e933a0287045739",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T07-R1-r3-C/raw.json",
+      "source_relative_path": "results/objective-grades/T07-R1-r3-C/raw.json",
+      "bytes": 1838,
+      "sha256": "95b1e46d64082dd70fe92dea9be4af3e6482aa1cd6be3290850e14ab52395cd2",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T07-R1-r3-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T07-R1-r3-C/stdout.txt",
+      "bytes": 1838,
+      "sha256": "95b1e46d64082dd70fe92dea9be4af3e6482aa1cd6be3290850e14ab52395cd2",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T07-R1-r3-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T07-R1-r3-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T07-R1-r3-C/execution.json",
+      "source_relative_path": "results/objective-grades/T07-R1-r3-C/execution.json",
+      "original_sha256": "bcc5b772a76bd9e51b40b9d9935abd955d074b59e563c8ae2c4500492d44d052",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T08-R1-r3-S/raw.json",
+      "source_relative_path": "results/objective-grades/T08-R1-r3-S/raw.json",
+      "bytes": 1838,
+      "sha256": "a1cdc6f8c639a980c8adfa34149f8fb304f64236b20c441418db0bf4dd260534",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T08-R1-r3-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T08-R1-r3-S/stdout.txt",
+      "bytes": 1838,
+      "sha256": "a1cdc6f8c639a980c8adfa34149f8fb304f64236b20c441418db0bf4dd260534",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T08-R1-r3-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T08-R1-r3-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T08-R1-r3-S/execution.json",
+      "source_relative_path": "results/objective-grades/T08-R1-r3-S/execution.json",
+      "original_sha256": "3c9c0cf88bea01cfcdafb982541843cc21c06c1b171b403631c241ad317fd9e2",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T09-R1-r1-C/raw.json",
+      "source_relative_path": "results/objective-grades/T09-R1-r1-C/raw.json",
+      "bytes": 1838,
+      "sha256": "e07adca646a96b08a7c4b3571bb08916b825e659b96aad92ebeb8dabafba710b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T09-R1-r1-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T09-R1-r1-C/stdout.txt",
+      "bytes": 1838,
+      "sha256": "e07adca646a96b08a7c4b3571bb08916b825e659b96aad92ebeb8dabafba710b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T09-R1-r1-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T09-R1-r1-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T09-R1-r1-C/execution.json",
+      "source_relative_path": "results/objective-grades/T09-R1-r1-C/execution.json",
+      "original_sha256": "9d5c4cd8b8a6763175f97bccd941dbfd99c19d3fe285f57ca7b12f0a73129a28",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T10-R1-r1-S/raw.json",
+      "source_relative_path": "results/objective-grades/T10-R1-r1-S/raw.json",
+      "bytes": 1838,
+      "sha256": "3b35a4e05111c7190ff5cb182976a2cc16c906934d4fe20a7824595e75200738",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T10-R1-r1-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T10-R1-r1-S/stdout.txt",
+      "bytes": 1838,
+      "sha256": "3b35a4e05111c7190ff5cb182976a2cc16c906934d4fe20a7824595e75200738",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T10-R1-r1-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T10-R1-r1-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T10-R1-r1-S/execution.json",
+      "source_relative_path": "results/objective-grades/T10-R1-r1-S/execution.json",
+      "original_sha256": "3a4171dffe40d49581d417fcc6265e5b79140e0480dffe0cd7a8928939169051",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T13-R2-r1-S/raw.json",
+      "source_relative_path": "results/objective-grades/T13-R2-r1-S/raw.json",
+      "bytes": 1834,
+      "sha256": "6c4413e59295d4f0c44b5e2ead4772c52153e8e5608291205fd6f3f83d9927b7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T13-R2-r1-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T13-R2-r1-S/stdout.txt",
+      "bytes": 1834,
+      "sha256": "6c4413e59295d4f0c44b5e2ead4772c52153e8e5608291205fd6f3f83d9927b7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T13-R2-r1-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T13-R2-r1-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T13-R2-r1-S/execution.json",
+      "source_relative_path": "results/objective-grades/T13-R2-r1-S/execution.json",
+      "original_sha256": "e810cccb4a8600918d87b0c253d002a0e25d0a4dedb7bb4c858105cd70bde1ca",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T14-R2-r1-C/raw.json",
+      "source_relative_path": "results/objective-grades/T14-R2-r1-C/raw.json",
+      "bytes": 1834,
+      "sha256": "188f65932fb20c69c9ec5267974666af1446cc4d81a82eea51dbbc4af7ab5695",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T14-R2-r1-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T14-R2-r1-C/stdout.txt",
+      "bytes": 1834,
+      "sha256": "188f65932fb20c69c9ec5267974666af1446cc4d81a82eea51dbbc4af7ab5695",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T14-R2-r1-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T14-R2-r1-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T14-R2-r1-C/execution.json",
+      "source_relative_path": "results/objective-grades/T14-R2-r1-C/execution.json",
+      "original_sha256": "f6e577c1d5c6ccbd8f96c7234b06e14904b49975e92f8acc431c63016084e6fd",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T15-R3-r2-C/raw.json",
+      "source_relative_path": "results/objective-grades/T15-R3-r2-C/raw.json",
+      "bytes": 1505,
+      "sha256": "107a9983050a78cb58ed743b294391c99e47eb2c8ee5feb8b3f97cce46df9dbd",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T15-R3-r2-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T15-R3-r2-C/stdout.txt",
+      "bytes": 1505,
+      "sha256": "107a9983050a78cb58ed743b294391c99e47eb2c8ee5feb8b3f97cce46df9dbd",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T15-R3-r2-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T15-R3-r2-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T15-R3-r2-C/execution.json",
+      "source_relative_path": "results/objective-grades/T15-R3-r2-C/execution.json",
+      "original_sha256": "61dbd3392dbb0947d998fa049d65da2c7891c211ecf4e9a4016b8808adb4d529",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T16-R3-r2-S/raw.json",
+      "source_relative_path": "results/objective-grades/T16-R3-r2-S/raw.json",
+      "bytes": 1505,
+      "sha256": "953ea33be1770478dedcfe1bb076b7bdb6675bb3cc00d8e473d3dc0ebbae5097",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T16-R3-r2-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T16-R3-r2-S/stdout.txt",
+      "bytes": 1505,
+      "sha256": "953ea33be1770478dedcfe1bb076b7bdb6675bb3cc00d8e473d3dc0ebbae5097",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T16-R3-r2-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T16-R3-r2-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T16-R3-r2-S/execution.json",
+      "source_relative_path": "results/objective-grades/T16-R3-r2-S/execution.json",
+      "original_sha256": "1fca7b12be4b97c2f2b724c750055e5c277946203d89035ef06265ce0ac0dfc1",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T17-R2-r2-S/raw.json",
+      "source_relative_path": "results/objective-grades/T17-R2-r2-S/raw.json",
+      "bytes": 1834,
+      "sha256": "2da7b3dcf68d605ff13fcfa3f1373b845a0845f5e757d94ed9ae880824a1b620",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T17-R2-r2-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T17-R2-r2-S/stdout.txt",
+      "bytes": 1834,
+      "sha256": "2da7b3dcf68d605ff13fcfa3f1373b845a0845f5e757d94ed9ae880824a1b620",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T17-R2-r2-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T17-R2-r2-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T17-R2-r2-S/execution.json",
+      "source_relative_path": "results/objective-grades/T17-R2-r2-S/execution.json",
+      "original_sha256": "f16d773e56227f8502107303712679b4f2205502bbd76f8c264141717071f132",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T18-R2-r2-C/raw.json",
+      "source_relative_path": "results/objective-grades/T18-R2-r2-C/raw.json",
+      "bytes": 1834,
+      "sha256": "806a65992d44627d70a87940ae3866b997706135c3c8681c3f8a632a8c5cd22c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T18-R2-r2-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T18-R2-r2-C/stdout.txt",
+      "bytes": 1834,
+      "sha256": "806a65992d44627d70a87940ae3866b997706135c3c8681c3f8a632a8c5cd22c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T18-R2-r2-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T18-R2-r2-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T18-R2-r2-C/execution.json",
+      "source_relative_path": "results/objective-grades/T18-R2-r2-C/execution.json",
+      "original_sha256": "09001e29e7dffddc5f2817e0385c73405e6f6de2634529aa1badd5bc2aafd60b",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T19-R1-r2-S/raw.json",
+      "source_relative_path": "results/objective-grades/T19-R1-r2-S/raw.json",
+      "bytes": 1838,
+      "sha256": "2c175341583f8bd2d181850431c9c8717e2dfb13a005e7d206caf697f9d6b13b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T19-R1-r2-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T19-R1-r2-S/stdout.txt",
+      "bytes": 1838,
+      "sha256": "2c175341583f8bd2d181850431c9c8717e2dfb13a005e7d206caf697f9d6b13b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T19-R1-r2-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T19-R1-r2-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T19-R1-r2-S/execution.json",
+      "source_relative_path": "results/objective-grades/T19-R1-r2-S/execution.json",
+      "original_sha256": "8d12ae9a1361a7d2c39db5e1d80db85fb5e50ff938dd44c265caf3681bd53101",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T20-R1-r2-C/raw.json",
+      "source_relative_path": "results/objective-grades/T20-R1-r2-C/raw.json",
+      "bytes": 1838,
+      "sha256": "f8bf76fece2f5f9f0df796369e93ae370a3d324dcee84e33ceddb24875efc9d3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T20-R1-r2-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T20-R1-r2-C/stdout.txt",
+      "bytes": 1838,
+      "sha256": "f8bf76fece2f5f9f0df796369e93ae370a3d324dcee84e33ceddb24875efc9d3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T20-R1-r2-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T20-R1-r2-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T20-R1-r2-C/execution.json",
+      "source_relative_path": "results/objective-grades/T20-R1-r2-C/execution.json",
+      "original_sha256": "0412443f143f53001fad3525c24cf29887f99b8fe95c14a42075663544f3ee96",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T23-R3-r3-C/raw.json",
+      "source_relative_path": "results/objective-grades/T23-R3-r3-C/raw.json",
+      "bytes": 1505,
+      "sha256": "d6af297a6bc37015482e025374636abd86ae6d1a58a579a2ad0fb3574694344f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T23-R3-r3-C/stdout.txt",
+      "source_relative_path": "results/objective-grades/T23-R3-r3-C/stdout.txt",
+      "bytes": 1505,
+      "sha256": "d6af297a6bc37015482e025374636abd86ae6d1a58a579a2ad0fb3574694344f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T23-R3-r3-C/stderr.txt",
+      "source_relative_path": "results/objective-grades/T23-R3-r3-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T23-R3-r3-C/execution.json",
+      "source_relative_path": "results/objective-grades/T23-R3-r3-C/execution.json",
+      "original_sha256": "a749022a983f301da0a34c7dfdde53287ce3a728c19d63edc38ed88267bc1c67",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/objective/T24-R3-r3-S/raw.json",
+      "source_relative_path": "results/objective-grades/T24-R3-r3-S/raw.json",
+      "bytes": 1505,
+      "sha256": "3a3fa7576f00c33c24cf8849cd1f33cf6a2a9c8424043af62693c680f13484d3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T24-R3-r3-S/stdout.txt",
+      "source_relative_path": "results/objective-grades/T24-R3-r3-S/stdout.txt",
+      "bytes": 1505,
+      "sha256": "3a3fa7576f00c33c24cf8849cd1f33cf6a2a9c8424043af62693c680f13484d3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T24-R3-r3-S/stderr.txt",
+      "source_relative_path": "results/objective-grades/T24-R3-r3-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/objective/T24-R3-r3-S/execution.json",
+      "source_relative_path": "results/objective-grades/T24-R3-r3-S/execution.json",
+      "original_sha256": "e0635c480727845d745ef7373e12ec85499556f3aa4e44ac5d14a17c8eff0d42",
+      "treatment": "public projection",
+      "changes": "Removed runtime executable, command paths, working directory and environment paths; hashes/status/observed logs retained"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/probe_result.json",
+      "bytes": 1015,
+      "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/behavioral_report.json",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/behavioral_report.json",
+      "bytes": 1506,
+      "sha256": "68f417f2a64a02f7017dea71d054c06e6f939b9d5c6cfca5676897e2ddf89336",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/static_report.json",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/static_report.json",
+      "bytes": 1048,
+      "sha256": "3eee93d2a5a34f1b98fd0897eaf25624be4035f66ed9d0c0a692d9232279defe",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/stdout.log",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/stdout.log",
+      "bytes": 38,
+      "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/stderr.log",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/runner.stdout.log",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/runner.stdout.log",
+      "bytes": 1506,
+      "sha256": "0f44d16616769a27dff1d59d4f859b38efd38b5effbab4f69f630323282a2e26",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/runner.stderr.log",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/runner.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/runner.exit-code.txt",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/runner.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/run-started-utc.txt",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/run-started-utc.txt",
+      "bytes": 31,
+      "sha256": "cc24ebaae26dddef8b0ea229344d2bc2674ecba3ef0d8eb95a197a26b609dcea",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/run-finished-utc.txt",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/run-finished-utc.txt",
+      "bytes": 31,
+      "sha256": "50272be6793864c41e2266f528969b3ba33e3cca5acec451cc39ae19b596f7e2",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T03-R4-r2-S/plan-public.json",
+      "source_relative_path": "results/r4-execution/T03-R4-r2-S/plan.json",
+      "original_sha256": "607cd0d631cb3af0d9fbad6dd5559d9c8e4337949eb5ba454c2a9f15f0bc0823",
+      "treatment": "public projection",
+      "changes": "Omitted machine paths and private approval instructions; kept exact plan/source/probe/runner and approval hashes, effects and limits"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/probe_result.json",
+      "bytes": 1015,
+      "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/behavioral_report.json",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/behavioral_report.json",
+      "bytes": 1506,
+      "sha256": "ed5240b5a8282943b9f0eb548b4a92daba8e8721a83d69d87ad15dce8856eab0",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/static_report.json",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/static_report.json",
+      "bytes": 1105,
+      "sha256": "578714945ca586d33c4b0c6dbe674ef38e9e3761aff5815cce540721ee94d6be",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/stdout.log",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/stdout.log",
+      "bytes": 38,
+      "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/stderr.log",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/runner.stdout.log",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/runner.stdout.log",
+      "bytes": 1506,
+      "sha256": "99ddd8d57e059d9fcab2b2dabe3a6c81bdaf022fee852d5a51cf854a8a5af86c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/runner.stderr.log",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/runner.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/runner.exit-code.txt",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/runner.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/run-started-utc.txt",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/run-started-utc.txt",
+      "bytes": 31,
+      "sha256": "d47fb5d6b692336100c414f9a8c37763b41a396116dc71eafe658cf9210b53e8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/run-finished-utc.txt",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/run-finished-utc.txt",
+      "bytes": 31,
+      "sha256": "cd64af979f3a6f99212c92f77eeb26dbf444cf940cf344ca4b5e17b2bde1294a",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T04-R4-r2-C/plan-public.json",
+      "source_relative_path": "results/r4-execution/T04-R4-r2-C/plan.json",
+      "original_sha256": "4481a388667fa20675b887fedc183dddba34bc362f55248fd699b4250a054162",
+      "treatment": "public projection",
+      "changes": "Omitted machine paths and private approval instructions; kept exact plan/source/probe/runner and approval hashes, effects and limits"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/probe_result.json",
+      "bytes": 1015,
+      "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/behavioral_report.json",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/behavioral_report.json",
+      "bytes": 1506,
+      "sha256": "c8a2d7daebb78db5af2e468976de39f2fe6fc97a873690dbf70be76d18677fbc",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/static_report.json",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/static_report.json",
+      "bytes": 1124,
+      "sha256": "77c7004adf8f156362feb911513f8e9a061195dc4636ed7948417b27fcf4e8fa",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/stdout.log",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/stdout.log",
+      "bytes": 38,
+      "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/stderr.log",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/runner.stdout.log",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/runner.stdout.log",
+      "bytes": 1506,
+      "sha256": "d1616e74755d6f9a7c3f062d89ceee848ef5e215878f1dffe2f72e100a2b9dce",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/runner.stderr.log",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/runner.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/runner.exit-code.txt",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/runner.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/run-started-utc.txt",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/run-started-utc.txt",
+      "bytes": 31,
+      "sha256": "82d05065376ea9de50fc5a3fcd7fcdd755343cc78ecc2a7e42040424042fe9f9",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/run-finished-utc.txt",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/run-finished-utc.txt",
+      "bytes": 31,
+      "sha256": "d5a6d506682688511dd7f877f4853384d3e4d21757254c111ef3d5ed5271c954",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T11-R4-r3-C/plan-public.json",
+      "source_relative_path": "results/r4-execution/T11-R4-r3-C/plan.json",
+      "original_sha256": "31ab5fad03680f5a791fdd7be0693df80724c19d7509bf50a7978ce0afbda41b",
+      "treatment": "public projection",
+      "changes": "Omitted machine paths and private approval instructions; kept exact plan/source/probe/runner and approval hashes, effects and limits"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/probe_result.json",
+      "bytes": 1015,
+      "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/behavioral_report.json",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/behavioral_report.json",
+      "bytes": 1506,
+      "sha256": "93fd8933ff3e6d4146f93c1e7dde2b634d1fb84ac485b4a0c577247921ffef1d",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/static_report.json",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/static_report.json",
+      "bytes": 1067,
+      "sha256": "b8b80148b8297418555414d45292be43cfec598e13f6750204b9af1e5f2b35db",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/stdout.log",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/stdout.log",
+      "bytes": 38,
+      "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/stderr.log",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/runner.stdout.log",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/runner.stdout.log",
+      "bytes": 1506,
+      "sha256": "09508aa145a92fca9b7b99f74ba038cc6eb6a23291a1b309cf94a0761d40e24a",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/runner.stderr.log",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/runner.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/runner.exit-code.txt",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/runner.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/run-started-utc.txt",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/run-started-utc.txt",
+      "bytes": 31,
+      "sha256": "29207b17fb1d234f420bb1ae85891caed442f90bb0e99de553f806467f165293",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/run-finished-utc.txt",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/run-finished-utc.txt",
+      "bytes": 31,
+      "sha256": "5c4add20ecf26cf3133489115eb173e6822a01b75ce0da225c13dbf45a5274b9",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T12-R4-r3-S/plan-public.json",
+      "source_relative_path": "results/r4-execution/T12-R4-r3-S/plan.json",
+      "original_sha256": "b45ad74dc0d4728689f8183bcd29b625f110c9812b1a8d5a1dc67d54146e5a74",
+      "treatment": "public projection",
+      "changes": "Omitted machine paths and private approval instructions; kept exact plan/source/probe/runner and approval hashes, effects and limits"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/probe_result.json",
+      "bytes": 1015,
+      "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/behavioral_report.json",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/behavioral_report.json",
+      "bytes": 1506,
+      "sha256": "d0e3555cc28f2192f05bb983d459dbec91dfdf57febd1b08bba4a5731f816511",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/static_report.json",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/static_report.json",
+      "bytes": 1067,
+      "sha256": "43c083a2464799422511c37d3e3bcac46263a4c8c08b2f29391858f7d354fde7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/stdout.log",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/stdout.log",
+      "bytes": 38,
+      "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/stderr.log",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/runner.stdout.log",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/runner.stdout.log",
+      "bytes": 1506,
+      "sha256": "3d578d5f5da04b3062b86dc72286f2e28d77dd28b1ca31382c82811be1e3eedb",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/runner.stderr.log",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/runner.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/runner.exit-code.txt",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/runner.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/run-started-utc.txt",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/run-started-utc.txt",
+      "bytes": 31,
+      "sha256": "cf1a5d929c4f3e8ad127f2edb4b0596fcffb191f626351f04a53d52957785a6a",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/run-finished-utc.txt",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/run-finished-utc.txt",
+      "bytes": 31,
+      "sha256": "a7e1ce8aa42aed7f7a80f18ae2d06498d4b1dbff9c3d2cad6d8823efdf3e9168",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T21-R4-r1-S/plan-public.json",
+      "source_relative_path": "results/r4-execution/T21-R4-r1-S/plan.json",
+      "original_sha256": "726a042d5cb9b1de3a663537b23b55ecdb4f2d898617bccf804a139246ee495b",
+      "treatment": "public projection",
+      "changes": "Omitted machine paths and private approval instructions; kept exact plan/source/probe/runner and approval hashes, effects and limits"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/probe_result.json",
+      "bytes": 1015,
+      "sha256": "e2ab85951e76aa72b927bea8bd60239437c8b1fa4b03c3b964a27fdb086a40df",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/behavioral_report.json",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/behavioral_report.json",
+      "bytes": 1506,
+      "sha256": "6b94bcc79a93e81a1114533995a223a75c385bd4e2644e3c89c20ce52bea0192",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/static_report.json",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/static_report.json",
+      "bytes": 1086,
+      "sha256": "214a26354a54149eb7ae851452c3b0e10cf9671141788bc926011dfee8c736a4",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/stdout.log",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/stdout.log",
+      "bytes": 38,
+      "sha256": "4df27819e89917f60d53c13626f99d68711d2dc4eb1179b8b962d357da8d5343",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/stderr.log",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/runner.stdout.log",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/runner.stdout.log",
+      "bytes": 1506,
+      "sha256": "5183e2db1a582613e65f07b524af3468d7785874f9fe549e85516d2ee0168af9",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/runner.stderr.log",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/runner.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/runner.exit-code.txt",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/runner.exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/run-started-utc.txt",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/run-started-utc.txt",
+      "bytes": 31,
+      "sha256": "cf0755f31c4771395ddec6ee3cfbd90f05fc3093f343d4bf83dc780787864405",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/run-finished-utc.txt",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/run-finished-utc.txt",
+      "bytes": 31,
+      "sha256": "6ed54836ac6e14cc8a447b30e8273b3e41c758dcdac65da7d0034603de9389d8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/T22-R4-r1-C/plan-public.json",
+      "source_relative_path": "results/r4-execution/T22-R4-r1-C/plan.json",
+      "original_sha256": "2b12b154c6c4377311510e95e19ff7f05512e4b18eb630ea4577e99827d6fff2",
+      "treatment": "public projection",
+      "changes": "Omitted machine paths and private approval instructions; kept exact plan/source/probe/runner and approval hashes, effects and limits"
+    },
+    {
+      "path": "evidence/behavioral/index.json",
+      "source_relative_path": "results/r4-execution/index.json",
+      "original_sha256": "f15101f2ac13e9578c520400e48abd03541cc2d8ecca13c3cd549db00197ccd7",
+      "treatment": "public projection",
+      "changes": "Removed internal identities/runtime paths; exact saved behavior, hashes, limits and collection caveat retained"
+    },
+    {
+      "path": "evidence/semantic/T05-R2-r3-C/raw.json",
+      "source_relative_path": "results/semantic-grades/T05-R2-r3-C/raw.json",
+      "bytes": 10907,
+      "sha256": "bb5bcb4c76feb2550bd6eb5251c623a87b4488f9069b6fddaafe3a9200bfdff7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T05-R2-r3-C/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T05-R2-r3-C/stdout.txt",
+      "bytes": 10907,
+      "sha256": "bb5bcb4c76feb2550bd6eb5251c623a87b4488f9069b6fddaafe3a9200bfdff7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T05-R2-r3-C/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T05-R2-r3-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T05-R2-r3-C/execution.json",
+      "source_relative_path": "results/semantic-grades/T05-R2-r3-C/execution.json",
+      "original_sha256": "9828510ba02dab2ca300d7692c11bcc82141d0de58f58524a7b3543857e983fd",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T05-R2-r3-C/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-8fe05749f5bc8dc7/manifest.json",
+      "bytes": 1361,
+      "sha256": "e59381cc32bc35852dc636ea6ef2875e89d3dfcda3fe525a66664d16d418488c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T05-R2-r3-C/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-8fe05749f5bc8dc7/review_1.json",
+      "bytes": 4751,
+      "sha256": "7a1c6e1e77c14666bb36d9702a3f6dbf354676218518d9c67a083b62ef64dc17",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T05-R2-r3-C/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-8fe05749f5bc8dc7/review_2.json",
+      "bytes": 4906,
+      "sha256": "e4f27bae65540250a30fa8c321fc2e0db9491463eef74b2bf4a98466d4b976f6",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T06-R2-r3-S/raw.json",
+      "source_relative_path": "results/semantic-grades/T06-R2-r3-S/raw.json",
+      "bytes": 11819,
+      "sha256": "f0321761be90050c1dfead82a15f051cabbec9ea7b1143251f4410b3a107644b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T06-R2-r3-S/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T06-R2-r3-S/stdout.txt",
+      "bytes": 11819,
+      "sha256": "f0321761be90050c1dfead82a15f051cabbec9ea7b1143251f4410b3a107644b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T06-R2-r3-S/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T06-R2-r3-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T06-R2-r3-S/execution.json",
+      "source_relative_path": "results/semantic-grades/T06-R2-r3-S/execution.json",
+      "original_sha256": "db863053530ab9e2f3421b79c196bf2908558bf10ceac9da3489f21542c04600",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T06-R2-r3-S/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-5d25c431e6046f84/manifest.json",
+      "bytes": 1361,
+      "sha256": "dfa97d8d1fc0e0dc4988f7eee57df11065e0c72276ba6f7fcbbf44db27df8ba5",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T06-R2-r3-S/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-5d25c431e6046f84/review_1.json",
+      "bytes": 5535,
+      "sha256": "9c31cb4bc3b696a86dc7e92401c6356fe3057ed1641333cad1b8f6169bd85db0",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T06-R2-r3-S/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-5d25c431e6046f84/review_2.json",
+      "bytes": 5034,
+      "sha256": "09e7e716518918f5504e96362f0b78bc7446f4283ed11cec8b4251b2701fb0bf",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T07-R1-r3-C/raw.json",
+      "source_relative_path": "results/semantic-grades/T07-R1-r3-C/raw.json",
+      "bytes": 9099,
+      "sha256": "9059c75653850478dd95d03c58b00679002db77bfcd02d428b02d5fc58c146e3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T07-R1-r3-C/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T07-R1-r3-C/stdout.txt",
+      "bytes": 9099,
+      "sha256": "9059c75653850478dd95d03c58b00679002db77bfcd02d428b02d5fc58c146e3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T07-R1-r3-C/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T07-R1-r3-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T07-R1-r3-C/execution.json",
+      "source_relative_path": "results/semantic-grades/T07-R1-r3-C/execution.json",
+      "original_sha256": "52c7f43f557d19154d2d7ff73d8c2b9393b7ad2dd74cf378fe2f4a95568590ac",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T07-R1-r3-C/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-09ebf3c7a0ea9251/manifest.json",
+      "bytes": 1679,
+      "sha256": "6d9733c95f042587a161f733396e0e9bf954a16141216461dc0728694b377e73",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T07-R1-r3-C/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-09ebf3c7a0ea9251/review_1.json",
+      "bytes": 6229,
+      "sha256": "8600157f9021623d14bb710fc75c3ed6c9d648306029ac58ccb533c43ed0fe57",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T07-R1-r3-C/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-09ebf3c7a0ea9251/review_2.json",
+      "bytes": 5674,
+      "sha256": "05ad9a07fed9eb2a8938b212e0611c1104235b45f7fb126fbdc46bd3836820de",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T08-R1-r3-S/raw.json",
+      "source_relative_path": "results/semantic-grades/T08-R1-r3-S/raw.json",
+      "bytes": 9530,
+      "sha256": "1793b59655e0a4f1f7a91720f0ccadb8c950d6fbdce2c51d674b9e24b7d13283",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T08-R1-r3-S/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T08-R1-r3-S/stdout.txt",
+      "bytes": 9530,
+      "sha256": "1793b59655e0a4f1f7a91720f0ccadb8c950d6fbdce2c51d674b9e24b7d13283",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T08-R1-r3-S/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T08-R1-r3-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T08-R1-r3-S/execution.json",
+      "source_relative_path": "results/semantic-grades/T08-R1-r3-S/execution.json",
+      "original_sha256": "98760f5f8d58164d669112e8009c97eefd2f4a6eb3ed1a17f337b71ad4d56e51",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T08-R1-r3-S/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-7e26fa8b452e751f/manifest.json",
+      "bytes": 1679,
+      "sha256": "2546c3dc63b2a1f5f8189ea354782df3a17674ebfac9199b493736cce544b722",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T08-R1-r3-S/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-7e26fa8b452e751f/review_1.json",
+      "bytes": 4493,
+      "sha256": "e1a7efcca97a178241badba82f99d84779cc3f70bb51fac03728e0b6959c10ed",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T08-R1-r3-S/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-7e26fa8b452e751f/review_2.json",
+      "bytes": 4030,
+      "sha256": "ffd061b13ae04d85e148b19cf5f8a3089f283473e6925713daacba1198afd55c",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T09-R1-r1-C/raw.json",
+      "source_relative_path": "results/semantic-grades/T09-R1-r1-C/raw.json",
+      "bytes": 11023,
+      "sha256": "5047516454b0f445fd8f353ca227910be8779741e2b5c97f1c0662b411c934ae",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T09-R1-r1-C/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T09-R1-r1-C/stdout.txt",
+      "bytes": 11023,
+      "sha256": "5047516454b0f445fd8f353ca227910be8779741e2b5c97f1c0662b411c934ae",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T09-R1-r1-C/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T09-R1-r1-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T09-R1-r1-C/execution.json",
+      "source_relative_path": "results/semantic-grades/T09-R1-r1-C/execution.json",
+      "original_sha256": "8ae9ade24b2e4af0300951a74acb9fe0577975e3b40f67b48737d011aa56d9e6",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T09-R1-r1-C/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-be0c24c8fb08d3f5/manifest.json",
+      "bytes": 1679,
+      "sha256": "0a1d534bed32321f9fb4c517cbe57a7f281f3d745d0579c1f946ac52f021cf8f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T09-R1-r1-C/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-be0c24c8fb08d3f5/review_1.json",
+      "bytes": 5555,
+      "sha256": "8603081dd11d115a32a75fac49223f5f6945610c69935c94499568f1671e388e",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T09-R1-r1-C/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-be0c24c8fb08d3f5/review_2.json",
+      "bytes": 4491,
+      "sha256": "bd89bf15fc9d3b66600fa4b8292159068abafeb5015a6a56029ebb996e39d60f",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T10-R1-r1-S/raw.json",
+      "source_relative_path": "results/semantic-grades/T10-R1-r1-S/raw.json",
+      "bytes": 10516,
+      "sha256": "b403f00beba1ede86b9d6dccac3b2de775b51a0648115d0a1b3228bb587cebca",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T10-R1-r1-S/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T10-R1-r1-S/stdout.txt",
+      "bytes": 10516,
+      "sha256": "b403f00beba1ede86b9d6dccac3b2de775b51a0648115d0a1b3228bb587cebca",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T10-R1-r1-S/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T10-R1-r1-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T10-R1-r1-S/execution.json",
+      "source_relative_path": "results/semantic-grades/T10-R1-r1-S/execution.json",
+      "original_sha256": "3674723946b54115b26edcaa7ef36ea1e161dd2dd582adada3ca7f588c3ddcb4",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T10-R1-r1-S/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-6e3b0ca59a4b7798/manifest.json",
+      "bytes": 1679,
+      "sha256": "fbfcf3cce6e7d3800e0d9c5f0dcbd590078daa166f68276858b60f6b55430cf6",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T10-R1-r1-S/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-6e3b0ca59a4b7798/review_1.json",
+      "bytes": 4631,
+      "sha256": "a1ad4142f8be9f1d16465579cf44f4ce3ce1d31d52b080ecb155b920b40172c8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T10-R1-r1-S/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-6e3b0ca59a4b7798/review_2.json",
+      "bytes": 4639,
+      "sha256": "1460333bf2c0de4789c7536f92f19af572d617424410ec6f2af4efd701da90f8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T13-R2-r1-S/raw.json",
+      "source_relative_path": "results/semantic-grades/T13-R2-r1-S/raw.json",
+      "bytes": 12353,
+      "sha256": "dc5d9c7f4f0cf0ae39e063388db8ccd5e7289975dc577653d52a4554d85b9d06",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T13-R2-r1-S/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T13-R2-r1-S/stdout.txt",
+      "bytes": 12353,
+      "sha256": "dc5d9c7f4f0cf0ae39e063388db8ccd5e7289975dc577653d52a4554d85b9d06",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T13-R2-r1-S/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T13-R2-r1-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T13-R2-r1-S/execution.json",
+      "source_relative_path": "results/semantic-grades/T13-R2-r1-S/execution.json",
+      "original_sha256": "ddcb482d99474b974b517572c14de61fd85ffba52acfaa9014156f6cfd4ee4dc",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T13-R2-r1-S/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-e21b56d7def1e640/manifest.json",
+      "bytes": 1361,
+      "sha256": "22894a1ab2ffd1ec23f0cbe649b2fbf5756a0c2dc24a89df7169b5616f338446",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T13-R2-r1-S/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-e21b56d7def1e640/review_1.json",
+      "bytes": 5749,
+      "sha256": "0973e79fa9e1d46e10dc1d7cd58a03112dd624e98f452200023771ec9c1cb227",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T13-R2-r1-S/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-e21b56d7def1e640/review_2.json",
+      "bytes": 5354,
+      "sha256": "9f34e638cdd320bb56088f8c00036bf0c79d8c350396866c45ff9cf50b74136e",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T14-R2-r1-C/raw.json",
+      "source_relative_path": "results/semantic-grades/T14-R2-r1-C/raw.json",
+      "bytes": 9242,
+      "sha256": "3116d18bd4c7725206fe096edde53450c790d458c721537e0d74f9d8d67334f2",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T14-R2-r1-C/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T14-R2-r1-C/stdout.txt",
+      "bytes": 9242,
+      "sha256": "3116d18bd4c7725206fe096edde53450c790d458c721537e0d74f9d8d67334f2",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T14-R2-r1-C/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T14-R2-r1-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T14-R2-r1-C/execution.json",
+      "source_relative_path": "results/semantic-grades/T14-R2-r1-C/execution.json",
+      "original_sha256": "652bac6300cb687a51cf9ac94549345824f72d5c6f6c87c765f9c246db3cea73",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T14-R2-r1-C/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-08171b7c1edcb783/manifest.json",
+      "bytes": 1361,
+      "sha256": "54f8a0f3ffa063c8535e7f13872f940039f50eb36bf9f260a2aa878608f4bc9b",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T14-R2-r1-C/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-08171b7c1edcb783/review_1.json",
+      "bytes": 3733,
+      "sha256": "5f1970390c30e76c5497cc05c6bcb062c6d264a2cb2c18c307cc5de3d97815bd",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T14-R2-r1-C/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-08171b7c1edcb783/review_2.json",
+      "bytes": 5050,
+      "sha256": "326359c8013de363cd07b9fdf5f743e61bd538c659fb4b6ba59e5ea9bb3d6908",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T17-R2-r2-S/raw.json",
+      "source_relative_path": "results/semantic-grades/T17-R2-r2-S/raw.json",
+      "bytes": 11918,
+      "sha256": "6ebb4b42491acd941fca18202728c335e7159451753021993446d4ccb2f93f13",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T17-R2-r2-S/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T17-R2-r2-S/stdout.txt",
+      "bytes": 11918,
+      "sha256": "6ebb4b42491acd941fca18202728c335e7159451753021993446d4ccb2f93f13",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T17-R2-r2-S/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T17-R2-r2-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T17-R2-r2-S/execution.json",
+      "source_relative_path": "results/semantic-grades/T17-R2-r2-S/execution.json",
+      "original_sha256": "b9debe30d8b86b11bafb5bc96ad629a9d3f51e7c50533548d800c847825b56ab",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T17-R2-r2-S/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-4e74d135117e1157/manifest.json",
+      "bytes": 1361,
+      "sha256": "0f4cfd4600da5007587fdf5cc02c56c8803163d6d43beffa70f133215b0394e7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T17-R2-r2-S/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-4e74d135117e1157/review_1.json",
+      "bytes": 5180,
+      "sha256": "de0969106948f911e2b55650a916885cc8b90e9e6c4b674530f1f2f73c4d3dd7",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T17-R2-r2-S/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-4e74d135117e1157/review_2.json",
+      "bytes": 5434,
+      "sha256": "4b366d5002aad8f967c0acb7404f3e3eaa3995ccb58b45edea2800eb59ecb886",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T18-R2-r2-C/raw.json",
+      "source_relative_path": "results/semantic-grades/T18-R2-r2-C/raw.json",
+      "bytes": 10840,
+      "sha256": "a64c2275411c856ccb72f8cc9e93f43865a534160a1beb81cf277daefbe4b378",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T18-R2-r2-C/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T18-R2-r2-C/stdout.txt",
+      "bytes": 10840,
+      "sha256": "a64c2275411c856ccb72f8cc9e93f43865a534160a1beb81cf277daefbe4b378",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T18-R2-r2-C/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T18-R2-r2-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T18-R2-r2-C/execution.json",
+      "source_relative_path": "results/semantic-grades/T18-R2-r2-C/execution.json",
+      "original_sha256": "aaed0117a9c94c8ad4d117791e606580cbea891a4fb3e400abdfe0d99c580bc8",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T18-R2-r2-C/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-dfefe713919e0085/manifest.json",
+      "bytes": 1361,
+      "sha256": "cb353d2b0aa42c2e224903cb910660a304c8515ccac92b8368244bdf09bd9fe6",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T18-R2-r2-C/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-dfefe713919e0085/review_1.json",
+      "bytes": 5671,
+      "sha256": "2c3fc471a09b986829c047112b96c07e2b050e5ddb3d183ebe3612ff26d2a00e",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T18-R2-r2-C/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-dfefe713919e0085/review_2.json",
+      "bytes": 3919,
+      "sha256": "726a4d9de30539740e6b1900683fdeff5dd4f898e4ad2982333d2cbbf67e81d3",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T19-R1-r2-S/raw.json",
+      "source_relative_path": "results/semantic-grades/T19-R1-r2-S/raw.json",
+      "bytes": 10344,
+      "sha256": "2f6b3afadd9e4ce601b144f27a250c3af9e6810ce388d19a80eb6d8d25632cf4",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T19-R1-r2-S/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T19-R1-r2-S/stdout.txt",
+      "bytes": 10344,
+      "sha256": "2f6b3afadd9e4ce601b144f27a250c3af9e6810ce388d19a80eb6d8d25632cf4",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T19-R1-r2-S/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T19-R1-r2-S/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T19-R1-r2-S/execution.json",
+      "source_relative_path": "results/semantic-grades/T19-R1-r2-S/execution.json",
+      "original_sha256": "90c6c690bb944b67683e6c483b9e69f73c8b2bcdbc88ca68cf24a7bc61357a2e",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T19-R1-r2-S/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-f6cf390d66a5ea25/manifest.json",
+      "bytes": 1679,
+      "sha256": "fdac1d50d3baa62c879d1d7e40806f14f6d1970577293fc6ec3eb6bd7cfdd9df",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T19-R1-r2-S/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-f6cf390d66a5ea25/review_1.json",
+      "bytes": 5400,
+      "sha256": "15d4ef92b42000a200c37f1102d303c62b21263e8bd2368b53d3fd130a410024",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T19-R1-r2-S/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-f6cf390d66a5ea25/review_2.json",
+      "bytes": 4767,
+      "sha256": "0ecc2a024ab3ab9bd521ff5d73da305af8f2ad9474d6eed5ffe429ed4f95e2db",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T20-R1-r2-C/raw.json",
+      "source_relative_path": "results/semantic-grades/T20-R1-r2-C/raw.json",
+      "bytes": 9740,
+      "sha256": "0680eeeb8249810f46d2c9147e91ef2299e5bd907f5ec7fbbf3d9f312ddf3d75",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T20-R1-r2-C/stdout.txt",
+      "source_relative_path": "results/semantic-grades/T20-R1-r2-C/stdout.txt",
+      "bytes": 9740,
+      "sha256": "0680eeeb8249810f46d2c9147e91ef2299e5bd907f5ec7fbbf3d9f312ddf3d75",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T20-R1-r2-C/stderr.txt",
+      "source_relative_path": "results/semantic-grades/T20-R1-r2-C/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T20-R1-r2-C/execution.json",
+      "source_relative_path": "results/semantic-grades/T20-R1-r2-C/execution.json",
+      "original_sha256": "eaa9cb221617dc424db5dbe2e3dc9e5ef6e4d98bb88a092cc399f2b2fbe2fb9d",
+      "treatment": "public projection",
+      "changes": "Removed executable/command/working-directory paths; source, artifact, packet and review hashes retained"
+    },
+    {
+      "path": "evidence/semantic/T20-R1-r2-C/packet-manifest.json",
+      "source_relative_path": "results/semantic-packets/sample-36ed8acd140858e3/manifest.json",
+      "bytes": 1679,
+      "sha256": "f8dc83b5bc4f0b7e5392d1e3a92bf43d567b4fca0173bc3d1faeba0bf2b3d0f8",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T20-R1-r2-C/review_1.json",
+      "source_relative_path": "results/semantic-reviews/sample-36ed8acd140858e3/review_1.json",
+      "bytes": 4760,
+      "sha256": "4299e19206ff362de8b922bc114f007d4152246c82f7fbabae93dcd7a7083b88",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/T20-R1-r2-C/review_2.json",
+      "source_relative_path": "results/semantic-reviews/sample-36ed8acd140858e3/review_2.json",
+      "bytes": 4334,
+      "sha256": "cbdf7b17fd19ab0243494256eb0cec6af2fdaa9c2f4b6409b60c8bb961bcaf37",
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/semantic/index.json",
+      "source_relative_path": "results/semantic-reviews/dispatch-ledger.json",
+      "original_sha256": "01cf394e98387992ba5f0ce625519b591970be038756c71b17e2f848ab22f426",
+      "treatment": "public projection",
+      "changes": "Removed internal agent identities; original opaque reviewer labels, review hashes, timestamps and post-review attempt mapping retained"
+    },
+    {
+      "path": "methods/prompts/T01-R3-r1-S.txt",
+      "source_relative_path": "coordinator/prompts/T01-R3-r1-S.txt",
+      "original_sha256": "de58dcdcae1af031a76107889d80ec3159d3b53ed1c1fdb86b1323fb33aca8e1",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T02-R3-r1-C.txt",
+      "source_relative_path": "coordinator/prompts/T02-R3-r1-C.txt",
+      "original_sha256": "452733b47ef454f728efd11fa7d54b0371b7f06333c56b82355183d7d7c85ccd",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T03-R4-r2-S.txt",
+      "source_relative_path": "coordinator/prompts/T03-R4-r2-S.txt",
+      "original_sha256": "e44662b211aa49dc4eded4917af24ac7a2a0215a3873f8661f4c321d74daa08e",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T04-R4-r2-C.txt",
+      "source_relative_path": "coordinator/prompts/T04-R4-r2-C.txt",
+      "original_sha256": "8d15fff7abfaa216b3f04ac3817dfcbeb3fab76dbcc89001ad4ed328feabdbdd",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T05-R2-r3-C.txt",
+      "source_relative_path": "coordinator/prompts/T05-R2-r3-C.txt",
+      "original_sha256": "0f7f97fd446ee81b4def9b8cc9a9865a43da1a94ac07ee26a7233723514585fd",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T06-R2-r3-S.txt",
+      "source_relative_path": "coordinator/prompts/T06-R2-r3-S.txt",
+      "original_sha256": "95a7af2a4d8188aebeb6a3f650923ff955740edb252899e1e4518ebea31ad561",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T07-R1-r3-C.txt",
+      "source_relative_path": "coordinator/prompts/T07-R1-r3-C.txt",
+      "original_sha256": "f4ebca636d75fcf14ab555cff2ae75688fccbca524d61e4c2c65079a44a6cc66",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T08-R1-r3-S.txt",
+      "source_relative_path": "coordinator/prompts/T08-R1-r3-S.txt",
+      "original_sha256": "0e2e5e19b5a5410166e24e36c44df8f783c14dc363155abd6c53e38720fdbbc4",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T09-R1-r1-C.txt",
+      "source_relative_path": "coordinator/prompts/T09-R1-r1-C.txt",
+      "original_sha256": "ca19749af448e24ca354beb8d69bb0829098281cc4901d6bd678db3a0ecbd605",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T10-R1-r1-S.txt",
+      "source_relative_path": "coordinator/prompts/T10-R1-r1-S.txt",
+      "original_sha256": "607cf367b90fa2e6025b726d6dc4592502130d6581468ef6476f102e7f04046f",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T11-R4-r3-C.txt",
+      "source_relative_path": "coordinator/prompts/T11-R4-r3-C.txt",
+      "original_sha256": "0cb09577c285dac48e2d2f2fe32ab57ea7d6d887c7dbfa520f04a8776723e255",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T12-R4-r3-S.txt",
+      "source_relative_path": "coordinator/prompts/T12-R4-r3-S.txt",
+      "original_sha256": "ef2c8369e23a9d25ad493dbc9d3cd755f15514a92f8c48625267d9f56ab52ea4",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T13-R2-r1-S.txt",
+      "source_relative_path": "coordinator/prompts/T13-R2-r1-S.txt",
+      "original_sha256": "038f692c921690f8d0d6ae9f9b4afa3c3af4a65c96bd66016e6aa5a1eebf7032",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T14-R2-r1-C.txt",
+      "source_relative_path": "coordinator/prompts/T14-R2-r1-C.txt",
+      "original_sha256": "9fa2cf1bf12a63ac14d099754df63734091e369e8d743372bf03fcf0d60aaae2",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T15-R3-r2-C.txt",
+      "source_relative_path": "coordinator/prompts/T15-R3-r2-C.txt",
+      "original_sha256": "d68fd566e5fb096a5bc067f8e2b0f513618a62dd66e1d3328db17f39df79a66f",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T16-R3-r2-S.txt",
+      "source_relative_path": "coordinator/prompts/T16-R3-r2-S.txt",
+      "original_sha256": "9f633f9d607d25e0414462ff372c3a9b8bfb7d2db6a61e723cba81c508193f30",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T17-R2-r2-S.txt",
+      "source_relative_path": "coordinator/prompts/T17-R2-r2-S.txt",
+      "original_sha256": "8e37e1c67d3258a9003817fda73577ad2cd7e2afe45a80af12faeafebc04046f",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T18-R2-r2-C.txt",
+      "source_relative_path": "coordinator/prompts/T18-R2-r2-C.txt",
+      "original_sha256": "f3e632a543b25572752c21e46077a7b17beb2882387580c7bf4d2ba0f5c01db3",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T19-R1-r2-S.txt",
+      "source_relative_path": "coordinator/prompts/T19-R1-r2-S.txt",
+      "original_sha256": "76eb831cf64883af46fcd25c7feb47379a7ee58b7a63ae88b9683ed75bcf8d01",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T20-R1-r2-C.txt",
+      "source_relative_path": "coordinator/prompts/T20-R1-r2-C.txt",
+      "original_sha256": "9b25b3bd507b2027313830e9bfcae673d4eca489b2c01e54cbb4121338dade55",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T21-R4-r1-S.txt",
+      "source_relative_path": "coordinator/prompts/T21-R4-r1-S.txt",
+      "original_sha256": "f1b681797550f7a9709bdf7c21d58ffce0b22f5d5e50d341715cb0fccdd8dcc2",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T22-R4-r1-C.txt",
+      "source_relative_path": "coordinator/prompts/T22-R4-r1-C.txt",
+      "original_sha256": "bb5673878ee3071ad014a84c183d14e5bd49dca3998a30bf40dcdf459dfb9fae",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T23-R3-r3-C.txt",
+      "source_relative_path": "coordinator/prompts/T23-R3-r3-C.txt",
+      "original_sha256": "251c23afd3cc642d4ba6a06126b30db603d5825d044a16b448c1616123873e7c",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "methods/prompts/T24-R3-r3-S.txt",
+      "source_relative_path": "coordinator/prompts/T24-R3-r3-S.txt",
+      "original_sha256": "3d10802dfa65d9943222a28fe2ac9e7b07d22e75f1a0aebda6bfb4893c8f94d4",
+      "treatment": "public projection",
+      "changes": "Replaced the one absolute packet-root line with <assigned-packet-root>; all task/common/treatment text unchanged. Private bootstrap and administrative appendix omitted."
+    },
+    {
+      "path": "provenance/semantic-final-audit.json",
+      "source_relative_path": "results/semantic-grades/final-audit.json",
+      "sha256": "8325c90ceb213b9ad189223661b8bb69809078363161679f6bb16d3b8e9b1e89",
+      "bytes": 66467,
+      "treatment": "byte-identical"
+    },
+    {
+      "path": "evidence/behavioral/static-review-first-five.json",
+      "source_relative_path": "results/r4-execution/static-review-first-five.json",
+      "original_sha256": "7b3c5fd056bc94f2b72b28c746891e60f7a41d03ba0579dd6c36651bc593caa6",
+      "treatment": "public projection",
+      "changes": "Removed reviewer identity, runtime commands and machine paths; clarified historical phase label. Exact source hashes, concerns and historical pre-execution state retained."
+    },
+    {
+      "path": "evidence/behavioral/static-review-t22.json",
+      "source_relative_path": "results/r4-execution/static-review-t22.json",
+      "original_sha256": "0b98de567f4004e9cd441fc95a729fe9ad6cfd4f5153be3dfcada392eeeb90cc",
+      "treatment": "public projection",
+      "changes": "Removed reviewer identity, runtime commands and machine paths; clarified historical phase label. Exact source hashes, concerns and historical pre-execution state retained."
+    }
+  ]
+}

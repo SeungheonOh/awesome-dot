@@ -1,0 +1,103 @@
+{
+  "phase": "static_source_review_complete_before_approval",
+  "review_scope": "Read every byte of all five submitted Python sources, common TASK.md, README.md, manifest.json, evaluator runner and probe; verified reviewed copies byte-identical. No candidate code imported or executed. No candidate-owned dependencies beyond the reviewed module; imports use existing Python standard library. Standard library/runtime is trusted, not a line-by-line re-audit.",
+  "imports": [
+    "difflib",
+    "json",
+    "os",
+    "pathlib",
+    "re",
+    "stat",
+    "tempfile"
+  ],
+  "top_level_effects": "Only a module docstring, standard-library imports, three integer constants, and function/class definitions. No candidate I/O or computations with external effects at import.",
+  "filesystem_review": "All candidate persistence functions construct paths from the explicit root supplied by frozen probe; fixture paths remain under work_root/tmp. Temporary files use dir=self.root. Candidate file effects are mkdir/stat/lstat/open/read/write/close/replace/unlink within those roots. Snapshot/root final symlink checks use no-follow behavior. No network, credential, subprocess, environment lookup or dynamic code execution in candidate sources.",
+  "harness_review": "Frozen probe imports only the reviewed source, runs the same ordered 13 checks for every trial, creates owned temporary fixtures including symlinks and a FIFO solely under work_root/tmp, removes fixtures, and writes its JSON result under work_root. Its monkeypatches affect only local os replacement functions/direct module aliases. Runner creates exactly one child process per plan with -I/-B and a reduced environment. No reference/control execution paths used.",
+  "runner_sha256": "1c2e7feeffb23c9153310b040e8316a8e5fc33f5a2be0c2734cc088b179bda6a",
+  "probe_sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+  "manifest_sha256": "1fd0425d799fcbd4ced6f909dfe7608fdbb0e562343a6c53110a6719f0a102e1",
+  "task_sha256": "f1e1392c338aab6c800fb5388d9bf02a860c8d2087d639ed2c67363b52368784",
+  "limits": {
+    "wall_seconds": 30,
+    "cpu_seconds": 20,
+    "address_space_bytes": 536870912,
+    "per_file_bytes": 8388608,
+    "open_files": 64,
+    "core_bytes": 0,
+    "source_bytes": 131072,
+    "report_log_excerpt_bytes": 65536,
+    "probe_fifo_alarm_seconds": 0.5
+  },
+  "concerns": [
+    "This is source-reviewed bounded local execution, not OS/process/network isolation. Limits are backstops, not containment.",
+    "Static protected-input lookup is unreadable for flattened frozen artifact paths because TASK.md and inputs are not included at the inferred parent. Do not convert this packaging issue into a rubric failure. Existing collection receipts report protected files unchanged; common authored TASK.md independently matches its manifest.",
+    "Candidate self-reported local test counts in collection receipts are not independently verified and do not contribute to primary scores.",
+    "Frozen probe catches general exceptions as fail. Any observed denial, infrastructure error, interrupted run or timeout must remain not assessed rather than be promoted to a rubric failure.",
+    "Candidate merge complexity can be quadratic, but frozen probes are small and bounded; no post-hoc stress probes are proposed."
+  ],
+  "approval_created": false,
+  "behavioral_executed": false,
+  "trials": [
+    {
+      "attempt_id": "T03-R4-r2-S",
+      "source_sha256": "4de5787d1b7b74e462e02d4a843dac80222487944822644f63044b78b163c3e7",
+      "plan_sha256": "607cd0d631cb3af0d9fbad6dd5559d9c8e4337949eb5ba454c2a9f15f0bc0823",
+      "static_report_sha256": "3eee93d2a5a34f1b98fd0897eaf25624be4035f66ed9d0c0a692d9232279defe",
+      "receipt_sha256": "7beeb706dfbce375fcaefd87473a3d68ae3c5dd89880ed955d6b69ae66407838",
+      "source_bytes": 11667,
+      "receipt_source_hash_match": true,
+      "owned_source_byte_identical": true,
+      "owned_probe_byte_identical": true,
+      "behavioral_outcomes": "not assessed; explicit root approval pending"
+    },
+    {
+      "attempt_id": "T04-R4-r2-C",
+      "source_sha256": "d745bd7e72004e9ef7f315b8a1b4e9d38aef42f01f06c46cd4987e4e0035e034",
+      "plan_sha256": "4481a388667fa20675b887fedc183dddba34bc362f55248fd699b4250a054162",
+      "static_report_sha256": "578714945ca586d33c4b0c6dbe674ef38e9e3761aff5815cce540721ee94d6be",
+      "receipt_sha256": "e59d8c88049a6e0682d5ea87ac562b487d319358ce8bdcbe73065761571b06c6",
+      "source_bytes": 12146,
+      "receipt_source_hash_match": true,
+      "owned_source_byte_identical": true,
+      "owned_probe_byte_identical": true,
+      "behavioral_outcomes": "not assessed; explicit root approval pending"
+    },
+    {
+      "attempt_id": "T11-R4-r3-C",
+      "source_sha256": "735afb2ea90f43cc21b5e16ada5511f3ce6e49f548e4bf1414f0efe5972346a8",
+      "plan_sha256": "31ab5fad03680f5a791fdd7be0693df80724c19d7509bf50a7978ce0afbda41b",
+      "static_report_sha256": "77c7004adf8f156362feb911513f8e9a061195dc4636ed7948417b27fcf4e8fa",
+      "receipt_sha256": "3927d350ff459681e5f5ab4e1970627a0d928f1479a18a1578e192517b139f25",
+      "source_bytes": 11504,
+      "receipt_source_hash_match": true,
+      "owned_source_byte_identical": true,
+      "owned_probe_byte_identical": true,
+      "behavioral_outcomes": "not assessed; explicit root approval pending"
+    },
+    {
+      "attempt_id": "T12-R4-r3-S",
+      "source_sha256": "448fdead08c7e82cd39771331041743ed344ccd8b547e68dc72d6d8129ac1753",
+      "plan_sha256": "b45ad74dc0d4728689f8183bcd29b625f110c9812b1a8d5a1dc67d54146e5a74",
+      "static_report_sha256": "b8b80148b8297418555414d45292be43cfec598e13f6750204b9af1e5f2b35db",
+      "receipt_sha256": "61c4bde61c0298f97c986e0c8fa21aa545493a6c872cdccebe01c4392aeb7ddd",
+      "source_bytes": 12723,
+      "receipt_source_hash_match": true,
+      "owned_source_byte_identical": true,
+      "owned_probe_byte_identical": true,
+      "behavioral_outcomes": "not assessed; explicit root approval pending"
+    },
+    {
+      "attempt_id": "T21-R4-r1-S",
+      "source_sha256": "536a6f9b9a632c29f9186f8e7d8cabe39313fe6f891daa4e611a3e0dac08d3be",
+      "plan_sha256": "726a042d5cb9b1de3a663537b23b55ecdb4f2d898617bccf804a139246ee495b",
+      "static_report_sha256": "43c083a2464799422511c37d3e3bcac46263a4c8c08b2f29391858f7d354fde7",
+      "receipt_sha256": "91511b38f908d10559e0a3cf7b7db8ee27b0bc9d4aafe4d8c360d5dbac3a23c5",
+      "source_bytes": 12558,
+      "receipt_source_hash_match": true,
+      "owned_source_byte_identical": true,
+      "owned_probe_byte_identical": true,
+      "behavioral_outcomes": "not assessed; explicit root approval pending"
+    }
+  ],
+  "historical_phase_note": "This is a pre-execution source review. The later final outcomes are in index.json; the false approval_created/behavioral_executed fields describe the earlier review stage."
+}

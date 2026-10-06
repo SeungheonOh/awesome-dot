@@ -1,0 +1,109 @@
+{
+  "case_id": "R2",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 3,
+    "failed": 0,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R2-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-12": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The register's A08 title is Spanish-only, and the handoff's completed-actions section states that Spanish was accepted September 30 at 15:00 and French is no longer an obligation, matching M2/M5. A09's booking is done while A10 remains Kian's future delivery due October 6, explicitly distinguished in both artifacts and supported by M4/F6. A05/A16/A22/A26 remain cancelled with null register next steps; the handoff explains their cancellations and preserves the A22 review hold (M2/M3/M5). A13 correctly continues the reopened original ticket and A14 is actionable after verified A15 completion (M5). Both artifacts explicitly use the September 30 17:00 UTC receipt cutoff and exclude F8/F9, including retrospective claims. Consequently A17 stays done, A33 remains unnamed and unresolved, A31 remains open, and A32 remains accepted rather than being reopened by October 1 updates. No obsolete obligation is revived."
+        },
+        {
+          "status": "pass",
+          "rationale": "Both artifacts preserve the final scope and receipt-time boundary. The register titles A08 as the Spanish FAQ translation and marks it done; the handoff explicitly says French was removed and is not an open obligation, matching M2 and M5. A09 is completed room/participant booking, while A10 is Kian's still-open delivery due October 6; the handoff states that completed booking is not delivered training, consistent with M4 and F6. A05/A16/A22/A26 are cancelled with null register next_step fields, and the handoff describes their cancellations and the record-preservation hold without reviving any work (M2, M3, M5). Both artifacts state the September 30 17:00 UTC cutoff and exclude F8/F9, including retrospective claims. The resulting A17 done, A32 done, A31 open, and A33 unassigned/unresolved states demonstrate that the post-cutoff rota request, screenshot redo, accessibility completion and triage claim were not incorporated. A13 is correctly reopened under its original identity and A14 becomes actionable after verified A15 completion, as M5 requires."
+        }
+      ]
+    },
+    "R2-13": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The handoff foregrounds A03/A21 -> A25 -> A28 and correctly distinguishes immediate from transitive prerequisites (M4), with useful approval, export-reconciliation, signoff-acceptance, and publication steps. Its dependency and overdue sections cover Dev/A03 due September 26, Uma/A21 September 29, Yara/A25 and Ben/A28 October 2, plus Kian/A11 September 26 and Lena/A12 September 28; all four genuinely overdue actions are prominently marked. Gap sections cover unnamed A33 due October 1 and Dev/A30 with no due date. The October 1 grouping unambiguously dates Gia/A06, Noor/A14, Talia/A20, and Iris/A34; the later-work section covers Carla/A02, Mira/A13, Ravi/A18, Xena/A23, Gia/A31 due October 2, and Kian/A10 October 6. These are all 18 active commitments. Owners and dates follow B00 and the explicit M1-M5/F1-F7 revisions. Each has a practical next step, including obtaining the missing A11 mapping, restoring A12 access, filling the A33 role, repairing A20's three broken links, obtaining pager clearance and the partner date, rerunning the load test, and delivering training. Completed/cancelled decisions are also clearly separated."
+        },
+        {
+          "status": "pass",
+          "rationale": "The handoff has substantive action lines for all 18 active items, not merely a register reference. It leads with the M4 chain A03/A21 -> A25 -> A28 and correctly names immediate versus transitive prerequisites. It foregrounds all four overdue actions with baseline dates: A03 Dev September 26 (obtain counsel approval), A11 Kian September 26 (obtain mapping and eliminate 18 duplicates), A12 Lena September 28 (restore workspace access and arrange coverage), and A21 Uma September 29 (identify snapshots and reconcile/rerun). A25 Yara and A28 Ben are each due October 2 with acceptance then publication steps. The explicit gaps are A33 no named person, due October 1, requiring appointment and test completion; and A30 Dev, no agreed deadline, with drafting and deadline-agreement steps. Under the unambiguous October 1 section are A06 Gia (finish banner), A14 Noor (run restored-environment load test), A20 Talia (repair/verify links) and A34 Iris (obtain partner date and finalize note). The remaining section gives A02 Carla, A13 Mira, A18 Ravi, A23 Xena and A31 Gia all due October 2, with concrete completion/clearance steps, and A10 Kian due October 6 for training delivery. These owners and dates follow M1-M5 and F1/F2/F4/F6/F7. Useful completed and cancelled decisions are also separately summarized."
+        }
+      ]
+    },
+    "R2-14": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "A21's register blocker and handoff explain the conflicting all-rows-passed versus 42-missing reports, absence of snapshot/hash identifiers, and need to reconcile or rerun; neither later timestamp nor either report is treated as trustworthy completion (F5/M5). A12 remains Lena's responsibility and Mira is explicitly only a suggested, unaccepted replacement (M3/F7). A33 has owner null and a handoff owner gap because final M4 released Hana to an unfilled incoming-lead role; F8 cannot supply a cutoff-time owner or completion. A30 has due_date null and remains draftable open work, with the handoff explaining M2's removal of September 29 and absence of a replacement. No materially unsupported confirmation, deadline, completion, or outreach claim was found in either artifact. Proposed steps are identified as unperformed. Limitation: this is a source-grounded review of the synthetic packet, not independent inspection of underlying reports or external systems; the handoff accurately discloses that same boundary. All 10 manifest-listed packet file hashes, including both separately listed artifact hashes, were verified and matched."
+        },
+        {
+          "status": "pass",
+          "rationale": "The register A21 blocker and handoff explicitly retain both the all-rows-pass and 42-missing-row reports, explain the absent export snapshot/hash, and refuse to let the later report resolve the conflict; identifying inputs and reconciling/rerunning is proposed rather than claimed complete (F5, M5). A12 remains Lena's blocked action and the handoff says Mira was only suggested, without acceptance or final assignment (M3, F7). A33 has owner null and unresolved status, with prose explaining Hana's release and the unfilled incoming-support-lead role instead of assigning Rowan from F8 (M4, F7). A30 has due_date null, open status, and clear prose that September 29 was removed and drafting may continue (M2). Additional incomplete work is accurately distinguished from completion: counsel comments are not approval, the ID script is not successful reconciliation, partial link checking is not completion, and scheduling is not training delivery. Next steps are explicitly proposed and unperformed; no outreach, system change, newly obtained approval, or invented deadline is claimed. The final verification paragraph limits completed-state assertions to confirmations in the synthetic packet rather than new independent operational verification. No materially unsupported substantive statement was found in the prose or descriptive register fields."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "action_register.json": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354",
+    "handoff.txt": "c53e32c49297c24a7f2f6e5cbd906a007ef1184c77b895c7c005c3dd264d4c6c"
+  },
+  "not_candidate_execution": true
+}

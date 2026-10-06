@@ -1,0 +1,24 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "rev-ec9c8ebf",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "edf35c5181e3da5d42cecf4d4025c59e86daacafacd57ef319e1919614362111",
+    "handoff.txt": "f8103e15ce2428c83cf89105bc91e15f88a8e06891d7a2b065b3b970d2d49231"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "The final scopes and chronology agree with the supplied sources. In action_register.json, A08 is titled 'Translate the launch FAQ into Spanish only', is done, and has no next step; handoff.txt:65 explicitly removes French from outstanding obligations, matching M2 and M5 (meeting_notes.txt:13,47). The register distinguishes A09's completed booking from A10's open delivery under Kian due 2026-10-06; handoff.txt:54,66 makes the same distinction, matching M4 and F6 (meeting_notes.txt:33-34; followups.txt:17). A05/A16/A22/A26 are cancelled with null next_step fields, and handoff.txt:75-79 describes their cancellation rather than assigning live work, matching M2, M3, and M5 (meeting_notes.txt:12,16,28,50). The register's as_of_utc and excluded_post_cutoff_evidence_ids name the correct cutoff and F8/F9 exclusions; handoff.txt:2,5 explains receipt-time exclusion even for purported earlier events. This is reflected substantively: A33 remains unnamed/unresolved, A17 and A32 remain done, and A31 remains open (handoff.txt:34-35,51,68,73), rather than adopting F8/F9 (followups.txt:22-26). A13 is correctly reopened and A14 correctly unblocked, without claiming the load test ran (handoff.txt:44,49; M5, meeting_notes.txt:48-49). No obsolete obligation is revived."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "All 18 active actions have usable handoff prose, accountable owners or explicit gaps, current dates or the explicit unset deadline, and concrete next steps. The opening launch-chain section (handoff.txt:9-21) covers A03/Dev/September 26, A21/Uma/September 29, A25/Yara/October 2, and A28/Ben/October 2; it prioritizes obtaining privacy approval and reconciled export evidence before packet acceptance and then decision publication, exactly the immediate chain in M4 (meeting_notes.txt:38-39) and unresolved prerequisites in M5 (46,51). Handoff.txt:7,11,14,25,28 foregrounds precisely the four overdue items A03/A11/A12/A21. Lines 25-38 cover A11/Kian/September 26 (obtain mapping, reconcile to zero duplicates), A12/Lena/September 28 (restore access and arrange authorized coverage), A18/Ravi/October 2 (obtain clearance and run drill), A33/no named person/October 1 (name lead and complete test), and A34/Iris/October 1 (confirm partner date and finish note), supported by B00, M3, M4, and F7. The grouped date sections at lines 42-57 cover A06/Gia, A14/Noor, A20/Talia due October 1; A02/Carla, A13/Mira, A23/Xena, A31/Gia due October 2; A10/Kian due October 6; and A30/Dev with no deadline. Each has a specific finish, test, repair, transfer, delivery, or drafting step. These owners and dates follow M1/M3/M4/M5 and F1/F2/F4/F6; A30's gap follows M2. Group headings make dates unambiguous, and the descriptive register fields reinforce the same actionable state."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "The four specified uncertainty and authority gaps are accurately explained in both artifacts. A21's register blocker and next_step identify the contradictory all-rows-pass versus 42-missing reports, missing snapshot/hash identification, and need to reconcile or rerun; handoff.txt:14-15 explicitly says the later report does not settle the conflict and neither establishes trustworthy completion. This matches F5 (followups.txt:14) and M5 (meeting_notes.txt:51). A12 remains Lena's blocked action; its descriptive fields and handoff.txt:28-29 explain that Mira was only suggested, without acceptance or final assignment, matching M3 and F7 (meeting_notes.txt:23; followups.txt:20). A33 has owner:null and unresolved status; handoff.txt:34-35 explains Hana's explicit release and the unfilled incoming-lead role, consistent with M4 and F7 (meeting_notes.txt:42; followups.txt:20), with no use of post-cutoff Rowan or completion claims. A30 has due_date:null, open status, and a proposal to seek an agreed deadline; handoff.txt:56-57 accurately says drafting can continue despite counsel's pending decision, matching M2 (meeting_notes.txt:17). Other material descriptive claims remain supported: A11's script is not completion, A20's partial link check is not completion, and A15 verification does not imply A14 test completion (handoff.txt:26,44-45). Handoff.txt:86 distinguishes reconciliation from independent verification and explicitly frames next steps as proposals, without claiming outreach or external changes. I found no materially unsupported assertion, invented confirmation, deadline, or completed action in either artifact."
+    }
+  }
+}

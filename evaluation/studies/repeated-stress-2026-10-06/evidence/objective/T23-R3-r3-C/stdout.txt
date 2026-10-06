@@ -1,0 +1,88 @@
+{
+  "case": "R3",
+  "source_sha256": "87983feda55504bf5512fa8c737e32419a7dfb2b1b5b4623fd43917e8fa473b6",
+  "checks": [
+    {
+      "id": "execution",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "schema_types",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "grouping_cohort",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "line_count",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "invoice_count",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "billed_units",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "gross_cents",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "adjustment_cents",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "net_cents",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "received_cents",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "balance_cents",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "id": "fulfilled_units",
+      "status": "pass",
+      "evidence": []
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "quarter_close",
+      "execution": "pass",
+      "rows": 54
+    },
+    {
+      "name": "may_early",
+      "execution": "pass",
+      "rows": 18
+    },
+    {
+      "name": "june_late",
+      "execution": "pass",
+      "rows": 18
+    }
+  ],
+  "totals": {
+    "pass": 12,
+    "fail": 0,
+    "unknown": 0
+  }
+}

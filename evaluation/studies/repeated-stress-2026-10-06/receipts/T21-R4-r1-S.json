@@ -1,0 +1,46 @@
+{
+  "attempt_id": "T21-R4-r1-S",
+  "status": "completed",
+  "first_terminal_observed_at_utc": "2026-10-06T06:40:44.341438+00:00",
+  "dispatch_intent_at_utc": "2026-10-06T06:30:57.159911+00:00",
+  "controller_elapsed_seconds": 587.181527,
+  "cap_seconds": 1500,
+  "observed_after_cap": false,
+  "artifacts": [
+    {
+      "path": "artifacts/T21-R4-r1-S/merge_workspace.py",
+      "bytes": 12558,
+      "sha256": "536a6f9b9a632c29f9186f8e7d8cabe39313fe6f891daa4e611a3e0dac08d3be"
+    },
+    {
+      "path": "artifacts/T21-R4-r1-S/notes.md",
+      "bytes": 2291,
+      "sha256": "b21f04b839cf8ea3fcfce8056c6d8dd5dc3aebe65bf05bf57378aeb7dada1b64"
+    }
+  ],
+  "collection_errors": [],
+  "protected_files": [
+    {
+      "path": "LICENSE",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "TASK.md",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/smoke_test.py",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "skill/build-text-merge-component/SKILL.md",
+      "unchanged_at_collection": true
+    }
+  ],
+  "limits": [
+    "Non-atomic shared-filesystem observation",
+    "No OS/process/network isolation proved",
+    "Descendant quiescence unverified",
+    "No provider token/cost/model-build telemetry"
+  ]
+}

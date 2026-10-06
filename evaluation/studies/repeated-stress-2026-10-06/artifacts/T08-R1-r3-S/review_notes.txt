@@ -1,0 +1,34 @@
+Northstar Learning Lab | Maya Chen | September travel reimbursement handoff
+Cutoff: 2026-09-30 17:00 UTC. Synthetic offline reconciliation; prepared for finance review, not submitted or paid.
+
+POSITION (USD unless stated otherwise)
+- Payable to Maya now: $2,142.65.
+- Supported business cost after settled credits: $2,221.65, including $79.00 already company-paid.
+- Policy/personal/stale-estimate exclusions: $87.20.
+- Known-USD claims held: $252.90 across C017, C018 and C028; additionally C026 is held at EUR 24.00 with no supported USD valuation.
+- Settled credits applied: $188.00. Refunds, duplicate claims, company payments and holds are not exclusions.
+- All 30 claims are included. The EUR cash hold is not zero and is not included in USD totals; the complete eventual USD reimbursement remains unknown.
+
+CONFIRMED ADJUSTMENTS
+Policy and meals: P1 applies through September 14 service; P2 applies from September 15. September 16 posting does not move C002/C003/C004 to P2. C002 taxi is capped at $60.00 ($2.00 excluded); C003 lunch at $25.00 ($1.40 excluded). C004 food plus allocated tax is 52.00 + 6.80 x 52/68 = $57.20, rounded once HALF_UP before the $65.00 cap; exclude $16.00 alcohol and $1.60 alcohol tax. P2 caps C008 dinner at $80.00 ($8.00 excluded) and C012 lunch at $30.00 ($3.00 excluded). C011 breakfast $18.75, C015 dinner $68.82 and C016 breakfast $8.40 remain below their P2 caps. C016 needs no receipt because its settled statement and specific business purpose satisfy the at-or-below-$25 rule. Individual meals need no attendee list; the unsupported team count for C018 is held.
+
+Transport and FX: C006 $58.00 is within P1's $60.00 taxi cap; C009 $72.00 is within P2's $75.00 cap. E02 specifically approves up to $95.00 for C013, so its $91.00 is payable. C014 EUR 38.90 is valued at settled S014 $43.18; C015 EUR 62.00 at settled S015 $68.82. No internet rate or cash-rate inference is used. C026 cannot be valued without the organization's approved rate record.
+
+Hotels and deposit: C005 is limited to $180.00 x 2 nights plus full mandatory tax $46.80 = $406.80; exclude $30.00 room-base excess. E01 applies only to the September 15-17 stay, not C005. For that later stay, E01 supports $230.00 x 2 plus $55.20 tax = $515.20. R021 / DEP-714 and S021 allocate the $120.00 applied deposit to C021; R010 and S010 allocate only $395.20 final balance to C010. Combined reimbursement for the stay is $515.20, with no repeated deposit. C027's final R027 and settled S027 support $198.00 ($180.00 room + $18.00 tax); the stale $211.20 estimate overstates the final cost by $13.20; that overstatement is excluded, not held.
+
+Refunds: Settled S122 fully offsets C022's $36.00 adapter, yielding refunded and $0 payable. Settled S123 reduces C023 rail from $90.00 to $63.00. E04 approves the business cancellation and $25.00 retained fee for C024; settled S124 confirms $125.00 refunded against $150.00, leaving $25.00 payable. C023 and C024 are partial, not fully refunded. All three credits are settled before cutoff; none is counted as a policy exclusion.
+
+Duplicates and payment source: C001 is the canonical $48.50 train claim; E05 confirms C007 reuses its exact R001 and has zero incremental reimbursement, approval and exclusion. C020's $49.00 ShapeBoard plan is supported by E03 but company-paid on S020. C030's $30.00 equipment-bag fee is also company-paid on S030. Their $79.00 remains business cost but is not payable to Maya. C019 ClearTranscript $49.00 is employee-paid and specifically approved by E03 for one month only. C025's explicitly personal $12.00 gift is ineligible. C029 flight $224.80 is counted once from R029/S029; S229 is only a pending authorization for the same flight and adds zero expense.
+
+UNRESOLVED ISSUES / NEXT STEPS
+- C017, $47.90 held: itemized stationery receipt is missing (S017, E05). Maya should obtain the vendor's itemized duplicate receipt and provide it to finance for review; the statement alone is insufficient above $25.00.
+- C018, $126.00 held: R018 has no attendee list/count and E05 confirms none supplied. Maya or the workshop organizer should provide the actual attendees/count and confirm their connection to the documented partner-workshop lunch; finance can then apply P2's $30.00 per-person lunch cap. No count is inferred from a meeting invite.
+- C026, EUR 24.00 held, USD value unknown: the cash receipt exists but the organization-approved exchange-rate record does not (R026, E05). Maya should request the approved record for the service date from finance; finance can then value the claim and apply the P2 taxi cap. Card settlement rates are not substitutes.
+- C028, $79.00 held: R028 says $79.00 while settled S028 says $89.00; the $10.00 unexplained mismatch exceeds the $1.00 tolerance, and E05 reports no explanation. Maya should obtain the vendor's corrected itemized invoice or a documented explanation/adjustment, then ask finance to reconcile it to the card entry. The held field is the original $79.00 claim, not the $89.00 settlement; the additional $10.00 is unexplained and is neither approved nor classified as a policy exclusion.
+
+CUTOFF AND CONTROL NOTES
+E01-E05 are in-cutoff correspondence. E06 dated October 1 is outside the cutoff and supplies no replacement evidence; it is not used to resolve any hold. No later evidence, approvals, rates, attendees or replacement receipts are assumed.
+
+The unique settled USD charges total $2,746.55, excluding the pending S229 authorization and the EUR cash taxi. To bridge to the valued claim basis, add C027's $13.20 estimate overstatement and subtract C028's $10.00 unclaimed statement difference: $2,749.75. This equals $2,221.65 approved + $87.20 excluded + $252.90 held + $188.00 settled credits. C007's $48.50 duplicate is outside that unique claim basis. Of approved cost, $2,221.65 - $79.00 company-paid = $2,142.65 payable to Maya. The original EUR 38.90 and EUR 62.00 employee-card purchases are represented by their USD settlements; the separate EUR 24.00 cash hold is not added to USD amounts.
+
+Provenance is recorded per claim in reconciliation.json. Cxxx IDs identify claims.csv rows; Rxxx receipts.csv; Sxxx statement.csv; P1/P2 policies.txt; E01-E05 correspondence.txt; T1 trip_calendar.txt. R001 supports C001 and the zero-increment C007 duplicate. R010/R021 and S010/S021 are cross-linked for the deposit, and each credit/pending entry is linked to its claim without becoming an extra cost. All 27 receipt records and 32 statement records are mapped in the claim evidence IDs.

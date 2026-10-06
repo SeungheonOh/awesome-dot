@@ -1,0 +1,24 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "rev-ee8aa42e",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "4a2297d24889fafd4f269751993787728f028f1a6db80db4b2f740bde7f39a1f",
+    "review_notes.txt": "9217be136f60b0e328304060d0a85c5d39e8adcf5dac702375c9fe145c4b0173"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt explicitly states \"Cutoff: 2026-09-30 17:00 UTC\", \"Pay Maya USD 2,142.65 now\", \"Known-USD claims held: USD 252.90\", and \"A further EUR 24.00 cash claim remains unvalued and is not included in any USD total.\" These match common/TASK.md's cutoff and common/rubric.json R1-12's required handoff position. They also agree with artifacts/reconciliation.json totals reimbursement_usd_cents=214265, held_usd_cents=25290 and the C026 EUR original_amount=\"24.00\" unvalued hold. The USD holds are supported by claims.csv C017=47.90, C018=126.00 and C028=79.00; the EUR cash amount is supported by C026/R026. The notes explicitly say \"This is a prepared handoff, not evidence that reimbursement has been paid.\" Next steps are prospective requests, and neither artifact claims unsupported payment or outreach."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt UNRESOLVED ITEMS / NEXT STEPS gives all four distinct issues and practical responsible parties. For C017 it identifies the absent itemized stationery receipt and directs Maya to obtain a duplicate from the vendor for finance review, supported by claims.csv's blank receipt_id, S017=47.90, E05 and policies.txt's receipt requirement above USD 25.00. For C018 it identifies missing \"attendee list/count\", directs Maya or the workshop organizer to provide the actual list/count, and explains finance can then apply the USD 30.00 per-person P2 cap; this matches R018's blank attendee field, E05 and the team-meal rule. For C026 it states \"EUR 24.00 held, USD value unknown\" and asks finance for the organization-approved rate record before valuation and cap application, matching R026, E05 and the foreign-cash rule that prohibits inferring a card rate. For C028 it states the USD 79.00 receipt versus USD 89.00 settlement, the USD 10.00 discrepancy exceeding the USD 1.00 tolerance, and asks Maya for a corrected itemized bill or vendor/card explanation followed by finance reconciliation to S028. R028, S028, E05 and policies.txt support that unresolved status. The notes invent neither missing evidence nor a resolution; they retain the original claimed USD 79.00 hold as TASK.md requires."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt CONFIRMED ADJUSTMENTS explains every required class with accurate causal detail. It says P1 governs through September 14 and P2 from September 15 by service date, regardless of posting; P1/P2 and C002/S002 support the USD 60.00 old-cap example, and E02 supports C013's USD 95.00 exception. It explains C004 food USD 52.00 plus proportional tax USD 5.20, excluding alcohol USD 16.00 and its USD 1.60 tax, with one ROUND_HALF_UP rounding, matching R004 and P1. The hotel section explains C005's two USD 180.00 capped room nights plus all USD 46.80 tax, and limits E01's USD 230.00 exception to September 15–17; it splits R010's USD 515.20 into deposit C021 USD 120.00 and final balance C010 USD 395.20, consistent with E01, R010/R021 and S010/S021. The FX section uses S014 USD 43.18 and S015 USD 68.82 rather than an external rate, matching the foreign-card rule. The refund section explains S122's full USD 36.00 return, S123's USD 27.00 credit leaving USD 63.00, and S124's USD 125.00 credit leaving E04's approved USD 25.00 fee, without calling credits exclusions. It identifies C007 as duplicate of canonical C001 using R001/E05, retains C020/C030 business costs but zero employee payment using S020/S030, and limits software approval to E03's one month. It explains C027's final USD 198.00 replacing the USD 211.20 estimate with USD 13.20 excluded rather than held (R027/S027 and TASK.md), and counts only S029's settled USD 224.80 flight while excluding S229's pending authorization as another expense. The cash-FX hold and practical resolution are separately explained in unresolved item 3. Ledger notes corroborate these explanations; no materially misleading or unsupported statement was found in either artifact, including outside these adjustment classes."
+    }
+  }
+}

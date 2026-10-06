@@ -1,0 +1,74 @@
+{
+  "attempt_id": "T10-R1-r1-S",
+  "status": "completed",
+  "first_terminal_observed_at_utc": "2026-10-06T06:19:59.883976+00:00",
+  "dispatch_intent_at_utc": "2026-10-06T06:14:27.602714+00:00",
+  "controller_elapsed_seconds": 332.281262,
+  "cap_seconds": 900,
+  "observed_after_cap": false,
+  "artifacts": [
+    {
+      "path": "artifacts/T10-R1-r1-S/reconciliation.json",
+      "bytes": 16743,
+      "sha256": "781acee801d66445be696733d235ee75007c7ef81e9ccd3a8a0a722ea5bda678"
+    },
+    {
+      "path": "artifacts/T10-R1-r1-S/review_notes.txt",
+      "bytes": 6602,
+      "sha256": "1aa9d78f6703d8313f64b1b9331d54f6a5e3c5cb296dcac2e0fe6262d5d50d5c"
+    }
+  ],
+  "collection_errors": [],
+  "protected_files": [
+    {
+      "path": "LICENSE",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "TASK.md",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/00_README.txt",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/claims.csv",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/correspondence.txt",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/policies.txt",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/receipts.csv",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/statement.csv",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/trip_calendar.txt",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "skill/expense-report-reconciliation/SKILL.md",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "skill/expense-report-reconciliation/example.md",
+      "unchanged_at_collection": true
+    }
+  ],
+  "limits": [
+    "Non-atomic shared-filesystem observation",
+    "No OS/process/network isolation proved",
+    "Descendant quiescence unverified",
+    "No provider token/cost/model-build telemetry"
+  ]
+}

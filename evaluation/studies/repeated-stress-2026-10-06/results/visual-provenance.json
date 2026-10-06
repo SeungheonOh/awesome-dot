@@ -1,0 +1,298 @@
+{
+  "study_id": "native-cloud-repeated-stress-2026-10-06",
+  "state": "final saved-evidence accounting",
+  "renderer": "evaluation/visualization/render_repeated_stress.py",
+  "canonical_sources": [
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/results/attempts.json",
+      "sha256": "d73aacde955733ef35d461e2519fceb44dbb52d45aed3eea5a50b7607326cc24"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/results/requirements.json",
+      "sha256": "8cbf82e7ec847e8307fb89275924e9db414f3d98996e43c2b83aa0e03f583d54"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/results/summary.json",
+      "sha256": "8c5dbff6ab099098028b02949e17ca0f71a7a19b60550a2a3c97c497154a2d74"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T07-R1-r3-C/reconciliation.json",
+      "sha256": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T08-R1-r3-S/reconciliation.json",
+      "sha256": "695c0d1e0900723c781bf36f72501ed4678edcd7067d6b4d4e3828362136bcf9"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T09-R1-r1-C/reconciliation.json",
+      "sha256": "4a2297d24889fafd4f269751993787728f028f1a6db80db4b2f740bde7f39a1f"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T10-R1-r1-S/reconciliation.json",
+      "sha256": "781acee801d66445be696733d235ee75007c7ef81e9ccd3a8a0a722ea5bda678"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T19-R1-r2-S/reconciliation.json",
+      "sha256": "d145c84951bcfa701c361a85589918937f06973021ca52122b3ff67261cc38b9"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T20-R1-r2-C/reconciliation.json",
+      "sha256": "8df0a5092f6158e7d276c9fbeb9bc93ad5da40ec8ea52850148f960ebbdbd7f7"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T05-R2-r3-C/action_register.json",
+      "sha256": "edf35c5181e3da5d42cecf4d4025c59e86daacafacd57ef319e1919614362111"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T06-R2-r3-S/action_register.json",
+      "sha256": "af4c03f5ce42a2ec8bbfa708a7195247c73773c127d3a06c9caf72ccad547c8c"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T13-R2-r1-S/action_register.json",
+      "sha256": "af8a7679ebb8ab00ea32f664a8cfa2391a3f361efe5fd62c983865b06589a0a7"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T14-R2-r1-C/action_register.json",
+      "sha256": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T17-R2-r2-S/action_register.json",
+      "sha256": "e51a01f93043968afaf1e033fcf3bfaeadf8d73a7fa7d12b2dba209657401d39"
+    },
+    {
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T18-R2-r2-C/action_register.json",
+      "sha256": "93eb4799c584a4d832f2c9120d3936bfe242e68c8aab58a8c47930da18b7e847"
+    }
+  ],
+  "evidence_selection": [
+    {
+      "case_id": "R1",
+      "attempt_id": "T07-R1-r3-C",
+      "condition": "C",
+      "repeat": 3,
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T07-R1-r3-C/reconciliation.json",
+      "sha256": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061",
+      "paired_path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T08-R1-r3-S/reconciliation.json",
+      "collection": "claims",
+      "id_field": "claim_id",
+      "fields": [
+        "disposition",
+        "duplicate_of",
+        "reimbursement_usd_cents",
+        "approved_usd_cents",
+        "held_usd_cents"
+      ],
+      "records": [
+        {
+          "claim_id": "C007",
+          "disposition": "duplicate",
+          "duplicate_of": "C001",
+          "reimbursement_usd_cents": 0,
+          "approved_usd_cents": 0,
+          "held_usd_cents": 0
+        },
+        {
+          "claim_id": "C026",
+          "disposition": "hold",
+          "duplicate_of": null,
+          "reimbursement_usd_cents": 0,
+          "approved_usd_cents": null,
+          "held_usd_cents": null
+        }
+      ],
+      "source_lines": [
+        {
+          "record_id": "C007",
+          "line_start": 117,
+          "line_end": 134
+        },
+        {
+          "record_id": "C026",
+          "line_start": 493,
+          "line_end": 510
+        }
+      ],
+      "totals": {
+        "reimbursement_usd_cents": 214265,
+        "approved_usd_cents": 222165,
+        "excluded_usd_cents": 8720,
+        "held_usd_cents": 25290,
+        "credit_usd_cents": 18800,
+        "corporate_paid_usd_cents": 7900,
+        "unvalued_holds": [
+          {
+            "claim_id": "C026",
+            "currency": "EUR",
+            "original_amount": "24.00"
+          }
+        ]
+      },
+      "record_count": 30,
+      "totals_source_lines": {
+        "line_start": 590,
+        "line_end": 604
+      },
+      "verified_matches": [
+        {
+          "attempt_id": "T07-R1-r3-C",
+          "condition": "C",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T07-R1-r3-C/reconciliation.json",
+          "sha256": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061"
+        },
+        {
+          "attempt_id": "T08-R1-r3-S",
+          "condition": "S",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T08-R1-r3-S/reconciliation.json",
+          "sha256": "695c0d1e0900723c781bf36f72501ed4678edcd7067d6b4d4e3828362136bcf9"
+        },
+        {
+          "attempt_id": "T09-R1-r1-C",
+          "condition": "C",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T09-R1-r1-C/reconciliation.json",
+          "sha256": "4a2297d24889fafd4f269751993787728f028f1a6db80db4b2f740bde7f39a1f"
+        },
+        {
+          "attempt_id": "T10-R1-r1-S",
+          "condition": "S",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T10-R1-r1-S/reconciliation.json",
+          "sha256": "781acee801d66445be696733d235ee75007c7ef81e9ccd3a8a0a722ea5bda678"
+        },
+        {
+          "attempt_id": "T19-R1-r2-S",
+          "condition": "S",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T19-R1-r2-S/reconciliation.json",
+          "sha256": "d145c84951bcfa701c361a85589918937f06973021ca52122b3ff67261cc38b9"
+        },
+        {
+          "attempt_id": "T20-R1-r2-C",
+          "condition": "C",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T20-R1-r2-C/reconciliation.json",
+          "sha256": "8df0a5092f6158e7d276c9fbeb9bc93ad5da40ec8ea52850148f960ebbdbd7f7"
+        }
+      ],
+      "selection_reason": "No-failure fallback; lowest dispatch-index successful attempt in R1/R2. Selected business fields illustrate duplicate/unvalued claims and unresolved/missing-date actions; no condition-based selection."
+    },
+    {
+      "case_id": "R2",
+      "attempt_id": "T05-R2-r3-C",
+      "condition": "C",
+      "repeat": 3,
+      "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T05-R2-r3-C/action_register.json",
+      "sha256": "edf35c5181e3da5d42cecf4d4025c59e86daacafacd57ef319e1919614362111",
+      "paired_path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T06-R2-r3-S/action_register.json",
+      "collection": "actions",
+      "id_field": "action_id",
+      "fields": [
+        "owner",
+        "status",
+        "due_date",
+        "overdue"
+      ],
+      "records": [
+        {
+          "action_id": "A21",
+          "owner": "Uma",
+          "status": "unresolved",
+          "due_date": "2026-09-29",
+          "overdue": true
+        },
+        {
+          "action_id": "A30",
+          "owner": "Dev",
+          "status": "open",
+          "due_date": null,
+          "overdue": false
+        }
+      ],
+      "source_lines": [
+        {
+          "record_id": "A21",
+          "line_start": 246,
+          "line_end": 256
+        },
+        {
+          "record_id": "A30",
+          "line_start": 354,
+          "line_end": 364
+        }
+      ],
+      "totals": {
+        "by_status": {
+          "open": 9,
+          "blocked": 7,
+          "done": 12,
+          "cancelled": 4,
+          "unresolved": 2
+        },
+        "active_count": 18,
+        "overdue_count": 4
+      },
+      "record_count": 34,
+      "totals_source_lines": {
+        "line_start": 419,
+        "line_end": 429
+      },
+      "verified_matches": [
+        {
+          "attempt_id": "T05-R2-r3-C",
+          "condition": "C",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T05-R2-r3-C/action_register.json",
+          "sha256": "edf35c5181e3da5d42cecf4d4025c59e86daacafacd57ef319e1919614362111"
+        },
+        {
+          "attempt_id": "T06-R2-r3-S",
+          "condition": "S",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T06-R2-r3-S/action_register.json",
+          "sha256": "af4c03f5ce42a2ec8bbfa708a7195247c73773c127d3a06c9caf72ccad547c8c"
+        },
+        {
+          "attempt_id": "T13-R2-r1-S",
+          "condition": "S",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T13-R2-r1-S/action_register.json",
+          "sha256": "af8a7679ebb8ab00ea32f664a8cfa2391a3f361efe5fd62c983865b06589a0a7"
+        },
+        {
+          "attempt_id": "T14-R2-r1-C",
+          "condition": "C",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T14-R2-r1-C/action_register.json",
+          "sha256": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354"
+        },
+        {
+          "attempt_id": "T17-R2-r2-S",
+          "condition": "S",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T17-R2-r2-S/action_register.json",
+          "sha256": "e51a01f93043968afaf1e033fcf3bfaeadf8d73a7fa7d12b2dba209657401d39"
+        },
+        {
+          "attempt_id": "T18-R2-r2-C",
+          "condition": "C",
+          "path": "evaluation/studies/repeated-stress-2026-10-06/artifacts/T18-R2-r2-C/action_register.json",
+          "sha256": "93eb4799c584a4d832f2c9120d3936bfe242e68c8aab58a8c47930da18b7e847"
+        }
+      ],
+      "selection_reason": "No-failure fallback; lowest dispatch-index successful attempt in R1/R2. Selected business fields illustrate duplicate/unvalued claims and unresolved/missing-date actions; no condition-based selection."
+    }
+  ],
+  "asset_sha256": {
+    ".github/assets/repeated-stress-runs.svg": "7d2a0cf6833403c16321c0eec88b1a6d6eea89fdbfc763798cee76841f7265df",
+    ".github/assets/repeated-stress-runs-mobile.svg": "bda8ba1d188e3eb5f26192674901e20e0439157275199ebccf260db73a77789b",
+    ".github/assets/repeated-stress-coverage.svg": "e16e9bd81c00775ba31bc34331929c82802216244cd08dfb91ccff536b5d0bf7",
+    ".github/assets/repeated-stress-coverage-mobile.svg": "85d22e0878e15f33558d7737fec7d7305ed09f0274a890444a1698568b962a50",
+    ".github/assets/repeated-stress-evidence.svg": "7e4ca733fa2c0979c0e78ceb76f4fe7a013f38b1606ae43a2d0c433fbc563f16",
+    ".github/assets/repeated-stress-evidence-mobile.svg": "5a292e0c5f07cce1964f8c7ae0869ead6cd6162e5603a3c391ffbcc14878d281"
+  },
+  "selection_rule": "First substantive failure by case/requirement order plus representative successful artifact from another case; with no failures, lowest dispatch-index successful R1 and R2 artifacts. This frozen study uses the no-failure fallback.",
+  "display_transformations": [
+    "JSON fields are arranged as labeled values; field names shortened in the evidence panel. Summary USD cents are formatted as dollars by exact integer division, while record-detail cents stay integers. All other literal values are unchanged.",
+    "Mechanical is the display name for objective requirements. Behavioral and AI semantic requirements remain separate.",
+    "Run ratios use verified passes over scheduled requirements; not-assessed remains in the denominator."
+  ],
+  "limits": [
+    "Four authored synthetic cases, not 12 independent tasks",
+    "C has no designated package, not no ambient skills",
+    "Shared filesystem and condition masking were procedural",
+    "Process integrity unknown for all attempts",
+    "Exact serving model/build, tokens, cost and comparable compute time unknown",
+    "No population, significance, human-time savings or full-dot efficacy claim"
+  ]
+}

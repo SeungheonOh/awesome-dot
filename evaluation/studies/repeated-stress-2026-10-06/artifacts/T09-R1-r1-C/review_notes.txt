@@ -1,0 +1,79 @@
+NORTHSTAR LEARNING LAB — MAYA CHEN
+September travel reimbursement handoff
+Cutoff: 2026-09-30 17:00 UTC
+
+POSITION AT CUTOFF
+All 30 submitted claims C001–C030 are reconciled in reconciliation.json.
+Pay Maya USD 2,142.65 now. Supported business cost after settled credits is
+USD 2,221.65, including USD 79.00 already paid directly by the company.
+Known-USD claims held: USD 252.90. A further EUR 24.00 cash claim remains
+unvalued and is not included in any USD total. Policy/personal/estimate
+exclusions total USD 87.20; settled credits total USD 188.00.
+This is a prepared handoff, not evidence that reimbursement has been paid.
+
+CONFIRMED ADJUSTMENTS
+- Service dates control policy. P1 applies through September 14; P2 applies
+  from September 15. Later statement postings do not move earlier meals or
+  taxis onto P2. C002 is capped at USD 60.00, excluding USD 2.00; C006's
+  USD 58.00 is within the old cap. C009's USD 72.00 is within the new cap.
+  E02's named USD 95.00 exception supports all USD 91.00 on C013.
+- Meals: C003 is USD 25.00 approved / USD 1.40 excluded; C008 is USD 80.00 /
+  USD 8.00; C012 is USD 30.00 / USD 3.00. For C004, food USD 52.00 plus
+  proportional tax USD 5.20 gives USD 57.20, below the old dinner cap.
+  Alcohol USD 16.00 plus its USD 1.60 tax is excluded. The food-and-tax
+  amount was rounded once to cents using ROUND_HALF_UP. C011's USD 18.75
+  breakfast is within P2. C016's USD 8.40 is supported by settled S016 and
+  its specific business purpose: a receipt is not required at this amount.
+- Hotels: C005 allows two USD 180.00 room nights plus all USD 46.80 lodging
+  tax, totaling USD 406.80; USD 30.00 excess room base is excluded. E01's
+  USD 230.00 room-base exception applies only to the September 15–17 stay.
+  Its USD 515.20 total is allocated as USD 120.00 to deposit C021 and
+  USD 395.20 to final balance C010. R010/R021 and S010/S021 establish the
+  link. The deposit is neither reimbursed twice nor treated as a refund.
+  C027's final invoice/settlement USD 198.00 (USD 180.00 room + USD 18.00
+  tax) replaces the USD 211.20 estimate. Exclude USD 13.20, with no hold.
+- FX: C014's EUR 38.90 rail cost uses S014's settled USD 43.18. C015's
+  EUR 62.00 dinner uses S015's USD 68.82, below the USD 80.00 cap and with
+  no excluded line items. No internet rate or separate FX fee was used.
+- Refunds: C022's USD 36.00 charge is fully refunded by S122 and pays zero.
+  C023 nets USD 90.00 less settled USD 27.00 S123 = USD 63.00 payable.
+  C024 nets USD 150.00 less settled USD 125.00 S124 = USD 25.00 payable;
+  E04 approves both the business cancellation reason and retained fee.
+  Credits are linked by transaction references and are not exclusions.
+- C007 reuses R001 and is a duplicate of canonical C001, as E05 confirms.
+  C029 includes only settled flight charge S029, USD 224.80; S229's pending
+  authorization is not another expense.
+- E03 approves one month each of ClearTranscript C019 and ShapeBoard C020.
+  C019 is payable USD 49.00. C020 (USD 49.00) and baggage C030 (USD 30.00)
+  were paid by the company per S020/S030: retain approved business cost,
+  pay Maya zero. E03 does not authorize future software purchases.
+- C025's USD 12.00 personal gift is entirely ineligible.
+
+UNRESOLVED ITEMS / NEXT STEPS
+1. C017 — USD 47.90 held. S017 proves payment, but the required itemized
+   stationery receipt is absent (E05). Maya should obtain the itemized
+   duplicate from the vendor and submit it to finance for review.
+2. C018 — USD 126.00 held. R018 and E05 contain no attendee list/count.
+   Maya or the workshop organizer should provide the actual attendee list
+   and count for this business lunch. Finance can then apply P2's USD 30.00
+   per-person cap. No attendee count or cap exclusion has been assumed.
+3. C026 — EUR 24.00 held, USD value unknown. R026 supports the cash taxi,
+   but the approved exchange-rate record is missing (E05). Finance should
+   supply the organization's approved rate record for this claim, then
+   value it and apply P2's USD 75.00 taxi cap. Do not borrow a card FX rate.
+4. C028 — original claimed USD 79.00 held. R028 shows USD 79.00, but S028
+   settled USD 89.00. The unexplained USD 10.00 difference exceeds the
+   USD 1.00 tolerance (E05). Maya should obtain a corrected itemized bill
+   or vendor/card explanation and finance should reconcile it to S028.
+   No part is payable now. The extra USD 10.00 is not an invented claim,
+   policy exclusion, or addition to the required original-claim hold.
+
+EVIDENCE AND VERIFICATION LIMITS
+Each JSON row identifies its claim and supporting receipt, statement,
+policy, correspondence and/or trip-calendar records. Known-USD holds have
+zero approved cost and retain the original claimed amount as held; only
+C026 has null USD approved/excluded/held fields. Refunds, duplicate claims,
+company payments and unresolved holds are not counted as exclusions.
+Only supplied evidence through the cutoff was used. E06 is dated October 1,
+is outside the cutoff, and supplies no replacement evidence. No missing
+receipt, attendee, approval, rate or future posting has been invented.

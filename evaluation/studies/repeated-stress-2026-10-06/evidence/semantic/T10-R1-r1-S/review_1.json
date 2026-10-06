@@ -1,0 +1,24 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "rev-f3eb0e56",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "781acee801d66445be696733d235ee75007c7ef81e9ccd3a8a0a722ea5bda678",
+    "review_notes.txt": "1aa9d78f6703d8313f64b1b9331d54f6a5e3c5cb296dcac2e0fe6262d5d50d5c"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt line 2 gives the exact cutoff '2026-09-30 17:00 UTC', matching common/TASK.md line 3. Notes lines 5-6 clearly give USD 2,142.65 payable, USD 252.90 known-USD holds across C017/C018/C028, and an unvalued EUR 24.00 C026 cash taxi expressly outside USD subtotals. These match rubric R1-12 and reconciliation.json totals (214265 reimbursement cents, 25290 held cents, unvalued_holds C026/EUR/'24.00'); the held amounts 47.90 + 126.00 + 79.00 follow claims.csv C017/C018/C028 and the original-claim hold rule in TASK.md line 19. Notes line 7 identifies a finance-review reconciliation rather than a payment or external submission and excludes E06, whose October 1 date is beyond the cutoff. No completed payment, outreach, or external business action is claimed, and unresolved requests are expressly future next steps."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "All four unresolved issues have distinct, accurate evidence requests in artifacts/review_notes.txt lines 20-23, corroborated by common/inputs/correspondence.txt E05 (line 14) and policies.txt lines 9-10. For C017, notes line 20 identifies the missing itemized receipt despite settled S017 and asks Maya to obtain the vendor's replacement itemized receipt for finance re-review; claims.csv C017 is USD 47.90, above the USD 25.00 threshold. For C018, line 21 identifies missing attendees/count, consistent with the blank R018 attendee field, and asks Maya or the workshop organizer for actual attendance so finance can apply P2's USD 30.00-per-person lunch cap. For C026, line 22 retains EUR 24.00 unvalued, consistent with R026 and E05, and asks Maya to obtain finance's approved rate record before conversion and cap testing. For C028, line 23 correctly distinguishes claimed/receipted USD 79.00 (claims.csv C028 and receipts.csv R028) from settled USD 89.00 (statement.csv S028), asks for a corrected invoice or vendor explanation/payment correction, and requires finance reconciliation before release. reconciliation.json holds these claims at 4790, 12600, null, and 7900 cents respectively, with zero reimbursement. The notes do not invent receipts, attendees, FX approval, a discrepancy explanation, or a completed resolution; E06 is not treated as replacement evidence."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt lines 10-17 explain every required adjustment class, rather than merely giving totals, and agree with the ledger and sources. Line 10 applies P1 through September 14 and P2 from September 15 by service date, including C002/C003/C004 despite September 16 posting, consistent with claims.csv, statement.csv, and policies.txt lines 1-6. Line 12 removes R004's USD 16.00 alcohol and USD 1.60 proportional tax, showing 52.00 + 6.80*(52.00/68.00) = 57.20 and once-only HALF_UP before the USD 65.00 cap, as P1 requires. Line 13 explains C005's capped room base plus full mandatory tax; E01's two-night USD 230.00 room-base exception only for September 15-17; R010/R021's USD 120.00 deposit assigned to C021 and remaining USD 395.20 to C010; and R027/S027's USD 198.00 final superseding the USD 211.20 estimate with USD 13.20 excluded rather than held. Line 14 uses actual settled USD 43.18/68.82 from S014/S015 for card FX and leaves cash C026 unknown under policies.txt line 10. Line 15 explains actual settled S122/S123/S124 credits of USD 36.00/27.00/125.00, full versus partial refunds, and E04's approved USD 25.00 cancellation fee, correctly distinguishing credits from exclusions. Line 16 uses E05's canonical C001 for duplicate C007 and counts only settled S029 USD 224.80, excluding S229's same-flight pending authorization. Line 17 retains C020/C030's company-paid USD 49.00/USD 30.00 as supported cost with no employee reimbursement, consistent with S020/S030 and policies.txt line 11; it also accurately limits E03 software approval and excludes personal C025. The secondary control bridge in line 27 is supported by the statement's USD 2,746.55 settled charges less USD 188.00 credits and explicitly accounts for C028's USD 10.00 and C027's USD 13.20 differences. No materially unsupported financial adjustment or misleading claim was found."
+    }
+  }
+}

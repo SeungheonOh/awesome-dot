@@ -1,0 +1,31 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "rev-81a75173",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "8df0a5092f6158e7d276c9fbeb9bc93ad5da40ec8ea52850148f960ebbdbd7f7",
+    "review_notes.txt": "28b725538317870f7d910209609d874c98968c1258c156eebf02fbbf398a8b8a"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt opening states the exact cutoff '2026-09-30 17:00 UTC', matching common/TASK.md. POSITION states 'Pay Maya now: $2,142.65', 'Known-USD holds: $252.90', and 'one unvalued hold of EUR 24.00', exactly the required R1-12 handoff amounts. artifacts/reconciliation.json totals independently express those positions as reimbursement_usd_cents=214265, held_usd_cents=25290, and unvalued_holds containing C026/EUR/'24.00'. Its held C017, C018 and C028 rows record 4790+12600+7900 cents, matching their original claims in common/inputs/claims.csv; R026 and E05 support the separate unvalued cash claim. The opening explicitly says 'no payment or external action has been taken'. 'Pay Maya now' is a proposed payable position, not a claim that payment occurred. The notes make no completed payment or outreach claim."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt OPEN ISSUES / NEXT STEPS has four distinct, accurate evidence requests. C017: '$47.90 held' because the itemized stationery receipt is absent; Maya should obtain a duplicate from the supplier and send it to finance. This follows claims.csv C017, statement.csv S017, correspondence.txt E05, and policies.txt's receipt requirement above $25. C018: '$126.00 held' for missing attendee list/count; Maya or the organizer should supply actual attendees and count so finance can test the P2 $30-per-person cap. R018 and E05 confirm that absence. C026: 'EUR 24.00 held with no USD valuation'; finance should supply or approve the applicable exchange-rate record before assessment. R026, E05 and the foreign-cash policy support this unresolved requirement. C028: '$79.00 held', receipt/claim $79 versus S028 settlement $89; Maya should request a corrected itemized receipt or vendor explanation and finance should reconcile it. R028, S028 and E05 establish the unexplained $10 discrepancy, above the policy's $1 threshold. None of these next steps is presented as evidence already obtained; VERIFICATION AND LIMITS correctly excludes October 1 E06. The ledger's corresponding four hold rows preserve these same uncertainties."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "artifacts/review_notes.txt CONFIRMED ADJUSTMENTS explains all required classes with source-consistent calculations. It applies P1 through September 14 and P2 from September 15 by service date, explicitly retaining P1 for C002-C004 despite September 16 postings (policies.txt P1/P2; claims.csv C002-C004; statement.csv S002-S004). It explains C004 food plus proportional tax as $52+$6.80*52/68=$57.20, excluding $17.60 alcohol/tax, consistent with R004 and P1's single final ROUND_HALF_UP rounding. It retains all $46.80 C005 mandatory tax after capping two room nights at $180, and limits E01's $230/night exception to R010/R021; its $120 C021 deposit plus $395.20 C010 final balance totals $515.20 once (R005, R010, R021, S010, S021, E01). It explains actual posted USD for C014/C015 ($43.18/$68.82 from S014/S015), with no inferred rate for C026, matching the FX policy and input README. It nets settled S122/S123/S124 credits to $0/$63/$25 and notes S124's September 29 settlement and E04's approved cancellation fee. It explains canonical C001 versus duplicate C007 (E05), company-paid C020/C030 ($49/$30; S020/S030), C027's $198 final bill replacing $211.20 estimate and excluding $13.20 (R027/S027; TASK.md), and C029's single settled $224.80 charge with pending S229 adding nothing (S029/S229). These explanations are also consistent with the relevant reconciliation.json rows. Additional software, personal-cost and receipt-threshold explanations match E03, T1, S016 and policy. No materially misleading adjustment statement was found."
+    }
+  },
+  "hash_verification": {
+    "status": "pass",
+    "manifest_entries_verified": 13,
+    "detail": "Computed SHA-256 for every file listed in manifest.packet_sha256; all match. Both artifact hashes also match manifest.artifact_sha256."
+  },
+  "materially_unsupported_statements": [],
+  "limitations": "Candidate execution history was neither supplied nor inspected. The notes' retrospective claims about running local checks and using integer/Decimal arithmetic were not independently verified as process facts; the semantic judgments above rely on the supplied source records and artifact content."
+}

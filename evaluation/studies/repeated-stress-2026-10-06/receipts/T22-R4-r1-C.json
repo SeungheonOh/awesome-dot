@@ -1,0 +1,42 @@
+{
+  "attempt_id": "T22-R4-r1-C",
+  "status": "completed",
+  "first_terminal_observed_at_utc": "2026-10-06T06:44:33.885573+00:00",
+  "dispatch_intent_at_utc": "2026-10-06T06:32:37.183520+00:00",
+  "controller_elapsed_seconds": 716.702053,
+  "cap_seconds": 1500,
+  "observed_after_cap": false,
+  "artifacts": [
+    {
+      "path": "artifacts/T22-R4-r1-C/merge_workspace.py",
+      "bytes": 12217,
+      "sha256": "d9a6c5ea6e4c09d8e04ebed3f57f679303cc86c802dc1cd7d1558a87e1df6f12"
+    },
+    {
+      "path": "artifacts/T22-R4-r1-C/notes.md",
+      "bytes": 2533,
+      "sha256": "6fcd80655a0a5c285ab72e353a0ec5a75d5660f0ad92dce017cf4e63c216fdb4"
+    }
+  ],
+  "collection_errors": [],
+  "protected_files": [
+    {
+      "path": "LICENSE",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "TASK.md",
+      "unchanged_at_collection": true
+    },
+    {
+      "path": "inputs/smoke_test.py",
+      "unchanged_at_collection": true
+    }
+  ],
+  "limits": [
+    "Non-atomic shared-filesystem observation",
+    "No OS/process/network isolation proved",
+    "Descendant quiescence unverified",
+    "No provider token/cost/model-build telemetry"
+  ]
+}

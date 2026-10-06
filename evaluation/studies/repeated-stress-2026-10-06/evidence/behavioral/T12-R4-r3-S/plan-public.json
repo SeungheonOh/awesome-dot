@@ -1,0 +1,26 @@
+{
+  "case": "R4",
+  "effects": [
+    "Import exactly reviewed/source.py and reviewed/probe.py after approval",
+    "Create/read/replace/remove fixtures only beneath this evaluator-owned work_root/tmp",
+    "Write probe_result.json, bounded stdout.log/stderr.log and final report within work_root",
+    "No network, credentials, external reads/writes, or candidate subprocesses are permitted",
+    "This is reviewed owned-copy execution, not OS/process isolation"
+  ],
+  "harness_sha256": "d2603d090452f9c763ccb5dbb99ff9123a398bdfb4810e19b67144b3e27aa1ed",
+  "limits": {
+    "address_space_bytes": 536870912,
+    "captured_log_bytes": 65536,
+    "cpu_seconds": 20,
+    "file_bytes": 8388608,
+    "open_files": 64,
+    "source_bytes": 131072,
+    "wall_seconds": 30
+  },
+  "runner_sha256": "1c2e7feeffb23c9153310b040e8316a8e5fc33f5a2be0c2734cc088b179bda6a",
+  "source_sha256": "448fdead08c7e82cd39771331041743ed344ccd8b547e68dc72d6d8129ac1753",
+  "approved": true,
+  "original_plan_sha256": "b45ad74dc0d4728689f8183bcd29b625f110c9812b1a8d5a1dc67d54146e5a74",
+  "original_approval_sha256": "5f6b3d51ebc487d72f9b5d810f6b8ba3ecb18c64c5124bd4adbee821f3bd6612",
+  "note": "Public summary; machine paths and private approval messages are omitted. Original plan/approval hashes are commitments, not a claim that their preimages are reproduced here."
+}

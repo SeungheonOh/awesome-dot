@@ -1,0 +1,24 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "rev-1de28ea3",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "93eb4799c584a4d832f2c9120d3936bfe242e68c8aab58a8c47930da18b7e847",
+    "handoff.txt": "73fe08ba4c280dfccad26794795073458a8830bd0763a67857c75af967e525a5"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "Final scope and chronology are preserved in both artifacts. M2/M5 (common/inputs/meeting_notes.txt:13,47) remove French and accept Spanish; action_register.json A08 is done with title 'Deliver the Spanish FAQ translation; French removed from launch scope', and handoff.txt:49 says French is not outstanding. F6 (followups.txt:16-17) keeps scheduling completed and moves future delivery to October 6; register A09 is done while A10 is open under Kian due 2026-10-06, and handoff:40,50 distinguishes them explicitly. M2 cancels A05/A22, M3 cancels A26, and M5 cancels A16; all four register next_step fields are null, with no live obligations in handoff:59-63. The register evidence_scope and handoff:4,69 exclude F8/F9 by receipt time, retaining A17/A32 done, A31 open and A33 unresolved/unnamed rather than incorporating those post-cutoff claims. M5's reopened A13 and resolved A15 prerequisite are also correctly reflected in register titles and handoff:25,33."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff covers all 18 active actions with owners, due dates or explicit gaps, and concrete next steps. Handoff.txt:10-15 foregrounds A03/A21 -> A25 -> A28, correctly distinguishes immediate from transitive prerequisites, and assigns Dev (Sep 26), Uma (Sep 29), Yara and Ben (Oct 2), following B00, M4 and M5. Lines 12-13 and the 'OTHER OVERDUE WORK' section at 17-20 highlight exactly A03/A21/A11/A12; A11 is Kian due Sep 26 with missing mapping and zero-duplicate verification, and A12 is Lena due Sep 28 with access/coverage restoration, following M3/F7. Lines 22-28 cover A06 Gia, A14 Noor, A20 Talia, A33 unnamed, and A34 Iris, all due Oct 1; their next steps respectively finish the banner, run the unblocked load test, repair/verify links, name an owner and test, and obtain partner-date confirmation. Lines 30-36 cover Oct 2 actions A02 Carla, A13 Mira, A18 Ravi, A23 Xena and A31 Gia, with practical completion/clearance steps matching M4/M5/F1/F2/F4/F7. Lines 40-41 cover A10 Kian due Oct 6 and A30 Dev with no due date, recommending delivery and continued Q&A drafting respectively. Group headings make dates unambiguous; the completed and cancelled decisions are separately covered at 43-63."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "All four uncertainty/authority gaps are explicitly calibrated. F5 and M5 state that A21's incompatible CRM reports lack snapshot/hash identification and neither proves completion; register A21 is unresolved, its blocker preserves both claims, and handoff.txt:13 requires reconciliation or a known-input rerun without privileging the later report. M3/F7 leave the proposed A12 transfer unaccepted; register A12 retains Lena and handoff:20 explicitly says no acceptance or final assignment transferred accountability. M4/F7 release Hana but name no incoming lead; register A33 owner is null and status unresolved, while handoff:27 calls for naming a person and says completion is not established. M2 removes A30's deadline but permits drafting; register A30 is open with null due_date and handoff:41 explicitly states 'NO DUE DATE' and no replacement. The artifacts do not invent confirmation, completed delivery/testing, new deadlines or outreach: handoff:6 identifies next steps as recommendations and says no messages were sent or systems changed. Review of the remaining prose and descriptive register fields found no materially unsupported assertions; suggested actions are distinguished from established facts."
+    }
+  }
+}

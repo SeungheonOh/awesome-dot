@@ -1,0 +1,262 @@
+{
+  "verified_at_utc": "2026-10-06T06:47:24.063431+00:00",
+  "freeze_sha256": "7d6082b24dc7af106d6922800f7a52a73b8733e18209932de871d4e8f4833c2e",
+  "frozen_coordinator_files_verified": 66,
+  "author_source_bindings_verified": true,
+  "pinned_package_files_verified": 9,
+  "ledger_records": 96,
+  "ledger_head": "06d6196ff57a07b62492d228f19c39a391eb3aec108d15a6ffc86ba0ce879cde",
+  "scheduled_attempts": 24,
+  "unique_terminal_attempts": 24,
+  "artifact_files_verified": 45,
+  "protected_packet_files_verified": 168,
+  "attempts": [
+    {
+      "attempt_id": "T01-R3-r1-S",
+      "status": "completed",
+      "protected_file_count": 9,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "f748642dc29143122a4c137869879bd37cb3461794c5a1549c82c34d96fb5d90",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T02-R3-r1-C",
+      "status": "completed",
+      "protected_file_count": 6,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "894525b04e248df6bcccb3228e2d412dab082c7f81544414b9a6cdb2d787775d",
+      "artifact_file_count": 1,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T03-R4-r2-S",
+      "status": "completed",
+      "protected_file_count": 4,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "7beeb706dfbce375fcaefd87473a3d68ae3c5dd89880ed955d6b69ae66407838",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T04-R4-r2-C",
+      "status": "completed",
+      "protected_file_count": 3,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "e59d8c88049a6e0682d5ea87ac562b487d319358ce8bdcbe73065761571b06c6",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T05-R2-r3-C",
+      "status": "completed",
+      "protected_file_count": 6,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "ee9877644942b8022a2b5ae87cf6503fc4c184168e6c91963a2782b9209ccfbf",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T06-R2-r3-S",
+      "status": "completed",
+      "protected_file_count": 8,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "ed7b5a0c2630c0e7df525e99391595e0444810b9272ce39141166bee6360cdd6",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T07-R1-r3-C",
+      "status": "completed",
+      "protected_file_count": 9,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "867cb71150a02019af0a2e9473bc2dc68d038815869f80c3023604a32b66165c",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T08-R1-r3-S",
+      "status": "completed",
+      "protected_file_count": 11,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "7bd994fe9deded2566ffb51d9be95fccd73807a6dbab8d92e42b0e13f978561e",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T09-R1-r1-C",
+      "status": "completed",
+      "protected_file_count": 9,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "1ba1df63d7829b30361b0eb83e2caf888f59e549176144552664f9642ffb2f11",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T10-R1-r1-S",
+      "status": "completed",
+      "protected_file_count": 11,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "a1d0389d64f351947e614cff6553b6bdbff511f11102f6f9dd6e952a1e5018a8",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T11-R4-r3-C",
+      "status": "completed",
+      "protected_file_count": 3,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "3927d350ff459681e5f5ab4e1970627a0d928f1479a18a1578e192517b139f25",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T12-R4-r3-S",
+      "status": "completed",
+      "protected_file_count": 4,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "61c4bde61c0298f97c986e0c8fa21aa545493a6c872cdccebe01c4392aeb7ddd",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T13-R2-r1-S",
+      "status": "completed",
+      "protected_file_count": 8,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "c828dec3e22632ad7258172439bb755d50716d92d0f43058cd7cf1be8debf669",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T14-R2-r1-C",
+      "status": "completed",
+      "protected_file_count": 6,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "d52fa71c2c8760c7e9cbf9fb646aa50f1f5d7f899b1de4de60130a3ee432c5ff",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T15-R3-r2-C",
+      "status": "completed",
+      "protected_file_count": 6,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "29350a1af0eb4821ab6e5de6a0077e23591ac708a888b56e6fd52cb9d9fa9963",
+      "artifact_file_count": 1,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T16-R3-r2-S",
+      "status": "completed",
+      "protected_file_count": 9,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "49bcd007148c20d9eb38b2fbf702baf18654bf4ceeb41fd80ec710b0c958e0b9",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T17-R2-r2-S",
+      "status": "completed",
+      "protected_file_count": 8,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "ede91c75488b0e5e600cb8407d1242c784391236064dc54a18e4f1a7bd90defc",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T18-R2-r2-C",
+      "status": "completed",
+      "protected_file_count": 6,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "e49e95106ea15b339d98c2dccfc9c1dd3f795d158507ff731afbfae4231305a0",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T19-R1-r2-S",
+      "status": "completed",
+      "protected_file_count": 11,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "bd9063e179008b01ee5f56ebbe784f18eaed5618878eb9a5c1fff1b4bfcaa8fa",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T20-R1-r2-C",
+      "status": "completed",
+      "protected_file_count": 9,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "61c497577f8167e494bc8b7c47ee9dfb8871c60a5734073961cd7eee6a5a17ce",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T21-R4-r1-S",
+      "status": "completed",
+      "protected_file_count": 4,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "91511b38f908d10559e0a3cf7b7db8ee27b0bc9d4aafe4d8c360d5dbac3a23c5",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T22-R4-r1-C",
+      "status": "completed",
+      "protected_file_count": 3,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "f4ba9cca515682a585a292846bdd4ed54767bf9185ffcbda65e4fcf54c5c150e",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T23-R3-r3-C",
+      "status": "completed",
+      "protected_file_count": 6,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "606c1ed7289eba5bddc9a11e6da7d5809b07499729f1aeb340ed11dafb8624db",
+      "artifact_file_count": 1,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    },
+    {
+      "attempt_id": "T24-R3-r3-S",
+      "status": "completed",
+      "protected_file_count": 9,
+      "protected_files_match_current_and_collection": true,
+      "receipt_sha256": "b3afd0bf0ca2a4cc55e2fd93b9d94351d80cc86a70429da0ad7cca35365dd954",
+      "artifact_file_count": 2,
+      "artifact_hashes_match": true,
+      "collection_errors": 0
+    }
+  ],
+  "scores_inferred": false,
+  "candidate_code_executed": false,
+  "limits": [
+    "Current and collection-time content hashes only",
+    "No trusted clock or OS/process isolation claim",
+    "Transient prohibited access or edits cannot be ruled out"
+  ]
+}

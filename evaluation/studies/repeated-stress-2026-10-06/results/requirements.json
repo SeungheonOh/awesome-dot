@@ -1,0 +1,344 @@
+{
+  "R1": {
+    "case_id": "R1",
+    "label": "Expense reconciliation",
+    "requirements": [
+      {
+        "requirement_id": "R1-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every C001–C030, no omitted, duplicate, or invented claims"
+      },
+      {
+        "requirement_id": "R1-02",
+        "label": "Monetary artifact structure",
+        "mode": "objective",
+        "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist"
+      },
+      {
+        "requirement_id": "R1-03",
+        "label": "Disposition resolution",
+        "mode": "objective",
+        "acceptance": "Every claim has its supported final disposition at the cutoff"
+      },
+      {
+        "requirement_id": "R1-04",
+        "label": "Meal amount decisions",
+        "mode": "objective",
+        "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts"
+      },
+      {
+        "requirement_id": "R1-05",
+        "label": "Transportation and FX decisions",
+        "mode": "objective",
+        "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge"
+      },
+      {
+        "requirement_id": "R1-06",
+        "label": "Hotel and deposit decisions",
+        "mode": "objective",
+        "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts"
+      },
+      {
+        "requirement_id": "R1-07",
+        "label": "Refund decisions",
+        "mode": "objective",
+        "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts"
+      },
+      {
+        "requirement_id": "R1-08",
+        "label": "Other payment decisions",
+        "mode": "objective",
+        "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct"
+      },
+      {
+        "requirement_id": "R1-09",
+        "label": "Uncertainty holds",
+        "mode": "objective",
+        "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement"
+      },
+      {
+        "requirement_id": "R1-10",
+        "label": "Finance totals",
+        "mode": "objective",
+        "acceptance": "All stated totals and the original-currency hold reconcile exactly"
+      },
+      {
+        "requirement_id": "R1-11",
+        "label": "Decision provenance",
+        "mode": "objective",
+        "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim"
+      },
+      {
+        "requirement_id": "R1-12",
+        "label": "Usable finance handoff",
+        "mode": "semantic",
+        "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim"
+      },
+      {
+        "requirement_id": "R1-13",
+        "label": "Unresolved next steps",
+        "mode": "semantic",
+        "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence"
+      },
+      {
+        "requirement_id": "R1-14",
+        "label": "Material adjustment explanation",
+        "mode": "semantic",
+        "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements"
+      }
+    ]
+  },
+  "R2": {
+    "case_id": "R2",
+    "label": "Dated action handoff",
+    "requirements": [
+      {
+        "requirement_id": "R2-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every A01–A34, with no duplicate or invented action"
+      },
+      {
+        "requirement_id": "R2-02",
+        "label": "Ordinary final statuses",
+        "mode": "objective",
+        "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases"
+      },
+      {
+        "requirement_id": "R2-03",
+        "label": "Evidence-sensitive statuses",
+        "mode": "objective",
+        "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33"
+      },
+      {
+        "requirement_id": "R2-04",
+        "label": "Accepted owner transfers",
+        "mode": "objective",
+        "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers"
+      },
+      {
+        "requirement_id": "R2-05",
+        "label": "Retained or unfilled ownership",
+        "mode": "objective",
+        "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person"
+      },
+      {
+        "requirement_id": "R2-06",
+        "label": "Changed or removed deadlines",
+        "mode": "objective",
+        "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline"
+      },
+      {
+        "requirement_id": "R2-07",
+        "label": "Unchanged deadlines",
+        "mode": "objective",
+        "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work"
+      },
+      {
+        "requirement_id": "R2-08",
+        "label": "Duplicate aliases",
+        "mode": "objective",
+        "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions"
+      },
+      {
+        "requirement_id": "R2-09",
+        "label": "Immediate prerequisites",
+        "mode": "objective",
+        "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25"
+      },
+      {
+        "requirement_id": "R2-10",
+        "label": "Overdue flags and counts",
+        "mode": "objective",
+        "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct"
+      },
+      {
+        "requirement_id": "R2-11",
+        "label": "Evidence and minimal structure",
+        "mode": "objective",
+        "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present"
+      },
+      {
+        "requirement_id": "R2-12",
+        "label": "Final scope and chronology",
+        "mode": "semantic",
+        "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations"
+      },
+      {
+        "requirement_id": "R2-13",
+        "label": "Actionable complete handoff",
+        "mode": "semantic",
+        "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed"
+      },
+      {
+        "requirement_id": "R2-14",
+        "label": "Calibrated uncertainty",
+        "mode": "semantic",
+        "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach"
+      }
+    ]
+  },
+  "R3": {
+    "case_id": "R3",
+    "label": "SQL report reconciliation",
+    "requirements": [
+      {
+        "requirement_id": "execution",
+        "label": "Read-only bounded query completes for all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Read-only bounded query completes for all three public scenarios"
+      },
+      {
+        "requirement_id": "schema_types",
+        "label": "Exact required columns; text dimensions and non-null integer measures",
+        "mode": "objective",
+        "acceptance": "Exact required columns; text dimensions and non-null integer measures"
+      },
+      {
+        "requirement_id": "grouping_cohort",
+        "label": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "mode": "objective",
+        "acceptance": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort"
+      },
+      {
+        "requirement_id": "line_count",
+        "label": "Exact line_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact line_count per bucket in all three public scenarios"
+      },
+      {
+        "requirement_id": "invoice_count",
+        "label": "Exact invoice_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact invoice_count per bucket in all three public scenarios"
+      },
+      {
+        "requirement_id": "billed_units",
+        "label": "Exact billed_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact billed_units per bucket in all three public scenarios"
+      },
+      {
+        "requirement_id": "gross_cents",
+        "label": "Exact gross_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact gross_cents per bucket in all three public scenarios"
+      },
+      {
+        "requirement_id": "adjustment_cents",
+        "label": "Exact adjustment_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact adjustment_cents per bucket in all three public scenarios"
+      },
+      {
+        "requirement_id": "net_cents",
+        "label": "Exact net_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact net_cents per bucket in all three public scenarios"
+      },
+      {
+        "requirement_id": "received_cents",
+        "label": "Exact received_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact received_cents per bucket in all three public scenarios"
+      },
+      {
+        "requirement_id": "balance_cents",
+        "label": "Exact balance_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact balance_cents per bucket in all three public scenarios"
+      },
+      {
+        "requirement_id": "fulfilled_units",
+        "label": "Exact fulfilled_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact fulfilled_units per bucket in all three public scenarios"
+      }
+    ]
+  },
+  "R4": {
+    "case_id": "R4",
+    "label": "Merge consumer maintenance",
+    "requirements": [
+      {
+        "requirement_id": "views_and_edits",
+        "label": "Detached nested views; dirty reflects working text versus base",
+        "mode": "behavioral",
+        "acceptance": "Detached nested views; dirty reflects working text versus base"
+      },
+      {
+        "requirement_id": "fast_forward_base",
+        "label": "Clean fast-forward and repeated upstream/base tracking",
+        "mode": "behavioral",
+        "acceptance": "Clean fast-forward and repeated upstream/base tracking"
+      },
+      {
+        "requirement_id": "disjoint_modifications",
+        "label": "Independent same-length edits merge without loss",
+        "mode": "behavioral",
+        "acceptance": "Independent same-length edits merge without loss"
+      },
+      {
+        "requirement_id": "insert_delete_endings",
+        "label": "Disjoint insertion/deletion edits preserve exact line endings",
+        "mode": "behavioral",
+        "acceptance": "Disjoint insertion/deletion edits preserve exact line endings"
+      },
+      {
+        "requirement_id": "identical_adjacent_hunks",
+        "label": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "mode": "behavioral",
+        "acceptance": "Identical hunks applied once; adjacent nonempty hunks merge"
+      },
+      {
+        "requirement_id": "conflict_retention",
+        "label": "Conflicting ranges/insertions preserve base/local/incoming",
+        "mode": "behavioral",
+        "acceptance": "Conflicting ranges/insertions preserve base/local/incoming"
+      },
+      {
+        "requirement_id": "pending_blocks_mutation",
+        "label": "Editing or receiving during unresolved review cannot overwrite it",
+        "mode": "behavioral",
+        "acceptance": "Editing or receiving during unresolved review cannot overwrite it"
+      },
+      {
+        "requirement_id": "resolution_choices",
+        "label": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "mode": "behavioral",
+        "acceptance": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity"
+      },
+      {
+        "requirement_id": "rename_remove",
+        "label": "Complete document state survives rename; collisions/removals are correct",
+        "mode": "behavioral",
+        "acceptance": "Complete document state survives rename; collisions/removals are correct"
+      },
+      {
+        "requirement_id": "save_reload",
+        "label": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "mode": "behavioral",
+        "acceptance": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior"
+      },
+      {
+        "requirement_id": "failed_save_atomicity",
+        "label": "Failed observed atomic replacement preserves prior disk and live state",
+        "mode": "behavioral",
+        "acceptance": "Failed observed atomic replacement preserves prior disk and live state"
+      },
+      {
+        "requirement_id": "corrupt_snapshots",
+        "label": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "mode": "behavioral",
+        "acceptance": "Malformed/schema/duplicate/inconsistent snapshots reject without writes"
+      },
+      {
+        "requirement_id": "bounds_nofollow",
+        "label": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "mode": "behavioral",
+        "acceptance": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection"
+      }
+    ]
+  }
+}

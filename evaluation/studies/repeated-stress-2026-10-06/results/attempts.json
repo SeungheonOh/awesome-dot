@@ -1,0 +1,3761 @@
+[
+  {
+    "attempt_id": "T01-R3-r1-S",
+    "case_id": "R3",
+    "condition": "S",
+    "repeat": 1,
+    "dispatch_index": 1,
+    "pair_index": 1,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 12,
+    "requirements": [
+      {
+        "requirement_id": "execution",
+        "label": "Read-only bounded query completes for all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Read-only bounded query completes for all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "schema_types",
+        "label": "Exact required columns; text dimensions and non-null integer measures",
+        "mode": "objective",
+        "acceptance": "Exact required columns; text dimensions and non-null integer measures",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "grouping_cohort",
+        "label": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "mode": "objective",
+        "acceptance": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "line_count",
+        "label": "Exact line_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact line_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "invoice_count",
+        "label": "Exact invoice_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact invoice_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "billed_units",
+        "label": "Exact billed_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact billed_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "gross_cents",
+        "label": "Exact gross_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact gross_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "adjustment_cents",
+        "label": "Exact adjustment_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact adjustment_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "net_cents",
+        "label": "Exact net_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact net_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "received_cents",
+        "label": "Exact received_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact received_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "balance_cents",
+        "label": "Exact balance_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact balance_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fulfilled_units",
+        "label": "Exact fulfilled_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact fulfilled_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T01-R3-r1-S/raw.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 12,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T01-R3-r1-S/notes.md",
+        "bytes": 3010,
+        "sha256": "2f462877da9be81f6fcecd42b74f0dff9fd4bb8af9101b61e9bb5f699317cef9"
+      },
+      {
+        "path": "artifacts/T01-R3-r1-S/report.sql",
+        "bytes": 2358,
+        "sha256": "f1db17c308435d7023a4865d0c8c1caab8aef146923f7adb506f5749e1972a6a"
+      }
+    ],
+    "receipt_path": "receipts/T01-R3-r1-S.json",
+    "controller_elapsed_seconds": 194.003703,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "original"
+  },
+  {
+    "attempt_id": "T02-R3-r1-C",
+    "case_id": "R3",
+    "condition": "C",
+    "repeat": 1,
+    "dispatch_index": 2,
+    "pair_index": 1,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 12,
+    "requirements": [
+      {
+        "requirement_id": "execution",
+        "label": "Read-only bounded query completes for all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Read-only bounded query completes for all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "schema_types",
+        "label": "Exact required columns; text dimensions and non-null integer measures",
+        "mode": "objective",
+        "acceptance": "Exact required columns; text dimensions and non-null integer measures",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "grouping_cohort",
+        "label": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "mode": "objective",
+        "acceptance": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "line_count",
+        "label": "Exact line_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact line_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "invoice_count",
+        "label": "Exact invoice_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact invoice_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "billed_units",
+        "label": "Exact billed_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact billed_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "gross_cents",
+        "label": "Exact gross_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact gross_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "adjustment_cents",
+        "label": "Exact adjustment_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact adjustment_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "net_cents",
+        "label": "Exact net_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact net_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "received_cents",
+        "label": "Exact received_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact received_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "balance_cents",
+        "label": "Exact balance_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact balance_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fulfilled_units",
+        "label": "Exact fulfilled_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact fulfilled_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T02-R3-r1-C/raw.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 12,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T02-R3-r1-C/report.sql",
+        "bytes": 2273,
+        "sha256": "828b93b57f6184d79e24361c99e8114eed47a6452d9dbc02066f6bbd9aea981f"
+      }
+    ],
+    "receipt_path": "receipts/T02-R3-r1-C.json",
+    "controller_elapsed_seconds": 102.219978,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "original"
+  },
+  {
+    "attempt_id": "T03-R4-r2-S",
+    "case_id": "R4",
+    "condition": "S",
+    "repeat": 2,
+    "dispatch_index": 3,
+    "pair_index": 2,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 13,
+    "requirements": [
+      {
+        "requirement_id": "views_and_edits",
+        "label": "Detached nested views; dirty reflects working text versus base",
+        "mode": "behavioral",
+        "acceptance": "Detached nested views; dirty reflects working text versus base",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fast_forward_base",
+        "label": "Clean fast-forward and repeated upstream/base tracking",
+        "mode": "behavioral",
+        "acceptance": "Clean fast-forward and repeated upstream/base tracking",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "disjoint_modifications",
+        "label": "Independent same-length edits merge without loss",
+        "mode": "behavioral",
+        "acceptance": "Independent same-length edits merge without loss",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "insert_delete_endings",
+        "label": "Disjoint insertion/deletion edits preserve exact line endings",
+        "mode": "behavioral",
+        "acceptance": "Disjoint insertion/deletion edits preserve exact line endings",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "identical_adjacent_hunks",
+        "label": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "mode": "behavioral",
+        "acceptance": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "conflict_retention",
+        "label": "Conflicting ranges/insertions preserve base/local/incoming",
+        "mode": "behavioral",
+        "acceptance": "Conflicting ranges/insertions preserve base/local/incoming",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "pending_blocks_mutation",
+        "label": "Editing or receiving during unresolved review cannot overwrite it",
+        "mode": "behavioral",
+        "acceptance": "Editing or receiving during unresolved review cannot overwrite it",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "resolution_choices",
+        "label": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "mode": "behavioral",
+        "acceptance": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "rename_remove",
+        "label": "Complete document state survives rename; collisions/removals are correct",
+        "mode": "behavioral",
+        "acceptance": "Complete document state survives rename; collisions/removals are correct",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "save_reload",
+        "label": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "mode": "behavioral",
+        "acceptance": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "failed_save_atomicity",
+        "label": "Failed observed atomic replacement preserves prior disk and live state",
+        "mode": "behavioral",
+        "acceptance": "Failed observed atomic replacement preserves prior disk and live state",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "corrupt_snapshots",
+        "label": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "mode": "behavioral",
+        "acceptance": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "bounds_nofollow",
+        "label": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "mode": "behavioral",
+        "acceptance": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T03-R4-r2-S/probe_result.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T03-R4-r2-S/merge_workspace.py",
+        "bytes": 11667,
+        "sha256": "4de5787d1b7b74e462e02d4a843dac80222487944822644f63044b78b163c3e7"
+      },
+      {
+        "path": "artifacts/T03-R4-r2-S/notes.md",
+        "bytes": 2126,
+        "sha256": "b32ffb52ad6f68c448b9c7ba13a658bec780b2ea13e647cbe17e7e295d19d9b8"
+      }
+    ],
+    "receipt_path": "receipts/T03-R4-r2-S.json",
+    "controller_elapsed_seconds": 459.765454,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 1500,
+    "observed_after_cap": false,
+    "bootstrap_variant": "original"
+  },
+  {
+    "attempt_id": "T04-R4-r2-C",
+    "case_id": "R4",
+    "condition": "C",
+    "repeat": 2,
+    "dispatch_index": 4,
+    "pair_index": 2,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 13,
+    "requirements": [
+      {
+        "requirement_id": "views_and_edits",
+        "label": "Detached nested views; dirty reflects working text versus base",
+        "mode": "behavioral",
+        "acceptance": "Detached nested views; dirty reflects working text versus base",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fast_forward_base",
+        "label": "Clean fast-forward and repeated upstream/base tracking",
+        "mode": "behavioral",
+        "acceptance": "Clean fast-forward and repeated upstream/base tracking",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "disjoint_modifications",
+        "label": "Independent same-length edits merge without loss",
+        "mode": "behavioral",
+        "acceptance": "Independent same-length edits merge without loss",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "insert_delete_endings",
+        "label": "Disjoint insertion/deletion edits preserve exact line endings",
+        "mode": "behavioral",
+        "acceptance": "Disjoint insertion/deletion edits preserve exact line endings",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "identical_adjacent_hunks",
+        "label": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "mode": "behavioral",
+        "acceptance": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "conflict_retention",
+        "label": "Conflicting ranges/insertions preserve base/local/incoming",
+        "mode": "behavioral",
+        "acceptance": "Conflicting ranges/insertions preserve base/local/incoming",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "pending_blocks_mutation",
+        "label": "Editing or receiving during unresolved review cannot overwrite it",
+        "mode": "behavioral",
+        "acceptance": "Editing or receiving during unresolved review cannot overwrite it",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "resolution_choices",
+        "label": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "mode": "behavioral",
+        "acceptance": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "rename_remove",
+        "label": "Complete document state survives rename; collisions/removals are correct",
+        "mode": "behavioral",
+        "acceptance": "Complete document state survives rename; collisions/removals are correct",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "save_reload",
+        "label": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "mode": "behavioral",
+        "acceptance": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "failed_save_atomicity",
+        "label": "Failed observed atomic replacement preserves prior disk and live state",
+        "mode": "behavioral",
+        "acceptance": "Failed observed atomic replacement preserves prior disk and live state",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "corrupt_snapshots",
+        "label": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "mode": "behavioral",
+        "acceptance": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "bounds_nofollow",
+        "label": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "mode": "behavioral",
+        "acceptance": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T04-R4-r2-C/probe_result.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T04-R4-r2-C/merge_workspace.py",
+        "bytes": 12146,
+        "sha256": "d745bd7e72004e9ef7f315b8a1b4e9d38aef42f01f06c46cd4987e4e0035e034"
+      },
+      {
+        "path": "artifacts/T04-R4-r2-C/notes.md",
+        "bytes": 1996,
+        "sha256": "138251a18762631b2f391e1a1d8377cf3d9e984665bce649315ed4cec6c47548"
+      }
+    ],
+    "receipt_path": "receipts/T04-R4-r2-C.json",
+    "controller_elapsed_seconds": 651.097047,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 1500,
+    "observed_after_cap": false,
+    "bootstrap_variant": "original"
+  },
+  {
+    "attempt_id": "T05-R2-r3-C",
+    "case_id": "R2",
+    "condition": "C",
+    "repeat": 3,
+    "dispatch_index": 5,
+    "pair_index": 3,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R2-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every A01–A34, with no duplicate or invented action",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-02",
+        "label": "Ordinary final statuses",
+        "mode": "objective",
+        "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-03",
+        "label": "Evidence-sensitive statuses",
+        "mode": "objective",
+        "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-04",
+        "label": "Accepted owner transfers",
+        "mode": "objective",
+        "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-05",
+        "label": "Retained or unfilled ownership",
+        "mode": "objective",
+        "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-06",
+        "label": "Changed or removed deadlines",
+        "mode": "objective",
+        "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-07",
+        "label": "Unchanged deadlines",
+        "mode": "objective",
+        "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-08",
+        "label": "Duplicate aliases",
+        "mode": "objective",
+        "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-09",
+        "label": "Immediate prerequisites",
+        "mode": "objective",
+        "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-10",
+        "label": "Overdue flags and counts",
+        "mode": "objective",
+        "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-11",
+        "label": "Evidence and minimal structure",
+        "mode": "objective",
+        "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-12",
+        "label": "Final scope and chronology",
+        "mode": "semantic",
+        "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-13",
+        "label": "Actionable complete handoff",
+        "mode": "semantic",
+        "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-14",
+        "label": "Calibrated uncertainty",
+        "mode": "semantic",
+        "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T05-R2-r3-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T05-R2-r3-C/action_register.json",
+        "bytes": 14779,
+        "sha256": "edf35c5181e3da5d42cecf4d4025c59e86daacafacd57ef319e1919614362111"
+      },
+      {
+        "path": "artifacts/T05-R2-r3-C/handoff.txt",
+        "bytes": 8978,
+        "sha256": "f8103e15ce2428c83cf89105bc91e15f88a8e06891d7a2b065b3b970d2d49231"
+      }
+    ],
+    "receipt_path": "receipts/T05-R2-r3-C.json",
+    "controller_elapsed_seconds": 290.182021,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T06-R2-r3-S",
+    "case_id": "R2",
+    "condition": "S",
+    "repeat": 3,
+    "dispatch_index": 6,
+    "pair_index": 3,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R2-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every A01–A34, with no duplicate or invented action",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-02",
+        "label": "Ordinary final statuses",
+        "mode": "objective",
+        "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-03",
+        "label": "Evidence-sensitive statuses",
+        "mode": "objective",
+        "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-04",
+        "label": "Accepted owner transfers",
+        "mode": "objective",
+        "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-05",
+        "label": "Retained or unfilled ownership",
+        "mode": "objective",
+        "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-06",
+        "label": "Changed or removed deadlines",
+        "mode": "objective",
+        "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-07",
+        "label": "Unchanged deadlines",
+        "mode": "objective",
+        "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-08",
+        "label": "Duplicate aliases",
+        "mode": "objective",
+        "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-09",
+        "label": "Immediate prerequisites",
+        "mode": "objective",
+        "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-10",
+        "label": "Overdue flags and counts",
+        "mode": "objective",
+        "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-11",
+        "label": "Evidence and minimal structure",
+        "mode": "objective",
+        "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-12",
+        "label": "Final scope and chronology",
+        "mode": "semantic",
+        "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-13",
+        "label": "Actionable complete handoff",
+        "mode": "semantic",
+        "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-14",
+        "label": "Calibrated uncertainty",
+        "mode": "semantic",
+        "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T06-R2-r3-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T06-R2-r3-S/action_register.json",
+        "bytes": 22832,
+        "sha256": "af4c03f5ce42a2ec8bbfa708a7195247c73773c127d3a06c9caf72ccad547c8c"
+      },
+      {
+        "path": "artifacts/T06-R2-r3-S/handoff.txt",
+        "bytes": 8461,
+        "sha256": "fea4c9b5e1b8db40f4a60fd458fb211108fe0f30b01ec899ea4476eef8634fba"
+      }
+    ],
+    "receipt_path": "receipts/T06-R2-r3-S.json",
+    "controller_elapsed_seconds": 324.672932,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T07-R1-r3-C",
+    "case_id": "R1",
+    "condition": "C",
+    "repeat": 3,
+    "dispatch_index": 7,
+    "pair_index": 4,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R1-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every C001–C030, no omitted, duplicate, or invented claims",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-02",
+        "label": "Monetary artifact structure",
+        "mode": "objective",
+        "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-03",
+        "label": "Disposition resolution",
+        "mode": "objective",
+        "acceptance": "Every claim has its supported final disposition at the cutoff",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-04",
+        "label": "Meal amount decisions",
+        "mode": "objective",
+        "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-05",
+        "label": "Transportation and FX decisions",
+        "mode": "objective",
+        "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-06",
+        "label": "Hotel and deposit decisions",
+        "mode": "objective",
+        "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-07",
+        "label": "Refund decisions",
+        "mode": "objective",
+        "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-08",
+        "label": "Other payment decisions",
+        "mode": "objective",
+        "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-09",
+        "label": "Uncertainty holds",
+        "mode": "objective",
+        "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-10",
+        "label": "Finance totals",
+        "mode": "objective",
+        "acceptance": "All stated totals and the original-currency hold reconcile exactly",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-11",
+        "label": "Decision provenance",
+        "mode": "objective",
+        "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-12",
+        "label": "Usable finance handoff",
+        "mode": "semantic",
+        "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-13",
+        "label": "Unresolved next steps",
+        "mode": "semantic",
+        "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-14",
+        "label": "Material adjustment explanation",
+        "mode": "semantic",
+        "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T07-R1-r3-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T07-R1-r3-C/reconciliation.json",
+        "bytes": 16769,
+        "sha256": "c5972655060c753e87cb9a306f3e441380220f88e209745dd1665b5f719c9061"
+      },
+      {
+        "path": "artifacts/T07-R1-r3-C/review_notes.txt",
+        "bytes": 5632,
+        "sha256": "746577ecd71f6ca85b3c5c97c805f7f1f3235ad1a61b6eee0ef1cc609f183f23"
+      }
+    ],
+    "receipt_path": "receipts/T07-R1-r3-C.json",
+    "controller_elapsed_seconds": 231.18362,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T08-R1-r3-S",
+    "case_id": "R1",
+    "condition": "S",
+    "repeat": 3,
+    "dispatch_index": 8,
+    "pair_index": 4,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R1-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every C001–C030, no omitted, duplicate, or invented claims",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-02",
+        "label": "Monetary artifact structure",
+        "mode": "objective",
+        "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-03",
+        "label": "Disposition resolution",
+        "mode": "objective",
+        "acceptance": "Every claim has its supported final disposition at the cutoff",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-04",
+        "label": "Meal amount decisions",
+        "mode": "objective",
+        "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-05",
+        "label": "Transportation and FX decisions",
+        "mode": "objective",
+        "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-06",
+        "label": "Hotel and deposit decisions",
+        "mode": "objective",
+        "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-07",
+        "label": "Refund decisions",
+        "mode": "objective",
+        "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-08",
+        "label": "Other payment decisions",
+        "mode": "objective",
+        "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-09",
+        "label": "Uncertainty holds",
+        "mode": "objective",
+        "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-10",
+        "label": "Finance totals",
+        "mode": "objective",
+        "acceptance": "All stated totals and the original-currency hold reconcile exactly",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-11",
+        "label": "Decision provenance",
+        "mode": "objective",
+        "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-12",
+        "label": "Usable finance handoff",
+        "mode": "semantic",
+        "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-13",
+        "label": "Unresolved next steps",
+        "mode": "semantic",
+        "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-14",
+        "label": "Material adjustment explanation",
+        "mode": "semantic",
+        "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T08-R1-r3-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T08-R1-r3-S/reconciliation.json",
+        "bytes": 21675,
+        "sha256": "695c0d1e0900723c781bf36f72501ed4678edcd7067d6b4d4e3828362136bcf9"
+      },
+      {
+        "path": "artifacts/T08-R1-r3-S/review_notes.txt",
+        "bytes": 6535,
+        "sha256": "8d2c20a9b51ae91d0f2e1502e4368b489ed335cd7cf8731140469e1eaf36ce95"
+      }
+    ],
+    "receipt_path": "receipts/T08-R1-r3-S.json",
+    "controller_elapsed_seconds": 343.850747,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T09-R1-r1-C",
+    "case_id": "R1",
+    "condition": "C",
+    "repeat": 1,
+    "dispatch_index": 9,
+    "pair_index": 5,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R1-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every C001–C030, no omitted, duplicate, or invented claims",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-02",
+        "label": "Monetary artifact structure",
+        "mode": "objective",
+        "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-03",
+        "label": "Disposition resolution",
+        "mode": "objective",
+        "acceptance": "Every claim has its supported final disposition at the cutoff",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-04",
+        "label": "Meal amount decisions",
+        "mode": "objective",
+        "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-05",
+        "label": "Transportation and FX decisions",
+        "mode": "objective",
+        "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-06",
+        "label": "Hotel and deposit decisions",
+        "mode": "objective",
+        "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-07",
+        "label": "Refund decisions",
+        "mode": "objective",
+        "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-08",
+        "label": "Other payment decisions",
+        "mode": "objective",
+        "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-09",
+        "label": "Uncertainty holds",
+        "mode": "objective",
+        "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-10",
+        "label": "Finance totals",
+        "mode": "objective",
+        "acceptance": "All stated totals and the original-currency hold reconcile exactly",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-11",
+        "label": "Decision provenance",
+        "mode": "objective",
+        "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-12",
+        "label": "Usable finance handoff",
+        "mode": "semantic",
+        "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-13",
+        "label": "Unresolved next steps",
+        "mode": "semantic",
+        "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-14",
+        "label": "Material adjustment explanation",
+        "mode": "semantic",
+        "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T09-R1-r1-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T09-R1-r1-C/reconciliation.json",
+        "bytes": 16350,
+        "sha256": "4a2297d24889fafd4f269751993787728f028f1a6db80db4b2f740bde7f39a1f"
+      },
+      {
+        "path": "artifacts/T09-R1-r1-C/review_notes.txt",
+        "bytes": 5129,
+        "sha256": "9217be136f60b0e328304060d0a85c5d39e8adcf5dac702375c9fe145c4b0173"
+      }
+    ],
+    "receipt_path": "receipts/T09-R1-r1-C.json",
+    "controller_elapsed_seconds": 229.165377,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T10-R1-r1-S",
+    "case_id": "R1",
+    "condition": "S",
+    "repeat": 1,
+    "dispatch_index": 10,
+    "pair_index": 5,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R1-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every C001–C030, no omitted, duplicate, or invented claims",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-02",
+        "label": "Monetary artifact structure",
+        "mode": "objective",
+        "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-03",
+        "label": "Disposition resolution",
+        "mode": "objective",
+        "acceptance": "Every claim has its supported final disposition at the cutoff",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-04",
+        "label": "Meal amount decisions",
+        "mode": "objective",
+        "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-05",
+        "label": "Transportation and FX decisions",
+        "mode": "objective",
+        "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-06",
+        "label": "Hotel and deposit decisions",
+        "mode": "objective",
+        "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-07",
+        "label": "Refund decisions",
+        "mode": "objective",
+        "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-08",
+        "label": "Other payment decisions",
+        "mode": "objective",
+        "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-09",
+        "label": "Uncertainty holds",
+        "mode": "objective",
+        "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-10",
+        "label": "Finance totals",
+        "mode": "objective",
+        "acceptance": "All stated totals and the original-currency hold reconcile exactly",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-11",
+        "label": "Decision provenance",
+        "mode": "objective",
+        "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-12",
+        "label": "Usable finance handoff",
+        "mode": "semantic",
+        "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-13",
+        "label": "Unresolved next steps",
+        "mode": "semantic",
+        "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-14",
+        "label": "Material adjustment explanation",
+        "mode": "semantic",
+        "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T10-R1-r1-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T10-R1-r1-S/reconciliation.json",
+        "bytes": 16743,
+        "sha256": "781acee801d66445be696733d235ee75007c7ef81e9ccd3a8a0a722ea5bda678"
+      },
+      {
+        "path": "artifacts/T10-R1-r1-S/review_notes.txt",
+        "bytes": 6602,
+        "sha256": "1aa9d78f6703d8313f64b1b9331d54f6a5e3c5cb296dcac2e0fe6262d5d50d5c"
+      }
+    ],
+    "receipt_path": "receipts/T10-R1-r1-S.json",
+    "controller_elapsed_seconds": 332.281262,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T11-R4-r3-C",
+    "case_id": "R4",
+    "condition": "C",
+    "repeat": 3,
+    "dispatch_index": 11,
+    "pair_index": 6,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 13,
+    "requirements": [
+      {
+        "requirement_id": "views_and_edits",
+        "label": "Detached nested views; dirty reflects working text versus base",
+        "mode": "behavioral",
+        "acceptance": "Detached nested views; dirty reflects working text versus base",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fast_forward_base",
+        "label": "Clean fast-forward and repeated upstream/base tracking",
+        "mode": "behavioral",
+        "acceptance": "Clean fast-forward and repeated upstream/base tracking",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "disjoint_modifications",
+        "label": "Independent same-length edits merge without loss",
+        "mode": "behavioral",
+        "acceptance": "Independent same-length edits merge without loss",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "insert_delete_endings",
+        "label": "Disjoint insertion/deletion edits preserve exact line endings",
+        "mode": "behavioral",
+        "acceptance": "Disjoint insertion/deletion edits preserve exact line endings",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "identical_adjacent_hunks",
+        "label": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "mode": "behavioral",
+        "acceptance": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "conflict_retention",
+        "label": "Conflicting ranges/insertions preserve base/local/incoming",
+        "mode": "behavioral",
+        "acceptance": "Conflicting ranges/insertions preserve base/local/incoming",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "pending_blocks_mutation",
+        "label": "Editing or receiving during unresolved review cannot overwrite it",
+        "mode": "behavioral",
+        "acceptance": "Editing or receiving during unresolved review cannot overwrite it",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "resolution_choices",
+        "label": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "mode": "behavioral",
+        "acceptance": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "rename_remove",
+        "label": "Complete document state survives rename; collisions/removals are correct",
+        "mode": "behavioral",
+        "acceptance": "Complete document state survives rename; collisions/removals are correct",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "save_reload",
+        "label": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "mode": "behavioral",
+        "acceptance": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "failed_save_atomicity",
+        "label": "Failed observed atomic replacement preserves prior disk and live state",
+        "mode": "behavioral",
+        "acceptance": "Failed observed atomic replacement preserves prior disk and live state",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "corrupt_snapshots",
+        "label": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "mode": "behavioral",
+        "acceptance": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "bounds_nofollow",
+        "label": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "mode": "behavioral",
+        "acceptance": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T11-R4-r3-C/probe_result.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T11-R4-r3-C/merge_workspace.py",
+        "bytes": 11504,
+        "sha256": "735afb2ea90f43cc21b5e16ada5511f3ce6e49f548e4bf1414f0efe5972346a8"
+      },
+      {
+        "path": "artifacts/T11-R4-r3-C/notes.md",
+        "bytes": 1818,
+        "sha256": "435d0ed20695229b1f8bb9e7fb7b4baef950c221ec8774367144747214800a0c"
+      }
+    ],
+    "receipt_path": "receipts/T11-R4-r3-C.json",
+    "controller_elapsed_seconds": 643.87199,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 1500,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T12-R4-r3-S",
+    "case_id": "R4",
+    "condition": "S",
+    "repeat": 3,
+    "dispatch_index": 12,
+    "pair_index": 6,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 13,
+    "requirements": [
+      {
+        "requirement_id": "views_and_edits",
+        "label": "Detached nested views; dirty reflects working text versus base",
+        "mode": "behavioral",
+        "acceptance": "Detached nested views; dirty reflects working text versus base",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fast_forward_base",
+        "label": "Clean fast-forward and repeated upstream/base tracking",
+        "mode": "behavioral",
+        "acceptance": "Clean fast-forward and repeated upstream/base tracking",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "disjoint_modifications",
+        "label": "Independent same-length edits merge without loss",
+        "mode": "behavioral",
+        "acceptance": "Independent same-length edits merge without loss",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "insert_delete_endings",
+        "label": "Disjoint insertion/deletion edits preserve exact line endings",
+        "mode": "behavioral",
+        "acceptance": "Disjoint insertion/deletion edits preserve exact line endings",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "identical_adjacent_hunks",
+        "label": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "mode": "behavioral",
+        "acceptance": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "conflict_retention",
+        "label": "Conflicting ranges/insertions preserve base/local/incoming",
+        "mode": "behavioral",
+        "acceptance": "Conflicting ranges/insertions preserve base/local/incoming",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "pending_blocks_mutation",
+        "label": "Editing or receiving during unresolved review cannot overwrite it",
+        "mode": "behavioral",
+        "acceptance": "Editing or receiving during unresolved review cannot overwrite it",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "resolution_choices",
+        "label": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "mode": "behavioral",
+        "acceptance": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "rename_remove",
+        "label": "Complete document state survives rename; collisions/removals are correct",
+        "mode": "behavioral",
+        "acceptance": "Complete document state survives rename; collisions/removals are correct",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "save_reload",
+        "label": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "mode": "behavioral",
+        "acceptance": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "failed_save_atomicity",
+        "label": "Failed observed atomic replacement preserves prior disk and live state",
+        "mode": "behavioral",
+        "acceptance": "Failed observed atomic replacement preserves prior disk and live state",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "corrupt_snapshots",
+        "label": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "mode": "behavioral",
+        "acceptance": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "bounds_nofollow",
+        "label": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "mode": "behavioral",
+        "acceptance": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T12-R4-r3-S/probe_result.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T12-R4-r3-S/merge_workspace.py",
+        "bytes": 12723,
+        "sha256": "448fdead08c7e82cd39771331041743ed344ccd8b547e68dc72d6d8129ac1753"
+      },
+      {
+        "path": "artifacts/T12-R4-r3-S/notes.md",
+        "bytes": 2002,
+        "sha256": "71b21229ae4e26556e1c7f85d5e5f8f8a6716c37b82192de569ebc7dbb65e1d1"
+      }
+    ],
+    "receipt_path": "receipts/T12-R4-r3-S.json",
+    "controller_elapsed_seconds": 566.409435,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 1500,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T13-R2-r1-S",
+    "case_id": "R2",
+    "condition": "S",
+    "repeat": 1,
+    "dispatch_index": 13,
+    "pair_index": 7,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R2-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every A01–A34, with no duplicate or invented action",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-02",
+        "label": "Ordinary final statuses",
+        "mode": "objective",
+        "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-03",
+        "label": "Evidence-sensitive statuses",
+        "mode": "objective",
+        "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-04",
+        "label": "Accepted owner transfers",
+        "mode": "objective",
+        "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-05",
+        "label": "Retained or unfilled ownership",
+        "mode": "objective",
+        "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-06",
+        "label": "Changed or removed deadlines",
+        "mode": "objective",
+        "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-07",
+        "label": "Unchanged deadlines",
+        "mode": "objective",
+        "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-08",
+        "label": "Duplicate aliases",
+        "mode": "objective",
+        "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-09",
+        "label": "Immediate prerequisites",
+        "mode": "objective",
+        "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-10",
+        "label": "Overdue flags and counts",
+        "mode": "objective",
+        "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-11",
+        "label": "Evidence and minimal structure",
+        "mode": "objective",
+        "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-12",
+        "label": "Final scope and chronology",
+        "mode": "semantic",
+        "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-13",
+        "label": "Actionable complete handoff",
+        "mode": "semantic",
+        "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-14",
+        "label": "Calibrated uncertainty",
+        "mode": "semantic",
+        "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T13-R2-r1-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T13-R2-r1-S/action_register.json",
+        "bytes": 16412,
+        "sha256": "af8a7679ebb8ab00ea32f664a8cfa2391a3f361efe5fd62c983865b06589a0a7"
+      },
+      {
+        "path": "artifacts/T13-R2-r1-S/handoff.txt",
+        "bytes": 9757,
+        "sha256": "3c6bce7064d07d33eb3778564bc0d942c5eab6d2c8e213cc9615c7731acb1d40"
+      }
+    ],
+    "receipt_path": "receipts/T13-R2-r1-S.json",
+    "controller_elapsed_seconds": 343.144341,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T14-R2-r1-C",
+    "case_id": "R2",
+    "condition": "C",
+    "repeat": 1,
+    "dispatch_index": 14,
+    "pair_index": 7,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R2-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every A01–A34, with no duplicate or invented action",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-02",
+        "label": "Ordinary final statuses",
+        "mode": "objective",
+        "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-03",
+        "label": "Evidence-sensitive statuses",
+        "mode": "objective",
+        "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-04",
+        "label": "Accepted owner transfers",
+        "mode": "objective",
+        "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-05",
+        "label": "Retained or unfilled ownership",
+        "mode": "objective",
+        "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-06",
+        "label": "Changed or removed deadlines",
+        "mode": "objective",
+        "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-07",
+        "label": "Unchanged deadlines",
+        "mode": "objective",
+        "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-08",
+        "label": "Duplicate aliases",
+        "mode": "objective",
+        "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-09",
+        "label": "Immediate prerequisites",
+        "mode": "objective",
+        "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-10",
+        "label": "Overdue flags and counts",
+        "mode": "objective",
+        "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-11",
+        "label": "Evidence and minimal structure",
+        "mode": "objective",
+        "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-12",
+        "label": "Final scope and chronology",
+        "mode": "semantic",
+        "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-13",
+        "label": "Actionable complete handoff",
+        "mode": "semantic",
+        "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-14",
+        "label": "Calibrated uncertainty",
+        "mode": "semantic",
+        "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T14-R2-r1-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T14-R2-r1-C/action_register.json",
+        "bytes": 15593,
+        "sha256": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354"
+      },
+      {
+        "path": "artifacts/T14-R2-r1-C/handoff.txt",
+        "bytes": 8671,
+        "sha256": "c53e32c49297c24a7f2f6e5cbd906a007ef1184c77b895c7c005c3dd264d4c6c"
+      }
+    ],
+    "receipt_path": "receipts/T14-R2-r1-C.json",
+    "controller_elapsed_seconds": 307.999068,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T15-R3-r2-C",
+    "case_id": "R3",
+    "condition": "C",
+    "repeat": 2,
+    "dispatch_index": 15,
+    "pair_index": 8,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 12,
+    "requirements": [
+      {
+        "requirement_id": "execution",
+        "label": "Read-only bounded query completes for all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Read-only bounded query completes for all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "schema_types",
+        "label": "Exact required columns; text dimensions and non-null integer measures",
+        "mode": "objective",
+        "acceptance": "Exact required columns; text dimensions and non-null integer measures",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "grouping_cohort",
+        "label": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "mode": "objective",
+        "acceptance": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "line_count",
+        "label": "Exact line_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact line_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "invoice_count",
+        "label": "Exact invoice_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact invoice_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "billed_units",
+        "label": "Exact billed_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact billed_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "gross_cents",
+        "label": "Exact gross_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact gross_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "adjustment_cents",
+        "label": "Exact adjustment_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact adjustment_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "net_cents",
+        "label": "Exact net_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact net_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "received_cents",
+        "label": "Exact received_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact received_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "balance_cents",
+        "label": "Exact balance_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact balance_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fulfilled_units",
+        "label": "Exact fulfilled_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact fulfilled_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T15-R3-r2-C/raw.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 12,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T15-R3-r2-C/report.sql",
+        "bytes": 2151,
+        "sha256": "cb941276aea81cf1b1f1bb9d9e129dda0704ec2761eb0744d713b768765ccaa5"
+      }
+    ],
+    "receipt_path": "receipts/T15-R3-r2-C.json",
+    "controller_elapsed_seconds": 132.208477,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T16-R3-r2-S",
+    "case_id": "R3",
+    "condition": "S",
+    "repeat": 2,
+    "dispatch_index": 16,
+    "pair_index": 8,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 12,
+    "requirements": [
+      {
+        "requirement_id": "execution",
+        "label": "Read-only bounded query completes for all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Read-only bounded query completes for all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "schema_types",
+        "label": "Exact required columns; text dimensions and non-null integer measures",
+        "mode": "objective",
+        "acceptance": "Exact required columns; text dimensions and non-null integer measures",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "grouping_cohort",
+        "label": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "mode": "objective",
+        "acceptance": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "line_count",
+        "label": "Exact line_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact line_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "invoice_count",
+        "label": "Exact invoice_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact invoice_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "billed_units",
+        "label": "Exact billed_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact billed_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "gross_cents",
+        "label": "Exact gross_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact gross_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "adjustment_cents",
+        "label": "Exact adjustment_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact adjustment_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "net_cents",
+        "label": "Exact net_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact net_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "received_cents",
+        "label": "Exact received_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact received_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "balance_cents",
+        "label": "Exact balance_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact balance_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fulfilled_units",
+        "label": "Exact fulfilled_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact fulfilled_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T16-R3-r2-S/raw.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 12,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T16-R3-r2-S/notes.md",
+        "bytes": 3821,
+        "sha256": "12459dfb575d9a61d4b776dfeb6e743b7c5e3659254b800e34faf843cea121c0"
+      },
+      {
+        "path": "artifacts/T16-R3-r2-S/report.sql",
+        "bytes": 2333,
+        "sha256": "b13fbc6e1931d8ed3e336f9b6593a5ed93ce8282a7df3340464e781c64ce7842"
+      }
+    ],
+    "receipt_path": "receipts/T16-R3-r2-S.json",
+    "controller_elapsed_seconds": 186.295916,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T17-R2-r2-S",
+    "case_id": "R2",
+    "condition": "S",
+    "repeat": 2,
+    "dispatch_index": 17,
+    "pair_index": 9,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R2-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every A01–A34, with no duplicate or invented action",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-02",
+        "label": "Ordinary final statuses",
+        "mode": "objective",
+        "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-03",
+        "label": "Evidence-sensitive statuses",
+        "mode": "objective",
+        "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-04",
+        "label": "Accepted owner transfers",
+        "mode": "objective",
+        "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-05",
+        "label": "Retained or unfilled ownership",
+        "mode": "objective",
+        "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-06",
+        "label": "Changed or removed deadlines",
+        "mode": "objective",
+        "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-07",
+        "label": "Unchanged deadlines",
+        "mode": "objective",
+        "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-08",
+        "label": "Duplicate aliases",
+        "mode": "objective",
+        "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-09",
+        "label": "Immediate prerequisites",
+        "mode": "objective",
+        "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-10",
+        "label": "Overdue flags and counts",
+        "mode": "objective",
+        "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-11",
+        "label": "Evidence and minimal structure",
+        "mode": "objective",
+        "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-12",
+        "label": "Final scope and chronology",
+        "mode": "semantic",
+        "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-13",
+        "label": "Actionable complete handoff",
+        "mode": "semantic",
+        "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-14",
+        "label": "Calibrated uncertainty",
+        "mode": "semantic",
+        "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T17-R2-r2-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T17-R2-r2-S/action_register.json",
+        "bytes": 19984,
+        "sha256": "e51a01f93043968afaf1e033fcf3bfaeadf8d73a7fa7d12b2dba209657401d39"
+      },
+      {
+        "path": "artifacts/T17-R2-r2-S/handoff.txt",
+        "bytes": 8864,
+        "sha256": "dc79f8cb453ede5bac8b92273a7cba4a7bbbc6047e2752379845fa8d9b45e2f6"
+      }
+    ],
+    "receipt_path": "receipts/T17-R2-r2-S.json",
+    "controller_elapsed_seconds": 318.660994,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T18-R2-r2-C",
+    "case_id": "R2",
+    "condition": "C",
+    "repeat": 2,
+    "dispatch_index": 18,
+    "pair_index": 9,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R2-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every A01–A34, with no duplicate or invented action",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-02",
+        "label": "Ordinary final statuses",
+        "mode": "objective",
+        "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-03",
+        "label": "Evidence-sensitive statuses",
+        "mode": "objective",
+        "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-04",
+        "label": "Accepted owner transfers",
+        "mode": "objective",
+        "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-05",
+        "label": "Retained or unfilled ownership",
+        "mode": "objective",
+        "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-06",
+        "label": "Changed or removed deadlines",
+        "mode": "objective",
+        "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-07",
+        "label": "Unchanged deadlines",
+        "mode": "objective",
+        "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-08",
+        "label": "Duplicate aliases",
+        "mode": "objective",
+        "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-09",
+        "label": "Immediate prerequisites",
+        "mode": "objective",
+        "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-10",
+        "label": "Overdue flags and counts",
+        "mode": "objective",
+        "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-11",
+        "label": "Evidence and minimal structure",
+        "mode": "objective",
+        "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R2-12",
+        "label": "Final scope and chronology",
+        "mode": "semantic",
+        "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-13",
+        "label": "Actionable complete handoff",
+        "mode": "semantic",
+        "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R2-14",
+        "label": "Calibrated uncertainty",
+        "mode": "semantic",
+        "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T18-R2-r2-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T18-R2-r2-C/action_register.json",
+        "bytes": 14942,
+        "sha256": "93eb4799c584a4d832f2c9120d3936bfe242e68c8aab58a8c47930da18b7e847"
+      },
+      {
+        "path": "artifacts/T18-R2-r2-C/handoff.txt",
+        "bytes": 8725,
+        "sha256": "73fe08ba4c280dfccad26794795073458a8830bd0763a67857c75af967e525a5"
+      }
+    ],
+    "receipt_path": "receipts/T18-R2-r2-C.json",
+    "controller_elapsed_seconds": 375.045333,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T19-R1-r2-S",
+    "case_id": "R1",
+    "condition": "S",
+    "repeat": 2,
+    "dispatch_index": 19,
+    "pair_index": 10,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R1-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every C001–C030, no omitted, duplicate, or invented claims",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-02",
+        "label": "Monetary artifact structure",
+        "mode": "objective",
+        "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-03",
+        "label": "Disposition resolution",
+        "mode": "objective",
+        "acceptance": "Every claim has its supported final disposition at the cutoff",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-04",
+        "label": "Meal amount decisions",
+        "mode": "objective",
+        "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-05",
+        "label": "Transportation and FX decisions",
+        "mode": "objective",
+        "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-06",
+        "label": "Hotel and deposit decisions",
+        "mode": "objective",
+        "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-07",
+        "label": "Refund decisions",
+        "mode": "objective",
+        "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-08",
+        "label": "Other payment decisions",
+        "mode": "objective",
+        "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-09",
+        "label": "Uncertainty holds",
+        "mode": "objective",
+        "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-10",
+        "label": "Finance totals",
+        "mode": "objective",
+        "acceptance": "All stated totals and the original-currency hold reconcile exactly",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-11",
+        "label": "Decision provenance",
+        "mode": "objective",
+        "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-12",
+        "label": "Usable finance handoff",
+        "mode": "semantic",
+        "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-13",
+        "label": "Unresolved next steps",
+        "mode": "semantic",
+        "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-14",
+        "label": "Material adjustment explanation",
+        "mode": "semantic",
+        "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T19-R1-r2-S/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T19-R1-r2-S/reconciliation.json",
+        "bytes": 16913,
+        "sha256": "d145c84951bcfa701c361a85589918937f06973021ca52122b3ff67261cc38b9"
+      },
+      {
+        "path": "artifacts/T19-R1-r2-S/review_notes.txt",
+        "bytes": 6059,
+        "sha256": "e32b67800541a4059684690ddb4b1857ffb502970da5028a60273d96b842b68a"
+      }
+    ],
+    "receipt_path": "receipts/T19-R1-r2-S.json",
+    "controller_elapsed_seconds": 352.427319,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T20-R1-r2-C",
+    "case_id": "R1",
+    "condition": "C",
+    "repeat": 2,
+    "dispatch_index": 20,
+    "pair_index": 10,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 14,
+    "requirements": [
+      {
+        "requirement_id": "R1-01",
+        "label": "Canonical coverage",
+        "mode": "objective",
+        "acceptance": "Exactly one row for every C001–C030, no omitted, duplicate, or invented claims",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-02",
+        "label": "Monetary artifact structure",
+        "mode": "objective",
+        "acceptance": "Required fields use integer cents/null only in permitted unvalued hold fields; required totals and readable handoff exist",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-03",
+        "label": "Disposition resolution",
+        "mode": "objective",
+        "acceptance": "Every claim has its supported final disposition at the cutoff",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-04",
+        "label": "Meal amount decisions",
+        "mode": "objective",
+        "acceptance": "Correct supported meal, alcohol/tax, receipt-threshold, and service-date cap amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-05",
+        "label": "Transportation and FX decisions",
+        "mode": "objective",
+        "acceptance": "Correct old/new/exception taxi caps, posted USD foreign-card costs, and one settled airfare charge",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-06",
+        "label": "Hotel and deposit decisions",
+        "mode": "objective",
+        "acceptance": "Correct lodging caps, written exception, deposit/final split, and final-versus-estimate amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-07",
+        "label": "Refund decisions",
+        "mode": "objective",
+        "acceptance": "Settled return, rail, and seminar credits correctly reduce approved and reimbursable amounts",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-08",
+        "label": "Other payment decisions",
+        "mode": "objective",
+        "acceptance": "No duplicate/personal/company-card employee payment; approved software and business-cost classification correct",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-09",
+        "label": "Uncertainty holds",
+        "mode": "objective",
+        "acceptance": "Four unresolved claims remain held at supported amounts with EUR cash unvalued and zero reimbursement",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-10",
+        "label": "Finance totals",
+        "mode": "objective",
+        "acceptance": "All stated totals and the original-currency hold reconcile exactly",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-11",
+        "label": "Decision provenance",
+        "mode": "objective",
+        "acceptance": "All evidence IDs exist in the packet and essential decision/exception sources are cited per claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "All required facts agree"
+      },
+      {
+        "requirement_id": "R1-12",
+        "label": "Usable finance handoff",
+        "mode": "semantic",
+        "acceptance": "Notes clearly state the cutoff, payable amount, known USD held amount, and unvalued EUR hold; no unsupported payment/action claim",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-13",
+        "label": "Unresolved next steps",
+        "mode": "semantic",
+        "acceptance": "Notes accurately describe all four unresolved issues and a practical evidence request/owner or responsible role for resolving each, without invented evidence",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      },
+      {
+        "requirement_id": "R1-14",
+        "label": "Material adjustment explanation",
+        "mode": "semantic",
+        "acceptance": "Notes accurately explain service-date policy use, alcohol/tax, hotel exception/deposit, FX, settled credits, duplicate and company-card handling, and estimate/pending-authorization adjustments without materially misleading statements",
+        "status": "pass",
+        "evidence_path": "evidence/semantic/T20-R1-r2-C/raw.json",
+        "evidence_detail": "Agreement of two independent masked reviews"
+      }
+    ],
+    "counts": {
+      "pass": 14,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T20-R1-r2-C/reconciliation.json",
+        "bytes": 16127,
+        "sha256": "8df0a5092f6158e7d276c9fbeb9bc93ad5da40ec8ea52850148f960ebbdbd7f7"
+      },
+      {
+        "path": "artifacts/T20-R1-r2-C/review_notes.txt",
+        "bytes": 4821,
+        "sha256": "28b725538317870f7d910209609d874c98968c1258c156eebf02fbbf398a8b8a"
+      }
+    ],
+    "receipt_path": "receipts/T20-R1-r2-C.json",
+    "controller_elapsed_seconds": 320.134236,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T21-R4-r1-S",
+    "case_id": "R4",
+    "condition": "S",
+    "repeat": 1,
+    "dispatch_index": 21,
+    "pair_index": 11,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 13,
+    "requirements": [
+      {
+        "requirement_id": "views_and_edits",
+        "label": "Detached nested views; dirty reflects working text versus base",
+        "mode": "behavioral",
+        "acceptance": "Detached nested views; dirty reflects working text versus base",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fast_forward_base",
+        "label": "Clean fast-forward and repeated upstream/base tracking",
+        "mode": "behavioral",
+        "acceptance": "Clean fast-forward and repeated upstream/base tracking",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "disjoint_modifications",
+        "label": "Independent same-length edits merge without loss",
+        "mode": "behavioral",
+        "acceptance": "Independent same-length edits merge without loss",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "insert_delete_endings",
+        "label": "Disjoint insertion/deletion edits preserve exact line endings",
+        "mode": "behavioral",
+        "acceptance": "Disjoint insertion/deletion edits preserve exact line endings",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "identical_adjacent_hunks",
+        "label": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "mode": "behavioral",
+        "acceptance": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "conflict_retention",
+        "label": "Conflicting ranges/insertions preserve base/local/incoming",
+        "mode": "behavioral",
+        "acceptance": "Conflicting ranges/insertions preserve base/local/incoming",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "pending_blocks_mutation",
+        "label": "Editing or receiving during unresolved review cannot overwrite it",
+        "mode": "behavioral",
+        "acceptance": "Editing or receiving during unresolved review cannot overwrite it",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "resolution_choices",
+        "label": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "mode": "behavioral",
+        "acceptance": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "rename_remove",
+        "label": "Complete document state survives rename; collisions/removals are correct",
+        "mode": "behavioral",
+        "acceptance": "Complete document state survives rename; collisions/removals are correct",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "save_reload",
+        "label": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "mode": "behavioral",
+        "acceptance": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "failed_save_atomicity",
+        "label": "Failed observed atomic replacement preserves prior disk and live state",
+        "mode": "behavioral",
+        "acceptance": "Failed observed atomic replacement preserves prior disk and live state",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "corrupt_snapshots",
+        "label": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "mode": "behavioral",
+        "acceptance": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "bounds_nofollow",
+        "label": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "mode": "behavioral",
+        "acceptance": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T21-R4-r1-S/probe_result.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T21-R4-r1-S/merge_workspace.py",
+        "bytes": 12558,
+        "sha256": "536a6f9b9a632c29f9186f8e7d8cabe39313fe6f891daa4e611a3e0dac08d3be"
+      },
+      {
+        "path": "artifacts/T21-R4-r1-S/notes.md",
+        "bytes": 2291,
+        "sha256": "b21f04b839cf8ea3fcfce8056c6d8dd5dc3aebe65bf05bf57378aeb7dada1b64"
+      }
+    ],
+    "receipt_path": "receipts/T21-R4-r1-S.json",
+    "controller_elapsed_seconds": 587.181527,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 1500,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T22-R4-r1-C",
+    "case_id": "R4",
+    "condition": "C",
+    "repeat": 1,
+    "dispatch_index": 22,
+    "pair_index": 11,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 13,
+    "requirements": [
+      {
+        "requirement_id": "views_and_edits",
+        "label": "Detached nested views; dirty reflects working text versus base",
+        "mode": "behavioral",
+        "acceptance": "Detached nested views; dirty reflects working text versus base",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fast_forward_base",
+        "label": "Clean fast-forward and repeated upstream/base tracking",
+        "mode": "behavioral",
+        "acceptance": "Clean fast-forward and repeated upstream/base tracking",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "disjoint_modifications",
+        "label": "Independent same-length edits merge without loss",
+        "mode": "behavioral",
+        "acceptance": "Independent same-length edits merge without loss",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "insert_delete_endings",
+        "label": "Disjoint insertion/deletion edits preserve exact line endings",
+        "mode": "behavioral",
+        "acceptance": "Disjoint insertion/deletion edits preserve exact line endings",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "identical_adjacent_hunks",
+        "label": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "mode": "behavioral",
+        "acceptance": "Identical hunks applied once; adjacent nonempty hunks merge",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "conflict_retention",
+        "label": "Conflicting ranges/insertions preserve base/local/incoming",
+        "mode": "behavioral",
+        "acceptance": "Conflicting ranges/insertions preserve base/local/incoming",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "pending_blocks_mutation",
+        "label": "Editing or receiving during unresolved review cannot overwrite it",
+        "mode": "behavioral",
+        "acceptance": "Editing or receiving during unresolved review cannot overwrite it",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "resolution_choices",
+        "label": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "mode": "behavioral",
+        "acceptance": "Local/incoming/manual resolution, new incoming base, invalid-choice atomicity",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "rename_remove",
+        "label": "Complete document state survives rename; collisions/removals are correct",
+        "mode": "behavioral",
+        "acceptance": "Complete document state survives rename; collisions/removals are correct",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "save_reload",
+        "label": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "mode": "behavioral",
+        "acceptance": "Full multi-document dirty/conflict checkpoint and subsequent merge behavior",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "failed_save_atomicity",
+        "label": "Failed observed atomic replacement preserves prior disk and live state",
+        "mode": "behavioral",
+        "acceptance": "Failed observed atomic replacement preserves prior disk and live state",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "corrupt_snapshots",
+        "label": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "mode": "behavioral",
+        "acceptance": "Malformed/schema/duplicate/inconsistent snapshots reject without writes",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "bounds_nofollow",
+        "label": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "mode": "behavioral",
+        "acceptance": "Name/text/document/snapshot limits, no-follow regular-file persistence, atomic rejection",
+        "status": "pass",
+        "evidence_path": "evidence/behavioral/T22-R4-r1-C/probe_result.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 13,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T22-R4-r1-C/merge_workspace.py",
+        "bytes": 12217,
+        "sha256": "d9a6c5ea6e4c09d8e04ebed3f57f679303cc86c802dc1cd7d1558a87e1df6f12"
+      },
+      {
+        "path": "artifacts/T22-R4-r1-C/notes.md",
+        "bytes": 2533,
+        "sha256": "6fcd80655a0a5c285ab72e353a0ec5a75d5660f0ad92dce017cf4e63c216fdb4"
+      }
+    ],
+    "receipt_path": "receipts/T22-R4-r1-C.json",
+    "controller_elapsed_seconds": 716.702053,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 1500,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T23-R3-r3-C",
+    "case_id": "R3",
+    "condition": "C",
+    "repeat": 3,
+    "dispatch_index": 23,
+    "pair_index": 12,
+    "within_pair": 1,
+    "submission_status": "completed",
+    "scheduled_requirements": 12,
+    "requirements": [
+      {
+        "requirement_id": "execution",
+        "label": "Read-only bounded query completes for all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Read-only bounded query completes for all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "schema_types",
+        "label": "Exact required columns; text dimensions and non-null integer measures",
+        "mode": "objective",
+        "acceptance": "Exact required columns; text dimensions and non-null integer measures",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "grouping_cohort",
+        "label": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "mode": "objective",
+        "acceptance": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "line_count",
+        "label": "Exact line_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact line_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "invoice_count",
+        "label": "Exact invoice_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact invoice_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "billed_units",
+        "label": "Exact billed_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact billed_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "gross_cents",
+        "label": "Exact gross_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact gross_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "adjustment_cents",
+        "label": "Exact adjustment_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact adjustment_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "net_cents",
+        "label": "Exact net_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact net_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "received_cents",
+        "label": "Exact received_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact received_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "balance_cents",
+        "label": "Exact balance_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact balance_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fulfilled_units",
+        "label": "Exact fulfilled_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact fulfilled_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T23-R3-r3-C/raw.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 12,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T23-R3-r3-C/report.sql",
+        "bytes": 2212,
+        "sha256": "87983feda55504bf5512fa8c737e32419a7dfb2b1b5b4623fd43917e8fa473b6"
+      }
+    ],
+    "receipt_path": "receipts/T23-R3-r3-C.json",
+    "controller_elapsed_seconds": 187.761063,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  },
+  {
+    "attempt_id": "T24-R3-r3-S",
+    "case_id": "R3",
+    "condition": "S",
+    "repeat": 3,
+    "dispatch_index": 24,
+    "pair_index": 12,
+    "within_pair": 2,
+    "submission_status": "completed",
+    "scheduled_requirements": 12,
+    "requirements": [
+      {
+        "requirement_id": "execution",
+        "label": "Read-only bounded query completes for all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Read-only bounded query completes for all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "schema_types",
+        "label": "Exact required columns; text dimensions and non-null integer measures",
+        "mode": "objective",
+        "acceptance": "Exact required columns; text dimensions and non-null integer measures",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "grouping_cohort",
+        "label": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "mode": "objective",
+        "acceptance": "Exact distinct month/region/family/currency buckets from the eligible invoice cohort",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "line_count",
+        "label": "Exact line_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact line_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "invoice_count",
+        "label": "Exact invoice_count per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact invoice_count per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "billed_units",
+        "label": "Exact billed_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact billed_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "gross_cents",
+        "label": "Exact gross_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact gross_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "adjustment_cents",
+        "label": "Exact adjustment_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact adjustment_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "net_cents",
+        "label": "Exact net_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact net_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "received_cents",
+        "label": "Exact received_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact received_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "balance_cents",
+        "label": "Exact balance_cents per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact balance_cents per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      },
+      {
+        "requirement_id": "fulfilled_units",
+        "label": "Exact fulfilled_units per bucket in all three public scenarios",
+        "mode": "objective",
+        "acceptance": "Exact fulfilled_units per bucket in all three public scenarios",
+        "status": "pass",
+        "evidence_path": "evidence/objective/T24-R3-r3-S/raw.json",
+        "evidence_detail": []
+      }
+    ],
+    "counts": {
+      "pass": 12,
+      "fail": 0,
+      "not_assessed": 0
+    },
+    "completed_criteria": true,
+    "process_integrity": "unknown",
+    "artifacts": [
+      {
+        "path": "artifacts/T24-R3-r3-S/notes.md",
+        "bytes": 3801,
+        "sha256": "a8d950df96034ee0f92cee31e66410dbac9e1589c0f5124d44ee07eb428a5032"
+      },
+      {
+        "path": "artifacts/T24-R3-r3-S/report.sql",
+        "bytes": 2385,
+        "sha256": "4ade31ebe86e3a80ceb7f6e9d1e8531ed28e639cb15ab5bc1f43dc30db60d1f5"
+      }
+    ],
+    "receipt_path": "receipts/T24-R3-r3-S.json",
+    "controller_elapsed_seconds": 184.824055,
+    "timing_kind": "approximate controller observation, not model compute time",
+    "cap_seconds": 900,
+    "observed_after_cap": false,
+    "bootstrap_variant": "administrative appendix"
+  }
+]

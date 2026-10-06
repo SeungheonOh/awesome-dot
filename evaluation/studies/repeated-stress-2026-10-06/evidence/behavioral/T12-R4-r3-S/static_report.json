@@ -1,0 +1,55 @@
+{
+  "behavioral_status": "unknown",
+  "case": "R4",
+  "imports": [
+    "difflib",
+    "json",
+    "os",
+    "pathlib",
+    "re",
+    "stat",
+    "tempfile"
+  ],
+  "phase": "static_only",
+  "protected_inputs": [
+    {
+      "path": "TASK.md",
+      "sha256": null,
+      "status": "unreadable: [Errno 2] No such file or directory: 'TASK.md'"
+    },
+    {
+      "path": "inputs/smoke_test.py",
+      "sha256": null,
+      "status": "unreadable: [Errno 2] No such file or directory: 'inputs'"
+    }
+  ],
+  "review_flags": [],
+  "source_bytes": 12723,
+  "source_sha256": "448fdead08c7e82cd39771331041743ed344ccd8b547e68dc72d6d8129ac1753",
+  "syntax": "valid",
+  "top_level_node_types": [
+    "Expr",
+    "Import",
+    "Import",
+    "Import",
+    "ImportFrom",
+    "Import",
+    "Import",
+    "Import",
+    "Assign",
+    "Assign",
+    "Assign",
+    "ClassDef",
+    "FunctionDef",
+    "FunctionDef",
+    "FunctionDef",
+    "FunctionDef",
+    "FunctionDef",
+    "FunctionDef",
+    "FunctionDef",
+    "FunctionDef",
+    "FunctionDef",
+    "FunctionDef",
+    "ClassDef"
+  ]
+}

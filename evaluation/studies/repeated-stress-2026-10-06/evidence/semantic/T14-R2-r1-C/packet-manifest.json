@@ -1,0 +1,21 @@
+{
+  "packet_id": "sample-08171b7c1edcb783",
+  "case_id": "R2",
+  "artifact_sha256": {
+    "action_register.json": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354",
+    "handoff.txt": "c53e32c49297c24a7f2f6e5cbd906a007ef1184c77b895c7c005c3dd264d4c6c"
+  },
+  "packet_sha256": {
+    "common/TASK.md": "953c6ca48d23fc4ec9342a4c08583036a60e0fbd7300fea9da0d5d7f01dd0161",
+    "common/inputs/00_README.txt": "c58cc949e43dc8ea2ca0c405eddaa06ba8b221022aac62ad239550d2818421d3",
+    "common/inputs/baseline.csv": "9ab3d968997e48f003172eea9969b158345436e4e5ef628d06d7e91cdca2433e",
+    "common/inputs/followups.txt": "ee15e1cbb59dd224abbdecbcbe6e083663a8509584321c35e3b75a62074a600f",
+    "common/inputs/meeting_notes.txt": "e8ae91d5daa592263f668a7009d0fae162db74efbea77f54e754c8b076496fd1",
+    "common/rubric.json": "80725bd643923dd1a7e9444f317abfe027b2da0cc6c83e3b497f5939faa17c57",
+    "common/semantic_review_instructions.txt": "e68daeff0b3ab076e3d3915adfea53c0655d5ee8cf760030933b59b4bc51ae8f",
+    "artifacts/action_register.json": "d6dfd92087ca9affa720155c35027267517797f7e818a186590b78e6e4e6b354",
+    "artifacts/handoff.txt": "c53e32c49297c24a7f2f6e5cbd906a007ef1184c77b895c7c005c3dd264d4c6c",
+    "README.txt": "41e55d8df4d7909ebaa39b99730539c78f5e04256f8bb7791b0b7a62fb904f2c"
+  },
+  "masking": "Procedural label masking, not OS isolation"
+}

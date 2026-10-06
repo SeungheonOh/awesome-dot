@@ -1,0 +1,600 @@
+{
+  "claims": [
+    {
+      "claim_id": "C001",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 4850,
+      "reimbursement_usd_cents": 4850,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C001",
+        "P1",
+        "T1",
+        "R001",
+        "S001",
+        "E05"
+      ],
+      "note": "Documented business rail fare; canonical earlier submission for receipt R001. C007 adds no expense."
+    },
+    {
+      "claim_id": "C002",
+      "disposition": "partial",
+      "approved_usd_cents": 6000,
+      "reimbursement_usd_cents": 6000,
+      "excluded_usd_cents": 200,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C002",
+        "P1",
+        "T1",
+        "R002",
+        "S002"
+      ],
+      "note": "September 12 service uses the P1 $60 taxi cap despite September 16 posting; exclude $2."
+    },
+    {
+      "claim_id": "C003",
+      "disposition": "partial",
+      "approved_usd_cents": 2500,
+      "reimbursement_usd_cents": 2500,
+      "excluded_usd_cents": 140,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C003",
+        "P1",
+        "T1",
+        "R003",
+        "S003"
+      ],
+      "note": "September 12 lunch is capped at $25 including tax under P1; exclude $1.40."
+    },
+    {
+      "claim_id": "C004",
+      "disposition": "partial",
+      "approved_usd_cents": 5720,
+      "reimbursement_usd_cents": 5720,
+      "excluded_usd_cents": 1760,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C004",
+        "P1",
+        "T1",
+        "R004",
+        "S004"
+      ],
+      "note": "Food $52 plus $6.80 tax times 52/68 gives $57.20 after one final half-up cent rounding, below the P1 $65 dinner cap. Exclude $16 alcohol and $1.60 attributable tax."
+    },
+    {
+      "claim_id": "C005",
+      "disposition": "partial",
+      "approved_usd_cents": 40680,
+      "reimbursement_usd_cents": 40680,
+      "excluded_usd_cents": 3000,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C005",
+        "P1",
+        "T1",
+        "R005",
+        "S005",
+        "E01"
+      ],
+      "note": "Two room nights capped at $180 each plus all $46.80 mandatory lodging tax: $406.80. Exclude $30 excess room base. E01 does not cover this stay."
+    },
+    {
+      "claim_id": "C006",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 5800,
+      "reimbursement_usd_cents": 5800,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C006",
+        "P1",
+        "T1",
+        "R006",
+        "S006"
+      ],
+      "note": "September 14 business taxi is $58, within the P1 $60 cap."
+    },
+    {
+      "claim_id": "C007",
+      "disposition": "duplicate",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": "C001",
+      "evidence_ids": [
+        "C007",
+        "P1",
+        "T1",
+        "C001",
+        "R001",
+        "S001",
+        "E05"
+      ],
+      "note": "Same R001 receipt as earlier-submitted C001; no additional charge or reimbursement. Duplicate amount is not a policy exclusion."
+    },
+    {
+      "claim_id": "C008",
+      "disposition": "partial",
+      "approved_usd_cents": 8000,
+      "reimbursement_usd_cents": 8000,
+      "excluded_usd_cents": 800,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C008",
+        "P1",
+        "P2",
+        "T1",
+        "R008",
+        "S008"
+      ],
+      "note": "September 15 dinner uses the P2 tax-inclusive $80 cap; exclude $8 over the cap."
+    },
+    {
+      "claim_id": "C009",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 7200,
+      "reimbursement_usd_cents": 7200,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C009",
+        "P1",
+        "P2",
+        "T1",
+        "R009",
+        "S009"
+      ],
+      "note": "$72 business taxi is within the P2 $75 cap."
+    },
+    {
+      "claim_id": "C010",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 39520,
+      "reimbursement_usd_cents": 39520,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C010",
+        "P1",
+        "P2",
+        "T1",
+        "R010",
+        "R021",
+        "S010",
+        "S021",
+        "E01"
+      ],
+      "note": "E01 approves $230 per night for two nights plus $55.20 tax, total $515.20. Allocate the applied $120 deposit to C021 and only the $395.20 net final balance here; no deposit counted twice."
+    },
+    {
+      "claim_id": "C011",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 1875,
+      "reimbursement_usd_cents": 1875,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C011",
+        "P1",
+        "P2",
+        "T1",
+        "R011",
+        "S011"
+      ],
+      "note": "$18.75 breakfast is within the P2 $20 cap."
+    },
+    {
+      "claim_id": "C012",
+      "disposition": "partial",
+      "approved_usd_cents": 3000,
+      "reimbursement_usd_cents": 3000,
+      "excluded_usd_cents": 300,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C012",
+        "P1",
+        "P2",
+        "T1",
+        "R012",
+        "S012"
+      ],
+      "note": "P2 lunch cap is $30 including tax; exclude $3."
+    },
+    {
+      "claim_id": "C013",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 9100,
+      "reimbursement_usd_cents": 9100,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C013",
+        "P1",
+        "P2",
+        "T1",
+        "R013",
+        "S013",
+        "E02"
+      ],
+      "note": "E02 names this early airport taxi and approves up to $95; the $91 settled fare is fully supported."
+    },
+    {
+      "claim_id": "C014",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 4318,
+      "reimbursement_usd_cents": 4318,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C014",
+        "P1",
+        "P2",
+        "T1",
+        "R014",
+        "S014"
+      ],
+      "note": "EUR 38.90 documented business rail uses the actual settled USD charge of $43.18, with no separate FX fee."
+    },
+    {
+      "claim_id": "C015",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 6882,
+      "reimbursement_usd_cents": 6882,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C015",
+        "P1",
+        "P2",
+        "T1",
+        "R015",
+        "S015"
+      ],
+      "note": "EUR 62 dinner has no alcohol or other excluded items. Use actual settled USD $68.82, below the P2 $80 dinner cap."
+    },
+    {
+      "claim_id": "C016",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 840,
+      "reimbursement_usd_cents": 840,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C016",
+        "P1",
+        "P2",
+        "T1",
+        "S016"
+      ],
+      "note": "Settled $8.40 with a specific business breakfast purpose is within the P2 $20 cap and the at-or-below-$25 receipt exception; no itemized receipt required."
+    },
+    {
+      "claim_id": "C017",
+      "disposition": "hold",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 4790,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C017",
+        "P1",
+        "P2",
+        "T1",
+        "S017",
+        "E05"
+      ],
+      "note": "The $47.90 stationery charge exceeds the $25 evidence threshold and has no itemized receipt. Hold the original claim pending receipt; no exclusion determined."
+    },
+    {
+      "claim_id": "C018",
+      "disposition": "hold",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 12600,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C018",
+        "P1",
+        "P2",
+        "T1",
+        "R018",
+        "S018",
+        "E05"
+      ],
+      "note": "Business purpose is stated, but no team-lunch attendee list or count is supplied. Hold $126; do not infer attendees or apply a guessed per-person cap."
+    },
+    {
+      "claim_id": "C019",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 4900,
+      "reimbursement_usd_cents": 4900,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C019",
+        "P1",
+        "P2",
+        "T1",
+        "R019",
+        "S019",
+        "E03"
+      ],
+      "note": "E03 specifically approves one month of ClearTranscript at $49; receipt and employee settlement match."
+    },
+    {
+      "claim_id": "C020",
+      "disposition": "corporate_paid",
+      "approved_usd_cents": 4900,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C020",
+        "P1",
+        "P2",
+        "T1",
+        "R020",
+        "S020",
+        "E03"
+      ],
+      "note": "E03 specifically approves one month of ShapeBoard at $49. Supported cost was paid by the company card, so Maya receives $0."
+    },
+    {
+      "claim_id": "C021",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 12000,
+      "reimbursement_usd_cents": 12000,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C021",
+        "P1",
+        "T1",
+        "R021",
+        "R010",
+        "S021",
+        "S010",
+        "E01"
+      ],
+      "note": "The $120 deposit DEP-714 is applied to R010 and covered by the named-stay exception E01. Reimburse it here once; C010 contains only the remaining $395.20."
+    },
+    {
+      "claim_id": "C022",
+      "disposition": "refunded",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 3600,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C022",
+        "P1",
+        "P2",
+        "T1",
+        "R022",
+        "S022",
+        "S122"
+      ],
+      "note": "Settled $36 adapter charge is fully offset by the September 25 $36 credit; no payable cost and no policy exclusion."
+    },
+    {
+      "claim_id": "C023",
+      "disposition": "partial",
+      "approved_usd_cents": 6300,
+      "reimbursement_usd_cents": 6300,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 2700,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C023",
+        "P1",
+        "P2",
+        "T1",
+        "R023",
+        "S023",
+        "S123"
+      ],
+      "note": "The $90 business rail fare has a settled $27 refund, leaving $63 payable. Credit is not a policy exclusion."
+    },
+    {
+      "claim_id": "C024",
+      "disposition": "partial",
+      "approved_usd_cents": 2500,
+      "reimbursement_usd_cents": 2500,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 12500,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C024",
+        "P1",
+        "P2",
+        "T1",
+        "R024",
+        "S024",
+        "S124",
+        "E04"
+      ],
+      "note": "E04 approves the business-related cancellation reason and $25 retained fee. The promised $125 refund actually settled September 29 against the $150 charge; $25 remains payable."
+    },
+    {
+      "claim_id": "C025",
+      "disposition": "ineligible",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 1200,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C025",
+        "P1",
+        "P2",
+        "T1",
+        "R025",
+        "S025"
+      ],
+      "note": "Explicitly personal snack gift; the entire $12 is ineligible."
+    },
+    {
+      "claim_id": "C026",
+      "disposition": "hold",
+      "approved_usd_cents": null,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": null,
+      "held_usd_cents": null,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C026",
+        "P1",
+        "P2",
+        "T1",
+        "R026",
+        "E05"
+      ],
+      "note": "EUR 24 cash taxi lacks an approved organizational exchange-rate record. Hold EUR 24.00 with unknown USD valuation; do not borrow a card rate or assume USD 24."
+    },
+    {
+      "claim_id": "C027",
+      "disposition": "partial",
+      "approved_usd_cents": 19800,
+      "reimbursement_usd_cents": 19800,
+      "excluded_usd_cents": 1320,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C027",
+        "P1",
+        "P2",
+        "T1",
+        "R027",
+        "S027"
+      ],
+      "note": "Supported final invoice is $180 room base plus $18 mandatory tax, settled at $198. It supersedes the $211.20 booking estimate; exclude the $13.20 overstatement, rather than hold it."
+    },
+    {
+      "claim_id": "C028",
+      "disposition": "hold",
+      "approved_usd_cents": 0,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 7900,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C028",
+        "P1",
+        "P2",
+        "T1",
+        "R028",
+        "S028",
+        "E05"
+      ],
+      "note": "Receipt and claim are $79 but settlement is $89, an unexplained $10 difference above the $1 tolerance. Hold the original $79 claim; the extra settled $10 is unresolved, not assumed reimbursable or disallowed."
+    },
+    {
+      "claim_id": "C029",
+      "disposition": "reimbursable",
+      "approved_usd_cents": 22480,
+      "reimbursement_usd_cents": 22480,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C029",
+        "P1",
+        "P2",
+        "T1",
+        "R029",
+        "S029",
+        "S229"
+      ],
+      "note": "Reimburse the one settled $224.80 airfare. S229 is a pending authorization for the same flight, not an additional settled expense."
+    },
+    {
+      "claim_id": "C030",
+      "disposition": "corporate_paid",
+      "approved_usd_cents": 3000,
+      "reimbursement_usd_cents": 0,
+      "excluded_usd_cents": 0,
+      "held_usd_cents": 0,
+      "credit_usd_cents": 0,
+      "duplicate_of": null,
+      "evidence_ids": [
+        "C030",
+        "P1",
+        "P2",
+        "T1",
+        "R030",
+        "S030"
+      ],
+      "note": "Documented $30 business equipment baggage fee was company-card paid; record the business cost and pay Maya $0."
+    }
+  ],
+  "totals": {
+    "approved_usd_cents": 222165,
+    "reimbursement_usd_cents": 214265,
+    "excluded_usd_cents": 8720,
+    "held_usd_cents": 25290,
+    "credit_usd_cents": 18800,
+    "corporate_paid_usd_cents": 7900,
+    "unvalued_holds": [
+      {
+        "claim_id": "C026",
+        "currency": "EUR",
+        "original_amount": "24.00"
+      }
+    ]
+  }
+}
