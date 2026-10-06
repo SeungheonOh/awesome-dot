@@ -1,107 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="580" viewBox="0 0 1280 580" role="img" aria-labelledby="title desc">
-<title id="title">Native-cloud study: no measured primary-criterion uplift</title>
-<desc id="desc">16 actual native-agent first submissions on 8 paired fictional cases. C received no designated package; S received the designated package. Both passed 40/40 primary artifact-criterion groups and 8/8 artifacts. 0 percentage-point pass-rate difference. Ceiling tie; no demonstrated uplift. Shared ambient runtime; C was not skill-free. Process integrity unverified. A separate post-hoc F8 Unicode save/reload check passed in C and failed with UnicodeEncodeError in S; it does not alter primary scores. No productivity claim.</desc>
-<metadata>{&quot;renderer&quot;: &quot;evaluation/visualization/render_native_results.py&quot;, &quot;source_sha256&quot;: {&quot;evaluation/results/native-cloud-2026-10-06/f8/execution-results.json&quot;: &quot;b748b863a51544906e1400a7f28d50ede35fc47eb520c5acf843e89e5544bbad&quot;, &quot;evaluation/results/native-cloud-2026-10-06/paired-summary.json&quot;: &quot;2a8d6c2279cdc53dec769fd2085e2b72e7f07e5319e8f063c61e86156150de11&quot;, &quot;evaluation/results/status.json&quot;: &quot;176724896a111c36a37550eed656f68d93628942d3b7e567d18326e6268108fd&quot;}}</metadata>
-<rect x="0.5" y="0.5" width="1279" height="579" rx="18" fill="#F5F3EC" stroke="#D3D8CE"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="786" viewBox="0 0 1280 786" role="img" aria-labelledby="title desc">
+<title id="title">The score ties. Inspect the files.</title>
+<desc id="desc">16 actual native-agent runs on 8 paired fictional tasks, 6 October 2026. Saved-file excerpts, not screenshots. C: no designated package. S: designated package supplied. Both F6 result.csv files are identical; selected columns are channel, gross_minor, refund_minor, and net_minor, with shortened display headings. Phone gross and net are NULL. A separate post-hoc F8 diagnostic with U+D800 followed by LF saved and reloaded text in C, but S failed to save with UnicodeEncodeError. Selected JSON fields are transcribed from execution-results.json. Both arms passed 40/40 primary artifact-criterion groups and 8/8 artifacts. 0 percentage-point pass-rate difference, no measured uplift. Post-hoc findings do not change primary scores. Shared runtime; C was not skill-free. Process integrity unverified.</desc>
+<metadata>{&quot;excerpts&quot;: [{&quot;columns&quot;: [&quot;channel&quot;, &quot;gross_minor&quot;, &quot;refund_minor&quot;, &quot;net_minor&quot;], &quot;display&quot;: &quot;CSV values reformatted as a table; integer minor units&quot;, &quot;display_headings&quot;: [&quot;CHANNEL&quot;, &quot;GROSS&quot;, &quot;REFUNDS&quot;, &quot;NET&quot;], &quot;paths&quot;: [&quot;evaluation/results/native-cloud-2026-10-06/artifacts/N09-F6-C/result.csv&quot;, &quot;evaluation/results/native-cloud-2026-10-06/artifacts/N10-F6-S/result.csv&quot;], &quot;rows&quot;: &quot;all four data rows&quot;}, {&quot;display&quot;: &quot;selected saved JSON fields; error message suffix quoted&quot;, &quot;error_excerpt&quot;: &quot;surrogates not allowed&quot;, &quot;fields&quot;: [&quot;input&quot;, &quot;saved&quot;, &quot;text_equal_after_reload&quot;, &quot;error_type&quot;], &quot;path&quot;: &quot;evaluation/results/native-cloud-2026-10-06/f8/execution-results.json&quot;, &quot;selector&quot;: &quot;rows[*].runs.posthoc_surrogate.result&quot;}], &quot;renderer&quot;: &quot;evaluation/visualization/render_native_results.py&quot;, &quot;source_sha256&quot;: {&quot;evaluation/results/native-cloud-2026-10-06/artifacts/N09-F6-C/result.csv&quot;: &quot;1604d5474b2c70b363d4652d59d9c5469def0c9beb2a0555a0d89542f04cc5d3&quot;, &quot;evaluation/results/native-cloud-2026-10-06/artifacts/N10-F6-S/result.csv&quot;: &quot;1604d5474b2c70b363d4652d59d9c5469def0c9beb2a0555a0d89542f04cc5d3&quot;, &quot;evaluation/results/native-cloud-2026-10-06/f8/execution-results.json&quot;: &quot;b748b863a51544906e1400a7f28d50ede35fc47eb520c5acf843e89e5544bbad&quot;, &quot;evaluation/results/native-cloud-2026-10-06/paired-summary.json&quot;: &quot;2a8d6c2279cdc53dec769fd2085e2b72e7f07e5319e8f063c61e86156150de11&quot;, &quot;evaluation/results/status.json&quot;: &quot;176724896a111c36a37550eed656f68d93628942d3b7e567d18326e6268108fd&quot;}}</metadata>
+<rect x="0.5" y="0.5" width="1279" height="785" rx="18" fill="#F5F3EC" stroke="#D3D8CE"/>
 <g font-family="Arial, Helvetica, sans-serif">
-<circle cx="53" cy="47" r="5" fill="#DB532C"/>
-<text x="70" y="54" font-size="20" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="1.2">DOT-SKILLS / EVALUATION</text>
-<text x="1232" y="54" font-size="20" fill="#566159" font-weight="700" text-anchor="end" letter-spacing="1.2">06 OCT 2026</text>
-<text x="48" y="127" font-size="55" fill="#1B2820" font-weight="700" text-anchor="start" letter-spacing="-1.7">Same tasks. Same primary score.</text>
-<text x="48" y="173" font-size="28" fill="#566159" font-weight="400" text-anchor="start">16 actual native-agent attempts · 8 paired fictional tasks</text>
-<path d="M48 210H1232" stroke="#D3D8CE"/>
-<text x="48" y="251" font-size="20" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="0.8">PRIMARY ARTIFACT CRITERION GROUPS</text>
-<text x="48" y="303" font-size="28" fill="#1B2820" font-weight="700" text-anchor="start">C · No designated package</text>
-<text x="810" y="303" font-size="36" fill="#1B2820" font-weight="700" text-anchor="end">40/40</text>
-<rect x="48.00" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="67.15" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="86.30" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="105.45" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="124.60" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="143.75" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="162.90" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="182.05" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="201.20" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="220.35" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="239.50" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="258.65" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="277.80" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="296.95" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="316.10" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="335.25" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="354.40" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="373.55" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="392.70" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="411.85" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="431.00" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="450.15" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="469.30" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="488.45" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="507.60" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="526.75" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="545.90" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="565.05" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="584.20" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="603.35" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="622.50" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="641.65" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="660.80" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="679.95" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="699.10" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="718.25" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="737.40" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="756.55" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="775.70" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<rect x="794.85" y="327" width="15.15" height="26" rx="2" fill="#1B2820"/>
-<text x="48" y="413" font-size="28" fill="#57735F" font-weight="700" text-anchor="start">S · Designated package supplied</text>
-<text x="810" y="413" font-size="36" fill="#57735F" font-weight="700" text-anchor="end">40/40</text>
-<rect x="48.00" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="67.15" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="86.30" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="105.45" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="124.60" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="143.75" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="162.90" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="182.05" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="201.20" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="220.35" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="239.50" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="258.65" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="277.80" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="296.95" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="316.10" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="335.25" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="354.40" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="373.55" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="392.70" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="411.85" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="431.00" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="450.15" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="469.30" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="488.45" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="507.60" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="526.75" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="545.90" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="565.05" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="584.20" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="603.35" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="622.50" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="641.65" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="660.80" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="679.95" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="699.10" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="718.25" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="737.40" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="756.55" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="775.70" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<rect x="794.85" y="437" width="15.15" height="26" rx="2" fill="#57735F"/>
-<path d="M866 245V468" stroke="#D3D8CE"/>
-<text x="920" y="354" font-size="120" fill="#1B2820" font-weight="700" text-anchor="start" letter-spacing="-5">0</text>
-<text x="1000" y="352" font-size="42" fill="#566159" font-weight="700" text-anchor="start">pp</text>
-<text x="920" y="400" font-size="28" fill="#1B2820" font-weight="700" text-anchor="start">Primary pass-rate</text>
-<text x="920" y="438" font-size="28" fill="#1B2820" font-weight="700" text-anchor="start">difference</text>
-<path d="M48 500H1232" stroke="#D3D8CE"/>
-<text x="48" y="546" font-size="25" fill="#1B2820" font-weight="700" text-anchor="start">8/8 met primary checks in each arm</text>
-<text x="1232" y="546" font-size="23" fill="#566159" font-weight="400" text-anchor="end">Exploratory study · Process integrity unverified</text>
+<text x="40" y="42" font-size="18" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="1.2">DOT-SKILLS / RUN EVIDENCE</text>
+<text x="1240" y="42" font-size="18" fill="#566159" font-weight="700" text-anchor="end" letter-spacing="1">06 OCT 2026</text>
+<text x="40" y="107" font-size="48" fill="#1B2820" font-weight="700" text-anchor="start" letter-spacing="-1.5">The score ties. Inspect the files.</text>
+<text x="40" y="150" font-size="23" fill="#566159" font-weight="400" text-anchor="start">16 actual native-agent runs · 8 paired fictional tasks · Excerpts, not screenshots</text>
+<rect x="40" y="184" width="586" height="408" rx="12" fill="#FFFEFA" stroke="#D3D8CE"/>
+<text x="64" y="221" font-size="16" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="0.8">F6 / SQLITE REPORT</text>
+<text x="64" y="262" font-size="30" fill="#1B2820" font-weight="700" text-anchor="start" letter-spacing="-0.5">Missing totals stay unknown</text>
+<text x="64" y="297" font-size="22" fill="#566159" font-weight="400" text-anchor="start">C + S saved identical CSVs</text>
+<text x="64" y="326" font-size="18" fill="#566159" font-weight="400" text-anchor="start">Selected columns · integer minor units</text>
+<text x="64" y="363" font-size="14" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="0.5">CHANNEL</text>
+<text x="368" y="363" font-size="14" fill="#566159" font-weight="700" text-anchor="end" letter-spacing="0.5">GROSS</text>
+<text x="476" y="363" font-size="14" fill="#566159" font-weight="700" text-anchor="end" letter-spacing="0.5">REFUNDS</text>
+<text x="600" y="363" font-size="14" fill="#566159" font-weight="700" text-anchor="end" letter-spacing="0.5">NET</text>
+<path d="M64 378H602" stroke="#D3D8CE"/>
+<text x="64" y="407" font-size="20" fill="#1B2820" font-weight="400" text-anchor="start" font-family="monospace">__unallocated__</text>
+<text x="368" y="407" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">0</text>
+<text x="476" y="407" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">77</text>
+<text x="600" y="407" font-size="22" fill="#1B2820" font-weight="700" text-anchor="end" font-family="monospace">NULL</text>
+<text x="64" y="450" font-size="20" fill="#1B2820" font-weight="400" text-anchor="start" font-family="monospace">desk</text>
+<text x="368" y="450" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">1600</text>
+<text x="476" y="450" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">320</text>
+<text x="600" y="450" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">1280</text>
+<rect x="52" y="464" width="562" height="42" rx="0" fill="#E9EDE4" stroke="#E9EDE4"/>
+<text x="64" y="493" font-size="20" fill="#1B2820" font-weight="700" text-anchor="start" font-family="monospace">phone</text>
+<text x="368" y="493" font-size="22" fill="#1B2820" font-weight="700" text-anchor="end" font-family="monospace">NULL</text>
+<text x="476" y="493" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">70</text>
+<text x="600" y="493" font-size="22" fill="#1B2820" font-weight="700" text-anchor="end" font-family="monospace">NULL</text>
+<text x="64" y="536" font-size="20" fill="#1B2820" font-weight="400" text-anchor="start" font-family="monospace">web</text>
+<text x="368" y="536" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">2250</text>
+<text x="476" y="536" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">450</text>
+<text x="600" y="536" font-size="22" fill="#1B2820" font-weight="400" text-anchor="end" font-family="monospace">1800</text>
+<text x="64" y="574" font-size="19" fill="#566159" font-weight="400" text-anchor="start">Phone gross + net are NULL in both outputs</text>
+<rect x="646" y="184" width="594" height="408" rx="12" fill="#FFFEFA" stroke="#D3D8CE"/>
+<text x="670" y="221" font-size="16" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="0.8">F8 / TEXT-MERGE CALLER</text>
+<text x="670" y="262" font-size="30" fill="#1B2820" font-weight="700" text-anchor="start" letter-spacing="-0.5">A save fails after primary checks</text>
+<text x="670" y="297" font-size="22" fill="#566159" font-weight="400" text-anchor="start">Post-hoc result excerpt · U+D800 + LF</text>
+<path d="M670 316H1216" stroke="#D3D8CE"/>
+<text x="670" y="345" font-size="15" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="0.5">C · NO DESIGNATED PACKAGE</text>
+<text x="670" y="378" font-size="20" fill="#1B2820" font-weight="400" text-anchor="start" font-family="monospace">saved: true</text>
+<text x="670" y="409" font-size="20" fill="#1B2820" font-weight="400" text-anchor="start" font-family="monospace">text_equal_after_reload: true</text>
+<path d="M670 429H1216" stroke="#D3D8CE"/>
+<text x="670" y="458" font-size="15" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="0.5">S · DESIGNATED PACKAGE SUPPLIED</text>
+<text x="670" y="491" font-size="20" fill="#1B2820" font-weight="400" text-anchor="start" font-family="monospace">saved: false</text>
+<text x="670" y="522" font-size="20" fill="#98401F" font-weight="700" text-anchor="start" font-family="monospace">error_type: UnicodeEncodeError</text>
+<rect x="666" y="540" width="554" height="38" rx="6" fill="#F9E9E0" stroke="#F9E9E0"/>
+<text x="680" y="566" font-size="20" fill="#98401F" font-weight="400" text-anchor="start" font-family="monospace">“surrogates not allowed”</text>
+<text x="40" y="632" font-size="16" fill="#566159" font-weight="700" text-anchor="start" letter-spacing="0.6">PRIMARY ARTIFACT CRITERION GROUPS</text>
+<text x="40" y="675" font-size="32" fill="#1B2820" font-weight="700" text-anchor="start">C 40/40  ·  S 40/40</text>
+<text x="414" y="672" font-size="23" fill="#566159" font-weight="400" text-anchor="start">8 tied pairs · 0 pp pass-rate difference</text>
+<text x="1240" y="675" font-size="23" fill="#566159" font-weight="400" text-anchor="end">8/8 passed artifacts per arm</text>
+<path d="M40 707H1240" stroke="#D3D8CE"/>
+<text x="40" y="751" font-size="20" fill="#566159" font-weight="400" text-anchor="start">Post-hoc result does not change primary scores</text>
+<text x="1240" y="751" font-size="20" fill="#566159" font-weight="400" text-anchor="end">Exploratory study · Process integrity unverified</text>
 </g>
 </svg>

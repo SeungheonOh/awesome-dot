@@ -1,19 +1,23 @@
 #!/usr/bin/env python3
-"""Render the README's native-cloud comparison using only the Python stdlib.
+"""Render the README's evidence-led native-cloud panels using the Python stdlib.
 
 From the repository root:
     python -B evaluation/visualization/render_native_results.py
     python -B evaluation/visualization/render_native_results.py --check
 
-Reads the published paired-summary.json, status.json and F8 execution-results.json.
-Numeric labels and bar segments come from those records; no model calls, candidate
-execution, external assets, fonts, dependencies, or network access are needed.
-Both SVGs include the source-file SHA-256 hashes. --check verifies committed bytes.
+Reads the published summary, status, F6 CSVs and F8 execution-result records.
+The display selects CSV columns and JSON fields; it is an excerpt, not a screenshot.
+Values are loaded from saved files, not invented console output. No model calls,
+candidate execution, external assets, fonts, dependencies or network are needed.
+Both SVGs include source-file SHA-256 hashes and field-selection provenance.
+--check verifies committed bytes.
 This is a deliberately study-specific layout: changed findings fail validation so
 its headline and post-hoc caveat cannot silently become stale.
 """
 
 import argparse
+import csv
+import io
 import hashlib
 import json
 from html import escape
@@ -22,8 +26,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 STUDY = 'evaluation/results/native-cloud-2026-10-06'
 SOURCES = (f'{STUDY}/paired-summary.json', 'evaluation/results/status.json',
-           f'{STUDY}/f8/execution-results.json')
+           f'{STUDY}/f8/execution-results.json',
+           f'{STUDY}/artifacts/N09-F6-C/result.csv',
+           f'{STUDY}/artifacts/N10-F6-S/result.csv')
 BG, INK, MUTED, LINE = '#F5F3EC', '#1B2820', '#566159', '#D3D8CE'
+PAPER, SOFT, ERROR, ERROR_BG = '#FFFEFA', '#E9EDE4', '#98401F', '#F9E9E0'
 SAGE, ORANGE = '#57735F', '#DB532C'
 
 
@@ -34,7 +41,14 @@ def require(condition, message):
 
 def load_data():
     raw = [(ROOT / path).read_bytes() for path in SOURCES]
-    paired, status, execution = [json.loads(data) for data in raw]
+    paired, status, execution = [json.loads(data) for data in raw[:3]]
+    csv_rows = [list(csv.DictReader(io.StringIO(data.decode('utf-8')))) for data in raw[3:]]
+    require(raw[3] == raw[4], 'Review the identical-CSV statement')
+    require([r['channel'] for r in csv_rows[0]] ==
+            ['__unallocated__', 'desk', 'phone', 'web'], 'Review the CSV layout')
+    phone = next(r for r in csv_rows[0] if r['channel'] == 'phone')
+    require(phone['gross_minor'] == phone['net_minor'] == 'NULL',
+            'Review the unknown-total headline')
     study = status['native_cloud_study']
     rows = paired['rows']
     count = len(rows)
@@ -82,103 +96,160 @@ def load_data():
     }, 'Diagnostic status disagrees')
     require(status['sealed_codex_cli_pilot']['model_attempts'] == 0,
             'Review the sealed-pilot caveat')
+    require(diagnostic['S']['error'].endswith('surrogates not allowed'),
+            'Review the quoted error-message suffix')
     provenance = {path: hashlib.sha256(data).hexdigest()
                   for path, data in zip(SOURCES, raw)}
-    return paired, study, delta, provenance
+    return paired, study, delta, provenance, csv_rows[0], diagnostic
 
 
-def text(x, y, value, size=24, fill=INK, weight=400, anchor='start', tracking=None):
+def text(x, y, value, size=24, fill=INK, weight=400, anchor='start', mono=False, tracking=None):
     extra = f' letter-spacing="{tracking}"' if tracking is not None else ''
+    if mono:
+        extra += ' font-family="monospace"'
     return (f'<text x="{x}" y="{y}" font-size="{size}" fill="{fill}" '
             f'font-weight="{weight}" text-anchor="{anchor}"{extra}>'
             f'{escape(str(value))}</text>')
 
 
-def rule(x1, y1, x2, y2):
-    return f'<path d="M{x1} {y1}H{x2}" stroke="{LINE}"/>' if y1 == y2 else (
-        f'<path d="M{x1} {y1}V{y2}" stroke="{LINE}"/>')
+def rect(x, y, w, h, fill=PAPER, radius=12, stroke=LINE):
+    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{radius}" '
+            f'fill="{fill}" stroke="{stroke}"/>')
 
 
-def bar(x, y, width, passed, total, color, height=22):
-    # Each segment is one primary artifact-criterion group, starting at zero.
-    gap = 4
-    unit = (width - (total - 1) * gap) / total
-    return '\n'.join(
-        f'<rect x="{x + i * (unit + gap):.2f}" y="{y}" '
-        f'width="{unit:.2f}" height="{height}" rx="2" '
-        f'fill="{color if i < passed else LINE}"/>' for i in range(total))
+def rule(x1, y, x2):
+    return f'<path d="M{x1} {y}H{x2}" stroke="{LINE}"/>'
 
 
-def render(paired, study, delta, provenance, mobile=False):
-    w, h = (600, 832) if mobile else (1280, 580)
-    title = 'Native-cloud study: no measured primary-criterion uplift'
-    desc = (f"{paired['first_submissions']} actual native-agent first submissions on "
-            f"{paired['scheduled_cases']} paired fictional cases. C received no designated "
-            'package; S received the designated package. Both passed '
-            f"{paired['C']['passed']}/{paired['C']['total']} primary artifact-criterion "
-            f"groups and {study['C']['cases_all_primary_artifact_groups_passed']}/"
-            f"{study['C']['cases']} artifacts. {delta:g} percentage-point pass-rate "
-            'difference. Ceiling tie; no demonstrated uplift. Shared ambient runtime; '
-            'C was not skill-free. Process integrity unverified. A separate post-hoc '
-            'F8 Unicode save/reload check passed in C and failed with UnicodeEncodeError '
-            'in S; it does not alter primary scores. No productivity claim.')
+def field(value):
+    return str(value).lower() if isinstance(value, bool) else str(value)
+
+
+def render(paired, study, delta, provenance, csv_rows, diagnostic, mobile=False):
+    w, h = (400, 1178) if mobile else (1280, 786)
+    title = 'The score ties. Inspect the files.'
+    desc = (f"{paired['first_submissions']} actual native-agent runs on "
+            f"{paired['scheduled_cases']} paired fictional tasks, 6 October 2026. "
+            'Saved-file excerpts, not screenshots. C: no designated package. '
+            'S: designated package supplied. Both F6 result.csv files are identical; '
+            'selected columns are channel, gross_minor, refund_minor, and net_minor, '
+            'with shortened display headings. Phone gross and net are NULL. '
+            'A separate post-hoc F8 diagnostic with U+D800 followed by LF saved and '
+            'reloaded text in C, but S failed to save with UnicodeEncodeError. '
+            'Selected JSON fields are transcribed from execution-results.json. '
+            f"Both arms passed {paired['C']['passed']}/{paired['C']['total']} primary "
+            f"artifact-criterion groups and {study['C']['cases_all_primary_artifact_groups_passed']}/"
+            f"{study['C']['cases']} artifacts. {delta:g} percentage-point pass-rate difference, "
+            'no measured uplift. Post-hoc findings do not change primary scores. '
+            'Shared runtime; C was not skill-free. Process integrity unverified.')
+    metadata = {'renderer': 'evaluation/visualization/render_native_results.py',
+                'source_sha256': provenance,
+                'excerpts': [
+                    {'paths': list(SOURCES[3:]), 'rows': 'all four data rows',
+                     'columns': ['channel', 'gross_minor', 'refund_minor', 'net_minor'],
+                     'display_headings': ['CHANNEL', 'GROSS', 'REFUNDS', 'NET'],
+                     'display': 'CSV values reformatted as a table; integer minor units'},
+                    {'path': SOURCES[2], 'selector': 'rows[*].runs.posthoc_surrogate.result',
+                     'fields': ['input', 'saved', 'text_equal_after_reload', 'error_type'],
+                     'error_excerpt': 'surrogates not allowed',
+                     'display': 'selected saved JSON fields; error message suffix quoted'}]}
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
              f'viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">',
              f'<title id="title">{escape(title)}</title>',
              f'<desc id="desc">{escape(desc)}</desc>',
-             '<metadata>' + escape(json.dumps({'renderer':
-                'evaluation/visualization/render_native_results.py',
-                'source_sha256': provenance}, sort_keys=True)) + '</metadata>',
-             f'<rect x="0.5" y="0.5" width="{w-1}" height="{h-1}" rx="18" '
-             f'fill="{BG}" stroke="{LINE}"/>',
+             '<metadata>' + escape(json.dumps(metadata, sort_keys=True)) + '</metadata>',
+             rect(.5, .5, w-1, h-1, BG, 18),
              '<g font-family="Arial, Helvetica, sans-serif">']
     p = parts.append
+    # The panels have a fixed, study-specific layout. Validation above fails if
+    # changed evidence would invalidate any prose or the intended visual order.
     if mobile:
-        p(f'<circle cx="37" cy="40" r="5" fill="{ORANGE}"/>')
-        p(text(53, 47, 'DOT-SKILLS / EVALUATION', 20, MUTED, 700, tracking=1))
-        p(text(32, 116, 'Same tasks.', 48, weight=700, tracking=-1.5))
-        p(text(32, 172, 'Same primary score.', 48, weight=700, tracking=-1.5))
-        p(text(32, 220, f"{paired['first_submissions']} actual native-agent attempts", 26, MUTED))
-        p(text(32, 256, f"{paired['scheduled_cases']} paired fictional tasks · 06 Oct 2026", 26, MUTED))
-        p(rule(32, 287, 568, 287))
-        p(text(32, 328, 'PRIMARY ARTIFACT CRITERION GROUPS', 20, MUTED, 700, tracking=.4))
-        for arm, y, label, color in [('C', 376, 'C · No designated package', INK),
-                                     ('S', 474, 'S · Designated package supplied', SAGE)]:
-            p(text(32, y, label, 25, color, 700))
-            p(text(568, y, f"{paired[arm]['passed']}/{paired[arm]['total']}", 30,
-                   color, 700, 'end'))
-            p(bar(32, y + 22, 536, paired[arm]['passed'], paired[arm]['total'], color))
-        p(rule(32, 552, 568, 552))
-        p(text(32, 654, f'{delta:g}', 100, weight=700, tracking=-5))
-        p(text(96, 650, 'pp', 38, MUTED, 700))
-        p(text(202, 611, 'Primary pass-rate', 28, weight=700))
-        p(text(202, 648, 'difference', 28, weight=700))
-        p(text(32, 704, f"{study['C']['cases_all_primary_artifact_groups_passed']}/{study['C']['cases']} met primary checks in each arm", 27, MUTED))
-        p(rule(32, 742, 568, 742))
-        p(text(32, 778, 'Exploratory study · Process unverified', 24, MUTED))
-        p(text(32, 810, 'Read the limits + post-hoc finding below', 23, MUTED))
+        p(text(22, 35, 'DOT-SKILLS / RUN EVIDENCE', 13, MUTED, 700, tracking=1))
+        p(text(22, 82, 'The score ties.', 33, weight=700, tracking=-1))
+        p(text(22, 122, 'Inspect the files.', 33, weight=700, tracking=-1))
+        p(text(22, 158, f"{paired['first_submissions']} actual runs · {paired['scheduled_cases']} paired fictional tasks", 16, MUTED))
+        p(text(22, 184, '06 Oct 2026 · Excerpts, not screenshots', 15, MUTED))
+        # F6: full row coverage, four selected columns. No fake terminal chrome.
+        p(rect(16, 210, 368, 347))
+        p(text(34, 241, 'F6 / SQLITE REPORT', 13, MUTED, 700, tracking=.7))
+        p(text(34, 278, 'Missing totals stay unknown', 23, weight=700, tracking=-.5))
+        p(text(34, 307, 'C + S saved identical CSVs', 17, MUTED))
+        p(text(34, 333, 'Selected columns · integer minor units', 14, MUTED))
+        heads=[('CHANNEL',34,'start'),('GROSS',225,'end'),('REFUNDS',299,'end'),('NET',365,'end')]
+        for label,x,anchor in heads:p(text(x,365,label,11,MUTED,700,anchor,tracking=.2))
+        p(rule(34,378,366))
+        for idx,row in enumerate(csv_rows):
+            y=397+idx*38
+            # phone is the third row; highlight only that saved record.
+            if row['channel']=='phone':
+                p(rect(27,y-23,346,36,SOFT,0,SOFT))
+            p(text(34,y,row['channel'],13,weight=700 if row['channel']=='phone' else 400,mono=True))
+            for key,x in [('gross_minor',225),('refund_minor',299),('net_minor',365)]:
+                p(text(x,y,row[key],15,weight=700 if row[key]=='NULL' else 400,anchor='end',mono=True))
+        p(text(34,537,'Phone gross + net are NULL in both outputs',14,MUTED))
+        # F8: directly transcribed fields, with the same C/S ordering.
+        p(rect(16,575,368,387))
+        p(text(34,606,'F8 / TEXT-MERGE CALLER',13,MUTED,700,tracking=.7))
+        p(text(34,643,'A save fails after primary checks',22,weight=700,tracking=-.7))
+        p(text(34,672,'Post-hoc result excerpt · U+D800 + LF',15,MUTED))
+        p(rule(34,690,366))
+        p(text(34,718,'C · NO DESIGNATED PACKAGE',12,MUTED,700,tracking=.5))
+        p(text(34,746,'saved: '+field(diagnostic['C']['saved']),16,mono=True))
+        p(text(34,774,'text_equal_after_reload: '+field(diagnostic['C']['text_equal_after_reload']),15,mono=True))
+        p(rule(34,792,366))
+        p(text(34,819,'S · DESIGNATED PACKAGE SUPPLIED',12,MUTED,700,tracking=.4))
+        p(text(34,847,'saved: '+field(diagnostic['S']['saved']),16,mono=True))
+        p(text(34,875,'error_type: '+diagnostic['S']['error_type'],14,ERROR,700,mono=True))
+        p(rect(30,895,340,46,ERROR_BG,6,ERROR_BG))
+        p(text(43,924,'“surrogates not allowed”',17,ERROR,mono=True))
+        p(text(22,1000,'PRIMARY ARTIFACT CRITERION GROUPS',12,MUTED,700,tracking=.5))
+        p(text(22,1035,f"C {paired['C']['passed']}/{paired['C']['total']}  ·  S {paired['S']['passed']}/{paired['S']['total']}",25,weight=700))
+        p(text(22,1064,f"{paired['scheduled_cases']} tied pairs · {delta:g} pp pass-rate difference",16,MUTED))
+        p(text(22,1092,f"{study['C']['cases_all_primary_artifact_groups_passed']}/{study['C']['cases']} artifacts met primary checks in each arm",15,MUTED))
+        p(rule(22,1112,378))
+        p(text(22,1139,'Post-hoc result does not change primary scores',14,MUTED))
+        p(text(22,1161,'Exploratory study · Process integrity unverified',14,MUTED))
     else:
-        p(f'<circle cx="53" cy="47" r="5" fill="{ORANGE}"/>')
-        p(text(70, 54, 'DOT-SKILLS / EVALUATION', 20, MUTED, 700, tracking=1.2))
-        p(text(1232, 54, '06 OCT 2026', 20, MUTED, 700, 'end', 1.2))
-        p(text(48, 127, 'Same tasks. Same primary score.', 55, weight=700, tracking=-1.7))
-        p(text(48, 173, f"{paired['first_submissions']} actual native-agent attempts · {paired['scheduled_cases']} paired fictional tasks", 28, MUTED))
-        p(rule(48, 210, 1232, 210))
-        p(text(48, 251, 'PRIMARY ARTIFACT CRITERION GROUPS', 20, MUTED, 700, tracking=.8))
-        for arm, y, label, color in [('C', 303, 'C · No designated package', INK),
-                                     ('S', 413, 'S · Designated package supplied', SAGE)]:
-            p(text(48, y, label, 28, color, 700))
-            p(text(810, y, f"{paired[arm]['passed']}/{paired[arm]['total']}", 36,
-                   color, 700, 'end'))
-            p(bar(48, y + 24, 762, paired[arm]['passed'], paired[arm]['total'], color, 26))
-        p(rule(866, 245, 866, 468))
-        p(text(920, 354, f'{delta:g}', 120, weight=700, tracking=-5))
-        p(text(1000, 352, 'pp', 42, MUTED, 700))
-        p(text(920, 400, 'Primary pass-rate', 28, weight=700))
-        p(text(920, 438, 'difference', 28, weight=700))
-        p(rule(48, 500, 1232, 500))
-        p(text(48, 546, f"{study['C']['cases_all_primary_artifact_groups_passed']}/{study['C']['cases']} met primary checks in each arm", 25, weight=700))
-        p(text(1232, 546, 'Exploratory study · Process integrity unverified', 23, MUTED, anchor='end'))
+        p(text(40,42,'DOT-SKILLS / RUN EVIDENCE',18,MUTED,700,tracking=1.2))
+        p(text(1240,42,'06 OCT 2026',18,MUTED,700,'end',tracking=1))
+        p(text(40,107,title,48,weight=700,tracking=-1.5))
+        p(text(40,150,f"{paired['first_submissions']} actual native-agent runs · {paired['scheduled_cases']} paired fictional tasks · Excerpts, not screenshots",23,MUTED))
+        p(rect(40,184,586,408))
+        p(text(64,221,'F6 / SQLITE REPORT',16,MUTED,700,tracking=.8))
+        p(text(64,262,'Missing totals stay unknown',30,weight=700,tracking=-.5))
+        p(text(64,297,'C + S saved identical CSVs',22,MUTED))
+        p(text(64,326,'Selected columns · integer minor units',18,MUTED))
+        for label,x,anchor in [('CHANNEL',64,'start'),('GROSS',368,'end'),('REFUNDS',476,'end'),('NET',600,'end')]:
+            p(text(x,363,label,14,MUTED,700,anchor,tracking=.5))
+        p(rule(64,378,602))
+        for idx,row in enumerate(csv_rows):
+            y=407+idx*43
+            if row['channel']=='phone':p(rect(52,y-29,562,42,SOFT,0,SOFT))
+            p(text(64,y,row['channel'],20,weight=700 if row['channel']=='phone' else 400,mono=True))
+            for key,x in [('gross_minor',368),('refund_minor',476),('net_minor',600)]:
+                p(text(x,y,row[key],22,weight=700 if row[key]=='NULL' else 400,anchor='end',mono=True))
+        p(text(64,574,'Phone gross + net are NULL in both outputs',19,MUTED))
+        p(rect(646,184,594,408))
+        p(text(670,221,'F8 / TEXT-MERGE CALLER',16,MUTED,700,tracking=.8))
+        p(text(670,262,'A save fails after primary checks',30,weight=700,tracking=-.5))
+        p(text(670,297,'Post-hoc result excerpt · U+D800 + LF',22,MUTED))
+        p(rule(670,316,1216))
+        p(text(670,345,'C · NO DESIGNATED PACKAGE',15,MUTED,700,tracking=.5))
+        p(text(670,378,'saved: '+field(diagnostic['C']['saved']),20,mono=True))
+        p(text(670,409,'text_equal_after_reload: '+field(diagnostic['C']['text_equal_after_reload']),20,mono=True))
+        p(rule(670,429,1216))
+        p(text(670,458,'S · DESIGNATED PACKAGE SUPPLIED',15,MUTED,700,tracking=.5))
+        p(text(670,491,'saved: '+field(diagnostic['S']['saved']),20,mono=True))
+        p(text(670,522,'error_type: '+diagnostic['S']['error_type'],20,ERROR,700,mono=True))
+        p(rect(666,540,554,38,ERROR_BG,6,ERROR_BG))
+        p(text(680,566,'“surrogates not allowed”',20,ERROR,mono=True))
+        p(text(40,632,'PRIMARY ARTIFACT CRITERION GROUPS',16,MUTED,700,tracking=.6))
+        p(text(40,675,f"C {paired['C']['passed']}/{paired['C']['total']}  ·  S {paired['S']['passed']}/{paired['S']['total']}",32,weight=700))
+        p(text(414,672,f"{paired['scheduled_cases']} tied pairs · {delta:g} pp pass-rate difference",23,MUTED))
+        p(text(1240,675,f"{study['C']['cases_all_primary_artifact_groups_passed']}/{study['C']['cases']} passed artifacts per arm",23,MUTED,anchor='end'))
+        p(rule(40,707,1240))
+        p(text(40,751,'Post-hoc result does not change primary scores',20,MUTED))
+        p(text(1240,751,'Exploratory study · Process integrity unverified',20,MUTED,anchor='end'))
     p('</g>\n</svg>\n')
     return '\n'.join(parts)
 
