@@ -1,0 +1,506 @@
+{
+  "case_id": "F1",
+  "integrity": {
+    "passed": true,
+    "assertions": [
+      {
+        "passed": true,
+        "detail": "Protected source SHA-256: inputs/evidence.csv",
+        "kind": "objective"
+      },
+      {
+        "passed": true,
+        "detail": "Protected source SHA-256: inputs/policy.txt",
+        "kind": "objective"
+      },
+      {
+        "passed": true,
+        "detail": "Protected source SHA-256: task.txt",
+        "kind": "objective"
+      },
+      {
+        "passed": true,
+        "detail": "Protected source SHA-256: input-manifest.json",
+        "kind": "objective"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "passed": true,
+      "assertions": [
+        {
+          "passed": true,
+          "detail": "Exactly one claim row for each of six canonical transactions",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "Exactly one mapping for every S01\u2013S15 source",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S01 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S02 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S03 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S04 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S05 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S06 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S07 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S08 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S09 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S10 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S11 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S12 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S13 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S14 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S15 maps to the canonical transaction with correct evidence disposition",
+          "kind": "objective"
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "passed": true,
+      "assertions": [
+        {
+          "passed": true,
+          "detail": "T01 exact signed source_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T01 exact signed business_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T01 exact signed cap_adjustment_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T01 exact signed claim_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T02 exact signed source_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T02 exact signed business_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T02 exact signed cap_adjustment_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T02 exact signed claim_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T03 exact signed source_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T03 exact signed business_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T03 exact signed cap_adjustment_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T03 exact signed claim_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T04 exact signed source_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T04 exact signed business_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T04 exact signed cap_adjustment_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T04 exact signed claim_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T05 exact signed source_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T05 exact signed business_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T05 exact signed cap_adjustment_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T05 exact signed claim_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T06 exact signed source_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T06 exact signed business_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T06 exact signed cap_adjustment_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T06 exact signed claim_minor",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "Ready subtotal is exact signed 7774 pence",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "Canonical source signed total is 10667 pence",
+          "kind": "objective"
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "passed": true,
+      "assertions": [
+        {
+          "passed": true,
+          "detail": "T01 correct date, currency, line kind and readiness",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T01 policy business amount, credit, split and cap allocation",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T02 correct date, currency, line kind and readiness",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T02 policy business amount, credit, split and cap allocation",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T03 correct date, currency, line kind and readiness",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T03 policy business amount, credit, split and cap allocation",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T04 correct date, currency, line kind and readiness",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T04 policy business amount, credit, split and cap allocation",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T05 correct date, currency, line kind and readiness",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T05 policy business amount, credit, split and cap allocation",
+          "kind": "objective"
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "passed": true,
+      "assertions": [
+        {
+          "passed": true,
+          "detail": "T06 unresolved amount is unknown rather than zero or included",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T06 keeps its 1488-pence source and identity",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "Only five ready signed lines form the subtotal",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "Unresolved source amount is 1488",
+          "kind": "objective"
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "passed": true,
+      "assertions": [
+        {
+          "passed": true,
+          "detail": "Both CSV files have complete exactly named columns and valid rows",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "exceptions.txt exists and is readable",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "Four leading numeric labels agree with canonical accounting",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T01 source references include all and only canonical evidence",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T01 nonempty policy locators resolve; substantive adequacy is reviewed",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T02 source references include all and only canonical evidence",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T02 nonempty policy locators resolve; substantive adequacy is reviewed",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T03 source references include all and only canonical evidence",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T03 nonempty policy locators resolve; substantive adequacy is reviewed",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T04 source references include all and only canonical evidence",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T04 nonempty policy locators resolve; substantive adequacy is reviewed",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T05 source references include all and only canonical evidence",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T05 nonempty policy locators resolve; substantive adequacy is reviewed",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T06 source references include all and only canonical evidence",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "T06 nonempty policy locators resolve; substantive adequacy is reviewed",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S01 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S02 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S03 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S04 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S05 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S06 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S07 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S08 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S09 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S10 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S11 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S12 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S13 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S14 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "S15 source locator resolves",
+          "kind": "objective"
+        },
+        {
+          "passed": true,
+          "detail": "Blinded explanation review: exceptions.txt:8 identifies S07 as the rescan of S02, receipt M-826/T02, and says it contributes no extra monetary amount or line; source-map.csv:3,8 maps both to T02 with primary/duplicate dispositions. This matches inputs/evidence.csv#S02/#S07 and inputs/policy.txt#P1. It also correctly treats settlement and purpose records as support rather than additional transactions. | exceptions.txt:10 explicitly keeps T03 in T02's original CF-7/CF-26/2026-09-17 meal group despite its later posting date, computes 2835 + 2470 - 600 = 4705 before the 4500 cap, and allocates all 205 overage to the later positive T02 at 18:05. It leaves T03 at -600 with zero adjustment. claim-lines.csv:2-4 implements 2835, 2265, -600. inputs/evidence.csv#S01/#S02/#S03/#S10/#S11/#S12 and inputs/policy.txt#P2/#P3/#P6 support these treatment and allocation claims. | exceptions.txt:12 preserves the single T04 face amount of 3199 while distinguishing 1999 business workshop materials and 1200 excluded personal stationery, without inventing a proportional allocation. claim-lines.csv:5 agrees. The prose directly cites inputs/policy.txt#P4; inputs/evidence.csv#S04/#S13 establish this exact split. | exceptions.txt:16 names T06/receipt X-033 and its full unresolved 1488, distinguishes payment evidence S15 from a business-purpose statement, leaves all three eligibility/claim fields empty, and excludes the amount from ready 7774 without assigning a zero claim. Its request for a source-backed specific business purpose, or confirmation it was personal, addresses the missing fact. This matches inputs/evidence.csv#S06/#S15 and inputs/policy.txt#P2/#P6; claim-lines.csv:7 and exceptions.txt:18 are consistent. | exceptions.txt:6 explicitly frames the output as a draft calculation, not an approved claim or submission, and makes no affirmative claim of external verification or action. No contradictory external-action claim appears in the reviewed CSVs or explanation. This satisfies the draft-only requirement of task.txt and inputs/policy.txt#P6; it is a content judgment, not verification of the producer's process. | The decisive policy links are meaningful: exceptions.txt:10 cites P3 for credit-before-cap allocation, :12 cites P4 for the itemized supply split, :14 cites P5 for the supported, uncapped 1275 transport, and :16 cites P2/P6 for unresolved purpose and subtotal exclusion. claim-lines.csv:2-7 also contains relevant locators, supported by inputs/evidence.csv#S14 and inputs/policy.txt#P2/#P3/#P4/#P5/#P6. Additional applicable references do not contradict the explanation.",
+          "kind": "semantic"
+        }
+      ]
+    }
+  ],
+  "accepted": true,
+  "quality": {
+    "passed_groups": 5,
+    "scored_groups": 5,
+    "total_groups": 5
+  }
+}

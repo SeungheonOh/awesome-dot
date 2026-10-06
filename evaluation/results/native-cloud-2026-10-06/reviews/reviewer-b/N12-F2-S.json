@@ -1,0 +1,48 @@
+{
+  "case_id": "F2",
+  "submission_hashes": {
+    "actions.json": "b325b2137856e580c9d80ff0aa7b0cde52639733ea2a83d348b7dda5f282f343",
+    "handoff.txt": "8c71b4c07cafb255d31a49153eea47f3b44c7ea4f0be4f3f37e05515b945118d"
+  },
+  "groups": {
+    "g1": {
+      "passed": true,
+      "evidence": [
+        "actions.json:5-6,40-41,72-73,110-111,148-149,197-198 accurately describes the six agreed deliverables and completion conditions from inputs/meeting.txt#M01/#M02/#M04/#M05/#M06/#M07: twelve table-label PDF deposited, separate six wall-label PDF deposited, approved eight-person rota deposited, steward-verified route recorded, final arrival pack sent, and both audio-output tests recorded. handoff.txt:4-5,8-10,13 preserves these scopes.",
+        "Only EX-11 through EX-16 appear as actions. handoff.txt:15 expressly says the souvenir sticker sheet was merely a suggestion, consistent with inputs/meeting.txt#M08. No seventh commitment or replacement deliverable is introduced."
+      ]
+    },
+    "g2": {
+      "passed": true,
+      "evidence": [
+        "EX-11 appears once at actions.json:5-38 and cites both inputs/meeting.txt#M01/#M03. handoff.txt:8 explicitly treats repetitions as one deliverable; EX-12 at actions.json:40-70 and handoff.txt:9 remains a separately usable wall-label PDF under #M02.",
+        "The one EX-13 at actions.json:72-108 carries inputs/meeting.txt#M04 and the follow-up transfer authorities; handoff.txt:10 explains Davi replacing Kira within that same rota task. EX-14, EX-15 and EX-16 remain separate route, send and equipment deliverables. This merges repeated commitments without collapsing independent outputs."
+      ]
+    },
+    "g3": {
+      "passed": true,
+      "evidence": [
+        "actions.json:74-102 establishes Davi Moss/P4 and 2026-10-08 18:00 for EX-13, with both acceptance inputs/followups.txt#F02 and chair confirmation #F03. Earlier #M04/#F01 are historical context; handoff.txt:10 clearly states the accepted transfer replaces Kira and the noon deadline, preserving the original #M04 action.",
+        "EX-14 owner is null at actions.json:112, backed by inputs/meeting.txt#M05 and inputs/followups.txt#F07; handoff.txt:4 says no one accepted. Date-only October 10 for EX-12 and October 8 for EX-14 retain null times at actions.json:46-50,113-117 and are expressly date-only in handoff.txt:4,9. No additional clock time is invented.",
+        "Other owners and dates match their cited agreements: Orin Patel/P1 October 9 17:00 from #M01/#M03; Nel Arcos/P2 October 10 from #M02; Tessa Vale/P5 October 9 12:00 from #M06; Ivo Chen/P6 October 9 16:00 from #M07. JSON and handoff use the meeting's date mapping, Europe/London and authoritative +01:00 offset, with spellings matching inputs/people.json. #F07 confirms no additional deadline changes."
+      ]
+    },
+    "g4": {
+      "passed": true,
+      "evidence": [
+        "actions.json:149-191 and handoff.txt:5 retain EX-15 reported_complete true but verified_complete false and draft_only. inputs/meeting.txt#M06 requires actual sending; inputs/followups.txt#F04 only claims done/ready, while #F05 and inputs/arrival-draft.txt#D02/#D06 demonstrate an unsent draft with no send record. The submission does not treat #D03's prefilled recipients as proof of sending.",
+        "EX-16 at actions.json:198-227 and handoff.txt:13 is reported and verified complete based on the claim inputs/followups.txt#F06 and the full inputs/audio-check.txt#V01-#V04 log: both outputs pass and results are saved. This meets inputs/meeting.txt#M07 rather than relying solely on Ivo's claim.",
+        "EX-11, EX-12, EX-13 and EX-14 remain open with false reported/verified booleans (actions.json:17-19,52-54,84-86,119-121). Their completion source #F07 explicitly states no claim/artifact; handoff.txt:4,8-10 conveys the same state."
+      ]
+    },
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "The JSON's M/F/D/V references resolve to the supplied sections and support their linked fields. For EX-13, original #M04 and proposed #F01 contextualize but do not displace accepted #F02/#F03 authority; #F07 supports open status and absent EX-14 owner. No nonexistent source label or unrelated directory reference occurs in those arrays.",
+        "handoff.txt:4-5,8-10,13 provides every agreed deliverable, current owner or absence, exact current deadline and completion state without requiring the JSON. It agrees with actions.json. Accepted reassignment refs #F02/#F03 at line 10 and actual draft/sending discrepancy refs #F04/#F05/#D02/#D06 at line 5 meet the task's explicit provenance requirements.",
+        "actions.json:139 and handoff.txt:4 ask who will accept EX-14 and complete the specific route-check/recording deliverable. actions.json:184 and handoff.txt:5 ask for actual EX-15 send confirmation/evidence or confirmation it still needs sending. These address the missing owner in #M05/#F07 and the send condition/discrepancy in #M06/#F04/#F05/#D02/#D06, with no unnecessary time clarification for date-only deadlines.",
+        "handoff.txt:1 and :15 frame the result as a prepared evidence-based handoff and make no claim of externally sending or performing tasks. Its 362 whitespace-delimited words fall under the 450-word maximum. The independently readable JSON and text do not contradict each other or the task's bounded unresolved outcomes."
+      ]
+    }
+  }
+}

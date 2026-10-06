@@ -1,0 +1,33 @@
+period_start: 2026-04-01T00:00:00Z
+period_end: 2026-05-01T00:00:00Z
+as_of: 2026-05-03T12:00:00Z
+units: integer minor units; 100 per major unit
+population: settled or shipped; ordered_at in [period_start, period_end)
+refund_cutoff: event_at <= as_of
+unknown_gross: incomplete orders make channel gross and net NULL
+unallocated: unmatched order_id only; mandatory separate row; net NULL
+execution: local SQLite read-only
+
+Method: Line and positive-refund rows are separately aggregated by order ID before
+channel aggregation, preventing line/refund fanout and preserving equal-valued IDs.
+Only refund event times use as_of. Unallocated detection checks all source orders.
+
+Checks run locally:
+- All six input SHA-256 hashes matched input-manifest.json before and after execution.
+- Database quick_check returned ok; database rows matched all three CSV exports.
+- The single report.sql statement ran via sqlite3.execute with named parameters
+  on a mode=ro, query_only connection with extensions disabled and a read-only authorizer.
+- Main and all four supplied validation scenarios matched an independent Python
+  aggregation of the CSV exports, including exact column names, order, NULLs, and types.
+- Each query stayed below 3 CPU seconds, 6 wall seconds and 1,000,000 VM instructions
+  under a 256 MiB process address-space limit and the specified SQLite engine limits.
+- Each result stayed within the specified row and serialized-size limits.
+- Saved CSV was reloaded and matched the main query output exactly.
+- Protected task, manifest, and input bytes were unchanged across these checks.
+- Input and deliverable files were checked as regular files without symlink components.
+
+Coverage: The supplied scenarios exercise an empty cohort, unknown gross with
+partial or missing lines, zero complete gross with negative net, equal-valued
+distinct rows, excluded statuses, order-period boundaries, inclusive refund cutoff,
+and as_of preceding cohort order times. No missing evidence affected this report.
+No production, network, external, or independent-grader verification was performed.

@@ -1,0 +1,25 @@
+period_start: 2026-04-01T00:00:00Z
+period_end: 2026-05-01T00:00:00Z
+as_of: 2026-05-03T12:00:00Z
+units: integer minor units; 100 per major unit
+population: settled or shipped; ordered_at in [period_start, period_end)
+refund_cutoff: event_at <= as_of
+unknown_gross: incomplete orders make channel gross and net NULL
+unallocated: unmatched order_id only; mandatory separate row; net NULL
+execution: local SQLite read-only
+
+Definition and evidence: task.txt supplies the complete owner-approved fictional metric. inputs/schema.sql defines orders, line_items and refunds with their ID primary keys; inputs/parameters.json supplies the main parameters and four validation scenarios. The accompanying CSV exports and orders.sqlite3 were compared row-for-row. Source counts are 11 orders, 12 line rows and 16 refund rows. Observed IDs are non-null and unique in each source; equal-valued distinct IDs are retained.
+
+Grain and timing: one output row per represented cohort channel plus the mandatory __unallocated__ row, sorted with SQLite BINARY ascending collation. Each child relation is separately reduced to order_id before joining to one cohort row per order, preventing line/refund fanout. UTC timestamp comparisons use the supplied canonical strings. The owner-approved status and items_complete snapshot is not reconstructed historically or filtered by as_of. Refunds are positive deductions with event_at <= as_of, regardless of the order-period boundaries. Existing noncohort orders never contribute to the unallocated row.
+
+Completeness: the supplied task attests refund extraction completeness through every supplied cutoff. A complete order with no stored lines has zero gross. Incomplete orders preserve their observed line subtotal while making their channel gross and net unknown. In the main result phone has two incomplete orders and known line subtotal 180; its gross and net remain NULL. Desk includes one complete zero order. No overall gross or net is claimed across the unknown channel. Unallocated net is NULL because allocation is unauthorized.
+
+Main reconciliation: 7 cohort orders, 8 stored line rows, known gross subtotal 4030, 2 incomplete orders and 1 complete zero order. Cohort refunds total 840 across 10 IDs. Through the main cutoff, all positive refund rows reconcile as 14 rows totaling 1187 = 10 cohort rows / 840 + 3 existing noncohort rows / 270 + 1 unmatched row / 77. The two post-cutoff rows are excluded. The mandatory unallocated row contains the unmatched 77 once. Complete channel totals are desk gross 1600 / refunds 320 / net 1280 and web gross 2250 / refunds 450 / net 1800.
+
+Executed local checks: SQLite 3.53.1; read-only immutable file connection, extensions disabled, query_only enabled, restrictive read/function authorizer and zero database changes. Database quick_check returned ok. The same saved report.sql was executed with Python sqlite3.execute and named bindings for all five supplied scenarios; every column and row matched a separate standard-library calculation over CSV exports. Boundary assertions covered equal-valued distinct lines and refunds, start inclusion/end exclusion, exact refund cutoff, no cohort, mandatory zero unallocated row, incomplete empty and partially captured orders, zero gross and a permitted -20 net. The early-as_of scenario retained later cohort orders, as required.
+
+Execution bounds checked: each scenario used a 256 MiB process address-space ceiling, the task's SQL length/value length/column/depth/compound/variable SQLite limits, and a progress-handler instruction and elapsed-time cap. All five finished below 3 CPU seconds, 6 wall seconds and 1,000,000 VM instructions, with at most 4 rows and serialized results below 1,048,576 bytes. The saved CSV was reloaded and checked for exact column order, BINARY channel ordering, literal NULL and integer-only amount/count serialization. All manifest source hashes and before/after hashes of protected task, manifest, inputs and designated package files were checked unchanged; ordinary-file/no-symlink path checks and deliverable byte limits were checked.
+
+Reproduction: open inputs/orders.sqlite3 with sqlite3.connect using its file URI and mode=ro; read report.sql as UTF-8; execute it once with the main object from inputs/parameters.json as the parameter mapping; fetch the rows and serialize with the stated column order and literal NULL. The same query accepts each additional_validation_scenarios object unchanged.
+
+Limitations: verification is local to the supplied fictional snapshot and exports; it is not independent grading, production verification or a completeness audit of any external system. The designated package's illustrative fixture was read for guidance but not executed. No production or external checks were run. Missing gross for incomplete orders remains unknown by definition.

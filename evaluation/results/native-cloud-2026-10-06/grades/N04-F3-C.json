@@ -1,0 +1,690 @@
+{
+  "case_id": "F3",
+  "integrity": {
+    "passed": true,
+    "assertions": [
+      {
+        "id": "protected:input-manifest.json",
+        "passed": true,
+        "reason": "Protected packet bytes must match the frozen originals",
+        "expected": "f0b1d908113fcb451cbad28551b047df6dab76a697de1f6def798e259544a47f",
+        "actual": "f0b1d908113fcb451cbad28551b047df6dab76a697de1f6def798e259544a47f"
+      },
+      {
+        "id": "protected:inputs/busy.csv",
+        "passed": true,
+        "reason": "Protected packet bytes must match the frozen originals",
+        "expected": "6c248d69db366d3f107fd1c252ef7ba570f6194b1c12b07a7d5d72c1d7c210d1",
+        "actual": "6c248d69db366d3f107fd1c252ef7ba570f6194b1c12b07a7d5d72c1d7c210d1"
+      },
+      {
+        "id": "protected:inputs/coverage.csv",
+        "passed": true,
+        "reason": "Protected packet bytes must match the frozen originals",
+        "expected": "dc76b39da2857ad53750539b455269fc8887001c21ff2af5b66637bb813ca64b",
+        "actual": "dc76b39da2857ad53750539b455269fc8887001c21ff2af5b66637bb813ca64b"
+      },
+      {
+        "id": "protected:inputs/participants.json",
+        "passed": true,
+        "reason": "Protected packet bytes must match the frozen originals",
+        "expected": "937e1239f9f3bfd03c6eab8e922cfe4080ae49e6eaf7d077d9306c747cdd1bfc",
+        "actual": "937e1239f9f3bfd03c6eab8e922cfe4080ae49e6eaf7d077d9306c747cdd1bfc"
+      },
+      {
+        "id": "protected:task.txt",
+        "passed": true,
+        "reason": "Protected packet bytes must match the frozen originals",
+        "expected": "0ed74d1c2044020997cb4b4c58398066190367d5d6cae6a280a92e423b53ae99",
+        "actual": "0ed74d1c2044020997cb4b4c58398066190367d5d6cae6a280a92e423b53ae99"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "passed": true,
+      "assertions": [
+        {
+          "id": "nonempty-evaluable-options",
+          "passed": true,
+          "reason": "This fixture has verified options, so an empty result cannot establish correct displays"
+        },
+        {
+          "id": "option-1-endpoint-displays",
+          "passed": true,
+          "reason": "Both local endpoints must use supplied authoritative dates and numeric offsets",
+          "expected": {
+            "P1": {
+              "start": "2026-10-30T10:00:00-04:00",
+              "end": "2026-10-30T10:45:00-04:00"
+            },
+            "P2": {
+              "start": "2026-10-30T14:00:00+00:00",
+              "end": "2026-10-30T14:45:00+00:00"
+            },
+            "P3": {
+              "start": "2026-10-30T17:00:00+03:00",
+              "end": "2026-10-30T17:45:00+03:00"
+            }
+          },
+          "actual": {
+            "P1": {
+              "start": "2026-10-30T10:00:00-04:00",
+              "end": "2026-10-30T10:45:00-04:00"
+            },
+            "P2": {
+              "start": "2026-10-30T14:00:00+00:00",
+              "end": "2026-10-30T14:45:00+00:00"
+            },
+            "P3": {
+              "start": "2026-10-30T17:00:00+03:00",
+              "end": "2026-10-30T17:45:00+03:00"
+            }
+          }
+        },
+        {
+          "id": "option-2-endpoint-displays",
+          "passed": true,
+          "reason": "Both local endpoints must use supplied authoritative dates and numeric offsets",
+          "expected": {
+            "P1": {
+              "start": "2026-10-30T11:30:00-04:00",
+              "end": "2026-10-30T12:15:00-04:00"
+            },
+            "P2": {
+              "start": "2026-10-30T15:30:00+00:00",
+              "end": "2026-10-30T16:15:00+00:00"
+            },
+            "P3": {
+              "start": "2026-10-30T18:30:00+03:00",
+              "end": "2026-10-30T19:15:00+03:00"
+            }
+          },
+          "actual": {
+            "P1": {
+              "start": "2026-10-30T11:30:00-04:00",
+              "end": "2026-10-30T12:15:00-04:00"
+            },
+            "P2": {
+              "start": "2026-10-30T15:30:00+00:00",
+              "end": "2026-10-30T16:15:00+00:00"
+            },
+            "P3": {
+              "start": "2026-10-30T18:30:00+03:00",
+              "end": "2026-10-30T19:15:00+03:00"
+            }
+          }
+        },
+        {
+          "id": "option-3-endpoint-displays",
+          "passed": true,
+          "reason": "Both local endpoints must use supplied authoritative dates and numeric offsets",
+          "expected": {
+            "P1": {
+              "start": "2026-11-01T09:45:00-05:00",
+              "end": "2026-11-01T10:30:00-05:00"
+            },
+            "P2": {
+              "start": "2026-11-01T14:45:00+00:00",
+              "end": "2026-11-01T15:30:00+00:00"
+            },
+            "P3": {
+              "start": "2026-11-01T17:45:00+03:00",
+              "end": "2026-11-01T18:30:00+03:00"
+            }
+          },
+          "actual": {
+            "P1": {
+              "start": "2026-11-01T09:45:00-05:00",
+              "end": "2026-11-01T10:30:00-05:00"
+            },
+            "P2": {
+              "start": "2026-11-01T14:45:00+00:00",
+              "end": "2026-11-01T15:30:00+00:00"
+            },
+            "P3": {
+              "start": "2026-11-01T17:45:00+03:00",
+              "end": "2026-11-01T18:30:00+03:00"
+            }
+          }
+        },
+        {
+          "id": "option-4-endpoint-displays",
+          "passed": true,
+          "reason": "Both local endpoints must use supplied authoritative dates and numeric offsets",
+          "expected": {
+            "P1": {
+              "start": "2026-11-01T11:15:00-05:00",
+              "end": "2026-11-01T12:00:00-05:00"
+            },
+            "P2": {
+              "start": "2026-11-01T16:15:00+00:00",
+              "end": "2026-11-01T17:00:00+00:00"
+            },
+            "P3": {
+              "start": "2026-11-01T19:15:00+03:00",
+              "end": "2026-11-01T20:00:00+03:00"
+            }
+          },
+          "actual": {
+            "P1": {
+              "start": "2026-11-01T11:15:00-05:00",
+              "end": "2026-11-01T12:00:00-05:00"
+            },
+            "P2": {
+              "start": "2026-11-01T16:15:00+00:00",
+              "end": "2026-11-01T17:00:00+00:00"
+            },
+            "P3": {
+              "start": "2026-11-01T19:15:00+03:00",
+              "end": "2026-11-01T20:00:00+03:00"
+            }
+          }
+        },
+        {
+          "id": "option-5-endpoint-displays",
+          "passed": true,
+          "reason": "Both local endpoints must use supplied authoritative dates and numeric offsets",
+          "expected": {
+            "P1": {
+              "start": "2026-11-01T11:30:00-05:00",
+              "end": "2026-11-01T12:15:00-05:00"
+            },
+            "P2": {
+              "start": "2026-11-01T16:30:00+00:00",
+              "end": "2026-11-01T17:15:00+00:00"
+            },
+            "P3": {
+              "start": "2026-11-01T19:30:00+03:00",
+              "end": "2026-11-01T20:15:00+03:00"
+            }
+          },
+          "actual": {
+            "P1": {
+              "start": "2026-11-01T11:30:00-05:00",
+              "end": "2026-11-01T12:15:00-05:00"
+            },
+            "P2": {
+              "start": "2026-11-01T16:30:00+00:00",
+              "end": "2026-11-01T17:15:00+00:00"
+            },
+            "P3": {
+              "start": "2026-11-01T19:30:00+03:00",
+              "end": "2026-11-01T20:15:00+03:00"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "passed": true,
+      "assertions": [
+        {
+          "id": "nonempty-evaluable-options",
+          "passed": true,
+          "reason": "This fixture has verified options, so an empty result cannot establish a valid offered meeting"
+        },
+        {
+          "id": "declared-meeting_duration_minutes",
+          "passed": true,
+          "reason": "Declared constraint must match the task",
+          "expected": 45,
+          "actual": 45
+        },
+        {
+          "id": "declared-pre_buffer_minutes",
+          "passed": true,
+          "reason": "Declared constraint must match the task",
+          "expected": 15,
+          "actual": 15
+        },
+        {
+          "id": "declared-post_buffer_minutes",
+          "passed": true,
+          "reason": "Declared constraint must match the task",
+          "expected": 15,
+          "actual": 15
+        },
+        {
+          "id": "declared-grid_minutes",
+          "passed": true,
+          "reason": "Declared constraint must match the task",
+          "expected": 15,
+          "actual": 15
+        },
+        {
+          "id": "declared-all_participants_required",
+          "passed": true,
+          "reason": "Hard constraint cannot be relaxed"
+        },
+        {
+          "id": "declared-buffers_within_working_hours",
+          "passed": true,
+          "reason": "Hard constraint cannot be relaxed"
+        },
+        {
+          "id": "option-1-duration",
+          "passed": true,
+          "reason": "Meeting duration is exactly 45 elapsed minutes",
+          "actual_seconds": 2700
+        },
+        {
+          "id": "option-1-utc-grid",
+          "passed": true,
+          "reason": "Starts lie on the 15-minute UTC grid"
+        },
+        {
+          "id": "option-1-horizon",
+          "passed": true,
+          "reason": "The whole once-buffered meeting lies inside the bounded horizon"
+        },
+        {
+          "id": "option-1-P1-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-1-P1-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-1-P2-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-1-P2-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-1-P3-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-1-P3-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-2-duration",
+          "passed": true,
+          "reason": "Meeting duration is exactly 45 elapsed minutes",
+          "actual_seconds": 2700
+        },
+        {
+          "id": "option-2-utc-grid",
+          "passed": true,
+          "reason": "Starts lie on the 15-minute UTC grid"
+        },
+        {
+          "id": "option-2-horizon",
+          "passed": true,
+          "reason": "The whole once-buffered meeting lies inside the bounded horizon"
+        },
+        {
+          "id": "option-2-P1-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-2-P1-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-2-P2-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-2-P2-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-2-P3-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-2-P3-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-3-duration",
+          "passed": true,
+          "reason": "Meeting duration is exactly 45 elapsed minutes",
+          "actual_seconds": 2700
+        },
+        {
+          "id": "option-3-utc-grid",
+          "passed": true,
+          "reason": "Starts lie on the 15-minute UTC grid"
+        },
+        {
+          "id": "option-3-horizon",
+          "passed": true,
+          "reason": "The whole once-buffered meeting lies inside the bounded horizon"
+        },
+        {
+          "id": "option-3-P1-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-3-P1-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-3-P2-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-3-P2-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-3-P3-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-3-P3-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-4-duration",
+          "passed": true,
+          "reason": "Meeting duration is exactly 45 elapsed minutes",
+          "actual_seconds": 2700
+        },
+        {
+          "id": "option-4-utc-grid",
+          "passed": true,
+          "reason": "Starts lie on the 15-minute UTC grid"
+        },
+        {
+          "id": "option-4-horizon",
+          "passed": true,
+          "reason": "The whole once-buffered meeting lies inside the bounded horizon"
+        },
+        {
+          "id": "option-4-P1-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-4-P1-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-4-P2-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-4-P2-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-4-P3-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-4-P3-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-5-duration",
+          "passed": true,
+          "reason": "Meeting duration is exactly 45 elapsed minutes",
+          "actual_seconds": 2700
+        },
+        {
+          "id": "option-5-utc-grid",
+          "passed": true,
+          "reason": "Starts lie on the 15-minute UTC grid"
+        },
+        {
+          "id": "option-5-horizon",
+          "passed": true,
+          "reason": "The whole once-buffered meeting lies inside the bounded horizon"
+        },
+        {
+          "id": "option-5-P1-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-5-P1-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-5-P2-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-5-P2-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        },
+        {
+          "id": "option-5-P3-working",
+          "passed": true,
+          "reason": "The guarded interval fits one listed working window"
+        },
+        {
+          "id": "option-5-P3-busy",
+          "passed": true,
+          "reason": "The guarded interval does not overlap any raw busy interval; touching is allowed"
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "passed": true,
+      "assertions": [
+        {
+          "id": "exact-earliest-start-sequence",
+          "passed": true,
+          "reason": "Return precisely the earliest five verified distinct starts",
+          "expected": [
+            "2026-10-30T14:00:00Z",
+            "2026-10-30T15:30:00Z",
+            "2026-11-01T14:45:00Z",
+            "2026-11-01T16:15:00Z",
+            "2026-11-01T16:30:00Z"
+          ],
+          "actual": [
+            "2026-10-30T14:00:00Z",
+            "2026-10-30T15:30:00Z",
+            "2026-11-01T14:45:00Z",
+            "2026-11-01T16:15:00Z",
+            "2026-11-01T16:30:00Z"
+          ]
+        },
+        {
+          "id": "ranks",
+          "passed": true,
+          "reason": "Ranks are consecutive JSON integers in saved order",
+          "actual": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "passed": true,
+      "assertions": [
+        {
+          "id": "option-1-P1-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-1-P2-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-1-P3-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-2-P1-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-2-P2-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-2-P3-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-3-P1-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-3-P2-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-3-P3-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-4-P1-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-4-P2-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-4-P3-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-5-P1-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-5-P2-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "option-5-P3-coverage",
+          "passed": true,
+          "reason": "The whole guarded interval must have known coverage"
+        },
+        {
+          "id": "declared-coverage_policy",
+          "passed": true,
+          "reason": "Unknown time stays unknown; no hard constraint is relaxed",
+          "expected": "verified_only",
+          "actual": "verified_only"
+        },
+        {
+          "id": "declared-uncovered_time_means",
+          "passed": true,
+          "reason": "Unknown time stays unknown; no hard constraint is relaxed",
+          "expected": "unknown",
+          "actual": "unknown"
+        },
+        {
+          "id": "declared-constraints_relaxed",
+          "passed": true,
+          "reason": "Unknown time stays unknown; no hard constraint is relaxed",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "id": "complete-maximal-coverage-gaps",
+          "passed": true,
+          "reason": "List all and only maximal uncovered portions of listed work windows, including unused days",
+          "expected": [
+            {
+              "participant_id": "P2",
+              "start_utc": "2026-10-31T14:30:00Z",
+              "end_utc": "2026-10-31T17:30:00Z"
+            }
+          ],
+          "actual": [
+            {
+              "participant_id": "P2",
+              "start_utc": "2026-10-31T14:30:00Z",
+              "end_utc": "2026-10-31T17:30:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "passed": true,
+      "assertions": [
+        {
+          "id": "exact-top-level-schema",
+          "passed": true,
+          "reason": "Use exactly the declared top-level keys"
+        },
+        {
+          "id": "case-and-options-only-status",
+          "passed": true,
+          "reason": "Outputs are options only, with no claim of booking"
+        },
+        {
+          "id": "exact-nested-schema",
+          "passed": true,
+          "reason": "Option, local endpoint, and coverage-gap objects use only their requested keys"
+        },
+        {
+          "id": "receipt-agrees-with-saved-json",
+          "passed": true,
+          "reason": "Receipt lines must use the explicitly requested format and agree with saved values"
+        }
+      ]
+    }
+  ],
+  "accepted": true,
+  "quality": {
+    "passed_groups": 5,
+    "scored_groups": 5,
+    "total_groups": 5
+  }
+}

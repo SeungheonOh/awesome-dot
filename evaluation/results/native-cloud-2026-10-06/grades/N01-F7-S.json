@@ -1,0 +1,128 @@
+{
+  "case_id": "F7",
+  "integrity": {
+    "passed": true,
+    "reasons": [],
+    "assertions": [
+      {
+        "passed": true,
+        "reason": "Protected source bytes: input-manifest.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/after.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/before.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/invalid-duplicate.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/invalid-number.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: task.txt; Original SHA-256 matches"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Saved patch parses with unique keys and exact integer tokens"
+        },
+        {
+          "passed": true,
+          "reason": "Both invalid documents are rejected with source-derived reason codes and pointers"
+        },
+        {
+          "passed": true,
+          "reason": "Full valid endpoint values retained with arbitrary-precision integers and strict types"
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Applying the exact saved patch yields the full after structure, type-exact including absent/null and large integers"
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "All operation keys, pointers, existence checks and ordered array mutations are valid"
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Public patch count and byte limits"
+        },
+        {
+          "passed": true,
+          "reason": "Every operation, including transient edits, is inside the authorized path scope"
+        },
+        {
+          "passed": true,
+          "reason": "Summary length and LF contract"
+        },
+        {
+          "passed": true,
+          "reason": "Summary discloses exactly saved operation paths/count, no values or excluded content"
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Saved validation report schema and valid-pair identity match"
+        },
+        {
+          "passed": true,
+          "reason": "Invalid cases correctly rejected without emitted repair patches"
+        },
+        {
+          "passed": true,
+          "reason": "Submission contains only the three requested artifacts, with no invalid-case repair patch"
+        },
+        {
+          "passed": true,
+          "reason": "Saved checked patch agrees with claimed validation result"
+        },
+        {
+          "passed": true,
+          "reason": "Patch bytes read at validation are still the saved deliverable"
+        }
+      ]
+    }
+  ],
+  "accepted": true,
+  "quality": 1.0
+}

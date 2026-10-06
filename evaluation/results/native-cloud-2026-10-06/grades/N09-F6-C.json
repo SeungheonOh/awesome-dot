@@ -1,0 +1,244 @@
+{
+  "case_id": "F6",
+  "integrity": {
+    "passed": true,
+    "reasons": [],
+    "assertions": [
+      {
+        "passed": true,
+        "reason": "Protected source bytes: input-manifest.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/line_items.csv; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/orders.csv; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/orders.sqlite3; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/parameters.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/refunds.csv; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: inputs/schema.sql; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Protected source bytes: task.txt; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Post-query protected bytes: input-manifest.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Post-query protected bytes: inputs/line_items.csv; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Post-query protected bytes: inputs/orders.csv; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Post-query protected bytes: inputs/orders.sqlite3; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Post-query protected bytes: inputs/parameters.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Post-query protected bytes: inputs/refunds.csv; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Post-query protected bytes: inputs/schema.sql; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Post-query protected bytes: task.txt; Original SHA-256 matches"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Scenario 0: cohort channels/counts, half-open period, statuses and integer output"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 1: cohort channels/counts, half-open period, statuses and integer output"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 2: cohort channels/counts, half-open period, statuses and integer output"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 3: cohort channels/counts, half-open period, statuses and integer output"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 4: cohort channels/counts, half-open period, statuses and integer output"
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Scenario 0: entity IDs counted once; equal amounts retained; refund cutoff exact"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 1: entity IDs counted once; equal amounts retained; refund cutoff exact"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 2: entity IDs counted once; equal amounts retained; refund cutoff exact"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 3: entity IDs counted once; equal amounts retained; refund cutoff exact"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 4: entity IDs counted once; equal amounts retained; refund cutoff exact"
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Scenario 0: complete-zero, partial/unknown and mandatory unallocated treatment"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 1: complete-zero, partial/unknown and mandatory unallocated treatment"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 2: complete-zero, partial/unknown and mandatory unallocated treatment"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 3: complete-zero, partial/unknown and mandatory unallocated treatment"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 4: complete-zero, partial/unknown and mandatory unallocated treatment"
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Scenario 0: safe saved SQL output equals independent source calculation"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 1: safe saved SQL output equals independent source calculation"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 2: safe saved SQL output equals independent source calculation"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 3: safe saved SQL output equals independent source calculation"
+        },
+        {
+          "passed": true,
+          "reason": "Scenario 4: safe saved SQL output equals independent source calculation"
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Saved CSV exact header order"
+        },
+        {
+          "passed": true,
+          "reason": "Saved main CSV matches independent amounts/counts"
+        },
+        {
+          "passed": true,
+          "reason": "Saved CSV agrees with the saved query actually executed"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: period_start: 2026-04-01T00:00:00Z"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: period_end: 2026-05-01T00:00:00Z"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: as_of: 2026-05-03T12:00:00Z"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: units: integer minor units; 100 per major unit"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: population: settled or shipped; ordered_at in [period_start, period_end)"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: refund_cutoff: event_at <= as_of"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: unknown_gross: incomplete orders make channel gross and net NULL"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: unallocated: unmatched order_id only; mandatory separate row; net NULL"
+        },
+        {
+          "passed": true,
+          "reason": "Required notes declaration: execution: local SQLite read-only"
+        },
+        {
+          "passed": true,
+          "reason": "Notes do not contain conflicting duplicate declarations"
+        }
+      ]
+    }
+  ],
+  "accepted": true,
+  "quality": 1.0
+}

@@ -1,0 +1,21 @@
+Willowbank Volunteer Circle: decision as of 2026-03-31 17:00 UTC
+
+Recommend AlderRoster Community 3.4 with Export Bridge: it is the only candidate currently supported as eligible. Eligibility requires explicit cutoff-available evidence for both must-haves; among eligible candidates, lowest 12-month recurring cost wins, then complete offline CSV, then fewer mandatory modules. These are ordered rules, not weighted preferences. (inputs/01-user-requirements.txt#PRIORITIES)
+
+Requirements: M1 means editing an existing synchronized roster in a desktop browser after online sign-in, including assignments of existing volunteers, roles, and coordinator notes, with local saving until reconnection. M2 requires ordinary CSV containing shift date, start time, volunteer name, role, and coordinator notes; online generation suffices. (inputs/01-user-requirements.txt#MUST-HAVES)
+
+Provider-documented comparison and calculated recurring costs (USD):
+
+- AlderRoster Community 3.4: M1 meets; all required edits and local saving are documented. M2 meets with mandatory organization-wide Export Bridge; all five fields are explicit, though CSV generation requires internet. Eligible. Monthly: 12 × $10.00 + $15.00 = $135.00. Twelve months: $135.00 × 12 = $1,620.00. (inputs/02-alderroster-community-3.4.txt#OFFLINE; inputs/02-alderroster-community-3.4.txt#CSV; inputs/02-alderroster-community-3.4.txt#PRICE)
+
+- BeaconCrew Basic 2.8: M1 fails; offline viewing only, with every roster edit disabled. M2 meets; included online CSV has all five fields. Ineligible despite lower cost. Monthly: 12 × $6.00 + $0.00 mandatory modules = $72.00. Twelve months: $72.00 × 12 = $864.00. (inputs/03-beaconcrew-basic-2.8.txt#OFFLINE; inputs/03-beaconcrew-basic-2.8.txt#CSV; inputs/03-beaconcrew-basic-2.8.txt#PRICE)
+
+- CedarShift Team 5.1: M1 meets. M2 unconfirmed: mandatory organization-wide CSV Pack documents the four core fields and online/offline generation, but coordinator-notes inclusion is unresolved. Generic roster-download wording covers multiple formats and cannot establish CSV support. Eligibility unconfirmed; no definite recommendation. Monthly: 12 × $7.50 + $12.00 = $102.00. Twelve months: $102.00 × 12 = $1,224.00; notes, if supported, cost nothing extra. (inputs/05-cedarshift-team-5.1.txt#OFFLINE; inputs/05-cedarshift-team-5.1.txt#CSV-CORE; inputs/05-cedarshift-team-5.1.txt#NOTES-GAP; inputs/05-cedarshift-team-5.1.txt#PRICE)
+
+Calculations use 12 paid coordinators throughout, constant monthly prices, no annual discount, and no tax, optional modules, setup, migration, or volunteer charges. (inputs/01-user-requirements.txt#POPULATION)
+
+Excluded evidence: BeaconCrew's offline-editing headline applies to Plus 3.0, not Basic 2.8. (inputs/04-beaconcrew-overview.txt#HEADLINE; inputs/04-beaconcrew-overview.txt#QUALIFIER) CedarShift's April 2 clarification was published after cutoff; its claimed March 25 effective date cannot establish knowledge at cutoff. (inputs/06-cedarshift-update.txt#UPDATE; inputs/06-cedarshift-update.txt#TIMING; inputs/01-user-requirements.txt#CUTOFF)
+
+Decision-changing evidence: an exact Team 5.1 CSV Pack field list or provider clarification published by cutoff explicitly including or excluding coordinator notes. Confirmation makes CedarShift eligible and preferred at $396.00 less annually than AlderRoster; offline CSV is unnecessary to break that price difference. Explicit exclusion makes M2 fail and preserves AlderRoster. Still unknown preserves CedarShift's unconfirmed status and AlderRoster's recommendation. No resolving cutoff-available evidence is supplied. (inputs/01-user-requirements.txt#UNCERTAINTY; inputs/05-cedarshift-team-5.1.txt#NOTES-GAP)
+
+Feature findings are provider claims, not independently tested behavior; eligibility and totals are this report's conclusions and calculations.

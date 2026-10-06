@@ -1,0 +1,216 @@
+{
+  "case_id": "F5",
+  "integrity": {
+    "passed": true,
+    "reasons": [],
+    "assertions": [
+      {
+        "passed": true,
+        "reason": "Original bytes: input-manifest.json; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Original bytes: inputs/acceptance.txt; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Original bytes: inputs/baseline.txt; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Original bytes: inputs/edit-a.txt; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Original bytes: inputs/edit-b.txt; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Original bytes: inputs/lineage.txt; Original SHA-256 matches"
+      },
+      {
+        "passed": true,
+        "reason": "Original bytes: task.txt; Original SHA-256 matches"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Accepted move and anchor order match A2"
+        },
+        {
+          "passed": true,
+          "reason": "Accepted sentence at BENCH"
+        },
+        {
+          "passed": true,
+          "reason": "Accepted sentence at WELCOME"
+        },
+        {
+          "passed": true,
+          "reason": "Accepted sentence at HOURS"
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Exactly six required headings, anchors, order and numbers"
+        },
+        {
+          "passed": true,
+          "reason": "Protected sentence exact, once, at CLOSE"
+        },
+        {
+          "passed": true,
+          "reason": "Title preserved exactly"
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Explicit global unresolved draft label"
+        },
+        {
+          "passed": true,
+          "reason": "Baseline hours retained and independent moved-section reference current"
+        },
+        {
+          "passed": true,
+          "reason": "U-HOURS follows authorized uncertainty/dependency treatment"
+        },
+        {
+          "passed": true,
+          "reason": "D-HOURS-CARD follows authorized uncertainty/dependency treatment"
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "Every substantive candidate line has its authorized basis; no extra unapproved edits"
+        },
+        {
+          "passed": true,
+          "reason": "N-EMAIL explicitly excluded"
+        },
+        {
+          "passed": true,
+          "reason": "N-CUPBOARD explicitly excluded"
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "passed": true,
+      "reasons": [],
+      "assertions": [
+        {
+          "passed": true,
+          "reason": "UTF-8/LF candidate with one terminal newline"
+        },
+        {
+          "passed": true,
+          "reason": "Required ledger top-level schema"
+        },
+        {
+          "passed": true,
+          "reason": "Ledger identifies exact saved candidate bytes"
+        },
+        {
+          "passed": true,
+          "reason": "Ledger original source hashes agree"
+        },
+        {
+          "passed": true,
+          "reason": "Exactly the eight requested dispositions"
+        },
+        {
+          "passed": true,
+          "reason": "C-CLOTHS: supporting and authorizing locators resolve"
+        },
+        {
+          "passed": true,
+          "reason": "C-CLOTHS: ledger matches source disposition and candidate"
+        },
+        {
+          "passed": true,
+          "reason": "C-MOVE: supporting and authorizing locators resolve"
+        },
+        {
+          "passed": true,
+          "reason": "C-MOVE: ledger matches source disposition and candidate"
+        },
+        {
+          "passed": true,
+          "reason": "C-REFERENCE: supporting and authorizing locators resolve"
+        },
+        {
+          "passed": true,
+          "reason": "C-REFERENCE: ledger matches source disposition and candidate"
+        },
+        {
+          "passed": true,
+          "reason": "C-BADGES: supporting and authorizing locators resolve"
+        },
+        {
+          "passed": true,
+          "reason": "C-BADGES: ledger matches source disposition and candidate"
+        },
+        {
+          "passed": true,
+          "reason": "U-HOURS: supporting and authorizing locators resolve"
+        },
+        {
+          "passed": true,
+          "reason": "U-HOURS: ledger matches source disposition and candidate"
+        },
+        {
+          "passed": true,
+          "reason": "D-HOURS-CARD: supporting and authorizing locators resolve"
+        },
+        {
+          "passed": true,
+          "reason": "D-HOURS-CARD: ledger matches source disposition and candidate"
+        },
+        {
+          "passed": true,
+          "reason": "N-EMAIL: supporting and authorizing locators resolve"
+        },
+        {
+          "passed": true,
+          "reason": "N-EMAIL: ledger matches source disposition and candidate"
+        },
+        {
+          "passed": true,
+          "reason": "N-CUPBOARD: supporting and authorizing locators resolve"
+        },
+        {
+          "passed": true,
+          "reason": "N-CUPBOARD: ledger matches source disposition and candidate"
+        }
+      ]
+    }
+  ],
+  "accepted": true,
+  "quality": 1.0
+}

@@ -1,0 +1,2081 @@
+{
+  "schema_version": 1,
+  "study_id": "dot-skills-native-artifact-exploratory-20261006",
+  "scope": "artifact criteria only; overall process acceptance remains unknown",
+  "scheduled_attempts": 16,
+  "rows": [
+    {
+      "attempt_id": "N01-F7-S",
+      "case_id": "F7",
+      "arm": "S",
+      "schedule_ordinal": 1,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N01-F7-S/change-summary.txt",
+          "sha256": "7aa1587f080951356525abe6ce950588408666623767ae9644c72936f080da0b",
+          "bytes": 314
+        },
+        {
+          "path": "artifacts/N01-F7-S/patch.json",
+          "sha256": "ff08085b1a8f516e35bfca7ef6613b300052e043c4f89ec39b457af41fbf8d0e",
+          "bytes": 1040
+        },
+        {
+          "path": "artifacts/N01-F7-S/validation-status.json",
+          "sha256": "0f1d0acaed73aab20632291fbeaa3d30fc1cbf94e0ad7b7d9f7a20e1039697c4",
+          "bytes": 599
+        }
+      ],
+      "artifact_grade": "grades/N01-F7-S.json",
+      "artifact_grade_sha256": "494476c51604babe10e8158fdd2ef3b498e3d40c14c453bab5b8e3708107a1fb",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:27:16Z",
+      "completion_observed_utc": "2026-10-06T01:29:39Z",
+      "artifact_frozen_utc": "2026-10-06T01:29:48.430755+00:00",
+      "approximate_observation_interval_seconds": 143.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "1276541f3017bbd2b95e407ecb84effd71ccb1a5836b945465f6fdec793b0216",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F7/input-manifest.json",
+          "sha256": "c01c0f15184b15a45d9d61c6ab7bd280624c26d6aa56c80f1dc9f148fa4f41f0",
+          "bytes": 687,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/after.json",
+          "source_relative_path": "cases/F7/inputs/after.json",
+          "sha256": "e2b5a657f3d7d292c7efa9359c3b8f0e45585f514440a78d27593c8c68bfcc64",
+          "bytes": 668,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/before.json",
+          "source_relative_path": "cases/F7/inputs/before.json",
+          "sha256": "dba00ff19da1a85c0ebdf3df39b02973dbb613c1e858bdc86b7ff5aa88bfb0ab",
+          "bytes": 820,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/invalid-duplicate.json",
+          "source_relative_path": "cases/F7/inputs/invalid-duplicate.json",
+          "sha256": "003242356433fecc7403302b52dfe7f8b6fab21624444d1b998ff50629f927ce",
+          "bytes": 70,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/invalid-number.json",
+          "source_relative_path": "cases/F7/inputs/invalid-number.json",
+          "sha256": "1081e9925aa50eb278a70993deda94b299b3cde6c0911709fe5dc122a33bb3c6",
+          "bytes": 50,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F7/task.txt",
+          "sha256": "abe019c8f4f3b0e3159ea310c1227d6c757a5a7e1088cee7ca8ad2c4e318aa0e",
+          "bytes": 5496,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "skill/compare-json-and-verify-patch/SKILL.md",
+          "source_relative_path": "packages/skill/compare-json-and-verify-patch/SKILL.md",
+          "repo_path": "skill/compare-json-and-verify-patch/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "7313b52b0834d14e2bee3466161bdc64495cd120",
+          "sha256": "67d2d04ce21ebc613f2b7350fd3d76a219f8524de30f251d4c7f6e50385e3014",
+          "bytes": 7200,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N02-F7-C",
+      "case_id": "F7",
+      "arm": "C",
+      "schedule_ordinal": 2,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N02-F7-C/change-summary.txt",
+          "sha256": "7aa1587f080951356525abe6ce950588408666623767ae9644c72936f080da0b",
+          "bytes": 314
+        },
+        {
+          "path": "artifacts/N02-F7-C/patch.json",
+          "sha256": "ff08085b1a8f516e35bfca7ef6613b300052e043c4f89ec39b457af41fbf8d0e",
+          "bytes": 1040
+        },
+        {
+          "path": "artifacts/N02-F7-C/validation-status.json",
+          "sha256": "0f1d0acaed73aab20632291fbeaa3d30fc1cbf94e0ad7b7d9f7a20e1039697c4",
+          "bytes": 599
+        }
+      ],
+      "artifact_grade": "grades/N02-F7-C.json",
+      "artifact_grade_sha256": "494476c51604babe10e8158fdd2ef3b498e3d40c14c453bab5b8e3708107a1fb",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:27:28Z",
+      "completion_observed_utc": "2026-10-06T01:29:39Z",
+      "artifact_frozen_utc": "2026-10-06T01:29:48.456719+00:00",
+      "approximate_observation_interval_seconds": 131.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "f4de2a87edc1884bb1f4bbedfcbffa6bcbe44c6f81b8a22a4e1fc7c748a9f5dc",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F7/input-manifest.json",
+          "sha256": "c01c0f15184b15a45d9d61c6ab7bd280624c26d6aa56c80f1dc9f148fa4f41f0",
+          "bytes": 687,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/after.json",
+          "source_relative_path": "cases/F7/inputs/after.json",
+          "sha256": "e2b5a657f3d7d292c7efa9359c3b8f0e45585f514440a78d27593c8c68bfcc64",
+          "bytes": 668,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/before.json",
+          "source_relative_path": "cases/F7/inputs/before.json",
+          "sha256": "dba00ff19da1a85c0ebdf3df39b02973dbb613c1e858bdc86b7ff5aa88bfb0ab",
+          "bytes": 820,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/invalid-duplicate.json",
+          "source_relative_path": "cases/F7/inputs/invalid-duplicate.json",
+          "sha256": "003242356433fecc7403302b52dfe7f8b6fab21624444d1b998ff50629f927ce",
+          "bytes": 70,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/invalid-number.json",
+          "source_relative_path": "cases/F7/inputs/invalid-number.json",
+          "sha256": "1081e9925aa50eb278a70993deda94b299b3cde6c0911709fe5dc122a33bb3c6",
+          "bytes": 50,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F7/task.txt",
+          "sha256": "abe019c8f4f3b0e3159ea310c1227d6c757a5a7e1088cee7ca8ad2c4e318aa0e",
+          "bytes": 5496,
+          "role": "protected_task_or_input"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N03-F3-S",
+      "case_id": "F3",
+      "arm": "S",
+      "schedule_ordinal": 3,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N03-F3-S/explanation.txt",
+          "sha256": "c56d13d98e78637831722724af2ff3bfb4550af100a0d2693ee8de7036fb37e8",
+          "bytes": 756
+        },
+        {
+          "path": "artifacts/N03-F3-S/options.json",
+          "sha256": "b6e55c99b3a994ff9f3f23841a1abefbdb8c3f38ed5e7e76bb4964f0ec1d40b0",
+          "bytes": 3037
+        }
+      ],
+      "artifact_grade": "grades/N03-F3-S.json",
+      "artifact_grade_sha256": "7e5e16f8df2601584ab26ede7ea7bf7008fc2216e1eabccd22ffcadf17e5aac5",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:27:38Z",
+      "completion_observed_utc": "2026-10-06T01:29:39Z",
+      "artifact_frozen_utc": "2026-10-06T01:29:48.482898+00:00",
+      "approximate_observation_interval_seconds": 121.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "1231f91b3503311467686433efe0f7163dc00d87133c732e4a53138cc41d6644",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F3/input-manifest.json",
+          "sha256": "f0b1d908113fcb451cbad28551b047df6dab76a697de1f6def798e259544a47f",
+          "bytes": 532,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/busy.csv",
+          "source_relative_path": "cases/F3/inputs/busy.csv",
+          "sha256": "6c248d69db366d3f107fd1c252ef7ba570f6194b1c12b07a7d5d72c1d7c210d1",
+          "bytes": 466,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/coverage.csv",
+          "source_relative_path": "cases/F3/inputs/coverage.csv",
+          "sha256": "dc76b39da2857ad53750539b455269fc8887001c21ff2af5b66637bb813ca64b",
+          "bytes": 246,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/participants.json",
+          "source_relative_path": "cases/F3/inputs/participants.json",
+          "sha256": "937e1239f9f3bfd03c6eab8e922cfe4080ae49e6eaf7d077d9306c747cdd1bfc",
+          "bytes": 3081,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F3/task.txt",
+          "sha256": "0ed74d1c2044020997cb4b4c58398066190367d5d6cae6a280a92e423b53ae99",
+          "bytes": 6509,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-window-coordination/SKILL.md",
+          "source_relative_path": "packages/skill/meeting-window-coordination/SKILL.md",
+          "repo_path": "skill/meeting-window-coordination/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "3f10db9e34cf5ef051ea5d5bc07367e24c0daa22",
+          "sha256": "70dd691ca3921b58b35e547eeefeb452d6377c31259fcc51a865deea7f5a4f20",
+          "bytes": 14385,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-window-coordination/check_example.py",
+          "source_relative_path": "packages/skill/meeting-window-coordination/check_example.py",
+          "repo_path": "skill/meeting-window-coordination/check_example.py",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "6714eb788fe330639aed786ae2089bf30fa4cd32",
+          "sha256": "214d45a1af60cd219fff00047847376e4a8cdbce8b45eb85fe81a80b8f2fb22d",
+          "bytes": 10876,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-window-coordination/example.md",
+          "source_relative_path": "packages/skill/meeting-window-coordination/example.md",
+          "repo_path": "skill/meeting-window-coordination/example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "c33f917805f35c4183bb8c9a8af298586ea841d5",
+          "sha256": "be075a5dd411d2ffe351284bf59416ccabd008606e1e5c0f84b3aa30af11c4cf",
+          "bytes": 6850,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-window-coordination/second-case.md",
+          "source_relative_path": "packages/skill/meeting-window-coordination/second-case.md",
+          "repo_path": "skill/meeting-window-coordination/second-case.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "1c648ce5f8c53046877f978799c5a2d6a99c1ae3",
+          "sha256": "89b5e4ff09f7939d1562cb05998394a54d95ae150e8d3745adfefc124a62f8a1",
+          "bytes": 3127,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N04-F3-C",
+      "case_id": "F3",
+      "arm": "C",
+      "schedule_ordinal": 4,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N04-F3-C/explanation.txt",
+          "sha256": "c56d13d98e78637831722724af2ff3bfb4550af100a0d2693ee8de7036fb37e8",
+          "bytes": 756
+        },
+        {
+          "path": "artifacts/N04-F3-C/options.json",
+          "sha256": "b6e55c99b3a994ff9f3f23841a1abefbdb8c3f38ed5e7e76bb4964f0ec1d40b0",
+          "bytes": 3037
+        }
+      ],
+      "artifact_grade": "grades/N04-F3-C.json",
+      "artifact_grade_sha256": "7e5e16f8df2601584ab26ede7ea7bf7008fc2216e1eabccd22ffcadf17e5aac5",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:27:51Z",
+      "completion_observed_utc": "2026-10-06T01:29:59Z",
+      "artifact_frozen_utc": "2026-10-06T01:31:03.254924+00:00",
+      "approximate_observation_interval_seconds": 128.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "c33a14c73b7cf73ea4cc7926e357f9df0d9d8e24a389eae016e6d8dd40276a71",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F3/input-manifest.json",
+          "sha256": "f0b1d908113fcb451cbad28551b047df6dab76a697de1f6def798e259544a47f",
+          "bytes": 532,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/busy.csv",
+          "source_relative_path": "cases/F3/inputs/busy.csv",
+          "sha256": "6c248d69db366d3f107fd1c252ef7ba570f6194b1c12b07a7d5d72c1d7c210d1",
+          "bytes": 466,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/coverage.csv",
+          "source_relative_path": "cases/F3/inputs/coverage.csv",
+          "sha256": "dc76b39da2857ad53750539b455269fc8887001c21ff2af5b66637bb813ca64b",
+          "bytes": 246,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/participants.json",
+          "source_relative_path": "cases/F3/inputs/participants.json",
+          "sha256": "937e1239f9f3bfd03c6eab8e922cfe4080ae49e6eaf7d077d9306c747cdd1bfc",
+          "bytes": 3081,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F3/task.txt",
+          "sha256": "0ed74d1c2044020997cb4b4c58398066190367d5d6cae6a280a92e423b53ae99",
+          "bytes": 6509,
+          "role": "protected_task_or_input"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N05-F1-S",
+      "case_id": "F1",
+      "arm": "S",
+      "schedule_ordinal": 5,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N05-F1-S/claim-lines.csv",
+          "sha256": "ec8a6d707c9c973b3944265781e7c57efc3dd6d2846b646e81a8830de7e5617d",
+          "bytes": 988
+        },
+        {
+          "path": "artifacts/N05-F1-S/exceptions.txt",
+          "sha256": "f8090ffb8599dae85313d230218cd871ee8715f79f1c4c74d2c58b356c9562d0",
+          "bytes": 3384
+        },
+        {
+          "path": "artifacts/N05-F1-S/source-map.csv",
+          "sha256": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+          "bytes": 671
+        }
+      ],
+      "artifact_grade": "grades/N05-F1-S.json",
+      "artifact_grade_sha256": "380cb396b2a965e41bff9fa0adeec6d5c51b3503d6739dd00ee8ba6cd98d9d45",
+      "semantic_reviews": [
+        {
+          "reviewer": "AI-assisted reviewer A",
+          "path": "reviews/reviewer-a/N05-F1-S.json",
+          "sha256": "d5037200d6222f3654f012d6d1296bcb24526a4234309d9431466d645d9a27e0",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        },
+        {
+          "reviewer": "AI-assisted reviewer B",
+          "path": "reviews/reviewer-b/N05-F1-S.json",
+          "sha256": "2f6da4a4bd135cface79a47dcba5ed0b2cc29bba5785b39169a1fd57b549df04",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        }
+      ],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:28:05Z",
+      "completion_observed_utc": "2026-10-06T01:29:59Z",
+      "artifact_frozen_utc": "2026-10-06T01:31:03.278903+00:00",
+      "approximate_observation_interval_seconds": 114.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "c53717eef9a99339003810ec4c3403f1c903da42844d0fbd3f596c9df58bd72a",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F1/input-manifest.json",
+          "sha256": "de8d176c38e149666e46d242cdc8e34872643b7575e8d2283867a72df3ad4843",
+          "bytes": 336,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/evidence.csv",
+          "source_relative_path": "cases/F1/inputs/evidence.csv",
+          "sha256": "340ff7835e3c22a3b7e18d811c4280d32807ce2e6d63c066fa2dfb64a20661c4",
+          "bytes": 1659,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/policy.txt",
+          "source_relative_path": "cases/F1/inputs/policy.txt",
+          "sha256": "ad3d13ebe1d0013b9b5353331180c118b79e19b15b9cd1352917ae58d24226ba",
+          "bytes": 2810,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F1/task.txt",
+          "sha256": "32ba7c1d1cd401e1c4e7b6474faa83b6701981b09fe0c9722044271a752aaa62",
+          "bytes": 3733,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "skill/expense-report-reconciliation/SKILL.md",
+          "source_relative_path": "packages/skill/expense-report-reconciliation/SKILL.md",
+          "repo_path": "skill/expense-report-reconciliation/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "a574a6307941cec706a288aad4627ecb7d4c3e69",
+          "sha256": "7c43b2643bb6b1864fb4f1bf1226e594d56f1b24a13303e7caebc9a75e584565",
+          "bytes": 13490,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/expense-report-reconciliation/example.md",
+          "source_relative_path": "packages/skill/expense-report-reconciliation/example.md",
+          "repo_path": "skill/expense-report-reconciliation/example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "1c2bb15e7ba57201e828357c14088da7d6dba893",
+          "sha256": "0788b89ae3dad911d43ea1aa539d95f0fb61af42ff2e473674f980630528f884",
+          "bytes": 22885,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N06-F1-C",
+      "case_id": "F1",
+      "arm": "C",
+      "schedule_ordinal": 6,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N06-F1-C/claim-lines.csv",
+          "sha256": "cecc48264f5695a62af9035c47877586c7c033f5ed621666cb82c05ef6623117",
+          "bytes": 967
+        },
+        {
+          "path": "artifacts/N06-F1-C/exceptions.txt",
+          "sha256": "bf769d8992205e81870cc2d53604370c85aff49a4d4e405bb5d3e2c806c4d82e",
+          "bytes": 2846
+        },
+        {
+          "path": "artifacts/N06-F1-C/source-map.csv",
+          "sha256": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+          "bytes": 671
+        }
+      ],
+      "artifact_grade": "grades/N06-F1-C.json",
+      "artifact_grade_sha256": "5c985987b416cdb6e56c8b7dedf3f51771f06a0bf7062b18898a28803f78c1f2",
+      "semantic_reviews": [
+        {
+          "reviewer": "AI-assisted reviewer A",
+          "path": "reviews/reviewer-a/N06-F1-C.json",
+          "sha256": "01e0ca1e590f854a2a00080dfe1cff77fad16e27ecb716303eb4f8b0a4f976bc",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        },
+        {
+          "reviewer": "AI-assisted reviewer B",
+          "path": "reviews/reviewer-b/N06-F1-C.json",
+          "sha256": "46417adf519ea8b9525095fc23dd9fbb7e2a5aae5dade45b5406e1890be64a27",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        }
+      ],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:28:16Z",
+      "completion_observed_utc": "2026-10-06T01:29:59Z",
+      "artifact_frozen_utc": "2026-10-06T01:31:03.304925+00:00",
+      "approximate_observation_interval_seconds": 103.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "7bc7d9b7e237a01cf756a6d9b12c683d8156926b0c55efa0cfc0ef787101f5b8",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F1/input-manifest.json",
+          "sha256": "de8d176c38e149666e46d242cdc8e34872643b7575e8d2283867a72df3ad4843",
+          "bytes": 336,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/evidence.csv",
+          "source_relative_path": "cases/F1/inputs/evidence.csv",
+          "sha256": "340ff7835e3c22a3b7e18d811c4280d32807ce2e6d63c066fa2dfb64a20661c4",
+          "bytes": 1659,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/policy.txt",
+          "source_relative_path": "cases/F1/inputs/policy.txt",
+          "sha256": "ad3d13ebe1d0013b9b5353331180c118b79e19b15b9cd1352917ae58d24226ba",
+          "bytes": 2810,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F1/task.txt",
+          "sha256": "32ba7c1d1cd401e1c4e7b6474faa83b6701981b09fe0c9722044271a752aaa62",
+          "bytes": 3733,
+          "role": "protected_task_or_input"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N07-F5-S",
+      "case_id": "F5",
+      "arm": "S",
+      "schedule_ordinal": 7,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N07-F5-S/candidate.txt",
+          "sha256": "6141bf7d6d8c3e073d9a31560e6e1e4d86ef544dab1b34b4fcad6846e661910e",
+          "bytes": 690
+        },
+        {
+          "path": "artifacts/N07-F5-S/decisions.json",
+          "sha256": "f3b120c0c9c342ca29aab5012b3a56d5202116b8d630095a8473b53ebd384d08",
+          "bytes": 4326
+        }
+      ],
+      "artifact_grade": "grades/N07-F5-S.json",
+      "artifact_grade_sha256": "9525e0f5660e3c02fed84d86e5447b1b9b89c8e033edb5d633892389a171c9e6",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:29:59Z",
+      "completion_observed_utc": "2026-10-06T01:32:03Z",
+      "artifact_frozen_utc": "2026-10-06T01:33:03.414553+00:00",
+      "approximate_observation_interval_seconds": 124.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "ae54268abf5de473336ada817b965d4cc5430ff7e6fe1e2e1bc580a63fa3fb31",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F5/input-manifest.json",
+          "sha256": "583a214437d9d0cbbd6915e0776357517031a769744d5ca10f744782cc30ca40",
+          "bytes": 828,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/acceptance.txt",
+          "source_relative_path": "cases/F5/inputs/acceptance.txt",
+          "sha256": "29947f4ae01ac80c84522cd0f0ffbe30058f658b5016c10eecdb3bcc126429e8",
+          "bytes": 1297,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/baseline.txt",
+          "source_relative_path": "cases/F5/inputs/baseline.txt",
+          "sha256": "537fa78c45c6b6d451aaaa849975136aadac0cfae53017c65c352f61ae5ca916",
+          "bytes": 641,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/edit-a.txt",
+          "source_relative_path": "cases/F5/inputs/edit-a.txt",
+          "sha256": "591a0a9822ab27a4bd0d8ec39c6ee4d2a1758395dbdb8bf28588279c67bb85ec",
+          "bytes": 661,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/edit-b.txt",
+          "source_relative_path": "cases/F5/inputs/edit-b.txt",
+          "sha256": "b6e47e2257610187d3758ebb4637a75e880778c014114d79cead080554b052cd",
+          "bytes": 642,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/lineage.txt",
+          "source_relative_path": "cases/F5/inputs/lineage.txt",
+          "sha256": "0d291dce482e23dbdc0cc728f21df5833ff006c8d2a40e88b4ca968fa1f58f7f",
+          "bytes": 535,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F5/task.txt",
+          "sha256": "498976982e2215783c18ed6139bc9618735f6dde16e0fc7696c0f647836f1ed7",
+          "bytes": 4562,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "skill/document-revision-reconciliation/SKILL.md",
+          "source_relative_path": "packages/skill/document-revision-reconciliation/SKILL.md",
+          "repo_path": "skill/document-revision-reconciliation/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "a67ade3298a8efb6a2380b82aa5a1ab2dd60c37f",
+          "sha256": "4c110c999915c804d6965d4e1da5be411d186743defd2b3ab802b642e3126e19",
+          "bytes": 11597,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/document-revision-reconciliation/check_example.py",
+          "source_relative_path": "packages/skill/document-revision-reconciliation/check_example.py",
+          "repo_path": "skill/document-revision-reconciliation/check_example.py",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "17b51c0e527db28df90835e9d3832bb62ee4ce33",
+          "sha256": "48690a9513d403022495ad207478598c4a342c52aa71e508e46e58bd912c41fd",
+          "bytes": 7487,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/document-revision-reconciliation/example-results.json",
+          "source_relative_path": "packages/skill/document-revision-reconciliation/example-results.json",
+          "repo_path": "skill/document-revision-reconciliation/example-results.json",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "3d74c78e02ecc5a9c9bb3cdb4e04a66c7975d72e",
+          "sha256": "47512df10fa90b581b26db5eddd0e96e80259e57df4e6bbccebd2b79f24cdbd0",
+          "bytes": 2117,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/document-revision-reconciliation/example.md",
+          "source_relative_path": "packages/skill/document-revision-reconciliation/example.md",
+          "repo_path": "skill/document-revision-reconciliation/example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "766a78c7bfa114896c9df6e1711b687ab92a2cb7",
+          "sha256": "4d2f1a8ea7ef7001736abf37cf0eaa2dd8e2f88d8e9797474103215fe7a1079d",
+          "bytes": 3393,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N08-F5-C",
+      "case_id": "F5",
+      "arm": "C",
+      "schedule_ordinal": 8,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N08-F5-C/candidate.txt",
+          "sha256": "6141bf7d6d8c3e073d9a31560e6e1e4d86ef544dab1b34b4fcad6846e661910e",
+          "bytes": 690
+        },
+        {
+          "path": "artifacts/N08-F5-C/decisions.json",
+          "sha256": "5a41f125717b663fbebd9a5d72bf787792d27ce22956241758885e979ae78d68",
+          "bytes": 4326
+        }
+      ],
+      "artifact_grade": "grades/N08-F5-C.json",
+      "artifact_grade_sha256": "9525e0f5660e3c02fed84d86e5447b1b9b89c8e033edb5d633892389a171c9e6",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:30:07Z",
+      "completion_observed_utc": "2026-10-06T01:31:54Z",
+      "artifact_frozen_utc": "2026-10-06T01:32:02.952472+00:00",
+      "approximate_observation_interval_seconds": 107.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "3920b86c322b35624a3bd4ff400b93f70c67e4a9f23034af68f4273646acc4b4",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F5/input-manifest.json",
+          "sha256": "583a214437d9d0cbbd6915e0776357517031a769744d5ca10f744782cc30ca40",
+          "bytes": 828,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/acceptance.txt",
+          "source_relative_path": "cases/F5/inputs/acceptance.txt",
+          "sha256": "29947f4ae01ac80c84522cd0f0ffbe30058f658b5016c10eecdb3bcc126429e8",
+          "bytes": 1297,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/baseline.txt",
+          "source_relative_path": "cases/F5/inputs/baseline.txt",
+          "sha256": "537fa78c45c6b6d451aaaa849975136aadac0cfae53017c65c352f61ae5ca916",
+          "bytes": 641,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/edit-a.txt",
+          "source_relative_path": "cases/F5/inputs/edit-a.txt",
+          "sha256": "591a0a9822ab27a4bd0d8ec39c6ee4d2a1758395dbdb8bf28588279c67bb85ec",
+          "bytes": 661,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/edit-b.txt",
+          "source_relative_path": "cases/F5/inputs/edit-b.txt",
+          "sha256": "b6e47e2257610187d3758ebb4637a75e880778c014114d79cead080554b052cd",
+          "bytes": 642,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/lineage.txt",
+          "source_relative_path": "cases/F5/inputs/lineage.txt",
+          "sha256": "0d291dce482e23dbdc0cc728f21df5833ff006c8d2a40e88b4ca968fa1f58f7f",
+          "bytes": 535,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F5/task.txt",
+          "sha256": "498976982e2215783c18ed6139bc9618735f6dde16e0fc7696c0f647836f1ed7",
+          "bytes": 4562,
+          "role": "protected_task_or_input"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N09-F6-C",
+      "case_id": "F6",
+      "arm": "C",
+      "schedule_ordinal": 9,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N09-F6-C/report-notes.txt",
+          "sha256": "d70a9bc60bd5d552e7569286a88a9022b901cebe1cef5df77d7edaebea79d27d",
+          "bytes": 2088
+        },
+        {
+          "path": "artifacts/N09-F6-C/report.sql",
+          "sha256": "5d519c8f514af671c0c4c79fc4167b4138253eab818ee92901facb59adc56e1a",
+          "bytes": 2560
+        },
+        {
+          "path": "artifacts/N09-F6-C/result.csv",
+          "sha256": "1604d5474b2c70b363d4652d59d9c5469def0c9beb2a0555a0d89542f04cc5d3",
+          "bytes": 300
+        }
+      ],
+      "artifact_grade": "grades/N09-F6-C.json",
+      "artifact_grade_sha256": "fbd415820f9284f0d4732c84753f5bb46f89e23df135139497322d577711fcbe",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:30:17Z",
+      "completion_observed_utc": "2026-10-06T01:32:28Z",
+      "artifact_frozen_utc": "2026-10-06T01:33:03.441199+00:00",
+      "approximate_observation_interval_seconds": 131.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "c68a57c9eedf6776d0178b4af53cfd2214578c514c05c558d67e5f467af13acc",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F6/input-manifest.json",
+          "sha256": "2467d5796726dd71fe5573a1c38115539bd81ecb3adcead731de5a767b181fcf",
+          "bytes": 991,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/line_items.csv",
+          "source_relative_path": "cases/F6/inputs/line_items.csv",
+          "sha256": "43bd1504e2dbf30798e49ba85fd8c6413f60c8527eba6f47a1b5232ff7acd1fb",
+          "bytes": 209,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/orders.csv",
+          "source_relative_path": "cases/F6/inputs/orders.csv",
+          "sha256": "e3ee4870cafb11b5d176c7fdec0ccc55e6b7ed7de0ac4be33f452ad93669a259",
+          "bytes": 500,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/orders.sqlite3",
+          "source_relative_path": "cases/F6/inputs/orders.sqlite3",
+          "sha256": "ce08308a64ef27619726ece4015d9e2d8409a32168031df32f15b0a8c9100441",
+          "bytes": 28672,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/parameters.json",
+          "source_relative_path": "cases/F6/inputs/parameters.json",
+          "sha256": "98ceaed16b674d53e56ad8c87bdf21f2042267ada9c81a13b36b1f141634a87a",
+          "bytes": 749,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/refunds.csv",
+          "source_relative_path": "cases/F6/inputs/refunds.csv",
+          "sha256": "eda797a722cd3cceffeb5bbfd496f5dc02a5e72131815e1ee2cda84e6459a772",
+          "bytes": 586,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/schema.sql",
+          "source_relative_path": "cases/F6/inputs/schema.sql",
+          "sha256": "0e7ceb96038beb4f4e0f6d529491a206af7749223b636480df961907d5b242f7",
+          "bytes": 447,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F6/task.txt",
+          "sha256": "c1073c0cef27cd5095db82df260d2046ee151e249c32d3f7d67db332a8458e96",
+          "bytes": 6372,
+          "role": "protected_task_or_input"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N10-F6-S",
+      "case_id": "F6",
+      "arm": "S",
+      "schedule_ordinal": 10,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N10-F6-S/report-notes.txt",
+          "sha256": "f570547946ef5438d75417b57d4e52b4317c387bb5759ad2e077d409cb570026",
+          "bytes": 4843
+        },
+        {
+          "path": "artifacts/N10-F6-S/report.sql",
+          "sha256": "07efe4d7775aef5b706c597b0da25414ea754dd5485c9e9e0d0283ba3885e8ce",
+          "bytes": 2986
+        },
+        {
+          "path": "artifacts/N10-F6-S/result.csv",
+          "sha256": "1604d5474b2c70b363d4652d59d9c5469def0c9beb2a0555a0d89542f04cc5d3",
+          "bytes": 300
+        }
+      ],
+      "artifact_grade": "grades/N10-F6-S.json",
+      "artifact_grade_sha256": "fbd415820f9284f0d4732c84753f5bb46f89e23df135139497322d577711fcbe",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:30:28Z",
+      "completion_observed_utc": "2026-10-06T01:34:43Z",
+      "artifact_frozen_utc": "2026-10-06T01:34:52.707871+00:00",
+      "approximate_observation_interval_seconds": 255.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "80ddcc1e6d444a00d682288c238bcd81c1cc165d7b68c30702c0e502afef0793",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F6/input-manifest.json",
+          "sha256": "2467d5796726dd71fe5573a1c38115539bd81ecb3adcead731de5a767b181fcf",
+          "bytes": 991,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/line_items.csv",
+          "source_relative_path": "cases/F6/inputs/line_items.csv",
+          "sha256": "43bd1504e2dbf30798e49ba85fd8c6413f60c8527eba6f47a1b5232ff7acd1fb",
+          "bytes": 209,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/orders.csv",
+          "source_relative_path": "cases/F6/inputs/orders.csv",
+          "sha256": "e3ee4870cafb11b5d176c7fdec0ccc55e6b7ed7de0ac4be33f452ad93669a259",
+          "bytes": 500,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/orders.sqlite3",
+          "source_relative_path": "cases/F6/inputs/orders.sqlite3",
+          "sha256": "ce08308a64ef27619726ece4015d9e2d8409a32168031df32f15b0a8c9100441",
+          "bytes": 28672,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/parameters.json",
+          "source_relative_path": "cases/F6/inputs/parameters.json",
+          "sha256": "98ceaed16b674d53e56ad8c87bdf21f2042267ada9c81a13b36b1f141634a87a",
+          "bytes": 749,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/refunds.csv",
+          "source_relative_path": "cases/F6/inputs/refunds.csv",
+          "sha256": "eda797a722cd3cceffeb5bbfd496f5dc02a5e72131815e1ee2cda84e6459a772",
+          "bytes": 586,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/schema.sql",
+          "source_relative_path": "cases/F6/inputs/schema.sql",
+          "sha256": "0e7ceb96038beb4f4e0f6d529491a206af7749223b636480df961907d5b242f7",
+          "bytes": 447,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F6/task.txt",
+          "sha256": "c1073c0cef27cd5095db82df260d2046ee151e249c32d3f7d67db332a8458e96",
+          "bytes": 6372,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "skill/sql-report-reconciliation/SKILL.md",
+          "source_relative_path": "packages/skill/sql-report-reconciliation/SKILL.md",
+          "repo_path": "skill/sql-report-reconciliation/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "b8b8dd3aeb405a4c8411bc0a612beb56804293e8",
+          "sha256": "0bbd6f501ee28738fea6326fe8759a2383047b034ad6888378dc00ca92204c59",
+          "bytes": 8367,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/sql-report-reconciliation/references/fictional-example.md",
+          "source_relative_path": "packages/skill/sql-report-reconciliation/references/fictional-example.md",
+          "repo_path": "skill/sql-report-reconciliation/references/fictional-example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "f0df9e2760b89a64f729dbcf34656ad3d25fec0f",
+          "sha256": "9193c975032ac7880a0901480840c950aba154635bc644b5ac1f22931074afc8",
+          "bytes": 17142,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/sql-report-reconciliation/references/verified-run.md",
+          "source_relative_path": "packages/skill/sql-report-reconciliation/references/verified-run.md",
+          "repo_path": "skill/sql-report-reconciliation/references/verified-run.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "d8a4cc23adc733ad860d4c3b7ff403f833b4c68c",
+          "sha256": "cbcc0f25d9f348efad324d22e6bd61b1fffc076e25d5cb41583c057795812934",
+          "bytes": 3987,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N11-F2-C",
+      "case_id": "F2",
+      "arm": "C",
+      "schedule_ordinal": 11,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N11-F2-C/actions.json",
+          "sha256": "25334013aef7cc20f733a2d6c0f899df0b9eb39d6b566aec9112cb9bad666f79",
+          "bytes": 5677
+        },
+        {
+          "path": "artifacts/N11-F2-C/handoff.txt",
+          "sha256": "108c846e171450f6e044704008506fc61659a56bc38ad8d9129785313411c23e",
+          "bytes": 2487
+        }
+      ],
+      "artifact_grade": "grades/N11-F2-C.json",
+      "artifact_grade_sha256": "6b3b129adf5030077f59a347c8cde3f36289783dfbe72a91d4b14b7b3c9dba83",
+      "semantic_reviews": [
+        {
+          "reviewer": "AI-assisted reviewer A",
+          "path": "reviews/reviewer-a/N11-F2-C.json",
+          "sha256": "6cfdb94c22ea61a533406036302206b5d7f3c7b38624f46b9ab8708ac1e69c48",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        },
+        {
+          "reviewer": "AI-assisted reviewer B",
+          "path": "reviews/reviewer-b/N11-F2-C.json",
+          "sha256": "fce5cd02d830f3fa849eb425f13c19a0e045b43eafab414fc36b95006a93c80f",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        }
+      ],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:30:41Z",
+      "completion_observed_utc": "2026-10-06T01:32:38Z",
+      "artifact_frozen_utc": "2026-10-06T01:33:03.467294+00:00",
+      "approximate_observation_interval_seconds": 117.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "8b3f9c6c97e84d5468fea98c878aee6f4bfc44a786d6944a8a2c4af81a482d4a",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F2/input-manifest.json",
+          "sha256": "ba1e35ae7fb7b316dd0ad79faaf81c92d93d573efe2e2d546eedd51d3f626250",
+          "bytes": 630,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/arrival-draft.txt",
+          "source_relative_path": "cases/F2/inputs/arrival-draft.txt",
+          "sha256": "8c2ce18a3236a675deacac6453c7ff6d93a2722f434c19e5481ed8fe6ab30812",
+          "bytes": 443,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/audio-check.txt",
+          "source_relative_path": "cases/F2/inputs/audio-check.txt",
+          "sha256": "1a2ff6f231e7d4974cc4c1baca892d2dff3ee649296684d4cf2ff0a0b1bd1e61",
+          "bytes": 390,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/followups.txt",
+          "source_relative_path": "cases/F2/inputs/followups.txt",
+          "sha256": "663f55dc8e434b278ec598495490fccda093ed2d8fb15d6eab07cf55b5b43af7",
+          "bytes": 1268,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/meeting.txt",
+          "source_relative_path": "cases/F2/inputs/meeting.txt",
+          "sha256": "fda24e7023ad6ba85dcd4e6aaa997db849efbbf46aef22a43df6e8ab2d50e834",
+          "bytes": 1996,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/people.json",
+          "source_relative_path": "cases/F2/inputs/people.json",
+          "sha256": "9816157a7608139f73d84a483f3b5d2d4c9a767637b9dd28f33747bccf09ff4c",
+          "bytes": 406,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F2/task.txt",
+          "sha256": "2e792764dbfdb9c20d062d2c62a1137d672282c046d521fa76a3ef9e65e0b636",
+          "bytes": 4536,
+          "role": "protected_task_or_input"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N12-F2-S",
+      "case_id": "F2",
+      "arm": "S",
+      "schedule_ordinal": 12,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N12-F2-S/actions.json",
+          "sha256": "b325b2137856e580c9d80ff0aa7b0cde52639733ea2a83d348b7dda5f282f343",
+          "bytes": 6811
+        },
+        {
+          "path": "artifacts/N12-F2-S/handoff.txt",
+          "sha256": "8c71b4c07cafb255d31a49153eea47f3b44c7ea4f0be4f3f37e05515b945118d",
+          "bytes": 2584
+        }
+      ],
+      "artifact_grade": "grades/N12-F2-S.json",
+      "artifact_grade_sha256": "871f95e8a689072ef2d384efe7c7b7913bac968189648ea95cd037b66e34542d",
+      "semantic_reviews": [
+        {
+          "reviewer": "AI-assisted reviewer A",
+          "path": "reviews/reviewer-a/N12-F2-S.json",
+          "sha256": "78c995648eb051dc0e34fd8b5abcf548327240003a55e1aa118fa90e13cc3e23",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        },
+        {
+          "reviewer": "AI-assisted reviewer B",
+          "path": "reviews/reviewer-b/N12-F2-S.json",
+          "sha256": "a69ee2795846b181a9a3dfed6b2dec225c1c55d0f49a7f344ec1503e99962f3d",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        }
+      ],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:30:51Z",
+      "completion_observed_utc": "2026-10-06T01:32:47Z",
+      "artifact_frozen_utc": "2026-10-06T01:33:03.493563+00:00",
+      "approximate_observation_interval_seconds": 116.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "82350a19c3984cfd9126acf63e36affdc2df9dd32ebdcfc07aeb24e46ca2a627",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F2/input-manifest.json",
+          "sha256": "ba1e35ae7fb7b316dd0ad79faaf81c92d93d573efe2e2d546eedd51d3f626250",
+          "bytes": 630,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/arrival-draft.txt",
+          "source_relative_path": "cases/F2/inputs/arrival-draft.txt",
+          "sha256": "8c2ce18a3236a675deacac6453c7ff6d93a2722f434c19e5481ed8fe6ab30812",
+          "bytes": 443,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/audio-check.txt",
+          "source_relative_path": "cases/F2/inputs/audio-check.txt",
+          "sha256": "1a2ff6f231e7d4974cc4c1baca892d2dff3ee649296684d4cf2ff0a0b1bd1e61",
+          "bytes": 390,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/followups.txt",
+          "source_relative_path": "cases/F2/inputs/followups.txt",
+          "sha256": "663f55dc8e434b278ec598495490fccda093ed2d8fb15d6eab07cf55b5b43af7",
+          "bytes": 1268,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/meeting.txt",
+          "source_relative_path": "cases/F2/inputs/meeting.txt",
+          "sha256": "fda24e7023ad6ba85dcd4e6aaa997db849efbbf46aef22a43df6e8ab2d50e834",
+          "bytes": 1996,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/people.json",
+          "source_relative_path": "cases/F2/inputs/people.json",
+          "sha256": "9816157a7608139f73d84a483f3b5d2d4c9a767637b9dd28f33747bccf09ff4c",
+          "bytes": 406,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F2/task.txt",
+          "sha256": "2e792764dbfdb9c20d062d2c62a1137d672282c046d521fa76a3ef9e65e0b636",
+          "bytes": 4536,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-action-handoff/SKILL.md",
+          "source_relative_path": "packages/skill/meeting-action-handoff/SKILL.md",
+          "repo_path": "skill/meeting-action-handoff/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "7c437508da6042eb04b5f81e58b4b06db19740ee",
+          "sha256": "f6e36e12666ab844609344a9b5cabe92dfc6e84cd12c0455ce64e74c6b98d2ee",
+          "bytes": 10774,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-action-handoff/example.md",
+          "source_relative_path": "packages/skill/meeting-action-handoff/example.md",
+          "repo_path": "skill/meeting-action-handoff/example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "2ce4c091595230c9d7432a103e5765e0a26f5953",
+          "sha256": "b0fcc1e08b4d0c4ad8d3354ff8131972b9e3dccd6f4b03a3a8a022a4f8e511e7",
+          "bytes": 3716,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N13-F4-C",
+      "case_id": "F4",
+      "arm": "C",
+      "schedule_ordinal": 13,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N13-F4-C/decision-brief.txt",
+          "sha256": "36004c0b77da180b5e1ea0af851c4014e55e7dfb5745052d4405ab6228485cfd",
+          "bytes": 3707
+        }
+      ],
+      "artifact_grade": "grades/N13-F4-C.json",
+      "artifact_grade_sha256": "eec9d4db9993404079b0e3a79dac6798825898e1bf230d15db6b0d264a5884ba",
+      "semantic_reviews": [
+        {
+          "reviewer": "AI-assisted reviewer A",
+          "path": "reviews/reviewer-a/N13-F4-C.json",
+          "sha256": "bb104a9328101aeafc88fcd0011d7c824cd8a7eba204aa3e095514843c78bb3d",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        },
+        {
+          "reviewer": "AI-assisted reviewer B",
+          "path": "reviews/reviewer-b/N13-F4-C.json",
+          "sha256": "85f4c51a9491b04f244da8e9be2a2b7c8adcb0dfb359989ae59bea6b128a73eb",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        }
+      ],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:32:14Z",
+      "completion_observed_utc": "2026-10-06T01:33:31Z",
+      "artifact_frozen_utc": "2026-10-06T01:33:44.951943+00:00",
+      "approximate_observation_interval_seconds": 77.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "52cf1e02966b8eb06b69dbe64bae8607cd625762124375ebd01b091753ae08f6",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F4/input-manifest.json",
+          "sha256": "4abffb0b8229ec6d01384c5eb4182bf8319b9636342f97fe992358f583c6382b",
+          "bytes": 1073,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/01-user-requirements.txt",
+          "source_relative_path": "cases/F4/inputs/01-user-requirements.txt",
+          "sha256": "4fa1f7c240138c2e52d7f0777cf5cffc9733957ee1ea7a279fd5453d76d4a320",
+          "bytes": 2973,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/02-alderroster-community-3.4.txt",
+          "source_relative_path": "cases/F4/inputs/02-alderroster-community-3.4.txt",
+          "sha256": "dd817edba92820ff692d1cb606337f49ec03ceb2559104461f2f22e78a033695",
+          "bytes": 1093,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/03-beaconcrew-basic-2.8.txt",
+          "source_relative_path": "cases/F4/inputs/03-beaconcrew-basic-2.8.txt",
+          "sha256": "bdd15ef18a1cfe4d817074893403ae1abb8eff96d609260b0b83d66f36aa2b59",
+          "bytes": 845,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/04-beaconcrew-overview.txt",
+          "source_relative_path": "cases/F4/inputs/04-beaconcrew-overview.txt",
+          "sha256": "e73dcd53d41925d3aff094f0d8aeee3842b189dd6b7cc146047f0e063e9d8d99",
+          "bytes": 465,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/05-cedarshift-team-5.1.txt",
+          "source_relative_path": "cases/F4/inputs/05-cedarshift-team-5.1.txt",
+          "sha256": "36d5c2bbbc557d3ef77b228eac76af96c3eef6c6f63c0ad3e8a91e56b509a705",
+          "bytes": 1657,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/06-cedarshift-update.txt",
+          "source_relative_path": "cases/F4/inputs/06-cedarshift-update.txt",
+          "sha256": "d7763ad4b9d3a366f4cdac53f02f85fb373ebbc58a23b84715ae80a9d0d5a44a",
+          "bytes": 531,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F4/task.txt",
+          "sha256": "1e08d67a65562061323f3b7f0ded81a215556ca452f544a817e1673d2b7a4ded",
+          "bytes": 3628,
+          "role": "protected_task_or_input"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N14-F4-S",
+      "case_id": "F4",
+      "arm": "S",
+      "schedule_ordinal": 14,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N14-F4-S/decision-brief.txt",
+          "sha256": "debf000f3881cff0c0f84829de7bc9336e2bb1e574749305b3f6b717510623bf",
+          "bytes": 3843
+        }
+      ],
+      "artifact_grade": "grades/N14-F4-S.json",
+      "artifact_grade_sha256": "7f51f52ee7fca257dcdb89db858d46155c7fbf43fd0e44221d7014f7ef4886a4",
+      "semantic_reviews": [
+        {
+          "reviewer": "AI-assisted reviewer A",
+          "path": "reviews/reviewer-a/N14-F4-S.json",
+          "sha256": "621242c7b0d6132af70288ed3132ce826377fbb9d498eb870d3d3426bb3a0d5b",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        },
+        {
+          "reviewer": "AI-assisted reviewer B",
+          "path": "reviews/reviewer-b/N14-F4-S.json",
+          "sha256": "41f276852c7745fe93255308224883517f240698856779902057a12876f0ccf0",
+          "type": "source-grounded artifact semantics",
+          "human_review": false
+        }
+      ],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:32:28Z",
+      "completion_observed_utc": "2026-10-06T01:34:04Z",
+      "artifact_frozen_utc": "2026-10-06T01:34:12.150786+00:00",
+      "approximate_observation_interval_seconds": 96.0,
+      "timeout_cap_seconds": 900,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "282a44897391678b6988d32036a2f59b733fa06c868e78bce2ed13cef30b4147",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F4/input-manifest.json",
+          "sha256": "4abffb0b8229ec6d01384c5eb4182bf8319b9636342f97fe992358f583c6382b",
+          "bytes": 1073,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/01-user-requirements.txt",
+          "source_relative_path": "cases/F4/inputs/01-user-requirements.txt",
+          "sha256": "4fa1f7c240138c2e52d7f0777cf5cffc9733957ee1ea7a279fd5453d76d4a320",
+          "bytes": 2973,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/02-alderroster-community-3.4.txt",
+          "source_relative_path": "cases/F4/inputs/02-alderroster-community-3.4.txt",
+          "sha256": "dd817edba92820ff692d1cb606337f49ec03ceb2559104461f2f22e78a033695",
+          "bytes": 1093,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/03-beaconcrew-basic-2.8.txt",
+          "source_relative_path": "cases/F4/inputs/03-beaconcrew-basic-2.8.txt",
+          "sha256": "bdd15ef18a1cfe4d817074893403ae1abb8eff96d609260b0b83d66f36aa2b59",
+          "bytes": 845,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/04-beaconcrew-overview.txt",
+          "source_relative_path": "cases/F4/inputs/04-beaconcrew-overview.txt",
+          "sha256": "e73dcd53d41925d3aff094f0d8aeee3842b189dd6b7cc146047f0e063e9d8d99",
+          "bytes": 465,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/05-cedarshift-team-5.1.txt",
+          "source_relative_path": "cases/F4/inputs/05-cedarshift-team-5.1.txt",
+          "sha256": "36d5c2bbbc557d3ef77b228eac76af96c3eef6c6f63c0ad3e8a91e56b509a705",
+          "bytes": 1657,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/06-cedarshift-update.txt",
+          "source_relative_path": "cases/F4/inputs/06-cedarshift-update.txt",
+          "sha256": "d7763ad4b9d3a366f4cdac53f02f85fb373ebbc58a23b84715ae80a9d0d5a44a",
+          "bytes": 531,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F4/task.txt",
+          "sha256": "1e08d67a65562061323f3b7f0ded81a215556ca452f544a817e1673d2b7a4ded",
+          "bytes": 3628,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "skill/decision-source-brief/SKILL.md",
+          "source_relative_path": "packages/skill/decision-source-brief/SKILL.md",
+          "repo_path": "skill/decision-source-brief/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "fd3b0ff381f314654d590d4c6a53c076f1ef3859",
+          "sha256": "94d0bb40cf971819f1d295198de39e1df5c172d06f14eea6950f2332f744dd60",
+          "bytes": 8258,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/decision-source-brief/examples/fictional-venue-decision.md",
+          "source_relative_path": "packages/skill/decision-source-brief/examples/fictional-venue-decision.md",
+          "repo_path": "skill/decision-source-brief/examples/fictional-venue-decision.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "3159397f6c321b2473f9cdc677b374094127abe8",
+          "sha256": "e07e0835fcfc8faf9596b558cb1504fcc627cc50d65af912955f3bd93dea19ab",
+          "bytes": 5629,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N15-F8-C",
+      "case_id": "F8",
+      "arm": "C",
+      "schedule_ordinal": 15,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N15-F8-C/card_editor.py",
+          "sha256": "0abdd048b29fb9d96fc5d2371ae78b55587f722db4036c1efc172794eec1121d",
+          "bytes": 1399
+        },
+        {
+          "path": "artifacts/N15-F8-C/checks.txt",
+          "sha256": "7eae3ab8a88f2f1e641ffd31d94ee2c36e8c875fc558e1b955920c1d269e6bd0",
+          "bytes": 1159
+        },
+        {
+          "path": "artifacts/N15-F8-C/demo_cards.json",
+          "sha256": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+          "bytes": 419
+        },
+        {
+          "path": "artifacts/N15-F8-C/merge_primitive.py",
+          "sha256": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+          "bytes": 944
+        },
+        {
+          "path": "artifacts/N15-F8-C/merge_session.py",
+          "sha256": "246f8eda63e1e521ca1e04927554772ab7442432923405298ad251893f9ef283",
+          "bytes": 3947
+        },
+        {
+          "path": "artifacts/N15-F8-C/tests/test_regressions.py",
+          "sha256": "666b53740eaada3695828254b217c12a1296846b49ec336bb122d6092a39c8f9",
+          "bytes": 21748
+        },
+        {
+          "path": "artifacts/N15-F8-C/tests/test_smoke.py",
+          "sha256": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+          "bytes": 992
+        }
+      ],
+      "artifact_grade": "grades/N15-F8-C.json",
+      "artifact_grade_sha256": "1e027fdede4d347b36bbf05814cd6795b062f365727c0269d326472429091625",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:32:38Z",
+      "completion_observed_utc": "2026-10-06T01:37:11Z",
+      "artifact_frozen_utc": "2026-10-06T01:37:16.070266+00:00",
+      "approximate_observation_interval_seconds": 273.0,
+      "timeout_cap_seconds": 1500,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "60ed68a90d7bd5b305bd7843f6b4b67bf96d3496d22525aefe32bebb59f859c5",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F8/input-manifest.json",
+          "sha256": "bfa0333640ae6d355127920c98bde8dd2d7e03adccf0b6ad11aebf8e5608d14f",
+          "bytes": 1277,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/card_editor.py",
+          "source_relative_path": "cases/F8/inputs/scaffold/card_editor.py",
+          "sha256": "2e44e0f8f77d254d4d19fd8fc3fe61a3204814e2e9642c1a18c323c676ce553c",
+          "bytes": 1253,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/demo_cards.json",
+          "source_relative_path": "cases/F8/inputs/scaffold/demo_cards.json",
+          "sha256": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+          "bytes": 419,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/merge_primitive.py",
+          "source_relative_path": "cases/F8/inputs/scaffold/merge_primitive.py",
+          "sha256": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+          "bytes": 944,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/merge_session.py",
+          "source_relative_path": "cases/F8/inputs/scaffold/merge_session.py",
+          "sha256": "566e60c6a81eb8540192128aa4fb5a8a99e9338b0e7f51c0ca8a12df186bc2ec",
+          "bytes": 3429,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/tests/test_smoke.py",
+          "source_relative_path": "cases/F8/inputs/scaffold/tests/test_smoke.py",
+          "sha256": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+          "bytes": 992,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F8/task.txt",
+          "sha256": "f46857e7d3c1b52e9d71cdf86f962064a23c9e69950093a614e234ce9efb2335",
+          "bytes": 10808,
+          "role": "protected_task_or_input"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N16-F8-S",
+      "case_id": "F8",
+      "arm": "S",
+      "schedule_ordinal": 16,
+      "attempt_number": 1,
+      "submission_status": "first_submission_frozen",
+      "artifact_files": [
+        {
+          "path": "artifacts/N16-F8-S/card_editor.py",
+          "sha256": "19ee7abc3a4ea6a2f71073a28a0b9d02610125eb969e3cdaad25a55cd9bad7ca",
+          "bytes": 1437
+        },
+        {
+          "path": "artifacts/N16-F8-S/checks.txt",
+          "sha256": "75662813df0a4e82f93fb9635a3bafb0da01d835de20a54d4c62a941e063a0c7",
+          "bytes": 1109
+        },
+        {
+          "path": "artifacts/N16-F8-S/demo_cards.json",
+          "sha256": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+          "bytes": 419
+        },
+        {
+          "path": "artifacts/N16-F8-S/merge_primitive.py",
+          "sha256": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+          "bytes": 944
+        },
+        {
+          "path": "artifacts/N16-F8-S/merge_session.py",
+          "sha256": "7b6409737d8ea5c1c0adb2a38d7ae52879ba038ee28b4a37ee5063e9532886a2",
+          "bytes": 4133
+        },
+        {
+          "path": "artifacts/N16-F8-S/tests/test_regressions.py",
+          "sha256": "bcc73dade8b76d7651df5af9805bc4179509f5de27396805f98988e18fdce674",
+          "bytes": 20935
+        },
+        {
+          "path": "artifacts/N16-F8-S/tests/test_smoke.py",
+          "sha256": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+          "bytes": 992
+        }
+      ],
+      "artifact_grade": "grades/N16-F8-S.json",
+      "artifact_grade_sha256": "1e027fdede4d347b36bbf05814cd6795b062f365727c0269d326472429091625",
+      "semantic_reviews": [],
+      "criterion_groups": [
+        {
+          "id": "g1",
+          "passed": true
+        },
+        {
+          "id": "g2",
+          "passed": true
+        },
+        {
+          "id": "g3",
+          "passed": true
+        },
+        {
+          "id": "g4",
+          "passed": true
+        },
+        {
+          "id": "g5",
+          "passed": true
+        }
+      ],
+      "protected_input_hashes_unchanged_at_collection": true,
+      "overall_acceptance": null,
+      "process_integrity": null,
+      "os_isolation_verified": false,
+      "dispatch_confirmation_observed_utc": "2026-10-06T01:32:47Z",
+      "completion_observed_utc": "2026-10-06T01:37:16Z",
+      "artifact_frozen_utc": "2026-10-06T01:37:27.175895+00:00",
+      "approximate_observation_interval_seconds": 269.0,
+      "timeout_cap_seconds": 1500,
+      "timeout_observed": false,
+      "token_usage": null,
+      "dollar_cost": null,
+      "exact_serving_model_build": null,
+      "dispatch_prompt_sha256": "4428104f6eded557197cfe318386547626ede90b35908ef8939c44e8b53ea416",
+      "protected_inputs": [
+        {
+          "candidate_relative_path": "input-manifest.json",
+          "source_relative_path": "cases/F8/input-manifest.json",
+          "sha256": "bfa0333640ae6d355127920c98bde8dd2d7e03adccf0b6ad11aebf8e5608d14f",
+          "bytes": 1277,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/card_editor.py",
+          "source_relative_path": "cases/F8/inputs/scaffold/card_editor.py",
+          "sha256": "2e44e0f8f77d254d4d19fd8fc3fe61a3204814e2e9642c1a18c323c676ce553c",
+          "bytes": 1253,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/demo_cards.json",
+          "source_relative_path": "cases/F8/inputs/scaffold/demo_cards.json",
+          "sha256": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+          "bytes": 419,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/merge_primitive.py",
+          "source_relative_path": "cases/F8/inputs/scaffold/merge_primitive.py",
+          "sha256": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+          "bytes": 944,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/merge_session.py",
+          "source_relative_path": "cases/F8/inputs/scaffold/merge_session.py",
+          "sha256": "566e60c6a81eb8540192128aa4fb5a8a99e9338b0e7f51c0ca8a12df186bc2ec",
+          "bytes": 3429,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "inputs/scaffold/tests/test_smoke.py",
+          "source_relative_path": "cases/F8/inputs/scaffold/tests/test_smoke.py",
+          "sha256": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+          "bytes": 992,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "task.txt",
+          "source_relative_path": "cases/F8/task.txt",
+          "sha256": "f46857e7d3c1b52e9d71cdf86f962064a23c9e69950093a614e234ce9efb2335",
+          "bytes": 10808,
+          "role": "protected_task_or_input"
+        },
+        {
+          "candidate_relative_path": "skill/build-text-merge-component/SKILL.md",
+          "source_relative_path": "packages/skill/build-text-merge-component/SKILL.md",
+          "repo_path": "skill/build-text-merge-component/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "73e070ddb93f1a3640813cad908f20dde250ba12",
+          "sha256": "e1edb81fd65830e73dd0015672c5cc962fae2118957121236439e810858c1975",
+          "bytes": 10423,
+          "role": "designated_package"
+        }
+      ]
+    }
+  ]
+}

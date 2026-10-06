@@ -1,0 +1,21 @@
+{
+  "case_id": "F1",
+  "submission_hashes": {
+    "claim-lines.csv": "ec8a6d707c9c973b3944265781e7c57efc3dd6d2846b646e81a8830de7e5617d",
+    "source-map.csv": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+    "exceptions.txt": "f8090ffb8599dae85313d230218cd871ee8715f79f1c4c74d2c58b356c9562d0"
+  },
+  "groups": {
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "exceptions.txt:8 identifies S07 as a rescan of S02/receipt M-826 for canonical T02, says it adds no monetary line or amount, and treats settlement/purpose records as supporting evidence. source-map.csv:3,8 places S02 and S07 on T02 as primary and duplicate respectively; claim-lines.csv:3 has one T02 row. This matches inputs/evidence.csv#S02/#S07 and inputs/policy.txt#P1/#P6.",
+        "exceptions.txt:10 applies T03's -600 to the original CF-7/CF-26/2026-09-17 T01/T02 meal group despite its later posting date, calculates 2835+2470-600=4705 and a 205 excess over 4500, allocates the entire -205 to later positive T02, and retains T03's full -600 with zero cap adjustment. claim-lines.csv:2-4 agrees (2835,2265,-600). This is the order and allocation required by inputs/policy.txt#P3, with linked credit evidence inputs/evidence.csv#S03/#S10 and inherited purpose under #P2.",
+        "exceptions.txt:12 keeps T04 as one 3199-pence source transaction with exactly 1999 business and 1200 personal excluded; claim-lines.csv:5 agrees. Its S04/S13 and inputs/policy.txt#P4 references support the explicit split, without proportional allocation or a second transaction.",
+        "exceptions.txt:16 identifies T06/receipt X-033 and its full 1488 unresolved amount; it explains that S15 proves settlement but no purpose, asks for a source-backed specific business-purpose statement or confirmation the purchase was personal, leaves the three eligibility/claim fields empty, and excludes all 1488 from the 7774 ready subtotal. claim-lines.csv:7 is consistent. inputs/evidence.csv#S06/#S15 and inputs/policy.txt#P2/#P6 require exactly this bounded unresolved treatment.",
+        "exceptions.txt:6 calls the output a draft calculation and disclaims tax advice, an approved claim, reimbursement request, submission, and external action/verification. No contradictory external-action claim occurs in the reviewed files. This supports the content-level draft-only requirement in task.txt and inputs/policy.txt#P6; it is not an inference about unobserved execution.",
+        "Relevant policy links are substantive: exceptions.txt:10 cites #P3 for the cap/credit and #P2 for inherited purpose; :12 cites #P4 for supplies; :14 cites #P5 and explains that S05/S14 establish fully eligible uncapped transport outside the meal group; :16 cites #P2/#P6 for missing purpose. claim-lines.csv:2-7 also supplies the treatment-specific policy locators. The 7774 ready, 10667 canonical source, 1200 personal and 1488 unresolved labels/prose agree with the packet, and no contradictory explanation is present."
+      ]
+    }
+  }
+}

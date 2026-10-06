@@ -1,0 +1,48 @@
+{
+  "case_id": "F2",
+  "submission_hashes": {
+    "actions.json": "b325b2137856e580c9d80ff0aa7b0cde52639733ea2a83d348b7dda5f282f343",
+    "handoff.txt": "8c71b4c07cafb255d31a49153eea47f3b44c7ea4f0be4f3f37e05515b945118d"
+  },
+  "groups": {
+    "g1": {
+      "passed": true,
+      "evidence": [
+        "actions.json:6,41,73,111,149,198 gives all six agreed deliverables and their completion conditions: deposited table-label PDF, separately deposited wall-label PDF, deposited approved eight-person roster, steward-verified carry-in route recorded in setup sheet, actual arrival-pack sending, and logged pass/fail results for both audio outputs. These match inputs/meeting.txt#M01/#M02/#M04/#M05/#M06/#M07; handoff.txt:4-5,8-10,13 reproduces the scope and usable conditions.",
+        "The only actions are EX-11 through EX-16. handoff.txt:15 explicitly treats the sticker sheet as a suggestion rather than an agreed action, following inputs/meeting.txt#M08."
+      ]
+    },
+    "g2": {
+      "passed": true,
+      "evidence": [
+        "actions.json:5-38 represents EX-11 once and cites both inputs/meeting.txt#M01/#M03; :40-70 separately represents EX-12 as a usable wall-label PDF. handoff.txt:8 explicitly merges repeated commitments into the single table-label deliverable, while :9 retains the separate wall-label deliverable.",
+        "EX-13 has one action at actions.json:72-108 with the original meeting commitment and accepted-transfer history. handoff.txt:10 describes Davi replacing Kira on that same rota, rather than creating a second task. EX-14, EX-15 and EX-16 each remain distinct in both files, consistent with inputs/meeting.txt#M04-#M07."
+      ]
+    },
+    "g3": {
+      "passed": true,
+      "evidence": [
+        "actions.json:7-15,42-50,74-82,112-117,150-158,199-207 assigns Orin/P1, Nel/P2, Davi/P4, null, Tessa/P5 and Ivo/P6 with respectively 9 Oct 17:00, 10 Oct date-only, 8 Oct 18:00, 8 Oct date-only, 9 Oct 12:00 and 9 Oct 16:00. These spellings and IDs match inputs/people.json, while inputs/meeting.txt and inputs/followups.txt establish the dates and authoritative +01:00 Europe/London context.",
+        "EX-13 current authority is present in actions.json:88-101: inputs/meeting.txt#M04 preserves the original action, and inputs/followups.txt#F02/#F03 establish Davi's acceptance and 18:00 replacement deadline. Earlier M04/F01 references provide provenance rather than override the later accepted change. handoff.txt:10 expressly replaces Kira's ownership and noon deadline.",
+        "actions.json:112 and :126-128 preserve EX-14's absent owner using inputs/meeting.txt#M05 and inputs/followups.txt#F07. EX-12 and EX-14 local_time values remain null at :48,115, and handoff.txt:4,9 says no clock time was agreed. Owner/deadline references for the other four actions cite the supporting meeting commitments; no unsupported assignment or clock time is added."
+      ]
+    },
+    "g4": {
+      "passed": true,
+      "evidence": [
+        "actions.json:149-179 retains EX-15's send condition, sets draft_only/reported true/verified false, and links inputs/followups.txt#F04 as the claim plus #F05 and inputs/arrival-draft.txt#D01/#D02/#D03/#D06 as artifact context. handoff.txt:5 explicitly says the artifact is an unsent draft without a transport record or sent timestamp. This follows inputs/meeting.txt#M06 rather than conflating readiness or prefilled recipients with sending.",
+        "EX-16 at actions.json:198-227 is reported and verified complete with inputs/followups.txt#F06 and all four inputs/audio-check.txt#V01-#V04 references. handoff.txt:13 grounds completion in both passed outputs and the log saved at 11:12, the evidence required by inputs/meeting.txt#M07.",
+        "EX-11-EX-14 statuses and completion flags remain open/false/false and cite inputs/followups.txt#F07. handoff.txt:4,8-10 consistently states that no completion claim or artifact is supplied for them."
+      ]
+    },
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "The JSON's references all identify existing packet sections and support their linked fields. EX-13 includes actual accepted-transfer authority F02/F03 as well as historical M04/F01; EX-14 absence cites M05/F07; EX-15 and EX-16 each distinguish completion claims from artifact/log evidence. There are no directory references or dangling source locators in the arrays.",
+        "handoff.txt:4-5,8-10,13 covers all six deliverables with owners, current deadlines and current completion states matching actions.json. :10 cites M04/F01/F02/F03/F07 for the accepted reassignment, and :5 cites M06/F04/F05/D02/D06 for the reported-done versus draft discrepancy. Its date-only caveats agree with the JSON null times.",
+        "The required questions are precise: actions.json:139 and handoff.txt:4 ask who will accept EX-14 ownership; actions.json:184 and handoff.txt:5 request actual EX-15 send confirmation/evidence or confirmation it still needs sending. These directly address inputs/meeting.txt#M05/#M06, inputs/followups.txt#F05/#F07 and inputs/arrival-draft.txt#D06 without trying to resolve them by invention.",
+        "handoff.txt:1 and :15 explicitly frame the result as a prepared handoff from supplied evidence, without claiming external messages or tasks were performed. Its local whitespace count is 362, below 450. That objective count is separate from the semantic finding that the independently readable files agree."
+      ]
+    }
+  }
+}

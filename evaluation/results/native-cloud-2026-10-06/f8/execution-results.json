@@ -1,0 +1,562 @@
+{
+  "schema_version": 1,
+  "source_record_sha256": "f7befdff00980cde3f517b001929e7c1df0760743f9519f9fa544d6f100de330",
+  "scope": "Public projection of source-reviewed local execution; commands use relative path aliases, not original absolute machine paths",
+  "case_id": "F8",
+  "os_sandbox_verified": false,
+  "process_integrity": null,
+  "resource_limits": {
+    "wall_seconds": 10,
+    "cpu_seconds": 5,
+    "address_space_bytes": 536870912,
+    "file_size_bytes": 8388608,
+    "open_files": 64,
+    "core_bytes": 0
+  },
+  "original_probe_sha256": "4d5d71212d905e8b4a56956cc3b2daf10731cd4f7770ffcb7cf5fd2f36d037d6",
+  "frozen_artifact_hashes_unchanged": true,
+  "rows": [
+    {
+      "attempt_id": "N15-F8-C",
+      "arm": "C",
+      "artifact_hashes": {
+        "card_editor.py": "0abdd048b29fb9d96fc5d2371ae78b55587f722db4036c1efc172794eec1121d",
+        "checks.txt": "7eae3ab8a88f2f1e641ffd31d94ee2c36e8c875fc558e1b955920c1d269e6bd0",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "246f8eda63e1e521ca1e04927554772ab7442432923405298ad251893f9ef283",
+        "tests/test_regressions.py": "666b53740eaada3695828254b217c12a1296846b49ec336bb122d6092a39c8f9",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      },
+      "primary_groups": [
+        {
+          "id": "g1",
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "g2",
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "g3",
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "g4",
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "g5",
+          "passed": true,
+          "reasons": []
+        }
+      ],
+      "static_integrity": {
+        "passed": true,
+        "reasons": []
+      },
+      "g5_required_checks": {
+        "full_suite": true,
+        "focused_suite": true,
+        "checks_report": true,
+        "stale_sensitivity": true,
+        "unresolved_sensitivity": true
+      },
+      "runs": {
+        "production_static": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": null,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "result": {
+            "case_id": "F8",
+            "integrity": {
+              "passed": true,
+              "reasons": []
+            },
+            "groups": [
+              {
+                "id": "g1",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              },
+              {
+                "id": "g2",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              },
+              {
+                "id": "g3",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              },
+              {
+                "id": "g4",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              },
+              {
+                "id": "g5",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              }
+            ],
+            "accepted": null,
+            "quality": null,
+            "blocked_reason": "untrusted_python_execution_requires_verified_isolation"
+          },
+          "normalized_command": [
+            "python3",
+            "-I",
+            "-B",
+            "-S",
+            "evaluation/evaluators/F8/grade.py",
+            "--submission",
+            "<owned-copy>",
+            "--runner",
+            "evaluation/cases/F8"
+          ],
+          "working_directory": "<owned-copy>"
+        },
+        "probe": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": null,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "result": [
+            {
+              "id": "g1",
+              "passed": true,
+              "reasons": []
+            },
+            {
+              "id": "g2",
+              "passed": true,
+              "reasons": []
+            },
+            {
+              "id": "g3",
+              "passed": true,
+              "reasons": []
+            },
+            {
+              "id": "g4",
+              "passed": true,
+              "reasons": []
+            },
+            {
+              "id": "g5",
+              "passed": true,
+              "reasons": []
+            }
+          ],
+          "normalized_command": [
+            "python3",
+            "-I",
+            "-B",
+            "-S",
+            "f8/original-probe.py",
+            "<owned-copy>"
+          ],
+          "working_directory": "<owned-copy>"
+        },
+        "full_suite": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": 18,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "normalized_command": [
+            "python3",
+            "-B",
+            "-S",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "working_directory": "<owned-copy>"
+        },
+        "focused_suite": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": 15,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "normalized_command": [
+            "python3",
+            "-B",
+            "-S",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v",
+            "-p",
+            "test_regressions.py"
+          ],
+          "working_directory": "<owned-copy>"
+        },
+        "stale_sensitivity": {
+          "returncode": 1,
+          "timed_out": false,
+          "test_count": 15,
+          "assertion_failures": 22,
+          "test_errors": 9,
+          "normalized_command": [
+            "python3",
+            "-B",
+            "-S",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v",
+            "-p",
+            "test_regressions.py"
+          ],
+          "working_directory": "<separate-defect-variant-copy>"
+        },
+        "unresolved_sensitivity": {
+          "returncode": 1,
+          "timed_out": false,
+          "test_count": 15,
+          "assertion_failures": 5,
+          "test_errors": 1,
+          "normalized_command": [
+            "python3",
+            "-B",
+            "-S",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v",
+            "-p",
+            "test_regressions.py"
+          ],
+          "working_directory": "<separate-defect-variant-copy>"
+        },
+        "posthoc_surrogate": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": null,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "result": {
+            "post_hoc": true,
+            "changes_primary_score": false,
+            "input": "U+D800 followed by LF",
+            "constructed": true,
+            "view_text_exact": true,
+            "saved": true,
+            "parsed_record_equal": true,
+            "state_equal_after_reload": true,
+            "view_equal_after_reload": true,
+            "text_equal_after_reload": true
+          },
+          "normalized_command": [
+            "python3",
+            "-I",
+            "-B",
+            "-S",
+            "f8/posthoc-surrogate.py",
+            "<owned-copy>"
+          ],
+          "working_directory": "<owned-copy>"
+        }
+      }
+    },
+    {
+      "attempt_id": "N16-F8-S",
+      "arm": "S",
+      "artifact_hashes": {
+        "card_editor.py": "19ee7abc3a4ea6a2f71073a28a0b9d02610125eb969e3cdaad25a55cd9bad7ca",
+        "checks.txt": "75662813df0a4e82f93fb9635a3bafb0da01d835de20a54d4c62a941e063a0c7",
+        "demo_cards.json": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+        "merge_primitive.py": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+        "merge_session.py": "7b6409737d8ea5c1c0adb2a38d7ae52879ba038ee28b4a37ee5063e9532886a2",
+        "tests/test_regressions.py": "bcc73dade8b76d7651df5af9805bc4179509f5de27396805f98988e18fdce674",
+        "tests/test_smoke.py": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0"
+      },
+      "primary_groups": [
+        {
+          "id": "g1",
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "g2",
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "g3",
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "g4",
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "g5",
+          "passed": true,
+          "reasons": []
+        }
+      ],
+      "static_integrity": {
+        "passed": true,
+        "reasons": []
+      },
+      "g5_required_checks": {
+        "full_suite": true,
+        "focused_suite": true,
+        "checks_report": true,
+        "stale_sensitivity": true,
+        "unresolved_sensitivity": true
+      },
+      "runs": {
+        "production_static": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": null,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "result": {
+            "case_id": "F8",
+            "integrity": {
+              "passed": true,
+              "reasons": []
+            },
+            "groups": [
+              {
+                "id": "g1",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              },
+              {
+                "id": "g2",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              },
+              {
+                "id": "g3",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              },
+              {
+                "id": "g4",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              },
+              {
+                "id": "g5",
+                "passed": null,
+                "reasons": [
+                  "PENDING: submitted Python was not executed. A verified isolated execution backend is not configured; subprocess separation alone is not a sandbox."
+                ]
+              }
+            ],
+            "accepted": null,
+            "quality": null,
+            "blocked_reason": "untrusted_python_execution_requires_verified_isolation"
+          },
+          "normalized_command": [
+            "python3",
+            "-I",
+            "-B",
+            "-S",
+            "evaluation/evaluators/F8/grade.py",
+            "--submission",
+            "<owned-copy>",
+            "--runner",
+            "evaluation/cases/F8"
+          ],
+          "working_directory": "<owned-copy>"
+        },
+        "probe": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": null,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "result": [
+            {
+              "id": "g1",
+              "passed": true,
+              "reasons": []
+            },
+            {
+              "id": "g2",
+              "passed": true,
+              "reasons": []
+            },
+            {
+              "id": "g3",
+              "passed": true,
+              "reasons": []
+            },
+            {
+              "id": "g4",
+              "passed": true,
+              "reasons": []
+            },
+            {
+              "id": "g5",
+              "passed": true,
+              "reasons": []
+            }
+          ],
+          "normalized_command": [
+            "python3",
+            "-I",
+            "-B",
+            "-S",
+            "f8/original-probe.py",
+            "<owned-copy>"
+          ],
+          "working_directory": "<owned-copy>"
+        },
+        "full_suite": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": 19,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "normalized_command": [
+            "python3",
+            "-B",
+            "-S",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "working_directory": "<owned-copy>"
+        },
+        "focused_suite": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": 16,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "normalized_command": [
+            "python3",
+            "-B",
+            "-S",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v",
+            "-p",
+            "test_regressions.py"
+          ],
+          "working_directory": "<owned-copy>"
+        },
+        "stale_sensitivity": {
+          "returncode": 1,
+          "timed_out": false,
+          "test_count": 16,
+          "assertion_failures": 12,
+          "test_errors": 9,
+          "normalized_command": [
+            "python3",
+            "-B",
+            "-S",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v",
+            "-p",
+            "test_regressions.py"
+          ],
+          "working_directory": "<separate-defect-variant-copy>"
+        },
+        "unresolved_sensitivity": {
+          "returncode": 1,
+          "timed_out": false,
+          "test_count": 16,
+          "assertion_failures": 5,
+          "test_errors": 0,
+          "normalized_command": [
+            "python3",
+            "-B",
+            "-S",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v",
+            "-p",
+            "test_regressions.py"
+          ],
+          "working_directory": "<separate-defect-variant-copy>"
+        },
+        "posthoc_surrogate": {
+          "returncode": 0,
+          "timed_out": false,
+          "test_count": null,
+          "assertion_failures": 0,
+          "test_errors": 0,
+          "result": {
+            "post_hoc": true,
+            "changes_primary_score": false,
+            "input": "U+D800 followed by LF",
+            "constructed": true,
+            "view_text_exact": true,
+            "saved": false,
+            "error_type": "UnicodeEncodeError",
+            "error": "'utf-8' codec can't encode character '\\ud800' in position 172: surrogates not allowed"
+          },
+          "normalized_command": [
+            "python3",
+            "-I",
+            "-B",
+            "-S",
+            "f8/posthoc-surrogate.py",
+            "<owned-copy>"
+          ],
+          "working_directory": "<owned-copy>"
+        }
+      }
+    }
+  ]
+}

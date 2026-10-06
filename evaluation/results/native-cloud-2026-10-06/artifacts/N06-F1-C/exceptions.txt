@@ -1,0 +1,16 @@
+ready_subtotal_minor: 7774
+source_total_minor: 10667
+personal_excluded_minor: 1200
+unresolved_source_minor: 1488
+
+Draft calculation only, based solely on the supplied fictional packet. This is not tax advice or an actual reimbursement request. Nothing has been submitted or externally verified.
+
+Confirmed duplicate: S07 is the confirmed rescan of S02, receipt M-826, for T02. Both sources map to T02; S07 is duplicate evidence and contributes no additional monetary line or amount. S08, S09, S10 and S15 are supporting settlement evidence only; S11-S14 support purpose. See inputs/policy.txt#P1 and inputs/policy.txt#P6.
+
+Credit before cap: T01 (S01, S08, S11) and T02 (S02, S07, S09, S12) belong to the same CF-7 / CF-26 / 2026-09-17 meal group. T03 (S03, S10) is the linked credit for T02 and inherits its purpose and original meal group, despite posting on 2026-09-19. The signed business amount before the cap is 2835 + 2470 - 600 = 4705 pence; overage is max(0, 4705 - 4500) = 205 pence. T02 is later (18:05) than T01 (12:10), so the entire cap adjustment of -205 goes to T02, giving it a 2265-pence claim. T01 remains 2835 pence. T03 remains a separate full -600-pence claim with zero cap adjustment. The meal claims total 4500 pence. See inputs/policy.txt#P2, inputs/policy.txt#P3 and inputs/policy.txt#P6.
+
+Explicit personal split: T04 (S04, S13) keeps its full 3199-pence source face amount in one row. Exactly 1999 pence is workshop materials and business-eligible; exactly 1200 pence is personal and excluded. No proportional allocation or extra transaction is created. See inputs/policy.txt#P4. T05 (S05, S14) has a supplied business purpose and is fully eligible at 1275 pence, outside the meal group and uncapped under inputs/policy.txt#P3 and inputs/policy.txt#P5.
+
+Missing purpose: T06 (S06, S15), receipt X-033, remains unresolved at its full 1488-pence source face amount. S15 confirms payment but provides no business purpose. The exact clarification needed is a source-backed statement from the claimant explaining what the miscellaneous purchase was and its business purpose for the training assignment, including whether the full 1488 pence was business-related or any amount was personal. Until that evidence is supplied, business_minor, cap_adjustment_minor and claim_minor remain empty; no eligibility or zero claim is inferred. This entire unresolved amount is excluded from the ready subtotal. See inputs/policy.txt#P2 and inputs/policy.txt#P6.
+
+Accounting: canonical signed source amounts total 2835 + 2470 - 600 + 3199 + 1275 + 1488 = 10667 pence. The ready subtotal is 2835 + 2265 - 600 + 1999 + 1275 = 7774 pence. Reconciliation is 10667 - 1200 personal - 205 cap reduction - 1488 unresolved = 7774 pence; duplicate and supporting evidence add no source amounts. See inputs/policy.txt#P1 and inputs/policy.txt#P6.

@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "hash_algorithm": "SHA-256",
+  "artifact_count": 46,
+  "files": [
+    {
+      "path": "artifacts/N01-F7-S/change-summary.txt",
+      "sha256": "7aa1587f080951356525abe6ce950588408666623767ae9644c72936f080da0b",
+      "bytes": 314
+    },
+    {
+      "path": "artifacts/N01-F7-S/patch.json",
+      "sha256": "ff08085b1a8f516e35bfca7ef6613b300052e043c4f89ec39b457af41fbf8d0e",
+      "bytes": 1040
+    },
+    {
+      "path": "artifacts/N01-F7-S/validation-status.json",
+      "sha256": "0f1d0acaed73aab20632291fbeaa3d30fc1cbf94e0ad7b7d9f7a20e1039697c4",
+      "bytes": 599
+    },
+    {
+      "path": "artifacts/N02-F7-C/change-summary.txt",
+      "sha256": "7aa1587f080951356525abe6ce950588408666623767ae9644c72936f080da0b",
+      "bytes": 314
+    },
+    {
+      "path": "artifacts/N02-F7-C/patch.json",
+      "sha256": "ff08085b1a8f516e35bfca7ef6613b300052e043c4f89ec39b457af41fbf8d0e",
+      "bytes": 1040
+    },
+    {
+      "path": "artifacts/N02-F7-C/validation-status.json",
+      "sha256": "0f1d0acaed73aab20632291fbeaa3d30fc1cbf94e0ad7b7d9f7a20e1039697c4",
+      "bytes": 599
+    },
+    {
+      "path": "artifacts/N03-F3-S/explanation.txt",
+      "sha256": "c56d13d98e78637831722724af2ff3bfb4550af100a0d2693ee8de7036fb37e8",
+      "bytes": 756
+    },
+    {
+      "path": "artifacts/N03-F3-S/options.json",
+      "sha256": "b6e55c99b3a994ff9f3f23841a1abefbdb8c3f38ed5e7e76bb4964f0ec1d40b0",
+      "bytes": 3037
+    },
+    {
+      "path": "artifacts/N04-F3-C/explanation.txt",
+      "sha256": "c56d13d98e78637831722724af2ff3bfb4550af100a0d2693ee8de7036fb37e8",
+      "bytes": 756
+    },
+    {
+      "path": "artifacts/N04-F3-C/options.json",
+      "sha256": "b6e55c99b3a994ff9f3f23841a1abefbdb8c3f38ed5e7e76bb4964f0ec1d40b0",
+      "bytes": 3037
+    },
+    {
+      "path": "artifacts/N05-F1-S/claim-lines.csv",
+      "sha256": "ec8a6d707c9c973b3944265781e7c57efc3dd6d2846b646e81a8830de7e5617d",
+      "bytes": 988
+    },
+    {
+      "path": "artifacts/N05-F1-S/exceptions.txt",
+      "sha256": "f8090ffb8599dae85313d230218cd871ee8715f79f1c4c74d2c58b356c9562d0",
+      "bytes": 3384
+    },
+    {
+      "path": "artifacts/N05-F1-S/source-map.csv",
+      "sha256": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+      "bytes": 671
+    },
+    {
+      "path": "artifacts/N06-F1-C/claim-lines.csv",
+      "sha256": "cecc48264f5695a62af9035c47877586c7c033f5ed621666cb82c05ef6623117",
+      "bytes": 967
+    },
+    {
+      "path": "artifacts/N06-F1-C/exceptions.txt",
+      "sha256": "bf769d8992205e81870cc2d53604370c85aff49a4d4e405bb5d3e2c806c4d82e",
+      "bytes": 2846
+    },
+    {
+      "path": "artifacts/N06-F1-C/source-map.csv",
+      "sha256": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+      "bytes": 671
+    },
+    {
+      "path": "artifacts/N07-F5-S/candidate.txt",
+      "sha256": "6141bf7d6d8c3e073d9a31560e6e1e4d86ef544dab1b34b4fcad6846e661910e",
+      "bytes": 690
+    },
+    {
+      "path": "artifacts/N07-F5-S/decisions.json",
+      "sha256": "f3b120c0c9c342ca29aab5012b3a56d5202116b8d630095a8473b53ebd384d08",
+      "bytes": 4326
+    },
+    {
+      "path": "artifacts/N08-F5-C/candidate.txt",
+      "sha256": "6141bf7d6d8c3e073d9a31560e6e1e4d86ef544dab1b34b4fcad6846e661910e",
+      "bytes": 690
+    },
+    {
+      "path": "artifacts/N08-F5-C/decisions.json",
+      "sha256": "5a41f125717b663fbebd9a5d72bf787792d27ce22956241758885e979ae78d68",
+      "bytes": 4326
+    },
+    {
+      "path": "artifacts/N09-F6-C/report-notes.txt",
+      "sha256": "d70a9bc60bd5d552e7569286a88a9022b901cebe1cef5df77d7edaebea79d27d",
+      "bytes": 2088
+    },
+    {
+      "path": "artifacts/N09-F6-C/report.sql",
+      "sha256": "5d519c8f514af671c0c4c79fc4167b4138253eab818ee92901facb59adc56e1a",
+      "bytes": 2560
+    },
+    {
+      "path": "artifacts/N09-F6-C/result.csv",
+      "sha256": "1604d5474b2c70b363d4652d59d9c5469def0c9beb2a0555a0d89542f04cc5d3",
+      "bytes": 300
+    },
+    {
+      "path": "artifacts/N10-F6-S/report-notes.txt",
+      "sha256": "f570547946ef5438d75417b57d4e52b4317c387bb5759ad2e077d409cb570026",
+      "bytes": 4843
+    },
+    {
+      "path": "artifacts/N10-F6-S/report.sql",
+      "sha256": "07efe4d7775aef5b706c597b0da25414ea754dd5485c9e9e0d0283ba3885e8ce",
+      "bytes": 2986
+    },
+    {
+      "path": "artifacts/N10-F6-S/result.csv",
+      "sha256": "1604d5474b2c70b363d4652d59d9c5469def0c9beb2a0555a0d89542f04cc5d3",
+      "bytes": 300
+    },
+    {
+      "path": "artifacts/N11-F2-C/actions.json",
+      "sha256": "25334013aef7cc20f733a2d6c0f899df0b9eb39d6b566aec9112cb9bad666f79",
+      "bytes": 5677
+    },
+    {
+      "path": "artifacts/N11-F2-C/handoff.txt",
+      "sha256": "108c846e171450f6e044704008506fc61659a56bc38ad8d9129785313411c23e",
+      "bytes": 2487
+    },
+    {
+      "path": "artifacts/N12-F2-S/actions.json",
+      "sha256": "b325b2137856e580c9d80ff0aa7b0cde52639733ea2a83d348b7dda5f282f343",
+      "bytes": 6811
+    },
+    {
+      "path": "artifacts/N12-F2-S/handoff.txt",
+      "sha256": "8c71b4c07cafb255d31a49153eea47f3b44c7ea4f0be4f3f37e05515b945118d",
+      "bytes": 2584
+    },
+    {
+      "path": "artifacts/N13-F4-C/decision-brief.txt",
+      "sha256": "36004c0b77da180b5e1ea0af851c4014e55e7dfb5745052d4405ab6228485cfd",
+      "bytes": 3707
+    },
+    {
+      "path": "artifacts/N14-F4-S/decision-brief.txt",
+      "sha256": "debf000f3881cff0c0f84829de7bc9336e2bb1e574749305b3f6b717510623bf",
+      "bytes": 3843
+    },
+    {
+      "path": "artifacts/N15-F8-C/card_editor.py",
+      "sha256": "0abdd048b29fb9d96fc5d2371ae78b55587f722db4036c1efc172794eec1121d",
+      "bytes": 1399
+    },
+    {
+      "path": "artifacts/N15-F8-C/checks.txt",
+      "sha256": "7eae3ab8a88f2f1e641ffd31d94ee2c36e8c875fc558e1b955920c1d269e6bd0",
+      "bytes": 1159
+    },
+    {
+      "path": "artifacts/N15-F8-C/demo_cards.json",
+      "sha256": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+      "bytes": 419
+    },
+    {
+      "path": "artifacts/N15-F8-C/merge_primitive.py",
+      "sha256": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+      "bytes": 944
+    },
+    {
+      "path": "artifacts/N15-F8-C/merge_session.py",
+      "sha256": "246f8eda63e1e521ca1e04927554772ab7442432923405298ad251893f9ef283",
+      "bytes": 3947
+    },
+    {
+      "path": "artifacts/N15-F8-C/tests/test_regressions.py",
+      "sha256": "666b53740eaada3695828254b217c12a1296846b49ec336bb122d6092a39c8f9",
+      "bytes": 21748
+    },
+    {
+      "path": "artifacts/N15-F8-C/tests/test_smoke.py",
+      "sha256": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+      "bytes": 992
+    },
+    {
+      "path": "artifacts/N16-F8-S/card_editor.py",
+      "sha256": "19ee7abc3a4ea6a2f71073a28a0b9d02610125eb969e3cdaad25a55cd9bad7ca",
+      "bytes": 1437
+    },
+    {
+      "path": "artifacts/N16-F8-S/checks.txt",
+      "sha256": "75662813df0a4e82f93fb9635a3bafb0da01d835de20a54d4c62a941e063a0c7",
+      "bytes": 1109
+    },
+    {
+      "path": "artifacts/N16-F8-S/demo_cards.json",
+      "sha256": "d7698ffbaeb774a6e3ca920632bf0ca161e5217ff1a49b7b9937616bb63c6ec3",
+      "bytes": 419
+    },
+    {
+      "path": "artifacts/N16-F8-S/merge_primitive.py",
+      "sha256": "816147bbd3ab1bcd91a23e0ee488d0f22efbe1fed34a0bab17dc2b84a3fb96d2",
+      "bytes": 944
+    },
+    {
+      "path": "artifacts/N16-F8-S/merge_session.py",
+      "sha256": "7b6409737d8ea5c1c0adb2a38d7ae52879ba038ee28b4a37ee5063e9532886a2",
+      "bytes": 4133
+    },
+    {
+      "path": "artifacts/N16-F8-S/tests/test_regressions.py",
+      "sha256": "bcc73dade8b76d7651df5af9805bc4179509f5de27396805f98988e18fdce674",
+      "bytes": 20935
+    },
+    {
+      "path": "artifacts/N16-F8-S/tests/test_smoke.py",
+      "sha256": "00eb424948f589a5605e5b26a406b4a09cbc5538a7f11d57fc0d43ac54ae8ed0",
+      "bytes": 992
+    }
+  ]
+}

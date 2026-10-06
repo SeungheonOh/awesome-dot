@@ -1,0 +1,45 @@
+{
+  "case_id": "F8",
+  "integrity": {
+    "passed": true,
+    "reasons": []
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "id": "g2",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "id": "g3",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "id": "g4",
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "id": "g5",
+      "passed": true,
+      "reasons": []
+    }
+  ],
+  "artifact_criteria_passed": true,
+  "overall_acceptance": null,
+  "process_integrity": null,
+  "grading_method": "Source-reviewed local execution of original probe plus independent full/focused test and defect-sensitivity checks; no OS sandbox claim",
+  "behavior_record_sha256": "f7befdff00980cde3f517b001929e7c1df0760743f9519f9fa544d6f100de330",
+  "behavior_record": "../f8/execution-results.json",
+  "quality": {
+    "passed_groups": 5,
+    "scored_groups": 5,
+    "total_groups": 5
+  }
+}

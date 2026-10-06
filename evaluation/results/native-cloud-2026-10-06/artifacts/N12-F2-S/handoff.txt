@@ -1,0 +1,15 @@
+Prepared handoff as of 7 October 2026, 16:00 Europe/London (+01:00). All deadlines below use that timezone and offset.
+
+Needs clarification
+- EX-14: No owner has accepted the carry-in route check. Verify the route with the building steward and record the confirmed route in the setup sheet. Due 8 October 2026, date only; no clock time agreed. Open, with no completion claim or artifact. Who will accept ownership and complete this deliverable by that date? (inputs/meeting.txt#M05; inputs/followups.txt#F07)
+- EX-15: Tessa Vale owns sending the final arrival pack to the registered exhibition volunteers, due 9 October 2026 at 12:00. Tessa reports it done, but the supplied artifact is an unsent draft with no transport record or sent timestamp. Status: draft only, not verified complete. Has the final pack actually been sent? Please provide actual send confirmation/evidence, or confirm that it still needs sending. (inputs/meeting.txt#M06; inputs/followups.txt#F04; inputs/followups.txt#F05; inputs/arrival-draft.txt#D02; inputs/arrival-draft.txt#D06)
+
+Other open deliverables
+- EX-11: Orin Patel must create the print-ready PDF of twelve table labels and deposit the final PDF in the shared print folder by 9 October 2026 at 17:00. Open; no completion claim or artifact. Repeated commitments describe this single deliverable.
+- EX-12: Nel Arcos must create the separately usable print-ready PDF of six wall labels and deposit it in the print folder by 10 October 2026. Date only; no clock time agreed. Open; no completion claim or artifact.
+- EX-13: Davi Moss must finalize the eight-person volunteer rota and deposit the approved roster in the shared folder by 8 October 2026 at 18:00. Davi accepted the transfer from Kira Beck and the chair confirmed it; this replaces Kira's ownership and the earlier noon deadline. Open; no completion claim or artifact. (inputs/meeting.txt#M04; inputs/followups.txt#F01; inputs/followups.txt#F02; inputs/followups.txt#F03; inputs/followups.txt#F07)
+
+Verified complete
+- EX-16: Ivo Chen owned testing both display-audio cable outputs and recording their pass/fail results in the equipment log, due 9 October 2026 at 16:00. Reported and verified complete: both outputs passed, and the supplied log was saved on 7 October at 11:12. (inputs/followups.txt#F06; inputs/audio-check.txt#V01; inputs/audio-check.txt#V02; inputs/audio-check.txt#V03; inputs/audio-check.txt#V04)
+
+The souvenir sticker sheet was only a suggestion, not an agreed action. This handoff is prepared from supplied evidence; no messages were sent or external tasks performed.

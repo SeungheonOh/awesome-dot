@@ -1,0 +1,9 @@
+Command: python -m unittest discover -s tests -v
+Result: PASS
+Tests: 18
+Local verification: 15 regression tests and all 3 unchanged smoke tests passed in under 0.1 seconds.
+Regression coverage includes revision/text/base/line-count changes, strict stale-token rejection, exact positional text, detached snapshots, and JSON save/load preservation of choices, draft status, and last completed text.
+Local sensitivity checks: the required two regression methods were also run against two temporary variants assembled from the supplied scaffold. The variant with the original stale-choice session failed the replacement regression; the variant with the original draft-promoting caller failed both regressions. These were local development checks, not independent grading.
+Integrity: all supplied input SHA-256 hashes match the input manifest; protected output copies of merge_primitive.py, demo_cards.json, and tests/test_smoke.py are byte-identical to the supplied originals.
+Temporary fixtures and sensitivity variants were removed before submission.
+Limitations: malformed JSON recovery and atomic filesystem crash recovery remain outside the requested scope.

@@ -1,0 +1,21 @@
+{
+  "case_id": "F1",
+  "submission_hashes": {
+    "claim-lines.csv": "cecc48264f5695a62af9035c47877586c7c033f5ed621666cb82c05ef6623117",
+    "source-map.csv": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+    "exceptions.txt": "bf769d8992205e81870cc2d53604370c85aff49a4d4e405bb5d3e2c806c4d82e"
+  },
+  "groups": {
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "exceptions.txt:8 explains that S07 is the confirmed rescan of S02/receipt M-826, both map to T02, and duplicate/supporting evidence contributes no extra monetary line or amount. source-map.csv:3,8 and the single T02 row at claim-lines.csv:3 are consistent with inputs/evidence.csv#S02/#S07 and inputs/policy.txt#P1/#P6.",
+        "exceptions.txt:10 places T03's linked -600 credit in T02's original CF-7/CF-26/2026-09-17 meal group despite posting on September 19, calculates 2835+2470-600=4705 and max(0,4705-4500)=205, puts -205 on T02 because 18:05 is later than T01's 12:10, and retains the separate -600 credit with zero adjustment. The 2835/2265/-600 claims at claim-lines.csv:2-4 support this account. The prose cites and follows inputs/policy.txt#P2/#P3/#P6 and inputs/evidence.csv#S03/#S10.",
+        "exceptions.txt:12 and claim-lines.csv:5 retain the single T04 source amount of 3199 with 1999 workshop/business and 1200 personal excluded, without proportional allocation or an extra canonical transaction. The linked S04/S13 and inputs/policy.txt#P4 establish precisely this split.",
+        "exceptions.txt:14 identifies unresolved T06/receipt X-033 at 1488, explains that S15 confirms payment without purpose, and specifically asks for the claimant's description and business purpose, including whether any portion was personal. It explicitly leaves business_minor, cap_adjustment_minor and claim_minor empty and excludes the entire unresolved amount from the ready subtotal. claim-lines.csv:7 and exceptions.txt:16 identify that subtotal as 7774. This matches inputs/evidence.csv#S06/#S15 and inputs/policy.txt#P2/#P6 without inventing a zero claim or purpose.",
+        "exceptions.txt:6 frames the files as a draft based on the supplied fictional packet and says nothing was submitted or externally verified. There is no contradictory external-action assertion in the output. This meets the draft-only content requirement from task.txt and inputs/policy.txt#P6; no claim about unobserved process is inferred.",
+        "Policy/source citations support the treatments: exceptions.txt:10 uses #P3 for credit-before-cap and allocation; :12 uses #P4 for the explicit split and #P3/#P5 for fully eligible, uncapped T05 supported by S05/S14; :14 uses #P2/#P6 for unresolved purpose. claim-lines.csv:2-7 supplies the relevant treatment-specific policy locators. The 10667 source reconciliation, 7774 ready subtotal, 1200 personal exclusion and 1488 unresolved in exceptions.txt:1-4,16 agree with the explanation and supplied amounts."
+      ]
+    }
+  }
+}

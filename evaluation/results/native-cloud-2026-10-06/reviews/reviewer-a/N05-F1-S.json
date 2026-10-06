@@ -1,0 +1,21 @@
+{
+  "case_id": "F1",
+  "submission_hashes": {
+    "claim-lines.csv": "ec8a6d707c9c973b3944265781e7c57efc3dd6d2846b646e81a8830de7e5617d",
+    "source-map.csv": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+    "exceptions.txt": "f8090ffb8599dae85313d230218cd871ee8715f79f1c4c74d2c58b356c9562d0"
+  },
+  "groups": {
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "exceptions.txt:8 identifies S07 as the rescan of S02, receipt M-826/T02, and says it contributes no extra monetary amount or line; source-map.csv:3,8 maps both to T02 with primary/duplicate dispositions. This matches inputs/evidence.csv#S02/#S07 and inputs/policy.txt#P1. It also correctly treats settlement and purpose records as support rather than additional transactions.",
+        "exceptions.txt:10 explicitly keeps T03 in T02's original CF-7/CF-26/2026-09-17 meal group despite its later posting date, computes 2835 + 2470 - 600 = 4705 before the 4500 cap, and allocates all 205 overage to the later positive T02 at 18:05. It leaves T03 at -600 with zero adjustment. claim-lines.csv:2-4 implements 2835, 2265, -600. inputs/evidence.csv#S01/#S02/#S03/#S10/#S11/#S12 and inputs/policy.txt#P2/#P3/#P6 support these treatment and allocation claims.",
+        "exceptions.txt:12 preserves the single T04 face amount of 3199 while distinguishing 1999 business workshop materials and 1200 excluded personal stationery, without inventing a proportional allocation. claim-lines.csv:5 agrees. The prose directly cites inputs/policy.txt#P4; inputs/evidence.csv#S04/#S13 establish this exact split.",
+        "exceptions.txt:16 names T06/receipt X-033 and its full unresolved 1488, distinguishes payment evidence S15 from a business-purpose statement, leaves all three eligibility/claim fields empty, and excludes the amount from ready 7774 without assigning a zero claim. Its request for a source-backed specific business purpose, or confirmation it was personal, addresses the missing fact. This matches inputs/evidence.csv#S06/#S15 and inputs/policy.txt#P2/#P6; claim-lines.csv:7 and exceptions.txt:18 are consistent.",
+        "exceptions.txt:6 explicitly frames the output as a draft calculation, not an approved claim or submission, and makes no affirmative claim of external verification or action. No contradictory external-action claim appears in the reviewed CSVs or explanation. This satisfies the draft-only requirement of task.txt and inputs/policy.txt#P6; it is a content judgment, not verification of the producer's process.",
+        "The decisive policy links are meaningful: exceptions.txt:10 cites P3 for credit-before-cap allocation, :12 cites P4 for the itemized supply split, :14 cites P5 for the supported, uncapped 1275 transport, and :16 cites P2/P6 for unresolved purpose and subtotal exclusion. claim-lines.csv:2-7 also contains relevant locators, supported by inputs/evidence.csv#S14 and inputs/policy.txt#P2/#P3/#P4/#P5/#P6. Additional applicable references do not contradict the explanation."
+      ]
+    }
+  }
+}

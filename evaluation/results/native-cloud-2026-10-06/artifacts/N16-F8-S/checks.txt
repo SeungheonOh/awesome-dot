@@ -1,0 +1,10 @@
+Command: python -m unittest discover -s tests -v
+Result: PASS
+Tests: 19
+
+Local verification only; no independent grading or external verification claimed.
+The suite includes the three unchanged supplied smoke tests and sixteen regression tests.
+Regression coverage includes snapshot changes, strict stale-generation rejection, exact positional text, detached state, invalid-input transactionality, partial choices, and real JSON save/reload.
+Both advertised defects were separately reintroduced in memory using the supplied original methods. The suite rejected the stale-source/choice defect and rejected unresolved-save promotion. The delivered files were not modified by those sensitivity checks.
+All five protected input SHA-256 values match input-manifest.json. The three protected output copies are byte-identical to their inputs. Artifact sizes, counts, depth, and regular-file/directory types were checked locally.
+Supported scope remains 1..12 equal-count positional LF-delimited lines. Insertion/deletion alignment, malformed-save recovery, and atomic crash recovery are outside the requested scope.

@@ -1,0 +1,321 @@
+{
+  "source_repository": "https://github.com/SeungheonOh/dot-skills",
+  "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+  "source_package_manifest_sha256": "4e08cbc5612a3a3935702905da803b6acd58982394e43c2ca7e8b71d19a87ca1",
+  "distinct_file_count": 19,
+  "bindings": [
+    {
+      "attempt_id": "N01-F7-S",
+      "case_id": "F7",
+      "arm": "S",
+      "files": [
+        {
+          "candidate_relative_path": "skill/compare-json-and-verify-patch/SKILL.md",
+          "source_relative_path": "packages/skill/compare-json-and-verify-patch/SKILL.md",
+          "repo_path": "skill/compare-json-and-verify-patch/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "7313b52b0834d14e2bee3466161bdc64495cd120",
+          "sha256": "67d2d04ce21ebc613f2b7350fd3d76a219f8524de30f251d4c7f6e50385e3014",
+          "bytes": 7200,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N02-F7-C",
+      "case_id": "F7",
+      "arm": "C",
+      "files": []
+    },
+    {
+      "attempt_id": "N03-F3-S",
+      "case_id": "F3",
+      "arm": "S",
+      "files": [
+        {
+          "candidate_relative_path": "skill/meeting-window-coordination/SKILL.md",
+          "source_relative_path": "packages/skill/meeting-window-coordination/SKILL.md",
+          "repo_path": "skill/meeting-window-coordination/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "3f10db9e34cf5ef051ea5d5bc07367e24c0daa22",
+          "sha256": "70dd691ca3921b58b35e547eeefeb452d6377c31259fcc51a865deea7f5a4f20",
+          "bytes": 14385,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-window-coordination/check_example.py",
+          "source_relative_path": "packages/skill/meeting-window-coordination/check_example.py",
+          "repo_path": "skill/meeting-window-coordination/check_example.py",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "6714eb788fe330639aed786ae2089bf30fa4cd32",
+          "sha256": "214d45a1af60cd219fff00047847376e4a8cdbce8b45eb85fe81a80b8f2fb22d",
+          "bytes": 10876,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-window-coordination/example.md",
+          "source_relative_path": "packages/skill/meeting-window-coordination/example.md",
+          "repo_path": "skill/meeting-window-coordination/example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "c33f917805f35c4183bb8c9a8af298586ea841d5",
+          "sha256": "be075a5dd411d2ffe351284bf59416ccabd008606e1e5c0f84b3aa30af11c4cf",
+          "bytes": 6850,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-window-coordination/second-case.md",
+          "source_relative_path": "packages/skill/meeting-window-coordination/second-case.md",
+          "repo_path": "skill/meeting-window-coordination/second-case.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "1c648ce5f8c53046877f978799c5a2d6a99c1ae3",
+          "sha256": "89b5e4ff09f7939d1562cb05998394a54d95ae150e8d3745adfefc124a62f8a1",
+          "bytes": 3127,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N04-F3-C",
+      "case_id": "F3",
+      "arm": "C",
+      "files": []
+    },
+    {
+      "attempt_id": "N05-F1-S",
+      "case_id": "F1",
+      "arm": "S",
+      "files": [
+        {
+          "candidate_relative_path": "skill/expense-report-reconciliation/SKILL.md",
+          "source_relative_path": "packages/skill/expense-report-reconciliation/SKILL.md",
+          "repo_path": "skill/expense-report-reconciliation/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "a574a6307941cec706a288aad4627ecb7d4c3e69",
+          "sha256": "7c43b2643bb6b1864fb4f1bf1226e594d56f1b24a13303e7caebc9a75e584565",
+          "bytes": 13490,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/expense-report-reconciliation/example.md",
+          "source_relative_path": "packages/skill/expense-report-reconciliation/example.md",
+          "repo_path": "skill/expense-report-reconciliation/example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "1c2bb15e7ba57201e828357c14088da7d6dba893",
+          "sha256": "0788b89ae3dad911d43ea1aa539d95f0fb61af42ff2e473674f980630528f884",
+          "bytes": 22885,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N06-F1-C",
+      "case_id": "F1",
+      "arm": "C",
+      "files": []
+    },
+    {
+      "attempt_id": "N07-F5-S",
+      "case_id": "F5",
+      "arm": "S",
+      "files": [
+        {
+          "candidate_relative_path": "skill/document-revision-reconciliation/SKILL.md",
+          "source_relative_path": "packages/skill/document-revision-reconciliation/SKILL.md",
+          "repo_path": "skill/document-revision-reconciliation/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "a67ade3298a8efb6a2380b82aa5a1ab2dd60c37f",
+          "sha256": "4c110c999915c804d6965d4e1da5be411d186743defd2b3ab802b642e3126e19",
+          "bytes": 11597,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/document-revision-reconciliation/check_example.py",
+          "source_relative_path": "packages/skill/document-revision-reconciliation/check_example.py",
+          "repo_path": "skill/document-revision-reconciliation/check_example.py",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "17b51c0e527db28df90835e9d3832bb62ee4ce33",
+          "sha256": "48690a9513d403022495ad207478598c4a342c52aa71e508e46e58bd912c41fd",
+          "bytes": 7487,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/document-revision-reconciliation/example-results.json",
+          "source_relative_path": "packages/skill/document-revision-reconciliation/example-results.json",
+          "repo_path": "skill/document-revision-reconciliation/example-results.json",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "3d74c78e02ecc5a9c9bb3cdb4e04a66c7975d72e",
+          "sha256": "47512df10fa90b581b26db5eddd0e96e80259e57df4e6bbccebd2b79f24cdbd0",
+          "bytes": 2117,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/document-revision-reconciliation/example.md",
+          "source_relative_path": "packages/skill/document-revision-reconciliation/example.md",
+          "repo_path": "skill/document-revision-reconciliation/example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "766a78c7bfa114896c9df6e1711b687ab92a2cb7",
+          "sha256": "4d2f1a8ea7ef7001736abf37cf0eaa2dd8e2f88d8e9797474103215fe7a1079d",
+          "bytes": 3393,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N08-F5-C",
+      "case_id": "F5",
+      "arm": "C",
+      "files": []
+    },
+    {
+      "attempt_id": "N09-F6-C",
+      "case_id": "F6",
+      "arm": "C",
+      "files": []
+    },
+    {
+      "attempt_id": "N10-F6-S",
+      "case_id": "F6",
+      "arm": "S",
+      "files": [
+        {
+          "candidate_relative_path": "skill/sql-report-reconciliation/SKILL.md",
+          "source_relative_path": "packages/skill/sql-report-reconciliation/SKILL.md",
+          "repo_path": "skill/sql-report-reconciliation/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "b8b8dd3aeb405a4c8411bc0a612beb56804293e8",
+          "sha256": "0bbd6f501ee28738fea6326fe8759a2383047b034ad6888378dc00ca92204c59",
+          "bytes": 8367,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/sql-report-reconciliation/references/fictional-example.md",
+          "source_relative_path": "packages/skill/sql-report-reconciliation/references/fictional-example.md",
+          "repo_path": "skill/sql-report-reconciliation/references/fictional-example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "f0df9e2760b89a64f729dbcf34656ad3d25fec0f",
+          "sha256": "9193c975032ac7880a0901480840c950aba154635bc644b5ac1f22931074afc8",
+          "bytes": 17142,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/sql-report-reconciliation/references/verified-run.md",
+          "source_relative_path": "packages/skill/sql-report-reconciliation/references/verified-run.md",
+          "repo_path": "skill/sql-report-reconciliation/references/verified-run.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "d8a4cc23adc733ad860d4c3b7ff403f833b4c68c",
+          "sha256": "cbcc0f25d9f348efad324d22e6bd61b1fffc076e25d5cb41583c057795812934",
+          "bytes": 3987,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N11-F2-C",
+      "case_id": "F2",
+      "arm": "C",
+      "files": []
+    },
+    {
+      "attempt_id": "N12-F2-S",
+      "case_id": "F2",
+      "arm": "S",
+      "files": [
+        {
+          "candidate_relative_path": "skill/meeting-action-handoff/SKILL.md",
+          "source_relative_path": "packages/skill/meeting-action-handoff/SKILL.md",
+          "repo_path": "skill/meeting-action-handoff/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "7c437508da6042eb04b5f81e58b4b06db19740ee",
+          "sha256": "f6e36e12666ab844609344a9b5cabe92dfc6e84cd12c0455ce64e74c6b98d2ee",
+          "bytes": 10774,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/meeting-action-handoff/example.md",
+          "source_relative_path": "packages/skill/meeting-action-handoff/example.md",
+          "repo_path": "skill/meeting-action-handoff/example.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "2ce4c091595230c9d7432a103e5765e0a26f5953",
+          "sha256": "b0fcc1e08b4d0c4ad8d3354ff8131972b9e3dccd6f4b03a3a8a022a4f8e511e7",
+          "bytes": 3716,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N13-F4-C",
+      "case_id": "F4",
+      "arm": "C",
+      "files": []
+    },
+    {
+      "attempt_id": "N14-F4-S",
+      "case_id": "F4",
+      "arm": "S",
+      "files": [
+        {
+          "candidate_relative_path": "skill/decision-source-brief/SKILL.md",
+          "source_relative_path": "packages/skill/decision-source-brief/SKILL.md",
+          "repo_path": "skill/decision-source-brief/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "fd3b0ff381f314654d590d4c6a53c076f1ef3859",
+          "sha256": "94d0bb40cf971819f1d295198de39e1df5c172d06f14eea6950f2332f744dd60",
+          "bytes": 8258,
+          "role": "designated_package"
+        },
+        {
+          "candidate_relative_path": "skill/decision-source-brief/examples/fictional-venue-decision.md",
+          "source_relative_path": "packages/skill/decision-source-brief/examples/fictional-venue-decision.md",
+          "repo_path": "skill/decision-source-brief/examples/fictional-venue-decision.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "3159397f6c321b2473f9cdc677b374094127abe8",
+          "sha256": "e07e0835fcfc8faf9596b558cb1504fcc627cc50d65af912955f3bd93dea19ab",
+          "bytes": 5629,
+          "role": "designated_package"
+        }
+      ]
+    },
+    {
+      "attempt_id": "N15-F8-C",
+      "case_id": "F8",
+      "arm": "C",
+      "files": []
+    },
+    {
+      "attempt_id": "N16-F8-S",
+      "case_id": "F8",
+      "arm": "S",
+      "files": [
+        {
+          "candidate_relative_path": "skill/build-text-merge-component/SKILL.md",
+          "source_relative_path": "packages/skill/build-text-merge-component/SKILL.md",
+          "repo_path": "skill/build-text-merge-component/SKILL.md",
+          "source_commit": "67bb5a82d3d97c1ee1bbbfaa3e695a604c3a0d56",
+          "source_repository": "https://github.com/SeungheonOh/dot-skills",
+          "git_blob_sha": "73e070ddb93f1a3640813cad908f20dde250ba12",
+          "sha256": "e1edb81fd65830e73dd0015672c5cc962fae2118957121236439e810858c1975",
+          "bytes": 10423,
+          "role": "designated_package"
+        }
+      ]
+    }
+  ]
+}

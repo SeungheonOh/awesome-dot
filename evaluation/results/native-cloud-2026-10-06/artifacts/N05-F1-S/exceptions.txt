@@ -1,0 +1,18 @@
+ready_subtotal_minor: 7774
+source_total_minor: 10667
+personal_excluded_minor: 1200
+unresolved_source_minor: 1488
+
+Draft calculation only, in GBP integer pence, under the supplied fictional Copperfern policy. This is not tax advice, an approved claim, a reimbursement request or a submission. No external action or verification was performed.
+
+Confirmed duplicate: S07 explicitly confirms a rescan of S02, receipt M-826, and maps to the same canonical transaction T02. It contributes no additional monetary line or amount. Payment sources S08, S09, S10 and S15 and purpose sources S11-S14 likewise support their mapped transactions without adding amounts (inputs/policy.txt#P1; inputs/policy.txt#P6).
+
+Meal cap and linked credit: T01 (S01, S08, S11) and T02 (S02, S07, S09, S12) form the single claimant CF-7/event CF-26/2026-09-17 meal group. T03 (S03, S10) explicitly credits T02 and inherits its purpose and original group, although the credit date remains 2026-09-19. The signed pre-cap business amount is 2835 + 2470 - 600 = 4705 pence. The group cap is 4500 pence, so the overage is 205 pence. Under the latest-to-earliest allocation rule, all 205 pence is assigned as a -205 cap adjustment to T02, whose 18:05 timestamp is later than T01's 12:10 timestamp. T01 claims 2835, T02 claims 2265 and T03 retains its full -600 signed credit with zero cap adjustment, giving a net meal claim of 4500. The credit was applied before calculating the cap and was not moved to a separate daily group (inputs/policy.txt#P2; inputs/policy.txt#P3; inputs/policy.txt#P6).
+
+Explicit personal split: T04 remains one canonical transaction with a source face amount of 3199 pence. S04 and S13 establish exactly 1999 pence of workshop materials for CF-26 and exactly 1200 pence of personal stationery. The business amount and claim are both 1999; no proportional allocation or additional canonical transaction was created. This supply purchase has no monetary cap (inputs/policy.txt#P3; inputs/policy.txt#P4; inputs/policy.txt#P6).
+
+Local transport: S05 and S14 support T05's 1275-pence shuttle journey carrying workshop supplies to the CF-26 training room. The full 1275 is business-eligible and uncapped, outside the meal group (inputs/policy.txt#P2; inputs/policy.txt#P3; inputs/policy.txt#P5).
+
+Missing purpose: T06, receipt X-033 dated 2026-09-17, has a source face amount of 1488 pence (S06). Its payment match S15 establishes settlement but supplies no business purpose. Business amount, cap adjustment and claim remain empty, with status unresolved. The full 1488 pence is excluded from the 7774-pence ready subtotal; it is not treated as a zero claim or presumed personal. Clarification needed: provide a source-backed statement explaining the specific business purpose of T06 (receipt X-033, 1488 pence), or confirm that the purchase was personal. No purpose has been invented (inputs/policy.txt#P1; inputs/policy.txt#P2; inputs/policy.txt#P6).
+
+Reconciliation: canonical signed source total = 2835 + 2470 - 600 + 3199 + 1275 + 1488 = 10667 pence. Ready subtotal = 2835 + 2265 - 600 + 1999 + 1275 = 7774 pence. The complete accounting is 10667 = 7774 ready + 1200 explicit personal exclusion + 205 meal-cap reduction + 1488 unresolved. All 15 sources map exactly once to six distinct canonical transactions; duplicate and supporting evidence add no monetary amounts (inputs/policy.txt#P6).

@@ -1,0 +1,21 @@
+{
+  "case_id": "F1",
+  "submission_hashes": {
+    "claim-lines.csv": "cecc48264f5695a62af9035c47877586c7c033f5ed621666cb82c05ef6623117",
+    "source-map.csv": "f5c5efcb6b3511c88ae6fc7ca63f17d6e6cce23c85034ca6b2d77cee44db04a0",
+    "exceptions.txt": "bf769d8992205e81870cc2d53604370c85aff49a4d4e405bb5d3e2c806c4d82e"
+  },
+  "groups": {
+    "g5": {
+      "passed": true,
+      "evidence": [
+        "exceptions.txt:8 states that S07 is a confirmed rescan of S02 for T02 and adds neither a monetary line nor an amount; source-map.csv:3,8 places both sources on that canonical transaction and labels S07 duplicate. The explanation agrees with inputs/evidence.csv#S02/#S07 and its cited inputs/policy.txt#P1/#P6.",
+        "exceptions.txt:10 puts the signed T03 credit in T02's original CF-7/CF-26/2026-09-17 group, calculates 4705 net business pence before a 4500 cap, and assigns the entire -205 reduction to the later T02. It expressly preserves a separate -600 T03 claim and zero credit adjustment. claim-lines.csv:2-4 contains the corresponding 2835/2265/-600 claims. These statements follow inputs/evidence.csv#S01/#S02/#S03/#S10/#S11/#S12 and inputs/policy.txt#P2/#P3/#P6, rather than capping gross purchases or the later credit date separately.",
+        "exceptions.txt:12 and claim-lines.csv:5 keep T04 as one 3199 source transaction with 1999 business pence and 1200 personal pence excluded. Both amounts and the absence of proportional allocation agree with inputs/evidence.csv#S04/#S13 and the cited inputs/policy.txt#P4.",
+        "exceptions.txt:14 identifies T06/receipt X-033 as unresolved at the full 1488 source amount, says S15 establishes payment rather than purpose, and asks the claimant for a source-backed explanation of the purchase's business purpose and any personal component. It leaves eligibility/claim fields empty and excludes the amount from the ready subtotal; :16 specifies that subtotal as 7774. claim-lines.csv:7 agrees. inputs/evidence.csv#S06/#S15 and inputs/policy.txt#P2/#P6 support this bounded unresolved treatment.",
+        "exceptions.txt:6 calls the output a draft based on the supplied fictional packet and does not assert external submission or verification. The other reviewed outputs do not contradict that scope. This is consistent with task.txt and inputs/policy.txt#P6 and does not purport to prove how the artifact was produced.",
+        "Policy references support the actual decision points: exceptions.txt:10 cites P3 for meal grouping, ordering and cap allocation; :12 cites P4 for the personal split and P3/P5 for T05's fully eligible uncapped 1275; :14 cites P2/P6 for unresolved purpose. claim-lines.csv:2-7 carries the appropriate transaction policy locators, and inputs/evidence.csv#S05/#S14 supports the transport statement. There is no substantive citation or prose contradiction."
+      ]
+    }
+  }
+}

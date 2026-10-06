@@ -1,0 +1,104 @@
+{
+  "case_id": "F4",
+  "submission_sha256": "debf000f3881cff0c0f84829de7bc9336e2bb1e574749305b3f6b717510623bf",
+  "submission_hashes": {
+    "decision-brief.txt": "debf000f3881cff0c0f84829de7bc9336e2bb1e574749305b3f6b717510623bf"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "assertions": [
+        {
+          "id": "g1.1",
+          "passed": true,
+          "reason": "decision-brief.txt:9 identifies AlderRoster Community 3.4 as meeting M1 with all required offline edits/local saving and M2 with the mandatory organization-wide Export Bridge and all five fields, concluding eligible. It notes online CSV without penalizing it, consistently with line 5's online-generation allowance. The findings are supported by inputs/02-alderroster-community-3.4.txt#OFFLINE/#CSV and inputs/01-user-requirements.txt#MUST-HAVES/#PRIORITIES."
+        },
+        {
+          "id": "g1.2",
+          "passed": true,
+          "reason": "decision-brief.txt:11 says BeaconCrew Basic 2.8 fails M1 because it has offline viewing only with edits disabled, meets M2 via the complete five-field online CSV, and is ineligible despite cheaper cost. The edit-disabled statement is in the offline context. This matches inputs/03-beaconcrew-basic-2.8.txt#OFFLINE/#CSV and inputs/01-user-requirements.txt#MUST-HAVES."
+        },
+        {
+          "id": "g1.3",
+          "passed": true,
+          "reason": "decision-brief.txt:13 marks CedarShift Team 5.1 M1 meets, M2 unconfirmed and eligibility unconfirmed because coordinator-notes CSV inclusion is unresolved. It correctly preserves documented four core fields and online/offline CSV generation, and rejects inference from generic multi-format downloads. It does not claim non-support or invent another unknown. These distinctions are supported by inputs/05-cedarshift-team-5.1.txt#OFFLINE/#CSV-CORE/#NOTES-GAP and inputs/01-user-requirements.txt#UNCERTAINTY."
+        },
+        {
+          "id": "g1.4",
+          "passed": true,
+          "reason": "decision-brief.txt:1 gives the exact decision cutoff 2026-03-31 17:00 UTC and :9,11,13 uses the exact three required plan/version identities. Line 17 treats Plus 3.0 and the post-cutoff clarification as excluded evidence, not alternate candidates or a changed decision date. This matches task.txt's Decision contract and inputs/01-user-requirements.txt#CUTOFF."
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "assertions": [
+        {
+          "id": "g2.1",
+          "passed": true,
+          "reason": "decision-brief.txt:9,11,13 provides 12-seat formulas, organization-wide mandatory Export Bridge/CSV Pack charges once, and monthly-to-12-month multiplication. Line 15 explicitly applies 12 paid coordinators throughout with constant monthly prices, no annual discount or tax, optional/setup/migration/volunteer charges. This matches inputs/01-user-requirements.txt#POPULATION and the three exact-plan #PRICE sections without invented cost adjustments."
+        },
+        {
+          "id": "g2.2",
+          "passed": true,
+          "reason": "decision-brief.txt:9 calculates 12 × USD 10.00 + USD 15.00 = USD 135.00/month, then USD 135.00 × 12 = USD 1,620.00. All totals have two decimals in the line 7 USD context and include Export Bridge once. This follows inputs/02-alderroster-community-3.4.txt#PRICE and inputs/01-user-requirements.txt#POPULATION."
+        },
+        {
+          "id": "g2.3",
+          "passed": true,
+          "reason": "decision-brief.txt:11 calculates 12 × USD 6.00 + USD 0.00 mandatory modules = USD 72.00/month, then USD 72.00 × 12 = USD 864.00. The auditable two-decimal totals are supported by inputs/03-beaconcrew-basic-2.8.txt#PRICE and inputs/01-user-requirements.txt#POPULATION."
+        },
+        {
+          "id": "g2.4",
+          "passed": true,
+          "reason": "decision-brief.txt:13 calculates 12 × USD 7.50 + USD 12.00 = USD 102.00/month, then USD 102.00 × 12 = USD 1,224.00, with no extra notes fee if supported. These totals include the mandatory organization-wide CSV Pack and follow inputs/05-cedarshift-team-5.1.txt#PRICE and inputs/01-user-requirements.txt#POPULATION."
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "assertions": [
+        {
+          "id": "g3.1",
+          "passed": true,
+          "reason": "decision-brief.txt:3 recommends AlderRoster Community 3.4 with Export Bridge as the only currently supported eligible candidate. Lines 11/13 exclude an unconditional BeaconCrew or CedarShift selection; line 19 changes to CedarShift only upon qualifying confirmation. This is a definite current choice consistent with inputs/01-user-requirements.txt#PRIORITIES and task.txt's recommendation requirement."
+        },
+        {
+          "id": "g3.2",
+          "passed": true,
+          "reason": "decision-brief.txt:3 requires cutoff-available explicit evidence for both must-haves before choosing the lowest 12-month recurring total, then complete offline CSV and fewer modules as ordered unweighted rules. Line 11 rejects the cheaper ineligible product; line 19 says offline CSV is unnecessary to break the unequal costs if CedarShift becomes eligible. Thus tie-breaks are used only after the cost rule, with no invented weights, matching inputs/01-user-requirements.txt#PRIORITIES/#UNCERTAINTY."
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "assertions": [
+        {
+          "id": "g4.1",
+          "passed": true,
+          "reason": "All decisive report citations have matching supplied file/section labels and support the adjacent claims: :3/#PRIORITIES; :5/#MUST-HAVES; :9 and :11 exact candidate #OFFLINE/#CSV/#PRICE; :13 CedarShift #OFFLINE/#CSV-CORE/#NOTES-GAP/#PRICE; :15/#POPULATION; :17 overview #HEADLINE/#QUALIFIER, update #UPDATE/#TIMING and #CUTOFF; :19/#UNCERTAINTY/#NOTES-GAP. Grouped citations adequately cover features, prices, exclusions and designed uncertainty across all six inputs."
+        },
+        {
+          "id": "g4.2",
+          "passed": true,
+          "reason": "decision-brief.txt:17 explicitly confines BeaconCrew's offline-editing headline to Plus 3.0 rather than Basic 2.8, consistent with inputs/04-beaconcrew-overview.txt#QUALIFIER. It also excludes the April 2 CedarShift clarification because its publication follows cutoff and its claimed March 25 effective date cannot establish cutoff knowledge. This follows inputs/06-cedarshift-update.txt#UPDATE/#TIMING and inputs/01-user-requirements.txt#CUTOFF."
+        },
+        {
+          "id": "g4.3",
+          "passed": true,
+          "reason": "decision-brief.txt:7 calls the comparison provider-documented and costs calculated; :21 explicitly distinguishes provider feature claims from tested behavior and report conclusions/calculations. Lines 13/19 limit the unknown to coordinator-notes CSV inclusion. There are no unsupported outside facts, invented additional uncertainty or claims of product testing, provider contact, purchase or other external action. This satisfies task.txt's source and action boundaries and inputs/01-user-requirements.txt#UNCERTAINTY as content review."
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "assertions": [
+        {
+          "id": "g5.1",
+          "passed": true,
+          "reason": "decision-brief.txt:19 identifies the needed exact Team 5.1 CSV Pack field list or provider clarification published by cutoff about inclusion/exclusion of coordinator notes. Confirmation makes CedarShift eligible/preferred; explicit exclusion fails M2 and preserves AlderRoster; continued unknown preserves CedarShift's unconfirmed state and AlderRoster's recommendation. It states no qualifying resolution is supplied. The USD 396.00 annual difference is correct (1620−1224). These conditionals meet inputs/01-user-requirements.txt#UNCERTAINTY/#PRIORITIES and inputs/05-cedarshift-team-5.1.txt#NOTES-GAP/#PRICE."
+        }
+      ]
+    }
+  ]
+}

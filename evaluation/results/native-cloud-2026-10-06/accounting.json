@@ -1,0 +1,57 @@
+{
+  "audited_at_utc": "2026-10-06T01:38:14.093645+00:00",
+  "freeze_sha256": "39b80d6908e88dccd2c7b6129deaccd6982be085c678da576b53e29c475105aa",
+  "independent_freeze_copy_matches": true,
+  "frozen_control_files_verified": 27,
+  "frozen_control_file_count": 27,
+  "source_files_verified": 453,
+  "source_file_count": 453,
+  "scheduled_cases": 8,
+  "scheduled_attempts": 16,
+  "dispatch_records": 16,
+  "frozen_receipts_verified": 16,
+  "pending_receipts": [],
+  "protected_candidate_files_checked": 123,
+  "designated_package_files_checked": 19,
+  "paired_input_checks": [
+    {
+      "case_id": "F7",
+      "identical_task_input_files": 6
+    },
+    {
+      "case_id": "F3",
+      "identical_task_input_files": 5
+    },
+    {
+      "case_id": "F1",
+      "identical_task_input_files": 4
+    },
+    {
+      "case_id": "F5",
+      "identical_task_input_files": 7
+    },
+    {
+      "case_id": "F6",
+      "identical_task_input_files": 8
+    },
+    {
+      "case_id": "F2",
+      "identical_task_input_files": 7
+    },
+    {
+      "case_id": "F4",
+      "identical_task_input_files": 8
+    },
+    {
+      "case_id": "F8",
+      "identical_task_input_files": 7
+    }
+  ],
+  "audit_scope": "post-hoc content/accounting verification; no trusted execution transcript or signed clock",
+  "original_bound_source_bytes_unchanged": true,
+  "generated_bytecode_files_excluded": 2,
+  "artifact_files_verified": 46,
+  "original_audit_sha256": "1a9c1f3f5e064dceb5587c82c8e50f1fde25bcfc1d469b75ce91e113089df21b",
+  "process_integrity": null,
+  "os_isolation_verified": false
+}

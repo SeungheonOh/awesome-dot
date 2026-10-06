@@ -1,0 +1,111 @@
+{
+  "as_of": "2026-10-07T16:00:00+01:00",
+  "actions": [
+    {
+      "action_id": "EX-11",
+      "deliverable": "Create a print-ready PDF of the twelve table labels; completion requires depositing the final PDF in the shared print folder. This is separate from the wall-label PDF.",
+      "owner": {"person_id": "P1", "name": "Orin Patel"},
+      "deadline": {"date": "2026-10-09", "local_time": "17:00", "utc_offset": "+01:00", "zone_label": "Europe/London"},
+      "status": "open",
+      "reported_complete": false,
+      "verified_complete": false,
+      "source_refs": {
+        "commitment": ["inputs/meeting.txt#M01", "inputs/meeting.txt#M03"],
+        "owner": ["inputs/meeting.txt#M01", "inputs/meeting.txt#M03"],
+        "deadline": ["inputs/meeting.txt#M01", "inputs/meeting.txt#M03"],
+        "completion": ["inputs/followups.txt#F07"]
+      },
+      "clarifications": []
+    },
+    {
+      "action_id": "EX-12",
+      "deliverable": "Create a separately usable print-ready PDF of the six wall labels; completion requires depositing the PDF in the shared print folder.",
+      "owner": {"person_id": "P2", "name": "Nel Arcos"},
+      "deadline": {"date": "2026-10-10", "local_time": null, "utc_offset": "+01:00", "zone_label": "Europe/London"},
+      "status": "open",
+      "reported_complete": false,
+      "verified_complete": false,
+      "source_refs": {
+        "commitment": ["inputs/meeting.txt#M02"],
+        "owner": ["inputs/meeting.txt#M02"],
+        "deadline": ["inputs/meeting.txt#M02"],
+        "completion": ["inputs/followups.txt#F07"]
+      },
+      "clarifications": []
+    },
+    {
+      "action_id": "EX-13",
+      "deliverable": "Finalize the 8-person volunteer rota; completion requires depositing the approved roster in the shared folder.",
+      "owner": {"person_id": "P4", "name": "Davi Moss"},
+      "deadline": {"date": "2026-10-08", "local_time": "18:00", "utc_offset": "+01:00", "zone_label": "Europe/London"},
+      "status": "open",
+      "reported_complete": false,
+      "verified_complete": false,
+      "source_refs": {
+        "commitment": ["inputs/meeting.txt#M04", "inputs/followups.txt#F02", "inputs/followups.txt#F03"],
+        "owner": ["inputs/meeting.txt#M04", "inputs/followups.txt#F01", "inputs/followups.txt#F02", "inputs/followups.txt#F03"],
+        "deadline": ["inputs/followups.txt#F02", "inputs/followups.txt#F03"],
+        "completion": ["inputs/followups.txt#F07"]
+      },
+      "clarifications": []
+    },
+    {
+      "action_id": "EX-14",
+      "deliverable": "Verify the exhibit carry-in route with the building steward; completion requires recording the confirmed route in the setup sheet.",
+      "owner": null,
+      "deadline": {"date": "2026-10-08", "local_time": null, "utc_offset": "+01:00", "zone_label": "Europe/London"},
+      "status": "open",
+      "reported_complete": false,
+      "verified_complete": false,
+      "source_refs": {
+        "commitment": ["inputs/meeting.txt#M05"],
+        "owner": ["inputs/meeting.txt#M05", "inputs/followups.txt#F07"],
+        "deadline": ["inputs/meeting.txt#M05"],
+        "completion": ["inputs/followups.txt#F07"]
+      },
+      "clarifications": [
+        {
+          "question": "Who will accept ownership of EX-14, verify the carry-in route with the building steward, and record the confirmed route in the setup sheet by 2026-10-08?",
+          "source_refs": ["inputs/meeting.txt#M05", "inputs/followups.txt#F07"]
+        }
+      ]
+    },
+    {
+      "action_id": "EX-15",
+      "deliverable": "Send the final arrival pack to the registered exhibition volunteers; completion requires actual sending, not merely preparing a draft or prefilling recipients.",
+      "owner": {"person_id": "P5", "name": "Tessa Vale"},
+      "deadline": {"date": "2026-10-09", "local_time": "12:00", "utc_offset": "+01:00", "zone_label": "Europe/London"},
+      "status": "draft_only",
+      "reported_complete": true,
+      "verified_complete": false,
+      "source_refs": {
+        "commitment": ["inputs/meeting.txt#M06"],
+        "owner": ["inputs/meeting.txt#M06"],
+        "deadline": ["inputs/meeting.txt#M06"],
+        "completion": ["inputs/followups.txt#F04", "inputs/followups.txt#F05", "inputs/arrival-draft.txt#D01", "inputs/arrival-draft.txt#D02", "inputs/arrival-draft.txt#D03", "inputs/arrival-draft.txt#D06"]
+      },
+      "clarifications": [
+        {
+          "question": "Tessa, has the final arrival pack actually been sent to the registered exhibition volunteers? Please provide actual send confirmation/evidence, or confirm that it still needs sending; the supplied artifact is an unsent draft.",
+          "source_refs": ["inputs/meeting.txt#M06", "inputs/followups.txt#F04", "inputs/followups.txt#F05", "inputs/arrival-draft.txt#D02", "inputs/arrival-draft.txt#D06"]
+        }
+      ]
+    },
+    {
+      "action_id": "EX-16",
+      "deliverable": "Test both display-audio cable outputs; completion requires recording pass/fail results for both outputs in the equipment log.",
+      "owner": {"person_id": "P6", "name": "Ivo Chen"},
+      "deadline": {"date": "2026-10-09", "local_time": "16:00", "utc_offset": "+01:00", "zone_label": "Europe/London"},
+      "status": "verified_complete",
+      "reported_complete": true,
+      "verified_complete": true,
+      "source_refs": {
+        "commitment": ["inputs/meeting.txt#M07"],
+        "owner": ["inputs/meeting.txt#M07"],
+        "deadline": ["inputs/meeting.txt#M07"],
+        "completion": ["inputs/followups.txt#F06", "inputs/audio-check.txt#V01", "inputs/audio-check.txt#V02", "inputs/audio-check.txt#V03", "inputs/audio-check.txt#V04"]
+      },
+      "clarifications": []
+    }
+  ]
+}
