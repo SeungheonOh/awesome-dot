@@ -12,12 +12,18 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent
-# These links are in the byte-pinned text-merge guide. Its neighboring workflows
-# are deliberately outside this experiment's designated package allowlist.
+# These exact links are in the two byte-pinned text-merge guides. Neighboring
+# workflows are deliberately outside each study's designated package allowlist;
+# see packages/README.md and studies/repeated-stress-2026-10-06/guides/README.md.
+# Keep the pinned source bytes and check every other local link normally.
 OMITTED_PACKAGE_LINKS = {
     ("packages/skill/build-text-merge-component/SKILL.md", "../parallel-change-integration/SKILL.md"),
     ("packages/skill/build-text-merge-component/SKILL.md", "../verify-exact-text-patches/SKILL.md"),
     ("packages/skill/build-text-merge-component/SKILL.md", "../implement-scoped-change/SKILL.md"),
+    ("studies/repeated-stress-2026-10-06/guides/skill/build-text-merge-component/SKILL.md", "../parallel-change-integration/SKILL.md"),
+    ("studies/repeated-stress-2026-10-06/guides/skill/build-text-merge-component/SKILL.md", "../document-revision-reconciliation/SKILL.md"),
+    ("studies/repeated-stress-2026-10-06/guides/skill/build-text-merge-component/SKILL.md", "../verify-exact-text-patches/SKILL.md"),
+    ("studies/repeated-stress-2026-10-06/guides/skill/build-text-merge-component/SKILL.md", "../implement-scoped-change/SKILL.md"),
 }
 
 
@@ -97,7 +103,7 @@ def check_links():
             checked += 1
     if exceptions != OMITTED_PACKAGE_LINKS:
         raise ValueError("Pinned package cross-link exceptions changed; review the package manifest")
-    print(f"Documentation links: {checked} checked; 3 explicitly omitted pinned cross-package destinations", flush=True)
+    print(f"Documentation links: {checked} checked; {len(exceptions)} explicitly omitted pinned cross-package destinations", flush=True)
 
 
 def run(command, cwd, env):
