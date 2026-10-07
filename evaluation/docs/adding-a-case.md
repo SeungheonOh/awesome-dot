@@ -36,7 +36,7 @@ python -I -B evaluation/verify.py --tests-only
 python -I -B evaluation/verify.py
 ```
 
-The first command exercises only this example. The second includes it through a top-level test-discovery bridge. The third runs the complete local verification described in the [evaluation index](../README.md#verify-locally). These commands do not collect model outputs, recreate historical dispatch, or recover unpublished prompts from hashes or public projections. **Authored-control test passes are not model attempts or evidence of skill improvement.**
+The first command exercises only this example. The second includes it through a top-level test-discovery bridge. The third runs the core local verification for the original fixtures and two original studies; the [evaluation index](../README.md#verify-locally) also lists the separate package commands. These commands do not collect model outputs, recreate historical dispatch, or recover unpublished prompts from hashes or public projections. **Authored-control test passes are not model attempts or evidence of skill improvement.**
 
 To inspect an already saved artifact, run:
 

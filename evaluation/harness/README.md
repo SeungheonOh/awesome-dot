@@ -16,7 +16,7 @@ PYTHONPATH=evaluation/harness python -B -m dot_eval inspect-config evaluation/pi
 PYTHONPATH=evaluation/harness python -B -m dot_eval --help
 ```
 
-No dependency installation is needed. `verify.py` is the [complete local verification entrypoint](../README.md#verify-locally), including both saved studies and report/navigation checks. The original `check.py` command runs the 61 harness tests and 119 evaluator tests, verifies pinned source manifests, and checks local documentation links. The tests use temporary directories and safe authored local fixtures. They do not call a model or run package helpers.
+No dependency installation is needed. `verify.py` is the core local verification entrypoint for the original fixtures and two original studies, including report/navigation checks; the [evaluation index](../README.md#verify-locally) also lists the separate package commands. The original `check.py` command runs the 61 harness tests and 119 evaluator tests, verifies pinned source manifests, and checks local documentation links. The tests use temporary directories and safe authored local fixtures. They do not call a model or run package helpers.
 
 `inspect-config` checks the explicit source selection and reports missing runtime fields. It does not launch a process or produce an execution freeze. `freeze` creates an environment-specific content binding; it is not runtime authorization. `live-run` always returns a blocking error, with no override switch.
 
