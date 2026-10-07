@@ -2,6 +2,8 @@
 
 Saved task outputs, requirement-level evidence, and local checks for this repository. The two original artifact studies found no difference on their predeclared primary artifact checks. They do not establish general equivalence or productivity gains.
 
+Jump to [results](results/README.md) · [contributor guide](docs/adding-a-case.md) · [verification](#verify-locally)
+
 For a new contribution, start with [Evaluate one skill change](docs/adding-a-case.md), a short guide with executable authored controls.
 
 ## Repeated artifact study
@@ -126,7 +128,7 @@ These commands check the package inventory, hashes and saved-result consistency,
 The transfer cohort is not included in the core command above. From the repository root, run its saved-evidence verifier with the reviewed manifest digest:
 
 ```sh
-python -I -B evaluation/studies/transfer-2026-10-07/verify.py --manifest-sha256 023e19eee7704d15c71e92d9496da337eb3c7d4d1767eda488dcbe7d17db5a24 --self-test
+python -I -B evaluation/studies/transfer-2026-10-07/verify.py --manifest-sha256 443a359867c2c646d72842c7dc62ef14aadc076b5e087572895ce6ccb59b1401 --self-test
 python -I -B evaluation/studies/transfer-2026-10-07/test_verify.py
 ```
 

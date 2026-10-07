@@ -1,8 +1,8 @@
-# Transfer cohort saved evidence proposal
+# Transfer cohort saved evidence report
 
 The completed October 7 2026 cohort reached the ceiling on its declared artifact checks in both conditions. All 12 planned first submissions arrived on time; all 24 required output files were captured; all 156 checks passed. T1 C and S each passed 42/42 checks with 3/3 all-met submissions. T2 C and S each passed 36/36 with 3/3 all-met. Both equal-case means are 1.0, and all six paired S-minus-C differences are zero.
 
-This local public-safe proposal preserves the original captured output and grade bytes. At packaging time, this proposal had not been remotely published. It is a separate exploratory cohort and makes no change to historical reports, outcomes or denominators.
+This published evidence package preserves the original captured output and grade bytes. It is a separate exploratory cohort and makes no change to historical reports, outcomes or denominators.
 
 ## What was compared
 
@@ -26,12 +26,12 @@ There was one recorded prompt deviation: T2 repeat 1 C omitted “final” from 
 - [Results](RESULTS.md): all 12 submissions and all 156 named statuses
 - [Methods](METHODS.md): schedule, capture, grading, metrics and interpretation limits
 - [Provenance](PROVENANCE.md): frozen source identities, task-budget amendment, exact-copy allowlist and privacy boundary
-- `outputs/`: all 24 original captured output files, unchanged
-- `evidence/results.json` and `evidence/results/`: unchanged saved primary results and raw grades
-- `evidence/grading/`: unchanged scorer stdout, stderr and process records, plus labeled launch projections
-- `cases/`: exact original/effective tasks, fictional inputs and authored scoring specifications
-- `designated-guides/`: the five exact designated public guide files
-- `prompts/`: newly authored public task/condition projections, never historical dispatch transcripts
+- [`outputs/`](outputs/): all 24 original captured output files, unchanged
+- [`evidence/results.json`](evidence/results.json) and [`evidence/results/`](evidence/results/): unchanged saved primary results and raw grades
+- [`evidence/grading/`](evidence/grading/): unchanged scorer stdout, stderr and process records, plus labeled launch projections
+- [`cases/`](cases/): exact original/effective tasks, fictional inputs and authored scoring specifications
+- [`designated-guides/`](designated-guides/): the five exact designated public guide files
+- [`prompts/`](prompts/): newly authored public task/condition projections, never historical dispatch transcripts
 
 ## Verify the saved package
 
