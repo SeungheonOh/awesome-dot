@@ -1,0 +1,109 @@
+{
+  "case_id": "R1",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 3,
+    "failed": 0,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R1-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-12": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The opening handoff paragraph states the exact cutoff, 30 September 2026 at 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 not yet convertible to USD. These agree with the ledger and required position. It explicitly distinguishes calculated entitlements from payment confirmation, excludes post-cutoff E06, and makes no claim that payment or outreach occurred."
+        },
+        {
+          "status": "pass",
+          "rationale": "The opening handoff paragraph states 30 September 2026 at 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 unvalued, matching the required cutoff and ledger totals. It explicitly distinguishes calculated entitlements from payment confirmation, excludes E06 from the cutoff decision, and makes no claim that payment or outreach occurred."
+        }
+      ]
+    },
+    "R1-13": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "All four unresolved cases have distinct evidence requests and responsible roles: Maya should obtain the missing C017 itemized stationery receipt; the workshop organizer should confirm C018 attendees/count; finance should supply the approved C026 cash conversion record; and Maya should obtain a vendor explanation and breakdown or corrected receipt for C028, followed by finance review. These match E05, the receipts, and policy. The notes preserve the unexplained USD 79 receipt versus USD 89 settlement without inventing a cause or replacement evidence."
+        },
+        {
+          "status": "pass",
+          "rationale": "The follow-up queue covers all four holds supported by E05 and the underlying records: C017 requires an itemized stationery receipt requested by Maya from the seller; C018 requires attendee identities/count from the workshop organizer; C026 requires an approved cash conversion record from finance; and C028 requires Maya to obtain a vendor breakdown or corrected receipt explaining R028 USD 79 versus S028 USD 89 before finance releases the claim. It preserves the unknown cause of the hotspot difference and invents no missing evidence."
+        }
+      ]
+    },
+    "R1-14": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The decision summary explains P1/P2 by service date despite later posting, C004 alcohol and proportional-tax exclusion, the normal hotel room cap with full mandatory tax, and E01 limited to the second stay with USD 120 allocated to C021 and USD 395.20 to C010. It distinguishes settled-card FX from the unsupported cash rate, applies settled credits of USD 36/27/125 with E04 supporting the remaining USD 25 fee, retains C001 over duplicate C007, and keeps C020/C030 as company-paid business costs without employee reimbursement. It also explains replacing C027\u2019s estimate with the lower final invoice and excluding the difference, and counting C029\u2019s pending authorization and settled charge as one flight. These explanations agree with the supplied policies, correspondence, receipts, statement entries, and ledger; no materially unsupported statement was identified."
+        },
+        {
+          "status": "pass",
+          "rationale": "The decision summary accurately explains P1/P2 service-date applicability, proportional alcohol-tax removal for C004, ordinary hotel room caps with mandatory taxes, and E01 limited to the second stay with USD 120 allocated to C021 and USD 395.20 to C010. It distinguishes S014/S015 settled card FX from unvalued cash C026, nets settled credits S122/S123/S124 with the E04-approved USD 25 fee remaining, retains C001 over duplicate C007, and keeps company-card C020/C030 as business costs with zero employee reimbursement. It also explains replacing C027\u2019s estimate with the final invoice and excluding the overstatement, and counting only one C029 flight despite its pending authorization. These explanations agree with the supplied policies, receipts, statement, correspondence, and ledger without materially unsupported claims."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "b24cf6de1e87953132d3ad9d2768838027e08806723bad9c2e5e483f16f30cd1"
+  },
+  "not_candidate_execution": true
+}

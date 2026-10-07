@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-ca7e2b5497495170da89de657cba586a",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "ea8d11493b960a0c3778bbcb0dd4978cda3542b516e7b7d0d3cae915790df216"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve Spanish-only completed A08 (M2/M5), completed training scheduling A09 versus open A10 delivery on October 6 (F6), and cancelled A05/A16/A22/A26 without live next steps. The handoff explicitly excludes F8/F9, including retrospective claims, and retains completed A17/A32 and open A31 rather than adopting those later updates. The reopened vendor ticket remains A13."
+    },
+    "R2-13": {
+      "status": "fail",
+      "rationale": "The handoff covers all 18 active IDs, foregrounds A03/A21 to A25 to A28, and identifies the four overdue items with practical next steps. However, its A33 line names Mira as a confirmed accountable owner and directs her to complete the test. M4 explicitly leaves the support-lead person unassigned, and F7 confirms no named lead by cutoff. Thus the handoff fails the requirement for a correct owner or explicit gap for every active item, despite the register correctly recording owner null."
+    },
+    "R2-14": {
+      "status": "fail",
+      "rationale": "The A33 handoff asserts that the coordinator confirmed Mira accepted the support-lead assignment before cutoff. No supplied source supports that confirmation; M4 releases Hana to an unnamed role, and F7 explicitly confirms that no incoming lead is named. This invents a consequential acceptance and conceals the owner gap, also contradicting the register. The other named uncertainties are correctly explained: CRM snapshots remain unreconciled, Lena retains A12 because Mira has not accepted that proposed replacement, and A30 has no current deadline."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

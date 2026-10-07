@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-2f627a93339d13f3135ce94fe497e94e",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "f42ec19069c860a57f292568db1895c5db1ca0849da7e485e2cde8684a6eeba6"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "The opening handoff states the exact cutoff, 2026-09-30 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and a separate unvalued EUR 24.00 cash hold. These agree with the ledger and required position. It explicitly describes a reconciliation recommendation with payment and evidence collection still future steps, and excludes post-cutoff E06; no completed payment or outreach is claimed."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "The notes separately address all four unresolved issues confirmed by E05 and the policy: Maya should obtain C017's missing itemized stationery receipt; Maya or the workshop organizer should supply C018's attendee list/count; finance should provide the approved cash FX record for C026 without borrowing a card rate; and Maya should obtain a vendor breakdown or corrected receipt for C028's unexplained USD 79 receipt versus USD 89 settlement. Each has a practical next step and responsible person or role, and none invents evidence or resolves a hold prematurely."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The notes correctly apply service-date P1/P2 rather than posting dates and identify E02's trip-specific taxi exception. They explain C004 alcohol and proportional-tax removal to USD 57.20; C005's room cap with mandatory tax preserved; E01's limited hotel exception and the USD 120 deposit/USD 395.20 final-balance split; settled-card FX versus the unvalued cash taxi; and settled credits S122/S123/S124 with E04's USD 25 retained fee. They also explain C007 as duplicating C001, C020/C030 as USD 79 company-paid business cost with no employee payment, C027's final invoice replacing its estimate and excluding USD 13.20, and C029's one settled charge without counting the pending authorization. These explanations are supported by the supplied sources and are not materially misleading."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

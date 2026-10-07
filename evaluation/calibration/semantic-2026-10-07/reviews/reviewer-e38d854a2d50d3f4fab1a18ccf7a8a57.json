@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-e38d854a2d50d3f4fab1a18ccf7a8a57",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "fae2c5541724cdc3d4b6ce45678ca2e385685ab5acc2444e1ad65410185c3c0f"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve the final scope: A08 is accepted Spanish-only work (M2/M5); A09 scheduling is complete while Kian must deliver A10 on October 6 (M4/F6). A05, A16, A22 and A26 remain cancelled with null register next steps and no revived obligations in the handoff. A13 continues the reopened original ticket (M5). The handoff explicitly excludes F8/F9 and their retrospective claims; A17/A32 remain complete, A31 remains open, and A33 remains unnamed as knowable at the September 30 17:00 UTC cutoff."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff gives a distinct actionable line for all 18 active commitments: A02, A03, A06, A10, A11, A12, A13, A14, A18, A20, A21, A23, A25, A28, A30, A31, A33 and A34. Each has the supported owner and current date, or explicitly states the A33 owner gap and A30 deadline gap, with a practical next step. It foregrounds A03/A21 feeding A25 and A25 acceptance feeding A28 (M4/M5), and correctly highlights A03/A11/A12/A21 as the four overdue actions without inventing revised dates."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "The handoff and register retain A21 as unresolved: contrary CRM results lack identified snapshots, and the later report cannot establish completion (F5/M5). They retain Lena for A12, explain that Mira is merely proposed and unaccepted, and retain the access obstacle (M3/F7). A33 has no named owner after Hana was released (M4/F7); A30 has no deadline and remains open for drafting (M2). No completion, confirmation, deadline or outreach is invented. Suggested coordinator and owner actions are explicitly prospective recommendations, not claims that anyone was contacted or a system changed."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "case_id": "R1",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 2,
+    "failed": 1,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R1-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-12": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The opening of review_notes.txt states the exact cutoff, 30 September 2026 at 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 without a USD valuation. These match the ledger totals and required handoff position. It explicitly distinguishes calculated entitlements from payment confirmation, and no payment or completed outreach is claimed."
+        },
+        {
+          "status": "pass",
+          "rationale": "The opening handoff states 30 September 2026 at 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 unvalued, matching the required position and ledger. It explicitly distinguishes calculated entitlements from payment confirmation, excludes E06 after the cutoff, and makes no claim of completed payment or outreach."
+        }
+      ]
+    },
+    "R1-13": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The follow-up queue separately identifies every unresolved issue confirmed by E05 and the governing evidence: C017 lacks an itemized receipt, with Maya to request a replacement from the seller; C018 lacks attendees/count, with the workshop organizer to confirm them; C026 lacks an approved cash FX record, with finance to provide it; and C028 has a USD 79 receipt versus USD 89 settlement, with Maya to obtain a vendor explanation and breakdown or corrected receipt for finance review. No missing evidence is invented."
+        },
+        {
+          "status": "pass",
+          "rationale": "The follow-up queue accurately identifies all four unresolved issues confirmed by E05 and the sources: C017 lacks an itemized receipt, C018 lacks attendees/count, C026 lacks approved cash FX evidence, and C028 has a USD 79 receipt versus USD 89 settlement. It assigns distinct practical requests to Maya/the stationery seller, the workshop organizer, finance, and Maya/the hotspot vendor respectively, with finance review before release; no missing evidence is invented."
+        }
+      ]
+    },
+    "R1-14": {
+      "status": "fail",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "fail",
+          "rationale": "The decision summary explicitly says to use the bank posting date and apply P2 to C002, C003 and C004 because their September 12 services posted September 16. This materially contradicts TASK.md, 00_README.txt and P2, which require service-date policy and preserve P1 for these services; it also conflicts with the ledger's P1 treatment of those claims. Although the notes explain alcohol/proportional tax, hotel exception and deposit split, card versus cash FX, settled credits, duplicate and company-card handling, the lower final hotel invoice, and the single flight authorization/settlement, the required service-date explanation is affirmatively wrong."
+        },
+        {
+          "status": "fail",
+          "rationale": "The decision summary instructs finance to use bank posting dates and says C002, C003, and C004 use P2 because their September 12 services posted September 16. TASK.md, 00_README.txt, and P2 explicitly require service-date policy and retain P1 for those services. This materially misleading explanation also contradicts the ledger, which applies P1 to those three claims. The remaining adjustment classes are explained, but they do not cure the incorrect policy-change instruction."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "89914364cdc8cda03fdb10edbf68910be1c9058e828d815cc86e64143cd57755"
+  },
+  "not_candidate_execution": true
+}

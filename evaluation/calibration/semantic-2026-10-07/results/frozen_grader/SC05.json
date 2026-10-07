@@ -1,0 +1,109 @@
+{
+  "case_id": "R1",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 3,
+    "failed": 0,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R1-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R1-12": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The notes explicitly state the required cutoff, 2026-09-30 17:00 UTC, USD 2,142.65 payable, USD 252.90 held in known USD claims, and a separate unvalued EUR 24.00 cash hold. These positions agree with the ledger. The notes describe a reconciliation recommendation and expressly leave payment and evidence collection as future steps; they do not claim payment or outreach occurred. E06 is correctly excluded as post-cutoff."
+        },
+        {
+          "status": "pass",
+          "rationale": "The opening notes state the exact 2026-09-30 17:00 UTC cutoff, USD 2,142.65 payable, USD 252.90 held, and a separate unvalued EUR 24.00 cash hold, consistent with the ledger and rubric. They identify payment and evidence collection as future steps and exclude post-cutoff E06; neither artifact claims payment or outreach occurred."
+        }
+      ]
+    },
+    "R1-13": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "All four unresolved issues receive distinct, practical evidence requests and responsible roles, consistent with E05 and the policy: Maya should recover C017's missing itemized stationery receipt; Maya or the workshop organizer should supply C018's attendee list/count; finance should provide C026's approved cash FX record; and Maya should obtain a vendor breakdown or corrected receipt explaining C028's USD 79 receipt versus USD 89 settlement, with finance resolving the discrepancy before approval. The notes invent neither the missing evidence nor a cash exchange rate."
+        },
+        {
+          "status": "pass",
+          "rationale": "Each unresolved issue has its own accurate evidence request and responsible role: C017 asks Maya to recover the itemized vendor receipt; C018 asks Maya or the organizer for attendees/count; C026 asks finance for the approved cash FX record without borrowing a card rate; C028 asks Maya for a vendor breakdown or corrected receipt explaining USD 79 versus the USD 89 settlement before finance approves. These match E05, the receipts, statement, and policy; no missing evidence is invented."
+        }
+      ]
+    },
+    "R1-14": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The notes accurately explain every required adjustment class against the supplied sources: P1/P2 follow service dates rather than later postings; R004 alcohol and proportional tax removal leave USD 57.20; C005 retains mandatory lodging tax after the base cap; E01 applies only to the September 15\u201317 stay, whose USD 515.20 is split into USD 120 deposit and USD 395.20 final balance once. Foreign card costs use actual USD settlements while cash FX remains unresolved. Settled credits S122/S123/S124 are netted and E04 supports the retained USD 25 fee. C007 duplicates C001, company-card C020/C030 retain business cost without employee payment, R027 supersedes the estimate by USD 13.20, and the pending authorization does not duplicate C029's settled flight. No materially misleading adjustment explanation or other materially unsupported statement was found."
+        },
+        {
+          "status": "pass",
+          "rationale": "The notes explain service-date P1/P2 selection and E02 taxi approval, C004 alcohol plus proportional-tax removal to USD 57.20, C005 lodging cap with retained tax, and E01 lodging exception with the USD 120 deposit separated from the USD 395.20 balance. They distinguish settled card FX from unvalued cash, identify settled credits of USD 36/27/125 and the E04-approved USD 25 fee, remove duplicate C007, separate company-card C020/C030, replace the C027 estimate with the final invoice, and count only the settled C029 flight. These explanations agree with the supplied policies, receipts, correspondence, and statement; no materially unsupported statement was found elsewhere in the artifacts."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "48bf408d257ddb55d5deb6f0a28e3d83d32fa932801a6acc2ce172477892d385"
+  },
+  "not_candidate_execution": true
+}

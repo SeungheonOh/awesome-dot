@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-ad1f32adcb641140a0eb6f934500781a",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "ea8d11493b960a0c3778bbcb0dd4978cda3542b516e7b7d0d3cae915790df216"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve Spanish-only A08 as accepted (M2/M5), distinguish completed A09 scheduling from open A10 delivery due October 6 (F6), and retain A05/A16/A22/A26 as cancelled without live next steps. The handoff explicitly excludes F8/F9, keeps A17 and A32 complete and A31 open, and does not revive French translation, the live demo, or other cancelled work."
+    },
+    "R2-13": {
+      "status": "fail",
+      "rationale": "The handoff names all 18 active actions, foregrounds A03/A21 to A25 to A28, and identifies the four overdue actions. However, its A33 line names Mira as confirmed accountable owner and directs her to complete the test. M4 assigns accountability only to an unnamed incoming support-lead role, and F7 confirms no person has been named. Thus the handoff omits the required owner gap and the necessary assignment step; the correct null owner in the register does not repair the contradictory handoff."
+    },
+    "R2-14": {
+      "status": "fail",
+      "rationale": "A21 conflicting snapshot-less reports, Lena retaining A12 despite the unaccepted proposal, and A30 having no deadline are accurately explained. But the handoff asserts that the coordinator confirmed Mira accepted the A33 support-lead assignment before cutoff. No supplied source supports that confirmation; M4 and F7 explicitly say the role has no named person, and the register itself preserves that gap. This invents confirmation and falsely resolves a required uncertainty."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

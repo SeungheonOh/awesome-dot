@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-ddc6c39c0b1d0e5a0915233e68ebe6a5",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "b2ceb7c1deb2531e6a7d89d15e7be8158a390c9a1966b99ecef44ff7b5feca0f"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve the accepted Spanish-only A08 scope from M2/M5, completed A09 scheduling versus open A10 delivery on October 6 from F6, and the cancellations of A05/A16/A22/A26 without live next steps. The handoff explicitly excludes F8/F9 even when they allege earlier events; A17 and A32 remain done, A31 remains open, and A33 remains unassigned. The reopened vendor ticket continues as A13 and the accepted A27 recording replaces the cancelled live demo."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff gives individual actionable lines for all 18 active items: A02/A03/A06/A10/A11/A12/A13/A14/A18/A20/A21/A23/A25/A28/A30/A31/A33/A34. Each has its supported owner and due date, or the explicit A30 deadline/A33 owner gap, plus a practical next step. It foregrounds the M4 launch chain A03 and A21 before A25 acceptance, then A28 publication, and correctly highlights A03/A11/A12/A21 as the four overdue items with unchanged dates."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "The handoff and descriptive register fields accurately preserve the named uncertainty gaps: F5/M5 CRM reports cannot establish completion without identifiable snapshots; M3/F7 leave A12 with Lena because Mira has not accepted; M4/F7 leave A33 without a named support lead; and M2 removes A30's deadline while drafting remains open. The handoff explicitly labels next steps as recommendations rather than actions taken. No materially unsupported confirmation, deadline, completion, or outreach claim appears in either artifact."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

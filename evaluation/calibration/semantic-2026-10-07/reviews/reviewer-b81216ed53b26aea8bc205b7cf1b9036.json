@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-b81216ed53b26aea8bc205b7cf1b9036",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "c9fe99dc696046e48e20c1183f69e70741afa3217b5a77bc8e4527449740a495"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "fail",
+      "rationale": "The handoff calls A08 the \"accepted Spanish-and-French FAQ translation,\" contradicting M2 removing French and M5 confirming acceptance of Spanish only. The register title correctly says Spanish-only, but the handoff does not preserve that final scope. A09 scheduling versus A10 October 6 delivery, cancelled actions without live next steps, and exclusion of F8/F9 are otherwise correctly handled."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff individually covers all 18 active actions (A02, A03, A06, A10, A11, A12, A13, A14, A18, A20, A21, A23, A25, A28, A30, A31, A33, A34), with supported owners and dates or explicit gaps and practical next steps. It foregrounds the M4 launch chain A03/A21 to A25 to A28 and correctly highlights the four overdue actions A03, A11, A12 and A21. Later accepted transfers and revised dates are reflected, including Kian/October 6 for A10 and Gia/October 2 for A31."
+    },
+    "R2-14": {
+      "status": "fail",
+      "rationale": "The four named gaps are explained correctly: A21 reports lack identified snapshots and remain unreconciled (F5/M5), A12 remains Lena despite the unaccepted Mira proposal (M3/F7), A33 has no named support lead (M4/F7), and A30 has no replacement deadline (M2). However, the handoff invents confirmed acceptance of French FAQ work by calling A08 an accepted Spanish-and-French translation. M2 explicitly removes French and M5 accepts only Spanish, so this is a materially unsupported completion assertion, violating the check's requirement of no invented confirmations or completed actions anywhere in the prose."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

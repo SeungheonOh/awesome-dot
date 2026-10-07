@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-65f605a5f7bd12eedc322a65dfdb6dc8",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "3c2c50b9d21f3969cf2683ed9d05dbf81fc879f71ef1df4ef6992d2944eef6d8"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "The notes explicitly state the exact 2026-09-30 17:00 UTC cutoff, USD 2,142.65 payable, USD 252.90 held in known USD claims, and a separate unvalued EUR 24.00 cash hold. These agree with the ledger. The notes describe payment and evidence collection as future steps, without claiming payment or outreach occurred, and correctly exclude the post-cutoff E06."
+    },
+    "R1-13": {
+      "status": "fail",
+      "rationale": "The handoff supplies practical evidence requests and responsible roles for C017 (Maya obtains the itemized receipt), C026 (finance supplies the approved cash FX record), and C028 (Maya obtains a vendor breakdown or corrected receipt explaining USD 79 versus USD 89). It entirely omits C018 from its unresolved-issue list and gives no distinct practical next step for obtaining its attendee list/count, which R018 and E05 confirm are missing. The ledger identifies C018 as held for missing attendee information, but does not supply the required practical next step either."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The notes accurately explain P1/P2 selection by service date rather than posting date; alcohol and attributable tax removal for C004; the ordinary hotel cap with mandatory tax; E01’s stay-specific lodging exception and the USD 120 deposit/USD 395.20 final-balance split; actual USD settlements for foreign card charges versus the unvalued cash claim; the three settled credits and E04-approved USD 25 cancellation fee; C007 duplication of C001; and zero employee reimbursement for the USD 79 of company-card costs. They also explain the supported USD 198 final invoice replacing C027’s estimate and counting only C029’s settled charge, not its pending authorization. These explanations are supported by the supplied policies, receipts, statements, and correspondence without materially misleading adjustment claims."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

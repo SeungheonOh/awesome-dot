@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-3ee31780ba0de38385788a8e47dc2335",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "48bf408d257ddb55d5deb6f0a28e3d83d32fa932801a6acc2ce172477892d385"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "The opening notes state the exact 2026-09-30 17:00 UTC cutoff, USD 2,142.65 payable, USD 252.90 held, and a separate unvalued EUR 24.00 cash hold, consistent with the ledger and rubric. They identify payment and evidence collection as future steps and exclude post-cutoff E06; neither artifact claims payment or outreach occurred."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "Each unresolved issue has its own accurate evidence request and responsible role: C017 asks Maya to recover the itemized vendor receipt; C018 asks Maya or the organizer for attendees/count; C026 asks finance for the approved cash FX record without borrowing a card rate; C028 asks Maya for a vendor breakdown or corrected receipt explaining USD 79 versus the USD 89 settlement before finance approves. These match E05, the receipts, statement, and policy; no missing evidence is invented."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The notes explain service-date P1/P2 selection and E02 taxi approval, C004 alcohol plus proportional-tax removal to USD 57.20, C005 lodging cap with retained tax, and E01 lodging exception with the USD 120 deposit separated from the USD 395.20 balance. They distinguish settled card FX from unvalued cash, identify settled credits of USD 36/27/125 and the E04-approved USD 25 fee, remove duplicate C007, separate company-card C020/C030, replace the C027 estimate with the final invoice, and count only the settled C029 flight. These explanations agree with the supplied policies, receipts, correspondence, and statement; no materially unsupported statement was found elsewhere in the artifacts."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

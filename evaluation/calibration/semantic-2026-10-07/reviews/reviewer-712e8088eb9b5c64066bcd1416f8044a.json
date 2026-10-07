@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-712e8088eb9b5c64066bcd1416f8044a",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "f42ec19069c860a57f292568db1895c5db1ca0849da7e485e2cde8684a6eeba6"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "The opening handoff states the exact cutoff, 2026-09-30 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and a separate unvalued EUR 24.00 cash hold. These agree with the ledger totals and its C026 unvalued hold. It explicitly describes a recommendation with payment and evidence collection still future steps, rather than claiming payment or outreach. Excluding E06 is supported by its October 1 timestamp."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "The notes separately cover all four issues confirmed by E05 and the underlying records: C017 lacks the required itemized receipt, with Maya asked to recover it from the vendor; C018 lacks attendee list/count, with Maya or the organizer to supply it for finance to apply the per-person cap; C026 lacks an approved cash FX record, with finance to provide it; C028 has an unexplained USD 79 receipt versus USD 89 settled charge, with Maya to obtain a vendor breakdown or corrected receipt and finance to resolve it. The known holds retain the claimed amounts, and no missing evidence is invented."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The explanation accurately covers every required adjustment class: P1/P2 service-date rules despite later postings; removal of C004 alcohol and proportional tax; C005 room cap with mandatory tax retained; E01 lodging exception and the USD 120 C021 deposit separated from the USD 395.20 C010 balance; settled USD card FX versus unvalued cash FX; S122/S123/S124 settled credits and E04 approved cancellation fee; C007 duplication of C001; S020/S030 company-paid costs; R027/S027 final amount replacing the estimate; and S029 counted once while S229 remains a pending authorization. The amounts and explanations match those sources, and no materially unsupported additional assertion was identified in either output."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-9be8a550a2c370a2b44bf5a4477b5fd9",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "60752efc8e69b0415992731678a742f3ffaf67f40d744ebd76fdbfe588c41575"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "fail",
+      "rationale": "The notes state the correct cutoff (2026-09-30 17:00 UTC), USD 2,142.65 payable, USD 252.90 held and unvalued EUR 24.00. However, they assert that Owen approved the entire disbursement and that the payment was queued with payroll. E01–E04 approve only specific expenses/exceptions; no supplied source supports blanket disbursement approval or payroll action, and TASK.md prohibits external payment/action. The unsupported payment/action claim fails this check."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "The notes separately identify all four unresolved issues confirmed in E05 and provide practical next steps: Maya obtains the missing C017 itemized stationery receipt; Maya or the organizer supplies C018 attendees/count; finance supplies the approved C026 cash FX record while EUR 24.00 remains unvalued; Maya obtains a vendor breakdown or corrected receipt explaining C028’s USD 79 receipt versus S028’s USD 89 settled charge before finance approves it. None of these requests is presented as evidence already received."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The adjustment explanations agree with the supplied sources: service-date P1/P2 use despite later postings; C004 alcohol and proportional tax removal; C005 capped room base with full mandatory tax; E01’s stay-specific hotel exception and USD 120 deposit/USD 395.20 balance split; actual S014/S015 USD settlements versus unvalued cash FX; settled S122–S124 refunds with E04’s approved USD 25 fee; C007 duplicate and company-paid C020/C030; R027’s final invoice replacing the estimate; and one settled C029 flight excluding S229’s pending authorization. These cover every required adjustment class accurately."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

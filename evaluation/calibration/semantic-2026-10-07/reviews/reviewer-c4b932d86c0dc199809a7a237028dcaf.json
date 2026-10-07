@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-c4b932d86c0dc199809a7a237028dcaf",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "8bfdd210795dff46989c4adb4dc090e6ec87e6a966b640cb5fb4d4bd688d746c"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "The opening handoff states the exact cutoff, 30 September 2026 at 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 unvalued, matching the required position and the ledger. It expressly distinguishes calculated entitlements from payment confirmation, excludes post-cutoff E06, and makes no claim that payment or outreach occurred."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "The four separate follow-up entries accurately match E05 and the underlying records: Maya should request a replacement itemized receipt for C017; the workshop organizer should establish attendees/count for C018; finance should provide the approved cash conversion record for C026; and Maya should obtain a vendor explanation and breakdown or corrected receipt for C028's USD 79 receipt versus USD 89 settled charge. Each identifies the missing evidence and a practical responsible party without asserting that evidence already exists."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The decision summary accurately covers every required adjustment class: P1/P2 follow service dates rather than posting dates; C004 excludes alcohol and proportional tax; the normal hotel retains mandatory tax while E01 authorizes only the second stay, split into C021's USD 120 deposit and C010's USD 395.20 balance; card FX uses settled USD while cash FX remains unsupported; S122/S123/S124 credits reduce claims by USD 36/27/125 with E04 supporting the remaining USD 25 fee; C007 duplicates C001; company-card C020/C030 retain business cost with zero employee payment; C027's final invoice supersedes its estimate with the difference excluded; and C029's pending authorization is not another flight expense. These explanations agree with the supplied policies, receipts, statement entries, correspondence, and ledger, with no materially misleading statement identified."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

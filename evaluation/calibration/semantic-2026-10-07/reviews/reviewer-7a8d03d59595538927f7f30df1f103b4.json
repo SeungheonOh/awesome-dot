@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-7a8d03d59595538927f7f30df1f103b4",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "3c2c50b9d21f3969cf2683ed9d05dbf81fc879f71ef1df4ef6992d2944eef6d8"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "The opening of review_notes.txt states the exact cutoff, 2026-09-30 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and a separate unvalued EUR 24.00 cash hold. It explicitly describes payment and evidence collection as future steps and excludes the post-cutoff E06; it makes no unsupported payment or outreach claim."
+    },
+    "R1-13": {
+      "status": "fail",
+      "rationale": "The hold-resolution section provides distinct evidence requests and responsible roles for C017, C026, and C028, but omits C018 entirely. R018 and E05 establish that C018 lacks an attendee list/count, which the policy requires for the team lunch. The ledger identifies that missing information and holds USD 126.00, but supplies no practical next step or responsible role; the notes therefore do not cover all four unresolved issues."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The notes accurately explain service-date P1/P2 selection and E02, alcohol with proportional tax removal, the ordinary hotel cap and E01 exception, the USD 120 deposit/USD 395.20 balance split, settled USD card FX versus unvalued cash FX, all three settled credits and the E04 cancellation fee, C007 duplication, C020/C030 company payment, C027 final-invoice estimate reduction, and C029 pending-authorization exclusion. These explanations agree with the supplied policies, receipts, statements, and correspondence without materially misleading adjustment claims."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

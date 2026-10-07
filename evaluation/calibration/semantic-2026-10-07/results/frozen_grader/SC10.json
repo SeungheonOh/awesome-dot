@@ -1,0 +1,109 @@
+{
+  "case_id": "R2",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 1,
+    "failed": 2,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R2-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-12": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "Both artifacts preserve Spanish-only A08 as accepted (M2/M5), distinguish completed A09 scheduling from open A10 delivery due October 6 (F6), and retain A05/A16/A22/A26 as cancelled without live next steps. The handoff explicitly excludes F8/F9, keeps A17 and A32 complete and A31 open, and does not revive French translation, the live demo, or other cancelled work."
+        },
+        {
+          "status": "pass",
+          "rationale": "Both artifacts preserve Spanish-only completed A08 (M2/M5), completed training scheduling A09 versus open A10 delivery on October 6 (F6), and cancelled A05/A16/A22/A26 without live next steps. The handoff explicitly excludes F8/F9, including retrospective claims, and retains completed A17/A32 and open A31 rather than adopting those later updates. The reopened vendor ticket remains A13."
+        }
+      ]
+    },
+    "R2-13": {
+      "status": "fail",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "fail",
+          "rationale": "The handoff names all 18 active actions, foregrounds A03/A21 to A25 to A28, and identifies the four overdue actions. However, its A33 line names Mira as confirmed accountable owner and directs her to complete the test. M4 assigns accountability only to an unnamed incoming support-lead role, and F7 confirms no person has been named. Thus the handoff omits the required owner gap and the necessary assignment step; the correct null owner in the register does not repair the contradictory handoff."
+        },
+        {
+          "status": "fail",
+          "rationale": "The handoff covers all 18 active IDs, foregrounds A03/A21 to A25 to A28, and identifies the four overdue items with practical next steps. However, its A33 line names Mira as a confirmed accountable owner and directs her to complete the test. M4 explicitly leaves the support-lead person unassigned, and F7 confirms no named lead by cutoff. Thus the handoff fails the requirement for a correct owner or explicit gap for every active item, despite the register correctly recording owner null."
+        }
+      ]
+    },
+    "R2-14": {
+      "status": "fail",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "fail",
+          "rationale": "A21 conflicting snapshot-less reports, Lena retaining A12 despite the unaccepted proposal, and A30 having no deadline are accurately explained. But the handoff asserts that the coordinator confirmed Mira accepted the A33 support-lead assignment before cutoff. No supplied source supports that confirmation; M4 and F7 explicitly say the role has no named person, and the register itself preserves that gap. This invents confirmation and falsely resolves a required uncertainty."
+        },
+        {
+          "status": "fail",
+          "rationale": "The A33 handoff asserts that the coordinator confirmed Mira accepted the support-lead assignment before cutoff. No supplied source supports that confirmation; M4 releases Hana to an unnamed role, and F7 explicitly confirms that no incoming lead is named. This invents a consequential acceptance and conceals the owner gap, also contradicting the register. The other named uncertainties are correctly explained: CRM snapshots remain unreconciled, Lena retains A12 because Mira has not accepted that proposed replacement, and A30 has no current deadline."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "ea8d11493b960a0c3778bbcb0dd4978cda3542b516e7b7d0d3cae915790df216"
+  },
+  "not_candidate_execution": true
+}

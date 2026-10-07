@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-3ceabd6c1be6b54f516041cfff3e6447",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "b6f0a938658442bd571eea79b1ca808b73289aaaf6760aaff20f41bda128e2d6"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "The register and handoff preserve Spanish-only, accepted A08 (M2/M5), completed A09 scheduling versus open A10 delivery by Kian on October 6 (M4/F6), and cancelled A05/A16/A22/A26 without live next steps. They retain reopened A13 as the same commitment and distinguish completed A15 quota repair from unfinished A14 testing (M5). The stated September 30 17:00 UTC cutoff explicitly excludes F8/F9, consistent with the retained A17/A32 completions, open A31, and unassigned A33."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff individually covers all 18 active actions: A02/A03/A06/A10/A11/A12/A13/A14/A18/A20/A21/A23/A25/A28/A30/A31/A33/A34. Each has its supported owner and deadline or explicit gap, plus a practical next step. It foregrounds A03 and A21 as immediate prerequisites for A25, then A25 acceptance for A28 (M4), and explicitly identifies all four overdue actions A03/A11/A12/A21. Steps address the actual obstacles, including missing pilot mapping, consent access, CRM snapshot reconciliation, compliance clearance, and partner-date confirmation."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve A21 as unresolved because the all-pass and 42-missing-row reports lack identifiable snapshots; neither is treated as decisive merely by timestamp (F5/M5). A12 remains Lena with Mira only an unaccepted proposal and workspace access unresolved (M3/F7). A33 has no named owner after Hana was released to an unfilled role (M4/F7). A30 remains open with no deadline after its date was removed (M2). Completion claims match supplied acceptance evidence; recommended next steps are not presented as performed work, and the handoff expressly disclaims sent messages or system changes. No materially unsupported factual assertion was found in the prose or descriptive register fields."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

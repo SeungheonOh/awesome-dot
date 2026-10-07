@@ -1,0 +1,109 @@
+{
+  "case_id": "R2",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 3,
+    "failed": 0,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R2-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-12": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "Both artifacts preserve the final scope and chronology: A08 is the accepted Spanish-only FAQ (M2/M5); A09 scheduling is done while A10 delivery remains open for Kian on October 6 (M4/F6); and A05/A16/A22/A26 remain cancelled with null register next steps. The handoff explicitly excludes F8/F9, retains A17 and A32 as complete and A31 as open, and does not use the post-cutoff A33 completion or named-owner report."
+        },
+        {
+          "status": "pass",
+          "rationale": "Both artifacts preserve the accepted Spanish-only A08 scope from M2/M5, completed A09 scheduling versus open A10 delivery on October 6 from F6, and the cancellations of A05/A16/A22/A26 without live next steps. The handoff explicitly excludes F8/F9 even when they allege earlier events; A17 and A32 remain done, A31 remains open, and A33 remains unassigned. The reopened vendor ticket continues as A13 and the accepted A27 recording replaces the cancelled live demo."
+        }
+      ]
+    },
+    "R2-13": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The handoff individually covers all 18 active actions: A02,A03,A06,A10,A11,A12,A13,A14,A18,A20,A21,A23,A25,A28,A30,A31,A33,A34. Each has the supported owner and due date or an explicit gap, plus a practical next step. It foregrounds A03/A21 prerequisites to A25 and A25 to A28, and identifies all four overdue items A03/A11/A12/A21 with their unchanged dates. The steps address actual obstacles, including missing pilot mapping, workspace access, compliance clearance, unidentified CRM snapshots, and the unconfirmed partner date."
+        },
+        {
+          "status": "pass",
+          "rationale": "The handoff gives individual actionable lines for all 18 active items: A02/A03/A06/A10/A11/A12/A13/A14/A18/A20/A21/A23/A25/A28/A30/A31/A33/A34. Each has its supported owner and due date, or the explicit A30 deadline/A33 owner gap, plus a practical next step. It foregrounds the M4 launch chain A03 and A21 before A25 acceptance, then A28 publication, and correctly highlights A03/A11/A12/A21 as the four overdue items with unchanged dates."
+        }
+      ]
+    },
+    "R2-14": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The handoff and register retain A21 as unresolved because the conflicting pass/42-missing-row reports lack snapshot identity, matching F5/M5 without privileging the later result. They keep Lena accountable for A12 because Mira has only been proposed (M3/F7), show A33 with no named owner after Hana was released (M4/F7), and leave A30 open with no due date after its deadline was removed (M2). The handoff explicitly characterizes next steps as recommendations rather than completed actions. No materially unsupported confirmation, deadline, completion, or outreach claim was found in either artifact."
+        },
+        {
+          "status": "pass",
+          "rationale": "The handoff and descriptive register fields accurately preserve the named uncertainty gaps: F5/M5 CRM reports cannot establish completion without identifiable snapshots; M3/F7 leave A12 with Lena because Mira has not accepted; M4/F7 leave A33 without a named support lead; and M2 removes A30's deadline while drafting remains open. The handoff explicitly labels next steps as recommendations rather than actions taken. No materially unsupported confirmation, deadline, completion, or outreach claim appears in either artifact."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "b2ceb7c1deb2531e6a7d89d15e7be8158a390c9a1966b99ecef44ff7b5feca0f"
+  },
+  "not_candidate_execution": true
+}

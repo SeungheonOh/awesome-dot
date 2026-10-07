@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-6abdecfa89413d782a3eaa7c123b4a08",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "8bfdd210795dff46989c4adb4dc090e6ec87e6a966b640cb5fb4d4bd688d746c"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "The opening paragraph states the exact cutoff, 30 September 2026 at 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 without a USD valuation. These agree with the ledger totals and the required handoff position. It explicitly distinguishes calculated entitlements from payment confirmation, excludes E06 after the cutoff, and makes no claim of completed payment or outreach."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "The follow-up queue separately addresses every unresolved issue confirmed by E05 and the source records: Maya should obtain the C017 itemized stationery receipt; the workshop organizer should confirm C018 attendees/count; finance should supply the approved cash conversion record for C026; and Maya should obtain a vendor explanation and breakdown or corrected receipt for C028, whose USD 79 receipt differs from the USD 89 settled charge. Each issue has a practical next step and responsible party or role, with no replacement evidence invented."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The decision summary accurately explains P1/P2 service-date applicability and the E02 taxi exception; exclusion of C004 alcohol and proportional tax; the normal hotel room cap with full mandatory tax and E01 exception limited to the second stay; the USD 120 C021 deposit versus USD 395.20 C010 balance; settled-card USD valuation versus unsupported cash FX; settled credits of USD 36, 27, and 125 and the E04-approved USD 25 fee; C001 as canonical and C007 as duplicate; and company-card costs with zero employee payment. It also explains C027 final-invoice replacement and exclusion of the estimate overstatement, and counting C029 authorization/settlement as one flight. These explanations match the supplied policies, receipts, statements, and correspondence without a materially misleading claim."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

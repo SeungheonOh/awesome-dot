@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-b345f520fe470fee471dd621f9669f9c",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "b24cf6de1e87953132d3ad9d2768838027e08806723bad9c2e5e483f16f30cd1"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "pass",
+      "rationale": "The opening handoff paragraph states 30 September 2026 at 17:00 UTC, USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 unvalued, matching the required cutoff and ledger totals. It explicitly distinguishes calculated entitlements from payment confirmation, excludes E06 from the cutoff decision, and makes no claim that payment or outreach occurred."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "The follow-up queue covers all four holds supported by E05 and the underlying records: C017 requires an itemized stationery receipt requested by Maya from the seller; C018 requires attendee identities/count from the workshop organizer; C026 requires an approved cash conversion record from finance; and C028 requires Maya to obtain a vendor breakdown or corrected receipt explaining R028 USD 79 versus S028 USD 89 before finance releases the claim. It preserves the unknown cause of the hotspot difference and invents no missing evidence."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The decision summary accurately explains P1/P2 service-date applicability, proportional alcohol-tax removal for C004, ordinary hotel room caps with mandatory taxes, and E01 limited to the second stay with USD 120 allocated to C021 and USD 395.20 to C010. It distinguishes S014/S015 settled card FX from unvalued cash C026, nets settled credits S122/S123/S124 with the E04-approved USD 25 fee remaining, retains C001 over duplicate C007, and keeps company-card C020/C030 as business costs with zero employee reimbursement. It also explains replacing C027’s estimate with the final invoice and excluding the overstatement, and counting only one C029 flight despite its pending authorization. These explanations agree with the supplied policies, receipts, statement, correspondence, and ledger without materially unsupported claims."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

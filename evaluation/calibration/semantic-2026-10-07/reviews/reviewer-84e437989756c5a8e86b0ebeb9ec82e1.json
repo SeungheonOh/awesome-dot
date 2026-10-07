@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-84e437989756c5a8e86b0ebeb9ec82e1",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "b2ceb7c1deb2531e6a7d89d15e7be8158a390c9a1966b99ecef44ff7b5feca0f"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve the final scope and chronology: A08 is the accepted Spanish-only FAQ (M2/M5); A09 scheduling is done while A10 delivery remains open for Kian on October 6 (M4/F6); and A05/A16/A22/A26 remain cancelled with null register next steps. The handoff explicitly excludes F8/F9, retains A17 and A32 as complete and A31 as open, and does not use the post-cutoff A33 completion or named-owner report."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff individually covers all 18 active actions: A02,A03,A06,A10,A11,A12,A13,A14,A18,A20,A21,A23,A25,A28,A30,A31,A33,A34. Each has the supported owner and due date or an explicit gap, plus a practical next step. It foregrounds A03/A21 prerequisites to A25 and A25 to A28, and identifies all four overdue items A03/A11/A12/A21 with their unchanged dates. The steps address actual obstacles, including missing pilot mapping, workspace access, compliance clearance, unidentified CRM snapshots, and the unconfirmed partner date."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "The handoff and register retain A21 as unresolved because the conflicting pass/42-missing-row reports lack snapshot identity, matching F5/M5 without privileging the later result. They keep Lena accountable for A12 because Mira has only been proposed (M3/F7), show A33 with no named owner after Hana was released (M4/F7), and leave A30 open with no due date after its deadline was removed (M2). The handoff explicitly characterizes next steps as recommendations rather than completed actions. No materially unsupported confirmation, deadline, completion, or outreach claim was found in either artifact."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

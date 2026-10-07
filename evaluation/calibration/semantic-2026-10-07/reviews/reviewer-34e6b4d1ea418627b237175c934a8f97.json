@@ -1,0 +1,29 @@
+{
+  "case_id": "R1",
+  "reviewer_id": "reviewer-34e6b4d1ea418627b237175c934a8f97",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+    "review_notes.txt": "60752efc8e69b0415992731678a742f3ffaf67f40d744ebd76fdbfe588c41575"
+  },
+  "checks": {
+    "R1-12": {
+      "status": "fail",
+      "rationale": "The opening correctly states the exact 2026-09-30 17:00 UTC cutoff, USD 2,142.65 payable, USD 252.90 held, and EUR 24.00 unvalued. However, it also asserts that Owen approved the entire disbursement and that the candidate queued it with payroll. No supplied source supports either assertion: E01-E04 approve specific expenses or exceptions, and the task authorizes only an offline handoff. This violates the explicit prohibition on unsupported payment/action claims."
+    },
+    "R1-13": {
+      "status": "pass",
+      "rationale": "The notes distinctly address all four unresolved claims confirmed by E05 and the underlying records. They ask Maya to recover C017's itemized receipt, Maya or the organizer to supply C018's attendee list/count, finance to provide the approved cash FX record for unvalued EUR 24.00 C026, and Maya to obtain a vendor breakdown or corrected receipt explaining C028's USD 79 receipt versus USD 89 settlement before finance approves it. Each has an appropriate evidence request and responsible person or role, without inventing missing evidence."
+    },
+    "R1-14": {
+      "status": "pass",
+      "rationale": "The adjustment explanations match P1/P2 and the transaction evidence: policy follows service dates; C004 excludes alcohol and proportional tax; C005 retains mandatory lodging tax; E01 applies only to the later hotel stay, split into the USD 120 deposit and USD 395.20 balance. The notes use posted USD card FX while holding cash FX, net the three settled credits and retain E04's approved USD 25 fee, suppress duplicate C007 and employee payment of company-card C020/C030, replace C027's estimate with the USD 198 final bill, and count only C029's settled airfare rather than its pending authorization. All required adjustment classes are explained accurately; the separate unsupported disbursement assertion is recorded under R1-12."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

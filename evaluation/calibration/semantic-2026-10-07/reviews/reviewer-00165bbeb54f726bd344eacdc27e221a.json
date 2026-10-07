@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-00165bbeb54f726bd344eacdc27e221a",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "301610b54135bd5abd5dc3ddf622d85ed9fad9d2b42ebc88d932e6630efb9f90"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve A08 as accepted Spanish-only work (M2/M5), distinguish completed A09 scheduling from open A10 delivery by Kian on October 6 (F6), and leave A05/A16/A22/A26 cancelled without live next steps. The handoff explicitly excludes F8/F9 despite their retrospective claims; A17/A32 remain done, A31 remains open, and A33 remains unnamed and unresolved. The reopened A13 and unblocked but unfinished A14 also retain their corrected scope."
+    },
+    "R2-13": {
+      "status": "fail",
+      "rationale": "The handoff covers only 17 of the 18 active actions: it omits A34 entirely. M4 and F7 establish that Iris must obtain the unconfirmed partner launch date and finish the partner note, with an unchanged October 1 deadline. Those facts and a next step appear in the register but not the required handoff prose. The handoff otherwise foregrounds A03/A21 to A25 to A28 and correctly identifies overdue A03/A11/A12/A21."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "The handoff and register explain that A21 reports cannot establish completion because their tested snapshots are unidentified (F5/M5), retain Lena on A12 because Mira has not accepted the proposal (M3/F7), leave A33 without a named owner following Hana's release (M4/F7), and give A30 no deadline after its prior date was removed (M2). They do not invent a reconciled result, accepted reassignment, replacement deadline, completion, or outreach; the handoff explicitly labels next steps as recommendations rather than actions taken."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

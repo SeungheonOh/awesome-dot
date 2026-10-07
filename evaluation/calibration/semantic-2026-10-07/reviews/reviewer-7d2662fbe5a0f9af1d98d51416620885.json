@@ -1,0 +1,29 @@
+{
+  "case_id": "R2",
+  "reviewer_id": "reviewer-7d2662fbe5a0f9af1d98d51416620885",
+  "condition_masked": true,
+  "independent": true,
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "fe4ed132734f21666bbf4325c099e436c7d16058dae7653e4969a133b14498a1"
+  },
+  "checks": {
+    "R2-12": {
+      "status": "pass",
+      "rationale": "The register and handoff preserve M2/M5 Spanish-only, accepted A08; distinguish completed A09 scheduling from Kian's open A10 delivery on October 6 per F6; and retain A05/A16/A22/A26 as cancelled with no live next steps. The handoff explicitly excludes F8/F9 despite their retrospective claims, leaving A17/A32 done, A31 open, and A33 unassigned. Reopened ticket 714 remains A13, and the completed quota repair does not imply the load test was run."
+    },
+    "R2-13": {
+      "status": "pass",
+      "rationale": "The handoff gives distinct actionable lines for all 18 active items: A02/A03/A06/A10/A11/A12/A13/A14/A18/A20/A21/A23/A25/A28/A30/A31/A33/A34. Each includes the supported accountable owner and due date or an explicit gap, plus a practical next step. It foregrounds the M4 launch chain A03/A21 to A25 to A28 and identifies all four overdue items A03/A11/A12/A21 without extending their dates. External blockers, the unset A30 deadline, and the unnamed A33 owner are explicit."
+    },
+    "R2-14": {
+      "status": "pass",
+      "rationale": "Both artifacts preserve the four required uncertainties: A21 remains unresolved because F5/M5 cannot reconcile reports without identified export snapshots; Lena retains A12 because M3/F7 never authorize or accept Mira's proposed transfer; A33 has no named owner following M4/F7; and A30 is open with no due date after M2 removes the deadline. The handoff expressly calls next steps recommendations rather than completed actions. Neither artifact invents a confirmation, deadline, completion, or outreach, and descriptive claims are supported by the pre-cutoff sources."
+    }
+  },
+  "runtime_disclosure": {
+    "serving_model": "unknown",
+    "masking": "procedural; shared filesystem, not OS-isolated",
+    "exposure_incident": null
+  }
+}

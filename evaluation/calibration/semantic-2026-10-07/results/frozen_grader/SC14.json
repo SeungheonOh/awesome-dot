@@ -1,0 +1,109 @@
+{
+  "case_id": "R2",
+  "synthetic": true,
+  "objective": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "semantic": {
+    "passed": 1,
+    "failed": 2,
+    "unknown": 0,
+    "total": 3
+  },
+  "checks": {
+    "R2-01": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-02": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-03": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-04": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-05": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-06": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-07": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-08": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-09": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-10": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-11": {
+      "status": "pass",
+      "reason": "All required facts agree"
+    },
+    "R2-12": {
+      "status": "fail",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "fail",
+          "rationale": "The handoff calls A08 the accepted Spanish-and-French FAQ translation. M2 explicitly removes French, and M5 confirms only Spanish was accepted and French remains out of scope. The register correctly says Spanish-only, but that does not resolve the contradictory handoff scope. Training scheduling versus October 6 delivery, cancelled actions without live next steps, and exclusion of F8/F9 are otherwise correctly preserved."
+        },
+        {
+          "status": "fail",
+          "rationale": "The handoff calls A08 the \"accepted Spanish-and-French FAQ translation,\" contradicting M2 removing French and M5 confirming acceptance of Spanish only. The register title correctly says Spanish-only, but the handoff does not preserve that final scope. A09 scheduling versus A10 October 6 delivery, cancelled actions without live next steps, and exclusion of F8/F9 are otherwise correctly handled."
+        }
+      ]
+    },
+    "R2-13": {
+      "status": "pass",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "pass",
+          "rationale": "The handoff individually covers all 18 active actions (A02, A03, A06, A10, A11, A12, A13, A14, A18, A20, A21, A23, A25, A28, A30, A31, A33, A34), with supported owners and dates or explicit gaps and practical next steps. Its opening prioritizes A03/A21 before A25 acceptance, then A28 publication, and explicitly identifies the four overdue actions A03, A11, A12 and A21 with their unchanged dates."
+        },
+        {
+          "status": "pass",
+          "rationale": "The handoff individually covers all 18 active actions (A02, A03, A06, A10, A11, A12, A13, A14, A18, A20, A21, A23, A25, A28, A30, A31, A33, A34), with supported owners and dates or explicit gaps and practical next steps. It foregrounds the M4 launch chain A03/A21 to A25 to A28 and correctly highlights the four overdue actions A03, A11, A12 and A21. Later accepted transfers and revised dates are reflected, including Kian/October 6 for A10 and Gia/October 2 for A31."
+        }
+      ]
+    },
+    "R2-14": {
+      "status": "fail",
+      "reason": "Agreement of two independent masked reviews",
+      "reviews": [
+        {
+          "status": "fail",
+          "rationale": "The four named gaps are accurately explained: A21 reports lack identified snapshots and remain unresolved; Lena retains A12 because Mira has not accepted; A33 has no named owner after Hana was released; and A30 has no replacement deadline. However, this check also prohibits materially unsupported assertions anywhere in the prose. The handoff claims an accepted Spanish-and-French A08 translation, inventing completion of French work that M2 removed and M5 explicitly kept out of scope. No claimed outreach is present."
+        },
+        {
+          "status": "fail",
+          "rationale": "The four named gaps are explained correctly: A21 reports lack identified snapshots and remain unreconciled (F5/M5), A12 remains Lena despite the unaccepted Mira proposal (M3/F7), A33 has no named support lead (M4/F7), and A30 has no replacement deadline (M2). However, the handoff invents confirmed acceptance of French FAQ work by calling A08 an accepted Spanish-and-French translation. M2 explicitly removes French and M5 accepts only Spanish, so this is a materially unsupported completion assertion, violating the check's requirement of no invented confirmations or completed actions anywhere in the prose."
+        }
+      ]
+    }
+  },
+  "artifact_errors": [],
+  "artifact_sha256": {
+    "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+    "handoff.txt": "c9fe99dc696046e48e20c1183f69e70741afa3217b5a77bc8e4527449740a495"
+  },
+  "not_candidate_execution": true
+}
