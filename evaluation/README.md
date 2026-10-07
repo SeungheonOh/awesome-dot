@@ -45,6 +45,10 @@ The [transfer cohort](studies/transfer-2026-10-07/README.md), dated 2026-10-07, 
 
 The unchanged evidence preserves the actual one-word prompt deviation in T2 repeat 1 C and its unknown impact. Actual serving model/build and realized tool/instruction exposure remain unknown, and sealed isolation was not established. Public prompts are labeled projections, not historical dispatch transcripts. The package's [methods](studies/transfer-2026-10-07/METHODS.md), [provenance](studies/transfer-2026-10-07/PROVENANCE.md) and [complete results](studies/transfer-2026-10-07/RESULTS.md) retain these limits.
 
+## Reviewed authored routing regression
+
+The [task-routing contract regression](contracts/task-routing/README.md) contains 12 fictional requests, ten frozen candidate guides plus the router, and 39 authored controls. Two source-first author reviewers approved all control labels after the v2 clarity recheck. Its read-only checker validates packaging and response shape while leaving semantic adequacy null. These are authored contracts, with zero model trials; they are not measured guide efficacy and are not pooled with study results.
+
 ## Verify locally
 
 Run the core checks for the original fixtures and two original artifact studies from the repository root, using POSIX Python 3.12:
@@ -133,6 +137,15 @@ python -I -B evaluation/studies/transfer-2026-10-07/test_verify.py
 ```
 
 The first command verifies the 129 manifest-covered files, all 24 captured outputs and all 156 saved statuses, and runs 13 authored in-memory controls. The second runs 12 authored filesystem controls in temporary fictional fixtures inside the package directory. Neither command launches agents, executes candidate SQL/code or reruns primary grading; authored controls are not candidate outcomes. The digest pins saved package bytes, not historical execution truth. See the [package's verification and trust limits](studies/transfer-2026-10-07/PROVENANCE.md#saved-evidence-verification-and-freeze).
+
+### Check the authored routing contract
+
+```sh
+python -I -B evaluation/contracts/task-routing/verify.py
+python -I -B evaluation/test_task_routing_contract_links.py -v
+```
+
+These standalone checks verify the public allowlist, exact inputs and authored response shapes, plus the narrow documented copied-guide link exceptions. They do not run models, execute scenarios, or grade semantic quality. The routing package checker is not part of the core verifier or CI workflow.
 
 ## Continuous integration coverage
 

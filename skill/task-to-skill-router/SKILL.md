@@ -78,3 +78,5 @@ Before completing, confirm that the chosen path exists, its current full instruc
 [Routing examples](examples.md) show goal-based distinctions, a minimal sequence, an incomplete listing and a no-fit outcome. They demonstrate decisions for fictional requests; they do not claim that every available integration was exercised.
 
 [The repository-link rehearsal](remote-discovery-rehearsal.md) records an actual remote discovery and full-guide read at a pinned public revision, followed by a bounded answer from fictional descriptions. It keeps file parsing and live-account checks explicitly unperformed.
+
+[The reviewed routing contract regression](../../evaluation/contracts/task-routing/README.md) supplies 12 fictional request packets and 39 authored response controls with source-grounded semantic criteria. It records no model trials or measured routing benefit.

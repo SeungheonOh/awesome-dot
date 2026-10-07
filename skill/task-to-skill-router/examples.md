@@ -53,3 +53,5 @@ If the current inspected collection has no matching seller-draft workflow, say t
 ## Review criteria
 
 For each case, check the resolved path and complete instructions, desired output, necessary inputs, authority boundary and whether execution actually follows selection. A no-fit response should be bounded by the inspected collection. A route must never select this router again. These are manual decision examples, not automatic keyword tests or evidence that the fictional requests were executed.
+
+The separate [reviewed routing contract regression](../../evaluation/contracts/task-routing/README.md) provides 12 fictional requests and 39 authored controls over a frozen ten-guide slice. It checks contract boundaries and equivalent plans; it is not a model-performance result or a live discovery test.
