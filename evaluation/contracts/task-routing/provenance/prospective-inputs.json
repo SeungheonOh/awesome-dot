@@ -1,0 +1,123 @@
+{
+  "kind": "Prospective input recipe projection, never dispatched",
+  "original_plan_sha256": "a0487bdd5a3896727253c61247f60ca5b4f984f3ff153bc5978c97dd107bdf14",
+  "original_preservation_record_sha256": "acaf6421259d79e9a5560a1a795fb63224fbfb7907e287dfb35b485dbc4b98d3",
+  "candidate_order": [
+    "account-export-audit",
+    "backup-restore-spot-check",
+    "service-import-rehearsal",
+    "failing-build-repair",
+    "review-code-change",
+    "code-review-handoff",
+    "edit-document",
+    "draft-professional-message",
+    "document-export-check",
+    "source-backed-form-fill"
+  ],
+  "conditions": [
+    "baseline",
+    "router"
+  ],
+  "baseline": "The common instruction, interface, JSON schema, ten complete candidate guides in the listed order and one public request packet.",
+  "router": "The identical baseline bytes plus the complete frozen router entry point.",
+  "excluded": "All author rubric/controls, review records, other cases/outputs, and linked examples or references. The recipe is only an inspectable optional design, not an execution record.",
+  "prospective_prompt_hashes": [
+    {
+      "case_id": "R01",
+      "baseline_bytes": 109251,
+      "baseline_sha256": "4862b35c5986b83bf8c1f02fa674a91df68767f84c4b978717054bf5fd632d6d",
+      "router_bytes": 118591,
+      "router_sha256": "3e3206669e1d84d0d41cf52db94c305415a4a1c5dcddcf02a176846e884e0af8",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R02",
+      "baseline_bytes": 109062,
+      "baseline_sha256": "9676dd5046642fcb5a33bdda2c580357b954ceac46eae589f6a90246bfef3d81",
+      "router_bytes": 118402,
+      "router_sha256": "ba23e117e5caca40d0828896a03059151b0fbbfa98c3dfa2ebb8f0d45ba004cb",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R03",
+      "baseline_bytes": 109199,
+      "baseline_sha256": "343f3a17c8dd0e4e8c2849ce406c09128ff4e2a11b867d142fcb3c980d78abdd",
+      "router_bytes": 118539,
+      "router_sha256": "8e7081cd536c0318892282a2a3b0da8ffdfb2c1714fc9fbd172c83029f423337",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R04",
+      "baseline_bytes": 109042,
+      "baseline_sha256": "6f2c9d8007ff61fe3ec39e3b545672613f656d5e4bad7d3abe58f45b64235570",
+      "router_bytes": 118382,
+      "router_sha256": "78a8cdcfa2b39f1ad39e5c5cd4082ab5dcfd61cd690479325d55c15d1c04f822",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R05",
+      "baseline_bytes": 108946,
+      "baseline_sha256": "445a5c0a75279499901b4ca9146238e13ce6279f7e15dce63e1d631982a232e2",
+      "router_bytes": 118286,
+      "router_sha256": "60a9127d794af47fba5a02f1cdbf4811bb71c37b1f61a95ebce5d9eab24e5067",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R06",
+      "baseline_bytes": 108890,
+      "baseline_sha256": "b1f2483d4f9ad326406acb93c07a9fd4f406beb673466def46dc241f82e1ce13",
+      "router_bytes": 118230,
+      "router_sha256": "2a4e78d610ba7c6684734c439594488801d5b92bcec0056002d21afcd341157a",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R07",
+      "baseline_bytes": 109068,
+      "baseline_sha256": "5460f7f25283c2ae8a0d951ad6fb9f54d4747c18e352756203b21ef3b090af9a",
+      "router_bytes": 118408,
+      "router_sha256": "14dc85acd4a58a930b3583a05859d8eebacc359747bdbe5b151b4b9e740ec65f",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R08",
+      "baseline_bytes": 109152,
+      "baseline_sha256": "befb0ec46b498e5741ccf484e890e71550c62202e5003191b700ea4b65e09fd1",
+      "router_bytes": 118492,
+      "router_sha256": "c4e97e7b1dadceead5f2e188b9b5a7d0a7218d9fddefa1bf22ce4eacbad3bd26",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R09",
+      "baseline_bytes": 109130,
+      "baseline_sha256": "74aad1212f2a4a711896f3560dd12f2489e34dcb10abcbf745bf63575471df8a",
+      "router_bytes": 118470,
+      "router_sha256": "fe664503d368ec0f4102575ac1326c5189de82ffa3fb4b848e8129bf244999d5",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R10",
+      "baseline_bytes": 109220,
+      "baseline_sha256": "dfc35b52cbd1f857dcff6b354cc2d08698387dadd017ef4c5fb8c4f98e3a26b7",
+      "router_bytes": 118560,
+      "router_sha256": "067914584d988b27a19092766e6d5c4de38ac84ea4938fcf51a89bed0ba27822",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R11",
+      "baseline_bytes": 109237,
+      "baseline_sha256": "481c153ae1c7c17a01aaa70ca62414fdcab3e232a74348748900d331680240e2",
+      "router_bytes": 118577,
+      "router_sha256": "bc5d8bfe20d3afaf8867ed9cf9fa23bf2e1bcbe6a0d7557bb01fc06894f677f7",
+      "shared_prefix_identical": true
+    },
+    {
+      "case_id": "R12",
+      "baseline_bytes": 109283,
+      "baseline_sha256": "2b1fcd03c2e4a5a26a8e378a3b130038b6003494ef7723f653f0f0746baa22a2",
+      "router_bytes": 118623,
+      "router_sha256": "287c3941ac83b5a19365aab13aa6a8b4b0b6764f7f7d227df89973f4dc1e3f95",
+      "shared_prefix_identical": true
+    }
+  ],
+  "model_trials_run": 0
+}

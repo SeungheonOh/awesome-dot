@@ -1,0 +1,13 @@
+{
+  "case_id": "R01",
+  "decision": "route",
+  "workflow_sequence": [
+    "account-export-audit"
+  ],
+  "reason": "The desired evidence is source preservation, not destination behavior.",
+  "next_action": "The source and export totals can be compared first. If the totals agree, mark every required body and attachment preserved and issue a complete-coverage report.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

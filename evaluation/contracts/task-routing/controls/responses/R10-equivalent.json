@@ -1,0 +1,18 @@
+{
+  "case_id": "R10",
+  "decision": "route",
+  "workflow_sequence": [
+    "source-backed-form-fill"
+  ],
+  "reason": "The form workflow supports an explicit private fallback when native entry would disclose data.",
+  "next_action": "Map every supported answer to the real field identifier and its source in a local review draft. Because the website saves to the provider as soon as values are entered, leave its controls untouched and explain that the native form is still unfilled.",
+  "question": null,
+  "prerequisites": [
+    {
+      "kind": "authority",
+      "detail": "Live entry would transmit the project answers to the integration provider, which is outside the approved private-review boundary"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

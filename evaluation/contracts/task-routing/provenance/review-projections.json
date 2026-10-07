@@ -1,0 +1,54 @@
+{
+  "kind": "Public provenance projection, not original review transcripts",
+  "reviewed_source_freeze_sha256": "6c1113a41496cb7bcc3378d8853b185aca997f63c64a89572f4a907cd7dd54e6",
+  "reviewers": [
+    {
+      "reviewer_label": "A",
+      "original_v2_review_record_sha256": "02af26d365dc826c2974c9e35c9cf676eef5aca4ecda7ecb3fe4cfce05217404",
+      "reviewed_manifest_sha256": "6c1113a41496cb7bcc3378d8853b185aca997f63c64a89572f4a907cd7dd54e6",
+      "reviewed_diff_sha256": "84b6bcec4500f57e4302e91225fefccbe892d5acf684d02c935143d9a6cba9a4",
+      "reviewed_at_utc": "2026-10-07T05:57:49Z",
+      "verdict": "approved_as_authored_contract_regression",
+      "blocking_findings": [],
+      "authored_controls_reviewed": 39,
+      "adequate_controls": 27,
+      "inadequate_controls": 12,
+      "earlier_source_first_review": {
+        "reviewed_manifest_sha256": "8a652bda2be8a6593d8c79780e9d7f366af4ee217e6b6121bc43a639c0496b58",
+        "first_pass_before_author_gold": true,
+        "first_pass_before_other_reviewer_findings": true,
+        "first_pass_note_sha256": "19c09118a4f0c77bd38ee4b7b4974284e20e6b486aaa72135492f8fe04e07ec9",
+        "final_review_record_sha256": "83179574589ad73a57487c0692ff02012757429b0b4f97d408fce5748587ff24",
+        "reviewed_at_utc": "2026-10-07T05:48:49Z",
+        "verdict": "approve_authored_regression_with_nonblocking_clarifications"
+      },
+      "exact_v2_review_kind": "Diff/control recheck after source-first v1 derivation; not a new blinded derivation"
+    },
+    {
+      "reviewer_label": "B",
+      "original_v2_review_record_sha256": "2c692ab211e08fdfedf5f51fe2477df13ed09b549a353c9c39820506bd175936",
+      "reviewed_manifest_sha256": "6c1113a41496cb7bcc3378d8853b185aca997f63c64a89572f4a907cd7dd54e6",
+      "reviewed_diff_sha256": "84b6bcec4500f57e4302e91225fefccbe892d5acf684d02c935143d9a6cba9a4",
+      "reviewed_at_utc": "2026-10-07T05:56:50.662267+00:00",
+      "verdict": "approved_as_authored_contract_regression",
+      "blocking_findings": [],
+      "authored_controls_reviewed": 39,
+      "adequate_controls": 27,
+      "inadequate_controls": 12,
+      "earlier_source_first_review": {
+        "reviewed_manifest_sha256": "8a652bda2be8a6593d8c79780e9d7f366af4ee217e6b6121bc43a639c0496b58",
+        "first_pass_before_author_gold": true,
+        "first_pass_before_other_reviewer_findings": true,
+        "first_pass_note_sha256": "986466a91b74036d013d442df3edb2d2fdf87e0c37ffacaab28a39bbb4987f7e",
+        "final_review_record_sha256": "696dd28815b6ba41f5f8057cd96fba4f041e35dadb9b24f0d3449af9c16f95d5",
+        "reviewed_at_utc": "2026-10-07T05:47:11Z",
+        "verdict": "approved_as_authored_contract_regression"
+      },
+      "exact_v2_review_kind": "Diff/control recheck after source-first v1 derivation; not a new blinded derivation"
+    }
+  ],
+  "completed_exact_v2_author_reviews": 2,
+  "independence": "Separate source-first derivations were saved before author-gold and cross-review discussion. Shared filesystem access was available; OS-enforced blinding and technical read isolation were not established. Reviews were AI-assisted author checks, not human evaluation or independent model trials.",
+  "omissions": "Internal reviewer identifiers, absolute paths, coordination and execution notes are omitted. Original hashes identify retained records but do not reveal or independently reconstruct their contents.",
+  "model_trials_run": 0
+}

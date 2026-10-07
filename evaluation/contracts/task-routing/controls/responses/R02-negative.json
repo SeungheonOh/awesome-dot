@@ -1,0 +1,13 @@
+{
+  "case_id": "R02",
+  "decision": "route",
+  "workflow_sequence": [
+    "code-review-handoff"
+  ],
+  "reason": "A source-grounded reading order and reviewer packet will satisfy the requested review.",
+  "next_action": "Summarize the diff and prepare the acceptance map and reviewer questions instead of returning findings.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

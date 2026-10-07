@@ -1,0 +1,69 @@
+{
+  "packet_version": "1.0.0-author-review",
+  "task": "Offline routing and next-action planning only",
+  "fictional": true,
+  "scenario_convention": "Every request is original synthetic software-project/workflow material. A packet statement that a file or capability is available is a stipulated fact for routing, not a claim that a real file was supplied or inspected. No hidden file content is needed to choose the next action. Do not execute the scenario.",
+  "candidate_scope": "Exactly the ten complete supplied candidate entry points. This does not represent the entire repository.",
+  "cases": [
+    {
+      "case_id": "R01",
+      "request": "Check the downloaded Harborline engineering-notes export against the independent inventory. I need to know whether this selected snapshot preserves every required note body and attachment for retention. Return a private coverage report only; do not restore or import anything.",
+      "packet": "Hypothetical available material: unchanged export parts, the documented source format, a complete independently captured inventory at the same snapshot and selection, required note-body and attachment properties, and a private report location. Authorized local parsers and report-writing capability are available. The audit has not yet been performed. No live account operation or consolidated copy is requested."
+    },
+    {
+      "case_id": "R02",
+      "request": "Review the immutable Harborline parser patch for introduced correctness regressions and give me source-grounded findings here. Do not edit it, prepare a reviewer briefing, or post anything.",
+      "packet": "Hypothetical available material: a versioned patch, matching base context, requirements, relevant tests, applicable project instructions, and authorized source-reading capability. No actual code finding or execution is requested in this routing exercise. A review may legitimately find no substantiated issues."
+    },
+    {
+      "case_id": "R03",
+      "request": "Tighten the two-paragraph engineering update below for my project team. Keep the same facts and commitments and return revised text here. Do not send it.\n\nThe parser patch has passed the focused local checks. The full suite has not run yet, so this is not a release-ready claim.\n\nI can prepare the reviewer packet after the full-suite results arrive. The Thursday handoff is still a target, not a commitment.",
+      "packet": "The quoted text is the entire draft. The audience is the existing engineering project team; use a concise, direct tone. No other factual context is needed. No native-file edit, external draft, research, or send is requested."
+    },
+    {
+      "case_id": "R04",
+      "request": "Can you check the Harborline workspace export before we move to the new service?",
+      "packet": "Hypothetical available material: a source export, independent source inventory, destination import contract, and complete target snapshot. The requester has not specified whether the desired result is evidence of source retention coverage or a prediction of destination create/update/reject effects. These are both plausible and would require different deliverables. No account import is authorized."
+    },
+    {
+      "case_id": "R05",
+      "request": "Can you take care of this parser change?",
+      "packet": "Hypothetical available material: an immutable patch, a failing test log, intended behavior, a readable local checkout, and context for a reviewer packet. The desired result has not been specified: findings, a repair, and a reviewer handoff remain plausible. Reading these materials is authorized. Editing or publishing has not been authorized."
+    },
+    {
+      "case_id": "R06",
+      "request": "What is the median of these five synthetic local benchmark durations: 6, 3, 7, 2, and 9 seconds? Use a supplied workflow only if one fits.",
+      "packet": "Only the ten supplied candidate guides are available for routing. Ordinary arithmetic is available without a workflow. No outside source, repository action, or statistical report is needed."
+    },
+    {
+      "case_id": "R07",
+      "request": "Our fictional build-log archive has no backup yet. Help me plan a first backup and nightly runs. This is a plan only; do not install or enable anything.",
+      "packet": "Only the ten supplied candidate guides are available for routing. No backup product, platform, or destination has been selected, and no backup snapshot exists. The requester wants an initial general plan, not an executed job or a restoration test. A question to make a later concrete plan is allowed, but is not necessary for an initial bounded outline."
+    },
+    {
+      "case_id": "R08",
+      "request": "Prepare an import-ready CSV and a row-by-row operation plan for the Harborline component registry from the source and target snapshot. Stay offline and do not upload anything.",
+      "packet": "Hypothetical available material: source CSV, desired destination account and collection, intended allowed fields, a complete target identity snapshot, and a private output location. Local CSV parsing and writing are available. The actual destination import contract is absent, including identity/upsert semantics, blank/clear behavior, and create/update rules. These rules cannot be inferred from the column names."
+    },
+    {
+      "case_id": "R09",
+      "request": "Export this approved Harborline release brief from DOCX to a distribution-ready PDF, preserving its links and layout. Save it privately.",
+      "packet": "Hypothetical available material: the approved source, private output location, permitted markup/field treatment, and layout requirements. Installed capability can export, parse the PDF, and inspect link annotations, but cannot render pages or open a visual viewer. There is no visual reference of the exported PDF. No installation or upload is authorized. The request still calls for a checked delivery, not merely text extraction."
+    },
+    {
+      "case_id": "R10",
+      "request": "Prepare the integration-test intake form for my private review using the supplied synthetic project facts. Do not share the answers with the integration provider yet.",
+      "packet": "The exact form and all source-backed answers are hypothetically readable. The form asks for project label Harborline, environment sandbox-west, 14 synthetic jobs per day, and pilot-only use. Its live web fields autosave immediately to the integration provider. Existing capability can inspect controls and write a private local field/value draft, but cannot make a private native clone. Live field entry would disclose the answers before Submit is pressed and is outside the stated boundary."
+    },
+    {
+      "case_id": "R11",
+      "request": "Proofread this Harborline operations DOCX and give me both the corrected editable file and a PDF checked against that corrected copy. Mechanical wording corrections and export of those corrections are approved; preserve the numbers, links, and qualifications.",
+      "packet": "Hypothetical available material: the exact source DOCX, private output directory, required format and layout, and installed editing, exporting, parsing, link-inspection, and page-rendering capabilities. Only unambiguous mechanical corrections are in scope. No further approval is needed for those corrections. Both final editable and final PDF artifacts are requested; the PDF must derive from the corrected source."
+    },
+    {
+      "case_id": "R12",
+      "request": "Fix the local failing Harborline test with a minimal repair, then prepare a private reviewer packet for the final change: a reading order, acceptance-criterion map, revision-specific test ledger, and focused reviewer questions. Do not push, post, or request reviewers.",
+      "packet": "Hypothetical available material: the allowed checkout, exact failing command, independently supplied expected behavior, pre-existing worktree edits, project instructions, installed offline toolchain, reviewer role, and private output location. Local minimal edits and relevant safe checks are authorized. The final patch identity and final-state results will exist only after repair and verification. Older logs are leads, not proof of the final state."
+    }
+  ]
+}

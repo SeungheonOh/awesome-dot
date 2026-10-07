@@ -1,0 +1,16 @@
+{
+  "case_id": "R05",
+  "decision": "clarify",
+  "workflow_sequence": [],
+  "reason": "The supplied materials support several materially different tasks.",
+  "next_action": "Ask for the intended result; any initial reading remains within the authorized scope and does not assume edits or publication.",
+  "question": "Do you want findings on the patch, a minimal local repair, or a reviewer handoff?",
+  "prerequisites": [
+    {
+      "kind": "input",
+      "detail": "Requested deliverable and whether local edits are wanted"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

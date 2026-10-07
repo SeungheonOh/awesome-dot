@@ -1,0 +1,19 @@
+{
+  "case_id": "R12",
+  "decision": "route",
+  "workflow_sequence": [
+    "failing-build-repair"
+  ],
+  "reason": "Use repair as the primary workflow, followed by a distinct ordinary reviewer-packet substep.",
+  "next_action": "Inspect the boundary and pre-existing edits, diagnose and apply the minimal supported repair, then run relevant safe checks against the final files. Freeze the final patch identity and prepare the reading order, criterion map, revision-specific test ledger, and focused reviewer questions privately.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [
+    {
+      "from": "verified minimal repair",
+      "to": "reviewer-packet preparation",
+      "artifact": "Final versioned patch identity, change rationale, preserved pre-existing edits, and final-state test evidence"
+    }
+  ],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "R11",
+  "decision": "route",
+  "workflow_sequence": [
+    "edit-document",
+    "document-export-check"
+  ],
+  "reason": "Two requested artifacts depend on the final corrected source.",
+  "next_action": "Make only approved mechanical edits and reopen the saved editable result. Export that corrected version, then inspect actual PDF semantic fidelity, link annotations, and every rendered page before labeling it checked.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [
+    {
+      "from": "edit-document",
+      "to": "document-export-check",
+      "artifact": "Final corrected DOCX identity/version plus protected numbers, links, qualifications, and layout expectations"
+    }
+  ],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

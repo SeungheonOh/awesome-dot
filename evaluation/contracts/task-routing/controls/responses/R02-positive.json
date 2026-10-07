@@ -1,0 +1,13 @@
+{
+  "case_id": "R02",
+  "decision": "route",
+  "workflow_sequence": [
+    "review-code-change"
+  ],
+  "reason": "The request is for review findings on an immutable change.",
+  "next_action": "Trace the changed parser behavior through matching base/source context and relevant tests; report only supported introduced defects or an honest no-findings outcome. Keep the patch unchanged and return findings here.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

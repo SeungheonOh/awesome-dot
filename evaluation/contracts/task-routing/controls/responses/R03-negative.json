@@ -1,0 +1,14 @@
+{
+  "case_id": "R03",
+  "decision": "route",
+  "workflow_sequence": [
+    "edit-document",
+    "draft-professional-message"
+  ],
+  "reason": "This is a bounded revision of team correspondence.",
+  "next_action": "Require a complete document-editing pass and then a separate mandatory message-writing pass before returning the two paragraphs, even though either single workflow could perform the bounded revision.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

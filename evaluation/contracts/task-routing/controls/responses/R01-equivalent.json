@@ -1,0 +1,13 @@
+{
+  "case_id": "R01",
+  "decision": "route",
+  "workflow_sequence": [
+    "account-export-audit"
+  ],
+  "reason": "The desired evidence is source preservation, not destination behavior.",
+  "next_action": "Compare what the selected snapshot was required to retain with what the export actually contains, including each note body and referenced attachment bytes. Produce only the private findings and coverage report after that comparison; matching supplied counts is not yet proof.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "R07",
+  "decision": "no_fit",
+  "workflow_sequence": [],
+  "reason": "The restore-check guide requires an existing backup and excludes creating the first one.",
+  "next_action": "Give a general plan to choose backup scope and destination, define retention and nightly timing, then include a future restore test after a backup exists. Ask for the platform/data scope before making it concrete; do not enable anything.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Ordinary planning outside the ten supplied guides; no claim about other repository workflows."
+}

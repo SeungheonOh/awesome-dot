@@ -1,0 +1,13 @@
+{
+  "case_id": "R03",
+  "decision": "route",
+  "workflow_sequence": [
+    "draft-professional-message"
+  ],
+  "reason": "This is a bounded revision of team correspondence.",
+  "next_action": "Tighten the two paragraphs in chat, retaining that only focused checks passed, the full suite is unrun, the reviewer packet is conditional on results, and Thursday is a target. Do not send or save an external draft.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

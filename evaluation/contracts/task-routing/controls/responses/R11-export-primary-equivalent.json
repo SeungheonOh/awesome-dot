@@ -1,0 +1,19 @@
+{
+  "case_id": "R11",
+  "decision": "route",
+  "workflow_sequence": [
+    "document-export-check"
+  ],
+  "reason": "Use export checking as the primary workflow, preceded by the explicitly authorized ordinary proofreading and editable-source verification substep.",
+  "next_action": "First preserve the original, make only the approved mechanical corrections to an editable copy, and reopen that saved corrected DOCX. Deliver the corrected editable file and export the PDF from that exact revision. Compare the actual PDF with its corrected source for protected numbers and qualifications, inspect link annotations and targets, and visually inspect every rendered page before calling it checked.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [
+    {
+      "from": "ordinary mechanical proofreading and editable readback",
+      "to": "document-export-check",
+      "artifact": "The exact final corrected DOCX identity/version, protected numbers, qualifications, link targets, and layout requirements"
+    }
+  ],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

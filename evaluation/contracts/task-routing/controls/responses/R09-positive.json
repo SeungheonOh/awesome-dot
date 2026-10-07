@@ -1,0 +1,18 @@
+{
+  "case_id": "R09",
+  "decision": "route",
+  "workflow_sequence": [
+    "document-export-check"
+  ],
+  "reason": "The export workflow fits, but complete layout verification cannot be performed with the stated tools.",
+  "next_action": "Plan a private candidate PDF and supported content/link checks. Label it a candidate with all-page visual inspection outstanding, and withhold distribution-ready status.",
+  "question": null,
+  "prerequisites": [
+    {
+      "kind": "capability",
+      "detail": "An available page renderer or compatible visual viewer for every PDF page"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

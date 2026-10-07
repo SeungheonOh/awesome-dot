@@ -1,0 +1,20 @@
+{
+  "case_id": "R11",
+  "decision": "route",
+  "workflow_sequence": [
+    "edit-document",
+    "document-export-check"
+  ],
+  "reason": "Two requested artifacts depend on the final corrected source.",
+  "next_action": "Correct and reopen the DOCX, but export and fully verify the original uncorrected source because it was the first named file. Deliver the corrected DOCX with that PDF.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [
+    {
+      "from": "edit-document",
+      "to": "document-export-check",
+      "artifact": "Original pre-correction DOCX identity and its original protected content"
+    }
+  ],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

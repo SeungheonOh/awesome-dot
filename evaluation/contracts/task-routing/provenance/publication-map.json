@@ -1,0 +1,403 @@
+{
+  "kind": "Public allowlist and provenance mapping",
+  "original_source_freeze_manifest_sha256": "6c1113a41496cb7bcc3378d8853b185aca997f63c64a89572f4a907cd7dd54e6",
+  "original_source_freeze_version": "2.0.0-author-review",
+  "source_freeze_preserved_unchanged": true,
+  "exact_copies": [
+    {
+      "path": "author/semantic-review-template.v2.json",
+      "bytes": 638,
+      "sha256": "6b33e845600f8080e45ac2ce9f5911f94add9de8e894cc92d2516919ffeb9ce8"
+    },
+    {
+      "path": "controls/responses/R01-equivalent.json",
+      "bytes": 646,
+      "sha256": "0abed1c7a7206546124c850d1c772109615993cb28b04b66dd394001e582f37a"
+    },
+    {
+      "path": "controls/responses/R01-negative.json",
+      "bytes": 531,
+      "sha256": "3874775e748a581629464690e2f45debb675ece08508bae84ce71ad765758bb0"
+    },
+    {
+      "path": "controls/responses/R01-positive.json",
+      "bytes": 654,
+      "sha256": "fb3ea6a29a4b41673b39a7e40ccd36ed4777e4edef80d47b543f3498a8b9d14e"
+    },
+    {
+      "path": "controls/responses/R02-equivalent.json",
+      "bytes": 538,
+      "sha256": "b8577ae8377ed889f05305016a65dd60c1e07ab69f20a04f9bda9d3b2c5b5a44"
+    },
+    {
+      "path": "controls/responses/R02-negative.json",
+      "bytes": 489,
+      "sha256": "f021b5688683f2b4815c3e6acd4d8cfafefb1ecaf7d75f10e03afaf158730677"
+    },
+    {
+      "path": "controls/responses/R02-positive.json",
+      "bytes": 573,
+      "sha256": "56af5cd4678b092873fb67f37ba11c36347d774fc1e86a2493f58a5b6eded662"
+    },
+    {
+      "path": "controls/responses/R03-equivalent.json",
+      "bytes": 583,
+      "sha256": "53ff0219d70621e97ed3f4f616b7e2e4f40437669f3fa375effe4b5145cc1c6b"
+    },
+    {
+      "path": "controls/responses/R03-negative.json",
+      "bytes": 577,
+      "sha256": "48a993ecb0129aa46c8c1988d7c7b4eada469f3661d2c47449ce41091a932ac8"
+    },
+    {
+      "path": "controls/responses/R03-positive.json",
+      "bytes": 572,
+      "sha256": "2172c519d233e2deb0adfbabc3eff149807507a27b0fe3ceac9af8ec0b68035e"
+    },
+    {
+      "path": "controls/responses/R04-equivalent.json",
+      "bytes": 885,
+      "sha256": "2ec6a590b08d052b3917c928f4daf5aaec185c8e9c361e96522eed6fe69f14d7"
+    },
+    {
+      "path": "controls/responses/R04-negative.json",
+      "bytes": 794,
+      "sha256": "f62329db17b4523875752ff47fe5f29cb1b8b44c8edd215d9b0b08247145ab64"
+    },
+    {
+      "path": "controls/responses/R04-positive.json",
+      "bytes": 735,
+      "sha256": "3da03acd8e4871905ca5ced6a48b4272552a587daadf7f7e3413f3864adcf750"
+    },
+    {
+      "path": "controls/responses/R05-equivalent.json",
+      "bytes": 726,
+      "sha256": "d5ba61b85e298ed2289b5241ad9d286a17298e98baa6c654368c5290bf7ac3d2"
+    },
+    {
+      "path": "controls/responses/R05-negative.json",
+      "bytes": 464,
+      "sha256": "2b27d1cb06defdb6af410b1e8e10cd1090ba2776149dad93b98dc4363923a156"
+    },
+    {
+      "path": "controls/responses/R05-positive.json",
+      "bytes": 657,
+      "sha256": "699d10107cd543fc9bd9a575117a42ed01a35edb6af83c180ff6184dcfcc91d4"
+    },
+    {
+      "path": "controls/responses/R06-equivalent.json",
+      "bytes": 428,
+      "sha256": "3227bc42f953256d35acce48e31026c625774fe3b67f564e8e6c8615b060c217"
+    },
+    {
+      "path": "controls/responses/R06-negative.json",
+      "bytes": 403,
+      "sha256": "fc50f31f1ec9a18aee11a89c7352c327badfa5e971211d315f5b7d44b4533abd"
+    },
+    {
+      "path": "controls/responses/R06-positive.json",
+      "bytes": 425,
+      "sha256": "c1347e19bd0d0b553b6f9cba249d2be55ac298a09650ffe74492e840a265a7e7"
+    },
+    {
+      "path": "controls/responses/R07-equivalent.json",
+      "bytes": 651,
+      "sha256": "30b2bd0601b764d47458d0feafa0398c296b264eb4d6b11f7338631506c2e23b"
+    },
+    {
+      "path": "controls/responses/R07-negative.json",
+      "bytes": 508,
+      "sha256": "941fe5fa9da2cfdd348178cc50c24b3f1a6ce2e49b581818564b0863c10b439d"
+    },
+    {
+      "path": "controls/responses/R07-positive.json",
+      "bytes": 605,
+      "sha256": "7116a995e8f754afd3a97ab1253a03a75a31467e24747f50a24c14cf4ba34d3c"
+    },
+    {
+      "path": "controls/responses/R08-equivalent.json",
+      "bytes": 851,
+      "sha256": "be93e237d2561f15be29de69fc82112340c4c512597c5d9272b627fcd1fba6b8"
+    },
+    {
+      "path": "controls/responses/R08-negative.json",
+      "bytes": 766,
+      "sha256": "9a5a39c51ce1fcfc6afa29b36350e564b723ec5189f708ce80fc2264c0415a5a"
+    },
+    {
+      "path": "controls/responses/R08-positive.json",
+      "bytes": 773,
+      "sha256": "daf21cd4747732431001441c3a0e17fe983cd5b625e4c122a16af304f725efcb"
+    },
+    {
+      "path": "controls/responses/R09-equivalent.json",
+      "bytes": 785,
+      "sha256": "822c4346d1fed293777f45b2b8a63b21b8a9f84e43bb9a8522742d3ed5a57b03"
+    },
+    {
+      "path": "controls/responses/R09-negative.json",
+      "bytes": 717,
+      "sha256": "c4ebed1d75719481eb08953d689c0258c5afb1a8270f0d49527bdd0bfe745257"
+    },
+    {
+      "path": "controls/responses/R09-positive.json",
+      "bytes": 707,
+      "sha256": "d15754d1102ecf46b473a24544c47f8cfee79a37c78762f6b8a20a4d2d08e288"
+    },
+    {
+      "path": "controls/responses/R10-equivalent.json",
+      "bytes": 836,
+      "sha256": "a8dfaebcaac3e669568a0bfa4956666833e5708a19d8895aaaa75b82f20b8b2d"
+    },
+    {
+      "path": "controls/responses/R10-negative.json",
+      "bytes": 751,
+      "sha256": "525d3a73b68179b0e0c86ced7a8b1227e30734b351b57a01dd7354c6c25523df"
+    },
+    {
+      "path": "controls/responses/R10-positive.json",
+      "bytes": 776,
+      "sha256": "426133169b5f06287f6eecfd1df3bfd79558d5e647d08d6ae8d32e88d4a9f5ef"
+    },
+    {
+      "path": "controls/responses/R10-private-fallback-equivalent.json",
+      "bytes": 629,
+      "sha256": "c94e56aa4be736448a8a73a393a7432dc46b31b9af3a00817fcf54930fa67eaa"
+    },
+    {
+      "path": "controls/responses/R11-equivalent.json",
+      "bytes": 872,
+      "sha256": "f7504cfdddae2ff337738d35333a49d6dea09d64798ea0fe4a5daac4dbc19d89"
+    },
+    {
+      "path": "controls/responses/R11-export-primary-equivalent.json",
+      "bytes": 1125,
+      "sha256": "7da2de17927a922c7de758c8b3a7200b51e7019714aa72effa305805e514fde0"
+    },
+    {
+      "path": "controls/responses/R11-negative.json",
+      "bytes": 727,
+      "sha256": "dbc88efea1e70da825c515c27c869a6dd523f955e6459c0d56f570bc12ee1da1"
+    },
+    {
+      "path": "controls/responses/R11-positive.json",
+      "bytes": 813,
+      "sha256": "a2b11cfc31e750a04b357d86628a74f247ae12057ad39357fe259d7023683526"
+    },
+    {
+      "path": "controls/responses/R12-equivalent.json",
+      "bytes": 921,
+      "sha256": "0ff8ef97dc8b9dea3ad1e8ddacca489489925ace87a0be7ec31922849cdf8faa"
+    },
+    {
+      "path": "controls/responses/R12-handoff-primary-equivalent.json",
+      "bytes": 1202,
+      "sha256": "99f1410428ae86a611c283d790464fbe966e9a416c726793f2a10bbdbbbee0a1"
+    },
+    {
+      "path": "controls/responses/R12-negative.json",
+      "bytes": 799,
+      "sha256": "1470bd9d89a04fb1f17230eb76d8bf3557dd975fa89c5fdf086407d5ac99f760"
+    },
+    {
+      "path": "controls/responses/R12-positive.json",
+      "bytes": 918,
+      "sha256": "81f3afbf054486adf27440c5a1bb501acd3630f2677e88bcbd158ffb65704c2b"
+    },
+    {
+      "path": "public/common-instruction.md",
+      "bytes": 727,
+      "sha256": "663a61f62b44122c23b5e5b2dc5801884320cc6d6f71a1eeae9cece3b69f50c3"
+    },
+    {
+      "path": "public/interface.md",
+      "bytes": 1726,
+      "sha256": "604f21c9415acf6ee2954e06b5cf1d070a443cf70633ba836c0a443e02993b25"
+    },
+    {
+      "path": "public/output-schema.v1.json",
+      "bytes": 2172,
+      "sha256": "38d752cbde2c9f4ced19526a657e2fa507edb9b099bd88944ff759ada2d82a88"
+    },
+    {
+      "path": "public/requests.v1.json",
+      "bytes": 8257,
+      "sha256": "ebc4b3eabd675ed5e5085f2a4eafde66540bb740e34c73ec4453cebd64eab325"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 6826,
+      "sha256": "0ca395c5bdefd16229e77577c277c940882ba06e26b4a05933f7ed4dd29e29cf"
+    },
+    {
+      "path": "sources/skill/account-export-audit/SKILL.md",
+      "bytes": 17111,
+      "sha256": "3e3740aed2469c039063f4f5d4a84aed78f03e165036b30581a6fd4ae3ace995"
+    },
+    {
+      "path": "sources/skill/backup-restore-spot-check/SKILL.md",
+      "bytes": 12426,
+      "sha256": "ba0dd108d168dfc5e6c7ec3052fde3bcbfc9107791181b5ccee77ae479a0fa47"
+    },
+    {
+      "path": "sources/skill/code-review-handoff/SKILL.md",
+      "bytes": 8504,
+      "sha256": "4357eb0ba83097414315f2a865a489289e68624e4bc04a0e9f2cf013c061a28a"
+    },
+    {
+      "path": "sources/skill/document-export-check/SKILL.md",
+      "bytes": 11885,
+      "sha256": "2ff7723ebbe75acfb9e3ccadeecc60e04d7c150730fdeb40566931ca2b87ef1f"
+    },
+    {
+      "path": "sources/skill/draft-professional-message/SKILL.md",
+      "bytes": 6210,
+      "sha256": "94da77fb9e9bbcb6af8cab457adce009256b5fdf338df6fceffe30ddd9a21ad0"
+    },
+    {
+      "path": "sources/skill/edit-document/SKILL.md",
+      "bytes": 7647,
+      "sha256": "ba4f117414a25e951858efbb7f7a639dfbc66bb87edbcaa6d1cb7ca1f653b4c5"
+    },
+    {
+      "path": "sources/skill/failing-build-repair/SKILL.md",
+      "bytes": 9338,
+      "sha256": "21a752917afb3197a35ea956909064a800bdb32deb724da11b2e9f303d2a9020"
+    },
+    {
+      "path": "sources/skill/review-code-change/SKILL.md",
+      "bytes": 5846,
+      "sha256": "51722c8d5225efa6121f613085e285e75130ed91c1291edaeb036f1db03a6078"
+    },
+    {
+      "path": "sources/skill/service-import-rehearsal/SKILL.md",
+      "bytes": 14045,
+      "sha256": "540d4174c198a03cd2552f367817d85a2511201fce69f6de46f221f34df7526e"
+    },
+    {
+      "path": "sources/skill/source-backed-form-fill/SKILL.md",
+      "bytes": 10446,
+      "sha256": "cb46d28aeb1cbb9c5f943cc82165521fdd549fd968abf80475ed7fdc3c22b05c"
+    },
+    {
+      "path": "sources/skill/task-to-skill-router/SKILL.md",
+      "bytes": 9308,
+      "sha256": "e4e22398cf9f7e9ed5d0f386e7620f01b47e6fc11a6068570f39a1941133f3fe"
+    }
+  ],
+  "projections": [
+    {
+      "path": "author/rubric.v2.json",
+      "original_sha256": "74e1775827837d9d6393c2c1ac304996b2b8828ad53747c5ac9756219daf33c2",
+      "change": "Only the top-level status is updated for completed review; every other JSON field is identical.",
+      "semantic_content_sha256": "b7c55ea5c529048653afa9f8c88595c8a48a6054f21b6d19a495cc1a63819db5",
+      "canonicalization": "Remove top-level status; UTF-8 JSON with sorted keys, ensure_ascii=False and separators comma/colon."
+    },
+    {
+      "path": "provenance/review-projections.json",
+      "original_sha256": "3194a1d78dcd88403fef11130c82517103e3b76a9d22c5efe793cddd9305caaa",
+      "change": "Public review projection with both exact-v2 external signoffs and original record hashes; removes internal identifiers and coordination details."
+    },
+    {
+      "path": "provenance/prospective-inputs.json",
+      "original_sha256": "a0487bdd5a3896727253c61247f60ca5b4f984f3ff153bc5978c97dd107bdf14",
+      "change": "Public optional input recipe with original prospective hashes; no dispatch transcript or model outcome claim."
+    },
+    {
+      "path": "controls/index.v2.json",
+      "original_sha256": "228e670beeec071dc0fff5fdd6b7fd0380057b6196fdb8d43bff8c260249e487",
+      "change": "Only each controls entry semantic_status is updated for completed exact-v2 review. All other JSON fields, including labels, rationales and response bindings, are identical.",
+      "semantic_content_sha256": "9e90dcc0a56d2255c979d9f62599834d4d42f9dcb9eef6de20246776db4db3e7",
+      "canonicalization": "Remove semantic_status from each controls array entry; retain every other field. UTF-8 JSON with sorted keys, ensure_ascii=False and separators comma/colon."
+    }
+  ],
+  "omitted_original_files": [
+    {
+      "path": "CHANGES-v2.md",
+      "sha256": "6255a46397b01167cdbe621872713e6b96eb2eae17b5acae000589d1aa75d8ba",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "METHODS.md",
+      "sha256": "708a5d9c2cda943a0456831c5ab25ab70431aea6774f0c06eca623a05c23f60f",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "README.md",
+      "sha256": "2e9aa5d87bdec9d8dbec06f2a3a427bef33ba9bea843767ccaec5acaa1764fee",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "1b3ac774746994f262fb5a7cb0230b63acfe8120eae3fe5b98a4037259add77d",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "author/comparison-plan.v2.json",
+      "sha256": "a0487bdd5a3896727253c61247f60ca5b4f984f3ff153bc5978c97dd107bdf14",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "author/review-provenance.v2.json",
+      "sha256": "3194a1d78dcd88403fef11130c82517103e3b76a9d22c5efe793cddd9305caaa",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "author/review-record-template.v2.json",
+      "sha256": "fe35caaa02490e26e6a785cebb6df083d9d4560002983868720edfb0354139f3",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "build_pack.py",
+      "sha256": "79bbec518340502c1994ad663c1d5a0cc20b4e2f96f008c19f04f38be47275a7",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "check_pack.py",
+      "sha256": "994f9b5d9b2e7d7544e5aad25cc54b1d6d81351da92897b3110e0ea271a047a8",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "controls/README.md",
+      "sha256": "050cd08974a443bbbd79e284683e050ca8ddf5bce9cf2e5179abb1a0a4110d88",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "mechanical-checks.json",
+      "sha256": "fa18c2c17eeb03e069c9ddb680edeb927721934182031c477c0883bd6941fef8",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "provenance/changes-v1-v2.json",
+      "sha256": "1df072c48b8e638cdcec629a391d2b842f868f6e6e5d6d830666b92487414b0d",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "provenance/input-proposal.json",
+      "sha256": "853095eaba40bd79ee8b043915f185c749eecc960f3152fb0a12d94bf347ccfd",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "provenance/v1-preservation.json",
+      "sha256": "acaf6421259d79e9a5560a1a795fb63224fbfb7907e287dfb35b485dbc4b98d3",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    },
+    {
+      "path": "source-captures.json",
+      "sha256": "f223965a676aced0f6781f323368513c5b8012e050e6908beb6aaa015c06d82f",
+      "reason": "Private retrieval/authoring evidence or superseded historical metadata; excluded from the public allowlist."
+    }
+  ],
+  "new_public_material": [
+    "README.md",
+    "METHODS.md",
+    "PROVENANCE.md",
+    "REVIEW.md",
+    "controls/README.md",
+    "verify.py",
+    "MANIFEST.json",
+    "provenance/publication-map.json",
+    "provenance/omitted-links.json"
+  ],
+  "trust_limit": "Hashes identify retained original records; they do not independently disclose unpublished records or establish historical execution. No model dispatch or model trials occurred."
+}

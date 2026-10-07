@@ -1,0 +1,13 @@
+{
+  "case_id": "R01",
+  "decision": "route",
+  "workflow_sequence": [
+    "account-export-audit"
+  ],
+  "reason": "The desired evidence is source preservation, not destination behavior.",
+  "next_action": "Inventory the selected immutable parts and reconcile note identities, required bodies, attachment ownership and payloads against the independent same-snapshot controls; then plan the private coverage/gap report. The supplied controls do not themselves establish that coverage passed.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

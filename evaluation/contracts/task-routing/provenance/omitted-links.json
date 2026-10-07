@@ -1,0 +1,279 @@
+{
+  "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+  "source_tree_sha1": "a658bf73c6848f5cd1f3bb164f16bbe8f2a93c6e",
+  "scope": "Each copied guide retains its exact bytes and original relative links. These 34 destinations are deliberately absent. Follow original_url for context; those bytes are not in this package or its prospective inputs.",
+  "omitted_links": [
+    {
+      "source": "sources/skill/account-export-audit/SKILL.md",
+      "target": "example.md",
+      "original_path": "skill/account-export-audit/example.md",
+      "original_git_blob_sha1": "68adfad86f8bf45259845b3b783300c405958d31",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/example.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/account-export-audit/SKILL.md",
+      "target": "fixtures/source-inventory.csv",
+      "original_path": "skill/account-export-audit/fixtures/source-inventory.csv",
+      "original_git_blob_sha1": "9be6644aa30e8ecc4815caa1c0a78ac67409d538",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/fixtures/source-inventory.csv",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/account-export-audit/SKILL.md",
+      "target": "fixtures/source-control.json",
+      "original_path": "skill/account-export-audit/fixtures/source-control.json",
+      "original_git_blob_sha1": "fcc939f363696f506294ff4c943cd20090a96e7d",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/fixtures/source-control.json",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/account-export-audit/SKILL.md",
+      "target": "scripts/audit.py",
+      "original_path": "skill/account-export-audit/scripts/audit.py",
+      "original_git_blob_sha1": "346e89019a61ea479b0a11f942464abb2b6257e4",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/scripts/audit.py",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/account-export-audit/SKILL.md",
+      "target": "outputs/partial/report.md",
+      "original_path": "skill/account-export-audit/outputs/partial/report.md",
+      "original_git_blob_sha1": "11e9503676972955ba0c6264a68d8c6df0c410c5",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/outputs/partial/report.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/account-export-audit/SKILL.md",
+      "target": "outputs/resolved/report.md",
+      "original_path": "skill/account-export-audit/outputs/resolved/report.md",
+      "original_git_blob_sha1": "7b6afe363a8ecc0d165349f5c2fc7cb3cabe5de4",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/outputs/resolved/report.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/account-export-audit/SKILL.md",
+      "target": "outputs/incomplete-control/report.md",
+      "original_path": "skill/account-export-audit/outputs/incomplete-control/report.md",
+      "original_git_blob_sha1": "40529c40c13d84d1e6b48a2329aebf3d2e43ab1e",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/outputs/incomplete-control/report.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/account-export-audit/SKILL.md",
+      "target": "verification.md",
+      "original_path": "skill/account-export-audit/verification.md",
+      "original_git_blob_sha1": "1b8b4ece4d688e4ec4a3d80faac6b199c0f84550",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/verification.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/backup-restore-spot-check/SKILL.md",
+      "target": "worked-example.md",
+      "original_path": "skill/backup-restore-spot-check/worked-example.md",
+      "original_git_blob_sha1": "f33c4ef54402c4065928e763eb99857925f6dc4a",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/backup-restore-spot-check/worked-example.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/code-review-handoff/SKILL.md",
+      "target": "WORKED_EXAMPLE.md",
+      "original_path": "skill/code-review-handoff/WORKED_EXAMPLE.md",
+      "original_git_blob_sha1": "fb514c318c2a029cefc6e3c8cb26ef690b239261",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/code-review-handoff/WORKED_EXAMPLE.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/document-export-check/SKILL.md",
+      "target": "example.md",
+      "original_path": "skill/document-export-check/example.md",
+      "original_git_blob_sha1": "5f6503d46ef9d571d1cc80216da4e125fd3dfd7e",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/document-export-check/example.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/document-export-check/SKILL.md",
+      "target": "approved-source.docx",
+      "original_path": "skill/document-export-check/approved-source.docx",
+      "original_git_blob_sha1": "9c794b7e3a21052b6046b878743b2b65f06979c7",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/document-export-check/approved-source.docx",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/document-export-check/SKILL.md",
+      "target": "release-delivery.pdf",
+      "original_path": "skill/document-export-check/release-delivery.pdf",
+      "original_git_blob_sha1": "7065945ffb0b0807fb1661463ac6467b7c05a2fd",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/document-export-check/release-delivery.pdf",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/document-export-check/SKILL.md",
+      "target": "check_example.py",
+      "original_path": "skill/document-export-check/check_example.py",
+      "original_git_blob_sha1": "85c71fda9b275756aa3de2168a535605679d3c67",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/document-export-check/check_example.py",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/document-export-check/SKILL.md",
+      "target": "verification.md",
+      "original_path": "skill/document-export-check/verification.md",
+      "original_git_blob_sha1": "a94c2ea16cd44619af3027dc1722f563c4047a8e",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/document-export-check/verification.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/failing-build-repair/SKILL.md",
+      "target": "EXAMPLE.md",
+      "original_path": "skill/failing-build-repair/EXAMPLE.md",
+      "original_git_blob_sha1": "e3f02e52066b0672d21581e7c631f423815769fc",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/failing-build-repair/EXAMPLE.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/failing-build-repair/SKILL.md",
+      "target": "REHEARSAL.md",
+      "original_path": "skill/failing-build-repair/REHEARSAL.md",
+      "original_git_blob_sha1": "345a769620c506761ed7777863830c734a496efe",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/failing-build-repair/REHEARSAL.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/service-import-rehearsal/SKILL.md",
+      "target": "example.md",
+      "original_path": "skill/service-import-rehearsal/example.md",
+      "original_git_blob_sha1": "9a17993ea8d812bd51c4eef9a0e17e20ae585312",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/example.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/service-import-rehearsal/SKILL.md",
+      "target": "fixtures/import-contract.json",
+      "original_path": "skill/service-import-rehearsal/fixtures/import-contract.json",
+      "original_git_blob_sha1": "22bae452d32917d82f6e5b66a07f7ee3e1918415",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/fixtures/import-contract.json",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/service-import-rehearsal/SKILL.md",
+      "target": "fixtures/source.csv",
+      "original_path": "skill/service-import-rehearsal/fixtures/source.csv",
+      "original_git_blob_sha1": "ead36db3d87e8e80707453ddc5695e79c847baeb",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/fixtures/source.csv",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/service-import-rehearsal/SKILL.md",
+      "target": "fixtures/target-before.json",
+      "original_path": "skill/service-import-rehearsal/fixtures/target-before.json",
+      "original_git_blob_sha1": "1b8cc265106742021b9369e96fbfcf01fc7b89d7",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/fixtures/target-before.json",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/service-import-rehearsal/SKILL.md",
+      "target": "fixtures/partial-result.json",
+      "original_path": "skill/service-import-rehearsal/fixtures/partial-result.json",
+      "original_git_blob_sha1": "7fce5405639f1e84cf09bfc9c1499f028b002d1b",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/fixtures/partial-result.json",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/service-import-rehearsal/SKILL.md",
+      "target": "scripts/rehearse.py",
+      "original_path": "skill/service-import-rehearsal/scripts/rehearse.py",
+      "original_git_blob_sha1": "72740baf47720ca74550568c4c4fb3a6e4a46839",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/scripts/rehearse.py",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/service-import-rehearsal/SKILL.md",
+      "target": "verification.md",
+      "original_path": "skill/service-import-rehearsal/verification.md",
+      "original_git_blob_sha1": "b597d4878f15342ba290bfb4c66217219a18af5d",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/verification.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/service-import-rehearsal/SKILL.md",
+      "target": "local-target-roundtrip.md",
+      "original_path": "skill/service-import-rehearsal/local-target-roundtrip.md",
+      "original_git_blob_sha1": "0cee27c12d5ae341661a284cecd07819b6220250",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/local-target-roundtrip.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/source-backed-form-fill/SKILL.md",
+      "target": "room-enquiry-blank.pdf",
+      "original_path": "skill/source-backed-form-fill/room-enquiry-blank.pdf",
+      "original_git_blob_sha1": "681391de4ef727afbaeea95fc1b268dbd6185afd",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/source-backed-form-fill/room-enquiry-blank.pdf",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/source-backed-form-fill/SKILL.md",
+      "target": "room-enquiry-draft.pdf",
+      "original_path": "skill/source-backed-form-fill/room-enquiry-draft.pdf",
+      "original_git_blob_sha1": "a87bc33f1f81c2b12b522f878fe48d0ef90cff8e",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/source-backed-form-fill/room-enquiry-draft.pdf",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/source-backed-form-fill/SKILL.md",
+      "target": "preview.png",
+      "original_path": "skill/source-backed-form-fill/preview.png",
+      "original_git_blob_sha1": "322148d78d3c68a740472825315b2d46272af1b5",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/source-backed-form-fill/preview.png",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/source-backed-form-fill/SKILL.md",
+      "target": "source-brief.md",
+      "original_path": "skill/source-backed-form-fill/source-brief.md",
+      "original_git_blob_sha1": "c3fc0c0f574316a35db8aec35d9377cdbfe8ca73",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/source-backed-form-fill/source-brief.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/source-backed-form-fill/SKILL.md",
+      "target": "field-map.json",
+      "original_path": "skill/source-backed-form-fill/field-map.json",
+      "original_git_blob_sha1": "22a1224656c8b876156dde4cf7ba6d1980bf0da3",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/source-backed-form-fill/field-map.json",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/source-backed-form-fill/SKILL.md",
+      "target": "verification.md",
+      "original_path": "skill/source-backed-form-fill/verification.md",
+      "original_git_blob_sha1": "e14295738c3d936e38ca642b118ef3edcf5720f6",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/source-backed-form-fill/verification.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/source-backed-form-fill/SKILL.md",
+      "target": "example.py",
+      "original_path": "skill/source-backed-form-fill/example.py",
+      "original_git_blob_sha1": "ef6723380319d22b4e6e9b14af8f6303a8b4f4a9",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/source-backed-form-fill/example.py",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/task-to-skill-router/SKILL.md",
+      "target": "examples.md",
+      "original_path": "skill/task-to-skill-router/examples.md",
+      "original_git_blob_sha1": "d73c8599d02d9cd594f4125726fe1c7832bef7f7",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/task-to-skill-router/examples.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    },
+    {
+      "source": "sources/skill/task-to-skill-router/SKILL.md",
+      "target": "remote-discovery-rehearsal.md",
+      "original_path": "skill/task-to-skill-router/remote-discovery-rehearsal.md",
+      "original_git_blob_sha1": "0ee042bb0b0dde02ea158ba6bb1d490330e4b1e0",
+      "original_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/task-to-skill-router/remote-discovery-rehearsal.md",
+      "role": "Linked context omitted from this entry-point-only authored package; not a supplied input"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "R05",
+  "decision": "route",
+  "workflow_sequence": [
+    "failing-build-repair"
+  ],
+  "reason": "The supplied materials support several materially different tasks.",
+  "next_action": "Apply the local repair immediately; take care of this change is sufficient authorization to edit.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

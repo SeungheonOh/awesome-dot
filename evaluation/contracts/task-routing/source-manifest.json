@@ -1,0 +1,117 @@
+{
+  "repository": "SeungheonOh/dot-skills",
+  "pinned_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+  "proposal_sha256": "853095eaba40bd79ee8b043915f185c749eecc960f3152fb0a12d94bf347ccfd",
+  "sources": [
+    {
+      "path": "skill/account-export-audit/SKILL.md",
+      "local_path": "sources/skill/account-export-audit/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/account-export-audit/SKILL.md",
+      "git_blob_sha1": "319f5b44f51601933f2b3bd90330e39f615c6dfd",
+      "sha256": "3e3740aed2469c039063f4f5d4a84aed78f03e165036b30581a6fd4ae3ace995",
+      "bytes": 17111,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/backup-restore-spot-check/SKILL.md",
+      "local_path": "sources/skill/backup-restore-spot-check/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/backup-restore-spot-check/SKILL.md",
+      "git_blob_sha1": "54eec67c543fc9c9c9a226ceebbf2ee2471a386f",
+      "sha256": "ba0dd108d168dfc5e6c7ec3052fde3bcbfc9107791181b5ccee77ae479a0fa47",
+      "bytes": 12426,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/service-import-rehearsal/SKILL.md",
+      "local_path": "sources/skill/service-import-rehearsal/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/service-import-rehearsal/SKILL.md",
+      "git_blob_sha1": "bd4baf79afbd500852cfe1eeecc31519cf514134",
+      "sha256": "540d4174c198a03cd2552f367817d85a2511201fce69f6de46f221f34df7526e",
+      "bytes": 14045,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/failing-build-repair/SKILL.md",
+      "local_path": "sources/skill/failing-build-repair/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/failing-build-repair/SKILL.md",
+      "git_blob_sha1": "a689adc162718c041680994772bc14d7428bff08",
+      "sha256": "21a752917afb3197a35ea956909064a800bdb32deb724da11b2e9f303d2a9020",
+      "bytes": 9338,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/review-code-change/SKILL.md",
+      "local_path": "sources/skill/review-code-change/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/review-code-change/SKILL.md",
+      "git_blob_sha1": "f869daf4c8196f9a43dede48fdefaebd68b9efed",
+      "sha256": "51722c8d5225efa6121f613085e285e75130ed91c1291edaeb036f1db03a6078",
+      "bytes": 5846,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/code-review-handoff/SKILL.md",
+      "local_path": "sources/skill/code-review-handoff/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/code-review-handoff/SKILL.md",
+      "git_blob_sha1": "cc5afcb2490f51b882a3abc50db40e1ab31b3d84",
+      "sha256": "4357eb0ba83097414315f2a865a489289e68624e4bc04a0e9f2cf013c061a28a",
+      "bytes": 8504,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/edit-document/SKILL.md",
+      "local_path": "sources/skill/edit-document/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/edit-document/SKILL.md",
+      "git_blob_sha1": "2f9c65df54da35980abf351c00c51d21b94c00c3",
+      "sha256": "ba4f117414a25e951858efbb7f7a639dfbc66bb87edbcaa6d1cb7ca1f653b4c5",
+      "bytes": 7647,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/draft-professional-message/SKILL.md",
+      "local_path": "sources/skill/draft-professional-message/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/draft-professional-message/SKILL.md",
+      "git_blob_sha1": "3f74df5c033b4efa8e9b4496b3c1a72096176687",
+      "sha256": "94da77fb9e9bbcb6af8cab457adce009256b5fdf338df6fceffe30ddd9a21ad0",
+      "bytes": 6210,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/document-export-check/SKILL.md",
+      "local_path": "sources/skill/document-export-check/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/document-export-check/SKILL.md",
+      "git_blob_sha1": "526d5aa39f5e34b8159687dc5226d7cf12b49198",
+      "sha256": "2ff7723ebbe75acfb9e3ccadeecc60e04d7c150730fdeb40566931ca2b87ef1f",
+      "bytes": 11885,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/source-backed-form-fill/SKILL.md",
+      "local_path": "sources/skill/source-backed-form-fill/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/source-backed-form-fill/SKILL.md",
+      "git_blob_sha1": "ed850dedb127ccb6ea2fccb61ab3fecc3b142d1f",
+      "sha256": "cb46d28aeb1cbb9c5f943cc82165521fdd549fd968abf80475ed7fdc3c22b05c",
+      "bytes": 10446,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    },
+    {
+      "path": "skill/task-to-skill-router/SKILL.md",
+      "local_path": "sources/skill/task-to-skill-router/SKILL.md",
+      "source_commit": "b8fd6155afbc87c8c7f237d0e26200644c82847d",
+      "source_url": "https://github.com/SeungheonOh/dot-skills/blob/b8fd6155afbc87c8c7f237d0e26200644c82847d/skill/task-to-skill-router/SKILL.md",
+      "git_blob_sha1": "560405439b62fc6ffb48cf7e088f251090aa62e0",
+      "sha256": "e4e22398cf9f7e9ed5d0f386e7620f01b47e6fc11a6068570f39a1941133f3fe",
+      "bytes": 9308,
+      "also_verified_identical_at": "c0e8d9b9ea7d51eaa0513cb7366a139a37b50c81"
+    }
+  ]
+}

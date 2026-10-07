@@ -1,0 +1,13 @@
+{
+  "case_id": "R07",
+  "decision": "route",
+  "workflow_sequence": [
+    "backup-restore-spot-check"
+  ],
+  "reason": "The backup word in the guide name makes it the right workflow for creating a first backup.",
+  "next_action": "Use the restore-check procedure to plan creation and nightly scheduling of the nonexistent first backup.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Ordinary planning outside the ten supplied guides; no claim about other repository workflows."
+}

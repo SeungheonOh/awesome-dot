@@ -1,0 +1,18 @@
+{
+  "case_id": "R10",
+  "decision": "route",
+  "workflow_sequence": [
+    "source-backed-form-fill"
+  ],
+  "reason": "The form workflow supports an explicit private fallback when native entry would disclose data.",
+  "next_action": "Prepare the private field/value draft with control locators and source references. State that no filled native form is produced; do not type any answers into the autosaving provider fields.",
+  "question": null,
+  "prerequisites": [
+    {
+      "kind": "authority",
+      "detail": "Live entry would transmit the project answers to the integration provider, which is outside the approved private-review boundary"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

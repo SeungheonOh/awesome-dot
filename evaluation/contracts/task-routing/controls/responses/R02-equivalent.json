@@ -1,0 +1,13 @@
+{
+  "case_id": "R02",
+  "decision": "route",
+  "workflow_sequence": [
+    "review-code-change"
+  ],
+  "reason": "The request is for review findings on an immutable change.",
+  "next_action": "Read the patch and its affected callers/tests against the requirement. Return supported regression findings, or say none were established, without changing or publishing the change.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

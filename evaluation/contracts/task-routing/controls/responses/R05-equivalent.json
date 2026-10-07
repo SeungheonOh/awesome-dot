@@ -1,0 +1,18 @@
+{
+  "case_id": "R05",
+  "decision": "clarify",
+  "workflow_sequence": [
+    "failing-build-repair"
+  ],
+  "reason": "Repair is a possible route only if the user confirms they want a local fix.",
+  "next_action": "Clarify the result first; use the supplied log only for harmless initial reading. Do not begin edits on the assumption that “take care of” means repair.",
+  "question": "Do you want findings on the patch, a minimal local repair, or a reviewer handoff?",
+  "prerequisites": [
+    {
+      "kind": "input",
+      "detail": "Requested deliverable and whether local edits are wanted"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

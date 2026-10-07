@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Offline task-routing decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "decision",
+    "workflow_sequence",
+    "reason",
+    "next_action",
+    "question",
+    "prerequisites",
+    "handoffs",
+    "scope"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "route",
+        "clarify",
+        "no_fit"
+      ]
+    },
+    "workflow_sequence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "account-export-audit",
+          "backup-restore-spot-check",
+          "service-import-rehearsal",
+          "failing-build-repair",
+          "review-code-change",
+          "code-review-handoff",
+          "edit-document",
+          "draft-professional-message",
+          "document-export-check",
+          "source-backed-form-fill"
+        ]
+      }
+    },
+    "reason": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "question": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "detail"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "input",
+              "capability",
+              "authority"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "handoffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "from",
+          "to",
+          "artifact"
+        ],
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "artifact": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "scope": {
+      "type": "string"
+    }
+  }
+}

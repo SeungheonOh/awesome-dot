@@ -1,0 +1,18 @@
+{
+  "case_id": "R04",
+  "decision": "clarify",
+  "workflow_sequence": [
+    "account-export-audit"
+  ],
+  "reason": "This is only a provisional choice if the requester means source retention; destination import prediction would use the other contract.",
+  "next_action": "Ask which result is needed. While waiting, at most inventory supplied source identities as unaffected preparation; do not treat the source audit as the settled requested deliverable.",
+  "question": "Do you want me to check whether the export preserves the required source content, or predict what the new service would create, update, and reject?",
+  "prerequisites": [
+    {
+      "kind": "input",
+      "detail": "Desired output: retention coverage or destination import effects"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

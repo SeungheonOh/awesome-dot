@@ -1,0 +1,11 @@
+{
+  "case_id": "R06",
+  "decision": "no_fit",
+  "workflow_sequence": [],
+  "reason": "None of the ten supplied workflows is needed for this arithmetic question.",
+  "next_action": "Use the ordinary middle-of-sorted-values calculation; no workflow is needed.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "No fit within the supplied ten-guide slice only; no claim about the rest of the repository."
+}

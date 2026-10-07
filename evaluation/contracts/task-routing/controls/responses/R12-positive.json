@@ -1,0 +1,20 @@
+{
+  "case_id": "R12",
+  "decision": "route",
+  "workflow_sequence": [
+    "failing-build-repair",
+    "code-review-handoff"
+  ],
+  "reason": "The final reviewer packet depends on the completed local repair and its evidence.",
+  "next_action": "Inspect the boundary and pre-existing edits, diagnose and apply the minimal supported repair, then run relevant safe checks against the final files. Freeze the final patch identity and prepare the reading order, criterion map, revision-specific test ledger, and focused reviewer questions privately.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [
+    {
+      "from": "failing-build-repair",
+      "to": "code-review-handoff",
+      "artifact": "Final base/head or patch digest, rationale, preserved worktree context, and final-state check results"
+    }
+  ],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

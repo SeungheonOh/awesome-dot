@@ -1,0 +1,18 @@
+{
+  "case_id": "R08",
+  "decision": "route",
+  "workflow_sequence": [
+    "service-import-rehearsal"
+  ],
+  "reason": "The workflow fits, but import-ready operations depend on missing destination rules.",
+  "next_action": "Inventory and map the CSV, assume empty cells mean leave unchanged and source IDs are upsert keys, and mark the resulting create/update rows import-ready while waiting for the contract.",
+  "question": "Please supply the relevant destination import contract, including identity/upsert and blank/clear rules.",
+  "prerequisites": [
+    {
+      "kind": "input",
+      "detail": "Actual destination import contract"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

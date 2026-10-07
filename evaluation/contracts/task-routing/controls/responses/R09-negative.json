@@ -1,0 +1,18 @@
+{
+  "case_id": "R09",
+  "decision": "route",
+  "workflow_sequence": [
+    "document-export-check"
+  ],
+  "reason": "The export workflow fits, but complete layout verification cannot be performed with the stated tools.",
+  "next_action": "Export and extract all text, then verify link annotations. Since those checks establish layout preservation, label the PDF distribution-ready despite the unavailable visual tools.",
+  "question": null,
+  "prerequisites": [
+    {
+      "kind": "capability",
+      "detail": "An available page renderer or compatible visual viewer for every PDF page"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "R03",
+  "decision": "route",
+  "workflow_sequence": [
+    "edit-document"
+  ],
+  "reason": "The supplied team update is an existing draft that can be tightened without altering its substance.",
+  "next_action": "Revise the text here. Preserve the limits on the test claim, the dependence of the packet on later results, and the tentative handoff date; no external save or delivery is part of this edit.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

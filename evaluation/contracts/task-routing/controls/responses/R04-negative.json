@@ -1,0 +1,18 @@
+{
+  "case_id": "R04",
+  "decision": "clarify",
+  "workflow_sequence": [
+    "account-export-audit"
+  ],
+  "reason": "Source retention evidence and destination operation prediction are different deliverables.",
+  "next_action": "Complete the source-retention audit now as the chosen deliverable while asking whether the requester instead meant destination effects.",
+  "question": "Do you want me to check whether the export preserves the required source content, or predict what the new service would create, update, and reject?",
+  "prerequisites": [
+    {
+      "kind": "input",
+      "detail": "Desired output: retention coverage or destination import effects"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

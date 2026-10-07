@@ -1,0 +1,3 @@
+For the hypothetical request and packet below, choose from the supplied workflow collection and report the intended next action as one JSON object matching the supplied schema. The packet describes the available inputs, capabilities, and authorized boundary for this scenario. Only this supplied collection is available for routing. This is a planning exercise: do not perform the task or call tools. Do not claim observations or completed actions that the packet does not establish.
+
+The available-file and capability statements are facts of the hypothetical scenario, not files to fetch. This is only a routing and intended-next-action decision. Do not derive substantive findings from files whose contents are not supplied.

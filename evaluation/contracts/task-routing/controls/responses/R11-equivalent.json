@@ -1,0 +1,19 @@
+{
+  "case_id": "R11",
+  "decision": "route",
+  "workflow_sequence": [
+    "edit-document"
+  ],
+  "reason": "Use editing as the primary workflow and a distinct ordinary conversion-and-verification substep for the second deliverable.",
+  "next_action": "Make only approved mechanical edits and reopen the saved editable result. Export that corrected version, then inspect actual PDF semantic fidelity, link annotations, and every rendered page before labeling it checked.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [
+    {
+      "from": "corrected editable document",
+      "to": "PDF export and checks",
+      "artifact": "The reopened final corrected DOCX version, protected strings/qualifications, exact link targets, and layout requirements"
+    }
+  ],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

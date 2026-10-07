@@ -1,0 +1,18 @@
+{
+  "case_id": "R08",
+  "decision": "route",
+  "workflow_sequence": [
+    "service-import-rehearsal"
+  ],
+  "reason": "The workflow fits, but import-ready operations depend on missing destination rules.",
+  "next_action": "Keep all destination-dependent operation claims pending. In the meantime make a traceable source inventory and tentative field map from the provided CSV, recording that importer behavior is not established.",
+  "question": "Please supply the relevant destination import contract, including identity/upsert and blank/clear rules.",
+  "prerequisites": [
+    {
+      "kind": "input",
+      "detail": "Rules defining how this importer recognizes a record and interprets empty or explicit-clear values"
+    }
+  ],
+  "handoffs": [],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}

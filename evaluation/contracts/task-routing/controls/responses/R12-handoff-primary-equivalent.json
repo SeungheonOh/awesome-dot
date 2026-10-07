@@ -1,0 +1,19 @@
+{
+  "case_id": "R12",
+  "decision": "route",
+  "workflow_sequence": [
+    "code-review-handoff"
+  ],
+  "reason": "Use reviewer handoff as the primary workflow, preceded by the explicitly authorized ordinary minimal repair and final-state verification substeps.",
+  "next_action": "First inspect project instructions and existing worktree edits, diagnose the failure against the supplied expected behavior, and make the smallest local repair while preserving unrelated edits. Run the relevant safe checks on the final files and freeze the final versioned patch. Use those final-state results and their limits to prepare the private reading order, acceptance-criterion map, revision-specific test ledger, and focused reviewer questions. Do not push, post, or request reviewers.",
+  "question": null,
+  "prerequisites": [],
+  "handoffs": [
+    {
+      "from": "ordinary minimal repair and final-state verification",
+      "to": "code-review-handoff",
+      "artifact": "Final patch/base-head identity, repair rationale, preserved prior edits, and revision-specific final-state check outcomes"
+    }
+  ],
+  "scope": "Planning only within the ten supplied workflows and this request; no external action."
+}
