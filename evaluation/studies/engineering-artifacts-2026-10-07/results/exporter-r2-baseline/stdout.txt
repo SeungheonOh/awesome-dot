@@ -1,0 +1,58 @@
+{
+  "all_required_outcomes": true,
+  "correct_program_failures": {
+    "correct_a": [],
+    "correct_b": []
+  },
+  "correct_program_specificity": true,
+  "discovery": true,
+  "executed_cases": 15,
+  "mutation_detection": {
+    "consumer_filter_bypass": true,
+    "duplicate_collapse": true,
+    "sort_instead_of_stable_order": true,
+    "wrong_empty_representation": true,
+    "zero_as_missing": true
+  },
+  "raw_mutant_failures": {
+    "consumer_filter_bypass": [
+      "download-none-selected",
+      "download-interleaved-selection",
+      "download-repeated-codes-and-duplicates",
+      "download-one-selected-between-false",
+      "download-selection-across-32-records"
+    ],
+    "duplicate_collapse": [
+      "export-order-and-duplicate-occurrences",
+      "download-repeated-codes-and-duplicates"
+    ],
+    "sort_instead_of_stable_order": [
+      "export-includes-unselected-rows",
+      "export-null-missing-zero-transitions",
+      "export-order-and-duplicate-occurrences",
+      "export-preserves-code-text",
+      "download-all-selected",
+      "download-interleaved-selection",
+      "download-repeated-codes-and-duplicates",
+      "export-32-records"
+    ],
+    "wrong_empty_representation": [
+      "export-empty",
+      "download-empty",
+      "download-none-selected"
+    ],
+    "zero_as_missing": [
+      "export-includes-unselected-rows",
+      "export-null-missing-zero-transitions",
+      "export-order-and-duplicate-occurrences",
+      "export-integer-values-without-aggregation",
+      "export-single-zero",
+      "download-all-selected",
+      "download-interleaved-selection",
+      "download-repeated-codes-and-duplicates",
+      "export-32-records",
+      "download-selection-across-32-records"
+    ]
+  },
+  "status": "graded"
+}

@@ -1,0 +1,55 @@
+{
+  "operational_v1": {
+    "captured_artifact_bytes": 16778,
+    "captured_artifact_sha256": "05cddcb2c6f430447dc76aa4231fe0e3df6bff1b4fcbbcb252e6826328051f99",
+    "captured_first_finals": 1,
+    "concurrency_deviation": {
+      "approximate_overlap_seconds": 25,
+      "observed_cross_cohort_count": 3,
+      "planned_global_trial_cap": 2,
+      "reported_overlap_end_utc": "2026-10-07T03:20:37Z",
+      "reported_overlap_start_utc": "2026-10-07T03:20:12Z",
+      "timestamps": "coordinator-observed/reported, not backend telemetry"
+    },
+    "graded": false,
+    "included_in_v2": false,
+    "observed_transfer_lag_seconds": 49.029942,
+    "planned_positions": 8,
+    "source_freeze_sha256": "c6d82a5bf3545360c053bbf1a9d2af3e8df661bc7a7bbb1a243d088770d21734",
+    "spawned": 1,
+    "status": "abandoned due impractical inline-dispatch timing cutoff",
+    "unstarted": 7
+  },
+  "operational_v2_change_before_predictions": {
+    "basis": "inline prompt transfer latency, not candidate output or score",
+    "case_inputs_guides_schemas_scorers_unchanged": true,
+    "changed_candidate_text": "shared timing paragraph only",
+    "concurrency_scope": "two engineering candidates per cohort; actual native availability coordinated",
+    "deadline": "900 seconds per successful spawn acknowledgement observation",
+    "dispatch_cutoff": false,
+    "shared_pair_deadline": false
+  },
+  "strict_isolation_requirement": {
+    "network_off_or_tool_revocation_proven": false,
+    "original_author_protocol_gate_satisfied": false,
+    "pilot_mode": "separately approved exploratory procedural-boundary artifact-only-requested amendment"
+  },
+  "v2_execution_interruption": {
+    "actual_candidate_terminal_cause_and_time": "unknown",
+    "affected_slots": [
+      "triage-r1-guide",
+      "triage-r1-baseline"
+    ],
+    "capability_lost_after_utc": "2026-10-07T03:40:01Z",
+    "captured_finals": 0,
+    "operational_status": "infrastructure_error",
+    "original_deadlines_utc": [
+      "2026-10-07T03:53:19Z",
+      "2026-10-07T03:54:52Z"
+    ],
+    "remaining_original_unstarted_positions_continued": 4,
+    "replacement_attempts": 0,
+    "same_host_coordinator_handoffs": 1,
+    "scoring_or_candidate_feedback_before_all_slot_closure": false
+  }
+}

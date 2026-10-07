@@ -1,0 +1,278 @@
+{
+  "captured_artifacts_passing_all_frozen_structured_outcomes": 6,
+  "captured_first_finals": 6,
+  "case_condition_aggregates": [
+    {
+      "all_required_pass": 2,
+      "captured": 2,
+      "case": "exporter",
+      "component_counts": {
+        "consumer_filter_bypass": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "correct_program_specificity": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "discovery": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "duplicate_collapse": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "sort_instead_of_stable_order": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "wrong_empty_representation": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "zero_as_missing": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        }
+      },
+      "condition": "baseline",
+      "evaluated_nonpass": 0,
+      "infrastructure_unknown": 0,
+      "planned_slots": 2
+    },
+    {
+      "all_required_pass": 2,
+      "captured": 2,
+      "case": "exporter",
+      "component_counts": {
+        "consumer_filter_bypass": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "correct_program_specificity": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "discovery": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "duplicate_collapse": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "sort_instead_of_stable_order": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "wrong_empty_representation": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        },
+        "zero_as_missing": {
+          "nonpass": 0,
+          "pass": 2,
+          "planned_denominator": 2,
+          "unknown": 0
+        }
+      },
+      "condition": "guide",
+      "evaluated_nonpass": 0,
+      "infrastructure_unknown": 0,
+      "planned_slots": 2
+    },
+    {
+      "all_required_pass": 1,
+      "captured": 1,
+      "case": "triage",
+      "component_counts": {
+        "all_independent_expected_correct": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "all_predicted_states_correct": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "bounded_conclusion": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "cause_not_established": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "discovery": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "display_not_storage_evidence": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "no_invented_data_loss": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "no_unjustified_product_fix": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "normal_forward_completion": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "pending_reset_observed": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "reported_reverse_completion": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        }
+      },
+      "condition": "baseline",
+      "evaluated_nonpass": 0,
+      "infrastructure_unknown": 1,
+      "planned_slots": 2
+    },
+    {
+      "all_required_pass": 1,
+      "captured": 1,
+      "case": "triage",
+      "component_counts": {
+        "all_independent_expected_correct": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "all_predicted_states_correct": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "bounded_conclusion": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "cause_not_established": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "discovery": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "display_not_storage_evidence": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "no_invented_data_loss": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "no_unjustified_product_fix": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "normal_forward_completion": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "pending_reset_observed": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        },
+        "reported_reverse_completion": {
+          "nonpass": 0,
+          "pass": 1,
+          "planned_denominator": 2,
+          "unknown": 1
+        }
+      },
+      "condition": "guide",
+      "evaluated_nonpass": 0,
+      "infrastructure_unknown": 1,
+      "planned_slots": 2
+    }
+  ],
+  "cohort_id": "engineering-artifact-pilot-20261007-v2",
+  "infrastructure_missing": 2,
+  "interpretation": "Descriptive artifact outcomes on two synthetic tasks under procedural tool-abstention only. No observed component advantage among captured artifacts; incomplete triage repeat 1 is infrastructure-unknown, not model failure. No causal, population, production, semantic prose, candidate execution, or speed inference.",
+  "planned_slots": 8,
+  "spawned_candidates": 8,
+  "unassessed": [
+    "candidate tool execution provenance",
+    "complete tool-access audit",
+    "prose semantic quality",
+    "minimality",
+    "production correctness"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "all_required_outcomes": true,
+  "correct_program_failures": {
+    "correct_a": [],
+    "correct_b": []
+  },
+  "correct_program_specificity": true,
+  "discovery": true,
+  "executed_cases": 14,
+  "mutation_detection": {
+    "consumer_filter_bypass": true,
+    "duplicate_collapse": true,
+    "sort_instead_of_stable_order": true,
+    "wrong_empty_representation": true,
+    "zero_as_missing": true
+  },
+  "raw_mutant_failures": {
+    "consumer_filter_bypass": [
+      "download-no-selection",
+      "download-selected-first-and-last",
+      "download-interleaved-relative-order",
+      "download-selected-unit-states-and-bounds",
+      "download-selection-is-per-occurrence",
+      "download-code-strings-unchanged"
+    ],
+    "duplicate_collapse": [
+      "export-order-and-duplicate-occurrences",
+      "download-selection-is-per-occurrence"
+    ],
+    "sort_instead_of_stable_order": [
+      "export-unit-states-and-bounds",
+      "export-order-and-duplicate-occurrences",
+      "export-code-strings-unchanged",
+      "download-selected-first-and-last",
+      "download-interleaved-relative-order",
+      "download-selected-unit-states-and-bounds",
+      "download-selection-is-per-occurrence",
+      "download-code-strings-unchanged",
+      "download-all-selected-full-input"
+    ],
+    "wrong_empty_representation": [
+      "export-empty",
+      "download-empty",
+      "download-no-selection"
+    ],
+    "zero_as_missing": [
+      "export-unit-states-and-bounds",
+      "export-code-strings-unchanged",
+      "download-selected-unit-states-and-bounds",
+      "download-code-strings-unchanged"
+    ]
+  },
+  "status": "graded"
+}

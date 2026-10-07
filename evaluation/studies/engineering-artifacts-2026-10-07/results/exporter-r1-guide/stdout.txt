@@ -1,0 +1,57 @@
+{
+  "all_required_outcomes": true,
+  "correct_program_failures": {
+    "correct_a": [],
+    "correct_b": []
+  },
+  "correct_program_specificity": true,
+  "discovery": true,
+  "executed_cases": 16,
+  "mutation_detection": {
+    "consumer_filter_bypass": true,
+    "duplicate_collapse": true,
+    "sort_instead_of_stable_order": true,
+    "wrong_empty_representation": true,
+    "zero_as_missing": true
+  },
+  "raw_mutant_failures": {
+    "consumer_filter_bypass": [
+      "download-none-selected",
+      "download-first-only",
+      "download-middle-only",
+      "download-last-only",
+      "download-mixed-selection-and-values",
+      "download-preserves-duplicate-occurrences"
+    ],
+    "duplicate_collapse": [
+      "export-order-and-duplicate-occurrences",
+      "download-preserves-duplicate-occurrences"
+    ],
+    "sort_instead_of_stable_order": [
+      "export-includes-unselected",
+      "export-missing-null-and-zero",
+      "export-integer-boundaries",
+      "export-order-and-duplicate-occurrences",
+      "export-preserves-literal-string-codes",
+      "download-mixed-selection-and-values",
+      "download-preserves-duplicate-occurrences",
+      "export-maximum-input",
+      "download-all-selected-maximum"
+    ],
+    "wrong_empty_representation": [
+      "export-empty",
+      "download-empty",
+      "download-none-selected"
+    ],
+    "zero_as_missing": [
+      "export-missing-null-and-zero",
+      "export-integer-boundaries",
+      "export-order-and-duplicate-occurrences",
+      "download-first-only",
+      "download-mixed-selection-and-values",
+      "download-preserves-duplicate-occurrences",
+      "download-all-selected-maximum"
+    ]
+  },
+  "status": "graded"
+}

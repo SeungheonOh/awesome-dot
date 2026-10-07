@@ -1,0 +1,5 @@
+{
+  "discovery": false,
+  "error": "cannot read valid bounded JSON",
+  "status": "invalid_artifact"
+}

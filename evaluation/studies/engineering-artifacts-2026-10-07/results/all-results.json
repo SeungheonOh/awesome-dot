@@ -1,0 +1,1249 @@
+{
+  "captured_first_finals": 6,
+  "cohort_id": "engineering-artifact-pilot-20261007-v2",
+  "infrastructure_missing": 2,
+  "planned_slots": 8,
+  "rows": [
+    {
+      "acknowledgement_observed_at_utc": "2026-10-07T03:29:28Z",
+      "artifact_bytes": 17157,
+      "artifact_path": "artifacts/exporter-r1-baseline.json",
+      "artifact_sha256": "5f0eb055ef3a2a09dca9d831dfa807ccd26b3ff528e5cc1ed549c5feb2154a75",
+      "case": "exporter",
+      "components_for_model_interpretation": {
+        "consumer_filter_bypass": true,
+        "correct_program_specificity": true,
+        "discovery": true,
+        "duplicate_collapse": true,
+        "sort_instead_of_stable_order": true,
+        "wrong_empty_representation": true,
+        "zero_as_missing": true
+      },
+      "condition": "baseline",
+      "deadline_utc": "2026-10-07T03:44:28Z",
+      "dispatch_rank": 1,
+      "first_final_admitted": true,
+      "first_final_observed_at_utc": "2026-10-07T03:31:44Z",
+      "grade_status": "exited",
+      "grader_ended_at_utc": "2026-10-07T04:09:56.470640Z",
+      "grader_exit_code": 0,
+      "grader_started_at_utc": "2026-10-07T04:09:56.438796Z",
+      "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+      "operational_status": "submitted_on_time",
+      "raw_grader_output": {
+        "all_required_outcomes": true,
+        "correct_program_failures": {
+          "correct_a": [],
+          "correct_b": []
+        },
+        "correct_program_specificity": true,
+        "discovery": true,
+        "executed_cases": 21,
+        "mutation_detection": {
+          "consumer_filter_bypass": true,
+          "duplicate_collapse": true,
+          "sort_instead_of_stable_order": true,
+          "wrong_empty_representation": true,
+          "zero_as_missing": true
+        },
+        "raw_mutant_failures": {
+          "consumer_filter_bypass": [
+            "download-all-unselected",
+            "download-selected-missing-units",
+            "download-selected-null-and-zero",
+            "download-interleaved-preserves-order",
+            "download-duplicates-survive-filtering",
+            "download-signed-values",
+            "download-codes-preserved-verbatim"
+          ],
+          "duplicate_collapse": [
+            "export-identical-duplicate-occurrences",
+            "export-same-code-distinct-units",
+            "download-duplicates-survive-filtering"
+          ],
+          "sort_instead_of_stable_order": [
+            "export-integer-values",
+            "export-order-and-selection-flags",
+            "export-identical-duplicate-occurrences",
+            "export-missing-does-not-inherit-units",
+            "export-codes-preserved-verbatim",
+            "download-selected-null-and-zero",
+            "download-interleaved-preserves-order",
+            "download-duplicates-survive-filtering",
+            "download-signed-values",
+            "download-all-selected-at-record-limit",
+            "download-codes-preserved-verbatim"
+          ],
+          "wrong_empty_representation": [
+            "export-empty",
+            "download-empty",
+            "download-all-unselected"
+          ],
+          "zero_as_missing": [
+            "export-unselected-zero",
+            "export-integer-values",
+            "export-same-code-distinct-units",
+            "export-missing-does-not-inherit-units",
+            "export-codes-preserved-verbatim",
+            "download-selected-null-and-zero",
+            "export-at-record-limit",
+            "download-codes-preserved-verbatim"
+          ]
+        },
+        "status": "graded"
+      },
+      "repeat": 1,
+      "slot_id": "exporter-r1-baseline",
+      "source_dispatched_prompt_sha256": "8a0d33c21558f175c3f9d1860b826806c2ec1c19efe3b76f50d150a7a681e9bb",
+      "source_private_grade_record_sha256": "412bb2070f2e577e225535ac7bfd5901dec89e3f63576bba3271c47b9271aa41",
+      "stderr_path": "results/exporter-r1-baseline/stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "results/exporter-r1-baseline/stdout.txt",
+      "stdout_sha256": "a4df13d1cfe4c4e53317c9464df62423e89ed64451d34271e0f93ad87843dc3e",
+      "transfer_intent_utc": "2026-10-07T03:28:37.751246Z",
+      "transfer_lag_seconds": 50.248754,
+      "wave": 1
+    },
+    {
+      "acknowledgement_observed_at_utc": "2026-10-07T03:30:52Z",
+      "artifact_bytes": 15050,
+      "artifact_path": "artifacts/exporter-r1-guide.json",
+      "artifact_sha256": "f1c478284e6b7a47aa5069dd814ac8519d9230bab4d5597e6e960b195d374d3f",
+      "case": "exporter",
+      "components_for_model_interpretation": {
+        "consumer_filter_bypass": true,
+        "correct_program_specificity": true,
+        "discovery": true,
+        "duplicate_collapse": true,
+        "sort_instead_of_stable_order": true,
+        "wrong_empty_representation": true,
+        "zero_as_missing": true
+      },
+      "condition": "guide",
+      "deadline_utc": "2026-10-07T03:45:52Z",
+      "dispatch_rank": 2,
+      "first_final_admitted": true,
+      "first_final_observed_at_utc": "2026-10-07T03:33:27Z",
+      "grade_status": "exited",
+      "grader_ended_at_utc": "2026-10-07T04:09:56.528922Z",
+      "grader_exit_code": 0,
+      "grader_started_at_utc": "2026-10-07T04:09:56.478084Z",
+      "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+      "operational_status": "submitted_on_time",
+      "raw_grader_output": {
+        "all_required_outcomes": true,
+        "correct_program_failures": {
+          "correct_a": [],
+          "correct_b": []
+        },
+        "correct_program_specificity": true,
+        "discovery": true,
+        "executed_cases": 16,
+        "mutation_detection": {
+          "consumer_filter_bypass": true,
+          "duplicate_collapse": true,
+          "sort_instead_of_stable_order": true,
+          "wrong_empty_representation": true,
+          "zero_as_missing": true
+        },
+        "raw_mutant_failures": {
+          "consumer_filter_bypass": [
+            "download-none-selected",
+            "download-first-only",
+            "download-middle-only",
+            "download-last-only",
+            "download-mixed-selection-and-values",
+            "download-preserves-duplicate-occurrences"
+          ],
+          "duplicate_collapse": [
+            "export-order-and-duplicate-occurrences",
+            "download-preserves-duplicate-occurrences"
+          ],
+          "sort_instead_of_stable_order": [
+            "export-includes-unselected",
+            "export-missing-null-and-zero",
+            "export-integer-boundaries",
+            "export-order-and-duplicate-occurrences",
+            "export-preserves-literal-string-codes",
+            "download-mixed-selection-and-values",
+            "download-preserves-duplicate-occurrences",
+            "export-maximum-input",
+            "download-all-selected-maximum"
+          ],
+          "wrong_empty_representation": [
+            "export-empty",
+            "download-empty",
+            "download-none-selected"
+          ],
+          "zero_as_missing": [
+            "export-missing-null-and-zero",
+            "export-integer-boundaries",
+            "export-order-and-duplicate-occurrences",
+            "download-first-only",
+            "download-mixed-selection-and-values",
+            "download-preserves-duplicate-occurrences",
+            "download-all-selected-maximum"
+          ]
+        },
+        "status": "graded"
+      },
+      "repeat": 1,
+      "slot_id": "exporter-r1-guide",
+      "source_dispatched_prompt_sha256": "37861c8d4ba40bf9023480995914ba70347346ff66b578e604459af985f0c8dd",
+      "source_private_grade_record_sha256": "2f13fb8c9940d811b66bd543698cecda9e85ed36ed48b79ccbb0fc658e9dc9fe",
+      "stderr_path": "results/exporter-r1-guide/stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "results/exporter-r1-guide/stdout.txt",
+      "stdout_sha256": "678225c17939a0c7a75b66d02ad4db5daa93a69de6f17ec9fcf22626a6451732",
+      "transfer_intent_utc": "2026-10-07T03:29:42.360342Z",
+      "transfer_lag_seconds": 69.639658,
+      "wave": 1
+    },
+    {
+      "acknowledgement_observed_at_utc": "2026-10-07T03:38:19Z",
+      "artifact_bytes": null,
+      "artifact_path": null,
+      "artifact_sha256": null,
+      "case": "triage",
+      "components_for_model_interpretation": {
+        "all_independent_expected_correct": null,
+        "all_predicted_states_correct": null,
+        "bounded_conclusion": null,
+        "cause_not_established": null,
+        "discovery": null,
+        "display_not_storage_evidence": null,
+        "no_invented_data_loss": null,
+        "no_unjustified_product_fix": null,
+        "normal_forward_completion": null,
+        "pending_reset_observed": null,
+        "reported_reverse_completion": null
+      },
+      "condition": "guide",
+      "deadline_utc": "2026-10-07T03:53:19Z",
+      "dispatch_rank": 1,
+      "first_final_admitted": false,
+      "first_final_observed_at_utc": null,
+      "grade_status": "exited",
+      "grader_ended_at_utc": "2026-10-07T04:09:56.576357Z",
+      "grader_exit_code": 0,
+      "grader_started_at_utc": "2026-10-07T04:09:56.537812Z",
+      "infrastructure_note": "No first final was observed or recoverable after a coordinator execution-capability interruption. Candidate agents were no longer available in supported status. Original deadline retained; no replacement. Actual terminal cause and time unknown. Raw missing-artifact discovery is not a model-quality failure.",
+      "model_outcome_interpretation": "unavailable_due_to_infrastructure",
+      "operational_status": "infrastructure_error",
+      "raw_grader_output": {
+        "discovery": false,
+        "error": "cannot read valid bounded JSON",
+        "status": "invalid_artifact"
+      },
+      "repeat": 1,
+      "slot_id": "triage-r1-guide",
+      "source_dispatched_prompt_sha256": "b179635f4136425b55a39e2f64eb94abdd9b1ef1a6a6a6822032e08fe743e419",
+      "source_private_grade_record_sha256": "82836162defccbde816f60fe12a0ef1b946c618321dc28a13b41607e69e62275",
+      "stderr_path": "results/triage-r1-guide/stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "results/triage-r1-guide/stdout.txt",
+      "stdout_sha256": "1d03eb6776f7ca61c54d5b7cd38e832fd0d02a82d904608a5e8500c86de20237",
+      "transfer_intent_utc": "2026-10-07T03:36:19.456874Z",
+      "transfer_lag_seconds": 119.543126,
+      "wave": 2
+    },
+    {
+      "acknowledgement_observed_at_utc": "2026-10-07T03:39:52Z",
+      "artifact_bytes": null,
+      "artifact_path": null,
+      "artifact_sha256": null,
+      "case": "triage",
+      "components_for_model_interpretation": {
+        "all_independent_expected_correct": null,
+        "all_predicted_states_correct": null,
+        "bounded_conclusion": null,
+        "cause_not_established": null,
+        "discovery": null,
+        "display_not_storage_evidence": null,
+        "no_invented_data_loss": null,
+        "no_unjustified_product_fix": null,
+        "normal_forward_completion": null,
+        "pending_reset_observed": null,
+        "reported_reverse_completion": null
+      },
+      "condition": "baseline",
+      "deadline_utc": "2026-10-07T03:54:52Z",
+      "dispatch_rank": 2,
+      "first_final_admitted": false,
+      "first_final_observed_at_utc": null,
+      "grade_status": "exited",
+      "grader_ended_at_utc": "2026-10-07T04:09:56.613042Z",
+      "grader_exit_code": 0,
+      "grader_started_at_utc": "2026-10-07T04:09:56.581970Z",
+      "infrastructure_note": "No first final was observed or recoverable after a coordinator execution-capability interruption. Candidate agents were no longer available in supported status. Original deadline retained; no replacement. Actual terminal cause and time unknown. Raw missing-artifact discovery is not a model-quality failure.",
+      "model_outcome_interpretation": "unavailable_due_to_infrastructure",
+      "operational_status": "infrastructure_error",
+      "raw_grader_output": {
+        "discovery": false,
+        "error": "cannot read valid bounded JSON",
+        "status": "invalid_artifact"
+      },
+      "repeat": 1,
+      "slot_id": "triage-r1-baseline",
+      "source_dispatched_prompt_sha256": "50cb0ca008b5bea1b3850142d446382cde0da4066485f9a490d93220afa9bf39",
+      "source_private_grade_record_sha256": "b7868e199c0d33ff3ab7bd9316e5c4d94e57f9b69f17879d68113844ff05375b",
+      "stderr_path": "results/triage-r1-baseline/stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "results/triage-r1-baseline/stdout.txt",
+      "stdout_sha256": "1d03eb6776f7ca61c54d5b7cd38e832fd0d02a82d904608a5e8500c86de20237",
+      "transfer_intent_utc": "2026-10-07T03:38:32.396282Z",
+      "transfer_lag_seconds": 79.603718,
+      "wave": 2
+    },
+    {
+      "acknowledgement_observed_at_utc": "2026-10-07T03:56:21Z",
+      "artifact_bytes": 11208,
+      "artifact_path": "artifacts/exporter-r2-guide.json",
+      "artifact_sha256": "0512fa578d9cd444741c2cc59b2a5edd342ca2e1b81525b647eafdfdc2f0bbfc",
+      "case": "exporter",
+      "components_for_model_interpretation": {
+        "consumer_filter_bypass": true,
+        "correct_program_specificity": true,
+        "discovery": true,
+        "duplicate_collapse": true,
+        "sort_instead_of_stable_order": true,
+        "wrong_empty_representation": true,
+        "zero_as_missing": true
+      },
+      "condition": "guide",
+      "deadline_utc": "2026-10-07T04:11:21Z",
+      "dispatch_rank": 1,
+      "first_final_admitted": true,
+      "first_final_observed_at_utc": "2026-10-07T03:58:48Z",
+      "grade_status": "exited",
+      "grader_ended_at_utc": "2026-10-07T04:09:56.650330Z",
+      "grader_exit_code": 0,
+      "grader_started_at_utc": "2026-10-07T04:09:56.618910Z",
+      "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+      "operational_status": "submitted_on_time",
+      "raw_grader_output": {
+        "all_required_outcomes": true,
+        "correct_program_failures": {
+          "correct_a": [],
+          "correct_b": []
+        },
+        "correct_program_specificity": true,
+        "discovery": true,
+        "executed_cases": 14,
+        "mutation_detection": {
+          "consumer_filter_bypass": true,
+          "duplicate_collapse": true,
+          "sort_instead_of_stable_order": true,
+          "wrong_empty_representation": true,
+          "zero_as_missing": true
+        },
+        "raw_mutant_failures": {
+          "consumer_filter_bypass": [
+            "download-no-selection",
+            "download-selected-first-and-last",
+            "download-interleaved-relative-order",
+            "download-selected-unit-states-and-bounds",
+            "download-selection-is-per-occurrence",
+            "download-code-strings-unchanged"
+          ],
+          "duplicate_collapse": [
+            "export-order-and-duplicate-occurrences",
+            "download-selection-is-per-occurrence"
+          ],
+          "sort_instead_of_stable_order": [
+            "export-unit-states-and-bounds",
+            "export-order-and-duplicate-occurrences",
+            "export-code-strings-unchanged",
+            "download-selected-first-and-last",
+            "download-interleaved-relative-order",
+            "download-selected-unit-states-and-bounds",
+            "download-selection-is-per-occurrence",
+            "download-code-strings-unchanged",
+            "download-all-selected-full-input"
+          ],
+          "wrong_empty_representation": [
+            "export-empty",
+            "download-empty",
+            "download-no-selection"
+          ],
+          "zero_as_missing": [
+            "export-unit-states-and-bounds",
+            "export-code-strings-unchanged",
+            "download-selected-unit-states-and-bounds",
+            "download-code-strings-unchanged"
+          ]
+        },
+        "status": "graded"
+      },
+      "repeat": 2,
+      "slot_id": "exporter-r2-guide",
+      "source_dispatched_prompt_sha256": "37861c8d4ba40bf9023480995914ba70347346ff66b578e604459af985f0c8dd",
+      "source_private_grade_record_sha256": "830faa23ae124f04a34d09abc94b6ad1d5af6e0c782b24fe117d20c58e2ea63d",
+      "stderr_path": "results/exporter-r2-guide/stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "results/exporter-r2-guide/stdout.txt",
+      "stdout_sha256": "f9343cf476928df126e86491dcd91db6a24f6f464d77f0580337a0611deb81b6",
+      "transfer_intent_utc": "2026-10-07T03:55:10.588478Z",
+      "transfer_lag_seconds": 70.411522,
+      "wave": 3
+    },
+    {
+      "acknowledgement_observed_at_utc": "2026-10-07T03:57:28Z",
+      "artifact_bytes": 14014,
+      "artifact_path": "artifacts/exporter-r2-baseline.json",
+      "artifact_sha256": "9beded134bc98694563ba2168f46c2f907c3eeb02cd48213d4b427a63a6e6262",
+      "case": "exporter",
+      "components_for_model_interpretation": {
+        "consumer_filter_bypass": true,
+        "correct_program_specificity": true,
+        "discovery": true,
+        "duplicate_collapse": true,
+        "sort_instead_of_stable_order": true,
+        "wrong_empty_representation": true,
+        "zero_as_missing": true
+      },
+      "condition": "baseline",
+      "deadline_utc": "2026-10-07T04:12:28Z",
+      "dispatch_rank": 2,
+      "first_final_admitted": true,
+      "first_final_observed_at_utc": "2026-10-07T04:00:08Z",
+      "grade_status": "exited",
+      "grader_ended_at_utc": "2026-10-07T04:09:56.688808Z",
+      "grader_exit_code": 0,
+      "grader_started_at_utc": "2026-10-07T04:09:56.658947Z",
+      "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+      "operational_status": "submitted_on_time",
+      "raw_grader_output": {
+        "all_required_outcomes": true,
+        "correct_program_failures": {
+          "correct_a": [],
+          "correct_b": []
+        },
+        "correct_program_specificity": true,
+        "discovery": true,
+        "executed_cases": 15,
+        "mutation_detection": {
+          "consumer_filter_bypass": true,
+          "duplicate_collapse": true,
+          "sort_instead_of_stable_order": true,
+          "wrong_empty_representation": true,
+          "zero_as_missing": true
+        },
+        "raw_mutant_failures": {
+          "consumer_filter_bypass": [
+            "download-none-selected",
+            "download-interleaved-selection",
+            "download-repeated-codes-and-duplicates",
+            "download-one-selected-between-false",
+            "download-selection-across-32-records"
+          ],
+          "duplicate_collapse": [
+            "export-order-and-duplicate-occurrences",
+            "download-repeated-codes-and-duplicates"
+          ],
+          "sort_instead_of_stable_order": [
+            "export-includes-unselected-rows",
+            "export-null-missing-zero-transitions",
+            "export-order-and-duplicate-occurrences",
+            "export-preserves-code-text",
+            "download-all-selected",
+            "download-interleaved-selection",
+            "download-repeated-codes-and-duplicates",
+            "export-32-records"
+          ],
+          "wrong_empty_representation": [
+            "export-empty",
+            "download-empty",
+            "download-none-selected"
+          ],
+          "zero_as_missing": [
+            "export-includes-unselected-rows",
+            "export-null-missing-zero-transitions",
+            "export-order-and-duplicate-occurrences",
+            "export-integer-values-without-aggregation",
+            "export-single-zero",
+            "download-all-selected",
+            "download-interleaved-selection",
+            "download-repeated-codes-and-duplicates",
+            "export-32-records",
+            "download-selection-across-32-records"
+          ]
+        },
+        "status": "graded"
+      },
+      "repeat": 2,
+      "slot_id": "exporter-r2-baseline",
+      "source_dispatched_prompt_sha256": "8a0d33c21558f175c3f9d1860b826806c2ec1c19efe3b76f50d150a7a681e9bb",
+      "source_private_grade_record_sha256": "de452d898cb12e60db7dad957b310027536e8ec6556d17f483514c637e913017",
+      "stderr_path": "results/exporter-r2-baseline/stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "results/exporter-r2-baseline/stdout.txt",
+      "stdout_sha256": "fe23d87b10f4020b64f64accce23136f0e444962702f42856e3f3cd8dcdcd394",
+      "transfer_intent_utc": "2026-10-07T03:56:35.812771Z",
+      "transfer_lag_seconds": 52.187229,
+      "wave": 3
+    },
+    {
+      "acknowledgement_observed_at_utc": "2026-10-07T04:03:42Z",
+      "artifact_bytes": 13008,
+      "artifact_path": "artifacts/triage-r2-baseline.json",
+      "artifact_sha256": "e61f2f4db316253b72d8de8ae0573bbf8d681e8a4f284e4d1aea4ca9e94d3518",
+      "case": "triage",
+      "components_for_model_interpretation": {
+        "all_independent_expected_correct": true,
+        "all_predicted_states_correct": true,
+        "bounded_conclusion": true,
+        "cause_not_established": true,
+        "discovery": true,
+        "display_not_storage_evidence": true,
+        "no_invented_data_loss": true,
+        "no_unjustified_product_fix": true,
+        "normal_forward_completion": true,
+        "pending_reset_observed": true,
+        "reported_reverse_completion": true
+      },
+      "condition": "baseline",
+      "deadline_utc": "2026-10-07T04:18:42Z",
+      "dispatch_rank": 1,
+      "first_final_admitted": true,
+      "first_final_observed_at_utc": "2026-10-07T04:06:11Z",
+      "grade_status": "exited",
+      "grader_ended_at_utc": "2026-10-07T04:09:56.723472Z",
+      "grader_exit_code": 0,
+      "grader_started_at_utc": "2026-10-07T04:09:56.694875Z",
+      "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+      "operational_status": "submitted_on_time",
+      "raw_grader_output": {
+        "all_required_outcomes": true,
+        "all_state_claims_correct": true,
+        "coverage": {
+          "normal_forward_completion": true,
+          "pending_reset_observed": true,
+          "reported_reverse_completion": true
+        },
+        "discovery": true,
+        "executed_scenarios": 4,
+        "state_checks": [
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Base"
+              },
+              "notice": null,
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "baseline",
+            "predicted_state_correct": true,
+            "scenario": "reported_reverse_completion"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": null,
+              "pending": [
+                "t1",
+                "l1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "both_queued",
+            "predicted_state_correct": true,
+            "scenario": "reported_reverse_completion"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved limit: 0",
+              "pending": [
+                "t1"
+              ],
+              "saved": {
+                "limit": 0,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "limit_first",
+            "predicted_state_correct": true,
+            "scenario": "reported_reverse_completion"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved title: Nova",
+              "pending": [],
+              "saved": {
+                "limit": 0,
+                "title": "Nova"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "title_last",
+            "predicted_state_correct": true,
+            "scenario": "reported_reverse_completion"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Base"
+              },
+              "notice": null,
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "baseline",
+            "predicted_state_correct": true,
+            "scenario": "normal_issue_order_completion"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": null,
+              "pending": [
+                "t1",
+                "l1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "both_queued",
+            "predicted_state_correct": true,
+            "scenario": "normal_issue_order_completion"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved title: Nova",
+              "pending": [
+                "l1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Nova"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "title_first",
+            "predicted_state_correct": true,
+            "scenario": "normal_issue_order_completion"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved limit: 0",
+              "pending": [],
+              "saved": {
+                "limit": 0,
+                "title": "Nova"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "limit_last",
+            "predicted_state_correct": true,
+            "scenario": "normal_issue_order_completion"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved limit: 0",
+              "pending": [
+                "t1"
+              ],
+              "saved": {
+                "limit": 0,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "before_interruption",
+            "predicted_state_correct": true,
+            "scenario": "reset_interrupts_reported_sequence"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Base"
+              },
+              "notice": null,
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "after_reset",
+            "predicted_state_correct": true,
+            "scenario": "reset_interrupts_reported_sequence"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Draft"
+              },
+              "notice": null,
+              "pending": [
+                "t1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "fresh_request_queued",
+            "predicted_state_correct": true,
+            "scenario": "reset_interrupts_reported_sequence"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Draft"
+              },
+              "notice": "Saved title: Fresh",
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Fresh"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "fresh_request_completed",
+            "predicted_state_correct": true,
+            "scenario": "reset_interrupts_reported_sequence"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 42,
+                "title": "DraftOnly"
+              },
+              "notice": null,
+              "pending": [
+                "t1",
+                "t2",
+                "l1",
+                "l2"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "all_queued",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipts"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 42,
+                "title": "DraftOnly"
+              },
+              "notice": "Saved limit: 9",
+              "pending": [
+                "t1",
+                "l1"
+              ],
+              "saved": {
+                "limit": 9,
+                "title": "Vega"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "newer_saves_completed",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipts"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 42,
+                "title": "DraftOnly"
+              },
+              "notice": "Saved title: Nova",
+              "pending": [
+                "l1"
+              ],
+              "saved": {
+                "limit": 9,
+                "title": "Vega"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "stale_title_receipt",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipts"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 42,
+                "title": "DraftOnly"
+              },
+              "notice": "Saved limit: 0",
+              "pending": [],
+              "saved": {
+                "limit": 9,
+                "title": "Vega"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "stale_limit_receipt",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipts"
+          }
+        ],
+        "status": "graded",
+        "structured_report_checks": {
+          "bounded_conclusion": true,
+          "cause_not_established": true,
+          "display_not_storage_evidence": true,
+          "no_invented_data_loss": true,
+          "no_unjustified_product_fix": true
+        },
+        "submitted_disposition": "unrun",
+        "unassessed": [
+          "summary prose semantics",
+          "next_check prose semantics",
+          "candidate tool-execution provenance",
+          "minimality",
+          "real-product correctness"
+        ]
+      },
+      "repeat": 2,
+      "slot_id": "triage-r2-baseline",
+      "source_dispatched_prompt_sha256": "50cb0ca008b5bea1b3850142d446382cde0da4066485f9a490d93220afa9bf39",
+      "source_private_grade_record_sha256": "1f665f3441da759f76ba8f76f17436ab4401a660d726a25a6f7da3988533f118",
+      "stderr_path": "results/triage-r2-baseline/stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "results/triage-r2-baseline/stdout.txt",
+      "stdout_sha256": "bb99e5de9a9795edee165b32eff6454b17f694b3363ade7d399ac51527699f93",
+      "transfer_intent_utc": "2026-10-07T04:02:18.004096Z",
+      "transfer_lag_seconds": 83.995904,
+      "wave": 4
+    },
+    {
+      "acknowledgement_observed_at_utc": "2026-10-07T04:06:11Z",
+      "artifact_bytes": 12961,
+      "artifact_path": "artifacts/triage-r2-guide.json",
+      "artifact_sha256": "20815120b7bb6d7a185878220c43ed95d472845fe710c2d21a48285a9b077619",
+      "case": "triage",
+      "components_for_model_interpretation": {
+        "all_independent_expected_correct": true,
+        "all_predicted_states_correct": true,
+        "bounded_conclusion": true,
+        "cause_not_established": true,
+        "discovery": true,
+        "display_not_storage_evidence": true,
+        "no_invented_data_loss": true,
+        "no_unjustified_product_fix": true,
+        "normal_forward_completion": true,
+        "pending_reset_observed": true,
+        "reported_reverse_completion": true
+      },
+      "condition": "guide",
+      "deadline_utc": "2026-10-07T04:21:11Z",
+      "dispatch_rank": 2,
+      "first_final_admitted": true,
+      "first_final_observed_at_utc": "2026-10-07T04:08:32Z",
+      "grade_status": "exited",
+      "grader_ended_at_utc": "2026-10-07T04:09:56.757228Z",
+      "grader_exit_code": 0,
+      "grader_started_at_utc": "2026-10-07T04:09:56.730208Z",
+      "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+      "operational_status": "submitted_on_time",
+      "raw_grader_output": {
+        "all_required_outcomes": true,
+        "all_state_claims_correct": true,
+        "coverage": {
+          "normal_forward_completion": true,
+          "pending_reset_observed": true,
+          "reported_reverse_completion": true
+        },
+        "discovery": true,
+        "executed_scenarios": 4,
+        "state_checks": [
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Base"
+              },
+              "notice": null,
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "baseline",
+            "predicted_state_correct": true,
+            "scenario": "reported_limit_completes_first"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": null,
+              "pending": [
+                "t1",
+                "l1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "both_pending",
+            "predicted_state_correct": true,
+            "scenario": "reported_limit_completes_first"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved limit: 0",
+              "pending": [
+                "t1"
+              ],
+              "saved": {
+                "limit": 0,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "limit_completed",
+            "predicted_state_correct": true,
+            "scenario": "reported_limit_completes_first"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved title: Nova",
+              "pending": [],
+              "saved": {
+                "limit": 0,
+                "title": "Nova"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "title_completed_last",
+            "predicted_state_correct": true,
+            "scenario": "reported_limit_completes_first"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": null,
+              "pending": [
+                "t1",
+                "l1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "both_pending",
+            "predicted_state_correct": true,
+            "scenario": "normal_title_completes_first"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved title: Nova",
+              "pending": [
+                "l1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Nova"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "title_completed",
+            "predicted_state_correct": true,
+            "scenario": "normal_title_completes_first"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved limit: 0",
+              "pending": [],
+              "saved": {
+                "limit": 0,
+                "title": "Nova"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "limit_completed_last",
+            "predicted_state_correct": true,
+            "scenario": "normal_title_completes_first"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 0,
+                "title": "Nova"
+              },
+              "notice": "Saved limit: 0",
+              "pending": [
+                "t1"
+              ],
+              "saved": {
+                "limit": 0,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "before_interruption",
+            "predicted_state_correct": true,
+            "scenario": "reset_interrupts_pending_title"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Base"
+              },
+              "notice": null,
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "after_reset",
+            "predicted_state_correct": true,
+            "scenario": "reset_interrupts_pending_title"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 7,
+                "title": "Base"
+              },
+              "notice": null,
+              "pending": [
+                "l1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "fresh_save_pending",
+            "predicted_state_correct": true,
+            "scenario": "reset_interrupts_pending_title"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 7,
+                "title": "Base"
+              },
+              "notice": "Saved limit: 7",
+              "pending": [],
+              "saved": {
+                "limit": 7,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "fresh_save_completed",
+            "predicted_state_correct": true,
+            "scenario": "reset_interrupts_pending_title"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Vega"
+              },
+              "notice": null,
+              "pending": [
+                "t1",
+                "t2"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "unsaved_draft_after_enqueue",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipt"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Vega"
+              },
+              "notice": "Saved title: Lyra",
+              "pending": [
+                "t1"
+              ],
+              "saved": {
+                "limit": 5,
+                "title": "Lyra"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "newer_save_completed",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipt"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Vega"
+              },
+              "notice": "Saved title: Nova",
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Lyra"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "older_save_completed_last",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipt"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Base"
+              },
+              "notice": null,
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Base"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "same_field_reset",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipt"
+          },
+          {
+            "actual": {
+              "draft": {
+                "limit": 5,
+                "title": "Orion"
+              },
+              "notice": "Saved title: Orion",
+              "pending": [],
+              "saved": {
+                "limit": 5,
+                "title": "Orion"
+              }
+            },
+            "independent_expected_correct": true,
+            "observation": "first_save_after_reset",
+            "predicted_state_correct": true,
+            "scenario": "same_field_stale_completion_receipt"
+          }
+        ],
+        "status": "graded",
+        "structured_report_checks": {
+          "bounded_conclusion": true,
+          "cause_not_established": true,
+          "display_not_storage_evidence": true,
+          "no_invented_data_loss": true,
+          "no_unjustified_product_fix": true
+        },
+        "submitted_disposition": "unrun",
+        "unassessed": [
+          "summary prose semantics",
+          "next_check prose semantics",
+          "candidate tool-execution provenance",
+          "minimality",
+          "real-product correctness"
+        ]
+      },
+      "repeat": 2,
+      "slot_id": "triage-r2-guide",
+      "source_dispatched_prompt_sha256": "b179635f4136425b55a39e2f64eb94abdd9b1ef1a6a6a6822032e08fe743e419",
+      "source_private_grade_record_sha256": "ada0ccb225dc905eab015018c3b0e6bbaed4d6f9742bd4b2a4b7c043add267fb",
+      "stderr_path": "results/triage-r2-guide/stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "results/triage-r2-guide/stdout.txt",
+      "stdout_sha256": "2cfbed1571ad1e38e9c9cd3d58aed522e6832c51b9da72ba6aa1d01b4a2dd4f3",
+      "transfer_intent_utc": "2026-10-07T04:04:03.724777Z",
+      "transfer_lag_seconds": 127.275223,
+      "wave": 4
+    }
+  ],
+  "spawned_candidates": 8
+}

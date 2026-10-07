@@ -1,0 +1,100 @@
+{
+  "acknowledgement_observed_at_utc": "2026-10-07T03:29:28Z",
+  "artifact_bytes": 17157,
+  "artifact_path": "artifacts/exporter-r1-baseline.json",
+  "artifact_sha256": "5f0eb055ef3a2a09dca9d831dfa807ccd26b3ff528e5cc1ed549c5feb2154a75",
+  "case": "exporter",
+  "components_for_model_interpretation": {
+    "consumer_filter_bypass": true,
+    "correct_program_specificity": true,
+    "discovery": true,
+    "duplicate_collapse": true,
+    "sort_instead_of_stable_order": true,
+    "wrong_empty_representation": true,
+    "zero_as_missing": true
+  },
+  "condition": "baseline",
+  "deadline_utc": "2026-10-07T03:44:28Z",
+  "dispatch_rank": 1,
+  "first_final_admitted": true,
+  "first_final_observed_at_utc": "2026-10-07T03:31:44Z",
+  "grade_status": "exited",
+  "grader_ended_at_utc": "2026-10-07T04:09:56.470640Z",
+  "grader_exit_code": 0,
+  "grader_started_at_utc": "2026-10-07T04:09:56.438796Z",
+  "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+  "operational_status": "submitted_on_time",
+  "raw_grader_output": {
+    "all_required_outcomes": true,
+    "correct_program_failures": {
+      "correct_a": [],
+      "correct_b": []
+    },
+    "correct_program_specificity": true,
+    "discovery": true,
+    "executed_cases": 21,
+    "mutation_detection": {
+      "consumer_filter_bypass": true,
+      "duplicate_collapse": true,
+      "sort_instead_of_stable_order": true,
+      "wrong_empty_representation": true,
+      "zero_as_missing": true
+    },
+    "raw_mutant_failures": {
+      "consumer_filter_bypass": [
+        "download-all-unselected",
+        "download-selected-missing-units",
+        "download-selected-null-and-zero",
+        "download-interleaved-preserves-order",
+        "download-duplicates-survive-filtering",
+        "download-signed-values",
+        "download-codes-preserved-verbatim"
+      ],
+      "duplicate_collapse": [
+        "export-identical-duplicate-occurrences",
+        "export-same-code-distinct-units",
+        "download-duplicates-survive-filtering"
+      ],
+      "sort_instead_of_stable_order": [
+        "export-integer-values",
+        "export-order-and-selection-flags",
+        "export-identical-duplicate-occurrences",
+        "export-missing-does-not-inherit-units",
+        "export-codes-preserved-verbatim",
+        "download-selected-null-and-zero",
+        "download-interleaved-preserves-order",
+        "download-duplicates-survive-filtering",
+        "download-signed-values",
+        "download-all-selected-at-record-limit",
+        "download-codes-preserved-verbatim"
+      ],
+      "wrong_empty_representation": [
+        "export-empty",
+        "download-empty",
+        "download-all-unselected"
+      ],
+      "zero_as_missing": [
+        "export-unselected-zero",
+        "export-integer-values",
+        "export-same-code-distinct-units",
+        "export-missing-does-not-inherit-units",
+        "export-codes-preserved-verbatim",
+        "download-selected-null-and-zero",
+        "export-at-record-limit",
+        "download-codes-preserved-verbatim"
+      ]
+    },
+    "status": "graded"
+  },
+  "repeat": 1,
+  "slot_id": "exporter-r1-baseline",
+  "source_dispatched_prompt_sha256": "8a0d33c21558f175c3f9d1860b826806c2ec1c19efe3b76f50d150a7a681e9bb",
+  "source_private_grade_record_sha256": "412bb2070f2e577e225535ac7bfd5901dec89e3f63576bba3271c47b9271aa41",
+  "stderr_path": "results/exporter-r1-baseline/stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_path": "results/exporter-r1-baseline/stdout.txt",
+  "stdout_sha256": "a4df13d1cfe4c4e53317c9464df62423e89ed64451d34271e0f93ad87843dc3e",
+  "transfer_intent_utc": "2026-10-07T03:28:37.751246Z",
+  "transfer_lag_seconds": 50.248754,
+  "wave": 1
+}

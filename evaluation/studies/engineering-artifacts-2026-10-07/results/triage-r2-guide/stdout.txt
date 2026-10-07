@@ -1,0 +1,336 @@
+{
+  "all_required_outcomes": true,
+  "all_state_claims_correct": true,
+  "coverage": {
+    "normal_forward_completion": true,
+    "pending_reset_observed": true,
+    "reported_reverse_completion": true
+  },
+  "discovery": true,
+  "executed_scenarios": 4,
+  "state_checks": [
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Base"
+        },
+        "notice": null,
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "baseline",
+      "predicted_state_correct": true,
+      "scenario": "reported_limit_completes_first"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": null,
+        "pending": [
+          "t1",
+          "l1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "both_pending",
+      "predicted_state_correct": true,
+      "scenario": "reported_limit_completes_first"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved limit: 0",
+        "pending": [
+          "t1"
+        ],
+        "saved": {
+          "limit": 0,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "limit_completed",
+      "predicted_state_correct": true,
+      "scenario": "reported_limit_completes_first"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved title: Nova",
+        "pending": [],
+        "saved": {
+          "limit": 0,
+          "title": "Nova"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "title_completed_last",
+      "predicted_state_correct": true,
+      "scenario": "reported_limit_completes_first"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": null,
+        "pending": [
+          "t1",
+          "l1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "both_pending",
+      "predicted_state_correct": true,
+      "scenario": "normal_title_completes_first"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved title: Nova",
+        "pending": [
+          "l1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Nova"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "title_completed",
+      "predicted_state_correct": true,
+      "scenario": "normal_title_completes_first"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved limit: 0",
+        "pending": [],
+        "saved": {
+          "limit": 0,
+          "title": "Nova"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "limit_completed_last",
+      "predicted_state_correct": true,
+      "scenario": "normal_title_completes_first"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved limit: 0",
+        "pending": [
+          "t1"
+        ],
+        "saved": {
+          "limit": 0,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "before_interruption",
+      "predicted_state_correct": true,
+      "scenario": "reset_interrupts_pending_title"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Base"
+        },
+        "notice": null,
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "after_reset",
+      "predicted_state_correct": true,
+      "scenario": "reset_interrupts_pending_title"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 7,
+          "title": "Base"
+        },
+        "notice": null,
+        "pending": [
+          "l1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "fresh_save_pending",
+      "predicted_state_correct": true,
+      "scenario": "reset_interrupts_pending_title"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 7,
+          "title": "Base"
+        },
+        "notice": "Saved limit: 7",
+        "pending": [],
+        "saved": {
+          "limit": 7,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "fresh_save_completed",
+      "predicted_state_correct": true,
+      "scenario": "reset_interrupts_pending_title"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Vega"
+        },
+        "notice": null,
+        "pending": [
+          "t1",
+          "t2"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "unsaved_draft_after_enqueue",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipt"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Vega"
+        },
+        "notice": "Saved title: Lyra",
+        "pending": [
+          "t1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Lyra"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "newer_save_completed",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipt"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Vega"
+        },
+        "notice": "Saved title: Nova",
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Lyra"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "older_save_completed_last",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipt"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Base"
+        },
+        "notice": null,
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "same_field_reset",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipt"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Orion"
+        },
+        "notice": "Saved title: Orion",
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Orion"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "first_save_after_reset",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipt"
+    }
+  ],
+  "status": "graded",
+  "structured_report_checks": {
+    "bounded_conclusion": true,
+    "cause_not_established": true,
+    "display_not_storage_evidence": true,
+    "no_invented_data_loss": true,
+    "no_unjustified_product_fix": true
+  },
+  "submitted_disposition": "unrun",
+  "unassessed": [
+    "summary prose semantics",
+    "next_check prose semantics",
+    "candidate tool-execution provenance",
+    "minimality",
+    "real-product correctness"
+  ]
+}

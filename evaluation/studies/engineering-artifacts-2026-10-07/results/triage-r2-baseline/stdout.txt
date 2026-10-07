@@ -1,0 +1,341 @@
+{
+  "all_required_outcomes": true,
+  "all_state_claims_correct": true,
+  "coverage": {
+    "normal_forward_completion": true,
+    "pending_reset_observed": true,
+    "reported_reverse_completion": true
+  },
+  "discovery": true,
+  "executed_scenarios": 4,
+  "state_checks": [
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Base"
+        },
+        "notice": null,
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "baseline",
+      "predicted_state_correct": true,
+      "scenario": "reported_reverse_completion"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": null,
+        "pending": [
+          "t1",
+          "l1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "both_queued",
+      "predicted_state_correct": true,
+      "scenario": "reported_reverse_completion"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved limit: 0",
+        "pending": [
+          "t1"
+        ],
+        "saved": {
+          "limit": 0,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "limit_first",
+      "predicted_state_correct": true,
+      "scenario": "reported_reverse_completion"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved title: Nova",
+        "pending": [],
+        "saved": {
+          "limit": 0,
+          "title": "Nova"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "title_last",
+      "predicted_state_correct": true,
+      "scenario": "reported_reverse_completion"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Base"
+        },
+        "notice": null,
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "baseline",
+      "predicted_state_correct": true,
+      "scenario": "normal_issue_order_completion"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": null,
+        "pending": [
+          "t1",
+          "l1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "both_queued",
+      "predicted_state_correct": true,
+      "scenario": "normal_issue_order_completion"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved title: Nova",
+        "pending": [
+          "l1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Nova"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "title_first",
+      "predicted_state_correct": true,
+      "scenario": "normal_issue_order_completion"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved limit: 0",
+        "pending": [],
+        "saved": {
+          "limit": 0,
+          "title": "Nova"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "limit_last",
+      "predicted_state_correct": true,
+      "scenario": "normal_issue_order_completion"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 0,
+          "title": "Nova"
+        },
+        "notice": "Saved limit: 0",
+        "pending": [
+          "t1"
+        ],
+        "saved": {
+          "limit": 0,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "before_interruption",
+      "predicted_state_correct": true,
+      "scenario": "reset_interrupts_reported_sequence"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Base"
+        },
+        "notice": null,
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "after_reset",
+      "predicted_state_correct": true,
+      "scenario": "reset_interrupts_reported_sequence"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Draft"
+        },
+        "notice": null,
+        "pending": [
+          "t1"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "fresh_request_queued",
+      "predicted_state_correct": true,
+      "scenario": "reset_interrupts_reported_sequence"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 5,
+          "title": "Draft"
+        },
+        "notice": "Saved title: Fresh",
+        "pending": [],
+        "saved": {
+          "limit": 5,
+          "title": "Fresh"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "fresh_request_completed",
+      "predicted_state_correct": true,
+      "scenario": "reset_interrupts_reported_sequence"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 42,
+          "title": "DraftOnly"
+        },
+        "notice": null,
+        "pending": [
+          "t1",
+          "t2",
+          "l1",
+          "l2"
+        ],
+        "saved": {
+          "limit": 5,
+          "title": "Base"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "all_queued",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipts"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 42,
+          "title": "DraftOnly"
+        },
+        "notice": "Saved limit: 9",
+        "pending": [
+          "t1",
+          "l1"
+        ],
+        "saved": {
+          "limit": 9,
+          "title": "Vega"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "newer_saves_completed",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipts"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 42,
+          "title": "DraftOnly"
+        },
+        "notice": "Saved title: Nova",
+        "pending": [
+          "l1"
+        ],
+        "saved": {
+          "limit": 9,
+          "title": "Vega"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "stale_title_receipt",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipts"
+    },
+    {
+      "actual": {
+        "draft": {
+          "limit": 42,
+          "title": "DraftOnly"
+        },
+        "notice": "Saved limit: 0",
+        "pending": [],
+        "saved": {
+          "limit": 9,
+          "title": "Vega"
+        }
+      },
+      "independent_expected_correct": true,
+      "observation": "stale_limit_receipt",
+      "predicted_state_correct": true,
+      "scenario": "same_field_stale_completion_receipts"
+    }
+  ],
+  "status": "graded",
+  "structured_report_checks": {
+    "bounded_conclusion": true,
+    "cause_not_established": true,
+    "display_not_storage_evidence": true,
+    "no_invented_data_loss": true,
+    "no_unjustified_product_fix": true
+  },
+  "submitted_disposition": "unrun",
+  "unassessed": [
+    "summary prose semantics",
+    "next_check prose semantics",
+    "candidate tool-execution provenance",
+    "minimality",
+    "real-product correctness"
+  ]
+}

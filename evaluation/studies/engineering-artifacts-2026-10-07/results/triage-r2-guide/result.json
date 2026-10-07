@@ -1,0 +1,378 @@
+{
+  "acknowledgement_observed_at_utc": "2026-10-07T04:06:11Z",
+  "artifact_bytes": 12961,
+  "artifact_path": "artifacts/triage-r2-guide.json",
+  "artifact_sha256": "20815120b7bb6d7a185878220c43ed95d472845fe710c2d21a48285a9b077619",
+  "case": "triage",
+  "components_for_model_interpretation": {
+    "all_independent_expected_correct": true,
+    "all_predicted_states_correct": true,
+    "bounded_conclusion": true,
+    "cause_not_established": true,
+    "discovery": true,
+    "display_not_storage_evidence": true,
+    "no_invented_data_loss": true,
+    "no_unjustified_product_fix": true,
+    "normal_forward_completion": true,
+    "pending_reset_observed": true,
+    "reported_reverse_completion": true
+  },
+  "condition": "guide",
+  "deadline_utc": "2026-10-07T04:21:11Z",
+  "dispatch_rank": 2,
+  "first_final_admitted": true,
+  "first_final_observed_at_utc": "2026-10-07T04:08:32Z",
+  "grade_status": "exited",
+  "grader_ended_at_utc": "2026-10-07T04:09:56.757228Z",
+  "grader_exit_code": 0,
+  "grader_started_at_utc": "2026-10-07T04:09:56.730208Z",
+  "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+  "operational_status": "submitted_on_time",
+  "raw_grader_output": {
+    "all_required_outcomes": true,
+    "all_state_claims_correct": true,
+    "coverage": {
+      "normal_forward_completion": true,
+      "pending_reset_observed": true,
+      "reported_reverse_completion": true
+    },
+    "discovery": true,
+    "executed_scenarios": 4,
+    "state_checks": [
+      {
+        "actual": {
+          "draft": {
+            "limit": 5,
+            "title": "Base"
+          },
+          "notice": null,
+          "pending": [],
+          "saved": {
+            "limit": 5,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "baseline",
+        "predicted_state_correct": true,
+        "scenario": "reported_limit_completes_first"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 0,
+            "title": "Nova"
+          },
+          "notice": null,
+          "pending": [
+            "t1",
+            "l1"
+          ],
+          "saved": {
+            "limit": 5,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "both_pending",
+        "predicted_state_correct": true,
+        "scenario": "reported_limit_completes_first"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 0,
+            "title": "Nova"
+          },
+          "notice": "Saved limit: 0",
+          "pending": [
+            "t1"
+          ],
+          "saved": {
+            "limit": 0,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "limit_completed",
+        "predicted_state_correct": true,
+        "scenario": "reported_limit_completes_first"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 0,
+            "title": "Nova"
+          },
+          "notice": "Saved title: Nova",
+          "pending": [],
+          "saved": {
+            "limit": 0,
+            "title": "Nova"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "title_completed_last",
+        "predicted_state_correct": true,
+        "scenario": "reported_limit_completes_first"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 0,
+            "title": "Nova"
+          },
+          "notice": null,
+          "pending": [
+            "t1",
+            "l1"
+          ],
+          "saved": {
+            "limit": 5,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "both_pending",
+        "predicted_state_correct": true,
+        "scenario": "normal_title_completes_first"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 0,
+            "title": "Nova"
+          },
+          "notice": "Saved title: Nova",
+          "pending": [
+            "l1"
+          ],
+          "saved": {
+            "limit": 5,
+            "title": "Nova"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "title_completed",
+        "predicted_state_correct": true,
+        "scenario": "normal_title_completes_first"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 0,
+            "title": "Nova"
+          },
+          "notice": "Saved limit: 0",
+          "pending": [],
+          "saved": {
+            "limit": 0,
+            "title": "Nova"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "limit_completed_last",
+        "predicted_state_correct": true,
+        "scenario": "normal_title_completes_first"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 0,
+            "title": "Nova"
+          },
+          "notice": "Saved limit: 0",
+          "pending": [
+            "t1"
+          ],
+          "saved": {
+            "limit": 0,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "before_interruption",
+        "predicted_state_correct": true,
+        "scenario": "reset_interrupts_pending_title"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 5,
+            "title": "Base"
+          },
+          "notice": null,
+          "pending": [],
+          "saved": {
+            "limit": 5,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "after_reset",
+        "predicted_state_correct": true,
+        "scenario": "reset_interrupts_pending_title"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 7,
+            "title": "Base"
+          },
+          "notice": null,
+          "pending": [
+            "l1"
+          ],
+          "saved": {
+            "limit": 5,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "fresh_save_pending",
+        "predicted_state_correct": true,
+        "scenario": "reset_interrupts_pending_title"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 7,
+            "title": "Base"
+          },
+          "notice": "Saved limit: 7",
+          "pending": [],
+          "saved": {
+            "limit": 7,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "fresh_save_completed",
+        "predicted_state_correct": true,
+        "scenario": "reset_interrupts_pending_title"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 5,
+            "title": "Vega"
+          },
+          "notice": null,
+          "pending": [
+            "t1",
+            "t2"
+          ],
+          "saved": {
+            "limit": 5,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "unsaved_draft_after_enqueue",
+        "predicted_state_correct": true,
+        "scenario": "same_field_stale_completion_receipt"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 5,
+            "title": "Vega"
+          },
+          "notice": "Saved title: Lyra",
+          "pending": [
+            "t1"
+          ],
+          "saved": {
+            "limit": 5,
+            "title": "Lyra"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "newer_save_completed",
+        "predicted_state_correct": true,
+        "scenario": "same_field_stale_completion_receipt"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 5,
+            "title": "Vega"
+          },
+          "notice": "Saved title: Nova",
+          "pending": [],
+          "saved": {
+            "limit": 5,
+            "title": "Lyra"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "older_save_completed_last",
+        "predicted_state_correct": true,
+        "scenario": "same_field_stale_completion_receipt"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 5,
+            "title": "Base"
+          },
+          "notice": null,
+          "pending": [],
+          "saved": {
+            "limit": 5,
+            "title": "Base"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "same_field_reset",
+        "predicted_state_correct": true,
+        "scenario": "same_field_stale_completion_receipt"
+      },
+      {
+        "actual": {
+          "draft": {
+            "limit": 5,
+            "title": "Orion"
+          },
+          "notice": "Saved title: Orion",
+          "pending": [],
+          "saved": {
+            "limit": 5,
+            "title": "Orion"
+          }
+        },
+        "independent_expected_correct": true,
+        "observation": "first_save_after_reset",
+        "predicted_state_correct": true,
+        "scenario": "same_field_stale_completion_receipt"
+      }
+    ],
+    "status": "graded",
+    "structured_report_checks": {
+      "bounded_conclusion": true,
+      "cause_not_established": true,
+      "display_not_storage_evidence": true,
+      "no_invented_data_loss": true,
+      "no_unjustified_product_fix": true
+    },
+    "submitted_disposition": "unrun",
+    "unassessed": [
+      "summary prose semantics",
+      "next_check prose semantics",
+      "candidate tool-execution provenance",
+      "minimality",
+      "real-product correctness"
+    ]
+  },
+  "repeat": 2,
+  "slot_id": "triage-r2-guide",
+  "source_dispatched_prompt_sha256": "b179635f4136425b55a39e2f64eb94abdd9b1ef1a6a6a6822032e08fe743e419",
+  "source_private_grade_record_sha256": "ada0ccb225dc905eab015018c3b0e6bbaed4d6f9742bd4b2a4b7c043add267fb",
+  "stderr_path": "results/triage-r2-guide/stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_path": "results/triage-r2-guide/stdout.txt",
+  "stdout_sha256": "2cfbed1571ad1e38e9c9cd3d58aed522e6832c51b9da72ba6aa1d01b4a2dd4f3",
+  "transfer_intent_utc": "2026-10-07T04:04:03.724777Z",
+  "transfer_lag_seconds": 127.275223,
+  "wave": 4
+}

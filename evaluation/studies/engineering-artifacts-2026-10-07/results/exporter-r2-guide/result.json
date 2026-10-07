@@ -1,0 +1,92 @@
+{
+  "acknowledgement_observed_at_utc": "2026-10-07T03:56:21Z",
+  "artifact_bytes": 11208,
+  "artifact_path": "artifacts/exporter-r2-guide.json",
+  "artifact_sha256": "0512fa578d9cd444741c2cc59b2a5edd342ca2e1b81525b647eafdfdc2f0bbfc",
+  "case": "exporter",
+  "components_for_model_interpretation": {
+    "consumer_filter_bypass": true,
+    "correct_program_specificity": true,
+    "discovery": true,
+    "duplicate_collapse": true,
+    "sort_instead_of_stable_order": true,
+    "wrong_empty_representation": true,
+    "zero_as_missing": true
+  },
+  "condition": "guide",
+  "deadline_utc": "2026-10-07T04:11:21Z",
+  "dispatch_rank": 1,
+  "first_final_admitted": true,
+  "first_final_observed_at_utc": "2026-10-07T03:58:48Z",
+  "grade_status": "exited",
+  "grader_ended_at_utc": "2026-10-07T04:09:56.650330Z",
+  "grader_exit_code": 0,
+  "grader_started_at_utc": "2026-10-07T04:09:56.618910Z",
+  "model_outcome_interpretation": "all_frozen_structured_outcomes_pass",
+  "operational_status": "submitted_on_time",
+  "raw_grader_output": {
+    "all_required_outcomes": true,
+    "correct_program_failures": {
+      "correct_a": [],
+      "correct_b": []
+    },
+    "correct_program_specificity": true,
+    "discovery": true,
+    "executed_cases": 14,
+    "mutation_detection": {
+      "consumer_filter_bypass": true,
+      "duplicate_collapse": true,
+      "sort_instead_of_stable_order": true,
+      "wrong_empty_representation": true,
+      "zero_as_missing": true
+    },
+    "raw_mutant_failures": {
+      "consumer_filter_bypass": [
+        "download-no-selection",
+        "download-selected-first-and-last",
+        "download-interleaved-relative-order",
+        "download-selected-unit-states-and-bounds",
+        "download-selection-is-per-occurrence",
+        "download-code-strings-unchanged"
+      ],
+      "duplicate_collapse": [
+        "export-order-and-duplicate-occurrences",
+        "download-selection-is-per-occurrence"
+      ],
+      "sort_instead_of_stable_order": [
+        "export-unit-states-and-bounds",
+        "export-order-and-duplicate-occurrences",
+        "export-code-strings-unchanged",
+        "download-selected-first-and-last",
+        "download-interleaved-relative-order",
+        "download-selected-unit-states-and-bounds",
+        "download-selection-is-per-occurrence",
+        "download-code-strings-unchanged",
+        "download-all-selected-full-input"
+      ],
+      "wrong_empty_representation": [
+        "export-empty",
+        "download-empty",
+        "download-no-selection"
+      ],
+      "zero_as_missing": [
+        "export-unit-states-and-bounds",
+        "export-code-strings-unchanged",
+        "download-selected-unit-states-and-bounds",
+        "download-code-strings-unchanged"
+      ]
+    },
+    "status": "graded"
+  },
+  "repeat": 2,
+  "slot_id": "exporter-r2-guide",
+  "source_dispatched_prompt_sha256": "37861c8d4ba40bf9023480995914ba70347346ff66b578e604459af985f0c8dd",
+  "source_private_grade_record_sha256": "830faa23ae124f04a34d09abc94b6ad1d5af6e0c782b24fe117d20c58e2ea63d",
+  "stderr_path": "results/exporter-r2-guide/stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_path": "results/exporter-r2-guide/stdout.txt",
+  "stdout_sha256": "f9343cf476928df126e86491dcd91db6a24f6f464d77f0580337a0611deb81b6",
+  "transfer_intent_utc": "2026-10-07T03:55:10.588478Z",
+  "transfer_lag_seconds": 70.411522,
+  "wave": 3
+}

@@ -1,0 +1,62 @@
+{
+  "all_required_outcomes": true,
+  "correct_program_failures": {
+    "correct_a": [],
+    "correct_b": []
+  },
+  "correct_program_specificity": true,
+  "discovery": true,
+  "executed_cases": 21,
+  "mutation_detection": {
+    "consumer_filter_bypass": true,
+    "duplicate_collapse": true,
+    "sort_instead_of_stable_order": true,
+    "wrong_empty_representation": true,
+    "zero_as_missing": true
+  },
+  "raw_mutant_failures": {
+    "consumer_filter_bypass": [
+      "download-all-unselected",
+      "download-selected-missing-units",
+      "download-selected-null-and-zero",
+      "download-interleaved-preserves-order",
+      "download-duplicates-survive-filtering",
+      "download-signed-values",
+      "download-codes-preserved-verbatim"
+    ],
+    "duplicate_collapse": [
+      "export-identical-duplicate-occurrences",
+      "export-same-code-distinct-units",
+      "download-duplicates-survive-filtering"
+    ],
+    "sort_instead_of_stable_order": [
+      "export-integer-values",
+      "export-order-and-selection-flags",
+      "export-identical-duplicate-occurrences",
+      "export-missing-does-not-inherit-units",
+      "export-codes-preserved-verbatim",
+      "download-selected-null-and-zero",
+      "download-interleaved-preserves-order",
+      "download-duplicates-survive-filtering",
+      "download-signed-values",
+      "download-all-selected-at-record-limit",
+      "download-codes-preserved-verbatim"
+    ],
+    "wrong_empty_representation": [
+      "export-empty",
+      "download-empty",
+      "download-all-unselected"
+    ],
+    "zero_as_missing": [
+      "export-unselected-zero",
+      "export-integer-values",
+      "export-same-code-distinct-units",
+      "export-missing-does-not-inherit-units",
+      "export-codes-preserved-verbatim",
+      "download-selected-null-and-zero",
+      "export-at-record-limit",
+      "download-codes-preserved-verbatim"
+    ]
+  },
+  "status": "graded"
+}

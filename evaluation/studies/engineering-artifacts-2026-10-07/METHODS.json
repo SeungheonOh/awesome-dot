@@ -1,0 +1,81 @@
+{
+  "artifact_collection": {
+    "encoding": "UTF-8",
+    "independent_native_transport_byte_extraction": "unavailable",
+    "late_missing_invalid_retained": true,
+    "method": "manual exact-string transfer, no intentional trimming, code-fence stripping, JSON repair, or fabricated trailing newline",
+    "replacement_or_rescue": false,
+    "source": "first observed native final message string"
+  },
+  "author_fixture_manifest_sha256": "2f58aae2c27ab6347b99fd5ab0d1fc01d86d43fcfd9caa1a747842ef4633f6d7",
+  "candidate_configuration": {
+    "context": "fresh native context, no prior conversation fork",
+    "deadline_origin": "coordinator-observed successful spawn acknowledgement",
+    "deadline_seconds": 900,
+    "guide_reading": "inside intended observation budget; exact backend start relative to acknowledgement is unknown",
+    "isolation": "not enforced or proven; exploratory procedural-boundary amendment",
+    "maximum_concurrent_engineering_candidates": 2,
+    "model": "inherited native default; backend identity unavailable",
+    "numeric_token_or_context_cap": "unavailable",
+    "reasoning_effort": "xhigh requested",
+    "tools": "ambient tools remained available; task requested abstention"
+  },
+  "cohort_id": "engineering-artifact-pilot-20261007-v2",
+  "design": {
+    "cases": 2,
+    "conditions": [
+      "baseline_no_designated_guide",
+      "pinned_designated_guide"
+    ],
+    "order": [
+      [
+        "exporter-r1-baseline",
+        "exporter-r1-guide"
+      ],
+      [
+        "triage-r1-guide",
+        "triage-r1-baseline"
+      ],
+      [
+        "exporter-r2-guide",
+        "exporter-r2-baseline"
+      ],
+      [
+        "triage-r2-baseline",
+        "triage-r2-guide"
+      ]
+    ],
+    "planned_slots": 8,
+    "randomized": false,
+    "repetitions_per_case_condition": 2
+  },
+  "grading": {
+    "address_space_limit_MiB": 256,
+    "all_slots_closed_before_grading": true,
+    "candidate_program_imports_or_execution": false,
+    "command_shape": "python -I -B fixture/<case>/trusted/grade.py <coordinator-owned project root>",
+    "cpu_limit_seconds": 3,
+    "file_size_limit_MiB": 2,
+    "inherited_PYTHON_environment_removed": true,
+    "open_files_limit": 64,
+    "primary_scoring_passes": 1,
+    "source": "unchanged original fixture graders",
+    "source_hashes_checked_before_and_after_each_evaluation": true,
+    "timeout_seconds": 5
+  },
+  "interpretation_limits": [
+    "two synthetic cases, descriptive outcomes only",
+    "no causal population guide-effect estimate",
+    "no speed or equal-compute claim",
+    "unknown infrastructure outcomes are not model failures",
+    "passing structured report fields do not establish prose semantic quality",
+    "evaluator replay is not candidate execution evidence"
+  ],
+  "operational_v2_manifest_sha256": "9f6852eed389caffb560e79a172304db03e0ebe40bcf6ddff24207eb5b7e2e50",
+  "scored_trial_counts_do_not_include": {
+    "abandoned_operational_v1_captured_artifacts": 1,
+    "author_harness_tests": 34,
+    "preparation_harness_tests": 26
+  },
+  "status": "completed evidence; source publication packet independently reviewed for artifact readiness; integration and release are separate steps"
+}
