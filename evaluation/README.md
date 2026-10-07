@@ -27,6 +27,10 @@ They describe the saved artifacts against the declared requirements. Both studie
 
 The [earlier eight-case study](results/native-cloud-2026-10-06/README.md) contains 16 submissions and 40/40 primary criterion groups per condition. Its separate post-hoc save failure remains documented. Its scores are not pooled with the latest study. See the [complete results index](results/README.md).
 
+## Separate grader calibration
+
+The exploratory [semantic grader calibration](calibration/semantic-2026-10-07/README.md), dated 2026-10-07, checks grader behavior on 14 related synthetic outputs. It contains no skill intervention and estimates no skill uplift; its votes are not pooled with either study. Shared-filesystem masking, label-aware gold review, sparse negative examples and unknown serving models limit its interpretation. The package preserves all raw reviews and methodological limitations.
+
 ## Verify locally
 
 Run the complete local verification from the repository root, using POSIX Python 3.12:
@@ -82,6 +86,16 @@ The checked reports use a small plain-Markdown subset. Table detection includes 
 This is bounded consistency checking, not a general prose fact checker or a fresh evaluation. Selected count statements and exact caveat text are guarded; arbitrary new prose, business-value examples, semantic judgments, and provenance claims still need review. Full source/artifact hashes and review evidence remain the responsibility of the saved-evidence verifiers above. No historical study file is regenerated.
 
 These commands make no model calls and install nothing. The saved-evidence commands and added binding checks only read saved files; they do not execute submitted code, import graders, or perform a fresh semantic review. Fixture checks use authored local test inputs and subprocesses to test evaluation machinery; their passes are not agent outcomes.
+
+### Verify the separate calibration package
+
+The calibration is not included in the unified command above. From the repository root, run:
+
+```sh
+python -I -B evaluation/calibration/semantic-2026-10-07/verify.py
+```
+
+This separately reproduces package hashes, saved-vote accounting and 14 frozen-grader cross-checks. It executes only the packaged evaluator code against saved data, using temporary review copies; it makes no model calls, does not execute candidate outputs and does not rewrite the package. Keep assertions enabled: do not add `-O` or `-OO`.
 
 ## Original sealed-pilot scope
 
