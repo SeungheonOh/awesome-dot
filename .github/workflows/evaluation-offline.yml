@@ -41,6 +41,15 @@ jobs:
           check-latest: false
           allow-prereleases: false
 
+      - name: Check collection Markdown links and checker tests
+        timeout-minutes: 1
+        run: |
+          set -x
+          ulimit -t 30
+          ulimit -v 1048576
+          python -I -B scripts/test_check_skill_links.py -v
+          python -I -B scripts/check-skill-links.py
+
       - name: Check published evidence and authored example only
         timeout-minutes: 3
         run: |

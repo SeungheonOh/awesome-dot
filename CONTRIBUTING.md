@@ -22,4 +22,6 @@ For a small, repeatable comparison, see [Evaluate one skill change](evaluation/d
 
 Before proposing a change, read the final skill from the recipient's point of view, open its local links and inspect supporting material. Read a check's effects before running it, and run only the relevant checks supported by the environment and current authorization. Commands for later live work or long-running services are not automatic repository tests. Explain the distinct outcome or improvement and any meaningful verification limit.
 
+Run `python -I -B scripts/check-skill-links.py` from the repository root to check local Markdown links under `skill/`. The read-only checker documents its supported syntax and two exact translation-template exceptions in [its source](scripts/check-skill-links.py); it does not fetch external URLs or run skills. Its normal temporary-file tests run with `python -I -B scripts/test_check_skill_links.py -v`. These checks also run in the partial offline CI workflow.
+
 By contributing, you confirm you have the right to share the material under the repository's MIT License.
