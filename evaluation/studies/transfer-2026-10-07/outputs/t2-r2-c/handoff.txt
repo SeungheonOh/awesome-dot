@@ -1,0 +1,34 @@
+Fern Gateway engineering handoff
+As of 2026-10-07T00:30:00Z
+
+Decisions and evidence needed
+- Assign an owner for the agreed cli protocol-error glossary v1 draft and establish the protocol-review date. The obligation is before that review, which is not booked; publication is outside scope. No draft is supplied. (M1:L05-L06)
+- Verify Leena's claimed web-sdk r3 merge with a main-branch merge record. EWEB contains the approved r3 review diff, not a merge receipt. Her claim remains standing at the cutoff; the evidence does not prove either that the merge happened or that it did not. Omar's cover offer was never accepted. (M1:L02, M2:L02-L03, M3:L06, EWEB:L01-L02)
+- Establish the authoritative release snapshot for Teo's enum-compat r5. ERUN_A shows both assertions passing; ERUN_B shows Android failing. Both omit the release snapshot, and the later run is not an agreed tie-breaker. Teo reports completion, but evidence remains conflicting. (M1:L12, M2:L10, ERUN_A:L01, ERUN_B:L01)
+- Resolve which Sam owns trace v4 and whether the original “next Friday” means October 9 or October 16 in Los Angeles. Sam reports posting it, but the folder reference is inaccessible, with no trace bytes, uploader identity or access verification. Mira's unverified guess does not establish an account. Verify the complete v4 trace is accessible in the team evidence folder. (M1:L09, M3:L01-L02, ETRACE:L01)
+
+Live commitments and timing
+1. Noor: full interface compatibility matrix v3. Zoe originated the commitment; Noor explicitly accepted it with the original October 6 Europe/London date-only deadline. Noor's latest admissible report says it is not started; no finished matrix is supplied. That local day has ended, so this is confirmed overdue. Next: complete the full matrix. (M2:L07, M3:L03-L04)
+2. Teo: enum-compat report r5 with both web and Android assertions passing. Due October 6 at 12:00 America/Los_Angeles, from “noon tomorrow” on October 5. The timed deadline passed at 19:00Z on October 6. Completion is reported but conflicting, so lateness is not confirmed. Next: reconcile the release evidence described above. (M1:L12, M2:L10, ERUN_A:L01, ERUN_B:L01)
+3. Leena: merge web-sdk retry-copy r3 into main. Due October 6, date only, America/Los_Angeles, from the original October 5 “tomorrow” commitment. The launch-board reference and later deadline repeat describe the same action. At the cutoff it is October 6, 17:30 in Los Angeles, so the deadline has not passed. Completion remains unverified beyond the approved diff. Next: obtain the correct main-branch evidence. (M1:L02, M1:L04, M2:L01, M2:L03, M3:L06, EWEB:L01-L02)
+4. Jules: export web debug icon sprite v2 in 16px, 24px and 32px. Due October 6, date only, America/Los_Angeles, from “today” on October 6. Still in progress; only 16px and 24px are supplied. The local day has not ended, so it is not overdue. Next: finish the 32px export. This is separate from the uncommitted timeout-chart idea. (M2:L08, M3:L05, EICONS:L01)
+5. Nico: run the four-probe rollback drill on October 8 at 10:00 Europe/London, then provide the executed log acknowledged by the reviewer. Nico says it has not run. The immediate prerequisite is Priya's team invitation, which is evidenced complete. A confirmed calendar slot is not an executed drill log. Next: execute the drill and obtain acknowledgment. Deadline has not passed. (M1:L11, M2:L06, EINVITE:L01-L02)
+6. Sam, account unresolved: complete and accessible worker retry-cap trace v4 in the team evidence folder. Reported done; artifact inaccessible. The original “next Friday” America/Los_Angeles deadline remains ambiguous, so there is no resolved due date or lateness finding. Next: resolve identity/date and verify the contents and access. (M1:L09, M3:L01-L02, ETRACE:L01)
+7. Owner unassigned: complete cli protocol-error glossary v1 draft before protocol review. This is an agreed group commitment, not merely Zoe's proposal. There is no booked review date and no calendar deadline to assess. Next: assign ownership, establish the review date and prepare the draft. (M1:L05-L06)
+
+Evidenced completed work
+- Arun: android-sdk retry-copy r2 main-branch merge. EANDROID verifies r2 in main, matching his completion report. No deadline was agreed; none is invented and no follow-up is needed. (M1:L03, M2:L04, EANDROID:L01)
+- Priya: create and send the rollback-drill invitation to the engineering team. EINVITE verifies the sent invitation and October 8, 10:00 London slot. Her original date-only deadline was October 6 Europe/London, which has passed as a calendar fact; the work is evidenced complete and is not overdue. Scheduling is distinct from Nico's execution commitment. (M1:L10, M2:L05, EINVITE:L01-L02)
+
+Cancelled work
+- Maya: live-device walkthrough guide v1, originally due October 5, date only, America/Los_Angeles. Mira cancelled delivery without assigning a replacement. The original deadline has passed, but the cancelled action is not overdue and needs no next step. No completed guide is evidenced. (M1:L13, M2:L09)
+
+Not agreed or creating no work
+- Jules's live timeout-chart idea was only a suggestion; no commitment was accepted. (M1:L07)
+- Omar's offer to cover Leena's merge was unaccepted and changes no ownership. (M2:L02)
+- Retaining the existing telemetry enum IDs was explicitly a decision with no migration or implementation work. (M1:L08)
+
+Source limits
+Only records received by the cutoff are used: M1, M2, M3 and the seven supplied artifact records. M4 was received at 00:45Z and is excluded in full, including claims about events allegedly before the cutoff. The people glossary is identity metadata; neither Sam account can be selected from the evidence. Date-only deadlines are not given invented times and pass only after the relevant local day ends. At the cutoff it is October 7, 01:30 in London and October 6, 17:30 in Los Angeles.
+
+The packet is the complete available evidence, not proof that every real-world event is visible. Partial or inaccessible artifacts do not establish absent events. Only the matrix has both a passed deadline and a latest admissible report explicitly saying it is incomplete. No outreach, external retrieval, work execution or tracker changes were performed.

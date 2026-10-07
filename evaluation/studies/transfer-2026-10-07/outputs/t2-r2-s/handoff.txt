@@ -1,0 +1,44 @@
+FERN GATEWAY — PRIVATE ACTION HANDOFF
+As of 2026-10-07T00:30:00Z
+
+DECISIONS AND EVIDENCE NEEDED FIRST
+
+1. Noor's interface compatibility matrix v3 is confirmed overdue. Noor accepted Zoe's assignment with its original October 6 Europe/London deadline and explicitly reported it not started. Prepare the full matrix; no finished result is supplied. The later claim of earlier completion is excluded because it was received after the cutoff. [A09; M2:L07, M3:L03–L04]
+
+2. Three reported completions remain unverified:
+   - Leena's web-sdk retry-copy r3 merge: EWEB contains an approved review and complete diff, not a main-branch merge receipt. Ask for evidence of r3 in main. Leena's completion claim stands as of the cutoff; the snapshot proves neither a later merge nor its absence. Omar's unaccepted offer does not transfer ownership. [A01; M1:L02, M1:L04, M2:L01–L03, M3:L06, EWEB:L01–L02]
+   - Teo's enum-compat report r5: ERUN_A has both assertions passing, while ERUN_B has Android failing. Neither identifies its release snapshot or is designated authoritative. Establish the relevant release and reconcile the reports; the later timestamp is not a tie-breaker. The deadline passed, but the conflicting evidence and completion claim do not establish lateness. [A07; M1:L12, M2:L10, ERUN_A:L01, ERUN_B:L01]
+   - Sam's worker retry-cap trace v4: verify complete trace contents and team-folder accessibility. ETRACE is inaccessible, so it proves neither completion nor non-completion. Also resolve Sam Park versus Sam Rao and whether “next Friday” means October 9 or October 16. Keep the display name Sam without choosing an account. [A04; M1:L09, M3:L01–L02, ETRACE:L01]
+
+3. Assign an owner for the cli protocol-error glossary v1 and establish the protocol-review date. The group agreed to a complete draft before review; no owner, review booking, or draft is supplied. Publication is outside the commitment. [A03; M1:L05–L06]
+
+LIVE COMMITMENTS AND TIMING
+
+- A01 — Leena: Merge web-sdk retry-copy patch r3 into main. Reported complete; partial evidence only. Original “tomorrow” at M1:L02 means October 6 in America/Los_Angeles, date only. The repeated “today” does not reset it. At the cutoff it is still October 6 there, so the deadline has not passed. Obtain main-branch merge evidence.
+- A03 — Unassigned: Prepare the complete cli protocol-error glossary v1 draft. Open; no result supplied. Due “before protocol review” from M1:L05; the review is unbooked, so there is no calendar date. Choose the owner and resolve the event date.
+- A04 — Sam, unresolved account: Put the complete worker retry-cap trace v4 in the team evidence folder with access verified. Reported complete; artifact inaccessible. Original “by next Friday” at M1:L09 uses America/Los_Angeles but remains ambiguous between October 9 and October 16. Due-date passage is unknown. Resolve identity, date and completion evidence.
+- A06 — Nico: Execute the four-probe rollback drill and obtain a reviewer-acknowledged drill log. Open; Nico says it has not run. Due Thursday, October 8 at 10:00 Europe/London, which is still future at the cutoff. The immediate prerequisite is A05, the already-completed team invitation. A calendar slot is not an executed drill. [M1:L11, M2:L06, EINVITE:L01–L02]
+- A07 — Teo: Prepare enum-compat report r5 with both web and Android assertions passing. Reported complete; conflicting results. Original “by noon tomorrow” at M1:L12 means October 6 at 12:00 America/Los_Angeles (19:00Z). That instant passed before the cutoff. Lateness is not confirmed; resolve the authoritative release result.
+- A09 — Noor, following an accepted transfer from Zoe: Prepare the full interface compatibility matrix v3. Open and not started; no result supplied. Original “by today, October 6” at M2:L07 remains October 6 Europe/London, date only. It is October 7 in London at the cutoff: deadline passed and overdue confirmed. Preparing the matrix is the whole deliverable.
+- A10 — Jules: Export web debug icon sprite v2 at 16px, 24px and 32px. In progress and explicitly incomplete; EICONS contains only the first two sizes. Original “by today” at M2:L08 means October 6 America/Los_Angeles, date only. That day has not ended at the cutoff; it is not overdue. Finish and verify the missing 32px export. [M2:L08, M3:L05, EICONS:L01]
+
+EVIDENCED COMPLETED WORK
+
+- A02 — Arun: android-sdk retry-copy patch r2 is merged into main. EANDROID verifies the main-branch transaction and revision r2. No deadline was agreed; no deadline is invented or needed to reopen the completed work. This is separate from Leena's web-sdk merge. [M1:L03, M2:L04, EANDROID:L01]
+- A05 — Priya: The rollback-drill invitation was created and sent to the intended engineering team; the October 8 at 10:00 London slot is confirmed. Scheduling is complete. Its original “tomorrow” deadline at M1:L10 was October 6 Europe/London, date only; that calendar day has passed, but completed work is not overdue. This does not complete Nico's execution commitment. [M1:L10, M2:L05, EINVITE:L01–L02]
+
+CANCELLED WORK
+
+- A08 — Maya: The live-device walkthrough guide v1 was cancelled without a replacement. Its original “by today” deadline at M1:L13 was October 5 America/Los_Angeles, date only, and has passed. Cancellation means no next step and no confirmed overdue work. [M1:L13, M2:L09]
+
+NOT AGREED / NO NEW ACTION
+
+- Jules's live timeout chart for the debug screen remains a suggestion. It is distinct from the committed icon-sprite export. [M1:L07]
+- Omar's offer to cover the web merge was never accepted. [M2:L02]
+- Retaining the current telemetry enum IDs is a decision explicitly creating no migration or implementation work. [M1:L08]
+
+CUTOFF AND SOURCE LIMITS
+
+This handoff uses only M1, M2, M3 and the seven supplied artifact records received by 2026-10-07T00:30:00Z. The people glossary is identity metadata. M4, received at 00:45Z, is excluded in full, including Leena's correction and Noor's allegation that the matrix finished at 00:20Z. Claims about earlier events do not override the received-time cutoff.
+
+The packet is all available evidence, not a guarantee that every real-world event is visible. No external links were retrieved, no people were contacted, and no live records were changed. Missing merge evidence does not prove a merge did not happen; an inaccessible trace does not prove it is absent. Only the matrix is confirmed overdue under the latest admissible reports. Date-only deadlines have no invented time; known dates are evaluated in their original local calendars.

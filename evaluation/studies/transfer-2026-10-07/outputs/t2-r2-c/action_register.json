@@ -1,0 +1,452 @@
+{
+  "as_of": "2026-10-07T00:30:00+00:00",
+  "source_coverage": {
+    "included_records": [
+      "M1",
+      "M2",
+      "M3",
+      "EWEB",
+      "EANDROID",
+      "EINVITE",
+      "ERUN_A",
+      "ERUN_B",
+      "ETRACE",
+      "EICONS"
+    ],
+    "excluded_records": [
+      "M4"
+    ]
+  },
+  "actions": [
+    {
+      "action_id": "web-merge-r3",
+      "title": "Merge web-sdk retry-copy patch r3 into main",
+      "completion_condition": "The web-sdk main branch contains the merged retry-copy patch revision r3; approval or a complete review diff alone is insufficient.",
+      "origin_refs": [
+        "M1:L02"
+      ],
+      "source_refs": [
+        "M1:L02",
+        "M1:L04",
+        "M2:L01",
+        "M2:L02",
+        "M2:L03",
+        "M3:L06",
+        "EWEB:L01",
+        "EWEB:L02"
+      ],
+      "owner": {
+        "display_name": "Leena",
+        "person_id": "p-leena",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "tomorrow, using my America/Los_Angeles calendar",
+        "source_ref": "M1:L02",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": null,
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "partial_result",
+      "dependencies": [],
+      "due_date_passed": false,
+      "overdue_confirmed": false,
+      "next_step": "Obtain a main-branch merge record verifying web-sdk retry-copy r3. Leena maintains the completion claim, but the supplied approved review diff establishes neither the claimed merge nor its absence."
+    },
+    {
+      "action_id": "android-merge-r2",
+      "title": "Merge android-sdk retry-copy patch r2 into main",
+      "completion_condition": "The android-sdk main branch contains the merged retry-copy patch revision r2.",
+      "origin_refs": [
+        "M1:L03"
+      ],
+      "source_refs": [
+        "M1:L03",
+        "M2:L04",
+        "EANDROID:L01"
+      ],
+      "owner": {
+        "display_name": "Arun",
+        "person_id": "p-arun",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": null,
+        "source_ref": null,
+        "resolution": "unset",
+        "date": null,
+        "time": null,
+        "timezone": null
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "completion_supported",
+      "dependencies": [],
+      "due_date_passed": null,
+      "overdue_confirmed": false,
+      "next_step": null
+    },
+    {
+      "action_id": "cli-glossary-v1",
+      "title": "Prepare the cli protocol-error glossary v1",
+      "completion_condition": "A complete cli protocol-error glossary v1 draft is prepared before protocol review; publication is outside this commitment.",
+      "origin_refs": [
+        "M1:L05",
+        "M1:L06"
+      ],
+      "source_refs": [
+        "M1:L05",
+        "M1:L06"
+      ],
+      "owner": {
+        "display_name": null,
+        "person_id": null,
+        "resolution": "unassigned"
+      },
+      "due": {
+        "wording": "before protocol review",
+        "source_ref": "M1:L05",
+        "resolution": "event_relative",
+        "date": null,
+        "time": null,
+        "timezone": "Europe/London"
+      },
+      "reported_status": "open",
+      "evidence_status": "no_result",
+      "dependencies": [],
+      "due_date_passed": null,
+      "overdue_confirmed": false,
+      "next_step": "Assign an owner and establish when protocol review will occur, then prepare the complete glossary draft before that event. No review date or completed draft is supplied."
+    },
+    {
+      "action_id": "worker-trace-v4",
+      "title": "Place the complete worker retry-cap trace v4 in the team evidence folder",
+      "completion_condition": "The complete worker retry-cap trace revision v4 is present and accessible in the team evidence folder.",
+      "origin_refs": [
+        "M1:L09"
+      ],
+      "source_refs": [
+        "M1:L09",
+        "M3:L01",
+        "M3:L02",
+        "ETRACE:L01"
+      ],
+      "owner": {
+        "display_name": "Sam",
+        "person_id": null,
+        "resolution": "ambiguous"
+      },
+      "due": {
+        "wording": "by next Friday, on my America/Los_Angeles calendar",
+        "source_ref": "M1:L09",
+        "resolution": "ambiguous",
+        "date": null,
+        "time": null,
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "inaccessible",
+      "dependencies": [],
+      "due_date_passed": null,
+      "overdue_confirmed": false,
+      "next_step": "Resolve which Sam owns the commitment and whether the original next-Friday deadline means October 9 or October 16. Obtain accessible trace v4 contents and verify completeness and access in the team evidence folder; the inaccessible folder reference cannot settle completion."
+    },
+    {
+      "action_id": "rollback-invitation",
+      "title": "Create and send the team invitation for the rollback drill",
+      "completion_condition": "The rollback drill calendar invitation is created and sent to the intended engineering team.",
+      "origin_refs": [
+        "M1:L10"
+      ],
+      "source_refs": [
+        "M1:L10",
+        "M2:L05",
+        "EINVITE:L01",
+        "EINVITE:L02"
+      ],
+      "owner": {
+        "display_name": "Priya",
+        "person_id": "p-priya",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "tomorrow, using this London date",
+        "source_ref": "M1:L10",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": null,
+        "timezone": "Europe/London"
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "completion_supported",
+      "dependencies": [],
+      "due_date_passed": true,
+      "overdue_confirmed": false,
+      "next_step": null
+    },
+    {
+      "action_id": "rollback-drill",
+      "title": "Execute the rollback drill and obtain reviewer acknowledgment",
+      "completion_condition": "After the invitation prerequisite, execute the four-probe rollback drill and provide its executed drill log acknowledged by the reviewer; a calendar slot does not fulfill execution.",
+      "origin_refs": [
+        "M1:L11"
+      ],
+      "source_refs": [
+        "M1:L11",
+        "M2:L06",
+        "EINVITE:L01",
+        "EINVITE:L02"
+      ],
+      "owner": {
+        "display_name": "Nico",
+        "person_id": "p-nico",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "Thursday, October 8 at 10:00 Europe/London",
+        "source_ref": "M1:L11",
+        "resolution": "resolved",
+        "date": "2026-10-08",
+        "time": "10:00",
+        "timezone": "Europe/London"
+      },
+      "reported_status": "open",
+      "evidence_status": "no_result",
+      "dependencies": [
+        "rollback-invitation"
+      ],
+      "due_date_passed": false,
+      "overdue_confirmed": false,
+      "next_step": "The invitation prerequisite is complete. Execute the four-probe drill at the agreed time, retain its log and obtain reviewer acknowledgment; Nico reports that it has not yet run."
+    },
+    {
+      "action_id": "enum-compat-r5",
+      "title": "Prepare enum-compat report r5 with both assertions passing",
+      "completion_condition": "The authoritative release result for enum-compat report revision r5 shows both web and Android assertions passing.",
+      "origin_refs": [
+        "M1:L12"
+      ],
+      "source_refs": [
+        "M1:L12",
+        "M2:L10",
+        "ERUN_A:L01",
+        "ERUN_B:L01"
+      ],
+      "owner": {
+        "display_name": "Teo",
+        "person_id": "p-teo",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "by noon tomorrow on my America/Los_Angeles calendar",
+        "source_ref": "M1:L12",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": "12:00",
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "conflicting",
+      "dependencies": [],
+      "due_date_passed": true,
+      "overdue_confirmed": false,
+      "next_step": "Identify the release snapshot and establish which report is authoritative, reconciling the Android PASS in ERUN_A with FAIL in ERUN_B. Verify both assertions passing for the committed r5 release result; the later timestamp does not decide the conflict."
+    },
+    {
+      "action_id": "live-device-guide-v1",
+      "title": "Prepare the live-device walkthrough guide v1",
+      "completion_condition": "A complete live-device walkthrough guide revision v1 would have satisfied the original commitment; the lead subsequently cancelled delivery without a replacement.",
+      "origin_refs": [
+        "M1:L13"
+      ],
+      "source_refs": [
+        "M1:L13",
+        "M2:L09"
+      ],
+      "owner": {
+        "display_name": "Maya",
+        "person_id": "p-maya",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "by today on my America/Los_Angeles calendar",
+        "source_ref": "M1:L13",
+        "resolution": "resolved",
+        "date": "2026-10-05",
+        "time": null,
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "cancelled",
+      "evidence_status": "no_result",
+      "dependencies": [],
+      "due_date_passed": true,
+      "overdue_confirmed": false,
+      "next_step": null
+    },
+    {
+      "action_id": "interface-matrix-v3",
+      "title": "Prepare the full interface compatibility matrix v3",
+      "completion_condition": "The full interface compatibility matrix revision v3 is prepared; preparation is the whole deliverable.",
+      "origin_refs": [
+        "M2:L07"
+      ],
+      "source_refs": [
+        "M2:L07",
+        "M3:L03",
+        "M3:L04"
+      ],
+      "owner": {
+        "display_name": "Noor",
+        "person_id": "p-noor",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "by today, October 6, on this Europe/London calendar",
+        "source_ref": "M2:L07",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": null,
+        "timezone": "Europe/London"
+      },
+      "reported_status": "open",
+      "evidence_status": "no_result",
+      "dependencies": [],
+      "due_date_passed": true,
+      "overdue_confirmed": true,
+      "next_step": "Noor accepted the transfer from Zoe with the original October 6 London deadline and reports it is not started. Complete the full v3 matrix; the deadline has passed and no finished matrix is supplied."
+    },
+    {
+      "action_id": "debug-sprite-v2",
+      "title": "Export all three sizes of the web debug icon sprite v2",
+      "completion_condition": "The web debug icon sprite revision v2 is exported in all three agreed sizes: 16px, 24px and 32px.",
+      "origin_refs": [
+        "M2:L08"
+      ],
+      "source_refs": [
+        "M2:L08",
+        "M3:L05",
+        "EICONS:L01"
+      ],
+      "owner": {
+        "display_name": "Jules",
+        "person_id": "p-jules",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "by today on my America/Los_Angeles calendar",
+        "source_ref": "M2:L08",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": null,
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "in_progress",
+      "evidence_status": "partial_result",
+      "dependencies": [],
+      "due_date_passed": false,
+      "overdue_confirmed": false,
+      "next_step": "Finish and supply the missing 32px sprite export alongside the supplied 16px and 24px versions. The October 6 Los Angeles date-only deadline has not passed at the cutoff."
+    }
+  ],
+  "not_actions": [
+    {
+      "source_ref": "M1:L07",
+      "reason": "suggestion",
+      "explanation": "The live timeout chart is a tentative idea with no accepted assignment or group commitment. Jules later commits to a separate icon-sprite deliverable."
+    },
+    {
+      "source_ref": "M1:L08",
+      "reason": "decision_only",
+      "explanation": "Retaining existing telemetry enum IDs explicitly creates no migration or implementation work."
+    },
+    {
+      "source_ref": "M2:L02",
+      "reason": "unaccepted_offer",
+      "explanation": "Omar offers to cover the web merge, but no acceptance or reassignment is supplied. Leena remains the owner."
+    },
+    {
+      "source_ref": "M4:L01",
+      "reason": "after_cutoff",
+      "explanation": "This record was received at 2026-10-07T00:45:00Z, after the cutoff, so its web-merge correction is excluded from the as-of state."
+    },
+    {
+      "source_ref": "M4:L02",
+      "reason": "after_cutoff",
+      "explanation": "This record was received at 2026-10-07T00:45:00Z, after the cutoff. Its retrospective matrix-completion claim is excluded even though it alleges a pre-cutoff event."
+    }
+  ],
+  "clarifications": [
+    {
+      "action_id": "web-merge-r3",
+      "kind": "completion_evidence",
+      "source_refs": [
+        "M1:L02",
+        "M2:L03",
+        "M3:L06",
+        "EWEB:L01",
+        "EWEB:L02"
+      ],
+      "question": "Can a main-branch merge receipt verify that web-sdk retry-copy r3 was merged? The supplied review snapshot and maintained completion claim do not establish that result or establish its absence."
+    },
+    {
+      "action_id": "cli-glossary-v1",
+      "kind": "owner",
+      "source_refs": [
+        "M1:L05",
+        "M1:L06"
+      ],
+      "question": "Who will accept ownership of preparing the committed cli protocol-error glossary v1 draft?"
+    },
+    {
+      "action_id": "cli-glossary-v1",
+      "kind": "date",
+      "source_refs": [
+        "M1:L05",
+        "M1:L06"
+      ],
+      "question": "When will protocol review occur, so the agreed before-review deadline can be given a calendar date?"
+    },
+    {
+      "action_id": "worker-trace-v4",
+      "kind": "identity",
+      "source_refs": [
+        "M1:L09",
+        "M3:L01",
+        "M3:L02",
+        "ETRACE:L01"
+      ],
+      "question": "Which glossary account, Sam Park or Sam Rao, belongs to the speaker who owns and reported posting trace v4? Mira cannot verify her suspicion, and the artifact supplies no uploader identity."
+    },
+    {
+      "action_id": "worker-trace-v4",
+      "kind": "date",
+      "source_refs": [
+        "M1:L09",
+        "M3:L02"
+      ],
+      "question": "Did next Friday in the original October 5 commitment mean October 9 or October 16 on the America/Los_Angeles calendar? No team convention establishes either date."
+    },
+    {
+      "action_id": "worker-trace-v4",
+      "kind": "completion_evidence",
+      "source_refs": [
+        "M1:L09",
+        "M3:L01",
+        "ETRACE:L01"
+      ],
+      "question": "Can the complete worker retry-cap trace v4 and its accessibility in the team evidence folder be verified? The supplied folder reference is inaccessible and proves neither completion nor non-completion."
+    },
+    {
+      "action_id": "enum-compat-r5",
+      "kind": "conflicting_evidence",
+      "source_refs": [
+        "M1:L12",
+        "M2:L10",
+        "ERUN_A:L01",
+        "ERUN_B:L01"
+      ],
+      "question": "Which release snapshot and run are authoritative for enum-compat r5, and how will the conflicting Android PASS/FAIL results be reconciled to establish both required assertions passing? Neither run is designated authoritative, and recency is not a tie-breaker."
+    }
+  ]
+}

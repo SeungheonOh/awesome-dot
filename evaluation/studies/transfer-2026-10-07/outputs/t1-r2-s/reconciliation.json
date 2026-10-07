@@ -1,0 +1,333 @@
+{
+  "scope": "observed_extract",
+  "parameters": {
+    "report_start": "2026-09-01",
+    "report_end": "2026-10-01",
+    "as_of": "2026-09-30T18:00:00Z"
+  },
+  "partitions": [
+    {
+      "tenant": "alder",
+      "currency": "USD",
+      "observed_workloads": 4,
+      "expected_workloads": 5,
+      "missing_workloads": 1,
+      "observed_base_cents": 10000,
+      "control_base_cents": 15000,
+      "base_delta_cents": -5000,
+      "population_complete": false,
+      "known_net_workloads": 1,
+      "unknown_net_workloads": 3,
+      "known_net_subtotal_cents": 1800,
+      "observed_net_cents": null,
+      "full_net_cents": null
+    },
+    {
+      "tenant": "birch",
+      "currency": "USD",
+      "observed_workloads": 3,
+      "expected_workloads": 3,
+      "missing_workloads": 0,
+      "observed_base_cents": 6000,
+      "control_base_cents": 6000,
+      "base_delta_cents": 0,
+      "population_complete": true,
+      "known_net_workloads": 1,
+      "unknown_net_workloads": 2,
+      "known_net_subtotal_cents": 2500,
+      "observed_net_cents": null,
+      "full_net_cents": null
+    },
+    {
+      "tenant": "cedar",
+      "currency": "EUR",
+      "observed_workloads": 4,
+      "expected_workloads": 4,
+      "missing_workloads": 0,
+      "observed_base_cents": 8000,
+      "control_base_cents": 8000,
+      "base_delta_cents": 0,
+      "population_complete": true,
+      "known_net_workloads": 1,
+      "unknown_net_workloads": 3,
+      "known_net_subtotal_cents": 990,
+      "observed_net_cents": null,
+      "full_net_cents": null
+    },
+    {
+      "tenant": "dogwood",
+      "currency": "USD",
+      "observed_workloads": 0,
+      "expected_workloads": 0,
+      "missing_workloads": 0,
+      "observed_base_cents": 0,
+      "control_base_cents": 0,
+      "base_delta_cents": 0,
+      "population_complete": true,
+      "known_net_workloads": 0,
+      "unknown_net_workloads": 0,
+      "known_net_subtotal_cents": 0,
+      "observed_net_cents": 0,
+      "full_net_cents": 0
+    },
+    {
+      "tenant": "elm",
+      "currency": "USD",
+      "observed_workloads": 2,
+      "expected_workloads": 2,
+      "missing_workloads": 0,
+      "observed_base_cents": 1200,
+      "control_base_cents": 1200,
+      "base_delta_cents": 0,
+      "population_complete": true,
+      "known_net_workloads": 2,
+      "unknown_net_workloads": 0,
+      "known_net_subtotal_cents": 1275,
+      "observed_net_cents": 1275,
+      "full_net_cents": 1275
+    }
+  ],
+  "feed_checks": [
+    {
+      "stream": "charges",
+      "currency": "USD",
+      "observed_rows": 15,
+      "observed_null_amount_rows": 1,
+      "observed_known_subtotal_cents": 4138,
+      "control_rows": 16,
+      "control_null_amount_rows": 1,
+      "control_known_subtotal_cents": 4258,
+      "rows_delta": -1,
+      "null_rows_delta": 0,
+      "known_subtotal_delta_cents": -120
+    },
+    {
+      "stream": "charges",
+      "currency": "EUR",
+      "observed_rows": 5,
+      "observed_null_amount_rows": 1,
+      "observed_known_subtotal_cents": 400,
+      "control_rows": 5,
+      "control_null_amount_rows": 1,
+      "control_known_subtotal_cents": 400,
+      "rows_delta": 0,
+      "null_rows_delta": 0,
+      "known_subtotal_delta_cents": 0
+    },
+    {
+      "stream": "credits",
+      "currency": "USD",
+      "observed_rows": 10,
+      "observed_null_amount_rows": 1,
+      "observed_known_subtotal_cents": -385,
+      "control_rows": 10,
+      "control_null_amount_rows": 1,
+      "control_known_subtotal_cents": -385,
+      "rows_delta": 0,
+      "null_rows_delta": 0,
+      "known_subtotal_delta_cents": 0
+    },
+    {
+      "stream": "credits",
+      "currency": "EUR",
+      "observed_rows": 5,
+      "observed_null_amount_rows": 0,
+      "observed_known_subtotal_cents": -130,
+      "control_rows": 5,
+      "control_null_amount_rows": 0,
+      "control_known_subtotal_cents": -130,
+      "rows_delta": 0,
+      "null_rows_delta": 0,
+      "known_subtotal_delta_cents": 0
+    }
+  ],
+  "exceptions": [
+    {
+      "stream": "charges",
+      "event_id": "c14",
+      "workload_id": "w99",
+      "currency": "USD",
+      "amount_cents": 900,
+      "reason": "orphan_key"
+    },
+    {
+      "stream": "charges",
+      "event_id": "c15",
+      "workload_id": null,
+      "currency": "USD",
+      "amount_cents": 60,
+      "reason": "missing_key"
+    },
+    {
+      "stream": "charges",
+      "event_id": "c16",
+      "workload_id": "w08",
+      "currency": "USD",
+      "amount_cents": 80,
+      "reason": "currency_mismatch"
+    },
+    {
+      "stream": "charges",
+      "event_id": "c17",
+      "workload_id": "w12",
+      "currency": "USD",
+      "amount_cents": 70,
+      "reason": "outside_cohort"
+    },
+    {
+      "stream": "charges",
+      "event_id": "c22",
+      "workload_id": "w15",
+      "currency": "USD",
+      "amount_cents": 45,
+      "reason": "outside_cohort"
+    },
+    {
+      "stream": "credits",
+      "event_id": "r11",
+      "workload_id": "w98",
+      "currency": "EUR",
+      "amount_cents": -70,
+      "reason": "orphan_key"
+    },
+    {
+      "stream": "credits",
+      "event_id": "r12",
+      "workload_id": null,
+      "currency": "USD",
+      "amount_cents": -10,
+      "reason": "missing_key"
+    },
+    {
+      "stream": "credits",
+      "event_id": "r13",
+      "workload_id": "w05",
+      "currency": "EUR",
+      "amount_cents": -5,
+      "reason": "currency_mismatch"
+    },
+    {
+      "stream": "credits",
+      "event_id": "r14",
+      "workload_id": "w13",
+      "currency": "USD",
+      "amount_cents": -10,
+      "reason": "outside_cohort"
+    }
+  ],
+  "unknowns": [
+    {
+      "workload_id": "w02",
+      "stream": "charges",
+      "reasons": [
+        "null_amount"
+      ]
+    },
+    {
+      "workload_id": "w03",
+      "stream": "charges",
+      "reasons": [
+        "partial_coverage"
+      ]
+    },
+    {
+      "workload_id": "w04",
+      "stream": "charges",
+      "reasons": [
+        "partial_coverage"
+      ]
+    },
+    {
+      "workload_id": "w05",
+      "stream": "credits",
+      "reasons": [
+        "currency_mismatch"
+      ]
+    },
+    {
+      "workload_id": "w07",
+      "stream": "credits",
+      "reasons": [
+        "null_amount"
+      ]
+    },
+    {
+      "workload_id": "w08",
+      "stream": "charges",
+      "reasons": [
+        "currency_mismatch"
+      ]
+    },
+    {
+      "workload_id": "w10",
+      "stream": "charges",
+      "reasons": [
+        "null_amount"
+      ]
+    },
+    {
+      "workload_id": "w11",
+      "stream": "credits",
+      "reasons": [
+        "missing_coverage"
+      ]
+    }
+  ],
+  "method": {
+    "snapshot": "RX-2026-09-30",
+    "grain": "One observed eligible workload per SQL row; tenant/currency partition summaries.",
+    "population": "status=active; report_start <= started_on < report_end; posted_at <= as_of",
+    "events": "status=final; effective_on <= UTC date of as_of; posted_at <= as_of; no cohort-interval event restriction",
+    "units": "Signed integer cents in source currency; credits are added; no currency conversion.",
+    "known_total": "Complete workload-stream coverage, no same-currency null amounts, and no eligible wrong-currency events on that workload stream.",
+    "sources": [
+      "inputs/source-policy.md",
+      "inputs/schema.sql",
+      "inputs/parameters.json",
+      "inputs/metering.sqlite",
+      "inputs/ledger.json"
+    ],
+    "limitations": [
+      "The alder USD workload extract is partial, with one workload and 5000 base cents missing against controls; no workload is synthesized.",
+      "The charges USD feed is short by one eligible row and 120 known-subtotal cents. Its identity, amount completeness, workload, and tenant cannot be inferred.",
+      "Partial or missing workload coverage, null amounts, and currency mismatches remain unresolved. Known subtotals are not substitutes for unknown totals.",
+      "Independent global control discrepancies do not override complete per-workload acknowledgements."
+    ]
+  },
+  "verification": {
+    "executed_on_supplied_data": true,
+    "sqlite_version": "3.53.1",
+    "query_result_rows": 13,
+    "query_matches_independent_ledger_calculation": true,
+    "database_rows_match_ledger": true,
+    "query_execution_seconds": 0.0009148579993052408,
+    "query_vm_steps_upper_bound": 6000,
+    "execution_limits": {
+      "max_seconds": 5,
+      "max_vm_steps": 10000000
+    },
+    "source_database_unchanged": true,
+    "database_connection": "Read-only immutable SQLite source; restrictive authorizer; no writes, extensions, or external functions.",
+    "functions_used": [
+      "coalesce",
+      "count",
+      "substr",
+      "sum"
+    ],
+    "checks": [
+      "Unique workload output and required schema/types",
+      "Independent Python/SQL full-row equality",
+      "Event allocation plus exceptions exactly reconciles source rows, null counts, and same-currency known subtotals",
+      "Inclusive start/cutoff, exclusive end, status and future-effective filters",
+      "Repeated equal amounts remain distinct events; each child stream aggregated separately",
+      "Complete empty streams and complete-empty control partition",
+      "Signed corrections and credits, missing/partial coverage, nulls, and currency defects",
+      "Population and feed controls reconciled independently"
+    ],
+    "unrun_scope": [
+      "Live systems",
+      "Other SQL dialects",
+      "Upstream source completeness beyond supplied evidence"
+    ]
+  }
+}

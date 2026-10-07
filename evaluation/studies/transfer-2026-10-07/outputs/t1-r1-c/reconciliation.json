@@ -1,0 +1,276 @@
+{
+  "scope": "observed_extract",
+  "parameters": {
+    "report_start": "2026-09-01",
+    "report_end": "2026-10-01",
+    "as_of": "2026-09-30T18:00:00Z"
+  },
+  "partitions": [
+    {
+      "tenant": "alder",
+      "currency": "USD",
+      "observed_workloads": 4,
+      "expected_workloads": 5,
+      "missing_workloads": 1,
+      "observed_base_cents": 10000,
+      "control_base_cents": 15000,
+      "base_delta_cents": -5000,
+      "population_complete": false,
+      "known_net_workloads": 1,
+      "unknown_net_workloads": 3,
+      "known_net_subtotal_cents": 1800,
+      "observed_net_cents": null,
+      "full_net_cents": null
+    },
+    {
+      "tenant": "birch",
+      "currency": "USD",
+      "observed_workloads": 3,
+      "expected_workloads": 3,
+      "missing_workloads": 0,
+      "observed_base_cents": 6000,
+      "control_base_cents": 6000,
+      "base_delta_cents": 0,
+      "population_complete": true,
+      "known_net_workloads": 1,
+      "unknown_net_workloads": 2,
+      "known_net_subtotal_cents": 2500,
+      "observed_net_cents": null,
+      "full_net_cents": null
+    },
+    {
+      "tenant": "cedar",
+      "currency": "EUR",
+      "observed_workloads": 4,
+      "expected_workloads": 4,
+      "missing_workloads": 0,
+      "observed_base_cents": 8000,
+      "control_base_cents": 8000,
+      "base_delta_cents": 0,
+      "population_complete": true,
+      "known_net_workloads": 1,
+      "unknown_net_workloads": 3,
+      "known_net_subtotal_cents": 990,
+      "observed_net_cents": null,
+      "full_net_cents": null
+    },
+    {
+      "tenant": "dogwood",
+      "currency": "USD",
+      "observed_workloads": 0,
+      "expected_workloads": 0,
+      "missing_workloads": 0,
+      "observed_base_cents": 0,
+      "control_base_cents": 0,
+      "base_delta_cents": 0,
+      "population_complete": true,
+      "known_net_workloads": 0,
+      "unknown_net_workloads": 0,
+      "known_net_subtotal_cents": 0,
+      "observed_net_cents": 0,
+      "full_net_cents": 0
+    },
+    {
+      "tenant": "elm",
+      "currency": "USD",
+      "observed_workloads": 2,
+      "expected_workloads": 2,
+      "missing_workloads": 0,
+      "observed_base_cents": 1200,
+      "control_base_cents": 1200,
+      "base_delta_cents": 0,
+      "population_complete": true,
+      "known_net_workloads": 2,
+      "unknown_net_workloads": 0,
+      "known_net_subtotal_cents": 1275,
+      "observed_net_cents": 1275,
+      "full_net_cents": 1275
+    }
+  ],
+  "feed_checks": [
+    {
+      "stream": "charges",
+      "currency": "USD",
+      "observed_rows": 15,
+      "observed_null_amount_rows": 1,
+      "observed_known_subtotal_cents": 4138,
+      "control_rows": 16,
+      "control_null_amount_rows": 1,
+      "control_known_subtotal_cents": 4258,
+      "rows_delta": -1,
+      "null_rows_delta": 0,
+      "known_subtotal_delta_cents": -120
+    },
+    {
+      "stream": "charges",
+      "currency": "EUR",
+      "observed_rows": 5,
+      "observed_null_amount_rows": 1,
+      "observed_known_subtotal_cents": 400,
+      "control_rows": 5,
+      "control_null_amount_rows": 1,
+      "control_known_subtotal_cents": 400,
+      "rows_delta": 0,
+      "null_rows_delta": 0,
+      "known_subtotal_delta_cents": 0
+    },
+    {
+      "stream": "credits",
+      "currency": "USD",
+      "observed_rows": 10,
+      "observed_null_amount_rows": 1,
+      "observed_known_subtotal_cents": -385,
+      "control_rows": 10,
+      "control_null_amount_rows": 1,
+      "control_known_subtotal_cents": -385,
+      "rows_delta": 0,
+      "null_rows_delta": 0,
+      "known_subtotal_delta_cents": 0
+    },
+    {
+      "stream": "credits",
+      "currency": "EUR",
+      "observed_rows": 5,
+      "observed_null_amount_rows": 0,
+      "observed_known_subtotal_cents": -130,
+      "control_rows": 5,
+      "control_null_amount_rows": 0,
+      "control_known_subtotal_cents": -130,
+      "rows_delta": 0,
+      "null_rows_delta": 0,
+      "known_subtotal_delta_cents": 0
+    }
+  ],
+  "exceptions": [
+    {
+      "stream": "charges",
+      "event_id": "c14",
+      "workload_id": "w99",
+      "currency": "USD",
+      "amount_cents": 900,
+      "reason": "orphan_key"
+    },
+    {
+      "stream": "charges",
+      "event_id": "c15",
+      "workload_id": null,
+      "currency": "USD",
+      "amount_cents": 60,
+      "reason": "missing_key"
+    },
+    {
+      "stream": "charges",
+      "event_id": "c16",
+      "workload_id": "w08",
+      "currency": "USD",
+      "amount_cents": 80,
+      "reason": "currency_mismatch"
+    },
+    {
+      "stream": "charges",
+      "event_id": "c17",
+      "workload_id": "w12",
+      "currency": "USD",
+      "amount_cents": 70,
+      "reason": "outside_cohort"
+    },
+    {
+      "stream": "charges",
+      "event_id": "c22",
+      "workload_id": "w15",
+      "currency": "USD",
+      "amount_cents": 45,
+      "reason": "outside_cohort"
+    },
+    {
+      "stream": "credits",
+      "event_id": "r11",
+      "workload_id": "w98",
+      "currency": "EUR",
+      "amount_cents": -70,
+      "reason": "orphan_key"
+    },
+    {
+      "stream": "credits",
+      "event_id": "r12",
+      "workload_id": null,
+      "currency": "USD",
+      "amount_cents": -10,
+      "reason": "missing_key"
+    },
+    {
+      "stream": "credits",
+      "event_id": "r13",
+      "workload_id": "w05",
+      "currency": "EUR",
+      "amount_cents": -5,
+      "reason": "currency_mismatch"
+    },
+    {
+      "stream": "credits",
+      "event_id": "r14",
+      "workload_id": "w13",
+      "currency": "USD",
+      "amount_cents": -10,
+      "reason": "outside_cohort"
+    }
+  ],
+  "unknowns": [
+    {
+      "workload_id": "w02",
+      "stream": "charges",
+      "reasons": [
+        "null_amount"
+      ]
+    },
+    {
+      "workload_id": "w03",
+      "stream": "charges",
+      "reasons": [
+        "partial_coverage"
+      ]
+    },
+    {
+      "workload_id": "w04",
+      "stream": "charges",
+      "reasons": [
+        "partial_coverage"
+      ]
+    },
+    {
+      "workload_id": "w05",
+      "stream": "credits",
+      "reasons": [
+        "currency_mismatch"
+      ]
+    },
+    {
+      "workload_id": "w07",
+      "stream": "credits",
+      "reasons": [
+        "null_amount"
+      ]
+    },
+    {
+      "workload_id": "w08",
+      "stream": "charges",
+      "reasons": [
+        "currency_mismatch"
+      ]
+    },
+    {
+      "workload_id": "w10",
+      "stream": "charges",
+      "reasons": [
+        "null_amount"
+      ]
+    },
+    {
+      "workload_id": "w11",
+      "stream": "credits",
+      "reasons": [
+        "missing_coverage"
+      ]
+    }
+  ]
+}
