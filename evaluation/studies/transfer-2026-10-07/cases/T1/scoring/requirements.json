@@ -1,0 +1,91 @@
+{
+  "case": "T1",
+  "requirements": [
+    {
+      "id": "execution",
+      "description": "One read-only bounded SQLite query executes against the protected public fixture",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "schema_types",
+      "description": "Exact required SQL fields, text keys, integer values and nullable total fields",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "cohort",
+      "description": "Each eligible observed workload once; correct tenant, currency and base value",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "charge_observed",
+      "description": "Allocated charge row counts, null counts and known signed subtotals",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "credit_observed",
+      "description": "Allocated credit row counts, null counts and known signed subtotals",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "charge_total",
+      "description": "Correct known flag and NULL/zero/value distinction for charge coverage, nulls and currency defects",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "credit_total",
+      "description": "Correct known flag and NULL/zero/value distinction for credit coverage, nulls and currency defects",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "net",
+      "description": "Workload signed net only if both streams are known",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "scope_parameters",
+      "description": "Machine-readable observed-extract scope and exact public parameters",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "population_controls",
+      "description": "Every control partition, independent counts/base deltas, and supported population-complete flag",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "partition_net",
+      "description": "Known/unknown workload counts, partial subtotal, observed/full totals, including empty and known nonempty partitions",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "feed_controls",
+      "description": "Entire eligible feed counts/nulls/known subtotals and independent control deltas separately per stream/currency",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "exceptions",
+      "description": "Retain every eligible unallocated event with original values and correct precedence-based reason",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    },
+    {
+      "id": "unknowns",
+      "description": "Every affected workload-stream with all supported reasons; no invented unknowns",
+      "weight": 1,
+      "source": "candidate/TASK.md and candidate/inputs/source-policy.md"
+    }
+  ],
+  "mechanical_checks_only": true,
+  "unassessed_policy": "Execution failure leaves dependent SQL requirements unknown; unavailable/invalid JSON fails scope_parameters and leaves dependent JSON requirements unknown. Structured mismatches fail their declared checks. Unknowns remain in scheduled denominators."
+}

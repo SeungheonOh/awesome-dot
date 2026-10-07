@@ -1,0 +1,409 @@
+{
+  "case_id": "T2",
+  "version": "2.0",
+  "synthetic": true,
+  "matching": "Match outputs by origin_refs sets, not action_id or free-text titles. Exactly the discovered committed outcomes must be present. All expectations are visible in the candidate task and sources.",
+  "checks": [
+    {
+      "id": "T2-01",
+      "title": "Required schema and handoff presence",
+      "acceptance": "Bounded safe JSON/text reads, field types, recognized enums, nonempty descriptions and next steps for live work; prose meaning is not certified.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-02",
+      "title": "Commitment discovery and outcome boundaries",
+      "acceptance": "Exactly the ten independently derived origin-ref groups; no suggested/decision-only/invented work and no merged or split independent outcomes.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-03",
+      "title": "Repeat handling and evidence provenance",
+      "acceptance": "Sufficient original, repeat, final-state and evidence references are retained. Explicit summaries may substitute for redundant evidence citations; unrelated or after-cutoff refs are rejected.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-04",
+      "title": "Non-actions and cutoff exclusion",
+      "acceptance": "The unaccepted suggestion/offer, non-action decision and both after-cutoff lines are recorded with their proper dispositions.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-05",
+      "title": "Grounded accountability",
+      "acceptance": "Identified owners match; Noor acceptance supersedes Zoe; Omar offer does not supersede Leena; unresolved Sam and unassigned glossary stay distinct.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-06",
+      "title": "Local and unknown deadlines",
+      "acceptance": "Original source wording is preserved as a nonempty quotation; original source refs, date/time/timezone/resolution agree. Phrase punctuation or inclusion of surrounding date text may vary. The glossary event-relative timezone may be null or Europe/London, with calendar date/time remaining null.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-07",
+      "title": "Reported state",
+      "acceptance": "Reported completion, explicit incompletion, in-progress work and cancellation are correctly attributed.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-08",
+      "title": "Evidence state",
+      "acceptance": "Review differs from merge; invitation differs from execution; inaccessible trace, conflicting r5 reports and partial icon export retain their evidence limits.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-09",
+      "title": "Immediate prerequisites",
+      "acceptance": "The drill depends on the scheduling action even though scheduling is already complete; no other action prerequisites are invented.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-10",
+      "title": "Deadline-passed versus proven lateness",
+      "acceptance": "Local calendar/timed comparisons are correct and only the incomplete matrix is confirmed overdue.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-11",
+      "title": "Source coverage and cutoff",
+      "acceptance": "Included/excluded records and cutoff agree; late correction and alleged earlier completion do not leak into admissible state.",
+      "mode": "objective"
+    },
+    {
+      "id": "T2-12",
+      "title": "Specific unresolved questions",
+      "acceptance": "Expected identity, owner, date, missing-completion-evidence and conflict questions target the correct discovered action and valid relevant refs. Clarifications are required for live work; a grounded Android/date clarification is accepted but optional for the completed undated work.",
+      "mode": "objective"
+    }
+  ],
+  "limitations": [
+    "No semantic claim is made about title, completion_condition, next_step, explanation, question, or handoff prose beyond schema/nonempty presence. A structurally correct but misleading prose artifact can pass objective checks; review it separately before real-world use.",
+    "This is one synthetic transfer fixture, not evidence of guide efficacy or external-service operation.",
+    "References are a constrained exact interface; natural-language equivalents are accepted only in free text, not source identifiers, person IDs or enumerations."
+  ],
+  "scope_keys_private": {
+    "web": [
+      "M1:L02"
+    ],
+    "android": [
+      "M1:L03"
+    ],
+    "glossary": [
+      "M1:L05",
+      "M1:L06"
+    ],
+    "trace": [
+      "M1:L09"
+    ],
+    "invite": [
+      "M1:L10"
+    ],
+    "drill": [
+      "M1:L11"
+    ],
+    "enum": [
+      "M1:L12"
+    ],
+    "guide": [
+      "M1:L13"
+    ],
+    "matrix": [
+      "M2:L07"
+    ],
+    "icons": [
+      "M2:L08"
+    ]
+  },
+  "allowed_extra_refs": {
+    "glossary": [
+      "M1:L01"
+    ],
+    "web": [
+      "M1:L01"
+    ],
+    "android": [
+      "M1:L01"
+    ],
+    "trace": [
+      "M1:L01"
+    ],
+    "invite": [
+      "M1:L01",
+      "M1:L11",
+      "M2:L06"
+    ],
+    "drill": [
+      "M1:L01",
+      "M1:L10",
+      "M2:L05"
+    ],
+    "enum": [
+      "M1:L01",
+      "M1:L08"
+    ],
+    "guide": [
+      "M1:L01"
+    ],
+    "matrix": [
+      "M1:L01"
+    ],
+    "icons": [
+      "M1:L01",
+      "M1:L07"
+    ]
+  },
+  "due_wording_rule": "Check a nonempty case/punctuation-insensitive contiguous phrase from the original source line that includes a recognized original date expression; no exact prose match is required.",
+  "clarification_evidence_options": {
+    "web|completion_evidence": [
+      [
+        "M3:L06"
+      ],
+      [
+        "EWEB:L02"
+      ]
+    ],
+    "glossary|owner": [
+      [
+        "M1:L06"
+      ]
+    ],
+    "glossary|date": [
+      [
+        "M1:L05"
+      ],
+      [
+        "M1:L06"
+      ]
+    ],
+    "trace|identity": [
+      [
+        "M1:L09"
+      ],
+      [
+        "M3:L01"
+      ],
+      [
+        "M3:L02"
+      ],
+      [
+        "ETRACE:L01"
+      ]
+    ],
+    "trace|date": [
+      [
+        "M1:L09"
+      ],
+      [
+        "M3:L02"
+      ]
+    ],
+    "trace|completion_evidence": [
+      [
+        "ETRACE:L01"
+      ]
+    ],
+    "enum|conflicting_evidence": [
+      [
+        "M2:L10"
+      ],
+      [
+        "ERUN_A:L01",
+        "ERUN_B:L01"
+      ]
+    ],
+    "android|date": [
+      [
+        "M1:L03"
+      ]
+    ]
+  },
+  "citation_options": {
+    "web": [
+      [
+        "M1:L02"
+      ],
+      [
+        "M1:L04",
+        "M2:L01"
+      ],
+      [
+        "M2:L03",
+        "M3:L06"
+      ],
+      [
+        "EWEB:L01"
+      ],
+      [
+        "EWEB:L02",
+        "M3:L06"
+      ]
+    ],
+    "android": [
+      [
+        "M1:L03"
+      ],
+      [
+        "M2:L04"
+      ],
+      [
+        "EANDROID:L01"
+      ]
+    ],
+    "glossary": [
+      [
+        "M1:L05"
+      ],
+      [
+        "M1:L06"
+      ]
+    ],
+    "trace": [
+      [
+        "M1:L09"
+      ],
+      [
+        "M3:L01"
+      ],
+      [
+        "ETRACE:L01"
+      ]
+    ],
+    "invite": [
+      [
+        "M1:L10"
+      ],
+      [
+        "M2:L05",
+        "EINVITE:L01"
+      ]
+    ],
+    "drill": [
+      [
+        "M1:L11"
+      ],
+      [
+        "M2:L06"
+      ],
+      [
+        "EINVITE:L01",
+        "M2:L05"
+      ]
+    ],
+    "enum": [
+      [
+        "M1:L12"
+      ],
+      [
+        "M2:L10"
+      ]
+    ],
+    "guide": [
+      [
+        "M1:L13"
+      ],
+      [
+        "M2:L09"
+      ]
+    ],
+    "matrix": [
+      [
+        "M2:L07"
+      ],
+      [
+        "M3:L04"
+      ]
+    ],
+    "icons": [
+      [
+        "M2:L08"
+      ],
+      [
+        "M3:L05"
+      ],
+      [
+        "EICONS:L01",
+        "M3:L05"
+      ]
+    ]
+  },
+  "citation_rule": "Each inner citation-options list is an any-of evidence alternative; satisfy every group. Additional relevant refs from the full oracle and allowed-extra sets are accepted. These choices deliberately accept source summaries that establish the same facts. No exact exhaustive source-ref set is required.",
+  "accounting": "All 12 checks remain scheduled. Unsafe, unreadable or structurally invalid outputs fail T2-01; dependent checks remain unknown/unassessed. A trusted-package hash failure prevents grading and leaves every check unknown. Only 12 passes establish all-requirements-met.",
+  "relevant_refs": {
+    "web": [
+      "M1:L02",
+      "M1:L04",
+      "M2:L01",
+      "M2:L02",
+      "M2:L03",
+      "M3:L06",
+      "EWEB:L01",
+      "EWEB:L02"
+    ],
+    "android": [
+      "M1:L03",
+      "M2:L04",
+      "EANDROID:L01"
+    ],
+    "glossary": [
+      "M1:L05",
+      "M1:L06"
+    ],
+    "trace": [
+      "M1:L09",
+      "M3:L01",
+      "M3:L02",
+      "ETRACE:L01"
+    ],
+    "invite": [
+      "M1:L10",
+      "M2:L05",
+      "EINVITE:L01",
+      "EINVITE:L02"
+    ],
+    "drill": [
+      "M1:L11",
+      "M2:L06",
+      "EINVITE:L01",
+      "EINVITE:L02"
+    ],
+    "enum": [
+      "M1:L12",
+      "M2:L10",
+      "ERUN_A:L01",
+      "ERUN_B:L01"
+    ],
+    "guide": [
+      "M1:L13",
+      "M2:L09"
+    ],
+    "matrix": [
+      "M2:L07",
+      "M3:L03",
+      "M3:L04"
+    ],
+    "icons": [
+      "M2:L08",
+      "M3:L05",
+      "EICONS:L01"
+    ]
+  },
+  "revision_note": "Pretrial independent author-review correction only: allow grounded optional completed-undated clarification, source timezone context for the undated event, finite float parsing, and fail-closed optimized author scripts. No candidate/model outcomes informed changes.",
+  "due_field_alternatives": {
+    "glossary": {
+      "timezone": [
+        null,
+        "Europe/London"
+      ]
+    }
+  },
+  "optional_clarifications": [
+    {
+      "action_id": "android",
+      "kind": "date",
+      "source_refs": [
+        "M1:L03"
+      ]
+    }
+  ]
+}

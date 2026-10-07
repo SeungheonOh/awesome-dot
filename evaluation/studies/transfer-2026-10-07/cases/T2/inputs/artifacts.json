@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "coverage": "These are all supplied artifact excerpts. They may establish only part of a promised result. No external retrieval is available or required.",
+  "records": [
+    {"id":"EWEB","event_at":"2026-10-06T08:30:00-07:00","received_at":"2026-10-06T16:03:00Z","timezone":"America/Los_Angeles","lines":{
+      "L01":"Repository web-sdk; retry-copy patch r3; review approved; complete r3 diff included in this export.",
+      "L02":"This is a review snapshot, not a main-branch merge receipt. No merge record is supplied, and this snapshot alone does not establish a later merge or prove that one did not happen."
+    }},
+    {"id":"EANDROID","event_at":"2026-10-06T15:10:00Z","received_at":"2026-10-06T16:03:00Z","timezone":"Etc/UTC","lines":{
+      "L01":"Repository android-sdk; retry-copy patch r2; main-branch merge transaction completed; revision r2 verified in main."
+    }},
+    {"id":"EINVITE","event_at":"2026-10-06T15:20:00+01:00","received_at":"2026-10-06T16:03:00Z","timezone":"Europe/London","lines":{
+      "L01":"Calendar export: rollback drill; invitation created and sent to the intended engineering team; slot confirmed for 2026-10-08T10:00:00+01:00.",
+      "L02":"Scheduling receipt only. No executed drill log or reviewer acknowledgment is included."
+    }},
+    {"id":"ERUN_A","event_at":"2026-10-06T11:10:00-07:00","received_at":"2026-10-06T18:12:00Z","timezone":"America/Los_Angeles","lines":{
+      "L01":"enum-compat report r5: web assertion PASS; Android assertion PASS. Release snapshot identifier omitted."
+    }},
+    {"id":"ERUN_B","event_at":"2026-10-06T11:25:00-07:00","received_at":"2026-10-06T18:27:00Z","timezone":"America/Los_Angeles","lines":{
+      "L01":"enum-compat report r5: web assertion PASS; Android assertion FAIL. Release snapshot identifier omitted. Neither report is designated the authoritative release result."
+    }},
+    {"id":"ETRACE","event_at":"2026-10-06T17:10:00-07:00","received_at":"2026-10-07T00:16:00Z","timezone":"America/Los_Angeles","lines":{
+      "L01":"Folder reference claims worker retry-cap trace v4. Contents inaccessible in this export. No trace bytes, uploader identity or access verification are supplied."
+    }},
+    {"id":"EICONS","event_at":"2026-10-06T17:12:00-07:00","received_at":"2026-10-07T00:16:00Z","timezone":"America/Los_Angeles","lines":{
+      "L01":"web debug icon sprite v2 draft export: 16px and 24px supplied; required 32px export absent."
+    }}
+  ]
+}

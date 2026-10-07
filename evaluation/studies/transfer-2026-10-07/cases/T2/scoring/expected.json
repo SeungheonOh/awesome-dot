@@ -1,0 +1,445 @@
+{
+  "as_of": "2026-10-07T00:30:00Z",
+  "source_coverage": {
+    "included_records": [
+      "M1",
+      "M2",
+      "M3",
+      "EWEB",
+      "EANDROID",
+      "EINVITE",
+      "ERUN_A",
+      "ERUN_B",
+      "ETRACE",
+      "EICONS"
+    ],
+    "excluded_records": [
+      "M4"
+    ]
+  },
+  "actions": [
+    {
+      "action_id": "web",
+      "title": "Merge web retry-copy r3",
+      "completion_condition": "Merge web-sdk retry-copy patch r3 into main",
+      "origin_refs": [
+        "M1:L02"
+      ],
+      "source_refs": [
+        "M1:L02",
+        "M1:L04",
+        "M2:L01",
+        "M2:L02",
+        "M2:L03",
+        "M3:L06",
+        "EWEB:L01",
+        "EWEB:L02"
+      ],
+      "owner": {
+        "display_name": "Leena",
+        "person_id": "p-leena",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "tomorrow",
+        "source_ref": "M1:L02",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": null,
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "partial_result",
+      "dependencies": [],
+      "due_date_passed": false,
+      "overdue_confirmed": false,
+      "next_step": "Ask for the r3 main-branch merge receipt; the supplied review establishes preparation only."
+    },
+    {
+      "action_id": "android",
+      "title": "Merge Android retry-copy r2",
+      "completion_condition": "Merge android-sdk retry-copy patch r2 into main",
+      "origin_refs": [
+        "M1:L03"
+      ],
+      "source_refs": [
+        "M1:L03",
+        "M2:L04",
+        "EANDROID:L01"
+      ],
+      "owner": {
+        "display_name": "Arun",
+        "person_id": "p-arun",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": null,
+        "source_ref": null,
+        "resolution": "unset",
+        "date": null,
+        "time": null,
+        "timezone": null
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "completion_supported",
+      "dependencies": [],
+      "due_date_passed": null,
+      "overdue_confirmed": false,
+      "next_step": null
+    },
+    {
+      "action_id": "glossary",
+      "title": "Prepare CLI protocol-error glossary v1",
+      "completion_condition": "Prepare a complete cli protocol-error glossary v1 before the still-undated protocol review; no publication is required",
+      "origin_refs": [
+        "M1:L05",
+        "M1:L06"
+      ],
+      "source_refs": [
+        "M1:L05",
+        "M1:L06"
+      ],
+      "owner": {
+        "display_name": null,
+        "person_id": null,
+        "resolution": "unassigned"
+      },
+      "due": {
+        "wording": "before protocol review",
+        "source_ref": "M1:L05",
+        "resolution": "event_relative",
+        "date": null,
+        "time": null,
+        "timezone": null
+      },
+      "reported_status": "open",
+      "evidence_status": "no_result",
+      "dependencies": [],
+      "due_date_passed": null,
+      "overdue_confirmed": false,
+      "next_step": "Identify an accountable owner and the review date before setting a calendar deadline."
+    },
+    {
+      "action_id": "trace",
+      "title": "Make worker retry-cap trace v4 available",
+      "completion_condition": "The complete worker retry-cap trace v4 is accessible in the team evidence folder",
+      "origin_refs": [
+        "M1:L09"
+      ],
+      "source_refs": [
+        "M1:L09",
+        "M3:L01",
+        "M3:L02",
+        "ETRACE:L01"
+      ],
+      "owner": {
+        "display_name": "Sam",
+        "person_id": null,
+        "resolution": "ambiguous"
+      },
+      "due": {
+        "wording": "next Friday",
+        "source_ref": "M1:L09",
+        "resolution": "ambiguous",
+        "date": null,
+        "time": null,
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "inaccessible",
+      "dependencies": [],
+      "due_date_passed": null,
+      "overdue_confirmed": false,
+      "next_step": "Resolve which Sam owns this, which Friday was intended, and whether the trace is accessible."
+    },
+    {
+      "action_id": "invite",
+      "title": "Schedule rollback drill",
+      "completion_condition": "Create and send the intended team invitation and confirm the calendar slot",
+      "origin_refs": [
+        "M1:L10"
+      ],
+      "source_refs": [
+        "M1:L10",
+        "M2:L05",
+        "EINVITE:L01",
+        "EINVITE:L02"
+      ],
+      "owner": {
+        "display_name": "Priya",
+        "person_id": "p-priya",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "tomorrow",
+        "source_ref": "M1:L10",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": null,
+        "timezone": "Europe/London"
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "completion_supported",
+      "dependencies": [],
+      "due_date_passed": true,
+      "overdue_confirmed": false,
+      "next_step": null
+    },
+    {
+      "action_id": "drill",
+      "title": "Execute rollback drill",
+      "completion_condition": "Run the four-probe rollback drill and obtain reviewer acknowledgment of its executed log",
+      "origin_refs": [
+        "M1:L11"
+      ],
+      "source_refs": [
+        "M1:L11",
+        "M2:L06",
+        "EINVITE:L01",
+        "EINVITE:L02"
+      ],
+      "owner": {
+        "display_name": "Nico",
+        "person_id": "p-nico",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "Thursday, October 8 at 10:00 Europe/London",
+        "source_ref": "M1:L11",
+        "resolution": "resolved",
+        "date": "2026-10-08",
+        "time": "10:00",
+        "timezone": "Europe/London"
+      },
+      "reported_status": "open",
+      "evidence_status": "no_result",
+      "dependencies": [
+        "invite"
+      ],
+      "due_date_passed": false,
+      "overdue_confirmed": false,
+      "next_step": "Run the drill at the agreed time and obtain the acknowledged log; the invitation prerequisite is satisfied."
+    },
+    {
+      "action_id": "enum",
+      "title": "Prepare passing enum-compat report r5",
+      "completion_condition": "Prepare enum-compat report r5 establishing both web and Android assertions passing for the release",
+      "origin_refs": [
+        "M1:L12"
+      ],
+      "source_refs": [
+        "M1:L12",
+        "M2:L10",
+        "ERUN_A:L01",
+        "ERUN_B:L01"
+      ],
+      "owner": {
+        "display_name": "Teo",
+        "person_id": "p-teo",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "by noon tomorrow",
+        "source_ref": "M1:L12",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": "12:00",
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "reported_complete",
+      "evidence_status": "conflicting",
+      "dependencies": [],
+      "due_date_passed": true,
+      "overdue_confirmed": false,
+      "next_step": "Identify the release snapshot and reconcile the conflicting reports; a later timestamp does not settle the result."
+    },
+    {
+      "action_id": "guide",
+      "title": "Prepare live-device walkthrough guide v1",
+      "completion_condition": "Prepare the live-device walkthrough guide v1; subsequently cancelled",
+      "origin_refs": [
+        "M1:L13"
+      ],
+      "source_refs": [
+        "M1:L13",
+        "M2:L09"
+      ],
+      "owner": {
+        "display_name": "Maya",
+        "person_id": "p-maya",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "by today",
+        "source_ref": "M1:L13",
+        "resolution": "resolved",
+        "date": "2026-10-05",
+        "time": null,
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "cancelled",
+      "evidence_status": "no_result",
+      "dependencies": [],
+      "due_date_passed": true,
+      "overdue_confirmed": false,
+      "next_step": null
+    },
+    {
+      "action_id": "matrix",
+      "title": "Prepare interface compatibility matrix v3",
+      "completion_condition": "Prepare the complete interface compatibility matrix v3",
+      "origin_refs": [
+        "M2:L07"
+      ],
+      "source_refs": [
+        "M2:L07",
+        "M3:L03",
+        "M3:L04"
+      ],
+      "owner": {
+        "display_name": "Noor",
+        "person_id": "p-noor",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "by today, October 6",
+        "source_ref": "M2:L07",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": null,
+        "timezone": "Europe/London"
+      },
+      "reported_status": "open",
+      "evidence_status": "no_result",
+      "dependencies": [],
+      "due_date_passed": true,
+      "overdue_confirmed": true,
+      "next_step": "Complete matrix v3 under accepted owner Noor; the retained October 6 London deadline has passed."
+    },
+    {
+      "action_id": "icons",
+      "title": "Export web debug icon sprite v2",
+      "completion_condition": "Export web debug icon sprite v2 at 16px, 24px and 32px",
+      "origin_refs": [
+        "M2:L08"
+      ],
+      "source_refs": [
+        "M2:L08",
+        "M3:L05",
+        "EICONS:L01"
+      ],
+      "owner": {
+        "display_name": "Jules",
+        "person_id": "p-jules",
+        "resolution": "identified"
+      },
+      "due": {
+        "wording": "by today",
+        "source_ref": "M2:L08",
+        "resolution": "resolved",
+        "date": "2026-10-06",
+        "time": null,
+        "timezone": "America/Los_Angeles"
+      },
+      "reported_status": "in_progress",
+      "evidence_status": "partial_result",
+      "dependencies": [],
+      "due_date_passed": false,
+      "overdue_confirmed": false,
+      "next_step": "Export the missing 32px sprite before the Los Angeles day ends."
+    }
+  ],
+  "not_actions": [
+    {
+      "source_ref": "M1:L07",
+      "reason": "suggestion",
+      "explanation": "Timeout chart was suggested and never accepted."
+    },
+    {
+      "source_ref": "M1:L08",
+      "reason": "decision_only",
+      "explanation": "Retaining the enum IDs creates no implementation work."
+    },
+    {
+      "source_ref": "M2:L02",
+      "reason": "unaccepted_offer",
+      "explanation": "Omar offered cover without an accepted transfer."
+    },
+    {
+      "source_ref": "M4:L01",
+      "reason": "after_cutoff",
+      "explanation": "Received after the cutoff, even though it corrects an earlier claim."
+    },
+    {
+      "source_ref": "M4:L02",
+      "reason": "after_cutoff",
+      "explanation": "Received after the cutoff; alleging an earlier completion does not make it admissible."
+    }
+  ],
+  "clarifications": [
+    {
+      "action_id": "web",
+      "kind": "completion_evidence",
+      "source_refs": [
+        "M2:L03",
+        "M3:L06",
+        "EWEB:L02"
+      ],
+      "question": "Can the main-branch r3 merge record be supplied? The review export supports preparation only."
+    },
+    {
+      "action_id": "glossary",
+      "kind": "owner",
+      "source_refs": [
+        "M1:L06"
+      ],
+      "question": "Who will own the agreed glossary preparation?"
+    },
+    {
+      "action_id": "glossary",
+      "kind": "date",
+      "source_refs": [
+        "M1:L05",
+        "M1:L06"
+      ],
+      "question": "When is protocol review? Until booked, the event-relative deadline has no calendar date."
+    },
+    {
+      "action_id": "trace",
+      "kind": "identity",
+      "source_refs": [
+        "M1:L09",
+        "M3:L02"
+      ],
+      "question": "Which Sam made the commitment? The export does not identify Sam Park or Sam Rao."
+    },
+    {
+      "action_id": "trace",
+      "kind": "date",
+      "source_refs": [
+        "M1:L09",
+        "M3:L02"
+      ],
+      "question": "Does next Friday mean October 9 or October 16 on the Los Angeles calendar?"
+    },
+    {
+      "action_id": "trace",
+      "kind": "completion_evidence",
+      "source_refs": [
+        "M3:L01",
+        "ETRACE:L01"
+      ],
+      "question": "Can the complete v4 trace and team-folder accessibility be verified? Inaccessibility here is not proof it was not posted."
+    },
+    {
+      "action_id": "enum",
+      "kind": "conflicting_evidence",
+      "source_refs": [
+        "M2:L10",
+        "ERUN_A:L01",
+        "ERUN_B:L01"
+      ],
+      "question": "Which release snapshot do the two reports describe, and what reconciles their different Android assertion results?"
+    }
+  ]
+}

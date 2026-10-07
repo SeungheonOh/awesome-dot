@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "scope": "Fictional meeting participant glossary, not authorization to contact anyone",
+  "people": [
+    {"person_id": "p-mira", "display_name": "Mira"},
+    {"person_id": "p-leena", "display_name": "Leena"},
+    {"person_id": "p-arun", "display_name": "Arun"},
+    {"person_id": "p-zoe", "display_name": "Zoe"},
+    {"person_id": "p-jules", "display_name": "Jules"},
+    {"person_id": "p-sam-park", "display_name": "Sam Park", "meeting_display_name": "Sam"},
+    {"person_id": "p-sam-rao", "display_name": "Sam Rao", "meeting_display_name": "Sam"},
+    {"person_id": "p-priya", "display_name": "Priya"},
+    {"person_id": "p-nico", "display_name": "Nico"},
+    {"person_id": "p-teo", "display_name": "Teo"},
+    {"person_id": "p-maya", "display_name": "Maya"},
+    {"person_id": "p-omar", "display_name": "Omar"},
+    {"person_id": "p-noor", "display_name": "Noor"}
+  ],
+  "identity_limit": "The two Sam passages denote the same unresolved speaker. Neither source nor artifact identifies which glossary person spoke. No account inference is supported."
+}

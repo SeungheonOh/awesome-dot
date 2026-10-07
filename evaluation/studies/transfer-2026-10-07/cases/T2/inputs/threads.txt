@@ -1,0 +1,41 @@
+FERN GATEWAY / engineering-interface working threads
+Synthetic read-only export. Each top-level record has its own event and received timestamp. Unless a speaker explicitly names their local calendar, dates within a record use that record's timezone. Line IDs are immutable. “Today” in an original deadline does not roll forward when someone repeats the same deadline later.
+
+M1 | Interface review | event 2026-10-05T16:00:00+01:00 | received 2026-10-05T15:05:00Z | Europe/London
+L01 Mira (lead): We are handing over SDK reconnect behavior, protocol wording and the rollback exercise. Keep the original deliverables separate from ideas raised along the way.
+L02 Leena: I'll merge the web-sdk retry-copy patch r3 into main tomorrow, using my America/Los_Angeles calendar. Review approval alone won't close it; the result is a main-branch merge of r3.
+L03 Arun: I'll merge the android-sdk retry-copy patch r2 into its main branch. We have not agreed a deadline for mine.
+L04 Mira: The web retry-copy update on the launch board is Leena's merge from L02, not a second deliverable.
+L05 Zoe: Can we prepare the cli protocol-error glossary v1 before protocol review?
+L06 Mira: Yes, let's commit to preparing that glossary. No owner has been chosen, and protocol review has not been booked. A complete glossary draft is enough; publishing it is outside this task.
+L07 Jules: Maybe a live timeout chart would help the debug screen. Could somebody build one someday?
+L08 Mira: We retain the existing telemetry enum IDs. This decision creates no migration or implementation work.
+L09 Sam [display name only; account field missing]: I'll put the worker retry-cap trace v4 in the team evidence folder by next Friday, on my America/Los_Angeles calendar. The complete trace has to be accessible there.
+L10 Priya: I'll create and send the team calendar invitation for the rollback drill tomorrow, using this London date. That's the scheduling job.
+L11 Nico: I'll run the rollback drill Thursday, October 8 at 10:00 Europe/London. The invitation is a prerequisite. My result is the executed four-probe drill log acknowledged by the reviewer, not just a calendar slot.
+L12 Teo: I'll prepare the enum-compat report r5 with both web and Android assertions passing by noon tomorrow on my America/Los_Angeles calendar. A report that leaves either assertion failing won't meet this commitment.
+L13 Maya: I'll prepare the live-device walkthrough guide v1 by today on my America/Los_Angeles calendar.
+
+M2 | Review follow-ups | event 2026-10-06T21:00:00+01:00 | received 2026-10-06T20:04:00Z | Europe/London
+L01 Leena: Repeating yesterday's web merge deadline: today in Los Angeles. This is the same retry-copy patch, r3.
+L02 Omar: I could cover Leena's web merge if useful. [No reply or accepted reassignment appears in this packet.]
+L03 Leena: Web retry copy is merged; calling it done. The review export is attached as EWEB.
+L04 Arun: Android retry-copy r2 is merged. EANDROID is the main-branch merge record.
+L05 Priya: Team invitation sent and calendar slot confirmed; see EINVITE. That finishes scheduling, not execution.
+L06 Nico: I haven't run the drill yet. October 8 at 10:00 London still stands.
+L07 Zoe: I'll prepare the interface compatibility matrix v3 by today, October 6, on this Europe/London calendar. Preparing the full matrix is the whole deliverable.
+L08 Jules: I'll export the web debug icon sprite v2 by today on my America/Los_Angeles calendar, with all three agreed sizes. That's separate from the timeout-chart idea.
+L09 Mira: Cancel Maya's live-device walkthrough guide. We will not deliver it, and no replacement guide is being assigned.
+L10 Teo: Enum-compat report r5 is done, I think. ERUN_A and ERUN_B are the supplied outputs. Their assertion results disagree and we haven't established which run describes the release. Please don't treat the later timestamp as the tie-breaker.
+
+M3 | Late cross-timezone check-in | event 2026-10-06T17:15:00-07:00 | received 2026-10-07T00:17:00Z | America/Los_Angeles
+L01 Sam [same unresolved display name as M1:L09]: Trace v4 posted; done. ETRACE is the folder reference.
+L02 Mira: I suspect that was Sam Park, but I can't verify it. The export dropped the account field, and both Sams participated. We still have no team convention for whether “next Friday” means October 9 or October 16 here.
+L03 Zoe: Could Noor take over my interface compatibility matrix v3? Keep the October 6 London deadline from M2:L07.
+L04 Noor: I accept ownership of that same matrix from Zoe, retaining the October 6 London deadline. It's not started. No finished matrix is supplied.
+L05 Jules: Sprite v2 is in progress, not complete: EICONS has two of three sizes.
+L06 Leena: My web merge completion claim still stands. I have no main-branch merge record to add to the supplied review export.
+
+M4 | Later export addendum | event 2026-10-07T00:42:00Z | received 2026-10-07T00:45:00Z | Etc/UTC
+L01 Leena: Correction: I had only approved the web patch; the main-branch merge has not happened.
+L02 Noor: I now say the matrix was actually finished at 00:20 UTC, before your cutoff. [No matrix artifact accompanies this addendum.]
