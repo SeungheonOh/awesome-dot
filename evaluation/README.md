@@ -1,6 +1,6 @@
 # Evaluation
 
-Saved task outputs, requirement-level evidence, and local checks for this repository. The two completed studies found no difference on their predeclared primary artifact checks. They do not establish general equivalence or productivity gains.
+Saved task outputs, requirement-level evidence, and local checks for this repository. The two original artifact studies found no difference on their predeclared primary artifact checks. They do not establish general equivalence or productivity gains.
 
 For a new contribution, start with [Evaluate one skill change](docs/adding-a-case.md), a short guide with executable authored controls.
 
@@ -37,15 +37,21 @@ The exploratory [semantic grader calibration](calibration/semantic-2026-10-07/RE
 
 The [engineering artifact pilot](studies/engineering-artifacts-2026-10-07/README.md), dated 2026-10-07, preserves eight planned positions across two synthetic cases: six captured first-final artifacts passed their frozen structured checks, and two triage positions remain infrastructure unknowns, one per condition. Both captured triage dispositions remain unrun; evaluator replay is not candidate-execution evidence. Tool abstention and isolation were not enforced or verified. These descriptive results are not pooled with the two studies above and support no tool-performance or general guide-effect claim.
 
+## Separate transfer artifact cohort
+
+The [transfer cohort](studies/transfer-2026-10-07/README.md), dated 2026-10-07, retains 12 first submissions across two synthetic tasks with three repeats per case and condition. All 24 output files were captured, and all 156 declared artifact-check instances passed: T1 C and S each 42/42, and T2 C and S each 36/36. Both equal-case means are 1.0; all six paired differences are zero. This ceiling tie is a narrow descriptive result, with no demonstrated benefit, equivalence or broad-transfer conclusion. It is not pooled with any other study.
+
+The unchanged evidence preserves the actual one-word prompt deviation in T2 repeat 1 C and its unknown impact. Actual serving model/build and realized tool/instruction exposure remain unknown, and sealed isolation was not established. Public prompts are labeled projections, not historical dispatch transcripts. The package's [methods](studies/transfer-2026-10-07/METHODS.md), [provenance](studies/transfer-2026-10-07/PROVENANCE.md) and [complete results](studies/transfer-2026-10-07/RESULTS.md) retain these limits.
+
 ## Verify locally
 
-Run the complete local verification from the repository root, using POSIX Python 3.12:
+Run the core checks for the original fixtures and two original artifact studies from the repository root, using POSIX Python 3.12:
 
 ```sh
 python -I -B evaluation/verify.py
 ```
 
-This standard-library entrypoint runs the following checks in a fixed order:
+This standard-library entrypoint does not include the separately verified calibration, engineering or transfer packages below. It runs the following core checks in a fixed order:
 
 1. The earlier study's attempt/schedule identities, task assignments, prompt-hash agreement, 350 saved grading-source hashes, and three source-config/manifest hashes
 2. Source/link checks and the original 180 authored fixture tests: 61 harness and 119 case/grader tests
@@ -95,7 +101,7 @@ These commands make no model calls and install nothing. The saved-evidence comma
 
 ### Verify the separate calibration package
 
-The calibration is not included in the unified command above. From the repository root, run:
+The calibration is not included in the core command above. From the repository root, run:
 
 ```sh
 python -I -B evaluation/calibration/semantic-2026-10-07/verify.py
@@ -105,7 +111,7 @@ This separately reproduces package hashes, saved-vote accounting and 14 frozen-g
 
 ### Verify the separate engineering package
 
-The engineering pilot is not included in the unified command above. From the repository root, run:
+The engineering pilot is not included in the core command above. From the repository root, run:
 
 ```sh
 python -I -B evaluation/studies/engineering-artifacts-2026-10-07/verify.py
@@ -114,6 +120,17 @@ python -I -B evaluation/studies/engineering-artifacts-2026-10-07/fixture/selftes
 ```
 
 These commands check the package inventory, hashes and saved-result consistency, the unchanged 47-file author freeze, and 34 author-control tests. They do not regenerate candidate outputs or rerun primary grading; control-test passes are not model attempts. The frozen triage guide's one omitted local example is documented in the [package provenance](studies/engineering-artifacts-2026-10-07/README.md#contents-and-provenance) and exempted only by its exact Markdown source/target pair. Keep assertions enabled: do not add `-O` or `-OO`.
+
+### Verify the separate transfer package
+
+The transfer cohort is not included in the core command above. From the repository root, run its saved-evidence verifier with the reviewed manifest digest:
+
+```sh
+python -I -B evaluation/studies/transfer-2026-10-07/verify.py --manifest-sha256 023e19eee7704d15c71e92d9496da337eb3c7d4d1767eda488dcbe7d17db5a24 --self-test
+python -I -B evaluation/studies/transfer-2026-10-07/test_verify.py
+```
+
+The first command verifies the 129 manifest-covered files, all 24 captured outputs and all 156 saved statuses, and runs 13 authored in-memory controls. The second runs 12 authored filesystem controls in temporary fictional fixtures inside the package directory. Neither command launches agents, executes candidate SQL/code or reruns primary grading; authored controls are not candidate outcomes. The digest pins saved package bytes, not historical execution truth. See the [package's verification and trust limits](studies/transfer-2026-10-07/PROVENANCE.md#saved-evidence-verification-and-freeze).
 
 ## Continuous integration coverage
 
