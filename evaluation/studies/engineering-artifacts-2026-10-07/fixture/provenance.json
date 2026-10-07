@@ -1,0 +1,68 @@
+{
+  "packet_id": "engineering-outcomes-20261007-v2",
+  "status": "prepared_for_independent_review",
+  "authored_at_utc": "2026-10-07T03:01:54.224175+00:00",
+  "guide_repository": "SeungheonOh/dot-skills",
+  "guide_commit": "020eebcabf444f18150e912ab44d5d3bde61a16e",
+  "sources": [
+    {
+      "skill": "write-behavior-tests",
+      "path": "sources/write-behavior-tests.md",
+      "repository_path": "skill/write-behavior-tests/SKILL.md",
+      "git_blob_sha1": "25cad94fd76c47cd80443365d4f96fa0a36c1f93",
+      "sha256": "d38c4beececd6603f43cfc61e4e97396ca446778a1840a23a115f5f351c12e1c",
+      "bytes": 6457,
+      "url": "https://github.com/SeungheonOh/dot-skills/blob/020eebcabf444f18150e912ab44d5d3bde61a16e/skill/write-behavior-tests/SKILL.md"
+    },
+    {
+      "skill": "bug-reproduction-triage",
+      "path": "sources/bug-reproduction-triage.md",
+      "repository_path": "skill/bug-reproduction-triage/SKILL.md",
+      "git_blob_sha1": "6bf880babbb67361e58808e81dc0ffb4e6e99117",
+      "sha256": "fe96b1a5315f12b2ad85388a176aedcd79843a0199c49b9935b4ff19fcd41901",
+      "bytes": 11527,
+      "url": "https://github.com/SeungheonOh/dot-skills/blob/020eebcabf444f18150e912ab44d5d3bde61a16e/skill/bug-reproduction-triage/SKILL.md"
+    }
+  ],
+  "origin": "Original synthetic task fixtures, specifications, implementations, controls, graders, and protocol; designated repository guides copied unchanged.",
+  "candidate_trials_run": 0,
+  "remote_changes": false,
+  "historical_evidence_changed": false,
+  "runtime": "3.12.14",
+  "validation": {
+    "unit_tests": 34,
+    "completion_permutations": 24,
+    "seeded_state_scripts": 500,
+    "seed": 20261007,
+    "status": "passed",
+    "prior_prefreeze_control_correction_recorded": true,
+    "v1_regression_boundary_checks": {
+      "checks": 4,
+      "expected_failures": 3,
+      "errors": 0
+    },
+    "v2_changes": [
+      "Correct triage public bounded loader",
+      "Isolated public triage runner smoke",
+      "Common/trusted byte parity",
+      "Exact candidate common inventory",
+      "Hidden evaluator-source exclusion",
+      "Honest-unrun positive control and retained submitted disposition"
+    ]
+  },
+  "caveats": [
+    "Two correct exporter implementations are separately expressed, not independently human-authored.",
+    "Triage oracle never imports the product; shared specification can still contain author error.",
+    "Triage prose semantics and candidate execution provenance are unassessed.",
+    "Independent review and separate paired-run dispatch manifest required before candidates."
+  ],
+  "supersedes": {
+    "packet_id": "engineering-outcomes-20261007-v1",
+    "freeze_manifest_sha256": "1814e9ba6843a63b4c7344b31ef18aeca5f3611435e19edeaa02cc19a516d8e0",
+    "status": "rejected_for_trials_preserved_unchanged",
+    "review_blockers": [
+      "Candidate-visible triage loader leaked hidden exporter grader and broke isolated runner.",
+      "Honest unrun allowed by prompt/no-tools protocol but penalized by conclusion grading."
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "wrong",
+      "entry_point": "export_rows",
+      "records": [
+        {
+          "code": "A",
+          "units": 2,
+          "selected": true
+        }
+      ],
+      "expected": {
+        "items": []
+      }
+    }
+  ]
+}

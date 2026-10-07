@@ -1,0 +1,12 @@
+{
+  "case_id": "engineering-triage-v2",
+  "version": 1,
+  "common_prompt": "triage/common/PROMPT.md",
+  "common_input_root": "triage/common",
+  "designated_guide": "sources/bug-reproduction-triage.md",
+  "allowed_output": "project/reproduction.json",
+  "max_artifact_bytes": 65536,
+  "candidate_trials_run": 0,
+  "scoring": "triage/SCORING.md",
+  "packet_revision": 2
+}

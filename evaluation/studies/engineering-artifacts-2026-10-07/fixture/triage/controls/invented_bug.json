@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "scenarios": [
+    {
+      "id": "reverse",
+      "purpose": "reported",
+      "actions": [
+        {
+          "op": "reset"
+        },
+        {
+          "op": "edit",
+          "field": "title",
+          "value": "Nova"
+        },
+        {
+          "op": "save",
+          "field": "title",
+          "request": "title-save"
+        },
+        {
+          "op": "edit",
+          "field": "limit",
+          "value": 0
+        },
+        {
+          "op": "save",
+          "field": "limit",
+          "request": "limit-save"
+        },
+        {
+          "op": "complete",
+          "request": "limit-save"
+        },
+        {
+          "op": "observe",
+          "name": "partial"
+        },
+        {
+          "op": "complete",
+          "request": "title-save"
+        },
+        {
+          "op": "observe",
+          "name": "finished"
+        }
+      ],
+      "claims": [
+        {
+          "observation": "partial",
+          "expected": {
+            "saved": {
+              "title": "Base",
+              "limit": 0
+            },
+            "draft": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "pending": [
+              "title-save"
+            ],
+            "notice": "Saved limit: 0"
+          },
+          "predicted": {
+            "saved": {
+              "title": "Base",
+              "limit": 0
+            },
+            "draft": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "pending": [
+              "title-save"
+            ],
+            "notice": "Saved limit: 0"
+          }
+        },
+        {
+          "observation": "finished",
+          "expected": {
+            "saved": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "draft": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "pending": [],
+            "notice": "Saved title: Nova"
+          },
+          "predicted": {
+            "saved": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "draft": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "pending": [],
+            "notice": "Saved title: Nova"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forward",
+      "purpose": "normal",
+      "actions": [
+        {
+          "op": "reset"
+        },
+        {
+          "op": "edit",
+          "field": "title",
+          "value": "Nova"
+        },
+        {
+          "op": "save",
+          "field": "title",
+          "request": "title-save"
+        },
+        {
+          "op": "edit",
+          "field": "limit",
+          "value": 0
+        },
+        {
+          "op": "save",
+          "field": "limit",
+          "request": "limit-save"
+        },
+        {
+          "op": "complete",
+          "request": "title-save"
+        },
+        {
+          "op": "complete",
+          "request": "limit-save"
+        },
+        {
+          "op": "observe",
+          "name": "finished"
+        }
+      ],
+      "claims": [
+        {
+          "observation": "finished",
+          "expected": {
+            "saved": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "draft": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "pending": [],
+            "notice": "Saved limit: 0"
+          },
+          "predicted": {
+            "saved": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "draft": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "pending": [],
+            "notice": "Saved limit: 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cancel-pending",
+      "purpose": "reset",
+      "actions": [
+        {
+          "op": "reset"
+        },
+        {
+          "op": "edit",
+          "field": "title",
+          "value": "Nova"
+        },
+        {
+          "op": "save",
+          "field": "title",
+          "request": "title-save"
+        },
+        {
+          "op": "edit",
+          "field": "limit",
+          "value": 0
+        },
+        {
+          "op": "save",
+          "field": "limit",
+          "request": "limit-save"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "observe",
+          "name": "fresh"
+        }
+      ],
+      "claims": [
+        {
+          "observation": "fresh",
+          "expected": {
+            "saved": {
+              "title": "Base",
+              "limit": 5
+            },
+            "draft": {
+              "title": "Base",
+              "limit": 5
+            },
+            "pending": [],
+            "notice": null
+          },
+          "predicted": {
+            "saved": {
+              "title": "Base",
+              "limit": 5
+            },
+            "draft": {
+              "title": "Base",
+              "limit": 5
+            },
+            "pending": [],
+            "notice": null
+          }
+        }
+      ]
+    }
+  ],
+  "brief": {
+    "disposition": "reproduced",
+    "data_loss_reproduced": true,
+    "display_proves_data_loss": true,
+    "scope": "supplied_fixture_only",
+    "root_cause": "save_order_data_loss",
+    "product_change_required": true,
+    "evidence_basis": "source_derived_replay_claims",
+    "summary": "The specified reverse-completion sequence retains title Nova and limit zero. The last completion receipt mentions only title. This bounded fixture does not reproduce lost saved data.",
+    "next_check": "For the original environment, capture a fresh persisted-record read after both completion signals, together with its revision and the exact starting state."
+  }
+}

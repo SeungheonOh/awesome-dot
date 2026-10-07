@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "scenarios": [
+    {
+      "id": "ordinary-only",
+      "purpose": "normal",
+      "actions": [
+        {
+          "op": "reset"
+        },
+        {
+          "op": "edit",
+          "field": "title",
+          "value": "Nova"
+        },
+        {
+          "op": "save",
+          "field": "title",
+          "request": "title-save"
+        },
+        {
+          "op": "edit",
+          "field": "limit",
+          "value": 0
+        },
+        {
+          "op": "save",
+          "field": "limit",
+          "request": "limit-save"
+        },
+        {
+          "op": "complete",
+          "request": "title-save"
+        },
+        {
+          "op": "complete",
+          "request": "limit-save"
+        },
+        {
+          "op": "observe",
+          "name": "finished"
+        }
+      ],
+      "claims": [
+        {
+          "observation": "finished",
+          "expected": {
+            "saved": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "draft": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "pending": [],
+            "notice": "Saved limit: 0"
+          },
+          "predicted": {
+            "saved": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "draft": {
+              "title": "Nova",
+              "limit": 0
+            },
+            "pending": [],
+            "notice": "Saved limit: 0"
+          }
+        }
+      ]
+    }
+  ],
+  "brief": {
+    "disposition": "not_reproduced",
+    "data_loss_reproduced": false,
+    "display_proves_data_loss": false,
+    "scope": "supplied_fixture_only",
+    "root_cause": "not_established",
+    "product_change_required": false,
+    "evidence_basis": "source_derived_replay_claims",
+    "summary": "The specified reverse-completion sequence retains title Nova and limit zero. The last completion receipt mentions only title. This bounded fixture does not reproduce lost saved data.",
+    "next_check": "For the original environment, capture a fresh persisted-record read after both completion signals, together with its revision and the exact starting state."
+  }
+}

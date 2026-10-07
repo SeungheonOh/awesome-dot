@@ -1,0 +1,12 @@
+{
+  "case_id": "engineering-exporter-v2",
+  "version": 1,
+  "common_prompt": "exporter/common/PROMPT.md",
+  "common_input_root": "exporter/common",
+  "designated_guide": "sources/write-behavior-tests.md",
+  "allowed_output": "project/tests/cases.json",
+  "max_artifact_bytes": 65536,
+  "candidate_trials_run": 0,
+  "scoring": "exporter/SCORING.md",
+  "packet_revision": 2
+}

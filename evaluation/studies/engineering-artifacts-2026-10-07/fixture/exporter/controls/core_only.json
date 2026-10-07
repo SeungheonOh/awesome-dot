@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "repeated-occurrence",
+      "entry_point": "export_rows",
+      "records": [
+        {
+          "code": "K",
+          "units": 2,
+          "selected": true
+        },
+        {
+          "code": "K",
+          "units": 2,
+          "selected": true
+        }
+      ],
+      "expected": {
+        "items": [
+          {
+            "code": "K",
+            "units": 2
+          },
+          {
+            "code": "K",
+            "units": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "explicit-zero",
+      "entry_point": "export_rows",
+      "records": [
+        {
+          "code": "Z",
+          "units": 0,
+          "selected": true
+        }
+      ],
+      "expected": {
+        "items": [
+          {
+            "code": "Z",
+            "units": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "stable-order",
+      "entry_point": "export_rows",
+      "records": [
+        {
+          "code": "Z",
+          "units": 2,
+          "selected": true
+        },
+        {
+          "code": "A",
+          "units": 3,
+          "selected": true
+        }
+      ],
+      "expected": {
+        "items": [
+          {
+            "code": "Z",
+            "units": 2
+          },
+          {
+            "code": "A",
+            "units": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "omitted-unit",
+      "entry_point": "export_rows",
+      "records": [
+        {
+          "code": "N",
+          "selected": true
+        }
+      ],
+      "expected": {
+        "items": [
+          {
+            "code": "N",
+            "units": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "null-unit",
+      "entry_point": "export_rows",
+      "records": [
+        {
+          "code": "N",
+          "units": null,
+          "selected": true
+        }
+      ],
+      "expected": {
+        "items": [
+          {
+            "code": "N",
+            "units": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "core-does-not-filter",
+      "entry_point": "export_rows",
+      "records": [
+        {
+          "code": "R",
+          "units": 1,
+          "selected": false
+        }
+      ],
+      "expected": {
+        "items": [
+          {
+            "code": "R",
+            "units": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "empty-core",
+      "entry_point": "export_rows",
+      "records": [],
+      "expected": {
+        "items": []
+      }
+    }
+  ]
+}
