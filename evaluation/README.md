@@ -2,7 +2,7 @@
 
 Saved task outputs, requirement-level evidence, and local checks for this repository. The two completed studies found no difference on their predeclared primary artifact checks. They do not establish general equivalence or productivity gains.
 
-## Latest result
+## Repeated artifact study
 
 - Date: 2026-10-06
 - Runtime: native cloud agents; exact serving model/build not exposed
@@ -25,11 +25,15 @@ All 12 case/repeat pairs tied. The 53 distinct requirements produced 318 schedul
 
 They describe the saved artifacts against the declared requirements. Both studies used shared filesystems with procedural boundaries; isolation and complete process integrity were not verified. Semantic ratings are AI-assisted, not human evaluation. Exact model identity, token use, provider cost, and comparable compute time remain unknown. Recorded observation intervals cannot establish speedups.
 
-The [earlier eight-case study](results/native-cloud-2026-10-06/README.md) contains 16 submissions and 40/40 primary criterion groups per condition. Its separate post-hoc save failure remains documented. Its scores are not pooled with the latest study. See the [complete results index](results/README.md).
+The [earlier eight-case study](results/native-cloud-2026-10-06/README.md) contains 16 submissions and 40/40 primary criterion groups per condition. Its separate post-hoc save failure remains documented. Its scores are not pooled with the repeated study. See the [complete results index](results/README.md).
 
 ## Separate grader calibration
 
 The exploratory [semantic grader calibration](calibration/semantic-2026-10-07/README.md), dated 2026-10-07, checks grader behavior on 14 related synthetic outputs. It contains no skill intervention and estimates no skill uplift; its votes are not pooled with either study. Shared-filesystem masking, label-aware gold review, sparse negative examples and unknown serving models limit its interpretation. The package preserves all raw reviews and methodological limitations.
+
+## Separate engineering artifact pilot
+
+The [engineering artifact pilot](studies/engineering-artifacts-2026-10-07/README.md), dated 2026-10-07, preserves eight planned positions across two synthetic cases: six captured first-final artifacts passed their frozen structured checks, and two triage positions remain infrastructure unknowns, one per condition. Both captured triage dispositions remain unrun; evaluator replay is not candidate-execution evidence. Tool abstention and isolation were not enforced or verified. These descriptive results are not pooled with the two studies above and support no tool-performance or general guide-effect claim.
 
 ## Verify locally
 
@@ -96,6 +100,18 @@ python -I -B evaluation/calibration/semantic-2026-10-07/verify.py
 ```
 
 This separately reproduces package hashes, saved-vote accounting and 14 frozen-grader cross-checks. It executes only the packaged evaluator code against saved data, using temporary review copies; it makes no model calls, does not execute candidate outputs and does not rewrite the package. Keep assertions enabled: do not add `-O` or `-OO`.
+
+### Verify the separate engineering package
+
+The engineering pilot is not included in the unified command above. From the repository root, run:
+
+```sh
+python -I -B evaluation/studies/engineering-artifacts-2026-10-07/verify.py
+python -I -B evaluation/studies/engineering-artifacts-2026-10-07/fixture/verify_freeze.py
+python -I -B evaluation/studies/engineering-artifacts-2026-10-07/fixture/selftest.py
+```
+
+These commands check the package inventory, hashes and saved-result consistency, the unchanged 47-file author freeze, and 34 author-control tests. They do not regenerate candidate outputs or rerun primary grading; control-test passes are not model attempts. The frozen triage guide's one omitted local example is documented in the [package provenance](studies/engineering-artifacts-2026-10-07/README.md#contents-and-provenance) and exempted only by its exact Markdown source/target pair. Keep assertions enabled: do not add `-O` or `-OO`.
 
 ## Original sealed-pilot scope
 

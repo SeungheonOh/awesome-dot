@@ -18,6 +18,7 @@ The initial study's [post-hoc F8 check](native-cloud-2026-10-06/f8/README.md) fo
 
 ## Other evaluation records
 
+- The [engineering artifact pilot](../studies/engineering-artifacts-2026-10-07/README.md), 2026-10-07, retains all eight planned positions across two synthetic cases: six captured artifacts passed the frozen structured checks, and two triage positions are infrastructure unknowns, one per condition. Both captured triage dispositions remain unrun. This source-only, artifact-level evidence establishes no candidate tool execution or tool-performance benefit. It remains separate from the two primary-study rows and their denominators; [run its separate checks](../README.md#verify-the-separate-engineering-package).
 - The exploratory [semantic grader calibration](../calibration/semantic-2026-10-07/README.md), 2026-10-07, checks grader behavior on 14 related synthetic outputs. It contains no skill intervention or uplift estimate and is not pooled with the two studies. Its raw reviews and methodological limits are preserved; [run its separate verifier](../README.md#verify-the-separate-calibration-package) for saved-result reproduction.
 - The 180 authored fixture tests (61 harness + 119 case/grader tests) check the evaluation machinery. They are not model trials.
 - The original sealed CodexCLI pilot has 0 attempts and has not run. Its [runtime and review prerequisites](../docs/protocol.md#before-model-trials) remain open, and live dispatch is disabled. Not-run or unknown process status is not a 0% acceptance rate.

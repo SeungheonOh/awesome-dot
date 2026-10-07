@@ -32,7 +32,7 @@ GUARDS = {
         'baseline does not mean skill-free',
         'isolation and complete process integrity were not verified',
         'Exact model identity, token use, provider cost, and comparable compute time remain unknown',
-        'Its scores are not pooled with the latest study.',
+        'Its scores are not pooled with the repeated study.',
     ),
     'study': (
         'With skill (S) received the task packet plus its pinned designated package.',
