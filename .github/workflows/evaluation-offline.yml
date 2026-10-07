@@ -1,0 +1,56 @@
+name: Offline evidence checks (partial)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+cache-mode: none
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+    steps:
+      - name: Check out the event commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        timeout-minutes: 2
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+          submodules: false
+          lfs: false
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        timeout-minutes: 2
+        with:
+          python-version: "3.12"
+          check-latest: false
+          allow-prereleases: false
+
+      - name: Check published evidence and authored example only
+        timeout-minutes: 3
+        run: |
+          set -x
+          ulimit -t 120
+          ulimit -v 1048576
+          python -I -B -c "import runpy; checks = runpy.run_path('evaluation/check.py'); checks['check_manifests'](); checks['check_links']()"
+          python -I -B evaluation/results/native-cloud-2026-10-06/score.py
+          python -I -B evaluation/studies/repeated-stress-2026-10-06/reproduce_saved_evidence.py
+          python -I -B evaluation/report.py --check
+          python -I -B evaluation/studies/engineering-artifacts-2026-10-07/verify.py
+          python -I -B evaluation/studies/engineering-artifacts-2026-10-07/fixture/verify_freeze.py
+          python -I -B evaluation/examples/action-handoff/test_check.py -v

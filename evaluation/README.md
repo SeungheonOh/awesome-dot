@@ -115,6 +115,20 @@ python -I -B evaluation/studies/engineering-artifacts-2026-10-07/fixture/selftes
 
 These commands check the package inventory, hashes and saved-result consistency, the unchanged 47-file author freeze, and 34 author-control tests. They do not regenerate candidate outputs or rerun primary grading; control-test passes are not model attempts. The frozen triage guide's one omitted local example is documented in the [package provenance](studies/engineering-artifacts-2026-10-07/README.md#contents-and-provenance) and exempted only by its exact Markdown source/target pair. Keep assertions enabled: do not add `-O` or `-OO`.
 
+## Continuous integration coverage
+
+The [Offline evidence checks (partial)](../.github/workflows/evaluation-offline.yml) workflow is deliberately narrower than the complete local verification above. On pushes to main and pull requests targeting main, it checks:
+
+- Pinned source manifests and local evaluation-document links
+- Saved accounting for the earlier and repeated artifact studies
+- Published report tables, selected count statements and required caveats
+- The separate engineering package's saved-result integrity and 47-file author freeze
+- The authored action-handoff example's positive and negative controls
+
+It does not run `evaluation/verify.py`, the original harness or F1–F8 grader suites, calibration's frozen-grader cross-checks, or engineering author-control tests. The full core command and the standalone calibration and engineering commands above retain their separate scope. A green CI result means only this listed subset passed for that workflow's checked commit; it is not complete verification, a fresh model evaluation, or evidence of skill improvement.
+
+The job uses Ubuntu and Python 3.12 with standard-library checks, no package installs, no model calls, no supplied secrets and read-only repository permissions. Checkout and Python setup may access GitHub; this workflow does not enforce network isolation. Checks stop on the first failure, so later commands can remain unrun. The workflow has a bounded runtime and does not regenerate saved evidence or publish files.
+
 ## Original sealed-pilot scope
 
 The [original sealed protocol](docs/protocol.md) is a separate, unrun design. Its [harness](harness/README.md) has no live launcher; live dispatch remains disabled. The [runtime and review gates](docs/protocol.md#before-model-trials) still need to be met before any sealed model trial.
