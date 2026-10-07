@@ -6,6 +6,8 @@ Jump to [results](results/README.md) · [contributor guide](docs/adding-a-case.m
 
 For a new contribution, start with [Evaluate one skill change](docs/adding-a-case.md), a short guide with executable authored controls.
 
+For a future end-to-end workflow study, use [Measure completed-workflow benefit](docs/measuring-workflow-benefit.md) and its [blank record](templates/workflow-study-record.md); these describe planned measurement, not current observed productivity results.
+
 ## Repeated artifact study
 
 - Date: 2026-10-06

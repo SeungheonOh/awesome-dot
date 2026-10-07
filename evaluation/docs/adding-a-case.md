@@ -77,3 +77,5 @@ Show every scheduled condition/case/repeat, its operational status, and passed/f
 Name the files and revisions compared, any deviations, and what the checks cannot establish. Report only measured usage or timing with its capture coverage; leave unavailable fields unknown. Do not fabricate tokens, cost, human effort, time savings, or speedups from observation windows. A small synthetic comparison supports a description of those artifacts, not a population-wide effectiveness claim; equal scores do not establish equivalence.
 
 For the repository's existing definitions and limitations, see the [methodology](methodology.md), [protocol](protocol.md), and [published results index](../results/README.md). Keep each study's design and units separate when reporting it.
+
+To plan a future end-to-end workflow study, see [Measure completed-workflow benefit](measuring-workflow-benefit.md) and its [blank record](../templates/workflow-study-record.md); this guidance does not report current observed productivity results.
