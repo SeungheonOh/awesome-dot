@@ -59,3 +59,15 @@ An export may contain the full input model and sensitive business logic. Keep it
 ## Verification checks
 
 Test initial failure, unreachable forbidden states, competing enabled actions, a self-loop, a cycle and an intentionally truncated search. Cross-check a tiny model with direct enumeration independently of the main traversal. Never label a budget-exhausted search complete. Stop when the scoped result and replay evidence are established; expanding the model or changing production behavior is a separate decision.
+
+## Minimize consequential actions when some transitions cost zero
+
+Some models distinguish navigation or preparation from a consequential action. State the metric explicitly: minimizing approvals, commits or pushes is different from minimizing every transition. Ordinary action-count BFS is not a reference solver when transitions have both zero and unit cost; use 0–1 BFS or Dijkstra over the full state representation.
+
+A smaller search can collapse mutually reachable zero-cost states, but only with a justification. Members of an equivalence class must have the same property value and the same reachable costly successors after zero-cost preparation. Preserve distinctions that affect guards, accumulated resources or the property. For directed zero-cost transitions, plain reachability is insufficient for an equivalence class; a one-way edge does not make its endpoints interchangeable. If navigation is reversible and changes no relevant resources, a canonical reachable-region representative may be adequate. Otherwise retain the full state or prove the abstraction separately.
+
+Store the concrete predecessor, costly action and required preparation point for each abstract edge. Reconstruct a valid zero-cost preparation route from the actual predecessor before that action. Replay the complete concrete trace, checking every transition and recomputing the requested cost. A trace validates reachability and its cost; optimality additionally depends on the search ordering and abstraction argument.
+
+Safe pruning also needs a reason. A local dead-end pattern can exclude a state only if the target is impossible from there under the declared rules. Do not infer that a temporary obstruction or a familiar-looking pattern is permanently dead. Keep a resource cutoff distinct from exhaustive failure, even if all explored branches appear unproductive.
+
+Verification: compare the reduced search with an independently implemented full-state cost search on many small, bounded models, including unreachable goals, already satisfied goals, zero-cost cycles, separate navigation regions with identical object positions and an intentionally tiny search budget. This catches bad merging that ordinary successful-path replay cannot. For an interactive analysis, bind results to the exact starting snapshot and invalidate late responses after edits, navigation, reset or cancellation; cancellation is not an impossibility result.

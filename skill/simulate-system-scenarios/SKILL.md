@@ -73,6 +73,24 @@ Recompute important metrics from the saved trajectories, event records or other 
 
 Show the tradeoffs that answer the question. A mean can improve while a tail, subgroup or final completion worsens. Do not declare one scenario universally better when the user has not supplied the preference needed to choose between those outcomes.
 
+## Worked finite-queue boundary check
+
+Suppose one worker runs A from time 0 to 10, B arrives at 0 needing one unit of service, and C arrives at 10 needing one unit. The waiting room has one place and the maximum queue wait is 10. Under a policy that processes completions, dispatches existing waiters, then admits arrivals, B starts at 10 and C waits until 11. If starting exactly at the deadline is allowed, all three complete. Expiring B before dispatch or admitting C before the existing waiter would implement a different policy. State that boundary choice and verify this trace explicitly.
+
+For a bounded integer-time queue engine, a simple one-tick-at-a-time implementation can independently check a faster event-driven engine on small workloads. Compare each job's admission, state, start/end and worker assignment, not merely completed totals. Verify resource nonoverlap, queue occupancy bounds, deadline behavior and complete outcome accounting. Use maximum-size cases separately without stepping through an unnecessarily large integer horizon.
+
+Keep completed-job percentiles conditional: with a long job running from 0 to 100 and a short job arriving at 1 with a wait budget of 5, the second may time out at 6. It must stay in the failure counts, not become a zero-latency observation or disappear from the workload denominator. Reconstruct percentile and utilization numerators from the retained job records.
+
+For time-weighted queue summaries, reconstruct half-open intervals from each job's arrival, service start and terminal time. A wait ending in timeout still contributes waiting area; a zero-time rejection does not. Include initial idle time in an explicitly time-zero horizon. Example: one worker is idle until 5, serves A from 5 to 15, while B arrives at 5 and times out at 7. Waiting area is 2 job-time units, running area is 10, mean queue is 2/15 and utilization is 10/15. Averaging only the event snapshots gives a different and generally incorrect time average. Independently sum interval areas, per-job waiting/service durations, and a small integer-tick oracle. Check that same-time end/start transitions never create an artificial duration or overlapping worker assignment.
+
+## Compare the same surviving entities
+
+When scenarios admit or complete different work, compare population changes before interpreting latency. Join outcomes by stable entity ID and verify that arrival and service inputs match; row position is not identity. Partition the workload into completed in both, only in A, only in B and neither. These counts must sum to the full workload. Calculate paired latency differences only within the shared-completion subset, label that subset explicitly, and retain failures separately.
+
+For example, if A completes jobs J1/J2 and B completes J1/J3, a smaller B percentile cannot establish that the same work sped up. J1 is the only paired observation; J2 and J3 represent different completion populations. Export the identities and B-minus-A differences so a reader can inspect this distinction. Never assign zero latency to failed jobs. Reversing A and B should exchange the exclusive populations and negate paired differences; reordering rows should leave the result unchanged. Self-comparison should show unchanged outcomes for every completion.
+
+Verification example: a local finite FIFO model was exercised on 100 deterministic workloads with different pool and queue limits. Checks matched IDs after reversing row order, conserved all four populations, verified A/B symmetry and self-comparison, and rejected missing or changed workloads. This establishes implementation consistency for the bounded model, not production capacity or causal performance improvement.
+
 ## Deliver a usable, bounded result
 
 Lead with the finding and the assumptions that materially qualify it. Provide the actual requested model, source or parameter file, results and concise invocation when reuse is requested. Preserve enough initial state, scenario configuration, random-input information and runtime detail to reproduce the delivered computation without hidden session state.

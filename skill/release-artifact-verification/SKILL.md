@@ -183,3 +183,19 @@ A collection had 55 apps in its verified delivered archive, but a later working 
 The exact delivered 55-app archive was retrieved separately and its member hashes verified. The new app and local edits were preserved, missing released files were restored, and the intended addition was merged into a 56-app inventory. All 118 test programs then passed both before packaging and in a fresh extracted consumer directory. A later packaging guard rejected a synthetic candidate missing a prior stable app ID, as well as duplicate IDs, altered baseline bytes and an incomplete hash inventory.
 
 This verifies continuity against the selected release and the exercised consumer contract. It does not prove that the underlying workspace will persist through future resets; that needs a separate observation after the relevant reset actually occurs.
+
+## Bind non-executable assets to the test evidence
+
+An archive's final member-hash manifest detects later byte changes, but does not by itself prove those bytes were present when tests ran. Include packaged SVG, image, audio, data and binary fixtures in the pre-test source snapshot alongside executable code. Otherwise an asset can change after a green test run and still receive a perfectly self-consistent new archive manifest.
+
+Compare the packaged input inventory with the tested inventory in both directions: every tested input must be delivered, and every delivered source or sample input must have test-time evidence. Keep a small explicit exception set for intentionally generated outputs such as the test report itself, generated deployment configuration and the final manifest. Derive and verify those outputs from their recorded inputs instead of broadly exempting an entire asset directory or file extension.
+
+Regression-check this boundary with a temporary fixture: record a successful source snapshot, change only an SVG, and require stale-evidence rejection; restore it, change only a binary fixture, and require the same. Adding or removing a packaged sample should also invalidate the inventory. Repeat the normal consumer checks after packaging. Hashing an asset establishes byte identity, not visual quality, playback quality, semantic correctness or publisher authenticity.
+
+## Verify a committed Git recovery bundle
+
+When preserving authorized, unpublished repository work, distinguish a review patch from a recoverable commit graph. An aggregate patch can preserve final content but not signed commit objects or merge history. A Git bundle can preserve those objects, but an incremental bundle may require several prerequisite commits; record all prerequisites rather than assuming its advertised branch is standalone.
+
+Test recovery in a new repository containing only the intended prerequisite history. Confirm the pending head is absent before import, run the bundle verifier, fetch into a new recovery branch and compare the recovered head with the exact recorded commit. Importing into a clone that already contains the pending head can conceal an incomplete bundle. Avoid resets, forced branch updates and overwriting existing work.
+
+A bundle does not include working-tree Git configuration or uncommitted files, but secrets previously committed to Git can still be present in its objects. Review the authorized content scope before sharing it. Preserving a signed commit object is not the same as newly establishing signature trust, and a successfully restored backup does not mean the changes were published or accepted upstream.

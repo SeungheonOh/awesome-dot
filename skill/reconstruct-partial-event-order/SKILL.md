@@ -31,6 +31,14 @@ Do not invent predecessor links from similar text or close timestamps. If a loca
 8. **Answer the actual incident question.** Tie each statement to a path, an unordered pair or a contradiction. Distinguish “must precede under these inputs” from “appears earlier by recorded clock.” Record missing actors and sequence gaps so a complete graph traversal is not mistaken for a complete real-world history.
 9. **Verify before delivery.** Replay every edge against the displayed order, independently enumerate all valid orders for a small fixture, and compare rank bounds and unordered pairs. Test clock skew, a diamond, independent events, a missing predecessor and a cycle. Export the assumptions and source mappings alongside the result.
 
+## Give pair-specific evidence
+
+When asked why one event precedes another, return a path through the actual constraint edges, including stable event IDs and each edge's reason. Breadth-first search can keep the explanation short. A displayed position in one topological ordering is not sufficient evidence of a required relation. If the reverse path exists, explain the reversed relation; do not flip the recorded edge directions to match the wording of the question.
+
+For an unresolved pair in a DAG, construct two complete witness orders: temporarily add the first-before-second constraint for one, and the second-before-first constraint for the other, then topologically order each augmented graph. This does not modify the source. Verify that both orders contain every event exactly once and satisfy every original edge, and that they actually reverse the selected pair. Label them as possible sequences, not reconstructed history or evidence of simultaneity.
+
+Reject absent or identical IDs, and do not construct uncertainty witnesses for an inconsistent graph. Check small graphs against independently enumerated valid orders. Clear a displayed/exportable pair explanation when the selected pair or input changes, so stale evidence cannot appear to justify a newer question. Downloads containing original events need the same privacy treatment as the source logs.
+
 ## Worked example
 
 Five events have these constraints:
