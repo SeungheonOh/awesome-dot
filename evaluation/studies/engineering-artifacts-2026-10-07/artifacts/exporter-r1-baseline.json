@@ -1,0 +1,476 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "export-empty",
+      "entry_point": "export_rows",
+      "records": [],
+      "expected": {"items": []}
+    },
+    {
+      "id": "export-unselected-missing-units",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "UNSELECTED", "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "UNSELECTED", "units": null}
+        ]
+      }
+    },
+    {
+      "id": "export-unselected-zero",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "ZERO", "units": 0, "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "ZERO", "units": 0}
+        ]
+      }
+    },
+    {
+      "id": "export-explicit-null",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "UNKNOWN", "units": null, "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "UNKNOWN", "units": null}
+        ]
+      }
+    },
+    {
+      "id": "export-integer-values",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "HIGH", "units": 1000, "selected": true},
+        {"code": "NEGATIVE", "units": -7, "selected": false},
+        {"code": "ZERO", "units": 0, "selected": true},
+        {"code": "LOW", "units": -1000, "selected": false},
+        {"code": "POSITIVE", "units": 23, "selected": true},
+        {"code": "ONE", "units": 1, "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "HIGH", "units": 1000},
+          {"code": "NEGATIVE", "units": -7},
+          {"code": "ZERO", "units": 0},
+          {"code": "LOW", "units": -1000},
+          {"code": "POSITIVE", "units": 23},
+          {"code": "ONE", "units": 1}
+        ]
+      }
+    },
+    {
+      "id": "export-order-and-selection-flags",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "Z", "units": 4, "selected": false},
+        {"code": "A", "units": 9, "selected": true},
+        {"code": "M", "units": 2, "selected": false},
+        {"code": "B", "units": 6, "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "Z", "units": 4},
+          {"code": "A", "units": 9},
+          {"code": "M", "units": 2},
+          {"code": "B", "units": 6}
+        ]
+      }
+    },
+    {
+      "id": "export-identical-duplicate-occurrences",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "DUP", "units": 3, "selected": true},
+        {"code": "DUP", "units": 3, "selected": true},
+        {"code": "OTHER", "units": 8, "selected": false},
+        {"code": "DUP", "units": 3, "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "DUP", "units": 3},
+          {"code": "DUP", "units": 3},
+          {"code": "OTHER", "units": 8},
+          {"code": "DUP", "units": 3}
+        ]
+      }
+    },
+    {
+      "id": "export-same-code-distinct-units",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "SHARED", "units": 5, "selected": true},
+        {"code": "SHARED", "units": -5, "selected": false},
+        {"code": "SHARED", "units": 0, "selected": true},
+        {"code": "SHARED", "units": null, "selected": false},
+        {"code": "SHARED", "selected": true},
+        {"code": "SHARED", "units": 12, "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "SHARED", "units": 5},
+          {"code": "SHARED", "units": -5},
+          {"code": "SHARED", "units": 0},
+          {"code": "SHARED", "units": null},
+          {"code": "SHARED", "units": null},
+          {"code": "SHARED", "units": 12}
+        ]
+      }
+    },
+    {
+      "id": "export-missing-does-not-inherit-units",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "FIRST-MISSING", "selected": true},
+        {"code": "KNOWN", "units": 17, "selected": false},
+        {"code": "NEXT-MISSING", "selected": false},
+        {"code": "EXPLICIT-NULL", "units": null, "selected": true},
+        {"code": "ZERO", "units": 0, "selected": false},
+        {"code": "LAST-MISSING", "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "FIRST-MISSING", "units": null},
+          {"code": "KNOWN", "units": 17},
+          {"code": "NEXT-MISSING", "units": null},
+          {"code": "EXPLICIT-NULL", "units": null},
+          {"code": "ZERO", "units": 0},
+          {"code": "LAST-MISSING", "units": null}
+        ]
+      }
+    },
+    {
+      "id": "export-codes-preserved-verbatim",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "001", "units": 3, "selected": false},
+        {"code": "0", "units": 0, "selected": true},
+        {"code": "-001", "units": -3, "selected": false},
+        {"code": " A ", "units": null, "selected": true},
+        {"code": "a", "units": 4, "selected": false},
+        {"code": "A", "units": 5, "selected": true},
+        {"code": "café-库存-🚚", "selected": false},
+        {"code": "Q\"\\[]{}", "units": 6, "selected": true},
+        {"code": "ABCDEFGHIJKLMNOPQRSTUVWXYZ012345", "units": 7, "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "001", "units": 3},
+          {"code": "0", "units": 0},
+          {"code": "-001", "units": -3},
+          {"code": " A ", "units": null},
+          {"code": "a", "units": 4},
+          {"code": "A", "units": 5},
+          {"code": "café-库存-🚚", "units": null},
+          {"code": "Q\"\\[]{}", "units": 6},
+          {"code": "ABCDEFGHIJKLMNOPQRSTUVWXYZ012345", "units": 7}
+        ]
+      }
+    },
+    {
+      "id": "download-empty",
+      "entry_point": "download_selected",
+      "records": [],
+      "expected": {"items": []}
+    },
+    {
+      "id": "download-all-unselected",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "POSITIVE", "units": 9, "selected": false},
+        {"code": "ZERO", "units": 0, "selected": false},
+        {"code": "MISSING", "selected": false},
+        {"code": "NULL", "units": null, "selected": false},
+        {"code": "NEGATIVE", "units": -4, "selected": false}
+      ],
+      "expected": {"items": []}
+    },
+    {
+      "id": "download-single-selected",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "ONLY", "units": 13, "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "ONLY", "units": 13}
+        ]
+      }
+    },
+    {
+      "id": "download-selected-missing-units",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "BEFORE", "units": 41, "selected": false},
+        {"code": "KEEP", "selected": true},
+        {"code": "AFTER", "units": 42, "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "KEEP", "units": null}
+        ]
+      }
+    },
+    {
+      "id": "download-selected-null-and-zero",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "NULL", "units": null, "selected": true},
+        {"code": "SKIP-POSITIVE", "units": 90, "selected": false},
+        {"code": "ZERO", "units": 0, "selected": true},
+        {"code": "SKIP-ZERO", "units": 0, "selected": false},
+        {"code": "MISSING", "selected": true},
+        {"code": "SKIP-NULL", "units": null, "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "NULL", "units": null},
+          {"code": "ZERO", "units": 0},
+          {"code": "MISSING", "units": null}
+        ]
+      }
+    },
+    {
+      "id": "download-interleaved-preserves-order",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "Z", "units": 9, "selected": true},
+        {"code": "A", "units": 4, "selected": false},
+        {"code": "M", "units": 3, "selected": true},
+        {"code": "B", "units": 1, "selected": false},
+        {"code": "D", "units": 5, "selected": false},
+        {"code": "C", "units": 7, "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "Z", "units": 9},
+          {"code": "M", "units": 3},
+          {"code": "C", "units": 7}
+        ]
+      }
+    },
+    {
+      "id": "download-duplicates-survive-filtering",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "DUP", "units": 99, "selected": false},
+        {"code": "DUP", "units": 2, "selected": true},
+        {"code": "DUP", "units": 2, "selected": true},
+        {"code": "OTHER", "units": 4, "selected": true},
+        {"code": "DUP", "units": 2, "selected": false},
+        {"code": "DUP", "units": -3, "selected": true},
+        {"code": "DUP", "selected": true},
+        {"code": "DUP", "units": 88, "selected": false},
+        {"code": "DUP", "units": 2, "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "DUP", "units": 2},
+          {"code": "DUP", "units": 2},
+          {"code": "OTHER", "units": 4},
+          {"code": "DUP", "units": -3},
+          {"code": "DUP", "units": null},
+          {"code": "DUP", "units": 2}
+        ]
+      }
+    },
+    {
+      "id": "download-signed-values",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "LOW", "units": -1000, "selected": true},
+        {"code": "SKIP-HIGH", "units": 1000, "selected": false},
+        {"code": "NEGATIVE", "units": -1, "selected": true},
+        {"code": "HIGH", "units": 1000, "selected": true},
+        {"code": "SKIP-LOW", "units": -1000, "selected": false},
+        {"code": "POSITIVE", "units": 27, "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "LOW", "units": -1000},
+          {"code": "NEGATIVE", "units": -1},
+          {"code": "HIGH", "units": 1000},
+          {"code": "POSITIVE", "units": 27}
+        ]
+      }
+    },
+    {
+      "id": "download-all-selected-at-record-limit",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "P32", "units": 32, "selected": true},
+        {"code": "P31", "units": 31, "selected": true},
+        {"code": "P30", "units": 30, "selected": true},
+        {"code": "P29", "units": 29, "selected": true},
+        {"code": "P28", "units": 28, "selected": true},
+        {"code": "P27", "units": 27, "selected": true},
+        {"code": "P26", "units": 26, "selected": true},
+        {"code": "P25", "units": 25, "selected": true},
+        {"code": "P24", "units": 24, "selected": true},
+        {"code": "P23", "units": 23, "selected": true},
+        {"code": "P22", "units": 22, "selected": true},
+        {"code": "P21", "units": 21, "selected": true},
+        {"code": "P20", "units": 20, "selected": true},
+        {"code": "P19", "units": 19, "selected": true},
+        {"code": "P18", "units": 18, "selected": true},
+        {"code": "P17", "units": 17, "selected": true},
+        {"code": "P16", "units": 16, "selected": true},
+        {"code": "P15", "units": 15, "selected": true},
+        {"code": "P14", "units": 14, "selected": true},
+        {"code": "P13", "units": 13, "selected": true},
+        {"code": "P12", "units": 12, "selected": true},
+        {"code": "P11", "units": 11, "selected": true},
+        {"code": "P10", "units": 10, "selected": true},
+        {"code": "P09", "units": 9, "selected": true},
+        {"code": "P08", "units": 8, "selected": true},
+        {"code": "P07", "units": 7, "selected": true},
+        {"code": "P06", "units": 6, "selected": true},
+        {"code": "P05", "units": 5, "selected": true},
+        {"code": "P04", "units": 4, "selected": true},
+        {"code": "P03", "units": 3, "selected": true},
+        {"code": "P02", "units": 2, "selected": true},
+        {"code": "P01", "units": 1, "selected": true}
+      ],
+      "expected": {
+        "items": [
+          {"code": "P32", "units": 32},
+          {"code": "P31", "units": 31},
+          {"code": "P30", "units": 30},
+          {"code": "P29", "units": 29},
+          {"code": "P28", "units": 28},
+          {"code": "P27", "units": 27},
+          {"code": "P26", "units": 26},
+          {"code": "P25", "units": 25},
+          {"code": "P24", "units": 24},
+          {"code": "P23", "units": 23},
+          {"code": "P22", "units": 22},
+          {"code": "P21", "units": 21},
+          {"code": "P20", "units": 20},
+          {"code": "P19", "units": 19},
+          {"code": "P18", "units": 18},
+          {"code": "P17", "units": 17},
+          {"code": "P16", "units": 16},
+          {"code": "P15", "units": 15},
+          {"code": "P14", "units": 14},
+          {"code": "P13", "units": 13},
+          {"code": "P12", "units": 12},
+          {"code": "P11", "units": 11},
+          {"code": "P10", "units": 10},
+          {"code": "P09", "units": 9},
+          {"code": "P08", "units": 8},
+          {"code": "P07", "units": 7},
+          {"code": "P06", "units": 6},
+          {"code": "P05", "units": 5},
+          {"code": "P04", "units": 4},
+          {"code": "P03", "units": 3},
+          {"code": "P02", "units": 2},
+          {"code": "P01", "units": 1}
+        ]
+      }
+    },
+    {
+      "id": "export-at-record-limit",
+      "entry_point": "export_rows",
+      "records": [
+        {"code": "R01", "units": -16, "selected": false},
+        {"code": "R02", "units": -15, "selected": true},
+        {"code": "R03", "units": -14, "selected": false},
+        {"code": "R04", "units": -13, "selected": true},
+        {"code": "R05", "units": -12, "selected": false},
+        {"code": "R06", "units": -11, "selected": true},
+        {"code": "R07", "units": -10, "selected": false},
+        {"code": "R08", "units": -9, "selected": true},
+        {"code": "R09", "units": -8, "selected": false},
+        {"code": "R10", "units": -7, "selected": true},
+        {"code": "R11", "units": -6, "selected": false},
+        {"code": "R12", "units": -5, "selected": true},
+        {"code": "R13", "units": -4, "selected": false},
+        {"code": "R14", "units": -3, "selected": true},
+        {"code": "R15", "units": -2, "selected": false},
+        {"code": "R16", "units": -1, "selected": true},
+        {"code": "R17", "units": 0, "selected": false},
+        {"code": "R18", "units": 1, "selected": true},
+        {"code": "R19", "units": 2, "selected": false},
+        {"code": "R20", "units": 3, "selected": true},
+        {"code": "R21", "units": 4, "selected": false},
+        {"code": "R22", "units": 5, "selected": true},
+        {"code": "R23", "units": 6, "selected": false},
+        {"code": "R24", "units": 7, "selected": true},
+        {"code": "R25", "units": 8, "selected": false},
+        {"code": "R26", "units": 9, "selected": true},
+        {"code": "R27", "units": 10, "selected": false},
+        {"code": "R28", "units": 11, "selected": true},
+        {"code": "R29", "units": 12, "selected": false},
+        {"code": "R30", "units": 13, "selected": true},
+        {"code": "R31", "units": null, "selected": false},
+        {"code": "R32", "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "R01", "units": -16},
+          {"code": "R02", "units": -15},
+          {"code": "R03", "units": -14},
+          {"code": "R04", "units": -13},
+          {"code": "R05", "units": -12},
+          {"code": "R06", "units": -11},
+          {"code": "R07", "units": -10},
+          {"code": "R08", "units": -9},
+          {"code": "R09", "units": -8},
+          {"code": "R10", "units": -7},
+          {"code": "R11", "units": -6},
+          {"code": "R12", "units": -5},
+          {"code": "R13", "units": -4},
+          {"code": "R14", "units": -3},
+          {"code": "R15", "units": -2},
+          {"code": "R16", "units": -1},
+          {"code": "R17", "units": 0},
+          {"code": "R18", "units": 1},
+          {"code": "R19", "units": 2},
+          {"code": "R20", "units": 3},
+          {"code": "R21", "units": 4},
+          {"code": "R22", "units": 5},
+          {"code": "R23", "units": 6},
+          {"code": "R24", "units": 7},
+          {"code": "R25", "units": 8},
+          {"code": "R26", "units": 9},
+          {"code": "R27", "units": 10},
+          {"code": "R28", "units": 11},
+          {"code": "R29", "units": 12},
+          {"code": "R30", "units": 13},
+          {"code": "R31", "units": null},
+          {"code": "R32", "units": null}
+        ]
+      }
+    },
+    {
+      "id": "download-codes-preserved-verbatim",
+      "entry_point": "download_selected",
+      "records": [
+        {"code": "001", "units": 8, "selected": true},
+        {"code": "001", "units": 99, "selected": false},
+        {"code": "a", "units": 3, "selected": true},
+        {"code": "A", "units": 4, "selected": true},
+        {"code": " 0 ", "units": 0, "selected": true},
+        {"code": "café-库存-🚚", "units": null, "selected": true},
+        {"code": "Q\"\\[]{}", "selected": true},
+        {"code": "SKIP", "units": 70, "selected": false}
+      ],
+      "expected": {
+        "items": [
+          {"code": "001", "units": 8},
+          {"code": "a", "units": 3},
+          {"code": "A", "units": 4},
+          {"code": " 0 ", "units": 0},
+          {"code": "café-库存-🚚", "units": null},
+          {"code": "Q\"\\[]{}", "units": null}
+        ]
+      }
+    }
+  ]
+}

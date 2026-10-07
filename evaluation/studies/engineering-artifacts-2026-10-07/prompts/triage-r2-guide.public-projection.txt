@@ -1,0 +1,495 @@
+BEGIN SUPPLIED FILE: PROMPT.md
+# Investigate a reported save-order problem
+
+A reporter believes an edit vanished after two saves finished in the opposite
+order. Investigate the supplied disposable controller fixture and return a
+reproducible, evidence-bounded brief. Separate the visible status message from
+saved data. The result may be reproduction, bounded non-reproduction, or an
+unrun experiment; do not force a bug or infer a fix from the report alone.
+
+Read project/REPORT.md, project/CONTRACT.md, and the implementation. Submit only
+project/reproduction.json using project/FORMAT.md. Include the reported sequence,
+a normal completion-order neighbor, and a reset/interrupted neighbor relevant
+to this report. Predict independently justified expectations and observable
+state. A trusted replay will test every claimed snapshot. If available, you may
+run python -I -B replay_cli.py reproduction.json to inspect fixture results.
+
+The structured snapshots are source-derived replay claims, not proof that you
+personally ran a tool. Your prose must not claim an execution you did not run.
+Do not modify product code, install packages, access external services, or file
+a ticket. Keep scope limited to the supplied fixture and original report.
+END SUPPLIED FILE: PROMPT.md
+
+BEGIN SUPPLIED FILE: project/CONTRACT.md
+# Independent editor contract
+
+Two editable fields: title (nonempty string) and limit (integer including zero).
+Reset establishes saved and draft {"title":"Base","limit":5}, no pending
+requests, no completion notice, and fresh request/version counters.
+
+Editing changes only the draft field. Saving one field enqueues a patch holding
+that field's value at save time. Completing a request applies only its one-field
+patch; it never overwrites the other field. If two saves of the SAME field finish
+out of order, the newer-issued completed save wins and an older completion must
+not overwrite it. Merely editing or enqueueing does not change saved values.
+Completion does not replace the draft. Reset discards all pending requests and
+restores every value and counter; a discarded request may not be completed.
+
+A status notice records the most recent COMPLETION receipt, in the exact format
+"Saved title: VALUE" or "Saved limit: VALUE". It is not a combined saved-record
+snapshot and it is not proof that another field reverted. Even an ignored stale
+same-field completion gets its own receipt. Read the public snapshot's "saved"
+object to establish stored data, separately from "draft" and "notice".
+
+The public snapshot returns saved, draft, pending (live request aliases in issue
+order), and notice (null before the first completion). Completion is explicit;
+there are no clocks, sleeps, threads, real servers, accounts, or timing estimates.
+All supplied examples are synthetic; conclusions about production are outside
+scope. The fixture may or may not reproduce the reporter's suspected defect.
+END SUPPLIED FILE: project/CONTRACT.md
+
+BEGIN SUPPLIED FILE: project/FORMAT.md
+# Declarative reproduction format, version 1
+
+Submit reproduction.json, at most 65,536 UTF-8 bytes, with exactly these top-level
+keys: version (integer 1), scenarios (1..6 items), brief (object below). No duplicate
+JSON keys, non-finite numbers, control characters in strings, or nesting over 12.
+The runner treats content only as data; it accepts no executable code.
+
+Each scenario has exactly id (unique nonempty string, <=48 characters), purpose
+(one of reported, normal, reset, additional), actions (1..48 items), and claims
+(1..12 items). Each begins with {"op":"reset"}. Actions have exact keys:
+- {"op":"reset"}
+- {"op":"edit","field":"title","value":"some text"}
+- {"op":"edit","field":"limit","value":0}
+- {"op":"save","field":"title","request":"t1"}
+- {"op":"complete","request":"t1"}
+- {"op":"observe","name":"after-completion"}
+
+The save field may be title or limit. Titles have 1..32 characters, limits 0..100.
+Request aliases and observation names have 1..32 characters. Aliases cannot be
+reused until reset. Complete requires a live pending alias. At most 12 requests
+may be pending. Observation names are unique throughout a scenario, even across
+resets. Every observation needs exactly one matching claim, with exact keys:
+{"observation":"after-completion","expected":SNAPSHOT,"predicted":SNAPSHOT}.
+A SNAPSHOT has exactly saved, draft, pending, notice as defined in CONTRACT.md.
+The expected state comes from the contract; predicted state is your replay claim.
+Use complete values, not partial matches. If the task is internally inconsistent,
+report that rather than silently rewriting the contract.
+
+The brief object has exactly:
+- disposition: reproduced, not_reproduced, or unrun
+- data_loss_reproduced: boolean
+- display_proves_data_loss: boolean
+- scope: supplied_fixture_only or all_environments
+- root_cause: not_established, save_order_data_loss, or other
+- product_change_required: boolean
+- evidence_basis: source_derived_replay_claims
+- summary: nonempty string, <=1000 characters
+- next_check: nonempty string, <=1000 characters
+
+These structured claims support independent grading. Summary and next-check
+prose remain visible for review, but their meaning is not automatically scored.
+They are not evidence of tool execution. Do not infer a global absence of defects
+from a bounded unsuccessful reproduction, and do not claim an executed run in
+prose unless it actually occurred.
+
+Use disposition unrun if you did not execute the supplied public replayer, even
+when source inspection supports confident predictions. Correct, bounded unrun
+claims can satisfy the structured outcome checks: the evaluator replays the
+sequence independently and retains your submitted disposition without turning
+it into a claim of candidate execution. Reproduced requires a real mismatch;
+not_reproduced should describe an actually attempted fixture experiment.
+END SUPPLIED FILE: project/FORMAT.md
+
+BEGIN SUPPLIED FILE: project/REPORT.md
+# Report received for the synthetic fixture
+
+Report ID: SAVE-17. Component revision: controller-fixture-1. Environment:
+dependency-free Python fixture with manually released save callbacks.
+
+Reporter statement: "I began at title Base and limit 5. I changed title to Nova,
+clicked Save title, changed limit to 0, and clicked Save limit. The limit save
+finished first. Then the title save finished and I saw 'Saved title: Nova'.
+I think my limit reverted to 5 because the last message only mentioned title."
+
+Supplied artifact: a status-message capture transcribed as "Saved title: Nova".
+No persisted-record read, limit-field capture, or production logs accompany the
+report. The reporter's data-loss interpretation is a hypothesis. The fixture
+and contract are the only permitted experiment environment and requirements.
+END SUPPLIED FILE: project/REPORT.md
+
+BEGIN SUPPLIED FILE: project/bounded_json.py
+"""Trusted bounded JSON reads. Candidate bytes are data, never imported or executed."""
+import json
+import os
+import stat
+
+class ArtifactError(ValueError):
+    pass
+
+def reject(message):
+    raise ArtifactError(message)
+
+def exact(obj, keys):
+    if type(obj) is not dict or set(obj) != set(keys):
+        reject('object keys do not match schema')
+
+def bounded_text(value, limit=64, allow_empty=False):
+    if type(value) is not str or len(value) > limit or (not allow_empty and not value):
+        reject('invalid bounded string')
+    if any(ord(char) < 32 for char in value):
+        reject('control characters are not allowed')
+
+def unique_pairs(pairs):
+    out = {}
+    for key, value in pairs:
+        if key in out:
+            reject('duplicate JSON object key')
+        out[key] = value
+    return out
+
+def read_artifact(path, max_bytes=65536, dir_fd=None):
+    # Open supplied file once; reject final-component links and non-regular files.
+    # The coordinator must supply a private staging directory without symlink parents.
+    flags = os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK
+    try:
+        fd = os.open(path, flags, dir_fd=dir_fd)
+        with os.fdopen(fd, 'rb') as stream:
+            info = os.fstat(stream.fileno())
+            if not stat.S_ISREG(info.st_mode):
+                reject('artifact is not a regular file')
+            if info.st_size > max_bytes:
+                reject('artifact exceeds byte bound')
+            raw = stream.read(max_bytes + 1)
+        if len(raw) > max_bytes:
+            reject('artifact exceeds byte bound')
+        text = raw.decode('utf-8')
+        # Limit nesting before the recursive JSON parser sees input.
+        depth = 0
+        quoted = escaped = False
+        for char in text:
+            if quoted:
+                if escaped: escaped = False
+                elif char == '\\': escaped = True
+                elif char == '"': quoted = False
+            elif char == '"': quoted = True
+            elif char in '[{':
+                depth += 1
+                if depth > 12: reject('artifact exceeds nesting bound')
+            elif char in ']}': depth -= 1
+        return json.loads(text, object_pairs_hook=unique_pairs,
+                          parse_constant=lambda value: reject('non-finite JSON number'))
+    except ArtifactError:
+        raise
+    except (OSError, UnicodeError, ValueError, RecursionError) as error:
+        raise ArtifactError('cannot read valid bounded JSON') from error
+
+
+def read_candidate(project_root, components):
+    """Discover a fixed relative artifact without following any candidate symlinks."""
+    directory = None
+    try:
+        directory = os.open(project_root, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+        for component in components[:-1]:
+            next_directory = os.open(component, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,
+                                     dir_fd=directory)
+            os.close(directory)
+            directory = next_directory
+        return read_artifact(components[-1], dir_fd=directory)
+    except ArtifactError:
+        raise
+    except OSError as error:
+        raise ArtifactError('artifact not discovered at required safe path') from error
+    finally:
+        if directory is not None:
+            os.close(directory)
+END SUPPLIED FILE: project/bounded_json.py
+
+BEGIN SUPPLIED FILE: project/controller.py
+"""Synthetic independent-field editor, revision controller-fixture-1."""
+from copy import deepcopy
+
+class Controller:
+    def __init__(self):
+        self.reset()
+
+    def reset(self):
+        self.saved = {'title': 'Base', 'limit': 5}
+        self.draft = dict(self.saved)
+        self.pending = {}
+        self.generation = {'title': 0, 'limit': 0}
+        self.applied = {'title': 0, 'limit': 0}
+        self.notice = None
+
+    def edit(self, field, value):
+        self.draft[field] = value
+
+    def save(self, field, request):
+        self.generation[field] += 1
+        self.pending[request] = (field, self.draft[field], self.generation[field])
+
+    def complete(self, request):
+        field, value, generation = self.pending.pop(request)
+        if generation >= self.applied[field]:
+            self.saved[field] = value
+            self.applied[field] = generation
+        self.notice = f'Saved {field}: {value}'
+
+    def snapshot(self):
+        return deepcopy({'saved': self.saved, 'draft': self.draft,
+                         'pending': list(self.pending), 'notice': self.notice})
+END SUPPLIED FILE: project/controller.py
+
+BEGIN SUPPLIED FILE: project/replay.py
+"""Deterministic completion scheduler; no sleeps, network, or wall-clock races."""
+from controller import Controller
+
+
+def replay(actions):
+    product = Controller()
+    observations = {}
+    for action in actions:
+        op = action['op']
+        if op == 'reset': product.reset()
+        elif op == 'edit': product.edit(action['field'], action['value'])
+        elif op == 'save': product.save(action['field'], action['request'])
+        elif op == 'complete': product.complete(action['request'])
+        elif op == 'observe': observations[action['name']] = product.snapshot()
+    return observations
+END SUPPLIED FILE: project/replay.py
+
+BEGIN SUPPLIED FILE: project/replay_cli.py
+"""Inspect replayed observations without running candidate code."""
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import json
+from replay import replay
+from schema import validate
+from bounded_json import read_artifact, ArtifactError
+
+if __name__ == '__main__':
+    try:
+        scenarios, _ = validate(read_artifact(Path(sys.argv[1])))
+        print(json.dumps({scenario['id']: replay(scenario['actions']) for scenario in scenarios}, indent=2))
+    except ArtifactError as error:
+        print(json.dumps({'error': str(error)})); sys.exit(2)
+END SUPPLIED FILE: project/replay_cli.py
+
+BEGIN SUPPLIED FILE: project/schema.py
+"""Bounded declarative reproduction format; executable strings are never evaluated."""
+from bounded_json import exact, bounded_text, reject
+
+
+def value(field, item):
+    if field == 'title': bounded_text(item, 32)
+    elif field == 'limit':
+        if type(item) is not int or not 0 <= item <= 100: reject('invalid limit')
+    else: reject('unknown field')
+
+
+def snapshot(item):
+    exact(item, ('saved', 'draft', 'pending', 'notice'))
+    for key in ('saved', 'draft'):
+        exact(item[key], ('title', 'limit'))
+        for field in ('title', 'limit'): value(field, item[key][field])
+    if type(item['pending']) is not list or len(item['pending']) > 12: reject('pending bound')
+    for request in item['pending']: bounded_text(request, 32)
+    if len(set(item['pending'])) != len(item['pending']): reject('duplicate pending request')
+    if item['notice'] is not None: bounded_text(item['notice'], 96)
+
+
+def validate(payload):
+    exact(payload, ('version', 'scenarios', 'brief'))
+    if type(payload['version']) is not int or payload['version'] != 1: reject('unsupported version')
+    scenarios = payload['scenarios']
+    if type(scenarios) is not list or not 1 <= len(scenarios) <= 6: reject('require 1..6 scenarios')
+    ids = set()
+    for scenario in scenarios:
+        exact(scenario, ('id', 'purpose', 'actions', 'claims'))
+        bounded_text(scenario['id'],48)
+        if scenario['id'] in ids: reject('duplicate scenario id')
+        ids.add(scenario['id'])
+        if scenario['purpose'] not in ('reported', 'normal', 'reset', 'additional'): reject('invalid purpose')
+        actions = scenario['actions']
+        if type(actions) is not list or not 1 <= len(actions) <= 48: reject('action bound')
+        if actions[0] != {'op':'reset'}: reject('each scenario must begin with explicit reset')
+        used, pending, observations = set(), set(), set()
+        for action in actions:
+            if type(action) is not dict: reject('invalid action')
+            op = action.get('op')
+            if op == 'reset':
+                exact(action, ('op',)); used, pending = set(), set()
+            elif op == 'edit':
+                exact(action, ('op','field','value')); value(action['field'],action['value'])
+            elif op == 'save':
+                exact(action, ('op','field','request'))
+                if action['field'] not in ('title','limit'): reject('unknown field')
+                bounded_text(action['request'],32)
+                if action['request'] in used: reject('request alias reused without reset')
+                used.add(action['request']); pending.add(action['request'])
+                if len(pending) > 12: reject('too many pending requests')
+            elif op == 'complete':
+                exact(action, ('op','request')); bounded_text(action['request'],32)
+                if action['request'] not in pending: reject('completion needs live request')
+                pending.remove(action['request'])
+            elif op == 'observe':
+                exact(action, ('op','name')); bounded_text(action['name'],32)
+                if action['name'] in observations: reject('observation name reused')
+                observations.add(action['name'])
+            else: reject('unknown operation')
+        claims = scenario['claims']
+        if type(claims) is not list or not 1 <= len(claims) <= 12: reject('claim bound')
+        names = set()
+        for claim in claims:
+            exact(claim, ('observation','expected','predicted'))
+            bounded_text(claim['observation'],32)
+            if claim['observation'] not in observations or claim['observation'] in names:
+                reject('claim must refer to one unique observation')
+            names.add(claim['observation']); snapshot(claim['expected']); snapshot(claim['predicted'])
+        if names != observations: reject('every observation requires one claim')
+    brief = payload['brief']
+    exact(brief, ('disposition','data_loss_reproduced','display_proves_data_loss','scope',
+                  'root_cause','product_change_required','evidence_basis','summary','next_check'))
+    if brief['disposition'] not in ('reproduced','not_reproduced','unrun'): reject('invalid disposition')
+    for key in ('data_loss_reproduced','display_proves_data_loss','product_change_required'):
+        if type(brief[key]) is not bool: reject('claim must be boolean')
+    if brief['scope'] not in ('supplied_fixture_only','all_environments'): reject('invalid scope')
+    if brief['root_cause'] not in ('not_established','save_order_data_loss','other'): reject('invalid cause')
+    if brief['evidence_basis'] != 'source_derived_replay_claims': reject('invalid evidence basis')
+    for key in ('summary','next_check'): bounded_text(brief[key],1000)
+    return scenarios, brief
+END SUPPLIED FILE: project/schema.py
+
+BEGIN DESIGNATED GUIDE
+---
+name: bug-reproduction-triage
+description: "Turn a reported correctness problem into a minimal, repeatable experiment with independent expectations, reset steps and evidence for the next decision."
+---
+
+# Turn a Bug Report into a Reproduction Brief
+
+Use this skill when a report says that a normal product action gives the wrong result, but the starting state, exact sequence or evidence is unclear. The result is an experiment another engineer can repeat and a ticket that separates what happened from what might explain it. This applies to interface state, saved data, calculations, exports, batch operations and similar correctness behavior.
+
+## Required inputs
+
+- The authorized report, including expected and reported behavior without removing uncertainty
+- Relevant requirements, user-confirmed expectations or another independent basis for the expected result
+- The smallest safe example of the relevant starting state: a test account, sample file, form values, sequence, record set or function arguments, as appropriate
+- Application revision, environment and useful timestamps; unknown fields can remain unknown
+- The permitted investigation scope, available repository or disposable fixture, and existing test instructions
+
+Do not demand a dataset for a state-transition problem or an account for a pure function. Read the supplied evidence first. Ask about a missing rule only when it changes the expected result or whether an experiment is permitted.
+
+## Workflow
+
+### 1. Normalize the claim and its evidence
+
+Create a case record with an ID, component, revision, environment, reported starting state, triggering actions, expected result, reported result and supporting locators. Label each item as a reporter statement, a directly inspected artifact, a local observation or an inference. Keep date and timezone context where timing affects the behavior.
+
+Identify the contract being tested. “Cancel should not save changes” may be a supplied requirement; “Cancel always clears the draft from every screen” is a different claim and must not be invented. A screenshot of an unexpected total does not prove that the underlying records are wrong. If there is no agreed expected behavior, first prepare the competing interpretations and the one decision needed to choose between them.
+
+### 2. Define the experiment state
+
+Choose the smallest relevant state representation and an independent expected-result check:
+
+- **Interface state:** initial saved values, current draft, selected view and navigation history; observe visible state separately from persisted state
+- **Calculation or transformation:** a small input with a hand-checkable result, preserving units, ordering and missing values
+- **Data selection or export:** stable record IDs, selection rules and expected included IDs before calculating totals
+- **Repeated or batch operation:** initial records, operation identity and the specified duplicate/retry behavior
+- **Timing-dependent behavior:** event order and documented completion signals; distinguish elapsed time from local clock labels where relevant
+
+Use synthetic or sanitized material when it preserves the behavior. Explain any limitation introduced by substitution. Do not make a sample so small that it removes the sequence or boundary that triggers the report.
+
+### 3. Establish a reproducible baseline and reset
+
+Write numbered setup steps: restore the fixture, establish the initial saved state, start the required session or process, and reach the intended screen or entry point. State how the investigator knows loading or background work has completed. If no completion signal is known, record that uncertainty; an arbitrary delay is not proof of completion.
+
+Define a reset that restores all state relevant to the hypothesis, including saved data, draft state, caches, pending work and counters where applicable. A visual refresh alone may not reset persisted state. If a reset would affect real records, replace it with a disposable fixture or stop for a safe scope decision.
+
+### 4. Specify and reduce the triggering sequence
+
+For each action, record the exact input, observable completion condition and evidence to capture. Keep expected and actual values in separate fields. Verify the expected result from the contract or independent calculation rather than copying the possibly incorrect screen.
+
+Preserve the important order. A defect that appears only after canceling twice needs that sequence; a defect after changing a filter needs both the old and new selection. Remove unrelated actions one at a time and retain the last sequence that still shows the mismatch. Record a failed reproduction as a tested set of conditions, not proof that the original report is false.
+
+When the task is to shrink an established failing input or replay, define what counts as the **same** failure and which simplifications are allowed. A different wrong record, an exception or an invalid replay does not automatically preserve the reported defect. Keep prerequisites and reference relationships in mind: deleting a setup action may make later actions impossible. A coherent group deletion or coordinated edit can be useful when permitted. Do not invent replacement actions or change identities outside the permitted transformations; keep repairing the target separate from reducing its failing input.
+
+Evaluate candidates from a fresh relevant state through the actual target. Distinguish a successful reproduction, valid non-reproduction and an invalid or unrun candidate; never attribute an earlier output to a rejected replay. Count attempted candidates, including rejected ones, against any declared observation or time budget. Use direct reasoning or a small fixed-task helper as appropriate; automation is not required for a short sequence.
+
+State what the search established. Checking every single-command deletion can establish that none of those deletions preserves the failure; it does not prove a globally smallest case or exclude useful combined changes. Name the checked simplifications and any limit that stopped the search. Confirm the final saved candidate with the same reset and failure check before reporting it as a working reproducer.
+
+### 5. Choose relevant neighboring cases
+
+Add a small matrix that tests the reported case, one normal neighboring behavior, and a repeated, interrupted or reset path relevant to the contract. Add empty, boundary or invalid inputs only when those concepts apply. Mark irrelevant cases as such rather than inventing rows, filters or totals for every product.
+
+Examples of useful distinctions are Cancel versus Save; first call versus repeated call; no matching records versus one matching record; and a resumed operation versus a fresh session. Each case needs a reset, expected outcome and observation that would distinguish plausible explanations. Avoid changing several dimensions at once.
+
+### 6. Run authorized checks and evaluate hypotheses
+
+Use an available authorized test environment and inspect the documented side effects before executing the existing relevant test or disposable fixture. Do not install dependencies, modify product code, access another environment or trigger consequential effects merely to obtain evidence when those actions are outside the request.
+
+Log case ID, exact revision, environment, reset, action sequence, expected result, actual result and evidence reference. If execution is unavailable, deliver the same experiment with actual-result fields marked unrun. An executable procedure is useful; it must not be presented as an observation.
+
+Maintain a hypothesis table: possible cause, supporting observation, contradicting observation and next discriminating check. For example, an unsaved value visible only in a reused editor differs from that value appearing in a fresh read of the saved record. Both can look like “Cancel saved my change” to a reporter. Trace the responsible behavior before naming a root cause.
+
+### 7. Deliver the brief and the next decision
+
+Return a concise ticket, reproducible procedure, case matrix, evidence ledger and hypothesis table. Make clear whether the defect was reproduced, not reproduced under the attempted conditions, or not run. A resolution claim needs the formerly failing sequence, relevant neighboring behavior and evidence from the actual fixed revision.
+
+If the user already requested filing the ticket in a named authorized destination, create or update it within that scope and read back the saved content. On an uncertain response, inspect existing state before retrying. Otherwise return a private ready-to-use draft. Keep proposed fixes separate from the reproduction result unless implementation was also authorized.
+
+## Deliverable record
+
+```text
+case_id:
+component_and_revision:
+environment_and_coverage:
+contract_and_source:
+starting_state:
+reset_steps:
+triggering_actions:
+completion_signal:
+expected_result_and_independent_basis:
+observed_result_or_unrun_reason:
+evidence_references:
+relevant_neighbor_cases:
+hypotheses_and_discriminating_checks:
+next_decision:
+```
+
+## Verification
+
+- Another engineer can follow the setup and reset without choosing hidden starting values
+- The expected outcome has an independent source or calculation
+- UI appearance, stored state, reported behavior and direct observations remain distinct
+- The repeated/reset case tests a plausible source of state leakage or ordering error
+- Every actual result names the environment and revision on which it was observed
+- Missing evidence and unsuccessful reproduction remain visible
+- No root cause, fix, ticket publication or test success is invented
+
+## Stop and ask
+
+Stop the dependent experiment when expected behavior is undecided, the permitted environment is unclear, or the test would require new access, credentials, identifying production data, destructive changes, notifications or charges. Continue the safe brief and name the smallest missing input. Ordinary already-authorized reads and routine ticket placement do not need duplicate approval.
+
+This workflow addresses bounded correctness reports. A request for broader access or a different class of investigation is a scope change, not a reason to improvise a risky experiment.
+
+## Worked examples
+
+[Two different report types](WORKED_EXAMPLE.md) show a Cancel-state investigation and a filtered export investigation. The same procedure works without forcing a tabular-data model onto the first case.
+
+## Example request
+
+```text
+dot, turn [REPORT] into a reproduction brief for [COMPONENT]. Use [AUTHORIZED EVIDENCE] and [RELEVANT SAFE STARTING STATE]. Stay within [INVESTIGATION SCOPE].
+
+Separate the contract, reported facts, direct observations and hypotheses. Define setup, reset, exact actions, completion signals and an independently justified expected result. Choose neighboring and repeated-action cases that fit this behavior, rather than adding irrelevant tests.
+
+Run the permitted checks if the required environment is available; otherwise mark them unrun. Return a concise ticket, case matrix and the observation that would best distinguish the leading explanations. If I already requested filing the ticket in [DESTINATION], do so within that scope and verify the saved result. Do not expand access or claim a cause or fix without evidence.
+```
+
+## Evidence status
+
+The worked examples are synthetic investigation designs. They do not establish a defect in a real product or a completed application test. Report the actual evidence and execution limits for each use.
+END DESIGNATED GUIDE

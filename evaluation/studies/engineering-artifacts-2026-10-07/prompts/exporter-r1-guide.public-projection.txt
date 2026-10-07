@@ -1,0 +1,289 @@
+BEGIN SUPPLIED FILE: PROMPT.md
+# Add regression-oriented behavior tests
+
+We maintain a small inventory-selection exporter. Add tests that give the team
+confidence in its observable behavior. Use the documented contract and public
+consumer, inspect the supplied implementation, and choose examples that would
+catch realistic mistakes without locking in private implementation details.
+
+Your only deliverable is project/tests/cases.json, following the existing JSON
+format in project/README.md. Do not change product code, runner, schema, or other
+files. The runner uses only Python's standard library. You may run it if tools
+are available; report execution honestly. Return no additional deliverable.
+END SUPPLIED FILE: PROMPT.md
+
+BEGIN SUPPLIED FILE: project/README.md
+# Inventory selection export fixture
+
+Revision: export-fixture-1. This is a wholly synthetic, dependency-free project.
+Run: python -I -B run_tests.py from this directory. The command discovers only
+tests/cases.json; the test file is initially absent. No network or accounts.
+
+## Public behavior contract
+
+export_rows(records) returns an object with exactly the key "items". Its value
+is a list containing one {"code": ..., "units": ...} object for each input
+record. Preserve input order and every duplicate occurrence. A code is a string;
+units is an integer or null. An omitted units field becomes null; explicit null
+also remains null. Integer zero is a real value. No totals or numeric coercions
+are performed. An empty input returns {"items": []}.
+
+download_selected(records) is the public consumer called by the selection screen.
+It exports only records whose selected field is true, in their original relative
+order. It uses the same payload contract. It must not include unselected records.
+export_rows itself does not filter by selected. Inputs in this task are valid;
+validation errors and malformed product inputs are outside the behavior scope.
+
+## JSON test format
+
+The top-level object has exactly "version": 1 and "cases": an array of 1..24
+cases. Each case has exactly:
+- "id": a unique nonempty string of at most 48 characters
+- "entry_point": "export_rows" or "download_selected"
+- "records": at most 32 records
+- "expected": the complete hand-derived output object
+
+Each record has "code" (1..32 characters), "selected" (boolean), and optionally
+"units" (integer -1000..1000 or null). Each expected item has exactly "code" and
+"units". Expected items is an array of at most 32 such objects. JSON strings may
+not contain control characters. No duplicate object keys or non-finite numbers.
+The entire artifact must be at most 65,536 UTF-8 bytes. Nesting depth is at most
+12. No executable tests, dependencies, expressions, templates, imports, files,
+or commands are accepted inside this format.
+
+Example format only, not recommended coverage:
+{"version":1,"cases":[{"id":"single-record","entry_point":"export_rows","records":[{"code":"P","units":3,"selected":true}],"expected":{"items":[{"code":"P","units":3}]}}]}
+END SUPPLIED FILE: project/README.md
+
+BEGIN SUPPLIED FILE: project/bounded_json.py
+"""Trusted bounded JSON reads. Candidate bytes are data, never imported or executed."""
+import json
+import os
+import stat
+
+class ArtifactError(ValueError):
+    pass
+
+def reject(message):
+    raise ArtifactError(message)
+
+def exact(obj, keys):
+    if type(obj) is not dict or set(obj) != set(keys):
+        reject('object keys do not match schema')
+
+def bounded_text(value, limit=64, allow_empty=False):
+    if type(value) is not str or len(value) > limit or (not allow_empty and not value):
+        reject('invalid bounded string')
+    if any(ord(char) < 32 for char in value):
+        reject('control characters are not allowed')
+
+def unique_pairs(pairs):
+    out = {}
+    for key, value in pairs:
+        if key in out:
+            reject('duplicate JSON object key')
+        out[key] = value
+    return out
+
+def read_artifact(path, max_bytes=65536, dir_fd=None):
+    # Open supplied file once; reject final-component links and non-regular files.
+    # The coordinator must supply a private staging directory without symlink parents.
+    flags = os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK
+    try:
+        fd = os.open(path, flags, dir_fd=dir_fd)
+        with os.fdopen(fd, 'rb') as stream:
+            info = os.fstat(stream.fileno())
+            if not stat.S_ISREG(info.st_mode):
+                reject('artifact is not a regular file')
+            if info.st_size > max_bytes:
+                reject('artifact exceeds byte bound')
+            raw = stream.read(max_bytes + 1)
+        if len(raw) > max_bytes:
+            reject('artifact exceeds byte bound')
+        text = raw.decode('utf-8')
+        # Limit nesting before the recursive JSON parser sees input.
+        depth = 0
+        quoted = escaped = False
+        for char in text:
+            if quoted:
+                if escaped: escaped = False
+                elif char == '\\': escaped = True
+                elif char == '"': quoted = False
+            elif char == '"': quoted = True
+            elif char in '[{':
+                depth += 1
+                if depth > 12: reject('artifact exceeds nesting bound')
+            elif char in ']}': depth -= 1
+        return json.loads(text, object_pairs_hook=unique_pairs,
+                          parse_constant=lambda value: reject('non-finite JSON number'))
+    except ArtifactError:
+        raise
+    except (OSError, UnicodeError, ValueError, RecursionError) as error:
+        raise ArtifactError('cannot read valid bounded JSON') from error
+
+
+def read_candidate(project_root, components):
+    """Discover a fixed relative artifact without following any candidate symlinks."""
+    directory = None
+    try:
+        directory = os.open(project_root, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+        for component in components[:-1]:
+            next_directory = os.open(component, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,
+                                     dir_fd=directory)
+            os.close(directory)
+            directory = next_directory
+        return read_artifact(components[-1], dir_fd=directory)
+    except ArtifactError:
+        raise
+    except OSError as error:
+        raise ArtifactError('artifact not discovered at required safe path') from error
+    finally:
+        if directory is not None:
+            os.close(directory)
+END SUPPLIED FILE: project/bounded_json.py
+
+BEGIN SUPPLIED FILE: project/exporter.py
+"""Dependency-free stock-selection export, revision export-fixture-1."""
+
+def export_rows(records):
+    """Create the public payload; order and duplicate occurrences are significant."""
+    items = []
+    for record in records:
+        units = record['units'] if 'units' in record else None
+        items.append({'code': record['code'], 'units': units})
+    return {'items': items}
+
+
+def download_selected(records):
+    """Public download consumer used by the selection screen."""
+    selected = [record for record in records if record['selected'] is True]
+    return export_rows(selected)
+END SUPPLIED FILE: project/exporter.py
+
+BEGIN SUPPLIED FILE: project/run_tests.py
+"""Public discovery command: python -I -B run_tests.py (stdlib only)."""
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import json
+import exporter
+from schema import validate
+from bounded_json import read_candidate, ArtifactError
+
+
+def main():
+    try:
+        cases = validate(read_candidate(Path(__file__).resolve().parent, ('tests','cases.json')))
+    except ArtifactError as error:
+        print(json.dumps({'discovered': False, 'error': str(error)}))
+        return 2
+    failed = [case['id'] for case in cases
+              if getattr(exporter, case['entry_point'])(case['records']) != case['expected']]
+    print(json.dumps({'discovered': True, 'executed': len(cases), 'failed': failed}))
+    return 1 if failed else 0
+
+if __name__ == '__main__':
+    sys.exit(main())
+END SUPPLIED FILE: project/run_tests.py
+
+BEGIN SUPPLIED FILE: project/schema.py
+"""Fixed JSON test format. This module never loads candidate code."""
+from bounded_json import exact, bounded_text, reject
+
+
+def validate(payload):
+    exact(payload, ('version', 'cases'))
+    if type(payload['version']) is not int or payload['version'] != 1:
+        reject('unsupported version')
+    cases = payload['cases']
+    if type(cases) is not list or not 1 <= len(cases) <= 24:
+        reject('require 1..24 cases')
+    ids = set()
+    for case in cases:
+        exact(case, ('id', 'entry_point', 'records', 'expected'))
+        bounded_text(case['id'], 48)
+        if case['id'] in ids: reject('duplicate case id')
+        ids.add(case['id'])
+        if case['entry_point'] not in ('export_rows', 'download_selected'):
+            reject('unknown public entry point')
+        rows = case['records']
+        if type(rows) is not list or len(rows) > 32: reject('record bound exceeded')
+        for row in rows:
+            if type(row) is not dict or not {'code', 'selected'} <= set(row) or not set(row) <= {'code', 'selected', 'units'}:
+                reject('invalid record keys')
+            bounded_text(row['code'], 32)
+            if type(row['selected']) is not bool: reject('selected must be boolean')
+            if 'units' in row and row['units'] is not None and (type(row['units']) is not int or not -1000 <= row['units'] <= 1000):
+                reject('invalid units')
+        exact(case['expected'], ('items',))
+        items = case['expected']['items']
+        if type(items) is not list or len(items) > 32: reject('expected items must be bounded list')
+        for item in items:
+            exact(item, ('code', 'units'))
+            bounded_text(item['code'], 32)
+            if item['units'] is not None and (type(item['units']) is not int or not -1000 <= item['units'] <= 1000):
+                reject('invalid expected units')
+    return cases
+END SUPPLIED FILE: project/schema.py
+
+BEGIN DESIGNATED GUIDE
+---
+name: write-behavior-tests
+description: Create or improve automated tests for a specific behavior contract using the project's existing test approach. Use when the user needs meaningful coverage of observable results and failure paths, rather than diagnosis of a failing run or a coverage-number increase alone.
+---
+
+# Write Behavior Tests
+
+Deliver tests that distinguish the required behavior from plausible mistakes. Test the contract at the right boundary, run the actual tests, and explain what they protect. A larger test count or a green run is not enough if the assertions would also accept the wrong result.
+
+## Establish what should be true
+
+Read the requirement, relevant interface or specification, current implementation, and existing tests. Identify the input or starting state, the operation, the observable result, and the important conditions under which that result changes.
+
+Do not treat current behavior as automatically correct. A requirement may intentionally change an old default, and an existing bug should not become the expected answer merely because the implementation returns it. If sources conflict on a consequential case, show the concrete difference and resolve that contract before encoding an assertion. Continue writing tests for settled behavior.
+
+Determine the requested scope: new tests, stronger assertions, a regression test, or tests accompanying an authorized implementation. Test creation alone does not require changing product behavior. If a well-grounded test exposes a defect, preserve the useful failing case and report it; implement a fix when the request also covers that work.
+
+## Choose the boundary that proves the behavior
+
+Use the project's existing framework, fixtures, and conventions where suitable. Find the entry point or consumer whose behavior matters. A unit test may be enough for a pure calculation; a changed serializer, command, or persisted default may need a check through its real consumer.
+
+Separate concerns without replacing the whole system with mocks. Mock a boundary when it makes an external dependency controllable, but keep enough real code to exercise the contract under test. A mock returning the expected answer does not prove the product can produce it. State what an isolated test leaves to integration or application-level checks.
+
+Select cases that cover different decisions or likely mistakes:
+
+- An ordinary valid input with a concrete expected result
+- A meaningful boundary or alternative branch
+- A relevant failure or incomplete result, including the resulting state
+- A compatibility case when existing callers or saved data must continue to work
+
+These are prompts for judgment, not a mandatory checklist for every function. Use parameterized cases when they clarify a shared rule; use distinct tests when setup or expected behavior differs substantially.
+
+## Build reliable inputs and assertions
+
+Use original or approved test data with only the detail needed to express the case. Preserve the distinctions the contract depends on, such as order, duplicate occurrences, types, omitted versus explicit values, or empty versus unknown results.
+
+Compute expected values independently of the implementation being tested. Calling the same helper to build both the expected and actual result can reproduce the same defect twice. For generated or property-based inputs, state the invariant and any valid-input assumptions; random generation is useful only when failures can be reproduced and the oracle is meaningful.
+
+Assert the output that matters, including consequential side effects or their absence. Checking only that a function returns, a file exists, or a status is successful may miss the wrong content. Conversely, avoid asserting incidental formatting, private call order, or internal helper names unless they are part of the actual contract.
+
+Make time, randomness, environment, and external dependencies controllable where they affect the test. Use an explicit clock or synchronization condition rather than a sleep that merely makes failure less likely. Keep temporary resources isolated, restore changed state, and clean up only resources the test owns. Do not make tests depend on personal accounts, private files, or live services unless that integration is explicitly within the requested environment and authority.
+
+For errors, assert the relevant type, status, or documented message and verify the remaining state. Do not catch every exception and call the test successful. A timeout, skipped test, or failed setup is not a passing assertion.
+
+## Check that the tests can detect a mistake
+
+Run the focused tests using the actual project command and prerequisites. Inspect the result rather than assuming discovery included the new file. Confirm the intended cases executed and that assertions reached the real behavior.
+
+Where useful, demonstrate that a new regression test fails before the corresponding fix, or check a small deliberately wrong variant in an isolated copy. Choose a benign, relevant mistake, such as dropping a duplicate, reversing a comparison, or changing a default. Do not mutate the user's working implementation merely to manufacture a failure, and do not require a mutation exercise for every trivial test.
+
+If a test fails, distinguish an implementation defect, incorrect expectation, unsuitable fixture, and environment problem. Fix the part the evidence supports. Do not weaken the assertion or skip the case solely to make the suite green.
+
+Run nearby or required project checks when the new tests affect shared fixtures, setup, or discovery. After later edits, rerun the affected cases. Avoid repeated full-suite runs when no relevant files or unresolved concern changed.
+
+## Deliver the useful coverage
+
+Leave the tests in the requested project location and preserve unrelated changes. Explain which behavior the tests now protect, what actually ran, and any defect or unavailable integration check still open. A failing regression test can be the correct deliverable when the task was to expose a known problem; label its expected failure clearly rather than claiming the suite passes.
+
+Keep coverage claims tied to the tested boundary. Do not infer production reliability, complete compatibility, or the absence of all bugs from a local suite. Follow the established scope for commits, remote runs, and publication; test authoring does not itself authorize changing shared services or disabling existing checks.
+END DESIGNATED GUIDE

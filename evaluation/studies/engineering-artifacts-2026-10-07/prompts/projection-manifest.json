@@ -1,0 +1,93 @@
+{
+  "entries": [
+    {
+      "condition": "baseline",
+      "original_bytes": 11243,
+      "original_dispatched_source_sha256": "8a0d33c21558f175c3f9d1860b826806c2ec1c19efe3b76f50d150a7a681e9bb",
+      "projection_rule": "Remove only the shared operational wrapper before BEGIN SUPPLIED FILE: PROMPT.md. All supplied task/project file bytes and the designated guide appendix are unchanged. This projection was not the dispatched prompt.",
+      "public_projection_bytes": 9940,
+      "public_projection_path": "prompts/exporter-r1-baseline.public-projection.txt",
+      "public_projection_sha256": "d1c569005cd2075958fbdc18ab7dafe40fdb5d4d1694df140229a3574d13c5f4",
+      "removed_prefix_bytes": 1303,
+      "slot_id": "exporter-r1-baseline"
+    },
+    {
+      "condition": "guide",
+      "original_bytes": 17744,
+      "original_dispatched_source_sha256": "37861c8d4ba40bf9023480995914ba70347346ff66b578e604459af985f0c8dd",
+      "projection_rule": "Remove only the shared operational wrapper before BEGIN SUPPLIED FILE: PROMPT.md. All supplied task/project file bytes and the designated guide appendix are unchanged. This projection was not the dispatched prompt.",
+      "public_projection_bytes": 16441,
+      "public_projection_path": "prompts/exporter-r1-guide.public-projection.txt",
+      "public_projection_sha256": "4d2ef5c77b02afcd834a9bb63b4911d90f5cce758dbe507eef0ea86ac913d3d0",
+      "removed_prefix_bytes": 1303,
+      "slot_id": "exporter-r1-guide"
+    },
+    {
+      "condition": "guide",
+      "original_bytes": 30439,
+      "original_dispatched_source_sha256": "b179635f4136425b55a39e2f64eb94abdd9b1ef1a6a6a6822032e08fe743e419",
+      "projection_rule": "Remove only the shared operational wrapper before BEGIN SUPPLIED FILE: PROMPT.md. All supplied task/project file bytes and the designated guide appendix are unchanged. This projection was not the dispatched prompt.",
+      "public_projection_bytes": 29136,
+      "public_projection_path": "prompts/triage-r1-guide.public-projection.txt",
+      "public_projection_sha256": "675d8c71fda4544e76f8184341ced779fbf72188bb4c83d18430c482b387314c",
+      "removed_prefix_bytes": 1303,
+      "slot_id": "triage-r1-guide"
+    },
+    {
+      "condition": "baseline",
+      "original_bytes": 18868,
+      "original_dispatched_source_sha256": "50cb0ca008b5bea1b3850142d446382cde0da4066485f9a490d93220afa9bf39",
+      "projection_rule": "Remove only the shared operational wrapper before BEGIN SUPPLIED FILE: PROMPT.md. All supplied task/project file bytes and the designated guide appendix are unchanged. This projection was not the dispatched prompt.",
+      "public_projection_bytes": 17565,
+      "public_projection_path": "prompts/triage-r1-baseline.public-projection.txt",
+      "public_projection_sha256": "b946d8c11a1b867e084ef6bd8ca654c9e315abd83264ab7f9685c2779de78260",
+      "removed_prefix_bytes": 1303,
+      "slot_id": "triage-r1-baseline"
+    },
+    {
+      "condition": "guide",
+      "original_bytes": 17744,
+      "original_dispatched_source_sha256": "37861c8d4ba40bf9023480995914ba70347346ff66b578e604459af985f0c8dd",
+      "projection_rule": "Remove only the shared operational wrapper before BEGIN SUPPLIED FILE: PROMPT.md. All supplied task/project file bytes and the designated guide appendix are unchanged. This projection was not the dispatched prompt.",
+      "public_projection_bytes": 16441,
+      "public_projection_path": "prompts/exporter-r2-guide.public-projection.txt",
+      "public_projection_sha256": "4d2ef5c77b02afcd834a9bb63b4911d90f5cce758dbe507eef0ea86ac913d3d0",
+      "removed_prefix_bytes": 1303,
+      "slot_id": "exporter-r2-guide"
+    },
+    {
+      "condition": "baseline",
+      "original_bytes": 11243,
+      "original_dispatched_source_sha256": "8a0d33c21558f175c3f9d1860b826806c2ec1c19efe3b76f50d150a7a681e9bb",
+      "projection_rule": "Remove only the shared operational wrapper before BEGIN SUPPLIED FILE: PROMPT.md. All supplied task/project file bytes and the designated guide appendix are unchanged. This projection was not the dispatched prompt.",
+      "public_projection_bytes": 9940,
+      "public_projection_path": "prompts/exporter-r2-baseline.public-projection.txt",
+      "public_projection_sha256": "d1c569005cd2075958fbdc18ab7dafe40fdb5d4d1694df140229a3574d13c5f4",
+      "removed_prefix_bytes": 1303,
+      "slot_id": "exporter-r2-baseline"
+    },
+    {
+      "condition": "baseline",
+      "original_bytes": 18868,
+      "original_dispatched_source_sha256": "50cb0ca008b5bea1b3850142d446382cde0da4066485f9a490d93220afa9bf39",
+      "projection_rule": "Remove only the shared operational wrapper before BEGIN SUPPLIED FILE: PROMPT.md. All supplied task/project file bytes and the designated guide appendix are unchanged. This projection was not the dispatched prompt.",
+      "public_projection_bytes": 17565,
+      "public_projection_path": "prompts/triage-r2-baseline.public-projection.txt",
+      "public_projection_sha256": "b946d8c11a1b867e084ef6bd8ca654c9e315abd83264ab7f9685c2779de78260",
+      "removed_prefix_bytes": 1303,
+      "slot_id": "triage-r2-baseline"
+    },
+    {
+      "condition": "guide",
+      "original_bytes": 30439,
+      "original_dispatched_source_sha256": "b179635f4136425b55a39e2f64eb94abdd9b1ef1a6a6a6822032e08fe743e419",
+      "projection_rule": "Remove only the shared operational wrapper before BEGIN SUPPLIED FILE: PROMPT.md. All supplied task/project file bytes and the designated guide appendix are unchanged. This projection was not the dispatched prompt.",
+      "public_projection_bytes": 29136,
+      "public_projection_path": "prompts/triage-r2-guide.public-projection.txt",
+      "public_projection_sha256": "675d8c71fda4544e76f8184341ced779fbf72188bb4c83d18430c482b387314c",
+      "removed_prefix_bytes": 1303,
+      "slot_id": "triage-r2-guide"
+    }
+  ],
+  "not_original_dispatched_prompts": true
+}

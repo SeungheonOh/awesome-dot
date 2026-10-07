@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "scenarios": [
+    {
+      "id": "reported_reverse_completion",
+      "purpose": "reported",
+      "actions": [
+        {"op": "reset"},
+        {"op": "observe", "name": "baseline"},
+        {"op": "edit", "field": "title", "value": "Nova"},
+        {"op": "save", "field": "title", "request": "t1"},
+        {"op": "edit", "field": "limit", "value": 0},
+        {"op": "save", "field": "limit", "request": "l1"},
+        {"op": "observe", "name": "both_queued"},
+        {"op": "complete", "request": "l1"},
+        {"op": "observe", "name": "limit_first"},
+        {"op": "complete", "request": "t1"},
+        {"op": "observe", "name": "title_last"}
+      ],
+      "claims": [
+        {
+          "observation": "baseline",
+          "expected": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Base", "limit": 5},
+            "pending": [],
+            "notice": null
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Base", "limit": 5},
+            "pending": [],
+            "notice": null
+          }
+        },
+        {
+          "observation": "both_queued",
+          "expected": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["t1", "l1"],
+            "notice": null
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["t1", "l1"],
+            "notice": null
+          }
+        },
+        {
+          "observation": "limit_first",
+          "expected": {
+            "saved": {"title": "Base", "limit": 0},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["t1"],
+            "notice": "Saved limit: 0"
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 0},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["t1"],
+            "notice": "Saved limit: 0"
+          }
+        },
+        {
+          "observation": "title_last",
+          "expected": {
+            "saved": {"title": "Nova", "limit": 0},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": [],
+            "notice": "Saved title: Nova"
+          },
+          "predicted": {
+            "saved": {"title": "Nova", "limit": 0},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": [],
+            "notice": "Saved title: Nova"
+          }
+        }
+      ]
+    },
+    {
+      "id": "normal_issue_order_completion",
+      "purpose": "normal",
+      "actions": [
+        {"op": "reset"},
+        {"op": "observe", "name": "baseline"},
+        {"op": "edit", "field": "title", "value": "Nova"},
+        {"op": "save", "field": "title", "request": "t1"},
+        {"op": "edit", "field": "limit", "value": 0},
+        {"op": "save", "field": "limit", "request": "l1"},
+        {"op": "observe", "name": "both_queued"},
+        {"op": "complete", "request": "t1"},
+        {"op": "observe", "name": "title_first"},
+        {"op": "complete", "request": "l1"},
+        {"op": "observe", "name": "limit_last"}
+      ],
+      "claims": [
+        {
+          "observation": "baseline",
+          "expected": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Base", "limit": 5},
+            "pending": [],
+            "notice": null
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Base", "limit": 5},
+            "pending": [],
+            "notice": null
+          }
+        },
+        {
+          "observation": "both_queued",
+          "expected": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["t1", "l1"],
+            "notice": null
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["t1", "l1"],
+            "notice": null
+          }
+        },
+        {
+          "observation": "title_first",
+          "expected": {
+            "saved": {"title": "Nova", "limit": 5},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["l1"],
+            "notice": "Saved title: Nova"
+          },
+          "predicted": {
+            "saved": {"title": "Nova", "limit": 5},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["l1"],
+            "notice": "Saved title: Nova"
+          }
+        },
+        {
+          "observation": "limit_last",
+          "expected": {
+            "saved": {"title": "Nova", "limit": 0},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": [],
+            "notice": "Saved limit: 0"
+          },
+          "predicted": {
+            "saved": {"title": "Nova", "limit": 0},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": [],
+            "notice": "Saved limit: 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reset_interrupts_reported_sequence",
+      "purpose": "reset",
+      "actions": [
+        {"op": "reset"},
+        {"op": "edit", "field": "title", "value": "Nova"},
+        {"op": "save", "field": "title", "request": "t1"},
+        {"op": "edit", "field": "limit", "value": 0},
+        {"op": "save", "field": "limit", "request": "l1"},
+        {"op": "complete", "request": "l1"},
+        {"op": "observe", "name": "before_interruption"},
+        {"op": "reset"},
+        {"op": "observe", "name": "after_reset"},
+        {"op": "edit", "field": "title", "value": "Fresh"},
+        {"op": "save", "field": "title", "request": "t1"},
+        {"op": "edit", "field": "title", "value": "Draft"},
+        {"op": "observe", "name": "fresh_request_queued"},
+        {"op": "complete", "request": "t1"},
+        {"op": "observe", "name": "fresh_request_completed"}
+      ],
+      "claims": [
+        {
+          "observation": "before_interruption",
+          "expected": {
+            "saved": {"title": "Base", "limit": 0},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["t1"],
+            "notice": "Saved limit: 0"
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 0},
+            "draft": {"title": "Nova", "limit": 0},
+            "pending": ["t1"],
+            "notice": "Saved limit: 0"
+          }
+        },
+        {
+          "observation": "after_reset",
+          "expected": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Base", "limit": 5},
+            "pending": [],
+            "notice": null
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Base", "limit": 5},
+            "pending": [],
+            "notice": null
+          }
+        },
+        {
+          "observation": "fresh_request_queued",
+          "expected": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Draft", "limit": 5},
+            "pending": ["t1"],
+            "notice": null
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "Draft", "limit": 5},
+            "pending": ["t1"],
+            "notice": null
+          }
+        },
+        {
+          "observation": "fresh_request_completed",
+          "expected": {
+            "saved": {"title": "Fresh", "limit": 5},
+            "draft": {"title": "Draft", "limit": 5},
+            "pending": [],
+            "notice": "Saved title: Fresh"
+          },
+          "predicted": {
+            "saved": {"title": "Fresh", "limit": 5},
+            "draft": {"title": "Draft", "limit": 5},
+            "pending": [],
+            "notice": "Saved title: Fresh"
+          }
+        }
+      ]
+    },
+    {
+      "id": "same_field_stale_completion_receipts",
+      "purpose": "additional",
+      "actions": [
+        {"op": "reset"},
+        {"op": "edit", "field": "title", "value": "Nova"},
+        {"op": "save", "field": "title", "request": "t1"},
+        {"op": "edit", "field": "title", "value": "Vega"},
+        {"op": "save", "field": "title", "request": "t2"},
+        {"op": "edit", "field": "limit", "value": 0},
+        {"op": "save", "field": "limit", "request": "l1"},
+        {"op": "edit", "field": "limit", "value": 9},
+        {"op": "save", "field": "limit", "request": "l2"},
+        {"op": "edit", "field": "title", "value": "DraftOnly"},
+        {"op": "edit", "field": "limit", "value": 42},
+        {"op": "observe", "name": "all_queued"},
+        {"op": "complete", "request": "t2"},
+        {"op": "complete", "request": "l2"},
+        {"op": "observe", "name": "newer_saves_completed"},
+        {"op": "complete", "request": "t1"},
+        {"op": "observe", "name": "stale_title_receipt"},
+        {"op": "complete", "request": "l1"},
+        {"op": "observe", "name": "stale_limit_receipt"}
+      ],
+      "claims": [
+        {
+          "observation": "all_queued",
+          "expected": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "DraftOnly", "limit": 42},
+            "pending": ["t1", "t2", "l1", "l2"],
+            "notice": null
+          },
+          "predicted": {
+            "saved": {"title": "Base", "limit": 5},
+            "draft": {"title": "DraftOnly", "limit": 42},
+            "pending": ["t1", "t2", "l1", "l2"],
+            "notice": null
+          }
+        },
+        {
+          "observation": "newer_saves_completed",
+          "expected": {
+            "saved": {"title": "Vega", "limit": 9},
+            "draft": {"title": "DraftOnly", "limit": 42},
+            "pending": ["t1", "l1"],
+            "notice": "Saved limit: 9"
+          },
+          "predicted": {
+            "saved": {"title": "Vega", "limit": 9},
+            "draft": {"title": "DraftOnly", "limit": 42},
+            "pending": ["t1", "l1"],
+            "notice": "Saved limit: 9"
+          }
+        },
+        {
+          "observation": "stale_title_receipt",
+          "expected": {
+            "saved": {"title": "Vega", "limit": 9},
+            "draft": {"title": "DraftOnly", "limit": 42},
+            "pending": ["l1"],
+            "notice": "Saved title: Nova"
+          },
+          "predicted": {
+            "saved": {"title": "Vega", "limit": 9},
+            "draft": {"title": "DraftOnly", "limit": 42},
+            "pending": ["l1"],
+            "notice": "Saved title: Nova"
+          }
+        },
+        {
+          "observation": "stale_limit_receipt",
+          "expected": {
+            "saved": {"title": "Vega", "limit": 9},
+            "draft": {"title": "DraftOnly", "limit": 42},
+            "pending": [],
+            "notice": "Saved limit: 0"
+          },
+          "predicted": {
+            "saved": {"title": "Vega", "limit": 9},
+            "draft": {"title": "DraftOnly", "limit": 42},
+            "pending": [],
+            "notice": "Saved limit: 0"
+          }
+        }
+      ]
+    }
+  ],
+  "brief": {
+    "disposition": "unrun",
+    "data_loss_reproduced": false,
+    "display_proves_data_loss": false,
+    "scope": "supplied_fixture_only",
+    "root_cause": "not_established",
+    "product_change_required": false,
+    "evidence_basis": "source_derived_replay_claims",
+    "summary": "No replayer was executed. Contract-derived expectations and implementation-derived predictions agree: SAVE-17 ends with saved title Nova and limit 0, alongside the reported notice Saved title: Nova. The contract defines the notice as a completion receipt, not a saved-record snapshot. Controller.save captures one field's value and generation; complete updates only that field when its generation is not stale and always updates the receipt. Normal-order, interrupted/reset, and stale same-field neighbors likewise predict no mismatch. Completion preserves draft edits. Reset discards the old request; the reused alias identifies a newly issued request. The supplied message capture alone does not establish data loss or justify a product change. These predictions establish no conclusion about production.",
+    "next_check": "Run the supplied public replayer against this JSON and compare every observation with both submitted snapshots. In the reported sequence, inspect saved.limit after each completion: it is predicted to remain 0 after the title receipt appears. Compare the normal-order endpoint, which has identical saved data but a different notice. Verify that reset clears pending requests and the notice, restores Base and 5, and permits a fresh request without completing the discarded one. Verify stale same-field completions produce receipts without overwriting newer saved values or changing the draft. Investigate any actual mismatch within the supplied fixture before assigning a defect or proposing a fix."
+  }
+}
