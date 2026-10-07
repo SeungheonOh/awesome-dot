@@ -18,6 +18,8 @@ Use plain language and original synthetic or appropriately sanitized examples. N
 
 Try the instructions on a realistic task and inspect the resulting work. A fresh reader or a different input can expose a confusing decision more usefully than more mechanical checks of the same fixture. If you include a working example, record its actual commands, relevant environment, observed results and limits. Distinguish source inspection, calculations, file checks, application use and external delivery. Keep code small; do not introduce a framework just to maintain Markdown.
 
+For a small, repeatable comparison, see [Evaluate one skill change](evaluation/docs/adding-a-case.md). It covers case design, authored controls, first-output evidence, and honest reporting.
+
 Before proposing a change, read the final skill from the recipient's point of view, open its local links and inspect supporting material. Read a check's effects before running it, and run only the relevant checks supported by the environment and current authorization. Commands for later live work or long-running services are not automatic repository tests. Explain the distinct outcome or improvement and any meaningful verification limit.
 
 By contributing, you confirm you have the right to share the material under the repository's MIT License.

@@ -2,6 +2,8 @@
 
 Saved task outputs, requirement-level evidence, and local checks for this repository. The two completed studies found no difference on their predeclared primary artifact checks. They do not establish general equivalence or productivity gains.
 
+For a new contribution, start with [Evaluate one skill change](docs/adding-a-case.md), a short guide with executable authored controls.
+
 ## Repeated artifact study
 
 - Date: 2026-10-06

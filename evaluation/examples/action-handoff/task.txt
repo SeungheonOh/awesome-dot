@@ -1,0 +1,14 @@
+Action handoff — fictional author-control exercise
+
+Extract the agreed actions from the three source lines below. Save actions.json
+as UTF-8 JSON with exactly one top-level key, actions, whose value is an array.
+Each action must have exactly source_id, owner, and due_date. Use the source ID
+to identify the action; no rewritten action text is needed. Include each agreed
+action once, in any order. Exclude tentative suggestions. Copy an explicitly
+assigned owner and YYYY-MM-DD due date exactly; use JSON null when either was
+not assigned. Do not infer an owner or date. Do not add prose or code fences.
+Use only these fictional sources; do not contact anyone or change any service.
+
+S1: Mira will send the launch checklist by 2026-10-12.
+S2: Theo suggested, "Maybe we should make a welcome video."
+S3: The team agreed to update the contact list; no owner or due date was assigned.
