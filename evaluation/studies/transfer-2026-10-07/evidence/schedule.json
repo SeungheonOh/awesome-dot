@@ -1,0 +1,68 @@
+{
+  "balance": "Three C-first and three S-first waves overall; with three repeats, T1 is 2:1 C-first and T2 is 2:1 S-first; no exact within-case order balance is claimed",
+  "concurrency_scope": "Transfer cohort only; coordinate actual native capacity with other work",
+  "deadline_basis": "successful spawn acknowledgement observation; no shared pair deadline or dispatch cutoff",
+  "hard_stop_utc": "2026-10-08T02:40:00Z",
+  "max_concurrent_transfer_candidates": 2,
+  "per_attempt_observation_window_seconds": 1800,
+  "planned_first_submissions": 12,
+  "repetitions_per_case_condition": 3,
+  "schedule_type": "fixed counterbalanced, not randomized",
+  "seed": null,
+  "waves": [
+    {
+      "case": "T1",
+      "dispatch_order": [
+        "t1-r1-c",
+        "t1-r1-s"
+      ],
+      "repeat": 1,
+      "wave": 1
+    },
+    {
+      "case": "T2",
+      "dispatch_order": [
+        "t2-r1-s",
+        "t2-r1-c"
+      ],
+      "repeat": 1,
+      "wave": 2
+    },
+    {
+      "case": "T1",
+      "dispatch_order": [
+        "t1-r2-s",
+        "t1-r2-c"
+      ],
+      "repeat": 2,
+      "wave": 3
+    },
+    {
+      "case": "T2",
+      "dispatch_order": [
+        "t2-r2-c",
+        "t2-r2-s"
+      ],
+      "repeat": 2,
+      "wave": 4
+    },
+    {
+      "case": "T1",
+      "dispatch_order": [
+        "t1-r3-c",
+        "t1-r3-s"
+      ],
+      "repeat": 3,
+      "wave": 5
+    },
+    {
+      "case": "T2",
+      "dispatch_order": [
+        "t2-r3-s",
+        "t2-r3-c"
+      ],
+      "repeat": 3,
+      "wave": 6
+    }
+  ]
+}

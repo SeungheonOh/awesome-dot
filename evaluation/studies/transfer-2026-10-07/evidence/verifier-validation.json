@@ -1,0 +1,27 @@
+{
+  "built_in_controls": {
+    "failed": 0,
+    "passed": 13
+  },
+  "candidate_runs": 0,
+  "commands": [
+    "python -I -B verify.py --self-test",
+    "python -I -B test_verify.py"
+  ],
+  "evidence_type": "Authored saved-evidence verifier controls, not evaluated-agent outcomes",
+  "filesystem_controls": {
+    "failed": 0,
+    "passed": 12
+  },
+  "primary_grading_reruns": 0,
+  "python_requirement": "3.10 or newer; standard library only",
+  "saved_accounting": {
+    "fail": 0,
+    "output_files": 24,
+    "pass": 156,
+    "scheduled_checks": 156,
+    "submissions": 12,
+    "unknown": 0
+  },
+  "scope": "Saved hash/inventory/accounting verification; no candidate, SQL, trusted scorer or native dispatch execution"
+}

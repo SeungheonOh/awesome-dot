@@ -1,0 +1,18 @@
+{
+  "author": {
+    "locked_files": 97,
+    "manifest_sha256": "6d99b47af3ba852487cd9014dedb6eb5664c49b191397e29cd0641a491ec6f77"
+  },
+  "guide_source_commit": "020eebcabf444f18150e912ab44d5d3bde61a16e",
+  "independent_case_review_sha256": "83e793656c7893888e3511f6bf7840ae1cebd8656db4074acb120802099571a2",
+  "operational": {
+    "locked_files": 83,
+    "manifest_sha256": "a8325d847723e7eaad7742aa6f2d7c1819f6695e6a96e6af1c41ddfdc82c43b1"
+  },
+  "outcome": {
+    "locked_files": 335,
+    "manifest_sha256": "45a3d67fe90b74377e0211de5d5a5c7425d866a377ed04516d6f187b9780f256"
+  },
+  "review_type": "Independent AI-assisted review, not human evaluation",
+  "scope": "These manifest digests are immutable provenance anchors. Private full manifests are not included; the public verifier cannot independently reconstruct those full source trees."
+}

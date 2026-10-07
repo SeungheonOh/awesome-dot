@@ -1,0 +1,84 @@
+{
+  "case": "T1",
+  "artifact_sha256": {
+    "report.sql": "34532419577d83a6af7e689554671240ec56782ceb43867ac6514a17d12871b9",
+    "reconciliation.json": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf"
+  },
+  "checks": [
+    {
+      "id": "execution",
+      "status": "pass",
+      "evidence": "bounded read-only query completed on protected fictional fixture"
+    },
+    {
+      "id": "schema_types",
+      "status": "pass",
+      "evidence": "exact columns; text keys; integer measures; nullable totals"
+    },
+    {
+      "id": "cohort",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "charge_observed",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "credit_observed",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "charge_total",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "credit_total",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "net",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "scope_parameters",
+      "status": "pass",
+      "evidence": "observed-extract scope and exact public parameters"
+    },
+    {
+      "id": "population_controls",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "partition_net",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "feed_controls",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "exceptions",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    },
+    {
+      "id": "unknowns",
+      "status": "pass",
+      "evidence": "matched frozen source-derived expectation"
+    }
+  ],
+  "totals": {
+    "pass": 14,
+    "fail": 0,
+    "unknown": 0
+  }
+}

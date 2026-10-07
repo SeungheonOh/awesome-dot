@@ -1,0 +1,18 @@
+{
+  "captured_outputs_sanitized": 0,
+  "captured_outputs_scanned": 24,
+  "checked_categories": [
+    "machine location prefixes",
+    "native agent identifiers",
+    "private coordination and authorization boilerplate",
+    "tool catalog prefixes",
+    "credential-shaped material"
+  ],
+  "designated_guide_files": 5,
+  "exact_copy_files": 98,
+  "limitations": "Pattern scanning is a supplemental check, not a universal privacy proof. Every included original was explicitly selected from fictional/public task, guide, output or safe scoring evidence.",
+  "method": "Exact-copy frozen hash checks plus byte-pattern scan over every public file; fictional source context reviewed; binary SQLite fixture inspected read-only",
+  "prohibited_matches": [],
+  "public_prompt_projections": 4,
+  "scope": "Allowlisted public proposal only; frozen author/operational/runtime sources not modified"
+}

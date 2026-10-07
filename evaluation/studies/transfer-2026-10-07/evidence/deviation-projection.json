@@ -1,0 +1,23 @@
+{
+  "actual_prompt_reconstruction_sha256": "6436523294517e399fffb8433e09e5359c19bc2d51b2cbf7a4c839e6e710b43c",
+  "candidate_feedback_or_correction_sent": false,
+  "candidate_replacement_planned": false,
+  "continuation_decision": "The root coordinator explicitly approved continuing the remaining unchanged schedule while retaining this deviation, without correcting, replacing or rerunning the affected candidate.",
+  "evidence_scope": "Controller-observed reconstruction, not independently retrieved native transport",
+  "exact_delta": {
+    "actual": "return a brief message",
+    "frozen": "return a brief final message"
+  },
+  "first_terminal_rule_unchanged": true,
+  "frozen_files_changed": false,
+  "frozen_prompt_sha256": "53aea7f0f6db7ca409d4188de2d71dc606ac686d498a704b4e4b48bdc2a14dce",
+  "id": "deviation-001",
+  "impact": "Exact prompt parity was imperfect; performance impact is unknown.",
+  "observed_at_utc": "2026-10-07T04:24:47.876807+00:00",
+  "other_prompt_text_unchanged_by_controller_observation": true,
+  "projection_label": "Public factual deviation projection; operational dispatch texts and private continuation message excluded",
+  "slot_id": "t2-r1-c",
+  "source_continuation_record_sha256": "37a9a060515130075793964e38fa11caeef4e42fa05aeaeadd040c0c4d671134",
+  "source_deviation_record_sha256": "506a00ae720256fafef1a008ad811b4beeec06ba3fcf02f18417f6c0c5f93b89",
+  "type": "known prompt transcription omission"
+}

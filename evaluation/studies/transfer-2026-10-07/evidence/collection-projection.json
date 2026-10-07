@@ -1,0 +1,341 @@
+{
+  "projection_label": "Public collection projection; raw native final messages and identifiers are not included",
+  "rows": [
+    {
+      "artifacts": {
+        "reconciliation.json": {
+          "bytes": 6554,
+          "capture": "captured",
+          "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf"
+        },
+        "report.sql": {
+          "bytes": 3302,
+          "capture": "captured",
+          "sha256": "afe7b9d26282a45a9e3ac3d8a0bd454c8b844c70396643e805c04fb73a0814ea"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:22:59.973102Z",
+      "capture_lag_seconds": 15.971257,
+      "capture_started_at_utc": "2026-10-07T04:22:59.971257Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:22:44Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "c09ec09b166a0deee92df05bf1f8f626158c599c75cd391fa3bc1a4bde72f2c1",
+      "raw_native_event_sha256": "761536f8847773abee58cd410edc3e6bb0a798d3ba5614eaad8ae2617a0a9ada",
+      "slot_id": "t1-r1-c",
+      "source_terminal_record_sha256": "26bca390ceb3302dfa5a998906e9194b7220e851af5b10558bfed700b26b6344"
+    },
+    {
+      "artifacts": {
+        "reconciliation.json": {
+          "bytes": 8215,
+          "capture": "captured",
+          "sha256": "ac7f9ca105da64b41752be09d63f251cd4a2f40db054cbcab09038f774483a22"
+        },
+        "report.sql": {
+          "bytes": 4004,
+          "capture": "captured",
+          "sha256": "762cd373ec12dd37f1e5d8f47d804014403112c6560a423271c63a0faa19aef3"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:23:50.040365Z",
+      "capture_lag_seconds": 15.038127,
+      "capture_started_at_utc": "2026-10-07T04:23:50.038127Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:23:35Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "87a5b7c431eb02f8eafec054e170793cbe9a2fcd6c1903ff0e72abdc353b66eb",
+      "raw_native_event_sha256": "ee1414ea6c65fd7195aadbae74ee89b0d937f772644605f0d38b95e201552918",
+      "slot_id": "t1-r1-s",
+      "source_terminal_record_sha256": "47f3a4cf87139fc0941bf600395faf377a19db8539bfeec1d80ec59f17e20ed4"
+    },
+    {
+      "artifacts": {
+        "action_register.json": {
+          "bytes": 15293,
+          "capture": "captured",
+          "sha256": "9da382f022b9a9d36462bae75d73a1db227dd3c3f1ad14dd6643134b71837db5"
+        },
+        "handoff.txt": {
+          "bytes": 7404,
+          "capture": "captured",
+          "sha256": "ab509901393b11bbd66e7be97703102d61cdbe0268fca71a3f4ba7f715d2be49"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:28:16.478039Z",
+      "capture_lag_seconds": 15.476198,
+      "capture_started_at_utc": "2026-10-07T04:28:16.476198Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:28:01Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "9d6e5dc4efd8351b7d4e661b0d579b95f7fd733c2b901408211dfaeeba7ccbeb",
+      "raw_native_event_sha256": "357958b2461f9855722221c19aaea3269ef587c4f210d72098f65e6c0cb8e578",
+      "slot_id": "t2-r1-s",
+      "source_terminal_record_sha256": "196aedd83f2d17ebd946d79bc872b2d66b33ec4bd3c7a419e92e49fe828ebb1c"
+    },
+    {
+      "artifacts": {
+        "action_register.json": {
+          "bytes": 15589,
+          "capture": "captured",
+          "sha256": "45a98e30a79f49df09f286373f6c7cabd7e217e7ce0b4478938aa692b33cab17"
+        },
+        "handoff.txt": {
+          "bytes": 6108,
+          "capture": "captured",
+          "sha256": "27d8bcf2e4d2423e792e8124f87377f9aecf8bb1b436f05a09a8fd5b39d1cc0d"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:28:01.298446Z",
+      "capture_lag_seconds": 12.297052,
+      "capture_started_at_utc": "2026-10-07T04:28:01.297052Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:27:49Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "299a2b0169adc1c08bbb4bbf22ca4c8f7a533be5219558f2d9feff47a56089cc",
+      "raw_native_event_sha256": "868aba908b016920965bf325e45bd152aa21edd65791ad9d435a9013c8e35989",
+      "slot_id": "t2-r1-c",
+      "source_terminal_record_sha256": "b2db6297f24e0bf4aadb5dad4b6238a5b74cc9eb2eb39b9a070bf890ec12ffb0"
+    },
+    {
+      "artifacts": {
+        "reconciliation.json": {
+          "bytes": 9417,
+          "capture": "captured",
+          "sha256": "62b74163a18efd45bea3c39263df94d6863babfec27787a13a34590361735eb5"
+        },
+        "report.sql": {
+          "bytes": 4011,
+          "capture": "captured",
+          "sha256": "2e6c3806fc070775c6d9f98d2963d3101b4e3e811e50f4c6042704195bc2dc4d"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:31:31.204950Z",
+      "capture_lag_seconds": 13.202002,
+      "capture_started_at_utc": "2026-10-07T04:31:31.202002Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:31:18Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "bb428c2792b6ca16ad3570c27d0d71c5c760dc234b382b8fd4dcbedc0929f959",
+      "raw_native_event_sha256": "026125895022fa72642f35f0daa8c9cc5e2b602f8c86f049b905a76c959aec0d",
+      "slot_id": "t1-r2-s",
+      "source_terminal_record_sha256": "8da4e2574871285e5bd7ce87e62b4166161bd64d1f6a1fbe99d4436b80b48e3a"
+    },
+    {
+      "artifacts": {
+        "reconciliation.json": {
+          "bytes": 6554,
+          "capture": "captured",
+          "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf"
+        },
+        "report.sql": {
+          "bytes": 3524,
+          "capture": "captured",
+          "sha256": "e5206ac2409b30c1e0092965f39b18999d2abc1a5a57e9d258bce3d18630ef73"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:31:46.762908Z",
+      "capture_lag_seconds": 13.760484,
+      "capture_started_at_utc": "2026-10-07T04:31:46.760484Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:31:33Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "c9d3a920a896845b29a0acd33560eec49dad1fafd92fe5a7e2a5c3a285c96090",
+      "raw_native_event_sha256": "a3851f7a7ff2ee4a3ea53bb0eaac15590117a0f64dc837b44826cc6f284f86d3",
+      "slot_id": "t1-r2-c",
+      "source_terminal_record_sha256": "71cd618b2f605cbc7d7bb73077fd3aa1185bcd6ffa960fcc4ac4b0b62ee64c2e"
+    },
+    {
+      "artifacts": {
+        "action_register.json": {
+          "bytes": 15388,
+          "capture": "captured",
+          "sha256": "601c6c242aafb1301064e0eb5da0326d62434091447492e47c2d02513f249142"
+        },
+        "handoff.txt": {
+          "bytes": 6251,
+          "capture": "captured",
+          "sha256": "16d1c2f92c67a225d5cfc1a2cc2fa47bc269a3b5a1667910ca4336c92b91e346"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:36:18.806160Z",
+      "capture_lag_seconds": 13.804741,
+      "capture_started_at_utc": "2026-10-07T04:36:18.804741Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:36:05Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "a79631fd01e2dae3d1424f684cbca20bf87fce84cb76fd101e44e18b1da002bb",
+      "raw_native_event_sha256": "31625de0dba293bc1019eb0cfea9e705710932002e7da4f281f79f0d8bad7213",
+      "slot_id": "t2-r2-c",
+      "source_terminal_record_sha256": "f65cb87c3cd7e2b5c861cfdfaa4f25d7317191978614eb5d461a2a7dcc34d71f"
+    },
+    {
+      "artifacts": {
+        "action_register.json": {
+          "bytes": 14829,
+          "capture": "captured",
+          "sha256": "3203f0f2a7a8357be33833e3bb5d57d4f9c2b19b0c55d26dde5c943a6e0eec6d"
+        },
+        "handoff.txt": {
+          "bytes": 6625,
+          "capture": "captured",
+          "sha256": "937a280bd96ea96998b7ee3867cd6db7a4cc0f0f67d4c7176ae2fe4e99256bdd"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:36:18.860995Z",
+      "capture_lag_seconds": 10.859371,
+      "capture_started_at_utc": "2026-10-07T04:36:18.859371Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:36:08Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "a164969581fcf7c06ff980320a1a8438b6731f3565c2e96ef9438b6846fdc598",
+      "raw_native_event_sha256": "846698d111404d7df44a38718ba3e052441e286b9dddebe3fdc9f6630fce516d",
+      "slot_id": "t2-r2-s",
+      "source_terminal_record_sha256": "64fa48012b2f16e4bd15b34142ecd89e88a1788af9b49028cf97b613e430a3bf"
+    },
+    {
+      "artifacts": {
+        "reconciliation.json": {
+          "bytes": 6554,
+          "capture": "captured",
+          "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf"
+        },
+        "report.sql": {
+          "bytes": 3442,
+          "capture": "captured",
+          "sha256": "34532419577d83a6af7e689554671240ec56782ceb43867ac6514a17d12871b9"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:38:37.950161Z",
+      "capture_lag_seconds": 11.948297,
+      "capture_started_at_utc": "2026-10-07T04:38:37.948297Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:38:26Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "06b04c0e5bb30ddbc3dcb3e4649e240f1092b04be41cf2ab4bb695e4b06b4293",
+      "raw_native_event_sha256": "fa72461e98d7411443d10f15c3e1b1fff1b5aca0bf77b009dd3114325fb95597",
+      "slot_id": "t1-r3-c",
+      "source_terminal_record_sha256": "07810c9f7d4ca61fb4596c3a0022a2dad8beb40564ae9735c7a0ee83bd843891"
+    },
+    {
+      "artifacts": {
+        "reconciliation.json": {
+          "bytes": 9432,
+          "capture": "captured",
+          "sha256": "3106987c4868536ea7352a327fa54e7fc7ca17d2eb0e54989995025244b63313"
+        },
+        "report.sql": {
+          "bytes": 3750,
+          "capture": "captured",
+          "sha256": "9ff294b8bb886575ef1d97ecd70bb590fdda9b9ecd72cf7bf7887dd3c5dd58ad"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:40:22.536098Z",
+      "capture_lag_seconds": 12.532529,
+      "capture_started_at_utc": "2026-10-07T04:40:22.532529Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:40:10Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "40d2b8133c0a3455b31b84b53783075d9dd6bdce1fe441ff598a51bf16b72e4f",
+      "raw_native_event_sha256": "cc49d13c097cdff35ab89c8d9daf013c91a97d1379d620171118000f152c04ab",
+      "slot_id": "t1-r3-s",
+      "source_terminal_record_sha256": "f544d0b402d5d7de94f7755b1036ecf56b8e2c1442a04a90589d9f6fcb37f3ca"
+    },
+    {
+      "artifacts": {
+        "action_register.json": {
+          "bytes": 14675,
+          "capture": "captured",
+          "sha256": "3e5411ff1b2cd7f74fe9aac185bccd4aafd85a1c9278b8a9aa4be142323f8193"
+        },
+        "handoff.txt": {
+          "bytes": 5687,
+          "capture": "captured",
+          "sha256": "598e2e669454e00b6c9a27fe23ceca4f46b57209cc0d9e9b7393c3f833d81d79"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:44:28.513330Z",
+      "capture_lag_seconds": 18.511579,
+      "capture_started_at_utc": "2026-10-07T04:44:28.511579Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:44:10Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "1880e41b18048a4b75aeb7551c2e9021afcb3cc95796cb90422a3c43a8218d27",
+      "raw_native_event_sha256": "87682a2fff4847e55cfeb2e1285810892c1edacba6b831597640c2addc5b712b",
+      "slot_id": "t2-r3-s",
+      "source_terminal_record_sha256": "b5a41f2687f2853ae2c7f370344914be15cd0543454f214e0b5bc7449253e92b"
+    },
+    {
+      "artifacts": {
+        "action_register.json": {
+          "bytes": 14831,
+          "capture": "captured",
+          "sha256": "b473640b7f1995052f28c92d762b06651f81527df6a49e4760c1be73d796b315"
+        },
+        "handoff.txt": {
+          "bytes": 5199,
+          "capture": "captured",
+          "sha256": "496d8d23bd02c4acda17d38f0577dfc3a76390d0a70e634baca5ce341b9490d9"
+        }
+      },
+      "capture_finished_at_utc": "2026-10-07T04:43:52.483428Z",
+      "capture_lag_seconds": 14.482051,
+      "capture_started_at_utc": "2026-10-07T04:43:52.482051Z",
+      "first_terminal_observed_at_utc": "2026-10-07T04:43:38Z",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "limitation": "Snapshot at observer collection, not atomic agent-finalization time; shared filesystem is not isolated",
+      "operational_status": "final_on_time",
+      "raw_final_message_sha256": "611c6076abd0a6eff775f7964b7c903d7f22158d6ea05b37f4a18b16cffd869d",
+      "raw_native_event_sha256": "ff1c036413455e848da4ed0fb17f4aa6830fabbf2562a686453ced403a8ea2cc",
+      "slot_id": "t2-r3-c",
+      "source_terminal_record_sha256": "a79039b1cd0e1bd875b25d05dfe3dd604ab573e37e320d5f78a396ce134109c7"
+    }
+  ]
+}

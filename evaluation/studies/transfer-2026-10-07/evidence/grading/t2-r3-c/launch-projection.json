@@ -1,0 +1,18 @@
+{
+  "address_space_bytes": 536870912,
+  "candidate_code_imported": false,
+  "cpu_seconds": 8,
+  "environment_policy": "Minimal explicit environment with fixed UTF-8 locale and UTC timezone; private paths omitted",
+  "file_bytes": 2097152,
+  "isolated_python": true,
+  "max_open_files": 64,
+  "projection_label": "Public projection, not a raw launch record",
+  "python_flags": [
+    "-I",
+    "-B"
+  ],
+  "source_record_sha256": "4325f7cad12989174442004c475b972ceb8377f1ee5fffc7b6ffc40dca160f38",
+  "started_at_utc": "2026-10-07T04:44:29.114003Z",
+  "trusted_scorer_source_sha256": "a58c58eebd2f61f85543f4c14c36c2fa9f0cf8524de01cc9bc44b6cd645fd123",
+  "wall_timeout_seconds": 12
+}

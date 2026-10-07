@@ -1,0 +1,22 @@
+{
+  "T1": {
+    "author_control_packets": 20,
+    "negative_controls": 17,
+    "positive_controls": 3,
+    "test_methods": 18
+  },
+  "T2": {
+    "author_checks": 78,
+    "negative_controls": 36,
+    "reference_passed": 12,
+    "reference_scheduled": 12,
+    "source_audit_passed": true
+  },
+  "evidence_type": "Authored checker controls, not evaluated-agent outcomes",
+  "exporter": {
+    "test_methods": 16
+  },
+  "review_scope": "Saved independent case review; no author controls or primary grading rerun for this public package",
+  "source_gate": "Case/scorer/exporter preparation approved in the source review; sealed model-runtime isolation was not approved or established",
+  "source_review_sha256": "83e793656c7893888e3511f6bf7840ae1cebd8656db4074acb120802099571a2"
+}

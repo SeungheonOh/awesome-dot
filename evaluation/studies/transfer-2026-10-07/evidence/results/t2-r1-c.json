@@ -1,0 +1,149 @@
+{
+  "all_met": true,
+  "case": "T2",
+  "checks": {
+    "T2-01": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-02": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-03": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-04": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-05": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-06": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-07": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-08": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-09": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-10": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-11": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    },
+    "T2-12": {
+      "reason": "All required structured facts agree",
+      "status": "pass"
+    }
+  },
+  "condition": "C",
+  "failed": 0,
+  "grade_status": "graded",
+  "input_integrity": {
+    "issues": [],
+    "unchanged": true
+  },
+  "operational_status": "final_on_time",
+  "passed": 12,
+  "raw_artifacts": {
+    "action_register.json": {
+      "bytes": 15589,
+      "capture": "captured",
+      "sha256": "45a98e30a79f49df09f286373f6c7cabd7e217e7ce0b4478938aa692b33cab17"
+    },
+    "handoff.txt": {
+      "bytes": 6108,
+      "capture": "captured",
+      "sha256": "27d8bcf2e4d2423e792e8124f87377f9aecf8bb1b436f05a09a8fd5b39d1cc0d"
+    }
+  },
+  "raw_grade": {
+    "all_requirements_met": true,
+    "artifact_errors": [],
+    "artifact_sha256": {
+      "action_register.json": "45a98e30a79f49df09f286373f6c7cabd7e217e7ce0b4478938aa692b33cab17",
+      "handoff.txt": "27d8bcf2e4d2423e792e8124f87377f9aecf8bb1b436f05a09a8fd5b39d1cc0d"
+    },
+    "candidate_code_executed": false,
+    "case_id": "T2",
+    "checks": {
+      "T2-01": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-02": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-03": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-04": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-05": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-06": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-07": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-08": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-09": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-10": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-11": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      },
+      "T2-12": {
+        "reason": "All required structured facts agree",
+        "status": "pass"
+      }
+    },
+    "evaluation_valid": true,
+    "objective": {
+      "failed": 0,
+      "passed": 12,
+      "total": 12,
+      "unknown": 0
+    },
+    "semantic_prose_quality": "not_scored",
+    "synthetic": true,
+    "trusted_integrity_sha256": "717a617fd7be0260906bf978000254be36c3a167ae9b9a866cbbea35e3581a86"
+  },
+  "repeat": 1,
+  "scheduled": 12,
+  "slot_id": "t2-r1-c",
+  "unknown": 0
+}

@@ -1,0 +1,94 @@
+{
+  "actual_backend_identity": "unknown",
+  "all_native_spawns_model_override": null,
+  "all_native_spawns_requested_fork_turns": "none",
+  "all_native_spawns_requested_reasoning_effort": "xhigh",
+  "projection_label": "Public hashes of private intended and controller-observed reconstructed dispatches, not exact prompt transcripts",
+  "records": [
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "0701fae03cf0a091cbeeba288b15f9bc4d5b40d7fde4370c31687fa93dfcfcc0",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "0701fae03cf0a091cbeeba288b15f9bc4d5b40d7fde4370c31687fa93dfcfcc0",
+      "slot_id": "t1-r1-c"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "f74854fbb5a51759eaa94e15f0e2e73857892c17caa96415519d00a231f83124",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "f74854fbb5a51759eaa94e15f0e2e73857892c17caa96415519d00a231f83124",
+      "slot_id": "t1-r1-s"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "bcfef6d938974a85fd47772229c4acccadbb1323628556463fcaf55e9719d691",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "bcfef6d938974a85fd47772229c4acccadbb1323628556463fcaf55e9719d691",
+      "slot_id": "t2-r1-s"
+    },
+    {
+      "deviation_id": "deviation-001",
+      "intended_frozen_sha256": "53aea7f0f6db7ca409d4188de2d71dc606ac686d498a704b4e4b48bdc2a14dce",
+      "matches_intended_by_controller_observation": false,
+      "observed_dispatch_reconstruction_sha256": "6436523294517e399fffb8433e09e5359c19bc2d51b2cbf7a4c839e6e710b43c",
+      "slot_id": "t2-r1-c"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "24daadae67653d143a62acba032a8ac77edb84dbd047f084aee2300ff6d587ce",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "24daadae67653d143a62acba032a8ac77edb84dbd047f084aee2300ff6d587ce",
+      "slot_id": "t1-r2-s"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "bfef03ba13d5595e73f696afc5acc1657f4a9fa63111c3932ce30f070c5dc6ef",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "bfef03ba13d5595e73f696afc5acc1657f4a9fa63111c3932ce30f070c5dc6ef",
+      "slot_id": "t1-r2-c"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "bf646f2187b5bf7f2265502acc22a17d5433053e07e1876c847b3da84690075f",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "bf646f2187b5bf7f2265502acc22a17d5433053e07e1876c847b3da84690075f",
+      "slot_id": "t2-r2-c"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "8247e88bf71b2efe045031ef78a81fb694c5789ab2ba1e10e91256ce3bcc7b67",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "8247e88bf71b2efe045031ef78a81fb694c5789ab2ba1e10e91256ce3bcc7b67",
+      "slot_id": "t2-r2-s"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "3c331c056e481d78463003bf936beed50d3449273288b4af1e031e5f4e07b879",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "3c331c056e481d78463003bf936beed50d3449273288b4af1e031e5f4e07b879",
+      "slot_id": "t1-r3-c"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "a2749a8a8349f7d0971137583d227e62f1aecb6df4598f2405166cc367cf0e23",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "a2749a8a8349f7d0971137583d227e62f1aecb6df4598f2405166cc367cf0e23",
+      "slot_id": "t1-r3-s"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "8f72c797139e7fd488fe33b0d001d57f13b834a402dbf8a06bd3d45a59b93298",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "8f72c797139e7fd488fe33b0d001d57f13b834a402dbf8a06bd3d45a59b93298",
+      "slot_id": "t2-r3-s"
+    },
+    {
+      "deviation_id": null,
+      "intended_frozen_sha256": "f403ad2d767a1a7d54dcfcd19191cc559b33e2b539f4a4b824fae76b30cf2a21",
+      "matches_intended_by_controller_observation": true,
+      "observed_dispatch_reconstruction_sha256": "f403ad2d767a1a7d54dcfcd19191cc559b33e2b539f4a4b824fae76b30cf2a21",
+      "slot_id": "t2-r3-c"
+    }
+  ],
+  "source_record_sha256": "7010db5e169e5cfd48100b380cb8acab6ff5ce77b6e7248b1460bee3b738eeab"
+}

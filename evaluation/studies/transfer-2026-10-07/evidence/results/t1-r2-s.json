@@ -1,0 +1,185 @@
+{
+  "all_met": true,
+  "case": "T1",
+  "checks": {
+    "charge_observed": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "charge_observed",
+      "status": "pass"
+    },
+    "charge_total": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "charge_total",
+      "status": "pass"
+    },
+    "cohort": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "cohort",
+      "status": "pass"
+    },
+    "credit_observed": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "credit_observed",
+      "status": "pass"
+    },
+    "credit_total": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "credit_total",
+      "status": "pass"
+    },
+    "exceptions": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "exceptions",
+      "status": "pass"
+    },
+    "execution": {
+      "evidence": "bounded read-only query completed on protected fictional fixture",
+      "id": "execution",
+      "status": "pass"
+    },
+    "feed_controls": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "feed_controls",
+      "status": "pass"
+    },
+    "net": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "net",
+      "status": "pass"
+    },
+    "partition_net": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "partition_net",
+      "status": "pass"
+    },
+    "population_controls": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "population_controls",
+      "status": "pass"
+    },
+    "schema_types": {
+      "evidence": "exact columns; text keys; integer measures; nullable totals",
+      "id": "schema_types",
+      "status": "pass"
+    },
+    "scope_parameters": {
+      "evidence": "observed-extract scope and exact public parameters",
+      "id": "scope_parameters",
+      "status": "pass"
+    },
+    "unknowns": {
+      "evidence": "matched frozen source-derived expectation",
+      "id": "unknowns",
+      "status": "pass"
+    }
+  },
+  "condition": "S",
+  "failed": 0,
+  "grade_status": "graded",
+  "input_integrity": {
+    "issues": [],
+    "unchanged": true
+  },
+  "operational_status": "final_on_time",
+  "passed": 14,
+  "raw_artifacts": {
+    "reconciliation.json": {
+      "bytes": 9417,
+      "capture": "captured",
+      "sha256": "62b74163a18efd45bea3c39263df94d6863babfec27787a13a34590361735eb5"
+    },
+    "report.sql": {
+      "bytes": 4011,
+      "capture": "captured",
+      "sha256": "2e6c3806fc070775c6d9f98d2963d3101b4e3e811e50f4c6042704195bc2dc4d"
+    }
+  },
+  "raw_grade": {
+    "artifact_sha256": {
+      "reconciliation.json": "62b74163a18efd45bea3c39263df94d6863babfec27787a13a34590361735eb5",
+      "report.sql": "2e6c3806fc070775c6d9f98d2963d3101b4e3e811e50f4c6042704195bc2dc4d"
+    },
+    "case": "T1",
+    "checks": [
+      {
+        "evidence": "bounded read-only query completed on protected fictional fixture",
+        "id": "execution",
+        "status": "pass"
+      },
+      {
+        "evidence": "exact columns; text keys; integer measures; nullable totals",
+        "id": "schema_types",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "cohort",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "charge_observed",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "credit_observed",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "charge_total",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "credit_total",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "net",
+        "status": "pass"
+      },
+      {
+        "evidence": "observed-extract scope and exact public parameters",
+        "id": "scope_parameters",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "population_controls",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "partition_net",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "feed_controls",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "exceptions",
+        "status": "pass"
+      },
+      {
+        "evidence": "matched frozen source-derived expectation",
+        "id": "unknowns",
+        "status": "pass"
+      }
+    ],
+    "totals": {
+      "fail": 0,
+      "pass": 14,
+      "unknown": 0
+    }
+  },
+  "repeat": 2,
+  "scheduled": 14,
+  "slot_id": "t1-r2-s",
+  "unknown": 0
+}

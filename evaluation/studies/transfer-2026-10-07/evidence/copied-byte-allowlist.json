@@ -1,0 +1,789 @@
+{
+  "files": [
+    {
+      "bytes": 6384,
+      "evidence_type": "unchanged authored task with 900 second wording",
+      "public_path": "cases/T1/TASK-source.md",
+      "sha256": "091ec9567e62b0321f5f4da11415db6f1a59d686e019956efb952441f40f3954",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/candidate/TASK.md"
+    },
+    {
+      "bytes": 6385,
+      "evidence_type": "unchanged effective common task with 1800 second wording",
+      "public_path": "cases/T1/TASK-effective.md",
+      "sha256": "5af669437ce0e1677adab4ea7414bfcbd9e0faec7251213ad785b233cc090c96",
+      "source_bundle": "operational",
+      "source_relative_path": "packets/T1-C/TASK.md"
+    },
+    {
+      "bytes": 336,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T1/inputs/allowed-functions.txt",
+      "sha256": "2f79b2584196a5d1b7e574fab4e2de3a983d1f5f7454e848135ec8167a5316b1",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/candidate/inputs/allowed-functions.txt"
+    },
+    {
+      "bytes": 12062,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T1/inputs/ledger.json",
+      "sha256": "d1954d8294e9317b0212f8bbe29054f674721ae718d454f3c278bd8c2019ae62",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/candidate/inputs/ledger.json"
+    },
+    {
+      "bytes": 53248,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T1/inputs/metering.sqlite",
+      "sha256": "a8475c47780a4477a66e0de93d239d9ddd6a1f2629889814e0722ab9966d3d99",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/candidate/inputs/metering.sqlite"
+    },
+    {
+      "bytes": 100,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T1/inputs/parameters.json",
+      "sha256": "b2aecf4a03ed36972497e89899e1f344b591b3efffb6604a5977e8520119475f",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/candidate/inputs/parameters.json"
+    },
+    {
+      "bytes": 1123,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T1/inputs/schema.sql",
+      "sha256": "3a37b1bbe55312f1742bc2aef325ad2d8cdedf4f2fde3c16fc9f4a295010d486",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/candidate/inputs/schema.sql"
+    },
+    {
+      "bytes": 3375,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T1/inputs/source-policy.md",
+      "sha256": "0dd04dc63ce5db228bd19a5456b355d4086482af923a6e9b784c1406f44e1211",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/candidate/inputs/source-policy.md"
+    },
+    {
+      "bytes": 3753,
+      "evidence_type": "unchanged authored scoring specification; not candidate input or agent outcome",
+      "public_path": "cases/T1/scoring/requirements.json",
+      "sha256": "b6d880d67e855d177c05994b3f2514391d5e09c28e7461eba474be8e48c745a3",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/private/requirements.json"
+    },
+    {
+      "bytes": 13090,
+      "evidence_type": "unchanged authored scoring specification; not candidate input or agent outcome",
+      "public_path": "cases/T1/scoring/expected.json",
+      "sha256": "0049a012164303304b336c843a1604bdc13e2b4a1311356b24df642596b01db9",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T1/private/expected.json"
+    },
+    {
+      "bytes": 8367,
+      "evidence_type": "unchanged designated public guide",
+      "public_path": "designated-guides/sql-report-reconciliation/SKILL.md",
+      "sha256": "0bbd6f501ee28738fea6326fe8759a2383047b034ad6888378dc00ca92204c59",
+      "source_bundle": "operational",
+      "source_relative_path": "packets/T1-S/skill/sql-report-reconciliation/SKILL.md"
+    },
+    {
+      "bytes": 17142,
+      "evidence_type": "unchanged designated public guide",
+      "public_path": "designated-guides/sql-report-reconciliation/references/fictional-example.md",
+      "sha256": "9193c975032ac7880a0901480840c950aba154635bc644b5ac1f22931074afc8",
+      "source_bundle": "operational",
+      "source_relative_path": "packets/T1-S/skill/sql-report-reconciliation/references/fictional-example.md"
+    },
+    {
+      "bytes": 3987,
+      "evidence_type": "unchanged designated public guide",
+      "public_path": "designated-guides/sql-report-reconciliation/references/verified-run.md",
+      "sha256": "cbcc0f25d9f348efad324d22e6bd61b1fffc076e25d5cb41583c057795812934",
+      "source_bundle": "operational",
+      "source_relative_path": "packets/T1-S/skill/sql-report-reconciliation/references/verified-run.md"
+    },
+    {
+      "bytes": 7365,
+      "evidence_type": "unchanged authored task with 900 second wording",
+      "public_path": "cases/T2/TASK-source.md",
+      "sha256": "80dd335932782c983b41b52e7df87c3c2a94ed78624455dcb338578bf02b58fa",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T2/candidate/TASK.md"
+    },
+    {
+      "bytes": 7366,
+      "evidence_type": "unchanged effective common task with 1800 second wording",
+      "public_path": "cases/T2/TASK-effective.md",
+      "sha256": "a65e0235cc89ef5bb6497761a297bb5e4addacb8ed017b83960d7d7704eb67c1",
+      "source_bundle": "operational",
+      "source_relative_path": "packets/T2-C/TASK.md"
+    },
+    {
+      "bytes": 2476,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T2/inputs/artifacts.json",
+      "sha256": "642e238c241c5276e15d13ef2cb83e5cd633e23aa17af5109f984c7c109867e6",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T2/candidate/inputs/artifacts.json"
+    },
+    {
+      "bytes": 1082,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T2/inputs/people.json",
+      "sha256": "be880b0e6bb0a2714056b97f5b566508e7c243376f500f9d4e606241b6034bcc",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T2/candidate/inputs/people.json"
+    },
+    {
+      "bytes": 5153,
+      "evidence_type": "unchanged fictional candidate input",
+      "public_path": "cases/T2/inputs/threads.txt",
+      "sha256": "f0c295f3a5d0ef2591ee4120963f83c5bb940c18508c8e7c023df119b8883368",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T2/candidate/inputs/threads.txt"
+    },
+    {
+      "bytes": 9704,
+      "evidence_type": "unchanged authored scoring specification; not candidate input or agent outcome",
+      "public_path": "cases/T2/scoring/requirements.json",
+      "sha256": "aa9cda0648da4e4409f69d5ef7076654eaae41c378c566c3e891e1cb82bed87f",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T2/private/requirements.json"
+    },
+    {
+      "bytes": 12447,
+      "evidence_type": "unchanged authored scoring specification; not candidate input or agent outcome",
+      "public_path": "cases/T2/scoring/expected.json",
+      "sha256": "ef2878bc818202cdd75e726732d070e1265df3480ef47df52e7bb4cdf7377fbc",
+      "source_bundle": "author",
+      "source_relative_path": "cases/T2/private/expected.json"
+    },
+    {
+      "bytes": 10774,
+      "evidence_type": "unchanged designated public guide",
+      "public_path": "designated-guides/meeting-action-handoff/SKILL.md",
+      "sha256": "f6e36e12666ab844609344a9b5cabe92dfc6e84cd12c0455ce64e74c6b98d2ee",
+      "source_bundle": "operational",
+      "source_relative_path": "packets/T2-S/skill/meeting-action-handoff/SKILL.md"
+    },
+    {
+      "bytes": 3716,
+      "evidence_type": "unchanged designated public guide",
+      "public_path": "designated-guides/meeting-action-handoff/example.md",
+      "sha256": "b0fcc1e08b4d0c4ad8d3354ff8131972b9e3dccd6f4b03a3a8a022a4f8e511e7",
+      "source_bundle": "operational",
+      "source_relative_path": "packets/T2-S/skill/meeting-action-handoff/example.md"
+    },
+    {
+      "bytes": 1361,
+      "evidence_type": "unchanged public guide origin and byte hashes",
+      "public_path": "evidence/guide-provenance.json",
+      "sha256": "99eb58f7f488e9fef6b708cde6a8a070e75ce0e13f83e03fb42ba6f88294c2bb",
+      "source_bundle": "author",
+      "source_relative_path": "provenance/packages.json"
+    },
+    {
+      "bytes": 2022,
+      "evidence_type": "unchanged pre-outcome task-budget amendment",
+      "public_path": "evidence/budget-amendment.json",
+      "sha256": "122e800086fa4d21b360c2fd4df14f05b2303040986fb01bd59d28a103ea99a8",
+      "source_bundle": "operational",
+      "source_relative_path": "budget-amendment.json"
+    },
+    {
+      "bytes": 1526,
+      "evidence_type": "unchanged fixed pre-outcome schedule",
+      "public_path": "evidence/schedule.json",
+      "sha256": "0fecb610c0c91d2300c82222ad1d67b3b73038d3fcb30ba26d6ee3aa4ae6b17e",
+      "source_bundle": "operational",
+      "source_relative_path": "schedule.json"
+    },
+    {
+      "bytes": 63628,
+      "evidence_type": "unchanged primary aggregate and all raw statuses",
+      "public_path": "evidence/results.json",
+      "sha256": "6def369e8bf74222ecafe07a565b6787bf8d4ab6ce433e54ef7c6be5077bbdf7",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/results.json"
+    },
+    {
+      "bytes": 5031,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t1-r1-c.json",
+      "sha256": "82810518fb3e3599ef1192c38318f7a45a8319d6843ea8f9b10ddbb0cc56ef97",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r1-c-result.json"
+    },
+    {
+      "bytes": 6554,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r1-c/reconciliation.json",
+      "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r1-c/captured/reconciliation.json"
+    },
+    {
+      "bytes": 3302,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r1-c/report.sql",
+      "sha256": "afe7b9d26282a45a9e3ac3d8a0bd454c8b844c70396643e805c04fb73a0814ea",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r1-c/captured/report.sql"
+    },
+    {
+      "bytes": 2135,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r1-c/stdout.json",
+      "sha256": "0f0632e6492419900536dfb1580aed4e9cee7037c16885a62b3dc148026e793d",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r1-c/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r1-c/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r1-c/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r1-c/process.json",
+      "sha256": "702f5e864ecf9b01f593fa1fc394ef9138a90436bcc972c85d7281b37b2538a2",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r1-c/process/process.json"
+    },
+    {
+      "bytes": 5031,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t1-r1-s.json",
+      "sha256": "6d8bc917d190ec3f02d350fe3a086093a50ea9a8fbfd8c4edc3a2cea0f39dcdb",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r1-s-result.json"
+    },
+    {
+      "bytes": 8215,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r1-s/reconciliation.json",
+      "sha256": "ac7f9ca105da64b41752be09d63f251cd4a2f40db054cbcab09038f774483a22",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r1-s/captured/reconciliation.json"
+    },
+    {
+      "bytes": 4004,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r1-s/report.sql",
+      "sha256": "762cd373ec12dd37f1e5d8f47d804014403112c6560a423271c63a0faa19aef3",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r1-s/captured/report.sql"
+    },
+    {
+      "bytes": 2135,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r1-s/stdout.json",
+      "sha256": "5099971914d0f652eb801761dbd31571db47af77793a90dda0bd8f86b2bb3b9d",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r1-s/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r1-s/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r1-s/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r1-s/process.json",
+      "sha256": "544c84dd11ec719e394736239da6de8aac1e80031d3860573fcacbf1c829eb98",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r1-s/process/process.json"
+    },
+    {
+      "bytes": 3852,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t2-r1-s.json",
+      "sha256": "9efc67d6f2c1fbfb37eecc8e47cf907519cd25274784df58716bd8ec39d60140",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r1-s-result.json"
+    },
+    {
+      "bytes": 15293,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r1-s/action_register.json",
+      "sha256": "9da382f022b9a9d36462bae75d73a1db227dd3c3f1ad14dd6643134b71837db5",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r1-s/captured/action_register.json"
+    },
+    {
+      "bytes": 7404,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r1-s/handoff.txt",
+      "sha256": "ab509901393b11bbd66e7be97703102d61cdbe0268fca71a3f4ba7f715d2be49",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r1-s/captured/handoff.txt"
+    },
+    {
+      "bytes": 1823,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r1-s/stdout.json",
+      "sha256": "aa71f1452f2ea85fcfeff74f1c55b3da6d934e65ea77bc0e196279ccd35b5fce",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r1-s/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r1-s/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r1-s/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r1-s/process.json",
+      "sha256": "9ff3f5602354fb9044270f027f8379584365e2d3b64d69976da844e8e70f1b4b",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r1-s/process/process.json"
+    },
+    {
+      "bytes": 3852,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t2-r1-c.json",
+      "sha256": "34e407810b87646c50a3396e4883ffee3486aacce7fd932c1d8f825b79ed213f",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r1-c-result.json"
+    },
+    {
+      "bytes": 15589,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r1-c/action_register.json",
+      "sha256": "45a98e30a79f49df09f286373f6c7cabd7e217e7ce0b4478938aa692b33cab17",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r1-c/captured/action_register.json"
+    },
+    {
+      "bytes": 6108,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r1-c/handoff.txt",
+      "sha256": "27d8bcf2e4d2423e792e8124f87377f9aecf8bb1b436f05a09a8fd5b39d1cc0d",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r1-c/captured/handoff.txt"
+    },
+    {
+      "bytes": 1823,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r1-c/stdout.json",
+      "sha256": "1a1636924ca71ed9d203f2f585963da7026a8573404370cbde0b3015eadc841d",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r1-c/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r1-c/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r1-c/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r1-c/process.json",
+      "sha256": "5b0420e8352d20b6d7175c7713f819b890d6d6a13c501eaee6a57e6d9328c616",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r1-c/process/process.json"
+    },
+    {
+      "bytes": 5031,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t1-r2-s.json",
+      "sha256": "260cd495eabe0da92c59886444408be15b943ac632b2d00573abd895c0c587bf",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r2-s-result.json"
+    },
+    {
+      "bytes": 9417,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r2-s/reconciliation.json",
+      "sha256": "62b74163a18efd45bea3c39263df94d6863babfec27787a13a34590361735eb5",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r2-s/captured/reconciliation.json"
+    },
+    {
+      "bytes": 4011,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r2-s/report.sql",
+      "sha256": "2e6c3806fc070775c6d9f98d2963d3101b4e3e811e50f4c6042704195bc2dc4d",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r2-s/captured/report.sql"
+    },
+    {
+      "bytes": 2135,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r2-s/stdout.json",
+      "sha256": "c4f58463ad32617377a17583f85ee055c5d50f263e4401c08cbe4ebc3841cf80",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r2-s/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r2-s/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r2-s/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r2-s/process.json",
+      "sha256": "27d6d3c5a50c0f936e8882f44bcff0a5fd916ab69377e67fce060da3acc59774",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r2-s/process/process.json"
+    },
+    {
+      "bytes": 5031,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t1-r2-c.json",
+      "sha256": "93cbe20afb1248b93aac6f9bfec9fee2b1d6a0964ef3973e919d08926125f561",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r2-c-result.json"
+    },
+    {
+      "bytes": 6554,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r2-c/reconciliation.json",
+      "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r2-c/captured/reconciliation.json"
+    },
+    {
+      "bytes": 3524,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r2-c/report.sql",
+      "sha256": "e5206ac2409b30c1e0092965f39b18999d2abc1a5a57e9d258bce3d18630ef73",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r2-c/captured/report.sql"
+    },
+    {
+      "bytes": 2135,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r2-c/stdout.json",
+      "sha256": "53a6795062f5d179e986e47a39aedd91478113b67e1fc36f4994b8a92131f5de",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r2-c/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r2-c/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r2-c/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r2-c/process.json",
+      "sha256": "42840044ebf4222fa46495db5d3ed011188c094f8a695fb2e7b6210c9d05473a",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r2-c/process/process.json"
+    },
+    {
+      "bytes": 3852,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t2-r2-c.json",
+      "sha256": "cddcd90969ac90409fdf75b786fc95d85c88991bff66846b19cba25eb07c4288",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r2-c-result.json"
+    },
+    {
+      "bytes": 15388,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r2-c/action_register.json",
+      "sha256": "601c6c242aafb1301064e0eb5da0326d62434091447492e47c2d02513f249142",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r2-c/captured/action_register.json"
+    },
+    {
+      "bytes": 6251,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r2-c/handoff.txt",
+      "sha256": "16d1c2f92c67a225d5cfc1a2cc2fa47bc269a3b5a1667910ca4336c92b91e346",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r2-c/captured/handoff.txt"
+    },
+    {
+      "bytes": 1823,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r2-c/stdout.json",
+      "sha256": "198ff8a7f9750d2ecabaca0059546e021e1b15fb2fceebaf602745013faea40c",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r2-c/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r2-c/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r2-c/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r2-c/process.json",
+      "sha256": "f0d2d10da56ea9625888ee4c0d65972113c7cd0cbe851e56739aedc9bf18350d",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r2-c/process/process.json"
+    },
+    {
+      "bytes": 3852,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t2-r2-s.json",
+      "sha256": "8adccddc696b1b45020c821d201f03efcde031a5f562fcbba0b289a1cd1330c3",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r2-s-result.json"
+    },
+    {
+      "bytes": 14829,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r2-s/action_register.json",
+      "sha256": "3203f0f2a7a8357be33833e3bb5d57d4f9c2b19b0c55d26dde5c943a6e0eec6d",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r2-s/captured/action_register.json"
+    },
+    {
+      "bytes": 6625,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r2-s/handoff.txt",
+      "sha256": "937a280bd96ea96998b7ee3867cd6db7a4cc0f0f67d4c7176ae2fe4e99256bdd",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r2-s/captured/handoff.txt"
+    },
+    {
+      "bytes": 1823,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r2-s/stdout.json",
+      "sha256": "181924ea8327343b66290ad9b23e086441d079e9fc09f93315077ab0044db2c3",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r2-s/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r2-s/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r2-s/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r2-s/process.json",
+      "sha256": "14fb33e8d5ae8953090ad378d8ce3c5c9a7343af7a4c7be2dde8779572644421",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r2-s/process/process.json"
+    },
+    {
+      "bytes": 5031,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t1-r3-c.json",
+      "sha256": "dad91afe438a0d600182454805ac9a6f5da9292bd53c819a15f44d0344bec742",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r3-c-result.json"
+    },
+    {
+      "bytes": 6554,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r3-c/reconciliation.json",
+      "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r3-c/captured/reconciliation.json"
+    },
+    {
+      "bytes": 3442,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r3-c/report.sql",
+      "sha256": "34532419577d83a6af7e689554671240ec56782ceb43867ac6514a17d12871b9",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r3-c/captured/report.sql"
+    },
+    {
+      "bytes": 2135,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r3-c/stdout.json",
+      "sha256": "e270f5a76d4e9b76a1d6df3090ccfad3b21373915eb682ddef0d1ae76391498f",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r3-c/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r3-c/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r3-c/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r3-c/process.json",
+      "sha256": "8275396e758e5c1177078ad02bc3bbff8ab92af89ed16155c522d481d35197a8",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r3-c/process/process.json"
+    },
+    {
+      "bytes": 5031,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t1-r3-s.json",
+      "sha256": "3b9172ea979f8273092ad38a0d9925b33a2be11bd9affaf4368d9c88d1068fd5",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r3-s-result.json"
+    },
+    {
+      "bytes": 9432,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r3-s/reconciliation.json",
+      "sha256": "3106987c4868536ea7352a327fa54e7fc7ca17d2eb0e54989995025244b63313",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r3-s/captured/reconciliation.json"
+    },
+    {
+      "bytes": 3750,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t1-r3-s/report.sql",
+      "sha256": "9ff294b8bb886575ef1d97ecd70bb590fdda9b9ecd72cf7bf7887dd3c5dd58ad",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t1-r3-s/captured/report.sql"
+    },
+    {
+      "bytes": 2135,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r3-s/stdout.json",
+      "sha256": "88f485a20a1513676f72ccbcb7e629725f52d043bd1e996c7fca0063a184cb03",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r3-s/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r3-s/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r3-s/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t1-r3-s/process.json",
+      "sha256": "4502def92c1f01de4bcc51b2547b8dbd6d991fb69be3302b5811b3353f381fc3",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t1-r3-s/process/process.json"
+    },
+    {
+      "bytes": 3852,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t2-r3-s.json",
+      "sha256": "704dd9fed4383a372e6786fccf6b8a7ff0f1412c6e5609f5ace480314a5c109c",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r3-s-result.json"
+    },
+    {
+      "bytes": 14675,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r3-s/action_register.json",
+      "sha256": "3e5411ff1b2cd7f74fe9aac185bccd4aafd85a1c9278b8a9aa4be142323f8193",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r3-s/captured/action_register.json"
+    },
+    {
+      "bytes": 5687,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r3-s/handoff.txt",
+      "sha256": "598e2e669454e00b6c9a27fe23ceca4f46b57209cc0d9e9b7393c3f833d81d79",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r3-s/captured/handoff.txt"
+    },
+    {
+      "bytes": 1823,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r3-s/stdout.json",
+      "sha256": "644b1d9920c1d1c65d997d6a8026f821575309440bb6a963d736cf3dfcb4e067",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r3-s/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r3-s/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r3-s/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r3-s/process.json",
+      "sha256": "e28992a0e43baff4d12c4d8f2850553c5b73b4847f20778360b742eb01af8b6c",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r3-s/process/process.json"
+    },
+    {
+      "bytes": 3852,
+      "evidence_type": "unchanged primary per-submission grade",
+      "public_path": "evidence/results/t2-r3-c.json",
+      "sha256": "ef06957a75c90ef14dd5e2070567ad666ebdf9579d65679ca0fc464f3c542db0",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r3-c-result.json"
+    },
+    {
+      "bytes": 14831,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r3-c/action_register.json",
+      "sha256": "b473640b7f1995052f28c92d762b06651f81527df6a49e4760c1be73d796b315",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r3-c/captured/action_register.json"
+    },
+    {
+      "bytes": 5199,
+      "evidence_type": "unchanged first captured evaluated-agent output",
+      "public_path": "outputs/t2-r3-c/handoff.txt",
+      "sha256": "496d8d23bd02c4acda17d38f0577dfc3a76390d0a70e634baca5ce341b9490d9",
+      "source_bundle": "outcome",
+      "source_relative_path": "slots/t2-r3-c/captured/handoff.txt"
+    },
+    {
+      "bytes": 1823,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r3-c/stdout.json",
+      "sha256": "32ef68d1e1d6cf6861376308b8070843ec8018db6bf6c52752e7fc29a59a16ca",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r3-c/process/stdout.json"
+    },
+    {
+      "bytes": 0,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r3-c/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r3-c/process/stderr.txt"
+    },
+    {
+      "bytes": 268,
+      "evidence_type": "unchanged primary trusted scorer execution record",
+      "public_path": "evidence/grading/t2-r3-c/process.json",
+      "sha256": "e6106d843750b4443edec6601593cdd3a98248eea9ead92e644511f37c994714",
+      "source_bundle": "outcome",
+      "source_relative_path": "grading/t2-r3-c/process/process.json"
+    }
+  ],
+  "scope": "Exact byte copies explicitly selected from frozen sources; paths are logical bundle-relative provenance, not executable filesystem destinations"
+}

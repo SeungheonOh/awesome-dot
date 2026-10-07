@@ -1,0 +1,2104 @@
+{
+  "postflight": {
+    "at_utc": "2026-10-07T04:44:29.174527Z",
+    "freeze_sha256": "a8325d847723e7eaad7742aa6f2d7c1819f6695e6a96e6af1c41ddfdc82c43b1",
+    "operational_files": 83,
+    "source_files": 97,
+    "source_sha256": "6d99b47af3ba852487cd9014dedb6eb5664c49b191397e29cd0641a491ec6f77"
+  },
+  "rows": [
+    {
+      "all_met": true,
+      "case": "T1",
+      "checks": {
+        "charge_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_observed",
+          "status": "pass"
+        },
+        "charge_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_total",
+          "status": "pass"
+        },
+        "cohort": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "cohort",
+          "status": "pass"
+        },
+        "credit_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_observed",
+          "status": "pass"
+        },
+        "credit_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_total",
+          "status": "pass"
+        },
+        "exceptions": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "exceptions",
+          "status": "pass"
+        },
+        "execution": {
+          "evidence": "bounded read-only query completed on protected fictional fixture",
+          "id": "execution",
+          "status": "pass"
+        },
+        "feed_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "feed_controls",
+          "status": "pass"
+        },
+        "net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "net",
+          "status": "pass"
+        },
+        "partition_net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "partition_net",
+          "status": "pass"
+        },
+        "population_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "population_controls",
+          "status": "pass"
+        },
+        "schema_types": {
+          "evidence": "exact columns; text keys; integer measures; nullable totals",
+          "id": "schema_types",
+          "status": "pass"
+        },
+        "scope_parameters": {
+          "evidence": "observed-extract scope and exact public parameters",
+          "id": "scope_parameters",
+          "status": "pass"
+        },
+        "unknowns": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "unknowns",
+          "status": "pass"
+        }
+      },
+      "condition": "C",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 14,
+      "raw_artifacts": {
+        "reconciliation.json": {
+          "bytes": 6554,
+          "capture": "captured",
+          "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf"
+        },
+        "report.sql": {
+          "bytes": 3302,
+          "capture": "captured",
+          "sha256": "afe7b9d26282a45a9e3ac3d8a0bd454c8b844c70396643e805c04fb73a0814ea"
+        }
+      },
+      "raw_grade": {
+        "artifact_sha256": {
+          "reconciliation.json": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf",
+          "report.sql": "afe7b9d26282a45a9e3ac3d8a0bd454c8b844c70396643e805c04fb73a0814ea"
+        },
+        "case": "T1",
+        "checks": [
+          {
+            "evidence": "bounded read-only query completed on protected fictional fixture",
+            "id": "execution",
+            "status": "pass"
+          },
+          {
+            "evidence": "exact columns; text keys; integer measures; nullable totals",
+            "id": "schema_types",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "cohort",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "net",
+            "status": "pass"
+          },
+          {
+            "evidence": "observed-extract scope and exact public parameters",
+            "id": "scope_parameters",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "population_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "partition_net",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "feed_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "exceptions",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "unknowns",
+            "status": "pass"
+          }
+        ],
+        "totals": {
+          "fail": 0,
+          "pass": 14,
+          "unknown": 0
+        }
+      },
+      "repeat": 1,
+      "scheduled": 14,
+      "slot_id": "t1-r1-c",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T1",
+      "checks": {
+        "charge_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_observed",
+          "status": "pass"
+        },
+        "charge_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_total",
+          "status": "pass"
+        },
+        "cohort": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "cohort",
+          "status": "pass"
+        },
+        "credit_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_observed",
+          "status": "pass"
+        },
+        "credit_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_total",
+          "status": "pass"
+        },
+        "exceptions": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "exceptions",
+          "status": "pass"
+        },
+        "execution": {
+          "evidence": "bounded read-only query completed on protected fictional fixture",
+          "id": "execution",
+          "status": "pass"
+        },
+        "feed_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "feed_controls",
+          "status": "pass"
+        },
+        "net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "net",
+          "status": "pass"
+        },
+        "partition_net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "partition_net",
+          "status": "pass"
+        },
+        "population_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "population_controls",
+          "status": "pass"
+        },
+        "schema_types": {
+          "evidence": "exact columns; text keys; integer measures; nullable totals",
+          "id": "schema_types",
+          "status": "pass"
+        },
+        "scope_parameters": {
+          "evidence": "observed-extract scope and exact public parameters",
+          "id": "scope_parameters",
+          "status": "pass"
+        },
+        "unknowns": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "unknowns",
+          "status": "pass"
+        }
+      },
+      "condition": "S",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 14,
+      "raw_artifacts": {
+        "reconciliation.json": {
+          "bytes": 8215,
+          "capture": "captured",
+          "sha256": "ac7f9ca105da64b41752be09d63f251cd4a2f40db054cbcab09038f774483a22"
+        },
+        "report.sql": {
+          "bytes": 4004,
+          "capture": "captured",
+          "sha256": "762cd373ec12dd37f1e5d8f47d804014403112c6560a423271c63a0faa19aef3"
+        }
+      },
+      "raw_grade": {
+        "artifact_sha256": {
+          "reconciliation.json": "ac7f9ca105da64b41752be09d63f251cd4a2f40db054cbcab09038f774483a22",
+          "report.sql": "762cd373ec12dd37f1e5d8f47d804014403112c6560a423271c63a0faa19aef3"
+        },
+        "case": "T1",
+        "checks": [
+          {
+            "evidence": "bounded read-only query completed on protected fictional fixture",
+            "id": "execution",
+            "status": "pass"
+          },
+          {
+            "evidence": "exact columns; text keys; integer measures; nullable totals",
+            "id": "schema_types",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "cohort",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "net",
+            "status": "pass"
+          },
+          {
+            "evidence": "observed-extract scope and exact public parameters",
+            "id": "scope_parameters",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "population_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "partition_net",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "feed_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "exceptions",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "unknowns",
+            "status": "pass"
+          }
+        ],
+        "totals": {
+          "fail": 0,
+          "pass": 14,
+          "unknown": 0
+        }
+      },
+      "repeat": 1,
+      "scheduled": 14,
+      "slot_id": "t1-r1-s",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T2",
+      "checks": {
+        "T2-01": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-02": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-03": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-04": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-05": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-06": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-07": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-08": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-09": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-10": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-11": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-12": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        }
+      },
+      "condition": "S",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 12,
+      "raw_artifacts": {
+        "action_register.json": {
+          "bytes": 15293,
+          "capture": "captured",
+          "sha256": "9da382f022b9a9d36462bae75d73a1db227dd3c3f1ad14dd6643134b71837db5"
+        },
+        "handoff.txt": {
+          "bytes": 7404,
+          "capture": "captured",
+          "sha256": "ab509901393b11bbd66e7be97703102d61cdbe0268fca71a3f4ba7f715d2be49"
+        }
+      },
+      "raw_grade": {
+        "all_requirements_met": true,
+        "artifact_errors": [],
+        "artifact_sha256": {
+          "action_register.json": "9da382f022b9a9d36462bae75d73a1db227dd3c3f1ad14dd6643134b71837db5",
+          "handoff.txt": "ab509901393b11bbd66e7be97703102d61cdbe0268fca71a3f4ba7f715d2be49"
+        },
+        "candidate_code_executed": false,
+        "case_id": "T2",
+        "checks": {
+          "T2-01": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-02": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-03": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-04": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-05": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-06": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-07": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-08": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-09": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-10": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-11": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-12": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          }
+        },
+        "evaluation_valid": true,
+        "objective": {
+          "failed": 0,
+          "passed": 12,
+          "total": 12,
+          "unknown": 0
+        },
+        "semantic_prose_quality": "not_scored",
+        "synthetic": true,
+        "trusted_integrity_sha256": "717a617fd7be0260906bf978000254be36c3a167ae9b9a866cbbea35e3581a86"
+      },
+      "repeat": 1,
+      "scheduled": 12,
+      "slot_id": "t2-r1-s",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T2",
+      "checks": {
+        "T2-01": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-02": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-03": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-04": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-05": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-06": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-07": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-08": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-09": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-10": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-11": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-12": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        }
+      },
+      "condition": "C",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 12,
+      "raw_artifacts": {
+        "action_register.json": {
+          "bytes": 15589,
+          "capture": "captured",
+          "sha256": "45a98e30a79f49df09f286373f6c7cabd7e217e7ce0b4478938aa692b33cab17"
+        },
+        "handoff.txt": {
+          "bytes": 6108,
+          "capture": "captured",
+          "sha256": "27d8bcf2e4d2423e792e8124f87377f9aecf8bb1b436f05a09a8fd5b39d1cc0d"
+        }
+      },
+      "raw_grade": {
+        "all_requirements_met": true,
+        "artifact_errors": [],
+        "artifact_sha256": {
+          "action_register.json": "45a98e30a79f49df09f286373f6c7cabd7e217e7ce0b4478938aa692b33cab17",
+          "handoff.txt": "27d8bcf2e4d2423e792e8124f87377f9aecf8bb1b436f05a09a8fd5b39d1cc0d"
+        },
+        "candidate_code_executed": false,
+        "case_id": "T2",
+        "checks": {
+          "T2-01": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-02": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-03": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-04": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-05": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-06": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-07": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-08": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-09": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-10": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-11": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-12": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          }
+        },
+        "evaluation_valid": true,
+        "objective": {
+          "failed": 0,
+          "passed": 12,
+          "total": 12,
+          "unknown": 0
+        },
+        "semantic_prose_quality": "not_scored",
+        "synthetic": true,
+        "trusted_integrity_sha256": "717a617fd7be0260906bf978000254be36c3a167ae9b9a866cbbea35e3581a86"
+      },
+      "repeat": 1,
+      "scheduled": 12,
+      "slot_id": "t2-r1-c",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T1",
+      "checks": {
+        "charge_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_observed",
+          "status": "pass"
+        },
+        "charge_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_total",
+          "status": "pass"
+        },
+        "cohort": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "cohort",
+          "status": "pass"
+        },
+        "credit_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_observed",
+          "status": "pass"
+        },
+        "credit_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_total",
+          "status": "pass"
+        },
+        "exceptions": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "exceptions",
+          "status": "pass"
+        },
+        "execution": {
+          "evidence": "bounded read-only query completed on protected fictional fixture",
+          "id": "execution",
+          "status": "pass"
+        },
+        "feed_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "feed_controls",
+          "status": "pass"
+        },
+        "net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "net",
+          "status": "pass"
+        },
+        "partition_net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "partition_net",
+          "status": "pass"
+        },
+        "population_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "population_controls",
+          "status": "pass"
+        },
+        "schema_types": {
+          "evidence": "exact columns; text keys; integer measures; nullable totals",
+          "id": "schema_types",
+          "status": "pass"
+        },
+        "scope_parameters": {
+          "evidence": "observed-extract scope and exact public parameters",
+          "id": "scope_parameters",
+          "status": "pass"
+        },
+        "unknowns": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "unknowns",
+          "status": "pass"
+        }
+      },
+      "condition": "S",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 14,
+      "raw_artifacts": {
+        "reconciliation.json": {
+          "bytes": 9417,
+          "capture": "captured",
+          "sha256": "62b74163a18efd45bea3c39263df94d6863babfec27787a13a34590361735eb5"
+        },
+        "report.sql": {
+          "bytes": 4011,
+          "capture": "captured",
+          "sha256": "2e6c3806fc070775c6d9f98d2963d3101b4e3e811e50f4c6042704195bc2dc4d"
+        }
+      },
+      "raw_grade": {
+        "artifact_sha256": {
+          "reconciliation.json": "62b74163a18efd45bea3c39263df94d6863babfec27787a13a34590361735eb5",
+          "report.sql": "2e6c3806fc070775c6d9f98d2963d3101b4e3e811e50f4c6042704195bc2dc4d"
+        },
+        "case": "T1",
+        "checks": [
+          {
+            "evidence": "bounded read-only query completed on protected fictional fixture",
+            "id": "execution",
+            "status": "pass"
+          },
+          {
+            "evidence": "exact columns; text keys; integer measures; nullable totals",
+            "id": "schema_types",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "cohort",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "net",
+            "status": "pass"
+          },
+          {
+            "evidence": "observed-extract scope and exact public parameters",
+            "id": "scope_parameters",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "population_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "partition_net",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "feed_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "exceptions",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "unknowns",
+            "status": "pass"
+          }
+        ],
+        "totals": {
+          "fail": 0,
+          "pass": 14,
+          "unknown": 0
+        }
+      },
+      "repeat": 2,
+      "scheduled": 14,
+      "slot_id": "t1-r2-s",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T1",
+      "checks": {
+        "charge_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_observed",
+          "status": "pass"
+        },
+        "charge_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_total",
+          "status": "pass"
+        },
+        "cohort": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "cohort",
+          "status": "pass"
+        },
+        "credit_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_observed",
+          "status": "pass"
+        },
+        "credit_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_total",
+          "status": "pass"
+        },
+        "exceptions": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "exceptions",
+          "status": "pass"
+        },
+        "execution": {
+          "evidence": "bounded read-only query completed on protected fictional fixture",
+          "id": "execution",
+          "status": "pass"
+        },
+        "feed_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "feed_controls",
+          "status": "pass"
+        },
+        "net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "net",
+          "status": "pass"
+        },
+        "partition_net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "partition_net",
+          "status": "pass"
+        },
+        "population_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "population_controls",
+          "status": "pass"
+        },
+        "schema_types": {
+          "evidence": "exact columns; text keys; integer measures; nullable totals",
+          "id": "schema_types",
+          "status": "pass"
+        },
+        "scope_parameters": {
+          "evidence": "observed-extract scope and exact public parameters",
+          "id": "scope_parameters",
+          "status": "pass"
+        },
+        "unknowns": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "unknowns",
+          "status": "pass"
+        }
+      },
+      "condition": "C",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 14,
+      "raw_artifacts": {
+        "reconciliation.json": {
+          "bytes": 6554,
+          "capture": "captured",
+          "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf"
+        },
+        "report.sql": {
+          "bytes": 3524,
+          "capture": "captured",
+          "sha256": "e5206ac2409b30c1e0092965f39b18999d2abc1a5a57e9d258bce3d18630ef73"
+        }
+      },
+      "raw_grade": {
+        "artifact_sha256": {
+          "reconciliation.json": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf",
+          "report.sql": "e5206ac2409b30c1e0092965f39b18999d2abc1a5a57e9d258bce3d18630ef73"
+        },
+        "case": "T1",
+        "checks": [
+          {
+            "evidence": "bounded read-only query completed on protected fictional fixture",
+            "id": "execution",
+            "status": "pass"
+          },
+          {
+            "evidence": "exact columns; text keys; integer measures; nullable totals",
+            "id": "schema_types",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "cohort",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "net",
+            "status": "pass"
+          },
+          {
+            "evidence": "observed-extract scope and exact public parameters",
+            "id": "scope_parameters",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "population_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "partition_net",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "feed_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "exceptions",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "unknowns",
+            "status": "pass"
+          }
+        ],
+        "totals": {
+          "fail": 0,
+          "pass": 14,
+          "unknown": 0
+        }
+      },
+      "repeat": 2,
+      "scheduled": 14,
+      "slot_id": "t1-r2-c",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T2",
+      "checks": {
+        "T2-01": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-02": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-03": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-04": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-05": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-06": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-07": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-08": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-09": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-10": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-11": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-12": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        }
+      },
+      "condition": "C",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 12,
+      "raw_artifacts": {
+        "action_register.json": {
+          "bytes": 15388,
+          "capture": "captured",
+          "sha256": "601c6c242aafb1301064e0eb5da0326d62434091447492e47c2d02513f249142"
+        },
+        "handoff.txt": {
+          "bytes": 6251,
+          "capture": "captured",
+          "sha256": "16d1c2f92c67a225d5cfc1a2cc2fa47bc269a3b5a1667910ca4336c92b91e346"
+        }
+      },
+      "raw_grade": {
+        "all_requirements_met": true,
+        "artifact_errors": [],
+        "artifact_sha256": {
+          "action_register.json": "601c6c242aafb1301064e0eb5da0326d62434091447492e47c2d02513f249142",
+          "handoff.txt": "16d1c2f92c67a225d5cfc1a2cc2fa47bc269a3b5a1667910ca4336c92b91e346"
+        },
+        "candidate_code_executed": false,
+        "case_id": "T2",
+        "checks": {
+          "T2-01": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-02": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-03": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-04": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-05": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-06": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-07": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-08": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-09": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-10": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-11": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-12": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          }
+        },
+        "evaluation_valid": true,
+        "objective": {
+          "failed": 0,
+          "passed": 12,
+          "total": 12,
+          "unknown": 0
+        },
+        "semantic_prose_quality": "not_scored",
+        "synthetic": true,
+        "trusted_integrity_sha256": "717a617fd7be0260906bf978000254be36c3a167ae9b9a866cbbea35e3581a86"
+      },
+      "repeat": 2,
+      "scheduled": 12,
+      "slot_id": "t2-r2-c",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T2",
+      "checks": {
+        "T2-01": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-02": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-03": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-04": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-05": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-06": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-07": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-08": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-09": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-10": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-11": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-12": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        }
+      },
+      "condition": "S",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 12,
+      "raw_artifacts": {
+        "action_register.json": {
+          "bytes": 14829,
+          "capture": "captured",
+          "sha256": "3203f0f2a7a8357be33833e3bb5d57d4f9c2b19b0c55d26dde5c943a6e0eec6d"
+        },
+        "handoff.txt": {
+          "bytes": 6625,
+          "capture": "captured",
+          "sha256": "937a280bd96ea96998b7ee3867cd6db7a4cc0f0f67d4c7176ae2fe4e99256bdd"
+        }
+      },
+      "raw_grade": {
+        "all_requirements_met": true,
+        "artifact_errors": [],
+        "artifact_sha256": {
+          "action_register.json": "3203f0f2a7a8357be33833e3bb5d57d4f9c2b19b0c55d26dde5c943a6e0eec6d",
+          "handoff.txt": "937a280bd96ea96998b7ee3867cd6db7a4cc0f0f67d4c7176ae2fe4e99256bdd"
+        },
+        "candidate_code_executed": false,
+        "case_id": "T2",
+        "checks": {
+          "T2-01": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-02": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-03": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-04": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-05": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-06": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-07": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-08": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-09": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-10": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-11": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-12": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          }
+        },
+        "evaluation_valid": true,
+        "objective": {
+          "failed": 0,
+          "passed": 12,
+          "total": 12,
+          "unknown": 0
+        },
+        "semantic_prose_quality": "not_scored",
+        "synthetic": true,
+        "trusted_integrity_sha256": "717a617fd7be0260906bf978000254be36c3a167ae9b9a866cbbea35e3581a86"
+      },
+      "repeat": 2,
+      "scheduled": 12,
+      "slot_id": "t2-r2-s",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T1",
+      "checks": {
+        "charge_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_observed",
+          "status": "pass"
+        },
+        "charge_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_total",
+          "status": "pass"
+        },
+        "cohort": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "cohort",
+          "status": "pass"
+        },
+        "credit_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_observed",
+          "status": "pass"
+        },
+        "credit_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_total",
+          "status": "pass"
+        },
+        "exceptions": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "exceptions",
+          "status": "pass"
+        },
+        "execution": {
+          "evidence": "bounded read-only query completed on protected fictional fixture",
+          "id": "execution",
+          "status": "pass"
+        },
+        "feed_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "feed_controls",
+          "status": "pass"
+        },
+        "net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "net",
+          "status": "pass"
+        },
+        "partition_net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "partition_net",
+          "status": "pass"
+        },
+        "population_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "population_controls",
+          "status": "pass"
+        },
+        "schema_types": {
+          "evidence": "exact columns; text keys; integer measures; nullable totals",
+          "id": "schema_types",
+          "status": "pass"
+        },
+        "scope_parameters": {
+          "evidence": "observed-extract scope and exact public parameters",
+          "id": "scope_parameters",
+          "status": "pass"
+        },
+        "unknowns": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "unknowns",
+          "status": "pass"
+        }
+      },
+      "condition": "C",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 14,
+      "raw_artifacts": {
+        "reconciliation.json": {
+          "bytes": 6554,
+          "capture": "captured",
+          "sha256": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf"
+        },
+        "report.sql": {
+          "bytes": 3442,
+          "capture": "captured",
+          "sha256": "34532419577d83a6af7e689554671240ec56782ceb43867ac6514a17d12871b9"
+        }
+      },
+      "raw_grade": {
+        "artifact_sha256": {
+          "reconciliation.json": "3fc342c197fe8a4513dcbff6b357cc52fad7788b91729792fba806508c45eabf",
+          "report.sql": "34532419577d83a6af7e689554671240ec56782ceb43867ac6514a17d12871b9"
+        },
+        "case": "T1",
+        "checks": [
+          {
+            "evidence": "bounded read-only query completed on protected fictional fixture",
+            "id": "execution",
+            "status": "pass"
+          },
+          {
+            "evidence": "exact columns; text keys; integer measures; nullable totals",
+            "id": "schema_types",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "cohort",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "net",
+            "status": "pass"
+          },
+          {
+            "evidence": "observed-extract scope and exact public parameters",
+            "id": "scope_parameters",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "population_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "partition_net",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "feed_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "exceptions",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "unknowns",
+            "status": "pass"
+          }
+        ],
+        "totals": {
+          "fail": 0,
+          "pass": 14,
+          "unknown": 0
+        }
+      },
+      "repeat": 3,
+      "scheduled": 14,
+      "slot_id": "t1-r3-c",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T1",
+      "checks": {
+        "charge_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_observed",
+          "status": "pass"
+        },
+        "charge_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "charge_total",
+          "status": "pass"
+        },
+        "cohort": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "cohort",
+          "status": "pass"
+        },
+        "credit_observed": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_observed",
+          "status": "pass"
+        },
+        "credit_total": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "credit_total",
+          "status": "pass"
+        },
+        "exceptions": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "exceptions",
+          "status": "pass"
+        },
+        "execution": {
+          "evidence": "bounded read-only query completed on protected fictional fixture",
+          "id": "execution",
+          "status": "pass"
+        },
+        "feed_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "feed_controls",
+          "status": "pass"
+        },
+        "net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "net",
+          "status": "pass"
+        },
+        "partition_net": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "partition_net",
+          "status": "pass"
+        },
+        "population_controls": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "population_controls",
+          "status": "pass"
+        },
+        "schema_types": {
+          "evidence": "exact columns; text keys; integer measures; nullable totals",
+          "id": "schema_types",
+          "status": "pass"
+        },
+        "scope_parameters": {
+          "evidence": "observed-extract scope and exact public parameters",
+          "id": "scope_parameters",
+          "status": "pass"
+        },
+        "unknowns": {
+          "evidence": "matched frozen source-derived expectation",
+          "id": "unknowns",
+          "status": "pass"
+        }
+      },
+      "condition": "S",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 14,
+      "raw_artifacts": {
+        "reconciliation.json": {
+          "bytes": 9432,
+          "capture": "captured",
+          "sha256": "3106987c4868536ea7352a327fa54e7fc7ca17d2eb0e54989995025244b63313"
+        },
+        "report.sql": {
+          "bytes": 3750,
+          "capture": "captured",
+          "sha256": "9ff294b8bb886575ef1d97ecd70bb590fdda9b9ecd72cf7bf7887dd3c5dd58ad"
+        }
+      },
+      "raw_grade": {
+        "artifact_sha256": {
+          "reconciliation.json": "3106987c4868536ea7352a327fa54e7fc7ca17d2eb0e54989995025244b63313",
+          "report.sql": "9ff294b8bb886575ef1d97ecd70bb590fdda9b9ecd72cf7bf7887dd3c5dd58ad"
+        },
+        "case": "T1",
+        "checks": [
+          {
+            "evidence": "bounded read-only query completed on protected fictional fixture",
+            "id": "execution",
+            "status": "pass"
+          },
+          {
+            "evidence": "exact columns; text keys; integer measures; nullable totals",
+            "id": "schema_types",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "cohort",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_observed",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "charge_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "credit_total",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "net",
+            "status": "pass"
+          },
+          {
+            "evidence": "observed-extract scope and exact public parameters",
+            "id": "scope_parameters",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "population_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "partition_net",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "feed_controls",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "exceptions",
+            "status": "pass"
+          },
+          {
+            "evidence": "matched frozen source-derived expectation",
+            "id": "unknowns",
+            "status": "pass"
+          }
+        ],
+        "totals": {
+          "fail": 0,
+          "pass": 14,
+          "unknown": 0
+        }
+      },
+      "repeat": 3,
+      "scheduled": 14,
+      "slot_id": "t1-r3-s",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T2",
+      "checks": {
+        "T2-01": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-02": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-03": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-04": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-05": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-06": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-07": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-08": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-09": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-10": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-11": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-12": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        }
+      },
+      "condition": "S",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 12,
+      "raw_artifacts": {
+        "action_register.json": {
+          "bytes": 14675,
+          "capture": "captured",
+          "sha256": "3e5411ff1b2cd7f74fe9aac185bccd4aafd85a1c9278b8a9aa4be142323f8193"
+        },
+        "handoff.txt": {
+          "bytes": 5687,
+          "capture": "captured",
+          "sha256": "598e2e669454e00b6c9a27fe23ceca4f46b57209cc0d9e9b7393c3f833d81d79"
+        }
+      },
+      "raw_grade": {
+        "all_requirements_met": true,
+        "artifact_errors": [],
+        "artifact_sha256": {
+          "action_register.json": "3e5411ff1b2cd7f74fe9aac185bccd4aafd85a1c9278b8a9aa4be142323f8193",
+          "handoff.txt": "598e2e669454e00b6c9a27fe23ceca4f46b57209cc0d9e9b7393c3f833d81d79"
+        },
+        "candidate_code_executed": false,
+        "case_id": "T2",
+        "checks": {
+          "T2-01": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-02": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-03": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-04": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-05": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-06": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-07": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-08": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-09": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-10": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-11": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-12": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          }
+        },
+        "evaluation_valid": true,
+        "objective": {
+          "failed": 0,
+          "passed": 12,
+          "total": 12,
+          "unknown": 0
+        },
+        "semantic_prose_quality": "not_scored",
+        "synthetic": true,
+        "trusted_integrity_sha256": "717a617fd7be0260906bf978000254be36c3a167ae9b9a866cbbea35e3581a86"
+      },
+      "repeat": 3,
+      "scheduled": 12,
+      "slot_id": "t2-r3-s",
+      "unknown": 0
+    },
+    {
+      "all_met": true,
+      "case": "T2",
+      "checks": {
+        "T2-01": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-02": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-03": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-04": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-05": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-06": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-07": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-08": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-09": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-10": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-11": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        },
+        "T2-12": {
+          "reason": "All required structured facts agree",
+          "status": "pass"
+        }
+      },
+      "condition": "C",
+      "failed": 0,
+      "grade_status": "graded",
+      "input_integrity": {
+        "issues": [],
+        "unchanged": true
+      },
+      "operational_status": "final_on_time",
+      "passed": 12,
+      "raw_artifacts": {
+        "action_register.json": {
+          "bytes": 14831,
+          "capture": "captured",
+          "sha256": "b473640b7f1995052f28c92d762b06651f81527df6a49e4760c1be73d796b315"
+        },
+        "handoff.txt": {
+          "bytes": 5199,
+          "capture": "captured",
+          "sha256": "496d8d23bd02c4acda17d38f0577dfc3a76390d0a70e634baca5ce341b9490d9"
+        }
+      },
+      "raw_grade": {
+        "all_requirements_met": true,
+        "artifact_errors": [],
+        "artifact_sha256": {
+          "action_register.json": "b473640b7f1995052f28c92d762b06651f81527df6a49e4760c1be73d796b315",
+          "handoff.txt": "496d8d23bd02c4acda17d38f0577dfc3a76390d0a70e634baca5ce341b9490d9"
+        },
+        "candidate_code_executed": false,
+        "case_id": "T2",
+        "checks": {
+          "T2-01": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-02": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-03": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-04": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-05": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-06": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-07": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-08": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-09": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-10": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-11": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          },
+          "T2-12": {
+            "reason": "All required structured facts agree",
+            "status": "pass"
+          }
+        },
+        "evaluation_valid": true,
+        "objective": {
+          "failed": 0,
+          "passed": 12,
+          "total": 12,
+          "unknown": 0
+        },
+        "semantic_prose_quality": "not_scored",
+        "synthetic": true,
+        "trusted_integrity_sha256": "717a617fd7be0260906bf978000254be36c3a167ae9b9a866cbbea35e3581a86"
+      },
+      "repeat": 3,
+      "scheduled": 12,
+      "slot_id": "t2-r3-c",
+      "unknown": 0
+    }
+  ],
+  "summary": {
+    "case_condition": {
+      "T1": {
+        "C": {
+          "all_met": 3,
+          "failed": 0,
+          "passed": 42,
+          "planned_submissions": 3,
+          "scheduled": 42,
+          "unknown": 0,
+          "verified_fraction": 1.0
+        },
+        "S": {
+          "all_met": 3,
+          "failed": 0,
+          "passed": 42,
+          "planned_submissions": 3,
+          "scheduled": 42,
+          "unknown": 0,
+          "verified_fraction": 1.0
+        }
+      },
+      "T2": {
+        "C": {
+          "all_met": 3,
+          "failed": 0,
+          "passed": 36,
+          "planned_submissions": 3,
+          "scheduled": 36,
+          "unknown": 0,
+          "verified_fraction": 1.0
+        },
+        "S": {
+          "all_met": 3,
+          "failed": 0,
+          "passed": 36,
+          "planned_submissions": 3,
+          "scheduled": 36,
+          "unknown": 0,
+          "verified_fraction": 1.0
+        }
+      }
+    },
+    "equal_case_mean_verified_fraction": {
+      "C": 1.0,
+      "S": 1.0
+    },
+    "not_efficacy_evidence": true,
+    "paired_S_minus_C": [
+      {
+        "both_graded": true,
+        "case": "T1",
+        "repeat": 1,
+        "verified_fraction_difference": 0.0
+      },
+      {
+        "both_graded": true,
+        "case": "T1",
+        "repeat": 2,
+        "verified_fraction_difference": 0.0
+      },
+      {
+        "both_graded": true,
+        "case": "T1",
+        "repeat": 3,
+        "verified_fraction_difference": 0.0
+      },
+      {
+        "both_graded": true,
+        "case": "T2",
+        "repeat": 1,
+        "verified_fraction_difference": 0.0
+      },
+      {
+        "both_graded": true,
+        "case": "T2",
+        "repeat": 2,
+        "verified_fraction_difference": 0.0
+      },
+      {
+        "both_graded": true,
+        "case": "T2",
+        "repeat": 3,
+        "verified_fraction_difference": 0.0
+      }
+    ],
+    "planned_requirement_checks": 156,
+    "planned_submissions": 12
+  }
+}
