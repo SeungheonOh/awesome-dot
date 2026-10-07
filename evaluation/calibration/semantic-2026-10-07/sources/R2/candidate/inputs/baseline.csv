@@ -1,0 +1,35 @@
+action_id,title,owner,due_date,status,source_id
+A01,Finalize and approve intake schema,Ava,2026-09-25,open,B00
+A02,Finish routing rules,Ben,2026-09-24,open,B00
+A03,Obtain privacy text approval,Dev,2026-09-26,open,B00
+A04,Instrument and QA the intake funnel,Eli,2026-09-28,open,B00
+A05,Prepare launch announcement email,Faye,2026-09-29,open,B00
+A06,Design launch banner,Faye,2026-09-28,open,B00
+A07,Migrate help FAQ,Hana,2026-09-26,open,B00
+A08,Translate FAQ into Spanish and French,Iris,2026-09-29,open,B00
+A09,Schedule staff training,Jae,2026-09-30,open,B00
+A10,Deliver staff training,Jae,2026-10-05,open,B00
+A11,Reconcile duplicate pilot IDs,Kian,2026-09-26,open,B00
+A12,Complete pilot consent audit,Lena,2026-09-28,open,B00
+A13,Close vendor support ticket 714,Mira,2026-09-25,open,B00
+A14,Run full load test,Noor,2026-09-29,open,B00
+A15,Fix load-environment quota,Owen,2026-09-28,open,B00
+A16,Produce alternate-routing fallback plan,Pia,2026-09-28,open,B00
+A17,Approve support rota,Quin,2026-09-30,open,B00
+A18,Run weekend pager drill,Ravi,2026-10-02,open,B00
+A19,Complete onboarding checklist,Sara,2026-09-27,open,B00
+A20,Verify all runbook links,Talia,2026-09-28,open,B00
+A21,Verify CRM export integrity,Uma,2026-09-29,open,B00
+A22,Purge sandbox sample records,Vic,2026-09-28,open,B00
+A23,Transfer dashboard ownership,Wen,2026-09-30,open,B00
+A24,Deliver and obtain approval for budget readout,Xena,2026-09-29,open,B00
+A25,Compile accepted launch signoff packet,Yara,2026-09-30,open,B00
+A26,Conduct live stakeholder demo,Zane,2026-10-01,open,B00
+A27,Create and get recorded walkthrough accepted,Ava,2026-10-01,open,B00
+A28,Publish launch go/no-go decision,Ben,2026-10-02,open,B00
+A29,Complete data dictionary,Carla,2026-09-27,open,B00
+A30,Prepare retention Q&A,Dev,2026-09-29,open,B00
+A31,Complete accessibility sweep,Eli,2026-09-30,open,B00
+A32,Deliver approved product screenshots,Faye,2026-09-28,open,B00
+A33,Complete triage mailbox test,Hana,2026-09-30,open,B00
+A34,Prepare partner launch note with confirmed date,Iris,2026-10-01,open,B00

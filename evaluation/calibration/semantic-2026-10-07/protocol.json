@@ -1,0 +1,75 @@
+{
+  "cohort_id": "semantic-calibration-exploratory-procedural-masking-20261007-v1",
+  "status": "Completed exploratory cohort; independently reviewed publication package",
+  "source_calibration_version": "semantic-calibration-2026-10-07-v2",
+  "purpose": "Measure descriptive detection of deliberate semantic defects and preservation of correct handoffs while structured/objective data remain correct.",
+  "design": {
+    "outputs": 14,
+    "source_tasks": 2,
+    "fresh_contexts_per_output": 2,
+    "review_attempts": 28,
+    "check_votes": 84,
+    "combined_outcomes": 42,
+    "cohorts": {
+      "baseline_correct": 4,
+      "convincingly_incorrect": 6,
+      "source_uncertainty_handled": 4
+    },
+    "fork_turns": "none",
+    "requested_reasoning_effort": "xhigh",
+    "model_override": null,
+    "serving_model_build": "unknown",
+    "temperature": "unknown/not exposed",
+    "token_limit": "unknown/not controlled",
+    "deadline_seconds_per_review_from_spawn_ack": 480,
+    "first_submission_only": true,
+    "replacement_reviews": 0,
+    "reruns": 0,
+    "adjudication_applied": false
+  },
+  "masking": {
+    "type": "Procedural masking in a shared filesystem",
+    "os_isolation_verified": false,
+    "fresh_contexts_and_allowlisted_packets": true,
+    "self_reported_exposure_incidents": 0,
+    "independent_full_read_telemetry_audit": false,
+    "source_protocol_deviation": "Source protocol required verified runtime isolation. This separate exploratory amendment was frozen and explicitly approved before predictions. It does not satisfy the source strict-isolation gate."
+  },
+  "aggregation": "Matching valid pass/fail votes determine the combined result. Every other pair is unknown; raw votes, invalid/missing/late positions and disagreements are retained separately. Unknown gold sensitivity is not estimable because no gold unknown cases exist.",
+  "denominators": "All planned positions retained. Failure sensitivity counts fail predictions over gold fail positions; passed-check preservation/specificity counts pass predictions over gold pass positions.",
+  "deviations": [
+    {
+      "kind": "Cross-cohort concurrency",
+      "detail": "The semantic cohort stayed within its two-reviewer cap. For approximately 25 seconds, 03:20:12–03:20:37 UTC, two semantic reviews overlapped one engineering-v1 candidate, exceeding that engineering cohort’s stricter global two-trial bound. Both semantic first reviews were retained, with no replacement or rescore; subsequent dispatch honored the clarified limit until engineering v1 ended."
+    },
+    {
+      "kind": "Coordinator interruption between waves",
+      "detail": "An unexpected coordinator interruption was recovered after checking durable first submissions and live task status. Twenty-two reviews were already terminal, six had never been started, and no semantic review was in flight. The six unstarted positions then ran in the original fixed order. No review was lost or replaced."
+    }
+  ],
+  "historical_scores_changed": false,
+  "skill_uplift_measured": false,
+  "provenance_hashes": {
+    "source_pack_manifest": "201e5ce54527e51d672bb182bf6beb400363a3c7a6a71ee56b484c3400013949",
+    "author_gold": "6adc80fb232d9ffe50bf06cbb666d7fb82f5d86e631509bf66a11c4ba816750e",
+    "independent_gold_review": "71f20b1d872b2c88f411843aa8864e328c2e375e3d87fed5c77912ce4d2fd2aa",
+    "accepted_gold": "3d27288c5a2b4f75eceb13704e4560ef5ba66868f323a7d7a1f6809fa99506f7",
+    "operational_manifest": "1653ed69a6f94f303da3060955aed17f30efc4a4579f372a65d52598cd8cec02",
+    "approved_protocol_amendment": "c7cbe8eaf093ab41c60af109d4144b9f0bf74f6078e3fbfc4e8149a5808068d1",
+    "exact_prompt_template": "8d7e261b5921a0ec75e7aec54c1682e68d96f95f82fe3c7b932f6f405a2ce647",
+    "exact_frozen_schedule": "bb5f453c28338da3d2527f1e7133c5f4c85a9752a4d9ca5c6c2997d6d2fc9bc0",
+    "analysis": "008dc618cd16d3ed932eb2852f37ed2032ec15891cc7f4e9c8f1b87de458bb1a",
+    "final_verification": "471c1c88c561bc99a5ff89cbd29aa7e754fcb6e61ada58248501008a7e8ecac1"
+  },
+  "verification": {
+    "source_pack_files_unchanged": 67,
+    "operational_frozen_files_unchanged": 218,
+    "raw_first_reviews_byte_preserved": 28,
+    "frozen_grader_matches_combined_outcomes": 42,
+    "objective_checks_passed": 154,
+    "objective_checks_total": 154,
+    "all_first_finals_before_deadline": true,
+    "observed_review_elapsed_seconds_min": 47,
+    "observed_review_elapsed_seconds_max": 75
+  }
+}

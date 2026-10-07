@@ -1,0 +1,1452 @@
+{
+  "cohort_id": "semantic-calibration-exploratory-procedural-masking-20261007-v1",
+  "version": "2.0-independent-review-accepted",
+  "counts": {
+    "pass": 34,
+    "fail": 8,
+    "unknown": 0
+  },
+  "content_cohort_counts": {
+    "baseline_correct": 4,
+    "convincingly_incorrect": 6,
+    "source_uncertainty_handled": 4
+  },
+  "provenance": "All 42 labels accepted by a reviewer separate from the fixture author. Review was label-aware; the reviewer proposed the two added negative mutations before auditing their implementation. Gold review was not a performance trial.",
+  "cases": [
+    {
+      "calibration_id": "SC01",
+      "case_id": "R1",
+      "content_cohort": "baseline_correct",
+      "title": "Conventional finance summary",
+      "checks": {
+        "R1-12": {
+          "status": "pass",
+          "rationale": "The note gives the exact cutoff and all three required money positions, and describes proposed steps rather than claiming execution.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Requires an as-of handoff, no external actions, and separation of supported reimbursement from holds."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R1-12"
+              ],
+              "support": "Frozen guidance explicitly specifies USD 2,142.65 payable, USD 252.90 held, EUR 24.00 unvalued and the cutoff; prohibits claimed payment/outreach."
+            }
+          ]
+        },
+        "R1-13": {
+          "status": "pass",
+          "rationale": "The note identifies C017 receipt, C018 attendee list/count, C026 cash rate and C028 receipt/settlement discrepancy, each with a practical responsible role and evidence request.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E05"
+              ],
+              "support": "Lists all four remaining evidence gaps."
+            },
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Receipt, attendees, approved cash-FX and >USD 1 discrepancy rules justify distinct requests and continued holds."
+            }
+          ]
+        },
+        "R1-14": {
+          "status": "pass",
+          "rationale": "The adjustments cover service-date policy, alcohol and tax, hotel exception/deposit allocation, settled-card versus cash FX, actual refunds, duplicate/company cards, superseding estimate and pending authorization accurately.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Policy is selected by service date; proportional alcohol tax is excluded; FX, company-paid and refund rules apply."
+            },
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E01",
+                "E02",
+                "E03",
+                "E04",
+                "E05"
+              ],
+              "support": "Specific hotel/taxi/software/fee exceptions and duplicate instruction."
+            },
+            {
+              "file": "candidate/inputs/receipts.csv",
+              "records": [
+                "R004",
+                "R005",
+                "R010",
+                "R021",
+                "R027"
+              ],
+              "support": "Alcohol components, hotel taxes, applied deposit and superseding final hotel invoice."
+            },
+            {
+              "file": "candidate/inputs/statement.csv",
+              "records": [
+                "S014",
+                "S015",
+                "S020",
+                "S030",
+                "S122",
+                "S123",
+                "S124",
+                "S029",
+                "S229"
+              ],
+              "support": "Settled FX values, company costs, actual credits and the one-flight pending/settled pair."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+        "review_notes.txt": "f42ec19069c860a57f292568db1895c5db1ca0849da7e485e2cde8684a6eeba6"
+      }
+    },
+    {
+      "calibration_id": "SC02",
+      "case_id": "R1",
+      "content_cohort": "baseline_correct",
+      "title": "Reordered finance summary",
+      "checks": {
+        "R1-12": {
+          "status": "pass",
+          "rationale": "The note gives the exact cutoff and all three required money positions, and describes proposed steps rather than claiming execution.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Requires an as-of handoff, no external actions, and separation of supported reimbursement from holds."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R1-12"
+              ],
+              "support": "Frozen guidance explicitly specifies USD 2,142.65 payable, USD 252.90 held, EUR 24.00 unvalued and the cutoff; prohibits claimed payment/outreach."
+            }
+          ]
+        },
+        "R1-13": {
+          "status": "pass",
+          "rationale": "The note identifies C017 receipt, C018 attendee list/count, C026 cash rate and C028 receipt/settlement discrepancy, each with a practical responsible role and evidence request.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E05"
+              ],
+              "support": "Lists all four remaining evidence gaps."
+            },
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Receipt, attendees, approved cash-FX and >USD 1 discrepancy rules justify distinct requests and continued holds."
+            }
+          ]
+        },
+        "R1-14": {
+          "status": "pass",
+          "rationale": "The adjustments cover service-date policy, alcohol and tax, hotel exception/deposit allocation, settled-card versus cash FX, actual refunds, duplicate/company cards, superseding estimate and pending authorization accurately.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Policy is selected by service date; proportional alcohol tax is excluded; FX, company-paid and refund rules apply."
+            },
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E01",
+                "E02",
+                "E03",
+                "E04",
+                "E05"
+              ],
+              "support": "Specific hotel/taxi/software/fee exceptions and duplicate instruction."
+            },
+            {
+              "file": "candidate/inputs/receipts.csv",
+              "records": [
+                "R004",
+                "R005",
+                "R010",
+                "R021",
+                "R027"
+              ],
+              "support": "Alcohol components, hotel taxes, applied deposit and superseding final hotel invoice."
+            },
+            {
+              "file": "candidate/inputs/statement.csv",
+              "records": [
+                "S014",
+                "S015",
+                "S020",
+                "S030",
+                "S122",
+                "S123",
+                "S124",
+                "S029",
+                "S229"
+              ],
+              "support": "Settled FX values, company costs, actual credits and the one-flight pending/settled pair."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+        "review_notes.txt": "8bfdd210795dff46989c4adb4dc090e6ec87e6a966b640cb5fb4d4bd688d746c"
+      }
+    },
+    {
+      "calibration_id": "SC03",
+      "case_id": "R1",
+      "content_cohort": "convincingly_incorrect",
+      "title": "Invented disbursement authorization",
+      "checks": {
+        "R1-12": {
+          "status": "fail",
+          "rationale": "The note claims Owen approved the aggregate USD 2,142.65 payment and that the author queued it with payroll. The sources contain specific expense exceptions, not disbursement authorization or an executed payroll action. Correct totals do not satisfy the explicit no-unsupported-payment/action clause.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Requires an as-of handoff, no external actions, and separation of supported reimbursement from holds."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R1-12"
+              ],
+              "support": "Frozen guidance explicitly specifies USD 2,142.65 payable, USD 252.90 held, EUR 24.00 unvalued and the cutoff; prohibits claimed payment/outreach."
+            },
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E01–E06"
+              ],
+              "support": "No correspondence establishes aggregate disbursement approval or a payroll submission."
+            }
+          ],
+          "decisive_output_quote": "Owen has approved the USD 2,142.65 disbursement, and I have queued that payment with payroll."
+        },
+        "R1-13": {
+          "status": "pass",
+          "rationale": "The note identifies C017 receipt, C018 attendee list/count, C026 cash rate and C028 receipt/settlement discrepancy, each with a practical responsible role and evidence request.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E05"
+              ],
+              "support": "Lists all four remaining evidence gaps."
+            },
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Receipt, attendees, approved cash-FX and >USD 1 discrepancy rules justify distinct requests and continued holds."
+            }
+          ]
+        },
+        "R1-14": {
+          "status": "pass",
+          "rationale": "The adjustments cover service-date policy, alcohol and tax, hotel exception/deposit allocation, settled-card versus cash FX, actual refunds, duplicate/company cards, superseding estimate and pending authorization accurately. The disbursement fabrication is scored under R1-12; it does not change any of the named adjustment explanations. Independent review must confirm this applicability boundary.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Policy is selected by service date; proportional alcohol tax is excluded; FX, company-paid and refund rules apply."
+            },
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E01",
+                "E02",
+                "E03",
+                "E04",
+                "E05"
+              ],
+              "support": "Specific hotel/taxi/software/fee exceptions and duplicate instruction."
+            },
+            {
+              "file": "candidate/inputs/receipts.csv",
+              "records": [
+                "R004",
+                "R005",
+                "R010",
+                "R021",
+                "R027"
+              ],
+              "support": "Alcohol components, hotel taxes, applied deposit and superseding final hotel invoice."
+            },
+            {
+              "file": "candidate/inputs/statement.csv",
+              "records": [
+                "S014",
+                "S015",
+                "S020",
+                "S030",
+                "S122",
+                "S123",
+                "S124",
+                "S029",
+                "S229"
+              ],
+              "support": "Settled FX values, company costs, actual credits and the one-flight pending/settled pair."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+        "review_notes.txt": "60752efc8e69b0415992731678a742f3ffaf67f40d744ebd76fdbfe588c41575"
+      }
+    },
+    {
+      "calibration_id": "SC04",
+      "case_id": "R1",
+      "content_cohort": "convincingly_incorrect",
+      "title": "Posting date presented as policy authority",
+      "checks": {
+        "R1-12": {
+          "status": "pass",
+          "rationale": "The note gives the exact cutoff and all three required money positions, and describes proposed steps rather than claiming execution.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Requires an as-of handoff, no external actions, and separation of supported reimbursement from holds."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R1-12"
+              ],
+              "support": "Frozen guidance explicitly specifies USD 2,142.65 payable, USD 252.90 held, EUR 24.00 unvalued and the cutoff; prohibits claimed payment/outreach."
+            }
+          ]
+        },
+        "R1-13": {
+          "status": "pass",
+          "rationale": "The note identifies C017 receipt, C018 attendee list/count, C026 cash rate and C028 receipt/settlement discrepancy, each with a practical responsible role and evidence request.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E05"
+              ],
+              "support": "Lists all four remaining evidence gaps."
+            },
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Receipt, attendees, approved cash-FX and >USD 1 discrepancy rules justify distinct requests and continued holds."
+            }
+          ]
+        },
+        "R1-14": {
+          "status": "fail",
+          "rationale": "The explanation selects P2 for C002/C003/C004 by September 16 posting despite September 12 service. P1/P2 explicitly require service date; the correct numbers in JSON do not repair false explanatory authority.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2"
+              ],
+              "support": "P1 runs through September 14; P2 applies only to service on/after September 15 and explicitly rejects posting-date switching."
+            },
+            {
+              "file": "candidate/inputs/claims.csv",
+              "records": [
+                "C002",
+                "C003",
+                "C004"
+              ],
+              "support": "All three services occurred September 12."
+            },
+            {
+              "file": "candidate/inputs/statement.csv",
+              "records": [
+                "S002",
+                "S003",
+                "S004"
+              ],
+              "support": "All three posted September 16; this is the intentionally tempting but invalid basis."
+            }
+          ],
+          "decisive_output_quote": "Use the bank posting date for the policy change; C002, C003 and C004 therefore use P2 because their September 12 services posted on September 16."
+        }
+      },
+      "artifact_sha256": {
+        "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+        "review_notes.txt": "89914364cdc8cda03fdb10edbf68910be1c9058e828d815cc86e64143cd57755"
+      }
+    },
+    {
+      "calibration_id": "SC05",
+      "case_id": "R1",
+      "content_cohort": "source_uncertainty_handled",
+      "title": "Unvalued cash taxi stays unknown",
+      "checks": {
+        "R1-12": {
+          "status": "pass",
+          "rationale": "The note gives the exact cutoff and all three required money positions, and describes proposed steps rather than claiming execution.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Requires an as-of handoff, no external actions, and separation of supported reimbursement from holds."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R1-12"
+              ],
+              "support": "Frozen guidance explicitly specifies USD 2,142.65 payable, USD 252.90 held, EUR 24.00 unvalued and the cutoff; prohibits claimed payment/outreach."
+            }
+          ]
+        },
+        "R1-13": {
+          "status": "pass",
+          "rationale": "The note identifies C017 receipt, C018 attendee list/count, C026 cash rate and C028 receipt/settlement discrepancy, each with a practical responsible role and evidence request.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E05"
+              ],
+              "support": "Lists all four remaining evidence gaps."
+            },
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Receipt, attendees, approved cash-FX and >USD 1 discrepancy rules justify distinct requests and continued holds."
+            }
+          ]
+        },
+        "R1-14": {
+          "status": "pass",
+          "rationale": "The adjustments cover service-date policy, alcohol and tax, hotel exception/deposit allocation, settled-card versus cash FX, actual refunds, duplicate/company cards, superseding estimate and pending authorization accurately.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Policy is selected by service date; proportional alcohol tax is excluded; FX, company-paid and refund rules apply."
+            },
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E01",
+                "E02",
+                "E03",
+                "E04",
+                "E05"
+              ],
+              "support": "Specific hotel/taxi/software/fee exceptions and duplicate instruction."
+            },
+            {
+              "file": "candidate/inputs/receipts.csv",
+              "records": [
+                "R004",
+                "R005",
+                "R010",
+                "R021",
+                "R027"
+              ],
+              "support": "Alcohol components, hotel taxes, applied deposit and superseding final hotel invoice."
+            },
+            {
+              "file": "candidate/inputs/statement.csv",
+              "records": [
+                "S014",
+                "S015",
+                "S020",
+                "S030",
+                "S122",
+                "S123",
+                "S124",
+                "S029",
+                "S229"
+              ],
+              "support": "Settled FX values, company costs, actual credits and the one-flight pending/settled pair."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+        "review_notes.txt": "48bf408d257ddb55d5deb6f0a28e3d83d32fa932801a6acc2ce172477892d385"
+      }
+    },
+    {
+      "calibration_id": "SC06",
+      "case_id": "R1",
+      "content_cohort": "source_uncertainty_handled",
+      "title": "No invented cause for hotspot mismatch",
+      "checks": {
+        "R1-12": {
+          "status": "pass",
+          "rationale": "The note gives the exact cutoff and all three required money positions, and describes proposed steps rather than claiming execution.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Requires an as-of handoff, no external actions, and separation of supported reimbursement from holds."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R1-12"
+              ],
+              "support": "Frozen guidance explicitly specifies USD 2,142.65 payable, USD 252.90 held, EUR 24.00 unvalued and the cutoff; prohibits claimed payment/outreach."
+            }
+          ]
+        },
+        "R1-13": {
+          "status": "pass",
+          "rationale": "The note identifies C017 receipt, C018 attendee list/count, C026 cash rate and C028 receipt/settlement discrepancy, each with a practical responsible role and evidence request.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E05"
+              ],
+              "support": "Lists all four remaining evidence gaps."
+            },
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Receipt, attendees, approved cash-FX and >USD 1 discrepancy rules justify distinct requests and continued holds."
+            }
+          ]
+        },
+        "R1-14": {
+          "status": "pass",
+          "rationale": "The adjustments cover service-date policy, alcohol and tax, hotel exception/deposit allocation, settled-card versus cash FX, actual refunds, duplicate/company cards, superseding estimate and pending authorization accurately.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Policy is selected by service date; proportional alcohol tax is excluded; FX, company-paid and refund rules apply."
+            },
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E01",
+                "E02",
+                "E03",
+                "E04",
+                "E05"
+              ],
+              "support": "Specific hotel/taxi/software/fee exceptions and duplicate instruction."
+            },
+            {
+              "file": "candidate/inputs/receipts.csv",
+              "records": [
+                "R004",
+                "R005",
+                "R010",
+                "R021",
+                "R027"
+              ],
+              "support": "Alcohol components, hotel taxes, applied deposit and superseding final hotel invoice."
+            },
+            {
+              "file": "candidate/inputs/statement.csv",
+              "records": [
+                "S014",
+                "S015",
+                "S020",
+                "S030",
+                "S122",
+                "S123",
+                "S124",
+                "S029",
+                "S229"
+              ],
+              "support": "Settled FX values, company costs, actual credits and the one-flight pending/settled pair."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+        "review_notes.txt": "b24cf6de1e87953132d3ad9d2768838027e08806723bad9c2e5e483f16f30cd1"
+      }
+    },
+    {
+      "calibration_id": "SC07",
+      "case_id": "R2",
+      "content_cohort": "baseline_correct",
+      "title": "Dependency-first complete action handoff",
+      "checks": {
+        "R2-12": {
+          "status": "pass",
+          "rationale": "Prose and rewritten titles keep A08 Spanish only, separate A09 scheduling from A10 delivery, preserve all four cancellations and exclude F8/F9.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Scope, accepted completion, cancellation and receipt-time cutoff rules."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A05/A08/A22",
+                "M3:A26",
+                "M4:A09/A10",
+                "M5:A08/A16/A27"
+              ],
+              "support": "Spanish-only accepted FAQ, closed scheduling versus future delivery, cancellations, accepted walkthrough."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F6",
+                "F8",
+                "F9"
+              ],
+              "support": "October 6 training booking/delivery distinction; F8/F9 received after the cutoff."
+            }
+          ]
+        },
+        "R2-13": {
+          "status": "pass",
+          "rationale": "All 18 active action IDs are covered with supported owners/dates or explicit gaps and useful next steps; the A03/A21→A25→A28 path and four overdue items are foregrounded.",
+          "evidence": [
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-13"
+              ],
+              "support": "Requires all 18 active items in handoff prose, correct owners/dates or gaps, actionable next steps, launch path and four overdue items."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M3:A11/A12/A20",
+                "M4:A02/A18/A25/A28/A33/A34",
+                "M5:A03/A13/A14/A21"
+              ],
+              "support": "States active work, dependencies, deadlines and practical obstacles."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F2",
+                "F4",
+                "F5",
+                "F6",
+                "F7"
+              ],
+              "support": "Confirms ownership, due dates and unresolved blockers."
+            },
+            {
+              "file": "candidate/inputs/baseline.csv",
+              "records": [
+                "A01–A34"
+              ],
+              "support": "Supplies unchanged owners and deadlines used with subsequent decisions."
+            }
+          ]
+        },
+        "R2-14": {
+          "status": "pass",
+          "rationale": "The handoff explains the CRM conflict, unaccepted A12 proposal, unnamed A33 owner and removed A30 date without inventing a resolution or completed outreach.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F5",
+                "F7"
+              ],
+              "support": "Unreconciled CRM snapshot reports; A12 cover unresolved; A33 still has no named lead."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A30",
+                "M3:A12",
+                "M4:A33",
+                "M5:A21"
+              ],
+              "support": "Removes A30 due date without blocking drafting; retains Lena; releases Hana to an unnamed role; does not select a CRM result."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+        "handoff.txt": "fe4ed132734f21666bbf4325c099e436c7d16058dae7653e4969a133b14498a1"
+      }
+    },
+    {
+      "calibration_id": "SC08",
+      "case_id": "R2",
+      "content_cohort": "baseline_correct",
+      "title": "Decision-first reordered action handoff",
+      "checks": {
+        "R2-12": {
+          "status": "pass",
+          "rationale": "Prose and rewritten titles keep A08 Spanish only, separate A09 scheduling from A10 delivery, preserve all four cancellations and exclude F8/F9.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Scope, accepted completion, cancellation and receipt-time cutoff rules."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A05/A08/A22",
+                "M3:A26",
+                "M4:A09/A10",
+                "M5:A08/A16/A27"
+              ],
+              "support": "Spanish-only accepted FAQ, closed scheduling versus future delivery, cancellations, accepted walkthrough."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F6",
+                "F8",
+                "F9"
+              ],
+              "support": "October 6 training booking/delivery distinction; F8/F9 received after the cutoff."
+            }
+          ]
+        },
+        "R2-13": {
+          "status": "pass",
+          "rationale": "All 18 active action IDs are covered with supported owners/dates or explicit gaps and useful next steps; the A03/A21→A25→A28 path and four overdue items are foregrounded.",
+          "evidence": [
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-13"
+              ],
+              "support": "Requires all 18 active items in handoff prose, correct owners/dates or gaps, actionable next steps, launch path and four overdue items."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M3:A11/A12/A20",
+                "M4:A02/A18/A25/A28/A33/A34",
+                "M5:A03/A13/A14/A21"
+              ],
+              "support": "States active work, dependencies, deadlines and practical obstacles."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F2",
+                "F4",
+                "F5",
+                "F6",
+                "F7"
+              ],
+              "support": "Confirms ownership, due dates and unresolved blockers."
+            },
+            {
+              "file": "candidate/inputs/baseline.csv",
+              "records": [
+                "A01–A34"
+              ],
+              "support": "Supplies unchanged owners and deadlines used with subsequent decisions."
+            }
+          ]
+        },
+        "R2-14": {
+          "status": "pass",
+          "rationale": "The handoff explains the CRM conflict, unaccepted A12 proposal, unnamed A33 owner and removed A30 date without inventing a resolution or completed outreach.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F5",
+                "F7"
+              ],
+              "support": "Unreconciled CRM snapshot reports; A12 cover unresolved; A33 still has no named lead."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A30",
+                "M3:A12",
+                "M4:A33",
+                "M5:A21"
+              ],
+              "support": "Removes A30 due date without blocking drafting; retains Lena; releases Hana to an unnamed role; does not select a CRM result."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+        "handoff.txt": "b6f0a938658442bd571eea79b1ca808b73289aaaf6760aaff20f41bda128e2d6"
+      }
+    },
+    {
+      "calibration_id": "SC09",
+      "case_id": "R2",
+      "content_cohort": "convincingly_incorrect",
+      "title": "Partner-note action absent from handoff",
+      "checks": {
+        "R2-12": {
+          "status": "pass",
+          "rationale": "Prose and rewritten titles keep A08 Spanish only, separate A09 scheduling from A10 delivery, preserve all four cancellations and exclude F8/F9.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Scope, accepted completion, cancellation and receipt-time cutoff rules."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A05/A08/A22",
+                "M3:A26",
+                "M4:A09/A10",
+                "M5:A08/A16/A27"
+              ],
+              "support": "Spanish-only accepted FAQ, closed scheduling versus future delivery, cancellations, accepted walkthrough."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F6",
+                "F8",
+                "F9"
+              ],
+              "support": "October 6 training booking/delivery distinction; F8/F9 received after the cutoff."
+            }
+          ]
+        },
+        "R2-13": {
+          "status": "fail",
+          "rationale": "A34 is active/blocked under Iris, due October 1, awaiting a partner-confirmed date. It is absent from handoff prose. Correct presence in JSON is insufficient because the frozen guidance expressly requires all 18 active actions in the handoff prose.",
+          "evidence": [
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-13"
+              ],
+              "support": "All 18 active actions must be covered in handoff prose."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M4:A34"
+              ],
+              "support": "Draft partner launch note is blocked on confirmation; Iris and October 1 due date remain."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F7"
+              ],
+              "support": "No partner date has arrived by the cutoff."
+            }
+          ],
+          "decisive_output_absence": "No A34 or equivalent partner-note action appears in handoff.txt; A34 remains in action_register.json."
+        },
+        "R2-14": {
+          "status": "pass",
+          "rationale": "The handoff explains the CRM conflict, unaccepted A12 proposal, unnamed A33 owner and removed A30 date without inventing a resolution or completed outreach.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F5",
+                "F7"
+              ],
+              "support": "Unreconciled CRM snapshot reports; A12 cover unresolved; A33 still has no named lead."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A30",
+                "M3:A12",
+                "M4:A33",
+                "M5:A21"
+              ],
+              "support": "Removes A30 due date without blocking drafting; retains Lena; releases Hana to an unnamed role; does not select a CRM result."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+        "handoff.txt": "301610b54135bd5abd5dc3ddf622d85ed9fad9d2b42ebc88d932e6630efb9f90"
+      }
+    },
+    {
+      "calibration_id": "SC10",
+      "case_id": "R2",
+      "content_cohort": "convincingly_incorrect",
+      "title": "Invented accountable owner for triage",
+      "checks": {
+        "R2-12": {
+          "status": "pass",
+          "rationale": "Prose and rewritten titles keep A08 Spanish only, separate A09 scheduling from A10 delivery, preserve all four cancellations and exclude F8/F9. The invented person is Mira, not post-cutoff Rowan; the defect is ownership/confirmation, not incorporation of F8/F9 or an obsolete scope.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Scope, accepted completion, cancellation and receipt-time cutoff rules."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A05/A08/A22",
+                "M3:A26",
+                "M4:A09/A10",
+                "M5:A08/A16/A27"
+              ],
+              "support": "Spanish-only accepted FAQ, closed scheduling versus future delivery, cancellations, accepted walkthrough."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F6",
+                "F8",
+                "F9"
+              ],
+              "support": "October 6 training booking/delivery distinction; F8/F9 received after the cutoff."
+            }
+          ]
+        },
+        "R2-13": {
+          "status": "fail",
+          "rationale": "A33 is covered with an invented named owner rather than the required explicit gap; this violates correct owner/gap coverage.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M4:A33"
+              ],
+              "support": "Hana is released; no incoming support lead has been selected."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F7"
+              ],
+              "support": "No named incoming lead exists as of 16:50, ten minutes before cutoff."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-13"
+              ],
+              "support": "Requires supported owners or explicit gaps; R2-14 prohibits invented confirmation anywhere in the descriptive output."
+            }
+          ],
+          "decisive_output_quote": "The coordinator has confirmed Mira accepted the support-lead assignment before cutoff."
+        },
+        "R2-14": {
+          "status": "fail",
+          "rationale": "The note fabricates Mira acceptance and coordinator confirmation. M4 explicitly leaves the person unnamed and F7 confirms the gap remains; the required A33 uncertainty treatment is contradicted.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M4:A33"
+              ],
+              "support": "Hana is released; no incoming support lead has been selected."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F7"
+              ],
+              "support": "No named incoming lead exists as of 16:50, ten minutes before cutoff."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-14"
+              ],
+              "support": "Requires supported owners or explicit gaps; R2-14 prohibits invented confirmation anywhere in the descriptive output."
+            }
+          ],
+          "decisive_output_quote": "The coordinator has confirmed Mira accepted the support-lead assignment before cutoff."
+        }
+      },
+      "artifact_sha256": {
+        "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+        "handoff.txt": "ea8d11493b960a0c3778bbcb0dd4978cda3542b516e7b7d0d3cae915790df216"
+      }
+    },
+    {
+      "calibration_id": "SC11",
+      "case_id": "R2",
+      "content_cohort": "source_uncertainty_handled",
+      "title": "Conflicting CRM reports stay unresolved",
+      "checks": {
+        "R2-12": {
+          "status": "pass",
+          "rationale": "Prose and rewritten titles keep A08 Spanish only, separate A09 scheduling from A10 delivery, preserve all four cancellations and exclude F8/F9.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Scope, accepted completion, cancellation and receipt-time cutoff rules."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A05/A08/A22",
+                "M3:A26",
+                "M4:A09/A10",
+                "M5:A08/A16/A27"
+              ],
+              "support": "Spanish-only accepted FAQ, closed scheduling versus future delivery, cancellations, accepted walkthrough."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F6",
+                "F8",
+                "F9"
+              ],
+              "support": "October 6 training booking/delivery distinction; F8/F9 received after the cutoff."
+            }
+          ]
+        },
+        "R2-13": {
+          "status": "pass",
+          "rationale": "All 18 active action IDs are covered with supported owners/dates or explicit gaps and useful next steps; the A03/A21→A25→A28 path and four overdue items are foregrounded.",
+          "evidence": [
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-13"
+              ],
+              "support": "Requires all 18 active items in handoff prose, correct owners/dates or gaps, actionable next steps, launch path and four overdue items."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M3:A11/A12/A20",
+                "M4:A02/A18/A25/A28/A33/A34",
+                "M5:A03/A13/A14/A21"
+              ],
+              "support": "States active work, dependencies, deadlines and practical obstacles."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F2",
+                "F4",
+                "F5",
+                "F6",
+                "F7"
+              ],
+              "support": "Confirms ownership, due dates and unresolved blockers."
+            },
+            {
+              "file": "candidate/inputs/baseline.csv",
+              "records": [
+                "A01–A34"
+              ],
+              "support": "Supplies unchanged owners and deadlines used with subsequent decisions."
+            }
+          ]
+        },
+        "R2-14": {
+          "status": "pass",
+          "rationale": "The handoff explains the CRM conflict, unaccepted A12 proposal, unnamed A33 owner and removed A30 date without inventing a resolution or completed outreach.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F5",
+                "F7"
+              ],
+              "support": "Unreconciled CRM snapshot reports; A12 cover unresolved; A33 still has no named lead."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A30",
+                "M3:A12",
+                "M4:A33",
+                "M5:A21"
+              ],
+              "support": "Removes A30 due date without blocking drafting; retains Lena; releases Hana to an unnamed role; does not select a CRM result."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+        "handoff.txt": "b2ceb7c1deb2531e6a7d89d15e7be8158a390c9a1966b99ecef44ff7b5feca0f"
+      }
+    },
+    {
+      "calibration_id": "SC12",
+      "case_id": "R2",
+      "content_cohort": "source_uncertainty_handled",
+      "title": "Owner and deadline gaps remain explicit",
+      "checks": {
+        "R2-12": {
+          "status": "pass",
+          "rationale": "Prose and rewritten titles keep A08 Spanish only, separate A09 scheduling from A10 delivery, preserve all four cancellations and exclude F8/F9.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Scope, accepted completion, cancellation and receipt-time cutoff rules."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A05/A08/A22",
+                "M3:A26",
+                "M4:A09/A10",
+                "M5:A08/A16/A27"
+              ],
+              "support": "Spanish-only accepted FAQ, closed scheduling versus future delivery, cancellations, accepted walkthrough."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F6",
+                "F8",
+                "F9"
+              ],
+              "support": "October 6 training booking/delivery distinction; F8/F9 received after the cutoff."
+            }
+          ]
+        },
+        "R2-13": {
+          "status": "pass",
+          "rationale": "All 18 active action IDs are covered with supported owners/dates or explicit gaps and useful next steps; the A03/A21→A25→A28 path and four overdue items are foregrounded.",
+          "evidence": [
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-13"
+              ],
+              "support": "Requires all 18 active items in handoff prose, correct owners/dates or gaps, actionable next steps, launch path and four overdue items."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M3:A11/A12/A20",
+                "M4:A02/A18/A25/A28/A33/A34",
+                "M5:A03/A13/A14/A21"
+              ],
+              "support": "States active work, dependencies, deadlines and practical obstacles."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F2",
+                "F4",
+                "F5",
+                "F6",
+                "F7"
+              ],
+              "support": "Confirms ownership, due dates and unresolved blockers."
+            },
+            {
+              "file": "candidate/inputs/baseline.csv",
+              "records": [
+                "A01–A34"
+              ],
+              "support": "Supplies unchanged owners and deadlines used with subsequent decisions."
+            }
+          ]
+        },
+        "R2-14": {
+          "status": "pass",
+          "rationale": "The handoff explains the CRM conflict, unaccepted A12 proposal, unnamed A33 owner and removed A30 date without inventing a resolution or completed outreach.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F5",
+                "F7"
+              ],
+              "support": "Unreconciled CRM snapshot reports; A12 cover unresolved; A33 still has no named lead."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A30",
+                "M3:A12",
+                "M4:A33",
+                "M5:A21"
+              ],
+              "support": "Removes A30 due date without blocking drafting; retains Lena; releases Hana to an unnamed role; does not select a CRM result."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+        "handoff.txt": "fae2c5541724cdc3d4b6ce45678ca2e385685ab5acc2444e1ad65410185c3c0f"
+      }
+    },
+    {
+      "calibration_id": "SC13",
+      "case_id": "R1",
+      "content_cohort": "convincingly_incorrect",
+      "title": "Team-lunch hold omitted from next-step queue",
+      "checks": {
+        "R1-12": {
+          "status": "pass",
+          "rationale": "The note gives the exact cutoff and all three required money positions, and describes proposed steps rather than claiming execution. Removing one hold follow-up line does not alter the stated cutoff, payable/held money positions or execution boundary.",
+          "evidence": [
+            {
+              "file": "candidate/TASK.md",
+              "records": [],
+              "support": "Requires an as-of handoff, no external actions, and separation of supported reimbursement from holds."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R1-12"
+              ],
+              "support": "Frozen guidance explicitly specifies USD 2,142.65 payable, USD 252.90 held, EUR 24.00 unvalued and the cutoff; prohibits claimed payment/outreach."
+            }
+          ]
+        },
+        "R1-13": {
+          "status": "fail",
+          "rationale": "The notes no longer identify the C018 missing attendee list/count or give any practical evidence request for it. All four unresolved issues and distinct next steps are required in the notes. Correct C018 data in the ledger does not repair this missing written handoff issue.",
+          "evidence": [
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R1-13"
+              ],
+              "support": "Notes must accurately describe all four unresolved issues, including C018 missing attendees/count, and require distinct practical next steps."
+            },
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E05"
+              ],
+              "support": "C018 still has no attendee list or count."
+            },
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "Rules unchanged"
+              ],
+              "support": "Team meals require attendee list/count; missing evidence remains held."
+            }
+          ],
+          "decisive_output_absence": "The entire C018 follow-up line from SC01 is absent, with no other C018 or team-lunch evidence request in the notes."
+        },
+        "R1-14": {
+          "status": "pass",
+          "rationale": "The adjustments cover service-date policy, alcohol and tax, hotel exception/deposit allocation, settled-card versus cash FX, actual refunds, duplicate/company cards, superseding estimate and pending authorization accurately. The adjustment explanation remains byte-identical to SC01; only the C018 follow-up line was removed.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/policies.txt",
+              "records": [
+                "P1",
+                "P2",
+                "Rules unchanged"
+              ],
+              "support": "Policy is selected by service date; proportional alcohol tax is excluded; FX, company-paid and refund rules apply."
+            },
+            {
+              "file": "candidate/inputs/correspondence.txt",
+              "records": [
+                "E01",
+                "E02",
+                "E03",
+                "E04",
+                "E05"
+              ],
+              "support": "Specific hotel/taxi/software/fee exceptions and duplicate instruction."
+            },
+            {
+              "file": "candidate/inputs/receipts.csv",
+              "records": [
+                "R004",
+                "R005",
+                "R010",
+                "R021",
+                "R027"
+              ],
+              "support": "Alcohol components, hotel taxes, applied deposit and superseding final hotel invoice."
+            },
+            {
+              "file": "candidate/inputs/statement.csv",
+              "records": [
+                "S014",
+                "S015",
+                "S020",
+                "S030",
+                "S122",
+                "S123",
+                "S124",
+                "S029",
+                "S229"
+              ],
+              "support": "Settled FX values, company costs, actual credits and the one-flight pending/settled pair."
+            }
+          ]
+        }
+      },
+      "artifact_sha256": {
+        "reconciliation.json": "0db377f58ad2fca8b7078568d6b5b2b84597686237f560416cff9289bebdf32b",
+        "review_notes.txt": "3c2c50b9d21f3969cf2683ed9d05dbf81fc879f71ef1df4ef6992d2944eef6d8"
+      }
+    },
+    {
+      "calibration_id": "SC14",
+      "case_id": "R2",
+      "content_cohort": "convincingly_incorrect",
+      "title": "French FAQ scope falsely accepted",
+      "checks": {
+        "R2-12": {
+          "status": "fail",
+          "rationale": "A08 falsely includes an accepted French FAQ translation. French was explicitly removed and remained out of scope; Spanish alone was accepted.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A08",
+                "M5:A08"
+              ],
+              "support": "M2 drops French from launch scope; M5 accepts Spanish and expressly keeps French out of scope."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-12"
+              ],
+              "support": "R2-12 requires Spanish-only A08; R2-14 prohibits invented confirmation/completion and materially unsupported assertions anywhere in prose."
+            }
+          ],
+          "decisive_output_quote": "A08 is the accepted Spanish-and-French FAQ translation."
+        },
+        "R2-13": {
+          "status": "pass",
+          "rationale": "All 18 active action IDs are covered with supported owners/dates or explicit gaps and useful next steps; the A03/A21→A25→A28 path and four overdue items are foregrounded. A08 is a closed action; the incorrect French assertion does not remove or change any of the 18 active-action lines.",
+          "evidence": [
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-13"
+              ],
+              "support": "Requires all 18 active items in handoff prose, correct owners/dates or gaps, actionable next steps, launch path and four overdue items."
+            },
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M3:A11/A12/A20",
+                "M4:A02/A18/A25/A28/A33/A34",
+                "M5:A03/A13/A14/A21"
+              ],
+              "support": "States active work, dependencies, deadlines and practical obstacles."
+            },
+            {
+              "file": "candidate/inputs/followups.txt",
+              "records": [
+                "F2",
+                "F4",
+                "F5",
+                "F6",
+                "F7"
+              ],
+              "support": "Confirms ownership, due dates and unresolved blockers."
+            },
+            {
+              "file": "candidate/inputs/baseline.csv",
+              "records": [
+                "A01–A34"
+              ],
+              "support": "Supplies unchanged owners and deadlines used with subsequent decisions."
+            }
+          ]
+        },
+        "R2-14": {
+          "status": "fail",
+          "rationale": "The assertion that a Spanish-and-French FAQ translation was accepted invents a material confirmation/completed scope. R2-14 prohibits materially unsupported assertions anywhere in prose, so this overlaps validly with the scope failure.",
+          "evidence": [
+            {
+              "file": "candidate/inputs/meeting_notes.txt",
+              "records": [
+                "M2:A08",
+                "M5:A08"
+              ],
+              "support": "M2 drops French from launch scope; M5 accepts Spanish and expressly keeps French out of scope."
+            },
+            {
+              "file": "private/rubric.json",
+              "records": [
+                "R2-14"
+              ],
+              "support": "R2-12 requires Spanish-only A08; R2-14 prohibits invented confirmation/completion and materially unsupported assertions anywhere in prose."
+            }
+          ],
+          "decisive_output_quote": "A08 is the accepted Spanish-and-French FAQ translation."
+        }
+      },
+      "artifact_sha256": {
+        "action_register.json": "e5eba48054523ec7731f53824d97c877484973f79dc374748810a680604993a6",
+        "handoff.txt": "c9fe99dc696046e48e20c1183f69e70741afa3217b5a77bc8e4527449740a495"
+      }
+    }
+  ]
+}

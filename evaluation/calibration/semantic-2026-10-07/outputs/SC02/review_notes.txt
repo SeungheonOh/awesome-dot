@@ -1,0 +1,13 @@
+Finance working note, as of 30 September 2026 at 17:00 UTC. Payable now under the packet rules: USD 2,142.65. Evidence holds: USD 252.90 plus EUR 24.00 that cannot yet be translated to USD. These are calculated entitlements and open questions, not confirmation of a payment. The October 1 message E06 contributes nothing to this cutoff decision.
+
+Follow-up queue
+- Stationery C017: USD 47.90 is pending an itemized receipt. Maya should request a replacement from the stationery seller for finance to inspect.
+- Lunch C018: USD 126.00 is pending attendee evidence. The workshop organizer should confirm who attended/how many people, allowing finance to apply the per-person cap.
+- Cash taxi C026: keep EUR 24.00 in original currency. Finance needs to supply an authorized cash conversion record before a USD decision can be made.
+- Hotspot C028: the claim/receipt is USD 79.00, the settled amount USD 89.00. Maya should ask the vendor to explain the USD 10 difference and provide a breakdown or corrected receipt; finance should review that evidence before release.
+
+Decision summary
+Use the date of service for the policy change, retaining P1 for pre-September-15 services even if the charge posts later. The revised taxi and meal ceilings apply from September 15; the named airport-taxi exception allows C013 up to USD 95. Meal C004 loses both alcohol and its proportional tax before the remaining food amount is compared with the cap. C016 qualifies for the small-expense receipt exception.
+The first hotel uses the normal room-base ceiling with its full mandatory tax. The second hotel's two USD 230 room nights have written support in E01. Allocate its USD 120 deposit to C021 and only the remaining USD 395.20 to C010. E01 does not exempt the first hotel.
+C014 and C015 use USD amounts actually settled on the employee card, not independently chosen FX rates. C026 was cash, so it needs the approved cash rate. Settled return/refund entries reduce C022 by USD 36, C023 by USD 27 and C024 by USD 125; the latter leaves an approved USD 25 cancellation fee.
+C001 is the retained rail claim and C007 is the duplicate. C020/C030 stay in business cost but pay Maya zero because they used the company card. The software approval covers the specified months only. The personal gift is excluded. Replace C027's estimate with the lower final invoice and classify the difference as excluded. For C029, an authorization and its settled charge are one flight, not two.

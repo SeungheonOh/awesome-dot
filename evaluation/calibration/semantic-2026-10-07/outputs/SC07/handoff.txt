@@ -1,0 +1,26 @@
+Atlas Intake handoff at 2026-09-30 17:00 UTC. F8 and F9 arrived on October 1 and are excluded, even when they describe purported earlier events. The current register has 18 active actions: 9 open, 7 blocked and 2 unresolved; 12 are done and 4 cancelled. Four active items are overdue. All dates below are UTC; a September 30 due date does not become overdue before that day ends. The listed next steps are recommendations, not actions already taken.
+
+Launch path: A03 privacy approval and A21 trustworthy CRM verification must both resolve before A25 can be accepted; A28 then waits on A25. The immediate dependency of A28 is A25, not a replacement list of its upstream actions. The overdue items are A03, A11, A12 and A21; their dates have not been silently extended.
+
+- A03 — Dev, due 2026-09-26, overdue and blocked. Counsel comments are not approval; Dev should resolve them and obtain approved privacy text.
+- A21 — Uma, due 2026-09-29, overdue and unresolved. One CRM report passes all rows while the other reports 42 missing rows. Neither identifies its snapshot, so the later report does not settle completion. Uma should identify both tested exports and reconcile or rerun verification.
+- A25 — Yara, due 2026-10-02, blocked. Obtain the A03/A21 results and assemble the signoff packet for acceptance.
+- A28 — Ben, due 2026-10-02, blocked. Obtain acceptance of A25 before publishing the go/no-go decision.
+- A11 — Kian, due 2026-09-26, overdue and blocked. Request the missing pilot-team mapping and reconcile the remaining 18 duplicates to zero.
+- A12 — Lena remains accountable, due 2026-09-28, overdue and blocked. Mira is only a proposed replacement and has not accepted. The coordinator should restore workspace access and settle cover through Lena or an accepted transfer.
+- A02 — Carla, due 2026-10-02, open. Finish routing rules; the already accepted schema is not a blocker.
+- A06 — Gia, due 2026-10-01, open. Finish the launch banner.
+- A10 — Kian, due 2026-10-06, open. Deliver the training at the rescheduled session; A09 booking work is already complete.
+- A13 — Mira, due 2026-10-02, open. Resolve the recurring vendor issue and reclose ticket 714 as the same A13 action.
+- A14 — Noor, due 2026-10-01, open. Run the full load test now that A15 restored the quota; the test itself has not run.
+- A18 — Ravi, due 2026-10-02, blocked. Obtain compliance clearance to lift the blackout before running the pager drill.
+- A20 — Talia, due 2026-10-01, open. Repair the remaining three runbook links and verify all 24.
+- A23 — Xena, due 2026-10-02, open. Finish and verify the dashboard transfer; accepting ownership of this work did not complete it.
+- A30 — Dev, no current due date, open. Continue the retention Q&A draft and seek an agreed deadline after the pending counsel decision; the former September 29 date was removed.
+- A31 — Gia, due 2026-10-02, open. Complete the accessibility sweep and document the result; her accepted transfer is not a completion report.
+- A33 — No named owner; incoming support lead role, due 2026-10-01, unresolved. Hana was released. The coordinator should appoint a person to the role and have that person complete the mailbox test.
+- A34 — Iris, due 2026-10-01, blocked. Obtain the partner launch date and finish the note; an existing draft does not supply the missing confirmation.
+
+Settled scope and closed work
+A08 is the accepted Spanish FAQ only; French was dropped. A09 scheduling is complete, including the move to October 6, while A10 delivery remains open. A01 schema, A04 funnel QA, A07 FAQ migration, A15 quota repair, A17 rota, A19 onboarding checklist, A24 budget readout, A27 recorded walkthrough, A29 dictionary and A32 screenshots are complete. The accepted walkthrough replaces the cancelled live demo A26. A05 announcement email, A16 fallback plan and A22 sandbox purge are also cancelled; none has a live next step. Keep the sandbox records preserved. No post-cutoff rota reopening, screenshot redo or accessibility completion has been adopted.
+Alternate IDs refer to existing actions: ALT-FAQ is A07, DOC-9 is A29, and OPS-17 is A13.

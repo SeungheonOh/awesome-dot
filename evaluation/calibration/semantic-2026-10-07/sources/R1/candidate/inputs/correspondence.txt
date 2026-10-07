@@ -1,0 +1,17 @@
+E01 | 2026-09-10 09:00 UTC | Finance lead Owen Patel to Maya
+The September 15–17 partner-site hotel is approved at USD 230.00 per night room base for two nights, plus mandatory lodging taxes. This exception covers R010 and its previously paid USD 120.00 deposit R021, not the September 12–14 hotel.
+
+E02 | 2026-09-16 15:00 UTC | Owen to Maya
+For the September 17 early airport taxi, I approve up to USD 95.00 because the shuttle is not operating. This approval is only for C013.
+
+E03 | 2026-09-18 11:00 UTC | Owen to Maya
+Approve one month each of ClearTranscript and ShapeBoard at USD 49.00 each, the purchases later claimed as C019 and C020. There is no ongoing purchase authorization beyond these months.
+
+E04 | 2026-09-22 13:00 UTC | Program lead Inez Romero and Owen
+The partner cancelled the September 21 seminar, and Maya had to cancel her booking. Owen approves the nonrefundable USD 25.00 cancellation fee. Vendor says USD 125.00 will be returned against the USD 150.00 original charge C024. Verify actual statement credit before netting it.
+
+E05 | 2026-09-28 16:00 UTC | Finance intake to Maya
+C007 uses the exact R001 receipt already submitted as C001. Please retain C001 as the canonical claim. C018 still has no attendee list or count. C017 still has no itemized receipt. C026 has no approved exchange-rate record. C028 receipt says USD 79.00 but the settled card line says USD 89.00; no explanation has been received.
+
+E06 | 2026-10-01 09:00 UTC | Maya to finance
+I may be able to recover the stationery receipt tomorrow, and I will ask about the hotspot difference. This note is outside the reconciliation cutoff and supplies no replacement evidence.

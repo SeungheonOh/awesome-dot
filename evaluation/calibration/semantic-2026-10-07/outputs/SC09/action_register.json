@@ -1,0 +1,516 @@
+{
+  "actions": [
+    {
+      "action_id": "A01",
+      "title": "Obtain acceptance of the intake schema",
+      "owner": "Ava",
+      "due_date": "2026-09-25",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M2"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A02",
+      "title": "Complete the agreed routing logic",
+      "owner": "Carla",
+      "due_date": "2026-10-02",
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "F1",
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": "Carla should implement the remaining routing rules against the accepted schema.",
+      "overdue": false
+    },
+    {
+      "action_id": "A03",
+      "title": "Secure counsel approval of privacy wording",
+      "owner": "Dev",
+      "due_date": "2026-09-26",
+      "status": "blocked",
+      "dependencies": [],
+      "evidence_ids": [
+        "M2",
+        "M5"
+      ],
+      "blocker": "Counsel has commented but has not approved the privacy wording.",
+      "next_step": "Dev should address counsel comments and seek explicit approval of the final wording.",
+      "overdue": true
+    },
+    {
+      "action_id": "A04",
+      "title": "Complete funnel instrumentation and its QA",
+      "owner": "Eli",
+      "due_date": "2026-09-28",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A05",
+      "title": "Create the launch announcement email",
+      "owner": "Faye",
+      "due_date": "2026-09-29",
+      "status": "cancelled",
+      "dependencies": [],
+      "evidence_ids": [
+        "M2"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A06",
+      "title": "Finish the launch banner artwork",
+      "owner": "Gia",
+      "due_date": "2026-10-01",
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "M1",
+        "F4"
+      ],
+      "blocker": null,
+      "next_step": "Gia should finish and submit the banner artwork.",
+      "overdue": false
+    },
+    {
+      "action_id": "A07",
+      "title": "Complete the help-FAQ move",
+      "owner": "Hana",
+      "due_date": "2026-09-26",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M3"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A08",
+      "title": "Deliver the accepted Spanish-only FAQ translation",
+      "owner": "Iris",
+      "due_date": "2026-09-30",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M2",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A09",
+      "title": "Confirm staff-training arrangements",
+      "owner": "Jae",
+      "due_date": "2026-09-30",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M4",
+        "F6"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A10",
+      "title": "Conduct the staff-training session",
+      "owner": "Kian",
+      "due_date": "2026-10-06",
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "M4",
+        "F6"
+      ],
+      "blocker": null,
+      "next_step": "Kian should conduct the October 6 training session already booked.",
+      "overdue": false
+    },
+    {
+      "action_id": "A11",
+      "title": "Remove remaining duplicate pilot identifiers",
+      "owner": "Kian",
+      "due_date": "2026-09-26",
+      "status": "blocked",
+      "dependencies": [],
+      "evidence_ids": [
+        "M3",
+        "F7"
+      ],
+      "blocker": "The pilot mapping is absent and 18 duplicate identifiers remain.",
+      "next_step": "Kian should obtain the missing pilot mapping and clear the remaining 18 duplicate IDs.",
+      "overdue": true
+    },
+    {
+      "action_id": "A12",
+      "title": "Finish the pilot consent review",
+      "owner": "Lena",
+      "due_date": "2026-09-28",
+      "status": "blocked",
+      "dependencies": [],
+      "evidence_ids": [
+        "M3",
+        "F7"
+      ],
+      "blocker": "Consent-workspace access is unavailable; replacement ownership has not been accepted.",
+      "next_step": "The coordinator should restore consent-workspace access and arrange cover through Lena or a formally accepted replacement.",
+      "overdue": true
+    },
+    {
+      "action_id": "A13",
+      "title": "Resolve the reopened vendor issue on ticket 714",
+      "owner": "Mira",
+      "due_date": "2026-10-02",
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "M2",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": "Mira should investigate the recurring vendor problem and confirm ticket 714 is closed again.",
+      "overdue": false
+    },
+    {
+      "action_id": "A14",
+      "title": "Execute the complete load test",
+      "owner": "Noor",
+      "due_date": "2026-10-01",
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "M1",
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": "Noor should run the full load test using the restored quota.",
+      "overdue": false
+    },
+    {
+      "action_id": "A15",
+      "title": "Restore and verify load-test quota",
+      "owner": "Owen",
+      "due_date": "2026-09-28",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A16",
+      "title": "Develop the alternate-routing fallback",
+      "owner": "Pia",
+      "due_date": "2026-09-28",
+      "status": "cancelled",
+      "dependencies": [],
+      "evidence_ids": [
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A17",
+      "title": "Obtain acceptance of the support rota",
+      "owner": "Quin",
+      "due_date": "2026-09-30",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A18",
+      "title": "Carry out the weekend pager exercise",
+      "owner": "Ravi",
+      "due_date": "2026-10-02",
+      "status": "blocked",
+      "dependencies": [],
+      "evidence_ids": [
+        "M4",
+        "F7"
+      ],
+      "blocker": "The compliance blackout still prevents the drill.",
+      "next_step": "Ravi should seek compliance clearance before conducting the pager exercise.",
+      "overdue": false
+    },
+    {
+      "action_id": "A19",
+      "title": "Obtain acceptance of the complete onboarding checklist",
+      "owner": "Sara",
+      "due_date": "2026-09-27",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M3"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A20",
+      "title": "Validate the entire runbook link set",
+      "owner": "Talia",
+      "due_date": "2026-10-01",
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "M3"
+      ],
+      "blocker": null,
+      "next_step": "Talia should repair the three broken links and verify the complete set.",
+      "overdue": false
+    },
+    {
+      "action_id": "A21",
+      "title": "Establish CRM export integrity on identified inputs",
+      "owner": "Uma",
+      "due_date": "2026-09-29",
+      "status": "unresolved",
+      "dependencies": [],
+      "evidence_ids": [
+        "F5",
+        "M5"
+      ],
+      "blocker": "Inconsistent CRM results cannot be compared without identifying their export snapshots.",
+      "next_step": "Uma should identify each tested export snapshot, then reconcile the reports or rerun verification.",
+      "overdue": true
+    },
+    {
+      "action_id": "A22",
+      "title": "Delete the sandbox samples",
+      "owner": "Vic",
+      "due_date": "2026-09-28",
+      "status": "cancelled",
+      "dependencies": [],
+      "evidence_ids": [
+        "M2"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A23",
+      "title": "Complete dashboard accountability transfer",
+      "owner": "Xena",
+      "due_date": "2026-10-02",
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "F2"
+      ],
+      "blocker": null,
+      "next_step": "Xena should finish the dashboard transfer and verify who now controls it.",
+      "overdue": false
+    },
+    {
+      "action_id": "A24",
+      "title": "Deliver an accepted budget presentation",
+      "owner": "Xena",
+      "due_date": "2026-09-29",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A25",
+      "title": "Assemble the accepted launch signoff package",
+      "owner": "Yara",
+      "due_date": "2026-10-02",
+      "status": "blocked",
+      "dependencies": [
+        "A03",
+        "A21"
+      ],
+      "evidence_ids": [
+        "M4"
+      ],
+      "blocker": "A03 approval and A21 verification are prerequisites to packet acceptance.",
+      "next_step": "Yara should secure the A03 and A21 results, assemble the packet and obtain acceptance.",
+      "overdue": false
+    },
+    {
+      "action_id": "A26",
+      "title": "Deliver the live stakeholder demonstration",
+      "owner": "Zane",
+      "due_date": "2026-10-01",
+      "status": "cancelled",
+      "dependencies": [],
+      "evidence_ids": [
+        "M3"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A27",
+      "title": "Provide an accepted recorded walkthrough",
+      "owner": "Ava",
+      "due_date": "2026-10-01",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M5"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A28",
+      "title": "Issue the launch go/no-go outcome",
+      "owner": "Ben",
+      "due_date": "2026-10-02",
+      "status": "blocked",
+      "dependencies": [
+        "A25"
+      ],
+      "evidence_ids": [
+        "M4"
+      ],
+      "blocker": "The A25 packet has not yet been accepted.",
+      "next_step": "Ben should publish only after A25 has been accepted.",
+      "overdue": false
+    },
+    {
+      "action_id": "A29",
+      "title": "Finish the accepted data dictionary",
+      "owner": "Carla",
+      "due_date": "2026-09-27",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "M1",
+        "M4"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A30",
+      "title": "Draft the retention questions and answers",
+      "owner": "Dev",
+      "due_date": null,
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "M2"
+      ],
+      "blocker": null,
+      "next_step": "Dev should continue drafting the Q&A and seek an agreed deadline as retention policy is settled.",
+      "overdue": false
+    },
+    {
+      "action_id": "A31",
+      "title": "Finish accessibility testing",
+      "owner": "Gia",
+      "due_date": "2026-10-02",
+      "status": "open",
+      "dependencies": [],
+      "evidence_ids": [
+        "F4"
+      ],
+      "blocker": null,
+      "next_step": "Gia should finish the sweep and record its results.",
+      "overdue": false
+    },
+    {
+      "action_id": "A32",
+      "title": "Provide the accepted product screenshot set",
+      "owner": "Faye",
+      "due_date": "2026-09-28",
+      "status": "done",
+      "dependencies": [],
+      "evidence_ids": [
+        "F3"
+      ],
+      "blocker": null,
+      "next_step": null,
+      "overdue": false
+    },
+    {
+      "action_id": "A33",
+      "title": "Carry out the triage-mailbox check",
+      "owner": null,
+      "due_date": "2026-10-01",
+      "status": "unresolved",
+      "dependencies": [],
+      "evidence_ids": [
+        "M4",
+        "F7"
+      ],
+      "blocker": "The accountable support-lead role has no named occupant.",
+      "next_step": "The coordinator should name the incoming support lead and arrange for that person to complete the mailbox check.",
+      "overdue": false
+    },
+    {
+      "action_id": "A34",
+      "title": "Complete the partner announcement with a confirmed date",
+      "owner": "Iris",
+      "due_date": "2026-10-01",
+      "status": "blocked",
+      "dependencies": [],
+      "evidence_ids": [
+        "M4",
+        "F7"
+      ],
+      "blocker": "The partner has not confirmed a launch date.",
+      "next_step": "Iris should obtain the partner date confirmation and incorporate it into the launch note.",
+      "overdue": false
+    }
+  ],
+  "aliases": {
+    "ALT-FAQ": "A07",
+    "DOC-9": "A29",
+    "OPS-17": "A13"
+  },
+  "totals": {
+    "by_status": {
+      "open": 9,
+      "blocked": 7,
+      "done": 12,
+      "cancelled": 4,
+      "unresolved": 2
+    },
+    "active_count": 18,
+    "overdue_count": 4
+  }
+}

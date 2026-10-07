@@ -1,0 +1,3 @@
+The Atlas Intake launch packet is fictional. The baseline has 34 canonical commitments. Source IDs B00, M1–M5 and F1–F9 identify the baseline, whole meeting notes and individual follow-ups. Within-source action identifiers are canonical unless explicitly labeled an alternate ID.
+
+Meeting notes marked final are agreed decisions. Follow-ups identify their speaker and receipt time. All dates/times are UTC. The packet includes two post-cutoff follow-ups to show what had not yet been learned; they are not evidence at the requested cutoff. No external documents are available or required. References such as a test report or approval record are evidence descriptions in these notes, not instructions to browse. No actual customer or employee data appears here.

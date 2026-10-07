@@ -1,0 +1,26 @@
+Cutoff view: 30 September 2026, 17:00 UTC. Ignore the later-received F8/F9 reports in determining this state, including their retrospective claims. There are 18 remaining commitments, four of them overdue: A03, A11, A12 and A21. Status totals are 9 open, 7 blocked, 2 unresolved, 12 done and 4 cancelled. Due dates mean the end of the UTC day. This note assigns recommended follow-up work; it does not report messages sent or systems changed.
+
+The release decision cannot proceed through its acceptance path yet: A03 plus A21 feed A25, and acceptance of A25 feeds A28. A25 has those two immediate prerequisites; A28 has only A25. Work through the overdue privacy, pilot-ID, consent-audit and CRM items without inventing revised dates.
+
+- A03 — Dev, due 2026-09-26, overdue and blocked. Counsel comments are not approval; Dev should resolve them and obtain approved privacy text.
+- A21 — Uma, due 2026-09-29, overdue and unresolved. One CRM report passes all rows while the other reports 42 missing rows. Neither identifies its snapshot, so the later report does not settle completion. Uma should identify both tested exports and reconcile or rerun verification.
+- A25 — Yara, due 2026-10-02, blocked. Obtain the A03/A21 results and assemble the signoff packet for acceptance.
+- A28 — Ben, due 2026-10-02, blocked. Obtain acceptance of A25 before publishing the go/no-go decision.
+- A11 — Kian, due 2026-09-26, overdue and blocked. Request the missing pilot-team mapping and reconcile the remaining 18 duplicates to zero.
+- A12 — Lena remains accountable, due 2026-09-28, overdue and blocked. Mira is only a proposed replacement and has not accepted. The coordinator should restore workspace access and settle cover through Lena or an accepted transfer.
+- A02 — Carla, due 2026-10-02, open. Finish routing rules; the already accepted schema is not a blocker.
+- A06 — Gia, due 2026-10-01, open. Finish the launch banner.
+- A10 — Kian, due 2026-10-06, open. Deliver the training at the rescheduled session; A09 booking work is already complete.
+- A13 — Mira, due 2026-10-02, open. Resolve the recurring vendor issue and reclose ticket 714 as the same A13 action.
+- A14 — Noor, due 2026-10-01, open. Run the full load test now that A15 restored the quota; the test itself has not run.
+- A18 — Ravi, due 2026-10-02, blocked. Obtain compliance clearance to lift the blackout before running the pager drill.
+- A20 — Talia, due 2026-10-01, open. Repair the remaining three runbook links and verify all 24.
+- A23 — Xena, due 2026-10-02, open. Finish and verify the dashboard transfer; accepting ownership of this work did not complete it.
+- A30 — Dev, no current due date, open. Continue the retention Q&A draft and seek an agreed deadline after the pending counsel decision; the former September 29 date was removed.
+- A31 — Gia, due 2026-10-02, open. Complete the accessibility sweep and document the result; her accepted transfer is not a completion report.
+- A33 — Mira, confirmed accountable owner, due 2026-10-01, unresolved. The coordinator has confirmed Mira accepted the support-lead assignment before cutoff. Mira should complete the mailbox test.
+- A34 — Iris, due 2026-10-01, blocked. Obtain the partner launch date and finish the note; an existing draft does not supply the missing confirmation.
+
+Settled scope and closed work
+A08 is the accepted Spanish FAQ only; French was dropped. A09 scheduling is complete, including the move to October 6, while A10 delivery remains open. A01 schema, A04 funnel QA, A07 FAQ migration, A15 quota repair, A17 rota, A19 onboarding checklist, A24 budget readout, A27 recorded walkthrough, A29 dictionary and A32 screenshots are complete. The accepted walkthrough replaces the cancelled live demo A26. A05 announcement email, A16 fallback plan and A22 sandbox purge are also cancelled; none has a live next step. Keep the sandbox records preserved. No post-cutoff rota reopening, screenshot redo or accessibility completion has been adopted.
+Alternate IDs refer to existing actions: ALT-FAQ is A07, DOC-9 is A29, and OPS-17 is A13.

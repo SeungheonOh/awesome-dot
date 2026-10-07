@@ -1,0 +1,15 @@
+Position at 2026-09-30 17:00 UTC: USD 2,142.65 is payable to Maya. USD 252.90 is held in known USD claims, with a separate EUR 24.00 cash hold whose USD value is unknown. This is a reconciliation recommendation; payment and evidence collection are still future steps. E06 arrived after the cutoff and is excluded.
+
+The cash taxi has a receipt, but evidence of the cash conversion rate is genuinely absent. Its payable USD value cannot responsibly be inferred from the EUR card purchases. This does not make the already supported USD reimbursement total unknown.
+
+Evidence needed before releasing the holds
+C017, USD 47.90: Maya should recover the itemized stationery receipt from the vendor and provide it to finance; the statement alone does not meet the receipt rule.
+C018, USD 126.00: Maya or the workshop organizer should supply the attendee list/count for the business lunch so finance can check the per-person limit.
+C026, EUR 24.00 with no USD valuation: finance should provide the organization's approved cash FX record, after which the taxi can be valued and checked. Another card transaction's rate is not a substitute.
+C028, USD 79.00 held: Maya should obtain a vendor breakdown or corrected receipt explaining the USD 79 receipt versus USD 89 settled charge. Finance should resolve that discrepancy before approving reimbursement.
+
+How the amounts were reached
+Service dates determine whether P1 or P2 applies; the September 16 postings do not move the September 12 expenses into P2. P2 starts September 15. C013 instead uses its trip-specific USD 95 taxi authorization from E02. For C004, exclude the alcohol and the tax attributable to it, giving USD 57.20 food-plus-tax; apply the meal ceilings after that allocation. C016 is below the receipt threshold and has a settled charge and business purpose.
+The ordinary lodging cap reduces C005 to USD 406.80 while preserving mandatory lodging tax. E01 permits USD 230 room base per night only for the September 15–17 stay. That stay totals USD 515.20: USD 120 belongs to deposit C021 and USD 395.20 to final-balance C010, so the deposit is counted once.
+Use the actual USD card settlements for foreign C014 and C015. The cash taxi is different and stays unvalued pending an approved rate. Net the settled credits of USD 36 on C022, USD 27 on C023 and USD 125 on C024; the seminar retains the separately approved USD 25 cancellation fee. A promised refund alone would not suffice.
+C007 repeats C001's receipt and adds no payment. The company card covers C020 and C030, USD 79 in total; those are supported business costs, not money due to Maya. E03 approves only one month of each software plan. Exclude the personal C025 gift. C027 uses the USD 198 final invoice, excluding the USD 13.20 estimate overstatement. C029 includes the single settled flight charge and ignores the duplicate pending authorization.

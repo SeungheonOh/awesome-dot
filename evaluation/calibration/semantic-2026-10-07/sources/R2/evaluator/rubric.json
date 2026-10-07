@@ -1,0 +1,95 @@
+{
+  "case_id": "R2",
+  "version": "1.0",
+  "synthetic": true,
+  "scoring": "Each acceptance check is an independent binary outcome. Do not substitute an aggregate impression. Objective results are automatic. Semantic results remain unknown until two independent masked reviewers agree; disagreement stays unknown pending adjudication. Do not treat the reference artifact itself as proof of semantic success.",
+  "checks": [
+    {
+      "id": "R2-01",
+      "mode": "objective",
+      "title": "Canonical coverage",
+      "acceptance": "Exactly one row for every A01\u2013A34, with no duplicate or invented action"
+    },
+    {
+      "id": "R2-02",
+      "mode": "objective",
+      "title": "Ordinary final statuses",
+      "acceptance": "Statuses correctly reflect completion, cancellation, reopening, and known blocking state for actions outside the special evidence cases"
+    },
+    {
+      "id": "R2-03",
+      "mode": "objective",
+      "title": "Evidence-sensitive statuses",
+      "acceptance": "Correctly distinguishes draft/partial/submission/scheduling/delivery/conflicting evidence for A03,A09,A10,A11,A20,A21,A27,A33"
+    },
+    {
+      "id": "R2-04",
+      "mode": "objective",
+      "title": "Accepted owner transfers",
+      "acceptance": "Final named ownership reflects the accepted A02,A06,A10,A23,A31 transfers"
+    },
+    {
+      "id": "R2-05",
+      "mode": "objective",
+      "title": "Retained or unfilled ownership",
+      "acceptance": "Other owners remain supported, including Lena remaining A12 owner and A33 having no named person"
+    },
+    {
+      "id": "R2-06",
+      "mode": "objective",
+      "title": "Changed or removed deadlines",
+      "acceptance": "Correct dates for explicitly rescheduled items and null for the removed A30 deadline"
+    },
+    {
+      "id": "R2-07",
+      "mode": "objective",
+      "title": "Unchanged deadlines",
+      "acceptance": "Other deadlines are retained rather than silently revised from silence or incomplete work"
+    },
+    {
+      "id": "R2-08",
+      "mode": "objective",
+      "title": "Duplicate aliases",
+      "acceptance": "Exactly the three explicit alternate IDs map to the correct canonical actions"
+    },
+    {
+      "id": "R2-09",
+      "mode": "objective",
+      "title": "Immediate prerequisites",
+      "acceptance": "Only unresolved explicit immediate action dependencies remain: A25 on A03/A21 and A28 on A25"
+    },
+    {
+      "id": "R2-10",
+      "mode": "objective",
+      "title": "Overdue flags and counts",
+      "acceptance": "End-of-day cutoff logic, all status counts, active count, and overdue count are correct"
+    },
+    {
+      "id": "R2-11",
+      "mode": "objective",
+      "title": "Evidence and minimal structure",
+      "acceptance": "Source IDs exist and cite essential decisions; required titles, blockers, next steps and register fields are structurally present"
+    },
+    {
+      "id": "R2-12",
+      "mode": "semantic",
+      "title": "Final scope and chronology",
+      "acceptance": "Prose/register titles preserve current scope, including Spanish-only A08, training scheduling versus delivery, cancelled work and cutoff exclusion of F8/F9, without reviving obsolete obligations",
+      "review_guidance": "Require correct final scope and cutoff reasoning. A08 Spanish only; A09 scheduled/done while A10 delivery remains open due Oct 6; cancelled A05/A16/A22/A26 must not be assigned live next steps; F8/F9 must not be incorporated."
+    },
+    {
+      "id": "R2-13",
+      "mode": "semantic",
+      "title": "Actionable complete handoff",
+      "acceptance": "Handoff covers all 18 active items with correct owner/date or explicit gaps and useful next steps, foregrounding launch dependencies and four overdue items; grouping is allowed",
+      "review_guidance": "All 18 active actions must be covered in handoff prose, including grouped clear references. Highlight A03/A21\u2192A25\u2192A28 and overdue A03/A11/A12/A21. Practical next steps may use reasonable phrasing and need not copy the oracle. Dates/owners can be given by compact references to action lines if unambiguous."
+    },
+    {
+      "id": "R2-14",
+      "mode": "semantic",
+      "title": "Calibrated uncertainty",
+      "acceptance": "Correctly explains unreconciled CRM reports, unaccepted A12 reassignment, A33 owner gap and A30 unset due date; no invented confirmation, deadline, completed action, or claimed outreach",
+      "review_guidance": "Require honest treatment of the four named uncertainty/authority gaps and no materially unsupported assertions anywhere in the prose or descriptive register fields. A12 remains Lena; A33 is unnamed; A30 has no deadline; A21 has no trustworthy completion state."
+    }
+  ]
+}
