@@ -107,8 +107,26 @@ class RunnerTests(unittest.TestCase):
 class RegressionDiscoveryTests(unittest.TestCase):
     def test_known_report_and_navigation_tests_are_present(self):
         loader = unittest.TestLoader()
-        self.assertEqual(loader.loadTestsFromName("test_check").countTestCases(), 8)
-        self.assertEqual(loader.loadTestsFromName("test_report").countTestCases(), 11)
+        def test_ids(suite):
+            for item in suite:
+                if isinstance(item, unittest.TestSuite):
+                    yield from test_ids(item)
+                else:
+                    yield item.id()
+
+        for name in ("test_check", "test_report"):
+            module = importlib.import_module(name)
+            expected = {f"{name}.{case.__qualname__}.{method}"
+                        for case in vars(module).values()
+                        if isinstance(case, type) and issubclass(case, unittest.TestCase)
+                        and case.__module__ == name
+                        for method in dir(case)
+                        if method.startswith(loader.testMethodPrefix) and callable(getattr(case, method))}
+            with self.subTest(module=name):
+                self.assertTrue(expected)
+                discovered = list(test_ids(loader.loadTestsFromName(name)))
+                self.assertEqual(set(discovered), expected)
+                self.assertEqual(len(discovered), len(expected))
         self.assertFalse(loader.errors)
 
     def test_missing_module_fails_instead_of_zero_test_success(self):

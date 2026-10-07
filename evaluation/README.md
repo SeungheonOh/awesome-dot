@@ -39,7 +39,7 @@ This standard-library entrypoint runs the following checks in a fixed order:
 
 1. The earlier study's attempt/schedule identities, task assignments, prompt-hash agreement, 350 saved grading-source hashes, and three source-config/manifest hashes
 2. Source/link checks and the original 180 authored fixture tests: 61 harness and 119 case/grader tests
-3. All immediate evaluation regression modules, including the 8 navigation tests in `test_check.py`, 11 report tests in `test_report.py`, and verifier regressions
+3. All immediate evaluation regression modules: navigation, report-consistency, and verifier regressions
 4. The earlier study's saved-evidence scorer
 5. The repeated study's saved-evidence verifier
 6. `report.py --check` for table, condition-label, and caveat consistency
@@ -64,7 +64,7 @@ python -B evaluation/check.py
 - The second verifies the earlier study's evidence bindings and recomputes its saved-rating counts.
 - The third runs only the original source/link and fixture checks. It does not invoke either study verifier or the report/navigation regressions.
 
-The native result tables are derived from the saved JSON with a separate read-only [report tool](report.py). Check that the tables, condition labels, and required caveats have not drifted, then run its regression tests:
+The native result tables are derived from the saved JSON with a separate read-only [report tool](report.py). It checks five complete tables in four reports: the overview, repeated-study case and evidence-type tables, complete results index, and 24-row submission ledger. Whole-table comparison rejects missing, duplicate, reordered, or extra rows, including a pooled-total row. It also checks condition labels, dispatch order, saved artifact links, selected numeric statements, and required caveats. Run it and its regression tests:
 
 ```sh
 python -I -B evaluation/report.py --check
@@ -74,6 +74,12 @@ python -I -B evaluation/verify.py --tests-only
 ```
 
 Running `python -I -B evaluation/report.py` without `--check` prints the current tables; it does not rewrite reports or evidence.
+
+The report tool binds repeated-study counts to its saved summary, scheduled attempts, and requirement definitions. The earlier study's separate index row is checked against its saved criterion groups and paired summary; its attempt identities, conditions, cases and ordinals must match its saved schedule. Evidence-type denominators count scheduled requirement instances by their declared mode, including failures and not-assessed outcomes; they do not count review votes or add overlapping raw and semantically integrated grading reports. The index keeps the studies' different units and denominators separate.
+
+The checked reports use a small plain-Markdown subset. Table detection includes rows and tables without outer pipes, including one-cell body rows. Tables must be separated by blank lines; all nonblank body lines are retained for comparison. Fenced code examples cannot satisfy a report table or prose guard. HTML, HTML comments, and other angle-bracket constructs outside valid code fences are unsupported and fail the check; deleting them could otherwise make hidden text appear to be a visible table, caveat, or code fence. This is intentionally not a general Markdown renderer.
+
+This is bounded consistency checking, not a general prose fact checker or a fresh evaluation. Selected count statements and exact caveat text are guarded; arbitrary new prose, business-value examples, semantic judgments, and provenance claims still need review. Full source/artifact hashes and review evidence remain the responsibility of the saved-evidence verifiers above. No historical study file is regenerated.
 
 These commands make no model calls and install nothing. The saved-evidence commands and added binding checks only read saved files; they do not execute submitted code, import graders, or perform a fresh semantic review. Fixture checks use authored local test inputs and subprocesses to test evaluation machinery; their passes are not agent outcomes.
 
