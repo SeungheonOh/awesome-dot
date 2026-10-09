@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "source_freezes": [
+    {
+      "bundle": "algorithm",
+      "manifest_sha256": "1f7c552cb2b6bacb9b77a8181e000d73f059c0446cf100ac307db951d3b3a412"
+    },
+    {
+      "bundle": "stateful",
+      "manifest_sha256": "6ac7e8d15bf40b1452ca8183687c36751ea9e00d30aa6ddedede81659920e6ea"
+    }
+  ],
+  "sources": [
+    {
+      "bundle": "stateful",
+      "source": "async_reducer/public/TASK.md",
+      "source_sha256": "c03f1b407c415a4079b8c50d0048d7f5ad76259ffcfb0a20124a9a4064acb7ec",
+      "destination": "async_reducer/TASK.md",
+      "transformation": "prefix status note; remove delivery/evaluation suffix for stateful tasks only"
+    },
+    {
+      "bundle": "stateful",
+      "source": "async_reducer/private/development.json",
+      "source_sha256": "f0f3ffdbb7417b3b018ba344fe239dd85f349e3a60a0b46d3578fb260ed48bb7",
+      "destination": "async_reducer/development.json.gz",
+      "transformation": "deterministic gzip compression (mtime=0); decompressed bytes exactly match source JSON; historical phase labels retained, all fixtures publicly disclosed"
+    },
+    {
+      "bundle": "stateful",
+      "source": "async_reducer/private/confirmation.json",
+      "source_sha256": "a0181fb6a92a0f48f38eecff8a2ddcf77b0fd3a0ce0101c4784903ba7710bcaa",
+      "destination": "async_reducer/confirmation.json.gz",
+      "transformation": "deterministic gzip compression (mtime=0); decompressed bytes exactly match source JSON; historical phase labels retained, all fixtures publicly disclosed"
+    },
+    {
+      "bundle": "stateful",
+      "source": "async_reducer/private/groups.json",
+      "source_sha256": "b1a85cb5ae4c01a56e08d72bbbcb95055d0e8ed8f558ada360fb504e9331ea2f",
+      "destination": "cases.json",
+      "transformation": "embed group descriptions"
+    },
+    {
+      "bundle": "stateful",
+      "source": "sources/reconcile-obsolete-ui-requests.md",
+      "source_sha256": "0df74878dda748fa41bc39dc20e48976a17bf9d5bcd492b0fd5ebb0ee0f3f552",
+      "destination": "cases.json",
+      "transformation": "public immutable link and hash only; guide bytes omitted"
+    },
+    {
+      "bundle": "stateful",
+      "source": "partial_order/public/TASK.md",
+      "source_sha256": "20f2d02e1130272db09c7c1b0929a83878b1bf21b959ae61cfb796b66e9decbb",
+      "destination": "partial_order/TASK.md",
+      "transformation": "prefix status note; remove delivery/evaluation suffix for stateful tasks only"
+    },
+    {
+      "bundle": "stateful",
+      "source": "partial_order/private/development.json",
+      "source_sha256": "6fcb4d10d262fa7e4f37dc6f9b801cbbd3c0ea88da9b6c49004a10fa22c46e8d",
+      "destination": "partial_order/development.json.gz",
+      "transformation": "deterministic gzip compression (mtime=0); decompressed bytes exactly match source JSON; historical phase labels retained, all fixtures publicly disclosed"
+    },
+    {
+      "bundle": "stateful",
+      "source": "partial_order/private/confirmation.json",
+      "source_sha256": "403b5de65d16f4f75b08371548aac9f2c5e144d79c92e24898ed34081f00ba72",
+      "destination": "partial_order/confirmation.json.gz",
+      "transformation": "deterministic gzip compression (mtime=0); decompressed bytes exactly match source JSON; historical phase labels retained, all fixtures publicly disclosed"
+    },
+    {
+      "bundle": "stateful",
+      "source": "partial_order/private/groups.json",
+      "source_sha256": "a84429ee370c01b8b55446a6ff3777e5e599d215980f3b87e1cedb18c860218b",
+      "destination": "cases.json",
+      "transformation": "embed group descriptions"
+    },
+    {
+      "bundle": "stateful",
+      "source": "sources/reconstruct-partial-event-order.md",
+      "source_sha256": "192f41669c27e2278b0d897a21127120074e84a466fbd75cf4072a26320c7c04",
+      "destination": "cases.json",
+      "transformation": "public immutable link and hash only; guide bytes omitted"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "allocation/public/TASK.md",
+      "source_sha256": "8f21e2bee8578641984378f5a2c7b0f9c9fd6f0f6fc632d46e1f3081ed16fb28",
+      "destination": "allocation/TASK.md",
+      "transformation": "prefix status note; remove delivery/evaluation suffix for stateful tasks only"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "allocation/private/development.json",
+      "source_sha256": "267d92ddab4eba5e44045890e0ddff2b351548cbb8c7156829b52d479c52e5b3",
+      "destination": "allocation/development.json.gz",
+      "transformation": "deterministic gzip compression (mtime=0); decompressed bytes exactly match source JSON; historical phase labels retained, all fixtures publicly disclosed"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "allocation/private/confirmation.json",
+      "source_sha256": "c9101931a6e775baa51a4c2bfad2ac7f36c26c576e05abe2de527d7b55a1c473",
+      "destination": "allocation/confirmation.json.gz",
+      "transformation": "deterministic gzip compression (mtime=0); decompressed bytes exactly match source JSON; historical phase labels retained, all fixtures publicly disclosed"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "guide_pins/compare-integer-apportionment.md",
+      "source_sha256": "caeb15b2809df2fb28838950c98793dafa255fadc9708982ba8eb792ffab05ca",
+      "destination": "cases.json",
+      "transformation": "public immutable link and hash only; guide bytes omitted"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "merge/public/TASK.md",
+      "source_sha256": "ad9cb867dc034355b735837654c554509e0ddf7a9ca46ee2d29c1f0e9aea33be",
+      "destination": "merge/TASK.md",
+      "transformation": "prefix status note; remove delivery/evaluation suffix for stateful tasks only"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "merge/private/development.json",
+      "source_sha256": "93732770c99e72d32511d0675a475fab931d2dd8d83e38dbd80241224c05d68a",
+      "destination": "merge/development.json.gz",
+      "transformation": "deterministic gzip compression (mtime=0); decompressed bytes exactly match source JSON; historical phase labels retained, all fixtures publicly disclosed"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "merge/private/confirmation.json",
+      "source_sha256": "a70ae5e4fbdbd9f86f57a827847f173f6dec4ee54c64a60d5a186ae6ff7cccca",
+      "destination": "merge/confirmation.json.gz",
+      "transformation": "deterministic gzip compression (mtime=0); decompressed bytes exactly match source JSON; historical phase labels retained, all fixtures publicly disclosed"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "guide_pins/build-text-merge-component.md",
+      "source_sha256": "e1edb81fd65830e73dd0015672c5cc962fae2118957121236439e810858c1975",
+      "destination": "cases.json",
+      "transformation": "public immutable link and hash only; guide bytes omitted"
+    },
+    {
+      "bundle": "algorithm",
+      "source": "cases.json",
+      "source_sha256": "1c4f872fbbff1e481889a29e0f9cbd92e5e55a32a7c32d0fb8b47521edf8b2a6",
+      "destination": "cases.json",
+      "transformation": "retain algorithm semantic group names; derive fixture counts from disclosed files; omit execution configuration"
+    }
+  ],
+  "contract_projection_edits": [
+    {
+      "case": "async_reducer",
+      "inserted_prefix": "> Public contract projection. Behavior and mathematical requirements are unchanged. Delivery/evaluation process instructions, where present, are omitted. See provenance.json for source hashes and changes. This package is UNRUN.\n\n",
+      "removed_suffix_heading": "## Delivery and execution",
+      "removed_suffix_sha256": "0a9b1a6b4c0ffda830bb00fa0562f0060193c596ffd45d7c7217b4dedbe9ab94",
+      "other_edits": []
+    },
+    {
+      "case": "partial_order",
+      "inserted_prefix": "> Public contract projection. Behavior and mathematical requirements are unchanged. Delivery/evaluation process instructions, where present, are omitted. See provenance.json for source hashes and changes. This package is UNRUN.\n\n",
+      "removed_suffix_heading": "## Delivery and evaluation",
+      "removed_suffix_sha256": "e915bab70585979ac888bd0f1809e3a636e206342f723009a947cd84feea4204",
+      "other_edits": []
+    },
+    {
+      "case": "allocation",
+      "inserted_prefix": "> Public contract projection. Behavior and mathematical requirements are unchanged. Delivery/evaluation process instructions, where present, are omitted. See provenance.json for source hashes and changes. This package is UNRUN.\n\n",
+      "removed_suffix_heading": null,
+      "removed_suffix_sha256": null,
+      "other_edits": []
+    },
+    {
+      "case": "merge",
+      "inserted_prefix": "> Public contract projection. Behavior and mathematical requirements are unchanged. Delivery/evaluation process instructions, where present, are omitted. See provenance.json for source hashes and changes. This package is UNRUN.\n\n",
+      "removed_suffix_heading": null,
+      "removed_suffix_sha256": null,
+      "other_edits": []
+    }
+  ],
+  "omission_policy": "Only listed projections are published. Source controllers, runners, references, graders, candidate stubs, smoke tests, authoring histories and internal reports are omitted. Public guides are pinned links rather than duplicate files.",
+  "fixture_compression": [
+    {
+      "path": "async_reducer/development.json.gz",
+      "compressed_bytes": 4191,
+      "compressed_sha256": "eb173351712e5052808dbfcff675e7e2d9b1c6e4c9bf93c482f6fbcab120cb39",
+      "decoded_bytes": 282309,
+      "decoded_sha256": "f0f3ffdbb7417b3b018ba344fe239dd85f349e3a60a0b46d3578fb260ed48bb7",
+      "compression": "gzip",
+      "gzip_mtime": 0
+    },
+    {
+      "path": "async_reducer/confirmation.json.gz",
+      "compressed_bytes": 5066,
+      "compressed_sha256": "e1bfc7b9f551416bd76a8fd3c2c57bf8b4fb1dde24bd028c30717335d656ce77",
+      "decoded_bytes": 355531,
+      "decoded_sha256": "a0181fb6a92a0f48f38eecff8a2ddcf77b0fd3a0ce0101c4784903ba7710bcaa",
+      "compression": "gzip",
+      "gzip_mtime": 0
+    },
+    {
+      "path": "partial_order/development.json.gz",
+      "compressed_bytes": 4805,
+      "compressed_sha256": "1a01a51eca2d4312ac99d2658d2f15b347d95ffae4cc12f12778717acb891e1c",
+      "decoded_bytes": 217630,
+      "decoded_sha256": "6fcb4d10d262fa7e4f37dc6f9b801cbbd3c0ea88da9b6c49004a10fa22c46e8d",
+      "compression": "gzip",
+      "gzip_mtime": 0
+    },
+    {
+      "path": "partial_order/confirmation.json.gz",
+      "compressed_bytes": 5557,
+      "compressed_sha256": "d46eb3bc4982e55b74fc0365c1e176d21a40ff94b86530897d7dbd03cd41d0ff",
+      "decoded_bytes": 188911,
+      "decoded_sha256": "403b5de65d16f4f75b08371548aac9f2c5e144d79c92e24898ed34081f00ba72",
+      "compression": "gzip",
+      "gzip_mtime": 0
+    },
+    {
+      "path": "allocation/development.json.gz",
+      "compressed_bytes": 861514,
+      "compressed_sha256": "3e88d1f171d6b0f751bbe523fdd367dd0edfa702164ba502c931c51207302aa5",
+      "decoded_bytes": 4107192,
+      "decoded_sha256": "267d92ddab4eba5e44045890e0ddff2b351548cbb8c7156829b52d479c52e5b3",
+      "compression": "gzip",
+      "gzip_mtime": 0
+    },
+    {
+      "path": "allocation/confirmation.json.gz",
+      "compressed_bytes": 83888,
+      "compressed_sha256": "24ee24a6a46338eccdfc2aa407de6785b26841ccc2af0d7fa9edcfdd360f9513",
+      "decoded_bytes": 1661846,
+      "decoded_sha256": "c9101931a6e775baa51a4c2bfad2ac7f36c26c576e05abe2de527d7b55a1c473",
+      "compression": "gzip",
+      "gzip_mtime": 0
+    },
+    {
+      "path": "merge/development.json.gz",
+      "compressed_bytes": 89874,
+      "compressed_sha256": "9a75776618ceb527ce7bd62ff86dd427754c9e7930f20a1286dfe8ad4dbede41",
+      "decoded_bytes": 1803770,
+      "decoded_sha256": "93732770c99e72d32511d0675a475fab931d2dd8d83e38dbd80241224c05d68a",
+      "compression": "gzip",
+      "gzip_mtime": 0
+    },
+    {
+      "path": "merge/confirmation.json.gz",
+      "compressed_bytes": 92554,
+      "compressed_sha256": "3bac01686ae4329845979f6143af8f06c15e7025945075979d563e41031b5032",
+      "decoded_bytes": 2432764,
+      "decoded_sha256": "a70ae5e4fbdbd9f86f57a827847f173f6dec4ee54c64a60d5a186ae6ff7cccca",
+      "compression": "gzip",
+      "gzip_mtime": 0
+    }
+  ]
+}

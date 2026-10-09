@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "UNRUN",
+  "candidate_runs": 0,
+  "performance_scores": null,
+  "whole_contract_outcomes": "pending",
+  "cases": [
+    {
+      "id": "async_reducer",
+      "function": "replay",
+      "contract": "async_reducer/TASK.md",
+      "groups": {
+        "A1": "Independent per-field request ownership",
+        "A2": "Input, cancel and example invalidation",
+        "A3": "Every field terminal and cleanup path",
+        "A4": "Comparison admission and captured inputs",
+        "A5": "Superseding comparison terminal and cleanup ownership",
+        "A6": "Selected item and export consistency",
+        "A7": "Composed adversarial but valid lifecycle orders",
+        "A8": "Pure detached snapshots and repeatability"
+      },
+      "suites": [
+        {
+          "historical_authoring_phase": "development",
+          "path": "async_reducer/development.json.gz",
+          "authored_input_vectors": 35,
+          "compressed_bytes": 4191,
+          "compressed_sha256": "eb173351712e5052808dbfcff675e7e2d9b1c6e4c9bf93c482f6fbcab120cb39",
+          "decoded_bytes": 282309,
+          "decoded_sha256": "f0f3ffdbb7417b3b018ba344fe239dd85f349e3a60a0b46d3578fb260ed48bb7",
+          "compression": "gzip",
+          "gzip_mtime": 0
+        },
+        {
+          "historical_authoring_phase": "confirmation",
+          "path": "async_reducer/confirmation.json.gz",
+          "authored_input_vectors": 30,
+          "compressed_bytes": 5066,
+          "compressed_sha256": "e1bfc7b9f551416bd76a8fd3c2c57bf8b4fb1dde24bd028c30717335d656ce77",
+          "decoded_bytes": 355531,
+          "decoded_sha256": "a0181fb6a92a0f48f38eecff8a2ddcf77b0fd3a0ce0101c4784903ba7710bcaa",
+          "compression": "gzip",
+          "gzip_mtime": 0
+        }
+      ],
+      "public_guide": {
+        "repository": "https://github.com/SeungheonOh/dot-skills",
+        "commit": "aaeae6bfc927edd5dc5418f78929140e4a917a80",
+        "path": "skill/reconcile-obsolete-ui-requests/SKILL.md",
+        "url": "https://github.com/SeungheonOh/dot-skills/blob/aaeae6bfc927edd5dc5418f78929140e4a917a80/skill/reconcile-obsolete-ui-requests/SKILL.md",
+        "sha256": "0df74878dda748fa41bc39dc20e48976a17bf9d5bcd492b0fd5ebb0ee0f3f552",
+        "git_blob_sha1": "d747503cd4ccddb6de9d2735d71aec11c36dee04"
+      }
+    },
+    {
+      "id": "partial_order",
+      "function": "analyze",
+      "contract": "partial_order/TASK.md",
+      "groups": {
+        "B1": "Maximum-revision snapshots and harmless replay reconciliation",
+        "B2": "Unresolved conflicts, missing evidence and precedence",
+        "B3": "Ordering edges, provenance, gaps and clock independence",
+        "B4": "DAG navigation, distinct-reachability ranks and unordered pairs",
+        "B5": "Forward/reversed paths and two valid uncertainty witnesses",
+        "B6": "Concrete cycle evidence without dropped constraints",
+        "B7": "Composed revision and graph interactions",
+        "B8": "Pure deterministic calls and observation-order invariance"
+      },
+      "suites": [
+        {
+          "historical_authoring_phase": "development",
+          "path": "partial_order/development.json.gz",
+          "authored_input_vectors": 24,
+          "compressed_bytes": 4805,
+          "compressed_sha256": "1a01a51eca2d4312ac99d2658d2f15b347d95ffae4cc12f12778717acb891e1c",
+          "decoded_bytes": 217630,
+          "decoded_sha256": "6fcb4d10d262fa7e4f37dc6f9b801cbbd3c0ea88da9b6c49004a10fa22c46e8d",
+          "compression": "gzip",
+          "gzip_mtime": 0
+        },
+        {
+          "historical_authoring_phase": "confirmation",
+          "path": "partial_order/confirmation.json.gz",
+          "authored_input_vectors": 16,
+          "compressed_bytes": 5557,
+          "compressed_sha256": "d46eb3bc4982e55b74fc0365c1e176d21a40ff94b86530897d7dbd03cd41d0ff",
+          "decoded_bytes": 188911,
+          "decoded_sha256": "403b5de65d16f4f75b08371548aac9f2c5e144d79c92e24898ed34081f00ba72",
+          "compression": "gzip",
+          "gzip_mtime": 0
+        }
+      ],
+      "public_guide": {
+        "repository": "https://github.com/SeungheonOh/dot-skills",
+        "commit": "aaeae6bfc927edd5dc5418f78929140e4a917a80",
+        "path": "skill/reconstruct-partial-event-order/SKILL.md",
+        "url": "https://github.com/SeungheonOh/dot-skills/blob/aaeae6bfc927edd5dc5418f78929140e4a917a80/skill/reconstruct-partial-event-order/SKILL.md",
+        "sha256": "192f41669c27e2278b0d897a21127120074e84a466fbd75cf4072a26320c7c04",
+        "git_blob_sha1": "dcdf4504577f6b25de6aab506605fe92d808ed77"
+      }
+    },
+    {
+      "id": "allocation",
+      "function": "allocate",
+      "contract": "allocation/TASK.md",
+      "groups": [
+        "ordinary",
+        "exact_rationals",
+        "saturation_floors",
+        "stable_ties",
+        "float_precision",
+        "zero_phase",
+        "feasibility",
+        "scale"
+      ],
+      "suites": [
+        {
+          "historical_authoring_phase": "development",
+          "path": "allocation/development.json.gz",
+          "authored_input_vectors": 219,
+          "compressed_bytes": 861514,
+          "compressed_sha256": "3e88d1f171d6b0f751bbe523fdd367dd0edfa702164ba502c931c51207302aa5",
+          "decoded_bytes": 4107192,
+          "decoded_sha256": "267d92ddab4eba5e44045890e0ddff2b351548cbb8c7156829b52d479c52e5b3",
+          "compression": "gzip",
+          "gzip_mtime": 0
+        },
+        {
+          "historical_authoring_phase": "confirmation",
+          "path": "allocation/confirmation.json.gz",
+          "authored_input_vectors": 198,
+          "compressed_bytes": 83888,
+          "compressed_sha256": "24ee24a6a46338eccdfc2aa407de6785b26841ccc2af0d7fa9edcfdd360f9513",
+          "decoded_bytes": 1661846,
+          "decoded_sha256": "c9101931a6e775baa51a4c2bfad2ac7f36c26c576e05abe2de527d7b55a1c473",
+          "compression": "gzip",
+          "gzip_mtime": 0
+        }
+      ],
+      "public_guide": {
+        "repository": "https://github.com/SeungheonOh/dot-skills",
+        "commit": "aaeae6bfc927edd5dc5418f78929140e4a917a80",
+        "path": "skill/compare-integer-apportionment/SKILL.md",
+        "url": "https://github.com/SeungheonOh/dot-skills/blob/aaeae6bfc927edd5dc5418f78929140e4a917a80/skill/compare-integer-apportionment/SKILL.md",
+        "sha256": "caeb15b2809df2fb28838950c98793dafa255fadc9708982ba8eb792ffab05ca",
+        "git_blob_sha1": "ebad37eef7eaa51fa2079190b1afac9749db1512"
+      }
+    },
+    {
+      "id": "merge",
+      "function": "merge_edits",
+      "contract": "merge/TASK.md",
+      "groups": [
+        "ordinary",
+        "collisions",
+        "transitive_components",
+        "insertion_boundaries",
+        "repeated_unicode",
+        "newline_fidelity",
+        "noops_effective_equality",
+        "scale"
+      ],
+      "suites": [
+        {
+          "historical_authoring_phase": "development",
+          "path": "merge/development.json.gz",
+          "authored_input_vectors": 181,
+          "compressed_bytes": 89874,
+          "compressed_sha256": "9a75776618ceb527ce7bd62ff86dd427754c9e7930f20a1286dfe8ad4dbede41",
+          "decoded_bytes": 1803770,
+          "decoded_sha256": "93732770c99e72d32511d0675a475fab931d2dd8d83e38dbd80241224c05d68a",
+          "compression": "gzip",
+          "gzip_mtime": 0
+        },
+        {
+          "historical_authoring_phase": "confirmation",
+          "path": "merge/confirmation.json.gz",
+          "authored_input_vectors": 178,
+          "compressed_bytes": 92554,
+          "compressed_sha256": "3bac01686ae4329845979f6143af8f06c15e7025945075979d563e41031b5032",
+          "decoded_bytes": 2432764,
+          "decoded_sha256": "a70ae5e4fbdbd9f86f57a827847f173f6dec4ee54c64a60d5a186ae6ff7cccca",
+          "compression": "gzip",
+          "gzip_mtime": 0
+        }
+      ],
+      "public_guide": {
+        "repository": "https://github.com/SeungheonOh/dot-skills",
+        "commit": "aaeae6bfc927edd5dc5418f78929140e4a917a80",
+        "path": "skill/build-text-merge-component/SKILL.md",
+        "url": "https://github.com/SeungheonOh/dot-skills/blob/aaeae6bfc927edd5dc5418f78929140e4a917a80/skill/build-text-merge-component/SKILL.md",
+        "sha256": "e1edb81fd65830e73dd0015672c5cc962fae2118957121236439e810858c1975",
+        "git_blob_sha1": "73e070ddb93f1a3640813cad908f20dde250ba12"
+      }
+    }
+  ]
+}
