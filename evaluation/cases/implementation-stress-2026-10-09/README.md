@@ -4,12 +4,18 @@ These are author-reviewed test cases, not observed model results. All task scena
 
 This data-only package contains four task contracts and 881 authored input vectors with expected outputs:
 
-- Async reducer: 35 development + 30 confirmation input vectors, covering request ownership, stale completions, cancellation, captured comparisons, selection/export consistency and detached snapshots
-- Partial-order reconciliation: 24 + 16 input vectors, covering revision reconciliation, unresolved evidence, graph provenance, ranks, cycles and query witnesses
-- Exact capped allocation: 219 + 198 input vectors, covering exact rational quotas, floors/caps, stable ties, zero-weight fallback, feasibility and large integers
-- Unicode merge: 181 + 178 input vectors, covering source-coordinate edits, transitive interactions, endpoint insertions, no-ops, Unicode and newline fidelity
+- [Async reducer](async_reducer/TASK.md): 35 development + 30 confirmation input vectors, covering request ownership, stale completions, cancellation, captured comparisons, selection/export consistency and detached snapshots
+- [Partial-order reconciliation](partial_order/TASK.md): 24 + 16 input vectors, covering revision reconciliation, unresolved evidence, graph provenance, ranks, cycles and query witnesses
+- [Exact capped allocation](allocation/TASK.md): 219 + 198 input vectors, covering exact rational quotas, floors/caps, stable ties, zero-weight fallback, feasibility and large integers
+- [Unicode merge](merge/TASK.md): 181 + 178 input vectors, covering source-coordinate edits, transitive interactions, endpoint insertions, no-ops, Unicode and newline fidelity
 
 These counts describe authored fixtures, not model attempts. Development and confirmation are historical authoring labels only. Both sets and all expected outputs are now publicly disclosed; neither is a fresh or inaccessible held-out evaluation. Any future evaluation must account for this exposure and establish its own independent held-out material when needed.
+
+## Reading the cases
+
+1. Open a linked task contract above for its function signature, input/output rules and bounds. References there to evaluators and tests describe the authored task requirements, not completed runs in this package.
+2. Open the corresponding fixture directory: [async reducer](async_reducer/), [partial-order reconciliation](partial_order/), [allocation](allocation/), or [merge](merge/). Download and decompress either `.json.gz` file to inspect its inputs and expected outputs; no candidate execution is needed. For a small first example, inspect `checks[0]` in either stateful task's development file, or the first record in the merge development array. Preserve exact integers and decoded strings when inspecting: spreadsheet coercion, Unicode normalization and newline conversion can change these cases.
+3. Use [cases.json](cases.json) for semantic groups, per-file counts and pinned background-guide links; use [provenance.json](provenance.json) for source and projection details. The fixture schemas and interpretation limits are explained below.
 
 ## Contents and interpretation
 
