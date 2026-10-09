@@ -51,6 +51,10 @@ The unchanged evidence preserves the actual one-word prompt deviation in T2 repe
 
 The [task-routing contract regression](contracts/task-routing/README.md) contains 12 fictional requests, ten frozen candidate guides plus the router, and 39 authored controls. Two source-first author reviewers approved all control labels after the v2 clarity recheck. Its read-only checker validates packaging and response shape while leaving semantic adequacy null. These are authored contracts, with zero model trials; they are not measured guide efficacy and are not pooled with study results.
 
+## Authored harder cases (UNRUN)
+
+The [implementation stress cases](cases/implementation-stress-2026-10-09/README.md) contain four author-reviewed contracts with disclosed synthetic fixtures. They have 0 candidate runs and no new grades or observed outcomes. These authored cases are separate from the completed studies and do not change their scores.
+
 ## Verify locally
 
 Run the core checks for the original fixtures and two original artifact studies from the repository root, using POSIX Python 3.12:
